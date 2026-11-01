@@ -17,3 +17,7 @@ body.keyboardMode .button:focus-within{outline:2px solid #68b6c1;outline-offset:
 
 #calcDescription:empty{display:none}#calcDescription .descriptionGroup{border-top:1px solid #e2eaf0;padding:14px 0;margin:12px 0;min-width:0}#calcDescription .descriptionGroup h3{font-size:11px;margin:0 0 8px}#calcDescription .formBody{padding:0}
 input[type=file]:focus-visible{outline:none}
+
+/* 0.6 sidebar always fills the viewport height; list height adapts to what is above it */
+.catalog{display:flex;flex-direction:column;max-height:max(calc(100vh - 36px),520px);overflow-y:auto;scrollbar-width:thin}.catalog>*{flex-shrink:0}#tree{flex:1 1 auto;height:auto;min-height:120px}
+@media(max-width:850px){.catalog{display:block;max-height:none;overflow:visible}#tree{flex:none;height:260px;min-height:0}}
