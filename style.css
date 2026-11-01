@@ -21,3 +21,27 @@ input[type=file]:focus-visible{outline:none}
 /* 0.6 sidebar always fills the viewport height; list height adapts to what is above it */
 .catalog{display:flex;flex-direction:column;max-height:max(calc(100vh - 36px),520px);overflow-y:auto;scrollbar-width:thin}.catalog>*{flex-shrink:0}#tree{flex:1 1 auto;height:auto;min-height:120px}
 @media(max-width:850px){.catalog{display:block;max-height:none;overflow:visible}#tree{flex:none;height:260px;min-height:0}}
+
+/* 0.6 byte inspector is only needed on touch devices: on a computer double-click / Enter / F2 edits the byte */
+@media(hover:hover) and (pointer:fine){#byteInspector{display:none!important}}
+
+/* 0.6 instruction page */
+.helpPage{position:relative;overflow:hidden;border:1px solid #d6e6ec;box-shadow:0 10px 40px #1a4a5a14;padding:40px 44px 36px}
+.helpPage:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#32c8ad,#2aa6c8 55%,#5b7cfa)}
+.helpHero{display:flex;align-items:center;gap:18px;margin-bottom:16px}
+.helpLogo{display:grid;place-items:center;flex-shrink:0;width:62px;height:62px;border-radius:17px;font-size:34px;font-weight:700;color:#06352f;background:linear-gradient(135deg,#5ff0cf,#2fc4ab 55%,#1fa6c4);box-shadow:0 0 0 5px #32c8ad26,0 8px 26px #32c8ad66}
+.helpHero h1{margin:4px 0 0;font-size:30px;letter-spacing:-.6px}
+.helpPage h2{display:flex;align-items:center;gap:10px;font-size:18px;margin:34px 0 12px;color:#183247}
+.helpPage h2:before{content:"";flex-shrink:0;width:5px;height:20px;border-radius:3px;background:linear-gradient(#32c8ad,#2aa6c8)}
+.helpPage strong{color:#183247}
+.helpPage ol{list-style:none;counter-reset:step;padding:0;margin:14px 0}
+.helpPage ol>li{counter-increment:step;position:relative;padding:3px 0 12px 44px}
+.helpPage ol>li:before{content:counter(step);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e3f6f2;color:#14796a;font-weight:700;font-size:13px}
+.helpPage ul{padding-left:20px}.helpPage ul li::marker{color:#32c8ad}
+.helpPage table{border:1px solid #e3ecf2;border-radius:9px;overflow:hidden;border-collapse:separate;border-spacing:0}
+.helpPage th{position:static;background:#eef6f8;color:#4d7183;font-size:11px;letter-spacing:.4px;text-transform:uppercase}
+.helpPage tbody tr:nth-child(even) td{background:#f8fbfc}
+.helpPage td:first-child{font-weight:600;color:#183247;white-space:nowrap}
+.helpCta{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:9px;background:var(--teal);color:#fff!important;font-weight:600;text-decoration:none;box-shadow:0 6px 18px #146f8040;transition:transform .15s,box-shadow .15s}
+.helpCta:hover{transform:translateY(-1px);box-shadow:0 9px 22px #146f804d}
+@media(max-width:850px){.helpPage{padding:28px 20px 24px}.helpHero h1{font-size:26px}.helpLogo{width:54px;height:54px;font-size:30px}}
