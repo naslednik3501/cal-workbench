@@ -10,10 +10,10 @@
 @media(max-width:600px){header{height:auto;min-height:80px;flex-wrap:wrap;gap:12px;padding:16px}.headerLinks{gap:18px}.binPicker{padding:16px;min-width:180px}.filePanel .fileControls{padding:8px}.diffControls{justify-content:flex-start}.filePanel .fingerprint>div{right:0;width:240px}}
 
 /* 0.5 full-card picker, keyboard-only focus and continuous HEX */
-.filePanel{display:block;overflow:visible;border:1px dashed #bbceda}.binPicker{display:flex;width:100%;padding:20px 155px 20px 22px;min-height:110px;border-radius:10px}.filePanel .fileControls{position:absolute;right:12px;top:32px;padding:0;background:transparent}.binPicker:hover{background:#f7fafc}.filePanel.dragOver{border-width:1px;background:#eff8f7}.filePanel.dragOver .binPicker{background:transparent}
+.filePanel{display:block;overflow:visible;border:1px dashed #bbceda}.binPicker{display:flex;width:100%;padding:20px 155px 20px 22px;min-height:110px;border-radius:10px}.filePanel .fileControls{position:absolute;right:12px;top:0;bottom:0;padding:0;background:transparent}.binPicker:hover{background:#f7fafc}.filePanel.dragOver{border-width:1px;background:#eff8f7}.filePanel.dragOver .binPicker{background:transparent}
 body.keyboardMode .button:focus-within{outline:2px solid #68b6c1;outline-offset:2px}body.keyboardMode .filePanel:focus-within{outline:2px solid #68b6c1;outline-offset:2px}
 .hexScroll{overflow-anchor:none}#hex tbody tr:not(.hexSpacer){height:29px}#hex tbody td{height:29px;line-height:18px;padding-top:5px;padding-bottom:5px}#hex .hexSpacer td{padding:0;border:0;line-height:0;font-size:0;background:transparent}.bufferBottom{align-items:center;flex-wrap:wrap}#pageInfo{margin:0 auto 0 0;font-size:11px;color:#8295a2}.bufferBottom .advanced{flex-basis:100%;order:2}
-@media(max-width:600px){.binPicker{padding:16px 115px 16px 16px;min-width:0}.filePanel .fileControls{right:8px;top:25px}.filePanel .fingerprint>div{width:230px}}
+@media(max-width:600px){.binPicker{padding:16px 115px 16px 16px;min-width:0}.filePanel .fileControls{right:8px;top:0}.filePanel .fingerprint>div{width:230px}}
 
 #calcDescription:empty{display:none}#calcDescription .descriptionGroup{border-top:1px solid #e2eaf0;padding:14px 0;margin:12px 0;min-width:0}#calcDescription .descriptionGroup h3{font-size:11px;margin:0 0 8px}#calcDescription .formBody{padding:0}
 input[type=file]:focus-visible{outline:none}
