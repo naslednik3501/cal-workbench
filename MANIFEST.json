@@ -268,8 +268,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 23184,
-      "sha256": "c70952a8645e3a8c88eeecd328df560b6add39397d0b552d4c14e450a626dc81"
+      "bytes": 23579,
+      "sha256": "973f3092d1d70e5c4f5d5a9ba853488430860623e60ffd9d22aea2d9b74cdc5b"
     },
     {
       "path": "tests/README.md",

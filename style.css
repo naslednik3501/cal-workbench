@@ -49,3 +49,9 @@ input[type=file]:focus-visible{outline:none}
 /* header "Инструкция" link: same corner radius and hover behaviour as the other buttons */
 .headerLinks a{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:7px;border:1px solid #ffffff26;background:transparent;color:#d9e8f0;font-size:12px;font-weight:500;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
 .headerLinks a:hover{text-decoration:none;background:#ffffff14;border-color:#ffffff40;color:#fff}
+
+/* sticky sidebar may run down into the footer zone, so it is never pushed up and clipped at the page end;
+   the footer's right-hand text moves out from under it */
+.catalog{margin-bottom:-30px}footer{padding-right:calc(310px + 28px + 18px)}
+@media(max-width:1200px){footer{padding-right:calc(275px + 28px + 14px)}}
+@media(max-width:850px){.catalog{margin-bottom:0}footer{padding-right:17px}}
