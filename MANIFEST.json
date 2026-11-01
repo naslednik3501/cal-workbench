@@ -253,8 +253,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11184,
-      "sha256": "eb5a5b59f5f814b60e2e1cff7b9726c9cd5217ed48cc6a9e682dc192846eae54"
+      "bytes": 11159,
+      "sha256": "94e151d0803c4230f3d8d23da7e6d2c39de3889cc225812fa8205db1c5f83d41"
     },
     {
       "path": "static-audit-summary.json",
