@@ -13,8 +13,8 @@
     },
     {
       "path": "README.html",
-      "bytes": 12473,
-      "sha256": "37b8a15a5a0b478183a73db63e0c7cf717fcb99dbe1738e5a37a9a3f9c15e4ca"
+      "bytes": 12463,
+      "sha256": "91f6cf0e896e9d27132ddc16eaf7e9ce0d2ea1783d88b12510978abb22fe261d"
     },
     {
       "path": "app.js",
@@ -253,8 +253,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11189,
-      "sha256": "c6ed96ace3b5cfb6521bba39b662c58ea46f86375346ec66489620de726e5e96"
+      "bytes": 11174,
+      "sha256": "4879fccb87d6b9fd49ab715d56fd0b95eb219c17c7677947db387e0e7e0c364f"
     },
     {
       "path": "static-audit-summary.json",
