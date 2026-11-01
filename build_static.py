@@ -14,7 +14,7 @@ for entry in manifest["files"]:
     if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
         raise SystemExit("Source differs from original 0.5 manifest: " + entry["path"])
 
-assets = ["index.html", "README.html", "style.css", "app.js", "engine.js",
+assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "engine.js",
           "catalog.js", "catalog-store.js"]
 assets += json.loads((ROOT / "catalog-parts.json").read_text())
 for name in assets:
