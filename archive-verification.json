@@ -1,0 +1,13 @@
+{
+  "source": "Calculators.zip",
+  "entries_included": 23944,
+  "cal_entries": 23355,
+  "content_and_paths_match_archive": true,
+  "all_zip_entries_read_crc_ok": true,
+  "missing_current_workspace_archives": [
+    "Архив.zip",
+    "Архив 4.zip",
+    "Архив 2.zip",
+    "Архив(1).zip"
+  ]
+}

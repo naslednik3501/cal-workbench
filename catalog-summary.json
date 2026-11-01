@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "entries": 23944,
+  "calculators": 23355,
+  "uniqueCal": 15055,
+  "sources": [
+    "Calculators.zip"
+  ],
+  "counts": {
+    "cal": 23355,
+    "png": 7,
+    "lua": 9,
+    "bc": 7,
+    "doc": 4,
+    "bmp": 532,
+    "db": 1,
+    "jpg": 14,
+    "exe": 3,
+    "123": 1,
+    "txt": 2,
+    "rar": 2,
+    "ccc": 1,
+    "bin": 6
+  }
+}
