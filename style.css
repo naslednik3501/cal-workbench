@@ -55,3 +55,9 @@ input[type=file]:focus-visible{outline:none}
 .catalog{margin-bottom:-30px}footer{padding-right:calc(310px + 28px + 18px)}
 @media(max-width:1200px){footer{padding-right:calc(275px + 28px + 14px)}}
 @media(max-width:850px){.catalog{margin-bottom:0}footer{padding-right:17px}}
+
+/* header: version pill sits on the subtitle line, right-aligned to the brand block */
+.brand>div{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:14px;row-gap:6px}
+.brand .brandName{grid-column:1/-1;grid-row:1}
+.brand small{grid-column:1;grid-row:2;margin-top:0}
+.brand .version{grid-column:2;grid-row:2;justify-self:end;margin:0;vertical-align:baseline}
