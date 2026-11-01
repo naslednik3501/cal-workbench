@@ -27,7 +27,7 @@ Arithmetic assumptions (unsigned 32-bit, masked shift count, hex/decimal formatt
 
 Browser integration test is included but NOT executed successfully: Playwright is installed but its Chromium executable is absent. Windows 11 execution and visual UI inspection remain unverified. There is no native .exe package. Do not claim browser or Windows testing passed.
 
-RAV4 addresses 0x2C–0x2D differ between the current CAL output and the training file. Exact discrepancy is covered by regression. The prototype does not silently override it.
+Private fixture comparisons are development regression checks; they are not a list of confirmed application defects.
 
 ## Next concrete work
 
@@ -61,7 +61,7 @@ The runtime `engine.js` is byte-for-byte identical to v0.1 (SHA-256 c941163a8166
 
 Validation: 15 engine regression/error tests and 13 real-app state/event tests pass in Node, plus complete SHA-256 catalog verification. The UI state tests use a minimal DOM adapter and do not validate rendering. Browser installation failed; a separate cloud-browser attempt was refused because local file URLs are forbidden. No bypass was attempted. Real-browser visual and Windows validation remain pending.
 
-Ceed 2011: fixture from the user's saved 100000 result matches exactly, but reported physical panel reading was 3999999. This remains unresolved. Matching self-readback and our direct arithmetic does not establish original-iProg or hardware equivalence.
+Panel-specific experiments are not tracked as confirmed engine defects. Calculator-to-panel suitability must be established separately; a saved-result regression does not establish original-iProg or hardware equivalence.
 
 The shared package excludes personal BIN test fixtures. Tests require the developer's existing fixtures directory (prior v0.1 package and attached Ceed original/result); do not treat missing fixtures as a program failure. Application sources, test code, validation logs and per-file static audit are retained.
 
@@ -75,7 +75,7 @@ The catalog displays root sections without the `Calculators/` wrapper while reta
 
 BIN close invalidates in-flight load generations, clears original/candidate/session/hash/selection, and keeps selected CAL. HEX cells support selection, Shift range, right-column double-click editing (Enter commit, Escape cancel), with unchanged left-hand originals. All editing remains in the working copy.
 
-Check button renamed `Прочитать данные`: it calls CAL OnShow on a separate VM for candidate/original without mutation. CAL information groups are titled `Сообщение калькулятора`. Inspected Ceed 2011 OnShow ends with the literal `Дамп ОК. Введите новый пробег.` unconditionally after its reading/counting logic; it has no separate success/failure validity branch for that message. Do not treat that text as an engine-generated validation result.
+Check button renamed `Прочитать данные`: it calls CAL OnShow on a separate VM for candidate/original without mutation. CAL information groups are titled `Сообщение калькулятора`. Calculator messages are script output and must not be treated as an engine-generated compatibility verdict.
 
 Engine.js remains unchanged. Full re-read of Calculators.zip including CRC checks, paths, sizes and SHA-256 matches all 23,944 included entries / 23,355 CALs. Static subset audit remains 21,549 parsed / 4 unsupported commands / 1,802 other format or parse failures. No full compatibility claims.
 

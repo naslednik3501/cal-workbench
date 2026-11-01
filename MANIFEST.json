@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "files": [
     {
       "path": "COMPATIBILITY.md",
@@ -8,8 +8,8 @@
     },
     {
       "path": "DEVELOPMENT.md",
-      "bytes": 12621,
-      "sha256": "404f253aef9546ec2216fe9be53b85e93b0854c13528a15565693c01987789ce"
+      "bytes": 12346,
+      "sha256": "d29e9596f1a87be3d5155e9ef729fb1468b4777c7cbe5e2dfeb956ca72218def"
     },
     {
       "path": "README.html",
@@ -253,8 +253,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11152,
-      "sha256": "731738f1a283656ce3d92075b4d850cda62b96a14b3597055e034ff0cd765631"
+      "bytes": 11156,
+      "sha256": "f5ef133db616c291f12402af07769dfcbfc29ddd4ec9384b5f58200d5f3dfbf8"
     },
     {
       "path": "static-audit-summary.json",
@@ -288,8 +288,8 @@
     },
     {
       "path": "tests/engine-results.txt",
-      "bytes": 990,
-      "sha256": "2ba1d2a2b08fab618e3ca1664b521047912550c82b66bcb9595317c986fcc084"
+      "bytes": 910,
+      "sha256": "29c0fc7b732ca2a6099bb9a6c993dfc5167afdcaf95f8d201838d719bd3c2896"
     },
     {
       "path": "tests/fixtures/ceed-2011.cal",
@@ -328,8 +328,8 @@
     },
     {
       "path": "tests/test_engine.js",
-      "bytes": 4903,
-      "sha256": "4d8cf59fe2278099fb81ee07f04dbf13d7d9d94077a2f095bdb50ad0750f53d1"
+      "bytes": 4823,
+      "sha256": "cda73ecb28fc178aa05242daa4b4eacf3e8900b573cb38f748207d76c83f824e"
     },
     {
       "path": "tests/test_ui_state.js",
