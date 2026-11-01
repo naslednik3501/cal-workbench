@@ -46,7 +46,6 @@ input[type=file]:focus-visible{outline:none}
 .helpCta:hover{transform:translateY(-1px);box-shadow:0 9px 22px #146f804d}
 @media(max-width:850px){.helpPage{padding:28px 20px 24px}.helpHero h1{font-size:26px}.helpLogo{width:54px;height:54px;font-size:30px}}
 
-/* header "Инструкция" link as a soft pill */
-.headerLinks a{display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:999px;border:1px solid #ffffff2e;background:#ffffff14;color:#e4f1f7;font-size:12.5px;font-weight:500;letter-spacing:.2px;text-decoration:none;transition:background .15s,border-color .15s,box-shadow .15s,color .15s,transform .15s}
-.headerLinks a:hover{text-decoration:none;background:#32c8ad26;border-color:#32c8ad99;color:#fff;box-shadow:0 0 0 3px #32c8ad1f,0 4px 14px #32c8ad33}
-.headerLinks a:active{transform:translateY(1px)}
+/* header "Инструкция" link: same corner radius and hover behaviour as the other buttons */
+.headerLinks a{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:7px;border:1px solid #ffffff26;background:transparent;color:#d9e8f0;font-size:12px;font-weight:500;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
+.headerLinks a:hover{text-decoration:none;background:#ffffff14;border-color:#ffffff40;color:#fff}
