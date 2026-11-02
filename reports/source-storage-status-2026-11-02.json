@@ -1,0 +1,77 @@
+{
+  "status": "prepared_not_published",
+  "target_repository": null,
+  "proposed_private_repository": "naslednik3501/iprocal-sources",
+  "date": "2026-11-02",
+  "archives": [
+    {
+      "name": "Архив 1(2).zip",
+      "sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+      "bytes": 349577599,
+      "files": 8893,
+      "directories": 2056,
+      "uncompressed_bytes": 511031080,
+      "read_errors": []
+    },
+    {
+      "name": "Архив 2(3).zip",
+      "sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3",
+      "bytes": 86848064,
+      "files": 2002,
+      "directories": 256,
+      "uncompressed_bytes": 104962272,
+      "read_errors": []
+    },
+    {
+      "name": "Архив 3(1).zip",
+      "sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+      "bytes": 337088622,
+      "files": 2769,
+      "directories": 603,
+      "uncompressed_bytes": 386396848,
+      "read_errors": []
+    },
+    {
+      "name": "Архив 4(1).zip",
+      "sha256": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+      "bytes": 176325347,
+      "files": 3064,
+      "directories": 758,
+      "uncompressed_bytes": 804754551,
+      "read_errors": []
+    },
+    {
+      "name": "Архив(4).zip",
+      "sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "bytes": 108500987,
+      "files": 25146,
+      "directories": 2757,
+      "uncompressed_bytes": 197261674,
+      "read_errors": []
+    }
+  ],
+  "totals": {
+    "archives": 5,
+    "zip_bytes": 1058340619,
+    "entries": 41874,
+    "uncompressed_bytes": 2004406425,
+    "unique_contents": 23678,
+    "unique_bytes": 1498059256,
+    "max_file_bytes": 609932279,
+    "errors": 0
+  },
+  "prepared_store_bytes": 894982560,
+  "prepared_store_files": 25479,
+  "local_restore_verification": {
+    "files": 41874,
+    "unique_contents": 23678,
+    "errors": 0
+  },
+  "remote_round_trip_verification": "not performed: private repository not created",
+  "notes": [
+    "Includes all non-directory members, including 12 __MACOSX metadata records excluded from the earlier image audit.",
+    "Original ZIP bytes are intended for private release assets; not uploaded.",
+    "Each unique source file is stored losslessly using zlib+base64 with bounded chunks.",
+    "No original executable or hardware script was run."
+  ]
+}

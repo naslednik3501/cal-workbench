@@ -22,6 +22,16 @@
       "sha256": "2663f31cb8f76e29440167a58673c232027a4b0ec888bbda1e3f682541824c78"
     },
     {
+      "path": "README.md",
+      "bytes": 4359,
+      "sha256": "a06e3084efbd036d45939f94413b1eb611bd072230fe93348be383349e80043f"
+    },
+    {
+      "path": "SOURCE_STORAGE.md",
+      "bytes": 13411,
+      "sha256": "9767aae4c9e49e8b3c759411c3d3df47eac2f07dbe9928749f946d30f3c1a4ea"
+    },
+    {
       "path": "app.js",
       "bytes": 36259,
       "sha256": "cddc341451ee83aa6a3133a125ec55ed0f65d07290e17cbe453f52ad44516ea7"
@@ -287,6 +297,11 @@
       "sha256": "f1dcd3c85d287461528da11a63779216dc15a695f61ee5abf686a65b0f33a8c5"
     },
     {
+      "path": "reports/source-storage-status-2026-11-02.json",
+      "bytes": 2396,
+      "sha256": "d49cc26e1f25f2b98cc10f20b371740e7024b89c3a4521545ccc76ccb9758a79"
+    },
+    {
       "path": "static-audit-summary.json",
       "bytes": 648,
       "sha256": "b342d7ce45ab9e987795873752e3bba493b7b5ce3626d487a375e86995296f9f"
@@ -387,6 +402,11 @@
       "sha256": "df34df6dbc56a1056234f4741904475a6346a4374d7add48333fc260e724e9fd"
     },
     {
+      "path": "tests/test_source_store.py",
+      "bytes": 2278,
+      "sha256": "dbdd63372fad5b8258eede8947a2abdbb02aa14a711d09846baf547c8eaf8a7c"
+    },
+    {
       "path": "tests/test_ui_state.js",
       "bytes": 18897,
       "sha256": "9297bad8a8c664393dc5bbf2271ee29ab1575ea61a59f5fafbd3b20acf7840f5"
@@ -415,6 +435,16 @@
       "path": "tools/package_release.py",
       "bytes": 2650,
       "sha256": "61fe7d26629fb521920221d4f73f54de3554e231993916b89e3c0b347c7f5539"
+    },
+    {
+      "path": "tools/publish_source_store.py",
+      "bytes": 6704,
+      "sha256": "0ff850ad3dbd0403ed8ca087772383554c6d2d547728ed47942f73a9f72ee226"
+    },
+    {
+      "path": "tools/source_store.py",
+      "bytes": 11843,
+      "sha256": "3556c01e02fea5e3397b8491fc72cf9f69a23e625c93bee69ddaa4ddf0c871e5"
     }
   ],
   "validation": {
@@ -429,7 +459,8 @@
     "original_iprog_execution": "not compared",
     "browser_rendering": "not tested",
     "real_browser_storage": "not tested",
-    "windows": "not tested"
+    "windows": "not tested",
+    "source_store": "synthetic regression passed; 23678 unique source contents restored and SHA-256 verified locally; GitHub publication pending"
   },
   "personal_bin_fixtures_included": false
 }
