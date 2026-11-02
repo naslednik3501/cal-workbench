@@ -1,0 +1,586 @@
+reference_json,occurrences,cal_paths,match_status,candidate_contents,example_cal
+""" """,84,84,blank,0,Calculators/Airbag/Land Rover/YWC105790 Sagem.cal
+""" .bmp""",2,2,not_found,0,Calculators/Dashboard/Freightliner/Freightliner 25080.cal
+""".png""",4,4,not_found,0,Calculators/Airbag/Kia/Morning/Morning  95910-1Y100  (95128).cal
+"""02620.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Corolla/89170-02620.cal
+"""0285001684.png""",2,2,not_found,0,Calculators/Airbag/Mitsubishi/Colt/0 285 001 684  (9S12D64).cal
+"""0285001938.png""",2,2,not_found,0,Calculators/Airbag/Geely/MK Cross  0 285 001 938  912B32.cal
+"""0285010545.png""",2,2,name_candidates,1,Calculators/Airbag/Lifan/Solano/Solano  0 285 010 545.cal
+"""0285011863.png""",2,2,name_candidates,1,Calculators/Airbag/Mercedes/A-class/W176  0 285 011 863  (95256).cal
+"""02a20.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Corolla/89170-02A20.cal
+"""02c90.png""",2,2,name_candidates,2,Calculators/Airbag/Toyota/Corolla/Corolla  89170-02C90.cal
+"""044.png""",2,2,name_candidates,1,Calculators/Airbag/Mitsubishi/Galant/galant 8635A044.cal
+"""05120.png""",2,2,not_found,0,Calculators/Airbag/Toyota/Avensis/89170-05120 ver1.cal
+"""07620.png""",2,2,name_candidates,1,Calculators/Airbag/Kia/Picanto/95910-07620  25320.cal
+"""093.png""",4,4,name_candidates,1,Calculators/Airbag/Mitsubishi/Pajero/Pajero  8635A090L.cal
+"""0k111.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Hilux/89170-0K111.cal
+"""0k2dk677f0.png""",2,2,not_found,0,Calculators/Airbag/Kia/Spectra/Spectra  0 K2DK 67 7F0  HC11KS2.cal
+"""1.png""",6,6,name_candidates,65,Calculators/Dashboard/Lexus/GS250  93C66.cal
+"""1118-00.png""",2,2,not_found,0,Calculators/Airbag/Lada/Kalina 1118-3824010-00.cal
+"""12771236.png""",2,2,name_candidates,1,Calculators/Airbag/Saab/12771236  95320.cal
+"""13283818.png""",3,3,name_candidates,1,Calculators/Airbag/Opel/Corsa/13 283 819  (95160).cal
+"""13288173.png""",1,1,name_candidates,1,Calculators/Airbag/Opel/Zafira/13 288 173  (95160).cal
+"""13288174.png""",6,6,name_candidates,1,Calculators/Airbag/Opel/Astra H/13 288 176.cal
+"""143.png""",2,2,name_candidates,1,Calculators/Airbag/Mitsubishi/Pajero/Pajero Sport  8635A143.cal
+"""1c150.png""",2,2,name_candidates,1,Calculators/Airbag/Huyndai/Getz/95910-1C150  (25320).cal
+"""1h000.png""",1,1,name_candidates,1,Calculators/CarRadio/KIA/96160-1H000  (24c64).cal
+"""1h200.png""",4,4,name_candidates,1,Calculators/Airbag/Kia/Ceed/Seed  95910-1H000.cal
+"""1mm1a.png""",4,4,name_candidates,2,Calculators/Airbag/Infinity/M 37  98820 1MM0A (95640).cal
+"""1r000.png""",4,4,name_candidates,1,Calculators/Airbag/Huyndai/Solaris/Solaris 95910-1R000.cal
+"""1r050.png""",2,2,not_found,0,Calculators/Airbag/Huyndai/Solaris/Solaris  95910-1R050.cal
+"""2008srs.png""",2,2,name_candidates,2,Calculators/Airbag/Peugeot/2008/2008  98 083 092 80  (95320).cal
+"""2048709426.png""",2,2,name_candidates,1,Calculators/Airbag/Mercedes/A204 870 94 26  25640.cal
+"""22090.png""",1,1,name_candidates,1,Calculators/Airbag/Toyota/Mark II/89170-22090  93C56.cal
+"""24c16.png""",2,2,name_candidates,2,Calculators/Dashboard/Land Rover/LR Voque  24C16.cal
+"""24c161.png""",2,2,not_found,0,Calculators/Dashboard/Land Rover/LR Voque  24C16.cal
+"""2_93C66.png""",2,2,not_found,0,Calculators/Dashboard/Mazda/2/Mazda 2  93C66.cal
+"""2_93C661.png""",2,2,not_found,0,Calculators/Dashboard/Mazda/2/Mazda 2  93C66.cal
+"""2b180.png""",2,2,name_candidates,1,Calculators/Airbag/Huyndai/Santa Fe/Santa Fe   95910-2B180.cal
+"""2m5t.png""",2,2,not_found,0,Calculators/Airbag/Ford/Focus/2M5T 14B056 BE.cal
+"""3.png""",2,2,name_candidates,29,Calculators/Dashboard/Lexus/GS250  93C66.cal
+"""308619.png""",14,14,name_candidates,1,Calculators/Airbag/Peugeot/308/308  619 76 38 00.cal
+"""308_610_71_49_00.png""",2,2,name_candidates,1,Calculators/Airbag/Peugeot/308/308  610 71 49 00.cal
+"""33511.png""",2,2,not_found,0,Calculators/Airbag/Toyota/Camry/89170-33511.cal
+"""34140.png""",2,2,name_candidates,1,Calculators/Airbag/SsangYong/Actyon/Actyon  86250-34140.cal
+"""37aa.png""",2,2,name_candidates,1,Calculators/Airbag/Jeep/Compas/Compas  P68148037AA  (95256).cal
+"""38770-MBW-D41.png""",1,1,not_found,0,Calculators/Immo/Bikes/Honda/Honda F600  93c56 8-bit.cal
+"""3d100.png""",2,2,name_candidates,1,Calculators/Airbag/Huyndai/Sonata/95910-3D100.cal
+"""3e050.png""",4,4,name_candidates,1,Calculators/Airbag/Kia/Sorento/Sorento  95910-3E050.cal
+"""3t0.png""",2,2,name_candidates,1,Calculators/Airbag/Skoda/SuperB  VW10 3T0 959 655 B.cal
+"""3z300.png""",2,2,name_candidates,1,Calculators/Airbag/Huyndai/I40/I40   95910-3Z300.cal
+"""47370.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Prius/89170-47370  93C56.cal
+"""48221.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Highlander/Highlander  89170-48221.cal
+"""48310.png""",2,2,name_candidates,1,Calculators/Airbag/Lexus/RX350  89170-48310.cal
+"""48670.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Highlander/Highlander  89170-48670.cal
+"""4h500.png""",4,4,name_candidates,1,Calculators/Airbag/Huyndai/H-1/H-1 95910-4H500.cal
+"""4h600.png""",4,4,name_candidates,1,Calculators/Airbag/Huyndai/Starex/95910-4H600  (95320).cal
+"""4m5t.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/Focus/4M5T 14B056 BJ.cal
+"""4s7t.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/Mondeo/4S7T 14B056 AC.cal
+"""508.png""",2,2,name_candidates,1,Calculators/Airbag/Peugeot/508/508  96 779 106 80  (95640).cal
+"""51718980.png""",2,2,name_candidates,1,Calculators/Airbag/Fiat/Albea/Albea 51718980.cal
+"""52490.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Sienna/89170-52490  93C56.cal
+"""57mb.png""",2,2,name_candidates,1,Calculators/Airbag/Suzuki/Jimny/Jimny  38910-57MB 0.cal
+"""60060.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/LC/89170-60060  93C56.cal
+"""60130.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Prado/89170-60130 ver1.cal
+"""60330.png""",6,6,name_candidates,1,Calculators/Airbag/Lexus/LX570  89170-60380.cal
+"""603725800.png""",2,2,name_candidates,1,Calculators/Airbag/Citroen/C 4/C4   603 72 58 00.cal
+"""608678700e.png""",2,2,name_candidates,1,Calculators/Airbag/Fiat/Doblo/608 67 87 00 E  Autoliv  ST95160.cal
+"""611.png""",2,2,name_candidates,1,Calculators/Airbag/Renault/Master/Master  611 13 65 00 (95640).cal
+"""68222_888aa.png""",2,2,name_candidates,1,Calculators/Airbag/Jeep/Grand Cherokee/Grand Cherokee  68222 888AA (95128).cal
+"""6r0959655j.png""",6,6,name_candidates,1,Calculators/Airbag/Volkswagen/VW Polo 6R0 959 655 J.cal
+"""76k30.png""",2,2,not_found,0,Calculators/Airbag/Suzuki/Grant Vitara/38910-76K30.cal
+"""7p0959655b.png""",2,2,name_candidates,1,Calculators/Airbag/Volkswagen/Touareg  7P0 959 655 B (95640).cal
+"""8080.png""",4,4,name_candidates,1,Calculators/Airbag/Peugeot/Boxer/Boxer  01370978080.cal
+"""8331.png""",2,2,not_found,0,Calculators/Airbag/Subaru/Forester/Forester  152300-8331 Denso  (93C56).cal
+"""86g03.png""",2,2,name_candidates,1,Calculators/Airbag/Suzuki/Ignis/38910-86G03.cal
+"""95910-2j550.png""",6,6,name_candidates,1,Calculators/Airbag/Kia/Mohave/Mohave   95910-2J500.cal
+"""9850.png""",2,2,name_candidates,1,Calculators/Airbag/Subaru/Tribeca/152300-9850 Denso  (RA86-93C86).cal
+"""9v4t.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/Kuga/Kuga  9V4T 14B321 AB.cal
+"""Acura.png""",2,2,name_candidates,1,Calculators/Airbag/Acura/RDX  77960-STK-A210-M2.cal
+"""Alfa Romeo.bmp""",34,34,not_found,0,Calculators/Airbag/Alfa Romeo/46813473.cal
+"""Arcticcat.png""",4,4,name_candidates,1,Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal
+"""Arcticcat1.png""",2,2,name_candidates,1,Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal
+"""Arcticcat2.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal
+"""Arcticcat3.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal
+"""BMW.png""",2,2,name_candidates,2,Calculators/Dashboard/BMW/Dash 35160  160DOWQ.cal
+"""Belarus.png""",2,2,not_found,0,Calculators/Dashboard/Special vehicles/Belarus/KD8083/PIC16F886.cal
+"""Bombardier.bmp""",26,26,not_found,0,Calculators/Asia/Ski-Doo/Scandic 9S12HZ256.cal
+"""Brilliance.png""",6,6,name_candidates,1,Calculators/Dashboard/Brilliance/Brilliance M2  24C04.cal
+"""C393C66.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C3/Dash  93C66.cal
+"""C393C661.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C3/Dash  93C66.cal
+"""C424c16.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C4/C4 Dash 24c16.cal
+"""C424c161.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C4/C4 Dash 24c16.cal
+"""C90T.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Suzuki/Boulevand C90T  93c46.cal
+"""CF500a.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/CFmoto/CFmoto 500A  24C02.cal
+"""CF500a1.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/CFmoto/CFmoto 500A  24C02.cal
+"""CFmoto dash93c46.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/CFmoto/CFmoto  93C46.cal
+"""CFmoto dash93c461.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/CFmoto/CFmoto  93C46.cal
+"""CFmoto.png""",12,12,name_candidates,1,Calculators/MOTO/Motobikes/CFmoto/CFmoto 500A  24C02.cal
+"""Chery.GPEG""",2,2,not_found,0,Calculators/Airbag/BMW/BMW  0 285 001 681  912D60  (1L28M).cal
+"""Chevrolet.jpg""",19,19,name_candidates,2,Calculators/ECU/CITROEN PEUGEOUT   .cal
+"""Chevrolet.png""",13,13,name_candidates,1,Calculators/PIN/Chevrolet/Cruze  BCU PIN immo 24C16.cal
+"""Cht11-36.png""",2,2,name_candidates,1,Calculators/Airbag/Cherry/T11-3606011  (95160).cal
+"""Cht11.png""",4,4,name_candidates,1,Calculators/Airbag/Cherry/T11-3606011PD.cal
+"""Citroen.png""",20,20,name_candidates,1,Calculators/Airbag/Citroen/Berlingo/626 18 13 00  (95320).cal
+"""Clariom.bmp""",1,1,not_found,0,Calculators/CarRadio/Clarion/CX609E.cal
+"""Cor24c01.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla  24C01.cal
+"""Cor24c011.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla  24C01.cal
+"""DUKDASH.PNG""",2,2,not_found,0,Calculators/Dashboard/Fiat/Ducato 1ver 25040.cal
+"""DUKDASH1.PNG""",2,2,not_found,0,Calculators/Dashboard/Fiat/Ducato 1ver 25040.cal
+"""Datsun.png""",2,2,name_candidates,1,Calculators/Airbag/Datsun/Datsun  2190-3824010-20.cal
+"""DongFeng.png""",4,4,not_found,0,Calculators/Dashboard/Special vehicles/DONG FENG/DFA 1145 93c66.cal
+"""Faw.png""",6,6,not_found,0,Calculators/Dashboard/FAW/Jinn  24C02.cal
+"""Fiat.jpg""",5,5,name_candidates,3,Calculators/PIN/Fiat/Doblo/Doblo  93c66  BCU PIN.cal
+"""Ford.PNG""",4,4,name_candidates,4,Calculators/Airbag/Ford/Escape/Escape  CJ5T 14B321 AH.cal
+"""Ford.png""",15,15,name_candidates,4,Calculators/Airbag/1 Universal/FORD_R.Rover_Jaguar_XC2361A.cal
+"""Foton.png""",2,2,name_candidates,1,Calculators/Dashboard/Foton/Foton  24C02.cal
+"""Foton1.png""",2,2,not_found,0,Calculators/Dashboard/Foton/Foton  24C02.cal
+"""Foton2.png""",2,2,not_found,0,Calculators/Dashboard/Foton/Foton  24C02.cal
+"""GJ6A.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/6/GJ6A 57 K30 C.cal
+"""Geely.jpg""",4,4,name_candidates,1,Calculators/Dashboard/Geely/Emgrand X7 24C04.cal
+"""Geely.png""",2,2,name_candidates,2,Calculators/Dashboard/Geely/Geely Emgrand 93C66.cal
+"""Great Wall.jpg""",3,3,name_candidates,1,Calculators/PIN/Great Wall/Hover/Hover H3  ECU .cal
+"""Haima.png""",2,2,name_candidates,1,Calculators/Dashboard/Haima/Haima 7  (24C04).cal
+"""Haimadash.png""",2,2,not_found,0,Calculators/Dashboard/Haima/Haima 7  (24C04).cal
+"""Haimaeep.png""",2,2,not_found,0,Calculators/Dashboard/Haima/Haima 7  (24C04).cal
+"""Haval.png""",2,2,name_candidates,1,Calculators/Dashboard/Haval/Haval H2  (95640).cal
+"""Hyunda.bmp""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Azera  24c16.cal
+"""Hyundai.jpg""",1,1,name_candidates,1,Calculators/Immo/Car/Hyundai/Accent/Accent ECU 95040.cal
+"""Hyundai.png""",19,19,name_candidates,1,Calculators/Airbag/1 Universal/KIA_HYUNDAI_XC2361A.cal
+"""Indisdash.png""",2,2,not_found,0,Calculators/Dashboard/Chery/Indis  93c66.cal
+"""Indisdash1.png""",2,2,not_found,0,Calculators/Dashboard/Chery/Indis  93c66.cal
+"""Infiniti.png""",8,8,name_candidates,1,Calculators/Airbag/Infinity/M 37  98820 1MM0A (95640).cal
+"""Infinity.bmp""",39,39,not_found,0,Calculators/Asia/Infinity/QX4 93C56 Kansey miles.cal
+"""Jac.png""",2,2,name_candidates,1,Calculators/Dashboard/Jac/Jac S5  24C04.cal
+"""Jaguar.png""",2,2,name_candidates,2,Calculators/Airbag/1 Universal/FORD_R.Rover_Jaguar_XC2361A.cal
+"""Kamatsu.png""",8,8,not_found,0,Calculators/Dashboard/Special vehicles/KAMATSU/Kamatsu  24C32.cal
+"""Kamaz.png""",2,2,name_candidates,1,Calculators/Dashboard/KAMAZ/╨ƒ╨É 8090 ╨æ╨╡╨╗╨░╤Ç╤â╤ü╤î/╨ƒA 8090 Pic 18F2520.cal
+"""Kia.png""",34,34,name_candidates,1,Calculators/Airbag/1 Universal/KIA_HYUNDAI_XC2361A.cal
+"""Kiac.png""",8,8,name_candidates,2,Calculators/Airbag/Kia/Ceed/Seed  95910-A2320.cal
+"""Land_rover.png""",2,2,name_candidates,1,Calculators/Dashboard/Land Rover/LR Voque  24C16.cal
+"""Lend Rover""",4,4,not_found,0,Calculators/Airbag/Land Rover/Discovery 3 NNW 502436.cal
+"""Lexus.png""",6,6,name_candidates,1,Calculators/Airbag/Lexus/LX570  89170-60380.cal
+"""M5YK.bmp""",2,2,not_found,0,Calculators/CarRadio/Ford/6000CD SINGLE CD-KW2000 6S61-18C815-AG.cal
+"""Man.png""",4,4,not_found,0,Calculators/Dashboard/MAN/Tachograf 24C04.cal
+"""Man1.png""",2,2,not_found,0,Calculators/Dashboard/MAN/Tachograf 93C66.cal
+"""Man2.png""",2,2,not_found,0,Calculators/Dashboard/MAN/Tachograf 93C66.cal
+"""Mazda.png""",3,3,name_candidates,2,Calculators/Airbag/Mazda/BT50/UR81 57 K30  (95320).cal
+"""Mazda6_MAC7242.png""",4,4,not_found,0,Calculators/Airbag/1 Universal/Mazda/Mazda 6  GDK4-57K30 J   MAC 7242.cal
+"""Mazda6_MAC72421.png""",4,4,not_found,0,Calculators/Airbag/1 Universal/Mazda/Mazda 6  GDK4-57K30 J   MAC 7242.cal
+"""Mercedes.png""",12,12,name_candidates,1,Calculators/Airbag/Mercedes/A204 870 94 26  25640.cal
+"""Misubishi.bmp""",26,26,not_found,0,Calculators/Dashboard/Mitsubishi/Rosa 93C46 Denso.cal
+"""Mitsub.bmp""",1,1,not_found,0,Calculators/Immo/Car/Mitsubishi/Spase Runner Immo 24C01 4C.cal
+"""Mitsubishi.png""",2,2,name_candidates,1,Calculators/Airbag/Mitsubishi/Galant/galant 8635A044.cal
+"""Mk24c02.png""",2,2,not_found,0,Calculators/Dashboard/Geely/MK New 24C02.cal
+"""Mk24c021.png""",2,2,not_found,0,Calculators/Dashboard/Geely/MK New 24C02.cal
+"""Mohave93c66.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Mohave/Mohave  93C66.cal
+"""Mohave93c661.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Mohave/Mohave  93C66.cal
+"""Murdash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Murano/Murano  24C16.cal
+"""Murdash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Murano/Murano  24C16.cal
+"""Nissan.jpg""",1,1,name_candidates,3,"Calculators/Immo/Car/Nissan/Teana/Teana  2004  BCU PIN immo 24C56,66.cal"
+"""Nissan.png""",38,38,name_candidates,2,Calculators/Dashboard/Nissan/AD 2000  93C56 Kansey km.cal
+"""Note24c16.png""",2,2,name_candidates,1,Calculators/Dashboard/Nissan/Note/Note  24C16.cal
+"""Note24c161.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Note/Note  24C16.cal
+"""Opel.jpg""",2,2,name_candidates,3,Calculators/Dashboard/Opel/Insignia  BCU PIN24C16.cal
+"""Opel.png""",16,16,name_candidates,1,Calculators/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal
+"""Opel4l40k.png""",2,2,name_candidates,1,Calculators/Airbag/Opel/Astra/13 249 347  9S12DG128.cal
+"""Pajero93c66.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Pajero/Pajero 93C66.cal
+"""Pajero93c661.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Pajero/Pajero 93C66.cal
+"""Partdash.png""",2,2,not_found,0,Calculators/Dashboard/Peugeot/Partner/Dash Partner 12  25020.cal
+"""Partdash1.png""",2,2,not_found,0,Calculators/Dashboard/Peugeot/Partner/Dash Partner 12  25020.cal
+"""Peugeot.jpg""",1,1,name_candidates,4,Calculators/Immo/Car/Peugeot/Boxer/Boxer  BSI 95160.cal
+"""Peugeot.png""",12,12,name_candidates,1,Calculators/Airbag/Peugeot/301/301  620 59 51 00.cal
+"""Philips.bmp""",17,17,not_found,0,Calculators/CarRadio/Philips/CCRT2008 28C64 ver3.cal
+"""Porsche.jpg""",1,1,not_found,0,Calculators/Immo/Car/Porsche/Cayenne/Cayenne KESSY 93C86.cal
+"""Renault.jpg""",1,1,name_candidates,3,Calculators/Immo/Car/Renault/Sandero/Sandero   BCU immo 93c66.cal
+"""Renault.png""",3,3,not_found,0,Calculators/Airbag/Renault/Logan/Logan  8201 163 282.cal
+"""SSch.png""",2,2,not_found,0,Calculators/Dashboard/Isuzu/ISUZU SAZ HC 40 93c56.cal
+"""Saab.png""",2,2,name_candidates,1,Calculators/Airbag/Saab/12771236  95320.cal
+"""Sandash.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Sandero/Sandero  25020.cal
+"""Sandash1.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Sandero/Sandero  25020.cal
+"""Sentradash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Sentra/Sentra  93C86 Kansey.cal
+"""Sentradash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Sentra/Sentra  93C86 Kansey.cal
+"""Shantui.png""",2,2,not_found,0,Calculators/Dashboard/Special vehicles/Shantui/Shantui  PIC12F675.cal
+"""Skoda.png""",12,12,name_candidates,1,Calculators/Airbag/Skoda/Oktavia  1K0 909 605 T  Siemens (95160).cal
+"""Sony.bmp""",1,1,not_found,0,Calculators/CarRadio/Sony/XAV-E622.cal
+"""SsangYong.png""",10,10,name_candidates,1,Calculators/Airbag/SsangYong/Actyon/Actyon  86250-34180.cal
+"""Sub1.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/XV  93C76.cal
+"""Suzuki.png""",6,6,name_candidates,1,Calculators/Airbag/Suzuki/Swift/Swift  38910-62J12-000.cal
+"""Tager.bmp""",3,3,not_found,0,Calculators/Dashboard/Tager/Tager 93C56.cal
+"""Tata.png""",2,2,name_candidates,1,Calculators/Dashboard/TATA/TATA I-Van LPT613  95040.cal
+"""Tatadash1.png""",2,2,not_found,0,Calculators/Dashboard/TATA/TATA I-Van LPT613  95040.cal
+"""Toyota.jpg""",2,2,name_candidates,1,Calculators/Immo/Car/Toyota/Picnic 1999 immo 93c66.cal
+"""Toyota.png""",23,23,name_candidates,4,Calculators/Airbag/Toyota/Hilux/89170-0K141.cal
+"""Toyota2.bmp""",5,5,not_found,0,Calculators/Immo/Car/Toyota/Yaris ECU 25040  4C.cal
+"""UAZ11.PNG""",2,2,not_found,0,Calculators/Dashboard/UAZ/UAZ  ╨ÿ╨ó╨ò╨¢╨£╨É  9S12HY48.cal
+"""UAZ22.PNG""",2,2,not_found,0,Calculators/Dashboard/UAZ/UAZ  ╨ÿ╨ó╨ò╨¢╨£╨É  9S12HY48.cal
+"""Ves.png""",2,2,not_found,0,Calculators/Dashboard/Lada/Vesta/Veata  ABS  95128.cal
+"""Vesta2.png""",2,2,not_found,0,Calculators/Dashboard/Lada/Vesta/Veata  Dash  9S12HY64.cal
+"""Vol30.png""",2,2,not_found,0,Calculators/Dashboard/Volvo/C30 MC9S12HZ256.cal
+"""Vol301.png""",2,2,not_found,0,Calculators/Dashboard/Volvo/C30 MC9S12HZ256.cal
+"""Volga.bmp""",2,2,not_found,0,Calculators/Dashboard/GAZ/Volga Siber BCM 912B32.cal
+"""Volvo.jpg""",2,2,name_candidates,2,Calculators/Immo/Car/Volvo/C-30/C-30  ECU 93c86.cal
+"""Vw.png""",6,6,name_candidates,1,Calculators/Airbag/Volkswagen/VW8 3C0 909 605M (95640).cal
+"""Vw8.png""",2,2,name_candidates,1,Calculators/Airbag/Volkswagen/VW8 3C0 909 605M (95640).cal
+"""Vw8j.png""",4,4,name_candidates,1,Calculators/Airbag/Volkswagen/VW8 Jetta  1K0 909 605 T  Siemens (95160).cal
+"""XCMG.png""",2,2,not_found,0,Calculators/Dashboard/Special vehicles/XCMG/XCMG500KN  24C64.cal
+"""Zaz.jpg""",2,2,name_candidates,1,Calculators/IDEN/Car/Zaz/Sens/Sens 1.3  ECU Micas 10.3 .cal
+"""a011.png""",2,2,name_candidates,1,Calculators/Airbag/Honda/Fit/77960-TK6-A011-M1.cal
+"""a7020.png""",2,2,name_candidates,1,Calculators/Airbag/Kia/Cerato/Cerato  95910-A7020.cal
+"""ac1.png""",2,2,name_candidates,1,Calculators/Airbag/Acura/RDX  77960-STK-A210-M2.cal
+"""accg920.png""",2,2,not_found,0,Calculators/Airbag/Honda/Accord/Accord  77960-TLO-G920-M1.cal
+"""albea.png""",2,2,not_found,0,Calculators/Dashboard/Fiat/Albea 95080.cal
+"""albea1.png""",2,2,not_found,0,Calculators/Dashboard/Fiat/Albea 95080.cal
+"""alfa romeo.bmp""",18,18,not_found,0,Calculators/CarRadio/Alpine/932 RDS  AL0932.cal
+"""almcl.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Almera/Almera 93C66 J control.cal
+"""almcl1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Almera/Almera 93C66 J control.cal
+"""alpine.bmp""",4,4,not_found,0,Calculators/CarRadio/Alpine/7982R  3CD.cal
+"""aprilia.bmp""",4,4,not_found,0,Calculators/Bikes/Aprilia/Aprilia v1.cal
+"""asx.png""",8,8,not_found,0,Calculators/Airbag/Mitsubishi/ASX/ASX 8635A321.cal
+"""audi.png""",2,2,name_candidates,2,Calculators/PIN/Audi/Audi A6  EDC15  LOGIN  24C04.cal
+"""autosound.bmp""",15,15,not_found,0,Calculators/CarRadio/Autosound/A560.cal
+"""av93c46.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Avensis/Toyota Avensis 93C46 Denso.cal
+"""av93c461.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Avensis/Toyota Avensis 93C46 Denso.cal
+"""avdash.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Spark/Spark M--300.cal
+"""aveo05.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Aveo/Aveo HC05H12.cal
+"""aveo25160.png""",4,4,not_found,0,Calculators/Dashboard/Opel/Astra/Astra J  BCU PIN24C16.cal
+"""aveosrs931.png""",3,3,name_candidates,1,Calculators/Airbag/Chevrolet/Aveo/96 430 714  (95080).cal
+"""aw93.png""",2,2,name_candidates,1,Calculators/Airbag/Jaguar/XJ  AW93-14D374-BD (95128).cal
+"""b.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Taiga/24C16  Proba.cal
+"""bLE900.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Taiga/24C16  Proba.cal
+"""bcr16.png""",4,4,not_found,0,Calculators/Airbag/Mercedes/W-203   0 285 001 548  CR16.cal
+"""be7406.bmp""",2,2,not_found,0,Calculators/CarRadio/Renault/CARMINAT NAVIGATION.cal
+"""becker.bmp""",63,63,not_found,0,Calculators/CarRadio/Becker/EUROPA CASSETTE  BE1200.cal
+"""bfd1.png""",2,2,not_found,0,Calculators/Airbag/Mazda/3/Mazda 3  BFD1 57 K30 .cal
+"""bfg8.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/3/Mazda 3 BFG8 57 K30 .cal
+"""bh10a.png""",4,4,name_candidates,1,Calculators/Airbag/Nissan/Note/98820 BH10A  (24C08).cal
+"""bha7.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/3/Mazda 3  BHA7 57K30.cal
+"""bhz64.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Taiga/24C16  Proba.cal
+"""biltema.bmp""",2,2,not_found,0,Calculators/CarRadio/BILTEMA/CALIFORNIA.cal
+"""blaupunkt.bmp""",84,84,not_found,0,Calculators/CarRadio/Grundig/SCD1590 VD.cal
+"""bm1a.png""",2,2,name_candidates,1,Calculators/Airbag/Infinity/EX35  988201BM1A.cal
+"""bp2020.bmp""",2,2,not_found,0,Calculators/CarRadio/Blaupunkt/ACCESS A HES-122R BP2020.cal
+"""bp5024.bmp""",2,2,not_found,0,Calculators/CarRadio/Blaupunkt/200R.cal
+"""brdash.png""",2,2,not_found,0,Calculators/Dashboard/Brilliance/Brilliance V5  9S12HZ128.cal
+"""brdash1.png""",2,2,not_found,0,Calculators/Dashboard/Brilliance/Brilliance V5  9S12HZ128.cal
+"""brdash2.png""",2,2,not_found,0,Calculators/Dashboard/Brilliance/Brilliance V5  9S12HZ128.cal
+"""brp.png""",32,32,name_candidates,1,Calculators/MOTO/Snowmobile/24C164 Proba.cal
+"""brp650.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal
+"""brp6501.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal
+"""brp800.png""",4,4,not_found,0,Calculators/MOTO/Motobikes/BRP/BRP Outlander 800  (24AA08).cal
+"""brp800r.png""",6,6,not_found,0,Calculators/MOTO/Motobikes/BRP/BRP Max-XTp   MC9S12HY64.cal
+"""brpLE900.png""",6,6,not_found,0,Calculators/MOTO/Snowmobile/24C164 Proba.cal
+"""brphz600.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal
+"""brphz64.png""",18,18,not_found,0,Calculators/MOTO/Snowmobile/24C164 Proba.cal
+"""brphz641.png""",10,10,not_found,0,Calculators/MOTO/Motobikes/BRP/BRP Outlander MXZ 800  (9S12HZ64).cal
+"""brptundra.png""",6,6,not_found,0,Calculators/MOTO/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal
+"""bs4h.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/3/Mazda 3  BS4 H57K30 C.cal
+"""bsm25160.png""",2,2,not_found,0,Calculators/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal
+"""bsm251601.png""",4,4,not_found,0,Calculators/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal
+"""bsm251602.png""",4,4,not_found,0,Calculators/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal
+"""bt50srs.png""",1,1,name_candidates,1,Calculators/Airbag/Mazda/BT50/UR81 57 K30  (95320).cal
+"""c-eldash.png""",4,4,not_found,0,Calculators/Dashboard/Peugeot/301/Dash 301  93C86.cal
+"""c-eldash1.png""",4,4,not_found,0,Calculators/Dashboard/Peugeot/301/Dash 301  93C86.cal
+"""c190.png""",2,2,name_candidates,1,Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal
+"""c4602.png""",2,2,name_candidates,1,Calculators/Airbag/Citroen/C 4/C4   602 32 74 00.cal
+"""c480.png""",6,6,name_candidates,1,Calculators/Airbag/Citroen/C 4/C4  96 750 271 80.cal
+"""c5619srs.png""",4,4,name_candidates,1,Calculators/Airbag/Citroen/C 5/C5  626 18 10 00  (25320).cal
+"""c593c76.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C5/Dash C5 93C76.cal
+"""c593c76dash.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C5/Dash C5 93C76.cal
+"""c90t1.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Suzuki/Boulevand C90T  93c46.cal
+"""c90t2.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Suzuki/Boulevand C90T  93c46.cal
+"""captivadash.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Captiva/Captiva 93c86.cal
+"""captivadash1.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Captiva/Captiva 93c86.cal
+"""car400.bmp""",2,2,not_found,0,Calculators/CarRadio/Philips/CAR400 MK1 GM0400.cal
+"""cart2007.bmp""",3,3,not_found,0,Calculators/CarRadio/Philips/CCRT2007 28C64 ver1.cal
+"""cat660.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Arctic Cat/Arctic Cat 660 VT  (ST62T40B).cal
+"""cat6601.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Arctic Cat/Arctic Cat 660 VT  (ST62T40B).cal
+"""cat6602.png""",2,2,not_found,0,Calculators/MOTO/Snowmobile/Arctic Cat/Arctic Cat 660 VT  (ST62T40B).cal
+"""ccr2006.bmp""",2,2,not_found,0,Calculators/CarRadio/Philips/changer CCR2006 GM0206.cal
+"""ccr600.bmp""",2,2,not_found,0,Calculators/CarRadio/Philips/CCR600 MK1 GM0600.cal
+"""ccr800.bmp""",1,1,not_found,0,Calculators/CarRadio/Philips/CCR800 GM0800.cal
+"""ccrt2008.bmp""",3,3,not_found,0,Calculators/CarRadio/Philips/CCRT2008 28C64 ver3.cal
+"""ccrt700.bmp""",4,4,not_found,0,Calculators/CarRadio/Philips/CCRT700 28C64 ver1.cal
+"""cdr23.bmp""",2,2,not_found,0,Calculators/CarRadio/PORSCHE/CDR23 BE6627 no immo.cal
+"""cdx-fs132.png""",1,1,not_found,0,Calculators/CarRadio/Ford/Mondeo  Sony CDX-FS132  9S12DG256.cal
+"""cdx-fs214.png""",1,1,not_found,0,Calculators/CarRadio/Ford/FF+ Sony CDX-FS214   9S12DP512.cal
+"""cdx-m800.bmp""",1,1,not_found,0,Calculators/CarRadio/Sony/CDX-M800.cal
+"""cdx-m850mp.bmp""",1,1,not_found,0,Calculators/CarRadio/Sony/CDX-M850MP.cal
+"""cdx-m8800.bmp""",1,1,not_found,0,Calculators/CarRadio/Sony/CDX-M8800.cal
+"""cher93c76.png""",2,2,not_found,0,Calculators/Dashboard/Jeep/Grand Cherokee Dash  93C76.cal
+"""cher93c761.png""",2,2,not_found,0,Calculators/Dashboard/Jeep/Grand Cherokee Dash  93C76.cal
+"""chevl.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Lacetti/Lacetti 93C46.cal
+"""chevl1.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Lacetti/Lacetti 93C46.cal
+"""chevl2.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Lacetti/Lacetti 93C46.cal
+"""chniva.png""",4,4,not_found,0,Calculators/Airbag/Geely/GC6  222426-127  (95640).cal
+"""cietroen.bmp""",2,2,not_found,0,Calculators/Car/Citroen/Evasion v2.cal
+"""citpoen.png""",2,2,not_found,0,Calculators/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal
+"""civicsmg.png""",6,6,name_candidates,1,Calculators/Airbag/Honda/Civic/Civic  77960-SNB-G222-M1.cal
+"""cko.png""",2,2,name_candidates,1,Calculators/Airbag/Skoda/Oktavia  6Q0 909 605 AH.cal
+"""clarion.bmp""",11,11,not_found,0,Calculators/CarRadio/Peugeot/PU-2325A(C) .cal
+"""classic.png""",2,2,name_candidates,2,Calculators/Airbag/Nissan/Almera/605 14 78 00 Autoliv.cal
+"""coltdash.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Colt/Colt 93C56.cal
+"""coltdash1.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Colt/Colt 93C56.cal
+"""concert_new.bmp""",2,2,not_found,0,Calculators/CarRadio/Audi/Concert II AUZ5Z6.cal
+"""cor24c16.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla VDO  24c16.cal
+"""corolladash.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla 93C86 Siemens-VDO.cal
+"""corolladash1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla 93C86 Siemens-VDO.cal
+"""corolladash93c66.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla 93C66.cal
+"""corolladash93c661.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Corolla/Corolla 93C66.cal
+"""corsadash.png""",2,2,not_found,0,Calculators/Dashboard/Opel/Corsa/Corsa VDO PIN 35080.cal
+"""corsadash1.png""",2,2,not_found,0,Calculators/Dashboard/Opel/Corsa/Corsa VDO PIN 35080.cal
+"""cr16.png""",2,2,name_candidates,1,Calculators/Airbag/Volkswagen/Fhaeton  3D0 909 601 M  Bosch CR16.cal
+"""crb.png""",4,4,not_found,0,Calculators/MOTO/Motobikes/Honda/CRB 1000 RR  93C86.cal
+"""crb1.png""",4,4,not_found,0,Calculators/MOTO/Motobikes/Honda/CRB 1000 RR  93C86.cal
+"""crb1000rr.png""",4,4,not_found,0,Calculators/MOTO/Motobikes/Honda/CRB 1000RR  93c66 .cal
+"""crb2.png""",4,4,not_found,0,Calculators/MOTO/Motobikes/Honda/CRB 1000 RR  93C86.cal
+"""crv1.png""",2,2,not_found,0,Calculators/Dashboard/Honda/CRV/CRV 2013 93C76.cal
+"""crv2.png""",2,2,not_found,0,Calculators/Dashboard/Honda/CRV/CRV 2013 93C76.cal
+"""crv2010.png""",2,2,not_found,0,Calculators/Dashboard/Honda/CRV/CRV 2010  93C76.cal
+"""crv20101.png""",2,2,not_found,0,Calculators/Dashboard/Honda/CRV/CRV 2010  93C76.cal
+"""cs7dash.png""",2,2,not_found,0,Calculators/Dashboard/Geely/SC7  24C04.cal
+"""csrs.png""",4,4,name_candidates,1,Calculators/Airbag/Toyota/Camry/89170-33810.cal
+"""cv4t.PNG""",4,4,name_candidates,1,Calculators/Airbag/Ford/Escape/Escape  CJ5T 14B321 AH.cal
+"""d651.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/2/D651-57K30C  95320.cal
+"""delco.bmp""",4,4,not_found,0,Calculators/CarRadio/VW/PREMIUM AUDIO III.cal
+"""dukatodash.png""",2,2,not_found,0,Calculators/Dashboard/Fiat/Ducato 95040.cal
+"""dukatodash1.png""",2,2,not_found,0,Calculators/Dashboard/Fiat/Ducato 95040.cal
+"""dusterradio.png""",1,1,not_found,0,Calculators/CarRadio/Renault/Duster/AGC-0060RF  DAEWOO  24╨í128.cal
+"""ea51b.png""",2,2,not_found,0,Calculators/Airbag/Nissan/Pathfinder/98820 EA51B  (68HC912D60).cal
+"""easy.bmp""",6,6,not_found,0,Calculators/CarRadio/EASY/PTD 490.cal
+"""eb010.png""",1,1,name_candidates,1,Calculators/Airbag/Nissan/Navara/98820 EB01D  (MC68HC912D60).cal
+"""eh14.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/CX-7/EH14 57 K30A (95320).cal
+"""el93c46.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Elantra/Elantra 93C46.cal
+"""el93c461.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Elantra/Elantra 93C46.cal
+"""elsrs.png""",4,4,name_candidates,1,Calculators/Airbag/Huyndai/Elantra/95910-2H200.cal
+"""elysebsi.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C-Elysee/BSI  C-Elysse  25256.cal
+"""elysebsi1.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/C-Elysee/BSI  C-Elysse  25256.cal
+"""emgrand.png""",2,2,name_candidates,2,Calculators/Dashboard/Geely/Geely Emgrand 93C66.cal
+"""emgrand1.png""",2,2,not_found,0,Calculators/Dashboard/Geely/Geely Emgrand 93C66.cal
+"""emgrsrs.png""",4,4,name_candidates,1,Calculators/Airbag/Geely/Emgrand  06300103.cal
+"""epdash.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Epica/Epica 93C56.cal
+"""epdash1.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Epica/Epica 93C56.cal
+"""expdash.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Expedition/Expedition 93C46.cal
+"""expdash1.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Expedition/Expedition 93C46.cal
+"""f93c86.png""",2,2,name_candidates,1,Calculators/Airbag/Subaru/Forester/Forester 150300-0940.cal
+"""fcm.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/C-Max/C-Max  6M2T 14B056 AE.cal
+"""fe93c66.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Santa Fe/Santa Fe 93c66.cal
+"""fe93c661.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Santa Fe/Santa Fe 93c66.cal
+"""ff2srs.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/Focus/9M5T 14B321 BB.cal
+"""ff3ca.png""",6,6,name_candidates,1,Calculators/Airbag/Ford/Focus/FF3 CM5T 14B321 CA v.cal
+"""ff3dash.png""",2,2,name_candidates,1,Calculators/Dashboard/Ford/Focus/Focus 3  (95320).cal
+"""ff3dash1.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Focus/Focus 3  (95320).cal
+"""fiat.png""",6,6,name_candidates,1,Calculators/Dashboard/Fiat/Ducato 95160.cal
+"""fiat323mp3.png""",1,1,not_found,0,Calculators/CarRadio/Fiat/323 MP3 SD08 (95640).cal
+"""fiestaaa6t.png""",1,1,name_candidates,1,Calculators/Airbag/Ford/Fiesta/AA6T 14B321 AA (95320).cal
+"""fiestaaa6t1.png""",1,1,name_candidates,1,Calculators/Airbag/Ford/Fiesta/8V51 14B321 BG  (95320).cal
+"""fm.png""",2,2,name_candidates,1,Calculators/Airbag/Ford/Mondeo/Mondeo  7S7T 14B056 AD.cal
+"""ft93c76dash.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Tranzit/Tranzit 93C76.cal
+"""ft93c76dashpin.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Tranzit/Tranzit 93C76.cal
+"""ft93c76eep.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Tranzit/Tranzit 93C76.cal
+"""fx35cl71a.png""",2,2,name_candidates,1,Calculators/Airbag/Infinity/FX35  98820CL71A 93c66 (RL66).cal
+"""g214.png""",6,6,name_candidates,1,Calculators/Airbag/Honda/CR-V/CR-V  77960-SWA-G214-M4.cal
+"""g25srs.png""",10,10,name_candidates,1,Calculators/Airbag/Infinity/FX37  988201WW2A.cal
+"""g821.png""",2,2,name_candidates,1,Calculators/Airbag/Honda/Accord/Accord  77960-SEA-G821-M1.cal
+"""gamasound.bmp""",2,2,not_found,0,Calculators/CarRadio/Autosound/GAMASOUND A480.cal
+"""gentradash.png""",2,2,not_found,0,Calculators/Dashboard/Daewoo/Gentra 93C56.cal
+"""gentradash1.png""",2,2,not_found,0,Calculators/Dashboard/Daewoo/Gentra 93C56.cal
+"""ghr1.png""",2,2,not_found,0,Calculators/Airbag/Mazda/6/Mazda 6 GHR1-57K30.cal
+"""gmk.png""",2,2,not_found,0,Calculators/Dashboard/Geely/MK Cross ATMega16.cal
+"""gmk1.png""",2,2,not_found,0,Calculators/Dashboard/Geely/MK Cross ATMega16.cal
+"""gmk2.png""",2,2,not_found,0,Calculators/Dashboard/Geely/MK Cross ATMega16.cal
+"""grantasrs.png""",4,4,name_candidates,1,Calculators/Airbag/Datsun/Datsun  2190-3824010-20.cal
+"""grundig.bmp""",17,17,not_found,0,Calculators/CarRadio/Grundig/WKC 5200 RDS INFOMAT.cal
+"""gvdash.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara 24c16 Visteon.cal
+"""gvdash1.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara 24c16 Visteon.cal
+"""gvdash2.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara 24c16 Visteon.cal
+"""gvsrs.png""",4,4,name_candidates,1,Calculators/Airbag/Suzuki/Grant Vitara/Grand Vitara  38910-65J50.cal
+"""gvvdo.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara   24c16 VDO.cal
+"""gvvdo1.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara   24c16 VDO.cal
+"""h325c640.png""",2,2,name_candidates,1,Calculators/Airbag/Great Wall/Hover H3  3658160AK80XA 25c640.cal
+"""hadash.png""",2,2,not_found,0,Calculators/Dashboard/Honda/Accord/Accord DENSO 93C86.cal
+"""hadash1.png""",2,2,not_found,0,Calculators/Dashboard/Honda/Accord/Accord DENSO 93C86.cal
+"""hasrs.png""",2,2,name_candidates,1,Calculators/Airbag/Honda/Accord/Accord  77960-TLO-G913-M1.cal
+"""hd78dash.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/HD78  93C56.cal
+"""hd78dash1.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/HD78  93C56.cal
+"""hg.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Getz 93C46.cal
+"""hg1.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Getz 93C46.cal
+"""hiluxdash.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Hilux/Toyota Hilux - 93C66 Yazaki 17.cal
+"""hiluxdash1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Hilux/Toyota Hilux - 93C66 Yazaki 17.cal
+"""hoverdash.png""",2,2,not_found,0,Calculators/Dashboard/Great Wall/Great Wall Hover 24c32.cal
+"""hoverdash1.png""",2,2,not_found,0,Calculators/Dashboard/Great Wall/Great Wall Hover 24c32.cal
+"""hsrs95320.png""",4,4,name_candidates,1,Calculators/Airbag/Honda/Civic/Civic 77960-TRO-T014-M1  (95320).cal
+"""ht4l40k.png""",12,12,name_candidates,1,Calculators/Airbag/Kia/Sportage/Sportage  95910-0Z000.cal
+"""i30srs.png""",2,2,name_candidates,1,Calculators/Airbag/Huyndai/I30/I30   95910-2R000.cal
+"""i40dash.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/I40 93C66.cal
+"""i40dash1.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/I40 93C66.cal
+"""infiniti.PNG""",2,2,name_candidates,1,Calculators/Airbag/Infinity/QX70 988201CY0A.cal
+"""infiniti.png""",6,6,name_candidates,1,Calculators/Airbag/Infinity/FX37  988201WW2A.cal
+"""info.bmp""",10,10,not_found,0,Calculators/CarRadio/INFO/3000.cal
+"""ix35dash.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/ix35 93C66.cal
+"""ix35dash1.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/ix35 93C66.cal
+"""ix35srs.png""",2,2,not_found,0,Calculators/Airbag/Huyndai/IX35/IX35  95910-2Y100.cal
+"""ix553j600.png""",6,6,name_candidates,1,Calculators/Airbag/Huyndai/IX55/IX55  95910-3J500.cal
+"""jagradio.png""",2,2,name_candidates,1,Calculators/CarRadio/Jaguar/JAGUAR  24C08.cal
+"""jazzdash.png""",2,2,not_found,0,Calculators/Dashboard/Honda/Jazz/Jazz 93C56.cal
+"""jazzdash1.png""",2,2,not_found,0,Calculators/Dashboard/Honda/Jazz/Jazz 93C56.cal
+"""jbcm.png""",2,2,not_found,0,Calculators/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal
+"""jeep.png""",2,2,name_candidates,1,Calculators/Dashboard/Jeep/Grand Cherokee Dash  93C76.cal
+"""jimmydash.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Jimny/Jimny 93C56 New denso.cal
+"""jimmydash1.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Jimny/Jimny 93C56 New denso.cal
+"""jukedash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Juke  93C86 Kansey.cal
+"""jukedash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Juke  93C86 Kansey.cal
+"""jukedash2.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Juke  93C86 Kansey.cal
+"""jumdash.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/Jumper/Jumper  95040 v1.cal
+"""jumdash1.png""",2,2,not_found,0,Calculators/Dashboard/Citroen/Jumper/Jumper  95040 v1.cal
+"""jumperimmo.png""",2,2,not_found,0,Calculators/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal
+"""jvc.bmp""",9,9,not_found,0,Calculators/CarRadio/Jvc/KD-LX10R.cal
+"""kawn.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Kawasaki/Kawasaki Ninja 300  2013  93c46.cal
+"""kawn1.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Kawasaki/Kawasaki Ninja 300  2013  93c46.cal
+"""kawn2.png""",2,2,not_found,0,Calculators/MOTO/Motobikes/Kawasaki/Kawasaki Ninja 300  2013  93c46.cal
+"""kcsrs.png""",12,12,name_candidates,1,Calculators/Airbag/Kia/Cerato/Cerato  95910-1M650.cal
+"""kd47.png""",2,2,not_found,0,Calculators/Airbag/Mazda/CX-5/CX-5  KD47-57K30.cal
+"""kg000.png""",2,2,name_candidates,1,Calculators/Airbag/Subaru/R 2/98221KG000  (93C66).cal
+"""kiar.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Rio/Rio 93C66.cal
+"""kiar1.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Rio/Rio 93C66.cal
+"""knutsson.bmp""",2,2,not_found,0,Calculators/CarRadio/KNUTSSON/NL870.cal
+"""ko.png""",8,8,name_candidates,1,Calculators/Airbag/Kia/Optima/Optima 95910-2T310.cal
+"""koldash.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Koleos  24c16.cal
+"""koldash1.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Koleos  24c16.cal
+"""ksdash.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Sportage/Sportage  24c16.cal
+"""ksdash1.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Sportage/Sportage  24c16.cal
+"""kugadash.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Kuga/Kuga 24C32.cal
+"""kugadash1.png""",2,2,not_found,0,Calculators/Dashboard/Ford/Kuga/Kuga 24C32.cal
+"""l20093c76.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/L200/L200  93C76.cal
+"""l20093c761.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/L200/L200  93C76.cal
+"""l200dash56.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/L200/L200  93C56.cal
+"""l200dash561.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/L200/L200  93C56.cal
+"""lachsrs.png""",8,8,name_candidates,1,Calculators/Airbag/Daewoo/Gentra  94 833 085.cal
+"""ladaradio.png""",1,1,not_found,0,Calculators/CarRadio/LADA/Largus/AGC-1220RF-A  24V01.cal
+"""ladaradio1.png""",1,1,not_found,0,Calculators/CarRadio/LADA/Largus/AGC-1220RF-A  24V01.cal
+"""ladasrs.png""",2,2,name_candidates,1,Calculators/Airbag/Lada/2170-3824010-01.cal
+"""lagsrs.png""",2,2,name_candidates,1,Calculators/Airbag/Renault/Laguna/Laguna  610 90 46 00  (95640).cal
+"""lancerdash1.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Lancer/Lancer   93C86 Yazaki.cal
+"""land rover.bmp""",2,2,not_found,0,Calculators/CarRadio/LAND ROVER/22DC349_60.cal
+"""land_rover.png""",2,2,name_candidates,1,Calculators/Airbag/1 Universal/FORD_R.Rover_Jaguar_XC2361A.cal
+"""lcprdash.png""",4,4,not_found,0,Calculators/Dashboard/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 25 93C86.cal
+"""lcprdash1.png""",4,4,not_found,0,Calculators/Dashboard/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 25 93C86.cal
+"""legsrs.png""",2,2,name_candidates,1,Calculators/Airbag/Subaru/Legacy/Legacy  152300-0710.cal
+"""logandash.png""",8,8,not_found,0,Calculators/Dashboard/Lada/Largus  93C56.cal
+"""logandash1.png""",8,8,not_found,0,Calculators/Dashboard/Lada/Largus  93C56.cal
+"""logandash2.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Logan/Logan  Dash  95160.cal
+"""logandash21.png""",2,2,not_found,0,Calculators/Dashboard/Renault/Logan/Logan  Dash  95160.cal
+"""logsrs.png""",10,10,name_candidates,1,Calculators/Airbag/Lada/Largus 8201 163 278.cal
+"""lrsrs.png""",6,6,name_candidates,1,Calculators/Airbag/Land Rover/9H52 14D374 AD.cal
+"""lrsrs4l40k.png""",2,2,name_candidates,1,Calculators/Airbag/Land Rover/Discovery 3  8H22-14D374-AC.cal
+"""m11.png""",2,2,name_candidates,1,Calculators/Airbag/Cherry/M11-3606010BB.cal
+"""m3.png""",2,2,not_found,0,Calculators/Dashboard/Mazda/3/Mazda 3  93c76.cal
+"""m31.png""",2,2,not_found,0,Calculators/Dashboard/Mazda/3/Mazda 3  93c76.cal
+"""m37dash.png""",2,2,not_found,0,Calculators/Dashboard/Infinity/Infinity M37  93C86 Kansey km.cal
+"""m37dash1.png""",2,2,not_found,0,Calculators/Dashboard/Infinity/Infinity M37  93C86 Kansey km.cal
+"""m6.png""",2,2,name_candidates,1,Calculators/Airbag/Mazda/6/Mazda 6  GS1D 57 K30.cal
+"""m615.png""",2,2,name_candidates,1,Calculators/Airbag/Nissan/Almera/285568M615  (93╤ü56).cal
+"""maxdash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Maxima/Maxima v1  93C56.cal
+"""mex-100nv.bmp""",2,2,not_found,0,Calculators/CarRadio/Becker/MEX-100NV.cal
+"""mk1.png""",2,2,not_found,0,Calculators/Dashboard/Geely/Geely MK Cross   9S12HY64.cal
+"""mk2.png""",2,2,not_found,0,Calculators/Dashboard/Geely/Geely MK Cross   9S12HY64.cal
+"""mk3.png""",2,2,not_found,0,Calculators/Dashboard/Geely/Geely MK Cross   9S12HY64.cal
+"""mondac.png""",4,4,name_candidates,1,Calculators/Airbag/Ford/Mondeo/Mondeo BS7T 14B321 AC.cal
+"""nadash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Almera/Almera  25020.cal
+"""nadash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Almera/Almera  25020.cal
+"""nassan.bmp""",6,6,not_found,0,Calculators/CarRadio/Nissan/MM CD-K  BP3349.cal
+"""ndash.png""",8,8,not_found,0,Calculators/Dashboard/Nissan/Tiida  93C66 Kansey.cal
+"""nissanpn.png""",3,3,not_found,0,Calculators/CarRadio/Nissan/NISSAN  PP-2649N.cal
+"""nisst.png""",6,6,name_candidates,1,Calculators/Airbag/Nissan/Teana/Teana  98820-JN50B.cal
+"""nj.png""",12,12,name_candidates,1,Calculators/Airbag/Nissan/Patrol/Patrol  98820 1LB1A.cal
+"""nmdash.png""",10,10,not_found,0,Calculators/Dashboard/Infinity/Infinity FX35  93C66 Kansey km.cal
+"""nmur.png""",2,2,name_candidates,1,Calculators/Airbag/Nissan/Murano/Murano 988201SZ0A.cal
+"""note93c76.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Note/Note  93C76 Kansey km.cal
+"""npdash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Pathfinder/Pathfinder 9S12H256 (1k78x) 4 Kb.cal
+"""nq93c86dash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai  93C86 Kansey km.cal
+"""oc1c0.png""",4,4,name_candidates,1,Calculators/Airbag/Skoda/Fabia  1C0 909 605 K  2L52H.cal
+"""oc1co1.png""",2,2,name_candidates,1,Calculators/Airbag/Skoda/Oktavia  1C0 909 601 2L52H.cal
+"""ok6q0.png""",2,2,name_candidates,1,Calculators/Airbag/Skoda/Oktavia  6Q0 909 601 0J66D.cal
+"""out282.png""",2,2,name_candidates,1,Calculators/Airbag/Mitsubishi/Outlander/Outlander  8635A282.cal
+"""outdash.png""",4,4,not_found,0,Calculators/Dashboard/Mitsubishi/Outlander/Outlander XL 2010 93C76.cal
+"""outdash1.png""",4,4,not_found,0,Calculators/Dashboard/Mitsubishi/Outlander/Outlander XL 2010 93C76.cal
+"""outdash2.png""",8,8,not_found,0,Calculators/Dashboard/Mitsubishi/Lancer/Lancer   93C86 Yazaki.cal
+"""outldash.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Outlander/Outlander 2010 93C76 V1.cal
+"""outldash1.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Outlander/Outlander 2010 93C76 V1.cal
+"""outsrs.png""",8,8,name_candidates,1,Calculators/Airbag/Mitsubishi/Lancer/Lancer  P8635A060.cal
+"""pathfxhz256.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Pathfinder/Pathfinder  9S12XHZ256 (1M80F).cal
+"""pathfxhz2561.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Pathfinder/Pathfinder  9S12XHZ256 (1M80F).cal
+"""philips.bmp""",33,33,not_found,0,Calculators/philips temp.cal
+"""picsrs.png""",2,2,name_candidates,1,Calculators/Airbag/Kia/Picanto/Picanto  95910-1Y010.cal
+"""pilot93c86.png""",2,2,name_candidates,1,Calculators/Airbag/Honda/Pilot/Pilot  77960-SZA-R012-M1.cal
+"""pioneer.bmp""",8,8,not_found,0,Calculators/CarRadio/Renault/KEH-M1066ZRN without display.cal
+"""progress.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Toyota Progress Denso.cal
+"""progress1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Toyota Progress Denso.cal
+"""psdash93c56.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Pajero/Pajero Sport  93C56 v1.cal
+"""psdash93c561.png""",2,2,not_found,0,Calculators/Dashboard/Mitsubishi/Pajero/Pajero Sport  93C56 v1.cal
+"""pu2294.bmp""",7,7,not_found,0,Calculators/CarRadio/Peugeot/PU-2325A(C) .cal
+"""qashdash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai 2010+ 9S12XHZ256.cal
+"""qashdash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai 2010+ 9S12XHZ256.cal
+"""qashdash2.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai 2010+ 9S12XHZ256.cal
+"""qashqai93c66.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai  93C66 Kansey km.cal
+"""qashqai93c86dash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Qashqai/Qashqai  93C86 Kansey km.cal
+"""qashsrs.png""",2,2,not_found,0,Calculators/Airbag/Nissan/Qashqai/Qashqai  98820JD10A.cal
+"""qqatmega32.png""",2,2,not_found,0,Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal
+"""qqdash.png""",2,2,not_found,0,Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal
+"""qu93c66.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Quoris  93C66.cal
+"""qu93c661.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Quoris  93C66.cal
+"""renault.PNG""",3,3,not_found,0,Calculators/CarRadio/Renault/RENRNC640-10  NAVI_TV(24c64).cal
+"""rrs35080.png""",2,2,not_found,0,Calculators/Dashboard/Range Rover/Sport 35080.cal
+"""rrs350801.png""",2,2,not_found,0,Calculators/Dashboard/Range Rover/Sport 35080.cal
+"""rwx93c76.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/WRX  93C76.cal
+"""rwx93c761.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/WRX  93C76.cal
+"""s60srs.png""",12,12,name_candidates,1,Calculators/Airbag/Volvo/S60/S60  P31387523  (95128).cal
+"""sertecu93c86.png""",1,1,not_found,0,Calculators/Immo/Car/Toyota/Smart Key/Smart Key  93c86.cal
+"""sfdash93c76.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Forester/Forester 93C76.cal
+"""sfdash93c761.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Forester/Forester 93C76.cal
+"""sfdash93c86.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Forester/Forester 93C86.cal
+"""sfdash93c861.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Forester/Forester 93C86.cal
+"""siemens vdo.bmp""",4,4,not_found,0,Calculators/CarRadio/Siemens VDO/CAR400 MK2 DC399  GM0400  no display.cal
+"""sl93c56.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Liana/Liana 93C56 newDenco.cal
+"""sl93c561.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/Liana/Liana 93C56 newDenco.cal
+"""soldash.png""",3,3,not_found,0,Calculators/Dashboard/Ford/Ranger/Ranger 24c16.cal
+"""soldash1.png""",3,3,not_found,0,Calculators/Dashboard/Ford/Ranger/Ranger 24c16.cal
+"""sony.bmp""",5,5,not_found,0,Calculators/CarRadio/Becker/MEX-100NV.cal
+"""soul24c16.png""",2,2,name_candidates,1,Calculators/Dashboard/KIA/Soul/Soul  24c16.cal
+"""soul24c161.png""",2,2,not_found,0,Calculators/Dashboard/KIA/Soul/Soul  24c16.cal
+"""spark05.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Spark/Spark HC05H12.cal
+"""spark051.png""",4,4,not_found,0,Calculators/Dashboard/Chevrolet/Aveo/Aveo HC05H12.cal
+"""spdash1.png""",2,2,not_found,0,Calculators/Dashboard/Chevrolet/Spark/Spark M--300.cal
+"""sprinter93c66.png""",2,2,not_found,0,Calculators/Dashboard/Mercedes/Sprinter/Sprinter 93C66.cal
+"""sprinter93c661.png""",2,2,not_found,0,Calculators/Dashboard/Mercedes/Sprinter/Sprinter 93C66.cal
+"""spsrs.png""",8,8,name_candidates,1,Calculators/Airbag/Kia/Sportage/Sportage  95910-3U100.cal
+"""ss4srs.png""",8,8,name_candidates,1,Calculators/Airbag/Suzuki/SX-4/SX-4  38910-55L20-000.cal
+"""ssangyong""",3,3,not_found,0,Calculators/Asia/Ssang Yong/Coranda Denso 93C66.cal
+"""sx4dash24c16.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/SX-4/SX-4  24c16 VDO.cal
+"""sx4dash24c161.png""",2,2,not_found,0,Calculators/Dashboard/Suzuki/SX-4/SX-4  24c16 VDO.cal
+"""sya.png""",2,2,not_found,0,Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal
+"""sya1.png""",2,2,not_found,0,Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal
+"""ta.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Auris/Auris  Denso  93C66.cal
+"""ta1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Auris/Auris  Denso  93C66.cal
+"""tagaz.png""",2,2,not_found,0,Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal
+"""tagazdash.png""",2,2,not_found,0,Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal
+"""tagazdash1.png""",2,2,not_found,0,Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal
+"""tagt.png""",2,2,not_found,0,Calculators/Dashboard/Tager/Tager 93C56.cal
+"""tc3.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Camry/Camry V50  93C66.cal
+"""tc31.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Camry/Camry V50  93C66.cal
+"""tcsrs.png""",2,2,name_candidates,1,Calculators/Airbag/Toyota/Camry/89170-33510.cal
+"""teana24c16.png""",2,2,name_candidates,1,Calculators/Dashboard/Nissan/Teana/Teana  24c16.cal
+"""teana24c161.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Teana/Teana  24c16.cal
+"""teana93c66.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Teana/Teana  93C66 Kansey.cal
+"""teandash.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Teana/Teana  93C86 Kansey.cal
+"""teandash1.png""",2,2,not_found,0,Calculators/Dashboard/Nissan/Teana/Teana  93C86 Kansey.cal
+"""technisat.bmp""",1,1,not_found,0,Calculators/CarRadio/Technisat/WERRA 1.cal
+"""thidash.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Highlander/Toyota Highlander 93C66 Denso.cal
+"""thidash1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Highlander/Toyota Highlander 93C66 Denso.cal
+"""tiggonew.png""",2,2,not_found,0,Calculators/Dashboard/Chery/Tiggo/Tiggo New 93C66.cal
+"""tiggonew1.png""",2,2,not_found,0,Calculators/Dashboard/Chery/Tiggo/Tiggo New 93C66.cal
+"""toya.png""",4,4,name_candidates,1,Calculators/Airbag/Toyota/Avensis/89170-05230  (25040).cal
+"""tr4.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/RAV-4/RAV4  93C66.cal
+"""tr41.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/RAV-4/RAV4  93C66.cal
+"""trdash.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Tribeka/Tribeka B9 93c66.cal
+"""trdash1.png""",2,2,not_found,0,Calculators/Dashboard/Subaru/Tribeka/Tribeka B9 93c66.cal
+"""ttsrs.png""",2,2,name_candidates,1,Calculators/Airbag/Audi/TT/Audi TT  8J0 959 655 (95640).cal
+"""tucsdash.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Tucson 93C46.cal
+"""tucsdash1.png""",2,2,not_found,0,Calculators/Dashboard/Hyundai/Tucson 93C46.cal
+"""uaz1.png""",2,2,not_found,0,Calculators/Dashboard/UAZ/UAZ RAR  24C08.cal
+"""uaz2.png""",2,2,not_found,0,Calculators/Dashboard/UAZ/UAZ RAR  24C08.cal
+"""v40dash.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Camry/Camry V40  Denso  93C56.cal
+"""v40dash1.png""",2,2,not_found,0,Calculators/Dashboard/Toyota/Camry/Camry V40  Denso  93C56.cal
+"""vcsrs.png""",1,1,name_candidates,1,Calculators/Airbag/Opel/Vectra/13 186 948  (95160).cal
+"""vdo.bmp""",4,4,not_found,0,Calculators/CarRadio/Opel/CDR 2005(E) DC409_75 without display.cal
+"""vectracdash.png""",2,2,not_found,0,Calculators/Dashboard/Opel/Vectra/Vectra C VDO PIN  93C66.cal
+"""vectracdash1.png""",2,2,not_found,0,Calculators/Dashboard/Opel/Vectra/Vectra C VDO PIN  93C66.cal
+"""vw.png""",2,2,name_candidates,1,Calculators/CarRadio/VW/DELTA VWZ4Z4  7L6 035 195 A.cal
+"""vw1.png""",2,2,name_candidates,1,Calculators/Airbag/Volkswagen/Touareg  7L0 959 655 (95640).cal
+"""vw186b.png""",1,1,not_found,0,Calculators/CarRadio/VW/GAMMA VWZ1Z3  1J0 035 186B.cal
+"""vw3.png""",2,2,not_found,0,Calculators/Airbag/Volkswagen/Tiguan VW10 5N0 959 655 J.cal
+"""vwgamma.png""",1,1,not_found,0,Calculators/CarRadio/VW/GAMMA  VWZ1Z3  1╨í0 035 186.cal
+"""w203b32.png""",2,2,not_found,0,Calculators/Airbag/Mercedes/W-203   0 285 001 373  912B32.cal
+"""xcmg1.png""",2,2,not_found,0,Calculators/Dashboard/Special vehicles/XCMG/XCMG500KN  24C64.cal
+"""yugo.bmp""",2,2,not_found,0,Calculators/CarRadio/YUGO/YUGO A320.cal
+"""Богдан.bmp""",2,2,not_found,0,Calculators/Dashboard/Bogdan/A092 93C46.cal
