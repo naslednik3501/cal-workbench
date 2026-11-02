@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 741,
-      "sha256": "9253f1bd059d44daa88324dbd67a0a855818cf6febf16a3c93aba6613c881f46"
+      "bytes": 1533,
+      "sha256": "03c24ad43a3d490fc69bb429cd6d15f2241f3c8a45c9c2b9bdbc1f993a860b82"
     },
     {
       "path": "COMPATIBILITY.md",
@@ -13,8 +13,8 @@
     },
     {
       "path": "DEVELOPMENT.md",
-      "bytes": 12834,
-      "sha256": "bd07ea7d9db466a81c8932df2f625280aeeb216a7f7553601e4bf97d4014670e"
+      "bytes": 13174,
+      "sha256": "f4fc340a9db33f955713f4858d34fff81578ca40c7b3b8cb6d77dc10a12fbe79"
     },
     {
       "path": "IMPLEMENTATION-2026-11-02.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "PROJECT_SCOPE.md",
-      "bytes": 10163,
-      "sha256": "00ae1820c8c13c2048dd9deabc6d7a139e3097eab5e26ea6489bc9bc857db71a"
+      "bytes": 11093,
+      "sha256": "f22700da91ab6013c73d389baf931e8a3b6342e6b115710d7704a805a7f00500"
     },
     {
       "path": "README.html",
@@ -33,8 +33,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4462,
-      "sha256": "6477f15d13ae5f1053b51662903a628f4fda3d25f0f078d4f3145fa310459a1d"
+      "bytes": 4613,
+      "sha256": "07784bde5fa31ba779cb594902fa843f5751c800fed3c32e9235259b71d6d477"
     },
     {
       "path": "SOURCE_STORAGE.md",
