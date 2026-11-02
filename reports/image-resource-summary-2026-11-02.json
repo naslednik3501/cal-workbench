@@ -1,0 +1,328 @@
+{
+  "references": {
+    "catalog_entries": 23944,
+    "cal_entries": 23355,
+    "parsed_cal_entries": 21553,
+    "parse_failures": 1802,
+    "image_entries": 553,
+    "references": 22744,
+    "resolved": 20477,
+    "unresolved": 2267,
+    "unresolved_cal_paths": 1650,
+    "unresolved_cal_contents": 1026,
+    "unresolved_reference_strings": 585
+  },
+  "sources": [
+    {
+      "name": "Архив 1.zip",
+      "zip_sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+      "files": 8887,
+      "images": 2506
+    },
+    {
+      "name": "Архив 2.zip",
+      "zip_sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3",
+      "files": 1998,
+      "images": 761
+    },
+    {
+      "name": "Архив 3.zip",
+      "zip_sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+      "files": 2768,
+      "images": 1519
+    },
+    {
+      "name": "Архив 4.zip",
+      "zip_sha256": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+      "files": 3063,
+      "images": 993
+    },
+    {
+      "name": "Архив.zip",
+      "zip_sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "files": 25146,
+      "images": 813
+    }
+  ],
+  "image_entries": 6802,
+  "unique_image_contents": 2951,
+  "nested_archive_count": 13,
+  "nested_archive_errors": [],
+  "nested_image_entries": 210,
+  "read_errors": [],
+  "missing_statuses": {
+    "not_found": 1287,
+    "name_candidates": 896,
+    "blank": 84
+  },
+  "missing_names_with_candidates": 201,
+  "references_with_different_candidate_contents": 152,
+  "matched_candidate_contents": 324,
+  "snapshot_app_commit": "3905256f6848862005803af2a277397e882fe2a0",
+  "date": "2026-11-02",
+  "single_content_candidate_references": 744,
+  "visually_reviewed_unique_candidate_contents": 324,
+  "single_content_visual_categories": {
+    "board_chip_location": {
+      "images": 129,
+      "references": 427
+    },
+    "device_identification": {
+      "images": 9,
+      "references": 17
+    },
+    "hardware_wiring": {
+      "images": 4,
+      "references": 18
+    },
+    "logo": {
+      "images": 35,
+      "references": 282
+    }
+  },
+  "all_candidate_visual_categories": {
+    "board_chip_location": 139,
+    "device_identification": 35,
+    "logo": 82,
+    "hardware_wiring": 39,
+    "hardware_location": 16,
+    "placeholder": 1,
+    "ui_icon": 11,
+    "mixed_script_bin_hardware_instruction": 1
+  },
+  "nested_archives": [
+    {
+      "source": "Архив 1.zip",
+      "path": "AIRBAG/MAZDA/MAZDA_6_INFINEON.rar",
+      "sha256": "ca8beae99393fe35770d76b0706d5c6afdc92697b0adbfb36d42d47bc0cfdb09",
+      "members": 19,
+      "images": 7,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 1.zip",
+      "path": "AIRBAG/VW/Pointer.rar",
+      "sha256": "714bead4e71c66ccba89c4a923ea31e22bb6d5708448011052f09f662fb9ced2",
+      "members": 7,
+      "images": 3,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 1.zip",
+      "path": "AIRBAG/Lada/Priora/grantasrs.rar",
+      "sha256": "1d817cb700672fa20ef56f8206fb4158e149a23bbb4f1467d4ce121fdcd8ad9f",
+      "members": 1,
+      "images": 1,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 2.zip",
+      "path": "OTHER/BLR.rar",
+      "sha256": "0baf9034bbbd6962e7c5b85696d136bffac34c3b0fd4acadd4834cc70c823163",
+      "members": 83,
+      "images": 0,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 2.zip",
+      "path": "OTHER/BLR/CAN_SCAN_proba.rar",
+      "sha256": "fc03ce835e1adf8fb1b51ee0cfa9d5ebafee52205f51e66331ed5d5f47c0632b",
+      "members": 1,
+      "images": 0,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 3.zip",
+      "path": "DASHBOARD/Kamaz/╨Ü╨░╨╝╨░╨╖ ╨É╨ƒ.rar",
+      "sha256": "c709a8080ba573219d36e81931e0e74a510942d92fcfa4dcbc3eb364edd06582",
+      "members": 3,
+      "images": 2,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 3.zip",
+      "path": "DASHBOARD/Honda/Honda MB91F06x OBD2.rar",
+      "sha256": "45666678f9266682380d1d1f5789986201ff5569f62dc4b022c959c7d0e3bd3c",
+      "members": 92,
+      "images": 2,
+      "status": "ok"
+    },
+    {
+      "source": "Архив 3.zip",
+      "path": "DASHBOARD/Kia-Hyndai/H-1/EDC 16x.rar",
+      "sha256": "a03f6bc6d0eabad6fa36c7dbf7ab468ce19b160855ead47c6f09856b2e048415",
+      "members": 4,
+      "images": 1,
+      "status": "ok"
+    },
+    {
+      "source": "Архив.zip",
+      "path": "Calculators/Dashboard/Volkswagen/Polo 93C86 crypto.rar",
+      "sha256": "64d0913a1c72471aa79a4a9778ad00f86411732c3d0de1db5461e5cf5329d788",
+      "members": 1,
+      "images": 0,
+      "status": "ok"
+    },
+    {
+      "source": "Архив.zip",
+      "path": "Calculators/Car/V/Volkswagen/Polo 93C86 crypto.rar",
+      "sha256": "64d0913a1c72471aa79a4a9778ad00f86411732c3d0de1db5461e5cf5329d788",
+      "members": 1,
+      "images": 0,
+      "status": "ok"
+    },
+    {
+      "source": "Архив.zip",
+      "path": "Config/can.rar",
+      "sha256": "9c0c2b41a79efa1d50938a578506d3e76fea481c332fe795f4beb5f090b17a77",
+      "members": 1,
+      "images": 0,
+      "status": "ok"
+    },
+    {
+      "source": "Архив.zip",
+      "path": "iProgPro.rar",
+      "sha256": "eac3747c5f3f114bccdfef86923e2edd26d8d7e0b95978abb4400deb3a9e882b",
+      "members": 138,
+      "images": 97,
+      "status": "ok"
+    },
+    {
+      "source": "Архив.zip",
+      "path": "iProgPro69.rar",
+      "sha256": "2460091807edfdd3ca46fa43c768b9d9251605dba40e560da55938f030d3ef71",
+      "members": 138,
+      "images": 97,
+      "status": "ok"
+    }
+  ],
+  "matched_contents_already_in_catalog": 0,
+  "matched_candidate_decode_errors": 0,
+  "old_source_subset_name_matches": 425,
+  "limitations": [
+    "Image-content categories are visual review, not verified per-CAL mappings.",
+    "Ambiguous-candidate occurrence counts overlap; do not sum them as resolved references.",
+    "Unparsed CAL and embedded executable resources are outside this inventory.",
+    "No original executable, hardware operation or CAL calculation was run.",
+    "Non-image ZIP members were not exhaustively CRC-tested."
+  ],
+  "alternative_extension_hints": {
+    "references": 59,
+    "distinct_reference_strings": 16,
+    "status": "unverified; included in 1287 not_found, not added to 896 exact-name matches",
+    "groups": [
+      {
+        "reference": "Chery.GPEG",
+        "occurrences": 2,
+        "candidate_contents": 4,
+        "example_source": "Архив 1.zip",
+        "example_path": "AIRBAG/Chery/Bonus/Chery.bmp"
+      },
+      {
+        "reference": "ssangyong",
+        "occurrences": 3,
+        "candidate_contents": 4,
+        "example_source": "Архив 1.zip",
+        "example_path": "AIRBAG/Ssang Yong/Actyon/ssangyong.bmp"
+      },
+      {
+        "reference": "Man.png",
+        "occurrences": 4,
+        "candidate_contents": 1,
+        "example_source": "Архив.zip",
+        "example_path": "Calculators/Images/man.bmp"
+      },
+      {
+        "reference": "Man1.png",
+        "occurrences": 2,
+        "candidate_contents": 1,
+        "example_source": "Архив 4.zip",
+        "example_path": "CAR/KEY/Key Trucks/MAN/Man1.jpg"
+      },
+      {
+        "reference": "uaz1.png",
+        "occurrences": 2,
+        "candidate_contents": 1,
+        "example_source": "Архив 3.zip",
+        "example_path": "DASHBOARD/UAZ/╨ú╨É╨ù 3741 ╨æ╨ú╨Ñ╨É╨¥╨Ü╨É/uaz1.jpg"
+      },
+      {
+        "reference": "Faw.png",
+        "occurrences": 6,
+        "candidate_contents": 2,
+        "example_source": "Архив.zip",
+        "example_path": "Calculators/Images/FAW.bmp"
+      },
+      {
+        "reference": "tagaz.png",
+        "occurrences": 2,
+        "candidate_contents": 1,
+        "example_source": "Архив.zip",
+        "example_path": "Calculators/Images/tagaz.bmp"
+      },
+      {
+        "reference": "cdr23.bmp",
+        "occurrences": 2,
+        "candidate_contents": 2,
+        "example_source": "Архив 4.zip",
+        "example_path": "CAR/CARRADIO/Porcshe/cdr23.jpg"
+      },
+      {
+        "reference": "renault.PNG",
+        "occurrences": 3,
+        "candidate_contents": 4,
+        "example_source": "Архив 1.zip",
+        "example_path": "AIRBAG/Renault/Logan/Renault.bmp"
+      },
+      {
+        "reference": "info.bmp",
+        "occurrences": 10,
+        "candidate_contents": 18,
+        "example_source": "Архив 3.zip",
+        "example_path": "DASHBOARD/Kamaz/╨Ü╨░╨╝╨░╨╖ ╨É╨ƒ.rar!/Info.png"
+      },
+      {
+        "reference": "clarion.bmp",
+        "occurrences": 11,
+        "candidate_contents": 1,
+        "example_source": "Архив 4.zip",
+        "example_path": "CAR/CARRADIO/Clarion/clarion.png"
+      },
+      {
+        "reference": "aprilia.bmp",
+        "occurrences": 4,
+        "candidate_contents": 2,
+        "example_source": "Архив 3.zip",
+        "example_path": "DASHBOARD/Special vehicles/ATV i Bikes/Aprilia/aprilia.jpg"
+      },
+      {
+        "reference": "Renault.png",
+        "occurrences": 3,
+        "candidate_contents": 4,
+        "example_source": "Архив 1.zip",
+        "example_path": "AIRBAG/Renault/Logan/Renault.bmp"
+      },
+      {
+        "reference": "XCMG.png",
+        "occurrences": 2,
+        "candidate_contents": 1,
+        "example_source": "Архив.zip",
+        "example_path": "Calculators/Images/XCMG.bmp"
+      },
+      {
+        "reference": "Porsche.jpg",
+        "occurrences": 1,
+        "candidate_contents": 4,
+        "example_source": "Архив 3.zip",
+        "example_path": "DASHBOARD/Porsche/Cayenne/porsche.png"
+      },
+      {
+        "reference": "Belarus.png",
+        "occurrences": 2,
+        "candidate_contents": 1,
+        "example_source": "Архив.zip",
+        "example_path": "Calculators/Images/belarus.bmp"
+      }
+    ]
+  }
+}
