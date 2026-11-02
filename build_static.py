@@ -1,4 +1,4 @@
-"""Build the unchanged CAL Workbench 0.5 web assets into dist/."""
+"""Verify the release manifest and build CAL Workbench web assets into dist/."""
 from pathlib import Path
 import hashlib
 import json
@@ -12,9 +12,9 @@ for entry in manifest["files"]:
     path = ROOT / entry["path"]
     data = path.read_bytes()
     if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
-        raise SystemExit("Source differs from original 0.5 manifest: " + entry["path"])
+        raise SystemExit("Source differs from release manifest: " + entry["path"])
 
-assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "engine.js",
+assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "engine.js", "cal-source.js",
           "catalog.js", "catalog-store.js"]
 assets += json.loads((ROOT / "catalog-parts.json").read_text())
 for name in assets:
@@ -38,5 +38,5 @@ for name in assets:
     target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / name, target)
 (OUT / ".nojekyll").touch()
-print(f"Built {len(assets)} unchanged assets into {OUT}")
+print(f"Built {len(assets)} verified assets into {OUT}")
 print("Static assets are ready for hosting. GitHub Pages can also serve the repository root directly.")

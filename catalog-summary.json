@@ -1,13 +1,13 @@
 {
   "version": "0.1.0",
-  "entries": 23944,
-  "calculators": 23355,
-  "uniqueCal": 15055,
+  "entries": 23945,
+  "calculators": 23356,
+  "uniqueCal": 15056,
   "sources": [
     "Calculators.zip"
   ],
   "counts": {
-    "cal": 23355,
+    "cal": 23356,
     "png": 7,
     "lua": 9,
     "bc": 7,

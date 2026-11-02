@@ -4,24 +4,25 @@ import hashlib
 import json
 import re
 import sys
+import subprocess
 import zipfile
 
 root = Path(__file__).resolve().parents[1]
 destination = Path(sys.argv[1]).resolve()
-version = '0.5.0'
+version = '0.5.1'
 
 def included(path):
     rel = path.relative_to(root)
     return (path.is_file() and not any(part.startswith('.') for part in rel.parts)
-            and '__pycache__' not in rel.parts
+            and '__pycache__' not in rel.parts and 'dist' not in rel.parts
             and path.name != 'MANIFEST.json'
             and path.suffix not in {'.pyc', '.zip'}
             and not (rel.parts[0] == 'tests' and path.suffix.lower() in {'.bin', '.png'}))
 
 files = sorted(p for p in root.rglob('*') if included(p))
-for log, count in [('engine-results.txt', 15), ('ui-state-results.txt', 29), ('catalog-store-results.txt', 8)]:
-    summary=json.loads((root / 'tests' / log).read_text().strip().splitlines()[-1])
-    assert summary['passed'] == count and summary['failed'] == 0, f'Incomplete tests: {log}'
+for test in ['test_source.js', 'test_preparation.js', 'test_polo.js',
+             'test_source_pairs.js', 'test_catalog_store.js', 'test_catalog.js']:
+    subprocess.run(['node', str(root / 'tests' / test)], cwd=root, check=True)
 html = (root / 'index.html').read_text()
 ids = re.findall(r'\bid="([^"]+)"', html)
 assert len(ids) == len(set(ids)), 'Duplicate HTML IDs'
@@ -29,12 +30,13 @@ for ref in re.findall(r'(?:src|href)="([^"]+)"', html):
     assert (root / ref).is_file(), f'Missing HTML resource: {ref}'
 for ref in re.findall(r"\$\('([^']+)'\)", (root / 'app.js').read_text()):
     assert ref in ids, f'Missing app element: {ref}'
-assert hashlib.sha256((root / 'engine.js').read_bytes()).hexdigest() == 'c941163a816627fd8361418a639a3de14dc4bd5a1fbb1f7b8775c22f0ac0590b'
 manifest = dict(version=version, files=[dict(path=str(p.relative_to(root)), bytes=p.stat().st_size,
     sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in files],
-    validation=dict(engine_tests=15, app_state_tests=29, store_tests=8,
-        catalog_hashes='passed', zip_to_catalog_identity='passed in 0.3; payload unchanged',
-        browser_rendering='not tested', real_browser_storage='not tested', windows='not tested'),
+    validation=dict(source_tests=13, preparation_tests=11, polo_checks=8, store_tests=8,
+        source_binary_pairs=465, exactly_matching_pairs=456, catalog_hashes='passed',
+        private_bin_fixture_tests='not rerun; fixtures not in shared repository',
+        original_iprog_execution='not compared', browser_rendering='not tested',
+        real_browser_storage='not tested', windows='not tested'),
     personal_bin_fixtures_included=False)
 (root / 'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
 destination.parent.mkdir(parents=True, exist_ok=True)

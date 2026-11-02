@@ -20,3 +20,9 @@ Version 0.3 adds `node tests/test_catalog_store.js` (8 storage/serialization che
 Version 0.4 has 26 application state/event checks, including drop validation, pending-load cancellation, out-of-order reads, conditional selection controls and paging after removal of address navigation. Total: 49 checks (15 engine + 26 app + 8 store), plus full catalog hash validation. The browser scenario is updated but remains unexecuted; no real-browser visual or drag-and-drop claim is made.
 
 Version 0.5: 29 app checks, 52 total with engine/store. Covers full session reset, conditional descriptions, virtual scroll end/partial row editing, removed backup UI and input modality. DOM adapters do not validate CSS geometry or actual browser event timing.
+
+## Portable checks added 2026-11-02
+
+These require only Node and repository contents: `test_source.js` (13), `test_preparation.js` (11), `test_polo.js` (8 groups), `test_catalog_store.js` (8), `test_catalog.js`, and `test_source_pairs.js` (465 pairs × three synthetic vectors). The last suite preserves nine explicitly recorded source-version differences, rather than asserting all same-name files are equivalent. Polo uses a separate direct permutation formulation and four write/readback values. No hardware or original-iProg claim follows from these tests.
+
+`test_source.js` also loads engine and source interpreter as classic browser scripts without CommonJS. The app harness is still a Node adapter, not a rendering test. Private-fixture suites and their old result logs remain historical until the BINs are provided again.

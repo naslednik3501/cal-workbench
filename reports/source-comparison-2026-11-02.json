@@ -1,0 +1,269 @@
+{
+  "scope": "Two local implementations on synthetic data; not original-iProg execution",
+  "pairs": 465,
+  "cases": 1395,
+  "exactPairs": 456,
+  "differences": [
+    {
+      "source": "Calculators/Airbag/Ford/2S6T 14B056 BN.cal",
+      "sourceSha": "709f5e618e96b204a21e92a262307528d65beb85ca07f53e6524f8dd87190fbf",
+      "binary": "Calculators/Airbag/Ford/Fusion/2S6T 14B056 BN.cal",
+      "binarySha": "e3102a11ba6514a26c57b1503038528a992fff93b65ca39fb27c87dcdae8cbc0",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Airbag/Ford/603 95 10 00.cal",
+      "sourceSha": "44156680bf2e0ca156f4a9aad90fcf3403db59800130a967df8bceeda0e4b3a9",
+      "binary": "Calculators/Airbag/Ford/Mondeo/603 95 10 00.cal",
+      "binarySha": "c1188383e16fc849ceb0f7533ca2735ead8e125026d9437930b7c8b33e3d623b",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+      "sourceSha": "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba",
+      "binary": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
+      "binarySha": "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal",
+      "sourceSha": "b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e",
+      "binary": "Calculators/Fabia 93C86 2006 decryptor.cal",
+      "binarySha": "faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal",
+      "sourceSha": "b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e",
+      "binary": "Calculators/Dashboard/Skoda/Fabia/Fabia 93C86 2006 decryptor.cal",
+      "binarySha": "546b8214be37173aae84b0ec7e1176491c085d6319d43ecb6d4a19fde0c0c149",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Dashboard/Skoda/Super B 93C86 decryptor.cal",
+      "sourceSha": "630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1",
+      "binary": "Calculators/Super B 93C86 decryptor.cal",
+      "binarySha": "2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Dashboard/Skoda/Super B 93C86 decryptor.cal",
+      "sourceSha": "630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1",
+      "binary": "Calculators/Dashboard/Skoda/SuperB/Super B 93C86 decryptor.cal",
+      "binarySha": "aa8213cea0bc0b6b3fe3f6d3ce61818f0a1e72e1cd7965aa9f99c945821bbc98",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+      "sourceSha": "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f",
+      "binary": "Calculators/Airbag/Nissan/Micra/0 285 001 420.cal",
+      "binarySha": "5c6b0d755437edaf5ba8859356a465c7925f0fa40dbabd4a679381255a1f86aa",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": false,
+          "applyControls": true
+        }
+      ]
+    },
+    {
+      "source": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+      "sourceSha": "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff",
+      "binary": "Calculators/Airbag/Honda/SEA-G820-M1.cal",
+      "binarySha": "77038d1df5d3b5861316ab438863b3112bae122a1c37d31e08a74475ade25bc9",
+      "cases": [
+        {
+          "fill": 0,
+          "showBytes": true,
+          "applyBytes": true,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": 255,
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        },
+        {
+          "fill": "pattern",
+          "showBytes": true,
+          "applyBytes": false,
+          "showControls": true,
+          "applyControls": true
+        }
+      ]
+    }
+  ]
+}

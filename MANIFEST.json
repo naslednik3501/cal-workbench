@@ -3,28 +3,43 @@
   "files": [
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 2134,
-      "sha256": "cd0d703a83160c359f6dc71d08e95dae11a74d005a74ccd782b3352bcd1ab6f6"
+      "bytes": 1946,
+      "sha256": "6ecf0603b3ee4344a7a16a078f93117a5ff39ac89134326a8778d60522ba8de6"
     },
     {
       "path": "DEVELOPMENT.md",
-      "bytes": 12346,
-      "sha256": "d29e9596f1a87be3d5155e9ef729fb1468b4777c7cbe5e2dfeb956ca72218def"
+      "bytes": 12834,
+      "sha256": "bd07ea7d9db466a81c8932df2f625280aeeb216a7f7553601e4bf97d4014670e"
+    },
+    {
+      "path": "IMPLEMENTATION-2026-11-02.md",
+      "bytes": 13646,
+      "sha256": "c9df9673feaa9bf03e7e721eed6cb2b71b7d3723f8bb9e367422c46dea30a9a3"
     },
     {
       "path": "README.html",
-      "bytes": 12752,
-      "sha256": "148c78f7f87cdd4cf6cf18895f4266a91c4ae1666f9ddcbac6692c01c44295d9"
+      "bytes": 13522,
+      "sha256": "2663f31cb8f76e29440167a58673c232027a4b0ec888bbda1e3f682541824c78"
     },
     {
       "path": "app.js",
-      "bytes": 36005,
-      "sha256": "5c85e5ab23ab99df967faa78fc48cf29c469d123715a91135d45c89b7a0a2eff"
+      "bytes": 36259,
+      "sha256": "cddc341451ee83aa6a3133a125ec55ed0f65d07290e17cbe453f52ad44516ea7"
     },
     {
       "path": "archive-verification.json",
       "bytes": 309,
       "sha256": "72a1676eb3dad439b29d592b3571f1b9b420c2f0ed3e07b41d9b38f3b152db43"
+    },
+    {
+      "path": "build_static.py",
+      "bytes": 1678,
+      "sha256": "3f8ec351b49b5efadd10bd01c245df8d639e6dbd087b17de243b6211334ef445"
+    },
+    {
+      "path": "cal-source.js",
+      "bytes": 13636,
+      "sha256": "c501642ea1d79371184bbaa064f92bea83bf837951106039ecfecf583fa195d6"
     },
     {
       "path": "catalog-data/part-000.js",
@@ -227,9 +242,14 @@
       "sha256": "4c6c785180dc08423c3f4c0b234b4671a9077ca6c849c5aefff84916416134f0"
     },
     {
+      "path": "catalog-data/part-040.js",
+      "bytes": 8389,
+      "sha256": "fb29106070feb95e47df52e363c75ec22efff13b018e7e5a9d3eccb799995343"
+    },
+    {
       "path": "catalog-parts.json",
-      "bytes": 1120,
-      "sha256": "54a3dfb854529af3005c81249468a6d982db488782b9a52b453a35e0b9f39a1a"
+      "bytes": 1149,
+      "sha256": "87ec4c568248295001f7d3c67d188fd7645c3c92f48e9decc6cab4c0efed2c3a"
     },
     {
       "path": "catalog-store.js",
@@ -238,23 +258,33 @@
     },
     {
       "path": "catalog-summary.json",
-      "bytes": 351,
-      "sha256": "64b566a21e9915850921bb77df32207f3c20b6f8d3d6d66bce6afe01bc4f5058"
+      "bytes": 352,
+      "sha256": "35ce44bc68d55039ee7d48b1db442ce7bd86a74e525dbe06dd0dfb7909c0cc0f"
     },
     {
       "path": "catalog.js",
-      "bytes": 4488506,
-      "sha256": "2b66cf76398114e2e94b5ed4ef591c12e6b1299abdb7066c24b4cedc10c994bf"
+      "bytes": 4488770,
+      "sha256": "ff9c283c9a499cdbe873ad6f2b7e8d651c95f70f8bd5b7202d86f047a7a84c31"
     },
     {
       "path": "engine.js",
-      "bytes": 11645,
-      "sha256": "c941163a816627fd8361418a639a3de14dc4bd5a1fbb1f7b8775c22f0ac0590b"
+      "bytes": 14333,
+      "sha256": "28d46ad717e8706e362e74e2eab3d2023a08964a8032956e69c4f465894bdbc9"
     },
     {
       "path": "index.html",
-      "bytes": 11156,
-      "sha256": "f5ef133db616c291f12402af07769dfcbfc29ddd4ec9384b5f58200d5f3dfbf8"
+      "bytes": 11254,
+      "sha256": "45c33c0b40e01d42f72bcafb16dea84d6037f9d6a480c14aca4d4caea44f9cea"
+    },
+    {
+      "path": "reports/calculator-coverage-2026-11-02.json",
+      "bytes": 125170,
+      "sha256": "c0258e143f0c4811e0e56adda7d2476b694558d206bcbd62d5d630a5ead825a8"
+    },
+    {
+      "path": "reports/source-comparison-2026-11-02.json",
+      "bytes": 7949,
+      "sha256": "f1dcd3c85d287461528da11a63779216dc15a695f61ee5abf686a65b0f33a8c5"
     },
     {
       "path": "static-audit-summary.json",
@@ -273,8 +303,8 @@
     },
     {
       "path": "tests/README.md",
-      "bytes": 2271,
-      "sha256": "61ed1a6257d7b610250a8e4c68707bea59f002798f43c407d3f9fbb5874b5cb1"
+      "bytes": 3102,
+      "sha256": "624b4817559679a74cc2476532d73b0cdfce44352421e5ef343cb317b8bd1f88"
     },
     {
       "path": "tests/catalog-results.txt",
@@ -307,6 +337,11 @@
       "sha256": "cdbc3df76270503b4e6f05e64cf29d9d0bfaa6de7603ef07d45b0111ac9da0a0"
     },
     {
+      "path": "tests/fixtures/source-pairs.json",
+      "bytes": 379512,
+      "sha256": "d320fabe4081294c49f6fe6e877a0c06d31fd686ce068756d045cf24dbc1b9b6"
+    },
+    {
       "path": "tests/fixtures/vw.cal",
       "bytes": 1848,
       "sha256": "b759aefbbb90c3e59830aae3f1d44ae83a094d1b1ec2f2e044b12a81dda55409"
@@ -319,7 +354,7 @@
     {
       "path": "tests/test_catalog.js",
       "bytes": 1053,
-      "sha256": "7e5f351031e9874c3728bf0657db1554599529cd6e58477ffdf8f77cb5aa90f7"
+      "sha256": "57b55faa5a2ef6f0d8c173e3cb519fc5ecfe4aef53fcb53b5e5b05ab724c7a9c"
     },
     {
       "path": "tests/test_catalog_store.js",
@@ -332,14 +367,39 @@
       "sha256": "cda73ecb28fc178aa05242daa4b4eacf3e8900b573cb38f748207d76c83f824e"
     },
     {
+      "path": "tests/test_polo.js",
+      "bytes": 2567,
+      "sha256": "e0536446a27d51535e7d1d011da678270bcc35100f94cc674519aad778aa2a66"
+    },
+    {
+      "path": "tests/test_preparation.js",
+      "bytes": 9082,
+      "sha256": "e65b22f25868d40b646ded98b1cc7eaab2233a06fb75601a016c3a54cc3a4f0d"
+    },
+    {
+      "path": "tests/test_source.js",
+      "bytes": 5442,
+      "sha256": "0da0a56688b9fd2aed5f475e6d81d440e0e226b77bb4d6246c7f3ddf8d1bacbf"
+    },
+    {
+      "path": "tests/test_source_pairs.js",
+      "bytes": 2223,
+      "sha256": "df34df6dbc56a1056234f4741904475a6346a4374d7add48333fc260e724e9fd"
+    },
+    {
       "path": "tests/test_ui_state.js",
       "bytes": 18897,
-      "sha256": "336b61fd2ac7ff2d19d4c39098680ddacd9f1444d45dd197364cc56285b40547"
+      "sha256": "9297bad8a8c664393dc5bbf2271ee29ab1575ea61a59f5fafbd3b20acf7840f5"
     },
     {
       "path": "tests/ui-state-results.txt",
       "bytes": 2209,
       "sha256": "420e96a12b59bf5199d349b3f523a27cc8c78573589b4fe183e745f061530b6f"
+    },
+    {
+      "path": "tools/audit-calculators.js",
+      "bytes": 1664,
+      "sha256": "e0b493692653737078e8d8fdcf42528599544736b8e83078cbf5107bc1e2c11b"
     },
     {
       "path": "tools/audit.js",
@@ -353,16 +413,20 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 2660,
-      "sha256": "89b591887245e028ac0e8aa9cb876a1a566fa5f8abd20a80520d5d5a51e5a247"
+      "bytes": 2650,
+      "sha256": "61fe7d26629fb521920221d4f73f54de3554e231993916b89e3c0b347c7f5539"
     }
   ],
   "validation": {
-    "engine_tests": 15,
-    "app_state_tests": 29,
+    "source_tests": 13,
+    "preparation_tests": 11,
+    "polo_checks": 8,
     "store_tests": 8,
+    "source_binary_pairs": 465,
+    "exactly_matching_pairs": 456,
     "catalog_hashes": "passed",
-    "zip_to_catalog_identity": "passed in 0.3; payload unchanged",
+    "private_bin_fixture_tests": "not rerun; fixtures not in shared repository",
+    "original_iprog_execution": "not compared",
     "browser_rendering": "not tested",
     "real_browser_storage": "not tested",
     "windows": "not tested"

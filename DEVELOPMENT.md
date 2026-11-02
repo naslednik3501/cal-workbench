@@ -104,3 +104,7 @@ Preserve standalone offline builds. Plan online frontend and private GitHub repo
 - Close resets BIN, pending BIN reads, selected CAL/VM/form/description, result and logs. Catalog files and navigation remain. No automatic new log entry after closing.
 - Description groups moved into the existing calculator-information disclosure, preserving control/label IDs and dynamic updates.
 - 29 app tests, plus unchanged 15 engine and 8 store tests. No actual-browser visual/focus/scroll verification in this environment.
+
+## 2026-11-02 runtime update
+
+Current implementation and limitations supersede the historical snapshots above; see IMPLEMENTATION-2026-11-02.md. Added bounded text-CAL interpretation, CRC-checked extended decoding, transactional OnShow/OnChange preparation, and a SHA-scoped Polo scratch-memory contract. Catalog includes one original source extracted from the preserved RAR. New portable tests do not depend on private BIN fixtures; historical test logs are not a new execution result.

@@ -19,12 +19,24 @@ function decode(raw){
  const a=Uint8Array.from(text.match(/../g),x=>parseInt(x,16));
  if(a.length<64||a.length%32)throw new CalError('Некорректная длина блоков CAL');
  let len=a.length-32, crc=a[len]*256+a[len+1];
- for(const sn of [1,777,19,35,45,55,325,2048,49339]){
-  const x=[31,14,29,12,27,10,25,8,23,6,21,4,19,2,17,5][sn&15];
-  let z=((x*((sn>>8)^sn))^(crc>>8)^crc)&255, b=new Uint8Array(len);
-  for(let p=0;p<len;p+=32)for(let i=0;i<32;i++){b[p+(i^x)]=a[p+i]^z;z=(z+85)&255;}
-  if(crc16(b)===crc)return b;
+ const table=[31,14,29,12,27,10,25,8,23,6,21,4,19,2,17,5],seen=new Set();let decodedBytes=0;
+ function attempt(sn,extended=false){
+  const x=table[sn&15],initial=((x*((sn>>8)^sn))^(crc>>8)^crc)&255,key=x*256+initial;
+  if(seen.has(key))return null;seen.add(key);let z=initial;
+  const first=new Uint8Array(32);for(let i=0;i<32;i++){first[i^x]=a[i]^z;z=(z+85)&255;}
+  if(extended){for(const at of [0,2,4]){const ep=first[at]+first[at+1]*256;if(ep!==65535&&(ep<12||ep>=len))return null;}if(first[8]+first[9]*256>10000||first[10]+first[11]*256>10000)return null;}
+  decodedBytes+=len;if(decodedBytes>64*MAX_CODE)throw new CalError('Превышен лимит проверки кодирования CAL');
+  const b=new Uint8Array(len);b.set(first);for(let p=32;p<len;p+=32)for(let i=0;i<32;i++){b[p+(i^x)]=a[p+i]^z;z=(z+85)&255;}
+  if(crc16(b)!==crc)return null;
+  if(extended){try{parseForm(b);}catch{return null;}}
+  return b;
  }
+ for(const sn of [1,777,19,35,45,55,325,2048,49339]){const b=attempt(sn);if(b)return b;}
+ // The 16-bit parameter collapses to a small set of (permutation, XOR seed)
+ // combinations. Probe each once, rejecting implausible headers before full CRC.
+ let match=null;
+ for(let sn=0;sn<65536;sn++){const b=attempt(sn,true);if(b){if(match&&b.some((v,i)=>v!==match[i]))throw new CalError('Неоднозначное кодирование CAL');match=b;}}
+ if(match)return match;
  throw new CalError('Кодирование не распознано или контрольная сумма CAL не совпала');
 }
 function parseForm(b){
@@ -59,7 +71,19 @@ layouts[0x27]='db';layouts[0x28]='db';
 for(const op of [0x2a,0x2c,0x2e,0x30,0x32,0x34,0x36,0x38,0x43,0x46,0x48,0x4a])layouts[op]='bw';
 layouts[0x35]='b';layouts[0x4f]='b';
 function stringAt(b,at){const r=new Reader(b,at),first=r.u8()^128,a=[first];for(let n=0;n<65536;n++){let v=r.u8()^first;if(!v)return {text:cp.decode(new Uint8Array(a)),end:r.p};a.push(v);}throw new CalError('Незавершённая строка');}
-function parse(raw){
+// Explicitly reviewed scratch-memory contract for the original RAR source.
+// The caller supplies the catalog/import SHA; unknown CALs retain strict BIN bounds.
+const memoryProfiles=Object.freeze({
+ 'a0a66442b874d649d9ee00c3bbe5a9a859567cd50ab5a3b7771a6c12bb119956':Object.freeze({dumpBytes:2048,start:0x2000,length:2048})
+});
+function parse(raw,{sha}={}){
+ if(raw.length>MAX_CODE*3)throw new CalError('CAL слишком большой');
+ const sourceText=cp.decode(raw).replace(/^\uFEFF/,'');
+ if(/\bSize\s*\(/i.test(sourceText)&&/\bForm\s*\{/i.test(sourceText)){
+  const source=root.CalSource||(typeof require==='function'?require('./cal-source.js'):null);
+  if(!source)throw new CalError('Не загружен обработчик текстовых калькуляторов');
+  const program=source.parse(raw);if(Object.hasOwn(memoryProfiles,sha))program.memory=memoryProfiles[sha];return program;
+ }
  const bytes=decode(raw),form=parseForm(bytes),code={},occupied=new Map(),strings=[],pending=Object.values(form.events).filter(x=>x!==65535),unsupported=new Set();
  function control(id){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id);}
  while(pending.length){let pc=pending.pop();if(code[pc])continue;
@@ -82,15 +106,18 @@ function parse(raw){
 }
 class VM {
  constructor(program,dump){
+  if(program.sourceProgram){const source=root.CalSource||(typeof require==='function'?require('./cal-source.js'):null);return new source.VM(program,dump);}
   if(!program.executable)throw new CalError(program.unsupported.join('; '));
   if(!dump.length||dump.length>16777216)throw new CalError('Размер BIN должен быть от 1 байта до 16 МиБ');
-  this.program=program;this.buffer=dump.slice();this.r=new Uint32Array(256);this.r[50]=dump.length;this.r[49]=dump.length-1;
+  if(program.memory&&dump.length!==program.memory.dumpBytes)throw new CalError('Для этой версии CAL нужен BIN ровно '+program.memory.dumpBytes+' байт');
+  this.program=program;this.buffer=dump.slice();this.scratch=program.memory?new Uint8Array(program.memory.length):null;this.r=new Uint32Array(256);this.r[50]=dump.length;this.r[49]=dump.length-1;
   this.s=Array(256).fill('');this.controls=program.form.controls.map(o=>({value:0,text:o.text,color:null,bold:false,align:'left'}));this.logs=[];
  }
- clone(){const v=new VM(this.program,this.buffer);v.r.set(this.r);v.s=[...this.s];v.controls=this.controls.map(c=>({...c}));v.logs=[...this.logs];return v;}
+ clone(){const v=new VM(this.program,this.buffer);if(this.scratch)v.scratch.set(this.scratch);v.r.set(this.r);v.s=[...this.s];v.controls=this.controls.map(c=>({...c}));v.logs=[...this.logs];return v;}
  address(a){if(!Number.isInteger(a)||a<0||a>=this.buffer.length)throw new CalError('Выход за границы BIN: 0x'+a.toString(16));return a;}
- read(a){return this.buffer[this.address(a)];}
- write(a,b){this.buffer[this.address(a)]=b&255;}
+ scratchAddress(a){const m=this.program.memory;return m&&Number.isInteger(a)&&a>=m.start&&a<m.start+m.length?a-m.start:-1;}
+ read(a){const s=this.scratchAddress(a);return s>=0?this.scratch[s]:this.buffer[this.address(a)];}
+ write(a,b){const s=this.scratchAddress(a);if(s>=0)this.scratch[s]=b&255;else this.buffer[this.address(a)]=b&255;}
  property(id,v){const c=this.controls[id],type=v>>>24,value=v&0xffffff;if(type===1)c.color=value;else if(type===2)c.bold=!!value;else if(type===3){if(value>2)throw new CalError('Неизвестное выравнивание');c.align=['left','center','right'][value];}else throw new CalError('Неизвестное свойство формы');}
  input(id,value){const o=this.program.form.controls[id];if(!o||!'HDCB'.includes(o.type))throw new CalError('Поле недоступно для ввода');if(!Number.isInteger(value)||value<0||value>0xffffffff)throw new CalError('Число должно быть целым от 0 до 4294967295');if(o.type==='C'&&value>=o.items.length)throw new CalError('Неверный пункт списка');if(o.type==='B'&&value>1)throw new CalError('Неверное значение флажка');this.controls[id].value=value;}
  execute(event,options={}){
