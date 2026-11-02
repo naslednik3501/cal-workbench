@@ -1,3 +1,5 @@
+> Действующая очередь задач и статусы: [TASKS.md](TASKS.md). Ниже — исторические этапы; старые разделы Next concrete work не являются текущим поручением. Границы продукта определяет [PROJECT_SCOPE.md](PROJECT_SCOPE.md).
+
 # CAL Workbench 0.1 — development checkpoint
 
 This directory is a standalone offline prototype reconstructed during the continuation turn. Prior chat messages describe a larger prototype and a full audit, but neither its source nor the four full archives was present in the current workspace. Do not confuse those historical statements with this build's evidence.
