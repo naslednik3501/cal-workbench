@@ -28,8 +28,8 @@
     },
     {
       "path": "SOURCE_STORAGE.md",
-      "bytes": 13411,
-      "sha256": "9767aae4c9e49e8b3c759411c3d3df47eac2f07dbe9928749f946d30f3c1a4ea"
+      "bytes": 10583,
+      "sha256": "a2826be4bf9260e67d804ce6dfd1f08aa490cfa08eb9763d9de917da2374b89e"
     },
     {
       "path": "app.js",
@@ -298,8 +298,8 @@
     },
     {
       "path": "reports/source-storage-status-2026-11-02.json",
-      "bytes": 2396,
-      "sha256": "d49cc26e1f25f2b98cc10f20b371740e7024b89c3a4521545ccc76ccb9758a79"
+      "bytes": 5143,
+      "sha256": "d652573960aefc78af2c4fca9fd76e87e811f56133ac24cd5a6eebf1981ac739"
     },
     {
       "path": "static-audit-summary.json",
@@ -460,7 +460,7 @@
     "browser_rendering": "not tested",
     "real_browser_storage": "not tested",
     "windows": "not tested",
-    "source_store": "synthetic regression passed; 23678 unique source contents restored and SHA-256 verified locally; GitHub publication pending"
+    "source_store": "published in private naslednik3501/iprocal-sources; 5 original ZIP SHA-256 and all 23678 unique restored contents verified in GitHub Actions run 41437386685; selective GitHub connector round trips passed for CAL and nine-chunk EXE"
   },
   "personal_bin_fixtures_included": false
 }

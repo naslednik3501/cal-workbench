@@ -1,53 +1,57 @@
 {
-  "status": "prepared_not_published",
-  "target_repository": null,
-  "proposed_private_repository": "naslednik3501/iprocal-sources",
+  "status": "published_and_verified",
+  "target_repository": "naslednik3501/iprocal-sources",
   "date": "2026-11-02",
   "archives": [
     {
-      "name": "Архив 1(2).zip",
+      "name": "Архив 1(3).zip",
       "sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
       "bytes": 349577599,
       "files": 8893,
       "directories": 2056,
       "uncompressed_bytes": 511031080,
-      "read_errors": []
+      "read_errors": [],
+      "asset": "archive-6fe8a0789cb9.zip"
     },
     {
-      "name": "Архив 2(3).zip",
+      "name": "Архив 2(4).zip",
       "sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3",
       "bytes": 86848064,
       "files": 2002,
       "directories": 256,
       "uncompressed_bytes": 104962272,
-      "read_errors": []
+      "read_errors": [],
+      "asset": "archive-61d047c3acc4.zip"
     },
     {
-      "name": "Архив 3(1).zip",
+      "name": "Архив 3(2).zip",
       "sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
       "bytes": 337088622,
       "files": 2769,
       "directories": 603,
       "uncompressed_bytes": 386396848,
-      "read_errors": []
+      "read_errors": [],
+      "asset": "archive-affb707e182f.zip"
     },
     {
-      "name": "Архив 4(1).zip",
+      "name": "Архив 4(2).zip",
       "sha256": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
       "bytes": 176325347,
       "files": 3064,
       "directories": 758,
       "uncompressed_bytes": 804754551,
-      "read_errors": []
+      "read_errors": [],
+      "asset": "archive-b1b112327845.zip"
     },
     {
-      "name": "Архив(4).zip",
+      "name": "Архив(5).zip",
       "sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
       "bytes": 108500987,
       "files": 25146,
       "directories": 2757,
       "uncompressed_bytes": 197261674,
-      "read_errors": []
+      "read_errors": [],
+      "asset": "archive-8e6b5f0b2418.zip"
     }
   ],
   "totals": {
@@ -67,11 +71,82 @@
     "unique_contents": 23678,
     "errors": 0
   },
-  "remote_round_trip_verification": "not performed: private repository not created",
+  "remote_round_trip_verification": {
+    "status": "passed",
+    "reader": "connected GitHub fetch_file",
+    "pinned_commit": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
+    "manifest_sha256_verified": true,
+    "name_index_sha256_verified": true,
+    "samples": [
+      {
+        "name": "Sportage 95160.cal",
+        "bytes": 2310,
+        "sha256": "1544ac94267414e7aebae42bfc455d1699df96e60417469dcdeb118e0770fffa",
+        "original_zip_byte_comparison": true
+      },
+      {
+        "name": "iProgPro.exe",
+        "bytes": 5843987,
+        "sha256": "14a476590cc6b8f2396036cc4083087146263ab3c5d393c679883da234789f57",
+        "chunks": 9,
+        "sha256_verified": true,
+        "executed": false
+      }
+    ]
+  },
   "notes": [
-    "Includes all non-directory members, including 12 __MACOSX metadata records excluded from the earlier image audit.",
-    "Original ZIP bytes are intended for private release assets; not uploaded.",
-    "Each unique source file is stored losslessly using zlib+base64 with bounded chunks.",
-    "No original executable or hardware script was run."
+    "All five original ZIPs are published as private release assets; remote sizes and SHA-256 match attached originals.",
+    "All non-directory members preserved, including 12 __MACOSX records and duplicate source paths.",
+    "GitHub Actions re-downloaded and SHA-256 verified all archives, checked ZIP CRC, restored every unique object, and published the verified catalog.",
+    "Connected GitHub selective retrieval independently tested for a small CAL and a nine-chunk EXE; no original program executed.",
+    "Second ChatGPT account must connect GitHub with access to the private source repository."
+  ],
+  "visibility": "private",
+  "data_commit": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
+  "release_url": "https://github.com/naslednik3501/iprocal-sources/releases/tag/originals-2026-11-02",
+  "release_id": 431382599,
+  "workflow_run_url": "https://github.com/naslednik3501/iprocal-sources/actions/runs/41437386685",
+  "github_verification": {
+    "status": "verified",
+    "archives": 5,
+    "archive_sha256_verified": true,
+    "zip_crc_verified": true,
+    "files": 41874,
+    "unique_contents": 23678,
+    "every_unique_object_restored_and_sha256_verified": true,
+    "manifest_sha256": "8f3fe1debe89e0213f663aa05c3a429a7c00223edb4c25a290c16b13796a8882",
+    "executed_original_programs": false
+  },
+  "release_assets_verified": [
+    {
+      "name": "archive-61d047c3acc4.zip",
+      "id": 701529203,
+      "bytes": 86848064,
+      "sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3"
+    },
+    {
+      "name": "archive-6fe8a0789cb9.zip",
+      "id": 701528829,
+      "bytes": 349577599,
+      "sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275"
+    },
+    {
+      "name": "archive-8e6b5f0b2418.zip",
+      "id": 701529861,
+      "bytes": 108500987,
+      "sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea"
+    },
+    {
+      "name": "archive-affb707e182f.zip",
+      "id": 701529316,
+      "bytes": 337088622,
+      "sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e"
+    },
+    {
+      "name": "archive-b1b112327845.zip",
+      "id": 701529675,
+      "bytes": 176325347,
+      "sha256": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4"
+    }
   ]
 }
