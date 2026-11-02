@@ -2,9 +2,14 @@
   "version": "0.5.1",
   "files": [
     {
+      "path": "AGENTS.md",
+      "bytes": 741,
+      "sha256": "9253f1bd059d44daa88324dbd67a0a855818cf6febf16a3c93aba6613c881f46"
+    },
+    {
       "path": "COMPATIBILITY.md",
-      "bytes": 1946,
-      "sha256": "6ecf0603b3ee4344a7a16a078f93117a5ff39ac89134326a8778d60522ba8de6"
+      "bytes": 2215,
+      "sha256": "482897e09a8ca1e13a187a11043e66cb6b20862ce4663a4538dc2ae9d4d7bfcd"
     },
     {
       "path": "DEVELOPMENT.md",
@@ -17,19 +22,24 @@
       "sha256": "c9df9673feaa9bf03e7e721eed6cb2b71b7d3723f8bb9e367422c46dea30a9a3"
     },
     {
+      "path": "PROJECT_SCOPE.md",
+      "bytes": 10163,
+      "sha256": "00ae1820c8c13c2048dd9deabc6d7a139e3097eab5e26ea6489bc9bc857db71a"
+    },
+    {
       "path": "README.html",
       "bytes": 13522,
       "sha256": "2663f31cb8f76e29440167a58673c232027a4b0ec888bbda1e3f682541824c78"
     },
     {
       "path": "README.md",
-      "bytes": 4359,
-      "sha256": "a06e3084efbd036d45939f94413b1eb611bd072230fe93348be383349e80043f"
+      "bytes": 4462,
+      "sha256": "6477f15d13ae5f1053b51662903a628f4fda3d25f0f078d4f3145fa310459a1d"
     },
     {
       "path": "SOURCE_STORAGE.md",
-      "bytes": 10583,
-      "sha256": "a2826be4bf9260e67d804ce6dfd1f08aa490cfa08eb9763d9de917da2374b89e"
+      "bytes": 11392,
+      "sha256": "8b00e6acd46024da2d02a84dd7dbf34b1fec1e45d8ce48a044054a3b957fe3c3"
     },
     {
       "path": "app.js",
