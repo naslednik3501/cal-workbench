@@ -1,0 +1,4450 @@
+{
+  "scopePolicy": {
+    "registry": "scope-registry.json",
+    "archivedEntries": 23946,
+    "activeEntries": 23946,
+    "excludedEntries": 0
+  },
+  "scope": "Static parsing and supported command vocabulary only; not execution/hardware validation",
+  "engineSha256": "f12f4a783ad45e12400938c20c5b5983092b6ef53ba62ff93760811ff52562f2",
+  "sourceEngineSha256": "e3a7c3fa3dc27792d6c0aa7d97f9d3ad7bdf72438dd0ff54d1697a85fe806b28",
+  "entries": {
+    "unsupported": 24,
+    "binary": 21551,
+    "partial": 293,
+    "text": 1382,
+    "rejected": 107
+  },
+  "unique": {
+    "unsupported": 16,
+    "binary": 13975,
+    "partial": 257,
+    "text": 737,
+    "rejected": 72
+  },
+  "unavailable": [
+    {
+      "path": "Calculators/invert.cal",
+      "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Некорректный адрес события show"
+      ],
+      "validEvents": [
+        "apply"
+      ]
+    },
+    {
+      "path": "Calculators/color.cal",
+      "sha": "89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/ECU/ECU 95080.cal",
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal",
+      "sha": "42cbecc3c3dd5fd6d444b8b3c13f3ad936eb52f818decb8aa34fafe8c92f10b6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "sha": "f387467a726c5fea9cad6b0e505434ae0ab736c59bdc25b9aecdaf06e2e9fdd0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/Honda/Honda_Immo_0D28J_PCF7931.cal",
+      "sha": "d7ae28ab672582f59045017799e6612ed05d20a8feb87be8a13f51201db166fc",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xc3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/PIN/Opel/hitag2.cal",
+      "sha": "757957511befbb154f69b8b65d2af2b746c713d9f47d5cd9bf47acaea2e5bc0e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
+      "sha": "c096be74c0b022312239c4a87ea719e6a6aacd23e646b2bf58c8b35ccec5f9c9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "sha": "c58d2f4dbf549cde76ca563f7a33eae683db475d0aa1de36cf76735b1109b65e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Peugeot/BSI Partner D780949 var1.cal",
+      "sha": "a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Peugeot/BSI Partner D780949 var2.cal",
+      "sha": "c3c815e0f53991c1bd96e938a7914f35e605285ba9812100fbc511c85c102451",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Citroen/BSI Berlingo D780949 var1.cal",
+      "sha": "10573466ebbab659704e4abcf910a468889d64e0ed0ec6f15eb9387ee1360140",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Citroen/BSI Berlingo D780949 var2.cal",
+      "sha": "9fe5dca6ae9cc20a6f1baf18d7e1ef0e317a0e94e07d5496a3458e915e3b9e68",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Citroen/BSI Xsara D780949 var1.cal",
+      "sha": "98373c5498e9da73d06a95482195753627d8a206db885091925d9ef9d8476ba0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/France/Citroen/BSI Xsara D780949 var2.cal",
+      "sha": "93a8f40931f361244e10950b23ef91c00a1ff7a5838b14d8c85a3baeb808590c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 97)"
+    },
+    {
+      "path": "Calculators/Germany/Mercedes/Atego 93C86 var2.cal",
+      "sha": "5e3823d3f0b5b97bdbfc0f437f814b7cc62a252ab6f62dfd1238f67b6c669405",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Germany/Mercedes/Sprinter 93S46.cal",
+      "sha": "e42e7b03603ff0f48b5c4fc602988d58353d78e13bc448dba66dc5e4190855e2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Germany/Mercedes/Vito 93S46.cal",
+      "sha": "2df91953a624435566014b8d4306d9bbaf0e874170854e89750ec102e2c3ab6e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/ECU/Audi/ECU 95080.cal",
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: OnApply не обновляет копию логина, которую проверяет OnShow; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/Daewoo/Windstorm 9S12HZ128.cal",
+      "sha": "e0e8e1c9d786266ace9d8b9329be51c32264206e4ece6ca4688b47cf077bf334",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0x6c"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
+      "sha": "b205f4cf493efb11e5a1da7a7321352b1671dc1266701630430cb9ca3072600f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
+      "sha": "72707ad1670162ade95badec010900871d1b8773548c6ed64a4819aeb20f7a90",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
+      "sha": "3aab5bdbb4cef9ab2a57437379b3a3b96b63dda61c31bc036ebf10d03ef48745",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
+      "sha": "9d62e1e0a12123db2e4dd713505a3f802244b61e660641007b79e8b3a59cf658",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
+      "sha": "1112968804097a2aab94755e9ef67c575e85b58b720fa0941dffca4493b92ef4",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
+      "sha": "cedc41d312c4dd7f2d3f265af65dfd414f3820e1959d0abd8ce11e23d5390a26",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Asia/KATO/KR25HV7 93C66.cal",
+      "sha": "315c652c0beac0eb4a5076f1da345755770001c11efe66669044baa98eb89cd7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 263)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal",
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ( (строка 36)"
+    },
+    {
+      "path": "Calculators/Dashboard/Isuzu/A092 93C46.cal",
+      "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Dashboard/Daewoo/Windstorm 9S12HZ128.cal",
+      "sha": "2706317a5a6d0724b0e4657d0425f195914ba0012c6cee5e260541952bd999db",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0x6c"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
+      "sha": "2569f04b1b2ceceba3472a48ab268b818772458fc72ba19847cbba691829a6a8",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
+      "sha": "8474ed3873251b38cb909209f4ee57ac1fa47a72da6639bd8fd17165a717a1ec",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
+      "sha": "74121f68e6eedf8a5e691c475a8bd37c4cad9ba52e6398c611a5bc612e1e7e67",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
+      "sha": "af4b86898990324f46d846d49fc3ab5efaab4161b5eb5307dea36bafc69e6c9c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
+      "sha": "c0d1f6a2fbbf2911863a6af9d074920d20e363297991160e93d48fc836d29c73",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
+      "sha": "a8895ef0476c30de934a02b5a792dc98cc5a691b065f91efc6c849470780527e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Sonata VI 93C66.cal",
+      "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Grandeur 93C66.cal",
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Hyundai Accent new  2011 24c16.cal",
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 123)"
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Grandier 93S66 Siemens-VDO.cal",
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Mercedes/Atego 93C86 var2.cal",
+      "sha": "5e3823d3f0b5b97bdbfc0f437f814b7cc62a252ab6f62dfd1238f67b6c669405",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Mercedes/Sprinter 93S46.cal",
+      "sha": "e42e7b03603ff0f48b5c4fc602988d58353d78e13bc448dba66dc5e4190855e2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Mercedes/Vito 93S46.cal",
+      "sha": "2df91953a624435566014b8d4306d9bbaf0e874170854e89750ec102e2c3ab6e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Nissan/Liberty 93C46 Yazaki.cal",
+      "sha": "f1a226082a897f8eb977cac12a49cc8c3d8b57f4c4c606faa8dd2ee333147e24",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto.cal",
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal",
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A3 VDO 93C86 Crypto.cal",
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/bosch.cal.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal",
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal",
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/bosch.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto 2.cal",
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Peugeot/BSI Partner D780949 var1.cal",
+      "sha": "a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Peugeot/BSI Partner D780949 var2.cal",
+      "sha": "c3c815e0f53991c1bd96e938a7914f35e605285ba9812100fbc511c85c102451",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Subaru/Tribeka 93c66.cal",
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 100)"
+    },
+    {
+      "path": "Calculators/Dashboard/KATO/KR25HV7 93C66.cal",
+      "sha": "956a2ed105e434df5ce461b9dccfba2989221502786be45d562359b2881008ef",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Citroen/BSI Berlingo D780949 var1.cal",
+      "sha": "10573466ebbab659704e4abcf910a468889d64e0ed0ec6f15eb9387ee1360140",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Citroen/BSI Berlingo D780949 var2.cal",
+      "sha": "9fe5dca6ae9cc20a6f1baf18d7e1ef0e317a0e94e07d5496a3458e915e3b9e68",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Citroen/BSI Xsara D780949 var1.cal",
+      "sha": "98373c5498e9da73d06a95482195753627d8a206db885091925d9ef9d8476ba0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Citroen/BSI Xsara D780949 var2.cal",
+      "sha": "93a8f40931f361244e10950b23ef91c00a1ff7a5838b14d8c85a3baeb808590c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Ridgeline 9S12H256 miles.cal",
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Ridgeline 9S12H256 km.cal",
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Accord denso 93C46.cal",
+      "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 59)"
+    },
+    {
+      "path": "Calculators/EU_US_RU/Land Rover/Range Rover Sport ECU 95320 diesel.cal",
+      "sha": "b6ec45b89589b2d3457528e67ade230c1d259a309e06866d8741e10f2dc44c25",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/EU_US_RU/Kamaz/Kamaz 9S12HY64 ITELMA.cal",
+      "sha": "8851d8aaa4b2bbdbb8ef065010f8f24b42dac7e732585420ecb5539070522f45",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 82)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CT-903 CD.cal",
+      "sha": "2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CR-902 RDS.cal",
+      "sha": "7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CR-906.cal",
+      "sha": "a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/SC-805.cal",
+      "sha": "268a83695dcbb8385b8524686da5835edb994a0e6566e521f3a6d49d68502e43",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/SC-802.cal",
+      "sha": "e0098cff725446d55d378be2be016f51a8684ddcce6b3d4ab57d625a12e174d0",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/BENZ CD  MF2197.cal",
+      "sha": "a8f4781e4651e7a57c59cb0364b1ed6ec7efea731f32452f75774565d95fb983",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/CM7RN61F without display.cal",
+      "sha": "05c9065517bc9ee406a8906a67e519c42c249ed09e8e5a703f508ed9b1aef56d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/P04858543AD-A.cal",
+      "sha": "f6cda5ccb98670d5814fcdff62f209d82236c093cfdd133c560854ef88d82267",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/AJ 9600R.cal",
+      "sha": "b08f4b833a794b036d80eed70b1355ebde95c550fd88916e58c292c8615f0694",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/CM7RN41F without display.cal",
+      "sha": "d196af43f52ebb9d4657c735a2fb76d6391cf342c9847029a44845b169b56995",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/AJ 9800R.cal",
+      "sha": "ad67fdc184c97462e65be4d2f935fec45bc7dd6c5abf95c234b12205022a849e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/P04858543AE-A.cal",
+      "sha": "9f3aaed99bb85ec2c3f11dca3810fc9de950ee5a9ab195ade9eeef88a231cea1",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/BENZ CD  MF2297.cal",
+      "sha": "ef5db052f0b7f0d48ef654a6e105efafe007d5c53b43a1302dc48aae5aade94b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/P04858543AG-A.cal",
+      "sha": "4a174df2e0c570b251907ba7f1f4f33dd9dbcd947632f02060dc1b28cacaa3f6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/P04858543AC-A.cal",
+      "sha": "c9c36eb3606d63cfc9e1d5e27ce65240d12bc9a192c5e73064d8402fe5a927c7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/CM7RN410 without display  AL9635.cal",
+      "sha": "7ab52293068cc8c867b4afc6e61fa7eb0ae100d69d980244551bd581131a0027",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/CM7RN410 without display  AL9632.cal",
+      "sha": "79eb5d80c8d554162702190ad34759ae0e6417ceb6a621043e8204c436d5cc75",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/BENZ AUDIO 10 CD  MF2910.cal",
+      "sha": "2e9f8a7e81f06ff7063bd5aa641d80b2b12e9ffb61355a93a651dee6c1eb0ee6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/CM7RN61F without display.cal",
+      "sha": "7716fb3ba615bd79d025b1c749006fc023bc4203e4b710b4cebaed9ecd36dc05",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/CM7RN41F without display.cal",
+      "sha": "00e0f434658b7b756647c15891cd7c86544cf54f5e8d0ed9db06818a095d0dfa",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/RENRDW330-15.cal",
+      "sha": "22232dd142725b2fd8f774bbcbb7a838fbfb6bce6740363e89b25f45212ac3fe",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/CM7RN410 without display  AL9635.cal",
+      "sha": "419913759766241277f0ac28d4a530f134ce0eb3cc2857b1bbbf0d5a46b5ac8b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/CM7RN410 without display  AL9632.cal",
+      "sha": "fbe28cbb1bbb38fe3b26545ae386c1b107edba110ab60b17bfcdc4471de9b41e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/RENRNC 471-16.cal",
+      "sha": "ab663457a6c78d268ba7a80757ab334465abdae08fe8e73b09a3779ea66c0fe2",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Ford/FORD2014.cal",
+      "sha": "8ead4728474dbe0845066bbba2d0a7368673a9eacdcf6c1c221fabaae0868868",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/BENTLEY/BYZ2Z3.cal",
+      "sha": "e2d1f93acb234616d3d634a9afdde24daf5f78d2c275a77e983d5824e8788bb7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/BENZ CD  MF2197.cal",
+      "sha": "d224eb5e6b08e59463067ada0c2caea6e4a1ccc4a8b7dc5f2ab5a3da1b1a0a97",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/SOUND 3000  DB0994.cal",
+      "sha": "bb3c7851d8b91baffaa0c0259dc587f5d59232e9bc2986b87b81ccf2b61df77f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/MersExquisitcqlp1420l.cal",
+      "sha": "1bbd5c4877b3cf2d5cb0dae8b4097e0229efa0c619af6808b2acf1f3e9499704",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/BENZ CD  MF2297.cal",
+      "sha": "968e92c45d96b3b14d06301a3580d633f31a71b501f76849a6e0776d76dc81a3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/BENZ SOUND 1000  DB1019.cal",
+      "sha": "f71472aa75527f7798542a2ee3b9f7ec0a2361ea9997c9fbaf1d46a909b53cc5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/SOUND 3000  DB0920.cal",
+      "sha": "11c907925d49a61ae94ce02f741f564e6f1b27956995f502db33e162958308af",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/SOUND 5000  DB0921.cal",
+      "sha": "422da5b1ee3aac0d47c09394aef484debb133570ef867a241260bcd255a079f2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/Exquisit CQ-LP1420L.cal",
+      "sha": "792f329ed3022cc27e92d0e0756e2d934b3615ca19bbd474fe2208b5b6e057ce",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/BENZ SOUND 5 BE7076.cal",
+      "sha": "1df2e9b3810a45b62ea2388aa6c3367e6746ae7c8be6d534a822b3ad736047e1",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 92)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/SOUND 5000  DB0998.cal",
+      "sha": "44bcca1c1fe51acb9971bfe9ddde9a6c1314ece6a6c68abc7c9a3dcedca7914b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA V3 SEZ2Y6 wide  1M0 035 186B.cal",
+      "sha": "cfaebd726215554f7520e9cb55d6947b7faa474a162cea0d5ac8285f8f2fcf7f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2803A VD STEREO.cal",
+      "sha": "5e4e6f70d4173351ead311c98434a9934ed0e3c6721d5e151d296d39b5a51929",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3201 RDS  GR1027.cal",
+      "sha": "b489f3605cab01b3b506ed31ff92af49229552e8bbe00b881b1c803891ac2c39",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2670 VD REVERSE panel.cal",
+      "sha": "b083a2e92588b4ea1e15e68bdb23cac78e7e3f1c7e7c152fa0e0d3a0adb6f427",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4290 CD  GR1012.cal",
+      "sha": "d636a43fd8da29f82ffa2905b57197d8869e4d06cd37a254437a4de1bc180fb9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1703 RDS INFOMAT.cal",
+      "sha": "ac67938210ee623afba77eba2ffaa6d8633013ff9b15de55018cddf661eff5da",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/GRUNDIG CHALLENGE 400  GR1149.cal",
+      "sha": "5c40cd5de8ca78f1924009272711dafd8eaefa01ae8f86b42e87241408305b15",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 3000 VWZ2Z8  2D0 035 160.cal",
+      "sha": "4e066082ff53249a5bdf7656056d45202e7be8fc535a1c295d4069c9658ffb15",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2841 VD.cal",
+      "sha": "652db924237a0a78ace2f0b59cd1f19b31d5b8154347cbea66a3a9beee5002e0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BYZ2Z3.cal",
+      "sha": "27a24433af533d93311cb9a6936be9ac4781a0a939fe5b579acaa2d36aa1293b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 3000  DB0994.cal",
+      "sha": "32eee3bb4ec7ec405bb7c91e4305ceca589e9938767ae6327e81a83cfe8c4684",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4000 RDS  GR0904.cal",
+      "sha": "d68bc5d77e49a13125a045dc068707481713db5d63b70e5a18cf5694fa9059b5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AD 182H  FA0925.cal",
+      "sha": "d1505419c90d35270f60390745dc2df7a945e49cda20e461441a97ab8d6d9913",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BRISA SEZ1Z5 wide  1M0 035 152A.cal",
+      "sha": "13c2f55f9d13198f4659d7aefeec6ad1faf5bb63ce9e36e806161641cc009fbe",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1630 VD REVERSE.cal",
+      "sha": "995b4899bd2ce8caffe70dbe8f7beea0abb7b89cf18365b10daedf2c098c4c7c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 5000 VWZ2Z9  2D0 035 161.cal",
+      "sha": "87fc2752e3cfbe2c611367225b29872a0391846f2821e5c42f2ff44d395491d0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AD 183M  FA0926.cal",
+      "sha": "772f8b9f581a0c94d5fb1c82ee4b1fc3242356c0901b40fe95f0acf880817365",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4200 RDS.cal",
+      "sha": "970ac047b6bfc671ee9fb84e6bc1a02060fb32d050d3dbee0095bd7e3b18469f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 4804 VD REVERSE  GR0624.cal",
+      "sha": "5838e0f432c0d52b07e587303379f4bdf07e83a5ebaf0c81be2aa34a344cc58d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4000 RDS  GM0972.cal",
+      "sha": "5e629ed42e6f32f7696db5504ce485e021756fec40e9c2ad8a853d6c47beed0c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SCD 3390 RDS  GR1118.cal",
+      "sha": "702c4ec73984b1934408e1cce0f311a95bbd4fb850a29fae9a526cf54e6542c3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3703 RDS INFOMAT 24v.cal",
+      "sha": "80f6da31d180acee91ff975afedc8bd1f27d76670db5c8b1b847b8df8c394410",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/R100(D) only tuner  GM0100.cal",
+      "sha": "c621e6a6a1941be2f37c2dc9d3b2da781bc6f177ae246a79752be3abe06c1ae6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/MUSIC SYSTEM 502 SKZ2Z3  6Y0 035 161.cal",
+      "sha": "538600258e9c75b9619d564a20523cd2e8b4c9cc0fd686a84986feef50d1ca49",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CONCERT CD WIDE AUZ2Z3  8P0 035 186C.cal",
+      "sha": "d873de2e780940fb2d9b995c54a13e7a4297a197c8df5e1891ea09c269f75869",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1704 RDS INFOMAT.cal",
+      "sha": "d473d50643658120d85e6713ad014129a3ac0764b91362c56e71c204c8036a63",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3650 VD.cal",
+      "sha": "fb75ee01f979458b5e8f727c9f700bfadc6133df666b9aefbaa9b4d90eda325e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CONCERT CD WIDE AUZ2Z3.cal",
+      "sha": "516cba241f0f875ec4a3af76d26947b8c7fe1c539947d5b6904f5233585356b2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3905 RDS REVERSE.cal",
+      "sha": "25f24abe85a8b6612be362bc58f022c5eb44a4f586ae25498029c6bff8de4c79",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4490 CD  GR1155.cal",
+      "sha": "056b33f6a91422d2898020cf258509e3b377d5029eb5384ab9e566ea99203d9e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1904 RDS.cal",
+      "sha": "bfbcbdb92dcfe20357b300f575a79f7e9fb860ac37a6f1dbafd1699dd0ba69e4",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3707 RDS INFOMAT.cal",
+      "sha": "a7c59c8681481195b0e51071a3c3e129f34b153c0d8e8bcfa0c250dec7ed3d6f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3841  GR0490.cal",
+      "sha": "78e6b2a011aa17ab1aa898cdd04f6b94184422bf6d49aa7ab8ae6d72e3751193",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4790 CD.cal",
+      "sha": "3caea3f4b9adb1cbe2e8869743c373ee8d738c2f23d5b0ce552c570b2263f2fb",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BENZ SOUND 1000  DB1019.cal",
+      "sha": "445deccdf9cb5591ba5cf4c43c553da7bed5ae1f76a1d7ff4380e6ec79ef8b28",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1650 VD REVERSE.cal",
+      "sha": "548baf1c7e57d7ec7a68dff091260e57db9d06d4850057bc045ca6aa646dabf6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 3000  DB0920.cal",
+      "sha": "f210816f388c4ee51f51a8684139cdf0a610ab878043c9bf6ce8f686b6ea04c7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1705 RDS INFOMAT.cal",
+      "sha": "67bf30504d6475b56d42fb6f6e7fffb1a05fb507a32dc1928b44e2eadb1356c3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/ALANA MP3 SEZ2Z9  6L0 035 186A.cal",
+      "sha": "045ebf86326374dce6c7ca1fcc4214b5e4a269062e400b1d74afda5383ccbf71",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BRISA V3 SEZ2Z5 wide  1M0 035 152E.cal",
+      "sha": "54dd15be7090154e30b37fef26a380f7a40c2b0f9a0311d4e494e31a99686af1",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BRISA SEZ2Z5 wide  1U0 035 161C.cal",
+      "sha": "6830cf84697d8ee7720d9cba59d8b42d655466a812de003ec366bea1cd776ea5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3804 REVERSE.cal",
+      "sha": "38f0e107f4ee4b43a7ae01ee082fa69037d6de9bee29a773010350964f31af47",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186J.cal",
+      "sha": "e43933863b22a4d55ed5c3edbaf410e6413703a5650f74c6486e24b5442f1282",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/ALANA SEZ2Z9  6L0 035 156B.cal",
+      "sha": "db13a02242752334d012c9faa9f8f0a5a3920814b2082b2578db865fd1fcc524",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA V4 SEZ2Z6 wide  1M0 035 186F.cal",
+      "sha": "e00bc6e4413f44b5686cd343ee887f5d9303f84a4599b59591c569fdd725ac5c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2803 VD STEREO.cal",
+      "sha": "0661cf828abead2bae7748d1c3d3de9cc9655665ebd1c037d2ae119d0e581a56",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3200 RDS  GR1026.cal",
+      "sha": "adf199183f87670188913cb6acc25ce065cc00e0ff34536ed68a8ad687d07160",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3842  GR0552.cal",
+      "sha": "8d3badf9f6e356d1c79ea60cd2de692a3c772d6288e83af1f756c7dd27dde072",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4890 CD  GR1571.cal",
+      "sha": "35dbf1f1f228b1306784bd24ef6043cd66b9ba8a48513d6994e768fd6effea09",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SAXO 2014 RDS  GR0947.cal",
+      "sha": "0baf470018a1a548fffbca7865ee5bb549eb8f76e02101ff9cdf6c900d5be851",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 5000  DB0921.cal",
+      "sha": "72483e92e4ef9d463ffda52eb25082756d2b26ff9afbf561c2b119b7523f066e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/MUSIC SYSTEM 402 SKZ2Z2  6Y0 035 161A.cal",
+      "sha": "1cf5f0d856f5b06bf756c1f90e8a701264ce37da542c0b85869df39838a46afe",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BRISA V3 SEZ2Z5 wide  1M0 035 152C.cal",
+      "sha": "9a91b0959e4fbce09b835a9068dc33b2188e3c205d4b500a9f08239a7bc2864e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/MUSIC SYSTEM 402 SKZ2Z6  6Y0 035 160A.cal",
+      "sha": "9b1345016afe295232f665b518f05382895c92d8cf7e9b2cd9fc02d6aa3a9845",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA CD SEZ2Y6  1M0 035 186B.cal",
+      "sha": "f26d32a12a28b2cf029727c22f3493b49a9438a053ae3992391170d1e348c7c1",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA V3 SEZ2Z6 wide  1M0 035 186C.cal",
+      "sha": "6b3c8b17fc40066e6c5e100055f8f165a4d3b2e05960edb5a60dc6e33d5fbbd0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CAR200 (D) without display  GM0200.cal",
+      "sha": "e333d7d79d770c0a458c70cfccf6337228ffda124e5adeeba245f2e4c7e02028",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186L.cal",
+      "sha": "194b4dc5c62e8f2c6ced9df31e94e727fbe52152e33bf95e2d5508b524d51312",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3705 RDS INFOMAT.cal",
+      "sha": "860201fba6031bb8ceff1174852a7ec77a0210c416e1c5890a5c1541830f20aa",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1670 VD REVERSE.cal",
+      "sha": "85219ec54c4ddae5c9febd86b1ee694a3d7bfa2d65a50bae1f2e8519f58d2eb2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  4B0 035 186G.cal",
+      "sha": "713cbbcdf16d1eea9c60384bda29712310ad736b07ff4b0b5c19773f227064bf",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/ALANA SEZ2Z9  6L0 035 156.cal",
+      "sha": "f476c3f6aedcc926fa62f6c0e51330a6f3fa1c39b325c77538484bc6109b55e2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3680 RDS INFOMAT.cal",
+      "sha": "fe80fc6d37e01b4f7ea9f04ac0afa4a14f5600d8acb9cb7d40db05ea3a1ff4cd",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186T.cal",
+      "sha": "55fc57f6a7fe7582874fcbb9df55a0fa58420880f1829841097925b4fc192ebe",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SAXO 2014 RDS  GR0971.cal",
+      "sha": "dd53a2e34eeb1536a81614e7fba8009f7c7aa04e1f1eced6aafd7a9d122a2091",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186P.cal",
+      "sha": "9305953c804e6810e45ff31d7dd784ef3b34f94f47f851a10db33122dd02db4f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186G.cal",
+      "sha": "f0ca7cf57f9558d82aa5f6aaebe5f250c1501c70f5d43f677ef19725e0a7068c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3904 RDS REVERSE  GR0679.cal",
+      "sha": "7c295ee94f2a3df5d482aa82368bf1bb2fc8294806246ce6b5577fe43236781d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3300 RDS  GR1028.cal",
+      "sha": "21fa0844642a7fa0f624f67c8f5298c3d70d8161851f161f3e2089b743b29e81",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/BRISA SEZ2Z5 wide  1M0 035 152A.cal",
+      "sha": "9ce306eb5dc661a7b8e18ff15af1bc778fd34dc69a47ec6e2b961550fd8686b3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3803 VD  24v.cal",
+      "sha": "ae60c8c83c9692c256a346c6b251490df15c9d76b550fa11b2beb0c36625553c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  8L0 035 186G.cal",
+      "sha": "614f3f9575f7b85411e4bc16cbbc2c131ebb48fdee97d176fc970b0b68a69a7c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3860 VD.cal",
+      "sha": "29ed9171cf35ab1150db6be1ed5a83a772d394992a804b7955566e265083e8bd",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 4805 VD REVERSE.cal",
+      "sha": "37d024fa97ba334063d6f98e842f2096ec02965b70049f5d21105035a138f1bd",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  4B0 035 152C.cal",
+      "sha": "3de1cf195ebfdc5330c8d6f55fd3ac2da9947ce94e63e00bd5d538c57c925ff3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4600 RDS.cal",
+      "sha": "de567e41557ed8c9009ef1f5e9e25c4bb4ad417cfd636a122dc8aedb38df76ee",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8Z0 035 152A.cal",
+      "sha": "b2030af78647df2f23a10a396d714226becd78e9f80230c4d4e897d5b649525d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA CD SEZ2Y6  1M0 035 186K.cal",
+      "sha": "6c87d8031c0ac24f079d2c2446b10a47d86063cf58f5dbfca9e3e95d0d91f042",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2842 VD.cal",
+      "sha": "5b3432f4f985c2e0dec917554b48d353f0c2b233c3216b5435be34975accde16",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3670 RDS INFOMAT.cal",
+      "sha": "d531e24bc1a0a7034ea11271f3735d12fb244ef76c2408a9e32993b3f2050883",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/MUSIC SYSTEM 201A SK1167  1U0 035 160A.cal",
+      "sha": "2769b940ea5693e68a68db7e6f0e2b6a5b9c8f14b0cc9056e888013d38015882",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/LENA SEZ2Z8 panel  6L0 035 152.cal",
+      "sha": "e46ebb7c4e07e63feddba1a232255bb3fa9ad91eabc7320b905b2a19b88a2c35",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/MUSIC SYSTEM 202A SKZ2Z5  6Y0 035 152A.cal",
+      "sha": "bcf7387db7161df4d60424e66fc4f6d91fb66d53424de74930154a0bee0e98be",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8E0 035 152B.cal",
+      "sha": "4f206c2f89a96fb57e5d3c0a73cb04c22885aa4f4a0052499af905465a9dfdec",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AURA SEZ1Y6 wide  1M0 035 186A.cal",
+      "sha": "a7c3cb05d1226092d7679d10ebe55a46d5bf5dc28b53647b20ca3cf9ffb34d62",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SOUND 5000  DB0998.cal",
+      "sha": "7539cc283fc793a0f86ad68012312cfb36c3c6e3a3cb65e89e90e64aee23bc7e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3301 RDS  GR1029.cal",
+      "sha": "8964508b1376c173ff48e8f36125d51e534ac1cc0dca17bd74c2b3b81b3f219e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8E0 035 152.cal",
+      "sha": "5ac861735c3ab872d2b8acf5a3c53113c2fb918947f57da9013c2edfd63702ac",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 1903 RDS.cal",
+      "sha": "0e32eaaf4db5d35c87ae94cb6cd3f41ba475aaf6a35cb3d5e3dbb5f1fc54242d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AD 182H2  FA0924.cal",
+      "sha": "f037be9bc387853da1f890d0f962769b9bd506632efb34701578b09fb695acb9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SYMPHONY SKZ2Z3  1U0 035 161C.cal",
+      "sha": "8c726ded001f9d0e1b601da5dcd04de0b9e5d6eb0d30c55d3189bbdaef19500d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2805 VD REVERSE.cal",
+      "sha": "2450276136fdfb2a996adfcd2f40d3c36b56088b0d4aad04824dbb57fedc5d63",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHALLENGE 400  GR1109.cal",
+      "sha": "198b0c71c8eb92ba35439bd75ecc44126a5e383ff05fe8c04fc78f523f88ac21",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2804 VD REVERSE.cal",
+      "sha": "0b3a39b00c45eb46f8c3c5f15d2846500809c1b6009e1b103f3a4f0301933fa9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 4804 VD REVERSE  GR0601.cal",
+      "sha": "e588bb2048809e131d0d7ca7ff392dd6d3231860289119b531bdc6aab19aa841",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3680 VD.cal",
+      "sha": "7bcc695736ad475db38d1d7a3e36389bce73fa14df395a453fedac33e4b7808e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 3904 RDS REVERSE  GR0579.cal",
+      "sha": "2743b0bd5ef28468ee560fbafa6c817996879c4a7d2326a05ea0ccc0079cbfcb",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/AD 185H(B)  FA0984.cal",
+      "sha": "c6da01a7789c4d360250adaa92bd7e29f4534efa68480a350e3c23e6d1e660d2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  8E0 035 186D.cal",
+      "sha": "0f5794ae30c0aab355f0b5268ec356c0657d1cda4aec12e6337340ed5cb8ab6e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/CHALLENGE 500  GR1110.cal",
+      "sha": "033ea33a90c5ace7bb05d9f7314a79598e2478c92ce0913293b3a1e48417e44f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/SYMPHONY SKZ2Z3  1U0 035 161D.cal",
+      "sha": "314acdf0d8710244634a3518a94f304d9cb8690a8e8810c12593a9d4d30d9af6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/WKC 2680 VD REVERSE.cal",
+      "sha": "f29f360cb6e1f596bb77e7d07c7bbda8e4f38318fd8d224e98908bb7b69cc470",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Grundig/EC 4700 RDS.cal",
+      "sha": "55bc494a77cf6e65f206a1567b8927e94cd28c82cd8c7905217c7f0710b40dc5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/OPEL  CD 70 Simens VDO.cal",
+      "sha": "ce0234df2133742a5b2e0e7a852c6b1ca8dfb8788fbecea0f09adc1c5e5ae3ad",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/HONDA 39101-SND-A510-M1.cal",
+      "sha": "4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 43)"
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/CD 70 Simens VDO.cal",
+      "sha": "1418d9252ebb88bef5bba2c966535dd3db45968cae887e28602c11c806edfed2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/CarRadio/Iveco/GRUNDIG CHALLENGE 400  GR1149.cal",
+      "sha": "3b714008da8c3e3eb9c6ead42e99e1508f7b13fe2432fa867a1a1754cc506b3e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Iveco/DAILY CD BP7005 no cancheck.cal",
+      "sha": "6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 107)"
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186C.cal",
+      "sha": "bf05f97be7e20f40494350540bed4c8884d188830c3d56c9dc6250928f67cf57",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3.cal",
+      "sha": "60e9b40230bf4a384d31aa694d0d6a4171d2b0702018319f5093d098e48aeede",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/FIS AUDI VW coder.cal",
+      "sha": "5528e06fab6ef5ed02d38c90ff651efce87c81f13b6968b8607b5e10aaa76069",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186 GX 24╤ü16.cal",
+      "sha": "074a4f33f36a087427f1a91dd503951f45c1583c80e292740031166f02fc93b6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  4B0 035 186G.cal",
+      "sha": "d86520b12df874f3983e3c1867618f52a94837337ff6a5492192fe9d865487d9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT EU B7 SOUL AUZ1Z3.cal",
+      "sha": "7c47fd6f7917d6b63b594558d0fba77e042d0711c95564fb4bacae8b47fcb00c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  8L0 035 186G.cal",
+      "sha": "0cb45ff5563672bc993bd4b85b9678e5bcf0e918eb5b24028d2adb643fde1d22",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  4B0 035 152C.cal",
+      "sha": "bccfed0c078ff3bed0df092fe660c22a7d6997f01345a635fce82c54b61e1cb4",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8Z0 035 152A.cal",
+      "sha": "b31388d32647b7225c4aa75a06cdae5870afe42090725e6d61dab312d713340f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8E0 035 152B.cal",
+      "sha": "81248f0194493e469741936a7d9d6712c48f2ecd5eb8efe53c41f8e26ec6f5b3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8E0 035 152.cal",
+      "sha": "fff8837324658638a7e09636b36f1caa78efd17fdd97c9a2e8031fa92b4150c9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  8E0 035 186D.cal",
+      "sha": "799d4c379f7eb6c220e65d5c60b8616b1f93a9ed06a6c27ef53058c9d641fcf4",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/SOUND 3000 VWZ2Z8  2D0 035 160.cal",
+      "sha": "357bbdbfe86bf0954e2a52f1ebdae5e5b69cb746d33101d29dbba6d0a5e58894",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/SOUND 5000 VWZ2Z9  2D0 035 161.cal",
+      "sha": "696663527486a896eec69e1e4a98286880c44f28fe588969cd13a7609c5208f5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186J.cal",
+      "sha": "09e1d92177183e1caa77aab3cd76833f169ab2f0e4b27884dfb347af978351e2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186L.cal",
+      "sha": "8bb947a61eef641108e557005886889374a96968b981bd129eea9f0b33349d2a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/Alpha-5 Polo Lupo BVX VWZ1Z1.cal",
+      "sha": "0d71b4e96746f41a7d60f94ff0c7ebdbe44f71fbca24eb74a0051bb60873d04f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186T.cal",
+      "sha": "1695d8332c166c9098fd681899753b5765c7ace03f0b079ef32cdcb452d384b0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186P.cal",
+      "sha": "f330a3ab0f2349543696ab4ea643ef749fc2d4324a1443c28226e5e63099da73",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186G.cal",
+      "sha": "9b004e7a3e26ed6151732d19f9903f207a935748d8fa9ff3059f858a1274db1a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/RCD 200 VWZ1Z5.cal",
+      "sha": "cb3a205f761d65a5ef83849ebbf41937169593802ca2d5d8bbaff379d04e857a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/VW/BETA VWZ1Z2.cal",
+      "sha": "d6f13877e7f87a5d03d3c6249ae80aa7a86c52325f968b131af3477cf9fd0173",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO 2000  BE1430.cal",
+      "sha": "d17efa0ff5e0fef14f30509a59ccd9dcb888908a2a4b2141f63a99ef513c06ef",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 78)"
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO CD  BE0876.cal",
+      "sha": "57f9a9c0d0f48aa6325bee9eda1eaa92e6b318e8287f511f5cac5daa35ed7cb1",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO CD  BE0879.cal",
+      "sha": "96446c8b29740b927d08c27bb78e652428a267c4d3305bde0ef89a49e3237a4e",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Delco/LICEO  SEZ4Z1.cal",
+      "sha": "db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/MUSIC SYSTEM 502 SKZ2Z3  6Y0 035 161.cal",
+      "sha": "bd685cf5a7c4d89e781a638e53ceb656035efbbf37fa989aaa6f090e79cbc2d9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/MUSIC SYSTEM 402 SKZ2Z2  6Y0 035 161A.cal",
+      "sha": "2ccb6e48bf5b8b9f93ff1e69de0d2301abaca9df7afa696320ead4ac9ebb4293",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/MUSIC SYSTEM 402 SKZ2Z6  6Y0 035 160A.cal",
+      "sha": "e2c85e6fa6a05e1df4f082d75a55faddbcdc349b1b8602bc3f8eca803626f25e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/MUSIC SYSTEM 201A SK1167  1U0 035 160A.cal",
+      "sha": "3c1dc43e7767553c10aa09632b073e79b3743f6ad0c94af85a0ca9345b75e078",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/MUSIC SYSTEM 202A SKZ2Z5  6Y0 035 152A.cal",
+      "sha": "6db38f793b9ca328bde652aa3eccbd508e9ba43a6caffcf19e1b3a403ecd1091",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/SYMPHONY SKZ2Z3  1U0 035 161C.cal",
+      "sha": "12afe18fbfc0308dd3fc9cd619915db3219364397cc057b8cd0eaf2a7b7e4d2d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Skoda/SYMPHONY SKZ2Z3  1U0 035 161D.cal",
+      "sha": "72aaeef4c85259b88440ee2bd382716e3e928191d044d593f9b17c256e22781a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Pioneer/Pioneerke92zbm.cal",
+      "sha": "6644d71cab945296f8b6dac979081a6039b37373535abf36702e1e742a374a5d",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Chrysler/P04858543AD-A.cal",
+      "sha": "6566e0f178ce0f8f72dbe36d2a038b9bf17af974da5374aeef60a5d81fa104af",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Chrysler/P04858543AE-A.cal",
+      "sha": "604dec3cd2e909beee816b65b373eed0d076f7c21a03e0fd637c1853ddb8138c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Chrysler/P04858543AG-A.cal",
+      "sha": "93b2c090efe69ec3d3af3f07a38cae09a06be3dc741b6dddf977efeb51c88d57",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Chrysler/P04858543AC-A.cal",
+      "sha": "e21c1174911874b8c9180e1c7a44ba9575ffc2a543c6ebd9f762937b452adf68",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Jaguar/AJ 9600R.cal",
+      "sha": "41ea537bb5776a653ab8b34a7fd307dc3fb3580e2a716f4ddbb07e3cb193928c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Jaguar/AJ 9800R.cal",
+      "sha": "40198cfabd5c2dc3bf2c2fffa0eeb4fbfa2146752816ecc4b6e0bfb08e03812a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 3251 RDS BP5500 v2.cal",
+      "sha": "08143f0fa059905766fd1758109dddce5a0695187f61c82372033151096ab130",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 4251 BP5510 v2.cal",
+      "sha": "17f2ee835b801ebd07e3286a685c2832041044692154864e0013bf8ee537ce1e",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 5dig.cal",
+      "sha": "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/FIS AUDI VW coder.cal",
+      "sha": "257d983b362663d8a09e1147bf54cc6c5f8e2ce99e4fd3ced7ad12dc31329cea",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 4250 BP5511 v2.cal",
+      "sha": "5ed4c018a8fd1914ba7b2fb2640563028b824440572f43d665664b8834aebc22",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/SCALA SEZ1Z4  7M7 035 186.cal",
+      "sha": "d37266c2d3e75b9210ad03ff8b495ba9271384f426da144be379e28d8258d720",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BlauWith25160.cal",
+      "sha": "ffee1fd8ee562587febc510eadac7a5ee7592b80362214602ea053bfec41f128",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BlauLubecCrypt.cal",
+      "sha": "46a4acbd2face8e57cc471fa4316adb2b43d03f2a7616337c1e2199b2733e6b5",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/Blauserial.cal",
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/Alpha-5 Polo Lupo BVX VWZ1Z1.cal",
+      "sha": "b7dcbeba24b5bde1a8e7523231dbae76a89b742a28a2628f9ccda0386c097f44",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/CONCERT EU B7 SOUL AUZ1Z3.cal",
+      "sha": "03c14b764cdb5b833455255551c449189e905b13fc586ddb41198c318d7d3ed6",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/PUNTO LOW  BP9372.cal",
+      "sha": "cdd3109220bc9276fa0b5b5a17379b3d61fdd5c2953577523a93f9ff08f86dbd",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/RCD 200 VWZ1Z5.cal",
+      "sha": "91cef67cf0bdcd5c687891b5ad2c1aa45dfa3c2f3d7f1fe016073a470a46377f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BETA VWZ1Z2.cal",
+      "sha": "503a3bd482ce6d9819389da32fb820e10ebc86c1dadbef4d687ba2247b0123f3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 4dig.cal",
+      "sha": "5f094be4aaee26a3affb18a4bf1e3bff237f5aa0ecd5a52ce3ca13c1c0461aec",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-JH2810A.cal",
+      "sha": "a075634d3d0456fa57f691a511249ed7a1492f8447d840e644f81f1c304e0e5e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-JH8161Z.cal",
+      "sha": "d1458949593102a4e5398d433d4cfd2ec939c9e220a3fe757441f6b4757870e7",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1TN0  6CD.cal",
+      "sha": "147640b99c86bec7981c5d0ff2e7df29d02068545d16961fbab71264672317fe",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-EH8280A.cal",
+      "sha": "7fa97edc39c34a201da7efbd4ca735fd1958bc88b7550e81046c8fcf8cfc8996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1SA3.cal",
+      "sha": "6e1ed379e3588b9ca4c37d99656d4c3049895aed74fa815adffad7157128a632",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1XP1.cal",
+      "sha": "7f26881c5f205f87ec9e6fdc25eb0769a30de677ae9e4c5eb38ba7567c90ef30",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ BOSE.cal",
+      "sha": "728ed75959a18737f982fa38918375cba19a74cf37dd83f0947f9c90bd3b1c2e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/Exquisit CQ-LP1420L.cal",
+      "sha": "d0f262de53caf11dc5a46e90249192530b151c252bd7408b6166b7e2e905a8b7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9926.cal",
+      "sha": "8eff29d8cba9423e5e53935e97920ada9bcfe2f4847c61513dd7401b2b742805",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9715.cal",
+      "sha": "e2ea7cb94f91554d6ec5526772dd974bf0f0dc6a22a6fed16e0ea63e81d83a22",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1XM1.cal",
+      "sha": "09571dab29212bcea7a1494f5d93fe67f8127af1df7b62b9c70df76d2d4eabd1",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1TN0 6CD  CQ-EH8160AK.cal",
+      "sha": "75e77b42f753f65289de6f0be1aaf989a9217c2de5394d4a469f941500dc4c13",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1SC0.cal",
+      "sha": "3645acde20c0a92b465a7ebc47849908d1d7615706893aab674fcd1aafb393f8",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 5dig.cal",
+      "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 4dig.cal",
+      "sha": "103a87d976348a3d8a28ae22920c9f1ff3472a02465b4b0ced9272f0b94346e0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Fiat/AD 182H  FA0925.cal",
+      "sha": "cddd4c8341e2ef5e503f038f4d42ff1c91bae38eebdfed4e4bdbce8c573daf71",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Fiat/AD 183M  FA0926.cal",
+      "sha": "0601d3613bdeec3439f86be09871a10b08f81794688eb0d92ab3e033f0cf3830",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Fiat/PUNTO LOW  BP9372.cal",
+      "sha": "78488b6ae60846c4ac8cdc5c23691b579a300ee09bdb2a5519b2ddfb3f2ab9be",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Fiat/AD 182H2  FA0924.cal",
+      "sha": "e2dcfdfe84510dd21b3748de54e79ae5bc068fa4d6e13d8fe1bf7927c914f885",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Fiat/AD 185H(B)  FA0984.cal",
+      "sha": "8b4818f2210cbb06d1e2ff859aeb4bf1c485a795325c439729ac1573cbcf2c5c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Serial calculator/OPEL  CD 70 Simens VDO.cal",
+      "sha": "bcce6ded1d1c7d663b525a9a01c0abb9b2546a213df3fb786a462e8d3dd3929b",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/CarRadio/CITROEN/SAXO 2014 RDS  GR0947.cal",
+      "sha": "9b5ae004338a6e9961e997f19de5a98c4fb8b84ce53798b352f613f3b416cf1e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/CITROEN/SAXO 2014 RDS  GR0971.cal",
+      "sha": "784c585c15990a64ceac405413b3aae029568c36dafb04cd35dc0660afbbe14a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA V3 SEZ2Y6 wide  1M0 035 186B.cal",
+      "sha": "b5ca78265a0e88f4d28f5839327f7a089860d274619fa51b6706112b3207c3a8",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/BRISA SEZ1Z5 wide  1M0 035 152A.cal",
+      "sha": "d4c29ec580a03dc6d1917c63f2950c23de97e95d0b48edf63a729768147e535b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/ALANA MP3 SEZ2Z9  6L0 035 186A.cal",
+      "sha": "fe993cb58fdc65418d36eb9c85aa4670b5e2b90f6834aadcce4c1a397e390eb5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/BRISA V3 SEZ2Z5 wide  1M0 035 152E.cal",
+      "sha": "96d502ef4d712db1f6ddcd6e99766b04cec321a60083a34d3c1c5353d08a4484",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/BRISA SEZ2Z5 wide  1U0 035 161C.cal",
+      "sha": "2da40f12ff84d180036ed1a351e326d183cdd620da95a983bcd33b923b1732bb",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/SCALA SEZ1Z4  7M7 035 186.cal",
+      "sha": "f47c289cfce0c275becd6f064f41b6a83e48930009fd0750d25859c13f4a4ba9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/ALANA SEZ2Z9  6L0 035 156B.cal",
+      "sha": "8198f707d7ab550720a1cfacc08da7c6b021ac12c5648c2db6bff9cb7788b30b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA V4 SEZ2Z6 wide  1M0 035 186F.cal",
+      "sha": "412d05ab11fbbd452fc5ee9f237f489667319181f6de6114bdea1222fef9d3f1",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/BRISA V3 SEZ2Z5 wide  1M0 035 152C.cal",
+      "sha": "f1629cc1be963bc6fd5a6d867cb786b8616b0595958e44a580aecc4c2ae0d569",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA CD SEZ2Y6  1M0 035 186B.cal",
+      "sha": "059c386e21bd3640d3b337ff8259bf63be5a114c3dd5ca934256c1412594159f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA V3 SEZ2Z6 wide  1M0 035 186C.cal",
+      "sha": "b9688062da0669a303786f505ec045931afb05ad66734579f610b350444c216f",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/ALANA SEZ2Z9  6L0 035 156.cal",
+      "sha": "5bed866b89c52838e33efd44087ad759268bf1c1c9d1d5cd2d78f1143d231362",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/BRISA SEZ2Z5 wide  1M0 035 152A.cal",
+      "sha": "2123695973d1e669e15aa20451d79a5cdcc2916102d63e5c26e54624811f4cb7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA CD SEZ2Y6  1M0 035 186K.cal",
+      "sha": "dfcb2fc7fcdd1a930230d38607ab905b6a3227eac86828ab6fb8225ce2ce35e7",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/LENA SEZ2Z8 panel  6L0 035 152.cal",
+      "sha": "31a12922799b58a3a57773ebde2cc2a4556e0635672bd227bf7d47d82190eab5",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Seat/AURA SEZ1Y6 wide  1M0 035 186A.cal",
+      "sha": "ab49205d148e3413a3e3f1e868b8771cec0550f3951eb993747fc6093c5118ba",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Mers/MersExquisitcqlp1420l.cal",
+      "sha": "f3daac74567ecd324f10724e9cd9871111995b0a3c036822af83797a08d79c52",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
+      "sha": "2569f04b1b2ceceba3472a48ab268b818772458fc72ba19847cbba691829a6a8",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
+      "sha": "8474ed3873251b38cb909209f4ee57ac1fa47a72da6639bd8fd17165a717a1ec",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
+      "sha": "74121f68e6eedf8a5e691c475a8bd37c4cad9ba52e6398c611a5bc612e1e7e67",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
+      "sha": "af4b86898990324f46d846d49fc3ab5efaab4161b5eb5307dea36bafc69e6c9c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
+      "sha": "c0d1f6a2fbbf2911863a6af9d074920d20e363297991160e93d48fc836d29c73",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
+      "sha": "a8895ef0476c30de934a02b5a792dc98cc5a691b065f91efc6c849470780527e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/I/Isuzu/A092 93C46.cal",
+      "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Car/N/Nissan/Liberty 93C46 Yazaki.cal",
+      "sha": "f1a226082a897f8eb977cac12a49cc8c3d8b57f4c4c606faa8dd2ee333147e24",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/S/Subaru/Tribeka 93c66.cal",
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 100)"
+    },
+    {
+      "path": "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto.cal",
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/audi_a4_bosch_24C08.cal",
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A3 VDO 93C86 Crypto.cal",
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/bosch.cal.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/Audi VDO crypto 2.6.cal",
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/audi A6 93C86 Crypto.cal",
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/bosch.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto 2.cal",
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline 9S12H256 miles.cal",
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline 9S12H256 km.cal",
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Car/M/Mitsubishi/Pajero 93C66.cal",
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ( (строка 36)"
+    },
+    {
+      "path": "Calculators/Car/M/Mercedes/Atego 93C86 var2.cal",
+      "sha": "5e3823d3f0b5b97bdbfc0f437f814b7cc62a252ab6f62dfd1238f67b6c669405",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/M/Mercedes/Sprinter 93S46.cal",
+      "sha": "e42e7b03603ff0f48b5c4fc602988d58353d78e13bc448dba66dc5e4190855e2",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/M/Mercedes/Vito 93S46.cal",
+      "sha": "2df91953a624435566014b8d4306d9bbaf0e874170854e89750ec102e2c3ab6e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/C/Citroen/BSI Berlingo D780949 var1.cal",
+      "sha": "10573466ebbab659704e4abcf910a468889d64e0ed0ec6f15eb9387ee1360140",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/C/Citroen/BSI Berlingo D780949 var2.cal",
+      "sha": "9fe5dca6ae9cc20a6f1baf18d7e1ef0e317a0e94e07d5496a3458e915e3b9e68",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/C/Citroen/BSI Xsara D780949 var1.cal",
+      "sha": "98373c5498e9da73d06a95482195753627d8a206db885091925d9ef9d8476ba0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/C/Citroen/BSI Xsara D780949 var2.cal",
+      "sha": "93a8f40931f361244e10950b23ef91c00a1ff7a5838b14d8c85a3baeb808590c",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 263)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/K/KATO/KR25HV7 93C66.cal",
+      "sha": "956a2ed105e434df5ce461b9dccfba2989221502786be45d562359b2881008ef",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/P/Peugeot/BSI Partner D780949 var1.cal",
+      "sha": "a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/P/Peugeot/BSI Partner D780949 var2.cal",
+      "sha": "c3c815e0f53991c1bd96e938a7914f35e605285ba9812100fbc511c85c102451",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Leganza v1.cal",
+      "sha": "40fd400d053de6d366f947364d07daaeee51a6931bf704fd2ca52de690448ebf",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 204)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Espero v1.cal",
+      "sha": "78ff5aa6157668fb144f6042cb2f3e2b5eefb818a83da6ad0b9c88d226a3becf",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 203)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Nexia v1.cal",
+      "sha": "db469036905e3875444fa6e3d0f3fd4413c72dfb8a0171ce38147680aebd7434",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Nubira v1.cal",
+      "sha": "64e12bb4c92b08b1ea9975f6e081d8c3d8b46c34d167898e0ace488c3635ef25",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Matiz v1.cal",
+      "sha": "193209b8cc7a72196a8b84fb01a0dee20b06e875f68494596397d0b372394060",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Lanos v1.cal",
+      "sha": "9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Opel/Movano.cal",
+      "sha": "c696429f1a0c7a9fbfff21519e7dd97166b2cee18d0943d57dbb13c816d32e1d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/Opel/hitag2.cal",
+      "sha": "f09bfa01869e5987194554b5550cb89eefc135ad74cee362b2828db8ca9bb198",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/Iveco/Iveco Immo    93C56  .cal",
+      "sha": "fdf1dbe43a47d4dbf0669baf7feef0d98803909d4c8a8da1b374225c750c780a",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/Nissan/Nissan BCM.cal",
+      "sha": "1da57dd086665f9e18e10918a0b2c44c7199cbd6dc77dce041ac41d4c7f7a0b3",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal",
+      "sha": "1148097721371cde3cb5416dc42eb9e9a71f775dfb436570be25b1bf698b141d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "238b1eb640695efb5226437999e370ea4f8ca28c46155d368ea244f683656b26",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery 0L72A.cal",
+      "sha": "cef29d369ba14335be8ead340729232ebaa494cbad5348c076c0b289deadc7ae",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/Immo/Car/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "sha": "f387467a726c5fea9cad6b0e505434ae0ab736c59bdc25b9aecdaf06e2e9fdd0",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Car/Honda/Honda_Immo_0D28J_PCF7931.cal",
+      "sha": "679c9ec0143099817273017908c6b9934767e3966b278d0d3020de2e7e0599ee",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xc3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Bikes/Honda/SMK HONDA R5F10Axx v3.cal",
+      "sha": "98e9439ac03c0f8d130329c7f3b060901f4ce1cd5dcc3d12a46c38d4dbdbbd05",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Bikes/Honda/FULL KEY O.cal",
+      "sha": "c5daea961c4f7e9cca863984794a4359a2f4eb7aed88e46a3c321cf9f9498734",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Immo/Bikes/Honda/FULL KEY VER2.cal",
+      "sha": "5b234b26ab8b4026d9e093d95db04d7d63656930b714495de27e62062bf105cd",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/hitag2.cal",
+      "sha": "757957511befbb154f69b8b65d2af2b746c713d9f47d5cd9bf47acaea2e5bc0e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
+      "sha": "c096be74c0b022312239c4a87ea719e6a6aacd23e646b2bf58c8b35ccec5f9c9",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal",
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "sha": "c58d2f4dbf549cde76ca563f7a33eae683db475d0aa1de36cf76735b1109b65e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal",
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 97)"
+    },
+    {
+      "path": "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 82)"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Asia/Forklift truck/Hyundai/H940S 24C32.cal",
+      "sha": "2dfd2b1fae0e10b90cc5141924722c41e98cebec2f9c4173b0c9c1f7d5a16c10",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Forklift truck/Hyundai/H940S 24C32.cal",
+      "sha": "a37ff24f88c17a67df744922eec5fbe418caa10e6772598b3da0be8bb7ba6e2e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Mercedes/Sprinter/Sprinter 93S46.cal",
+      "sha": "ace179c2bb40589a5035346b63c4d717a391db16233c815094dc6eed3ccd0867",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Special vehicles/KATO/KR25HV7 93C66.cal",
+      "sha": "824e6ab0a3bc0d877c99d496db6ef58b87ce17f0937d31054f5a548cc605be5d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Navigation/AUDI/FIS AUDI coder.cal",
+      "sha": "a7336ed79bf2a92b8cbf678ba28973ff442077df577673114db8137d50955d66",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Navigation/Vw/FIS VW coder.cal",
+      "sha": "12986cdd7049c56086fc702c32d9e37bda0c9b9b12a70adc4a83dff0dcf2590b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/CarRadio/Serial calculator/Blaupunkt/Blauserial.cal",
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/NVX - JANUS.cal",
+      "sha": "fd2f3074cb09c20323bf5e5a8411caf5336e9c3b2b689a2e51b4e5c063e77c99",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Special vehicles/KATO/KR25HV7 93C66.cal",
+      "sha": "824e6ab0a3bc0d877c99d496db6ef58b87ce17f0937d31054f5a548cc605be5d",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Ссылка на отсутствующий элемент 41"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Daewoo/Windstorm 9S12HZ128.cal",
+      "sha": "2706317a5a6d0724b0e4657d0425f195914ba0012c6cee5e260541952bd999db",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0x6c"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/F/Forklift truck/Hyundai/H940S 24C32.cal",
+      "sha": "a37ff24f88c17a67df744922eec5fbe418caa10e6772598b3da0be8bb7ba6e2e",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неожиданный конец CAL"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/G/Grandeur 93C66.cal",
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/G/Grandier 93S66 Siemens-VDO.cal",
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/S/Sonata VI 93C66.cal",
+      "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/A/Hyundai Accent new  2011 24c16.cal",
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 123)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/A/Accord denso 93C46.cal",
+      "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 59)"
+    },
+    {
+      "path": "Calculators/Car/M/Mercedes/Sprinter/Sprinter 93S46.cal",
+      "sha": "ace179c2bb40589a5035346b63c4d717a391db16233c815094dc6eed3ccd0867",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Неизвестная команда 0xe3"
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal",
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Неизвестная команда 0xa0",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": []
+    }
+  ]
+}

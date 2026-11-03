@@ -59,7 +59,7 @@ class Parser{
   if(this.take('while')){this.need('(');const test=this.expr();this.need(')');return {kind:'while',test,body:this.statement(depth+1)};}
   if(this.take('return')){this.need(';');return {kind:'return'};}
   let target;
-  if(this.take('@'))target={kind:'memory',address:this.expr(11)};
+  if(this.take('@')){target={kind:'memory',address:this.expr(11)};if(this.take('.')){const property=this.need('id');if(property.v!=='mismatch')fail('неизвестное свойство байта '+property.v,property);target.kind='mismatch';}}
   else{const name=this.need('id').v;if(this.take(';'))return {kind:'call',name};if(this.take('.'))target={kind:'property',name,property:this.need('id').v};else target={kind:'name',name};}
   this.need('=');const value=this.expr();this.need(';');return {kind:'assign',target,value};
  }
@@ -74,15 +74,47 @@ class Parser{
   return {form,sourceProgram:{procedures:this.procs,names:this.names,variables:this.variables},bytes:new Uint8Array(),code:{},unsupported:[],executable:true,format:'text'};
  }
 }
-function parse(raw){if(raw.length>3*1048576)fail('файл слишком большой');let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(raw);}catch{text=cp.decode(raw);}
+// Reviewed originals with one unmatched final closing brace. The supplied SHA
+// identifies the original; length/CRC also prevent accidental stale-SHA repair.
+// No procedure or expression is removed, and the repaired program is parsed strictly.
+const finalBraceRepairs=Object.freeze({
+ '6df1bcd59ae4515b76fd96c01122bfc32efa5218350779fcbd7c043cb34d64da':[3232,23146],
+ '8392a4ef79f8e356b5372a3c06d112890d5ca64e8a7802584365565bc5e731f2':[3232,64808],
+ '536f5b44285e1b581f456526175015fbd98bc495d8e117118990991c6c1cd5a0':[4426,56298],
+ '122917e0828da10de334cb170df256c0238c1ae03d38ed88d49ad6b0b1c21a08':[3229,58730],
+ '9a31abd65e04c23ecde5e92140c9af992a533e95251740467c41f166025dad38':[3120,22648],
+ 'f6291c80f0a29e62627af1b1d7330ee5c8471540989f7ee68c5af11d66ca2199':[3332,4480],
+ 'b1a9cee8c33ae2a6618c9502e0f52767b4d8e6fe1680713648aadc8e9a676483':[4612,48414],
+ 'fe6eb1a4467138210a6fe4ae8dcacd92a46326952cb14160c61a295c32a2ff85':[4618,52559],
+ '3e158243de8394cb9b7fd2a187cff5f5491822f93fcca516709e9ca0ad5121ae':[4329,24469],
+ '2c93fdc39b703fa16bac621222a4680d5901416a2df48f973a485e3a2939c15d':[4329,37581],
+ '421d829d82aead83980bf6b07c58cf5b7c48e5f1faade9718570dc3e98d92aba':[4323,32445],
+ '6b85059c35ade8be9cabdb83e125422ecebee85f03da2a7e3284d22306165b44':[4022,31076],
+ 'fc73f45de8854227468abb7b6c45debd8c72c538155f8b16c9701f84db2c5c43':[4323,29684],
+ '651b4f2722c7a873fd535ff231031a8cf436ebc8bf61a5b644c7231eb8da3e3a':[4032,22207],
+ '8179e0c8d11000a0de30e806218d64195fbed5673eaf2b23ea0ebfd099597b1e':[4625,64191],
+ 'fc8b7ae31cad042a7bce7d0704d65ecb70ee6f7db932405d8b55d3c1f798ce37':[4221,47508],
+ '6a2033bf21324fc1a524c6543e0deb3404857bfdd767451d9a332afb1d96180a':[4411,16036],
+ 'd89c622fcf2691be2f38953050182a29ca95ca8946102bcd874470a6bb0f4e3c':[4413,34816],
+});
+const unverifiedWriters=Object.freeze({
+ '5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be':'OnApply не обновляет копию логина, которую проверяет OnShow; запись требует проверки оригинального алгоритма.',
+ '3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b':'Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма.',
+ 'ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520':'Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма.',
+});
+function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишком большой');let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(raw);}catch{text=cp.decode(raw);}
  // CAL metadata precedes Size; only a section title, ! lines and comments are accepted there.
  text=text.replace(/^\uFEFF/,'').replace(/^\s*\[[^\r\n\]]*\]\s*/,'').replace(/^\s*![^\r\n]*$/gm,'');
- return new Parser(text).parse();
+ const repair=Object.hasOwn(finalBraceRepairs,sha)?finalBraceRepairs[sha]:null;
+ if(repair){if(raw.length!==repair[0]||E.crc16(raw)!==repair[1])fail('исходник не совпадает с профилем исправления');if(!/}\s*$/.test(text))fail('не найдено исправляемой скобки');text=text.replace(/}\s*$/,'');}
+ const program=new Parser(text).parse();if(repair)program.sourceRepairs=['Удалена одна лишняя завершающая скобка из известной версии CAL; оригинал сохранён.'];
+ if(Object.hasOwn(unverifiedWriters,sha)){program.partial=true;program.eventErrors={apply:unverifiedWriters[sha]};program.validEvents=['show'];program.unsupported=['apply: '+unverifiedWriters[sha]];}
+ return program;
 }
 class SourceVM extends E.VM{
- constructor(program,dump){super({...program,sourceProgram:null},dump);this.program=program;this.variables=new Map([...program.sourceProgram.variables].map(n=>[n,0]));}
- clone(){const v=new SourceVM(this.program,this.buffer);if(this.scratch)v.scratch.set(this.scratch);v.r.set(this.r);v.s=[...this.s];v.controls=this.controls.map(c=>({...c}));v.logs=[...this.logs];v.variables=new Map(this.variables);return v;}
- execute(event,options={}){if(!['show','apply','change'].includes(event))fail('неизвестное событие');const source=this.program.sourceProgram,body=source.procedures.get('on'+event);if(!body)return {steps:0};let steps=0,calls=0;const start=Date.now(),limit=options.maxSteps??2000000;
+ constructor(program,dump){super({...program,sourceProgram:null},dump);this.program=program;this.variables=new Map([...program.sourceProgram.variables].map(n=>[n,0]));this.mismatches=new Set();}
+ clone(){const v=new SourceVM(this.program,this.buffer);if(this.scratch)v.scratch.set(this.scratch);v.r.set(this.r);v.s=[...this.s];v.controls=this.controls.map(c=>({...c}));v.logs=[...this.logs];v.variables=new Map(this.variables);v.mismatches=new Set(this.mismatches);return v;}
+  execute(event,options={}){if(this.program.eventErrors?.[event])fail(this.program.eventErrors[event]);if(!['show','apply','change'].includes(event))fail('неизвестное событие');const source=this.program.sourceProgram,body=source.procedures.get('on'+event);if(!body)return {steps:0};let steps=0,calls=0;const start=Date.now(),limit=options.maxSteps??2000000;
   const tick=()=>{if(++steps>limit||(steps%4096===0&&Date.now()-start>2000))fail('превышен лимит выполнения');};
   const special={selstart:48,selend:49,bufsize:50,cursoradr:51};
   const numeric=v=>{if(typeof v!=='number'||!Number.isFinite(v))fail('ожидалось число');return v>>>0;};
@@ -94,7 +126,10 @@ class SourceVM extends E.VM{
    case 'binary':{const a=value(n.left),b=value(n.right);if(n.op==='+'&&(typeof a==='string'||typeof b==='string')){if(typeof a!=='string'||typeof b!=='string')fail('для числа в строке нужен формат #i, #b, #w или #d');return bounded(a+b);}const x=numeric(a),y=numeric(b);switch(n.op){case '+':return x+y>>>0;case '-':return x-y>>>0;case '*':return Math.imul(x,y)>>>0;case '/':case '%':if(!y)fail('деление на ноль');return n.op==='/'?Math.floor(x/y):x%y;case '&':return (x&y)>>>0;case '|':return (x|y)>>>0;case '^':return (x^y)>>>0;case '<<':return x<<(y&31)>>>0;case '>>':return x>>>(y&31);case '=':case '==':return Number(x===y);case '!=':return Number(x!==y);case '<':return Number(x<y);case '>':return Number(x>y);case '<=':return Number(x<=y);case '>=':return Number(x>=y);case '&&':return Number(!!x&&!!y);case '||':return Number(!!x||!!y);}break;}
   }fail('неизвестное выражение');};
   const run=body=>{for(const n of body)if(statement(n))return true;return false;};
-  const statement=n=>{tick();switch(n.kind){case 'empty':return false;case 'return':return true;case 'block':return run(n.body);case 'if':return value(n.test)?statement(n.yes):n.no?statement(n.no):false;case 'while':while(value(n.test))if(statement(n.body))return true;return false;case 'call':if(++calls>128)fail('слишком глубокие вызовы');run(source.procedures.get(n.name));calls--;return false;case 'assign':{const t=n.target;const address=t.kind==='memory'?numeric(value(t.address)):null,v=value(n.value);if(t.kind==='name')set(t.name,v);else if(t.kind==='memory')this.write(address,numeric(v));else{const prop={color:1,bold:2,alignment:3}[t.property];this.property(source.names.get(t.name),(prop<<24)|(numeric(v)&0xffffff));}return false;}}fail('неизвестная команда');};
+  const statement=n=>{tick();switch(n.kind){case 'empty':return false;case 'return':return true;case 'block':return run(n.body);case 'if':return value(n.test)?statement(n.yes):n.no?statement(n.no):false;case 'while':while(value(n.test))if(statement(n.body))return true;return false;case 'call':if(++calls>128)fail('слишком глубокие вызовы');run(source.procedures.get(n.name));calls--;return false;case 'assign':{const t=n.target;const address=['memory','mismatch'].includes(t.kind)?numeric(value(t.address)):null,v=value(n.value);if(t.kind==='name')set(t.name,v);else if(t.kind==='memory')this.write(address,numeric(v));else if(t.kind==='mismatch'){
+   // An editor annotation on a BIN byte, separate from the byte value itself.
+   this.address(address);const flag=numeric(v);if(flag>1)fail('mismatch должен быть 0 или 1');if(flag)this.mismatches.add(address);else this.mismatches.delete(address);
+  }else{const prop={color:1,bold:2,alignment:3}[t.property];this.property(source.names.get(t.name),(prop<<24)|(numeric(v)&0xffffff));}return false;}}fail('неизвестная команда');};
   run(body);return {steps};
  }
 }

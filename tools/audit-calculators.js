@@ -7,7 +7,7 @@ const policy=require('../catalog-scope.js'),catalog=policy.activeCatalog(CAL_CAT
 const cache=new Map(),details=[];
 for(const e of catalog.entries.filter(e=>e.ext==='cal')){
  let r=cache.get(e.sha);
- if(!r){try{const p=E.parse(Buffer.from(CAL_CATALOG.blobs[e.sha],'base64'),{sha:e.sha});r={format:p.format||'binary',status:p.executable?'supported':'unsupported',warnings:p.unsupported};}catch(err){r={status:'rejected',error:err.message};}cache.set(e.sha,r);}
+ if(!r){try{const p=E.parse(Buffer.from(CAL_CATALOG.blobs[e.sha],'base64'),{sha:e.sha});r={format:p.format||'binary',status:p.partial?'partial':p.executable?'supported':'unsupported',warnings:p.unsupported,repairs:p.sourceRepairs,validEvents:p.validEvents};}catch(err){r={status:'rejected',error:err.message};}cache.set(e.sha,r);}
  details.push({path:e.path,sha:e.sha,...r});
 }
 const counts=a=>a.reduce((s,e)=>{const k=e.status==='supported'?e.format:e.status;s[k]=(s[k]||0)+1;return s;},{});
