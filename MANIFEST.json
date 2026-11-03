@@ -43,8 +43,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 36259,
-      "sha256": "cddc341451ee83aa6a3133a125ec55ed0f65d07290e17cbe453f52ad44516ea7"
+      "bytes": 36559,
+      "sha256": "3ac23cf722053498ebda345c95304ed5ff5d3f1bf9a99cbe1ebb2dc0c3535e58"
     },
     {
       "path": "archive-verification.json",
@@ -53,8 +53,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 1678,
-      "sha256": "3f8ec351b49b5efadd10bd01c245df8d639e6dbd087b17de243b6211334ef445"
+      "bytes": 2160,
+      "sha256": "1ff847debdac8ba0d65e0ebe96376a8ca841bfea36e5dbd611533c34d612dfbb"
     },
     {
       "path": "cal-source.js",
@@ -272,6 +272,11 @@
       "sha256": "87ec4c568248295001f7d3c67d188fd7645c3c92f48e9decc6cab4c0efed2c3a"
     },
     {
+      "path": "catalog-scope.js",
+      "bytes": 2827,
+      "sha256": "15e5e7f8039730bee663d6abb0031a08545b4c859ae0c3cf340d04fdd9e60a74"
+    },
+    {
       "path": "catalog-store.js",
       "bytes": 5341,
       "sha256": "2df28ee7bfdda4cd7f8e4d0743144c755e290d824a1cc9ed0b195d70e95e101b"
@@ -293,8 +298,18 @@
     },
     {
       "path": "index.html",
-      "bytes": 11254,
-      "sha256": "45c33c0b40e01d42f72bcafb16dea84d6037f9d6a480c14aca4d4caea44f9cea"
+      "bytes": 11331,
+      "sha256": "404706edd1a4cbeae86411d10a3889d0b0d55b5ad939bcc0f91b552c65b37974"
+    },
+    {
+      "path": "reports/T-001-scope-2026-11-03.md",
+      "bytes": 12639,
+      "sha256": "013a9187d2daac68457c52fa4670e6e97a26bbcdfb5d1a801f28ba26d7762c0c"
+    },
+    {
+      "path": "reports/T-001-scope-summary-2026-11-03.json",
+      "bytes": 890,
+      "sha256": "6fda5f9bd47e38ad8c6dfba39130ba5603ce4384b2d6be670333351e950318fb"
     },
     {
       "path": "reports/calculator-coverage-2026-11-02.json",
@@ -310,6 +325,16 @@
       "path": "reports/source-storage-status-2026-11-02.json",
       "bytes": 5143,
       "sha256": "d652573960aefc78af2c4fca9fd76e87e811f56133ac24cd5a6eebf1981ac739"
+    },
+    {
+      "path": "scope-data.js",
+      "bytes": 10704,
+      "sha256": "77db85c7262987c5440da83e70f9c3d60607762dea9da9e7733143584b4da2fa"
+    },
+    {
+      "path": "scope-registry.json",
+      "bytes": 10399,
+      "sha256": "6694ed032098dbb04f2a8ab09d54e3d49fed996e6b4a91ad3ed2361fce22d0ec"
     },
     {
       "path": "static-audit-summary.json",
@@ -398,8 +423,23 @@
     },
     {
       "path": "tests/test_preparation.js",
-      "bytes": 9082,
-      "sha256": "e65b22f25868d40b646ded98b1cc7eaab2233a06fb75601a016c3a54cc3a4f0d"
+      "bytes": 9126,
+      "sha256": "a424839734f2da1e2514cadf49ca62068ab0c4fa2453a665cd7d5fc3b8937137"
+    },
+    {
+      "path": "tests/test_scope.js",
+      "bytes": 4602,
+      "sha256": "b3edebfe48fac89d124c7028dc9964ad69836b15f276626ebf4e36ebc910b361"
+    },
+    {
+      "path": "tests/test_scope.py",
+      "bytes": 3896,
+      "sha256": "08d3e2b4528c67ac107f415e63c2c62a16b738ff7054d614aed7e7ffc0545707"
+    },
+    {
+      "path": "tests/test_scope_browser.js",
+      "bytes": 2852,
+      "sha256": "c706cf12a4c59ebcb84d0b9dbb04890ce8b61f35089d4405c3cce72c243e0b24"
     },
     {
       "path": "tests/test_source.js",
@@ -418,8 +458,8 @@
     },
     {
       "path": "tests/test_ui_state.js",
-      "bytes": 18897,
-      "sha256": "9297bad8a8c664393dc5bbf2271ee29ab1575ea61a59f5fafbd3b20acf7840f5"
+      "bytes": 18941,
+      "sha256": "dfaa3daceebd72439bb49f7f018586dbe660966fe04fc9ad1033bb5036980ab1"
     },
     {
       "path": "tests/ui-state-results.txt",
@@ -428,18 +468,28 @@
     },
     {
       "path": "tools/audit-calculators.js",
-      "bytes": 1664,
-      "sha256": "e0b493692653737078e8d8fdcf42528599544736b8e83078cbf5107bc1e2c11b"
+      "bytes": 1938,
+      "sha256": "7360fa4ffb062ae256898026dcb78ad5320dc3b98888ae0a543b56a3a7daab05"
+    },
+    {
+      "path": "tools/audit-image-references.js",
+      "bytes": 2568,
+      "sha256": "85e1c8db496ebd2d8cc17696406562a7ba3b75d60627e723ab9dc924086bd591"
+    },
+    {
+      "path": "tools/audit-scope.js",
+      "bytes": 1659,
+      "sha256": "25ec734e20470b1405fa8bc738851b3849409ae7f6dc72060fc7944502b192f0"
     },
     {
       "path": "tools/audit.js",
-      "bytes": 1075,
-      "sha256": "c5e2bbf2083dd2821f0c23d6b1da34f42011c2d83e921b7955aa2bda3ea40856"
+      "bytes": 1121,
+      "sha256": "4afa2b7f716548073d6f07d5ae67c24930bbf2f5b49fc6e504a2d0aac1cf282f"
     },
     {
       "path": "tools/build_catalog.py",
-      "bytes": 2172,
-      "sha256": "22fdb856c23f6487f30e818f6dff42893831986c47a4a1a75736c803ba801ba7"
+      "bytes": 2359,
+      "sha256": "cf21dace2e3e9dcb702b0f59bca7c5480c65e272bbe5405f7fadadce8812e2ed"
     },
     {
       "path": "tools/package_release.py",
@@ -452,9 +502,19 @@
       "sha256": "0ff850ad3dbd0403ed8ca087772383554c6d2d547728ed47942f73a9f72ee226"
     },
     {
+      "path": "tools/scope_policy.py",
+      "bytes": 4602,
+      "sha256": "27833e5b43e42f0a7ec72201003c5e60b1cd525dd21444742abbcb0dc0962511"
+    },
+    {
       "path": "tools/source_store.py",
       "bytes": 11843,
       "sha256": "3556c01e02fea5e3397b8491fc72cf9f69a23e625c93bee69ddaa4ddf0c871e5"
+    },
+    {
+      "path": "tools/verify_scope_sources.py",
+      "bytes": 1804,
+      "sha256": "c96480b649fd2d2a24a401452ec7286649b38179b605ab0f60e2f903a50ba636"
     }
   ],
   "validation": {
@@ -470,7 +530,18 @@
     "browser_rendering": "not tested",
     "real_browser_storage": "not tested",
     "windows": "not tested",
-    "source_store": "published in private naslednik3501/iprocal-sources; 5 original ZIP SHA-256 and all 23678 unique restored contents verified in GitHub Actions run 41437386685; selective GitHub connector round trips passed for CAL and nine-chunk EXE"
+    "source_store": "published in private naslednik3501/iprocal-sources; 5 original ZIP SHA-256 and all 23678 unique restored contents verified in GitHub Actions run 41437386685; selective GitHub connector round trips passed for CAL and nine-chunk EXE",
+    "scope_policy": {
+      "stage": "partial",
+      "policy_js_groups": 8,
+      "python_build_checks": "passed",
+      "verified_source_objects": 4,
+      "verified_provenance_rows": 5,
+      "excluded_entries": 0,
+      "browser_smoke": "Chromium synthetic CAL/BIN, exact downloads, IndexedDB restore; passed",
+      "all_forms_windows_real_hardware": "not tested",
+      "coordinator_rerun": "8 JS groups, Python build checks, 11 preparation groups, full catalog hashes, 52-asset build and Chromium dist smoke: passed"
+    }
   },
   "personal_bin_fixtures_included": false
 }
