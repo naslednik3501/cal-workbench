@@ -312,6 +312,11 @@
       "sha256": "6fda5f9bd47e38ad8c6dfba39130ba5603ce4384b2d6be670333351e950318fb"
     },
     {
+      "path": "reports/T-004-sportage-95160.md",
+      "bytes": 12003,
+      "sha256": "f9690477ad5e439ece5568aa402d5e16491b843f2c77ffaa20467d13d431ae23"
+    },
+    {
       "path": "reports/calculator-coverage-2026-11-02.json",
       "bytes": 125170,
       "sha256": "c0258e143f0c4811e0e56adda7d2476b694558d206bcbd62d5d630a5ead825a8"
@@ -457,6 +462,11 @@
       "sha256": "dbdd63372fad5b8258eede8947a2abdbb02aa14a711d09846baf547c8eaf8a7c"
     },
     {
+      "path": "tests/test_sportage.js",
+      "bytes": 8105,
+      "sha256": "05de340a0bee941747c20c7a245f211ff35000ebed0b02df5ea71541d52f0d8b"
+    },
+    {
       "path": "tests/test_ui_state.js",
       "bytes": 18941,
       "sha256": "dfaa3daceebd72439bb49f7f018586dbe660966fe04fc9ad1033bb5036980ab1"
@@ -541,6 +551,14 @@
       "browser_smoke": "Chromium synthetic CAL/BIN, exact downloads, IndexedDB restore; passed",
       "all_forms_windows_real_hardware": "not tested",
       "coordinator_rerun": "8 JS groups, Python build checks, 11 preparation groups, full catalog hashes, 52-asset build and Chromium dist smoke: passed"
+    },
+    "sportage_95160": {
+      "source_sha256": "1544ac94267414e7aebae42bfc455d1699df96e60417469dcdeb118e0770fffa",
+      "synthetic_test_groups": 10,
+      "full_buffer_vectors": 152,
+      "coordinator_rerun": "passed",
+      "original_iprog_and_real_dump": "not verified",
+      "private_cal_included": false
     }
   },
   "personal_bin_fixtures_included": false
