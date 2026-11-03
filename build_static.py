@@ -19,8 +19,9 @@ for entry in manifest["files"]:
         raise SystemExit("Source differs from release manifest: " + entry["path"])
 
 assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "engine.js", "cal-source.js",
-          "catalog.js", "catalog-store.js", "scope-data.js", "catalog-scope.js"]
+          "catalog.js", "catalog-store.js", "scope-data.js", "catalog-scope.js", "image-resource-data.js", "image-resources.js"]
 assets += json.loads((ROOT / "catalog-parts.json").read_text())
+assets += json.loads((ROOT / "image-assets.json").read_text())
 for name in assets:
     path = (ROOT / name).resolve()
     if not path.is_relative_to(ROOT) or not path.is_file():

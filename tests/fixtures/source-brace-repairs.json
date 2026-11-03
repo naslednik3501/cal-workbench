@@ -1,0 +1,74 @@
+[
+  {
+    "sha": "6df1bcd59ae4515b76fd96c01122bfc32efa5218350779fcbd7c043cb34d64da",
+    "path": "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal"
+  },
+  {
+    "sha": "8392a4ef79f8e356b5372a3c06d112890d5ca64e8a7802584365565bc5e731f2",
+    "path": "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal"
+  },
+  {
+    "sha": "536f5b44285e1b581f456526175015fbd98bc495d8e117118990991c6c1cd5a0",
+    "path": "Calculators/US-Euro converter/Subaru/Tribeka FULL 93C66.cal"
+  },
+  {
+    "sha": "122917e0828da10de334cb170df256c0238c1ae03d38ed88d49ad6b0b1c21a08",
+    "path": "Calculators/Dashboard/Volkswagen/Polo NEC+24C32 var 1.cal"
+  },
+  {
+    "sha": "9a31abd65e04c23ecde5e92140c9af992a533e95251740467c41f166025dad38",
+    "path": "Calculators/Dashboard/Volkswagen/Polo NEC+24C32 var 2.cal"
+  },
+  {
+    "sha": "f6291c80f0a29e62627af1b1d7330ee5c8471540989f7ee68c5af11d66ca2199",
+    "path": "Calculators/Dashboard/Volkswagen/Polo NEC+24C32 var3.cal"
+  },
+  {
+    "sha": "b1a9cee8c33ae2a6618c9502e0f52767b4d8e6fe1680713648aadc8e9a676483",
+    "path": "Calculators/Immo/Car/Mitsubishi/Pagero Hitag PCF7936.cal"
+  },
+  {
+    "sha": "fe6eb1a4467138210a6fe4ae8dcacd92a46326952cb14160c61a295c32a2ff85",
+    "path": "Calculators/Immo/Car/Mitsubishi/Outlender Hitag PCF7936.cal"
+  },
+  {
+    "sha": "3e158243de8394cb9b7fd2a187cff5f5491822f93fcca516709e9ca0ad5121ae",
+    "path": "Calculators/Immo/Car/Renault/Master Hitag PCF7936.cal"
+  },
+  {
+    "sha": "2c93fdc39b703fa16bac621222a4680d5901416a2df48f973a485e3a2939c15d",
+    "path": "Calculators/Immo/Car/Renault/Trafic Hitag PCF7936.cal"
+  },
+  {
+    "sha": "421d829d82aead83980bf6b07c58cf5b7c48e5f1faade9718570dc3e98d92aba",
+    "path": "Calculators/Immo/Car/Opel/Vivaro Hitag PCF7936.cal"
+  },
+  {
+    "sha": "6b85059c35ade8be9cabdb83e125422ecebee85f03da2a7e3284d22306165b44",
+    "path": "Calculators/Immo/Car/Opel/Antara Hitag PCF7936.cal"
+  },
+  {
+    "sha": "fc73f45de8854227468abb7b6c45debd8c72c538155f8b16c9701f84db2c5c43",
+    "path": "Calculators/Immo/Car/Opel/Movano Hitag PCF7936.cal"
+  },
+  {
+    "sha": "651b4f2722c7a873fd535ff231031a8cf436ebc8bf61a5b644c7231eb8da3e3a",
+    "path": "Calculators/Immo/Bikes/Honda/CBR600R Hitag PCF7936.cal"
+  },
+  {
+    "sha": "8179e0c8d11000a0de30e806218d64195fbed5673eaf2b23ea0ebfd099597b1e",
+    "path": "Calculators/Immo/Car/Mitsubishi/Lancer IX/Lancer IX Hitag PCF7936.cal"
+  },
+  {
+    "sha": "fc8b7ae31cad042a7bce7d0704d65ecb70ee6f7db932405d8b55d3c1f798ce37",
+    "path": "Calculators/Immo/Car/Mazda/MVP/Mazda MVP 8C.cal"
+  },
+  {
+    "sha": "6a2033bf21324fc1a524c6543e0deb3404857bfdd767451d9a332afb1d96180a",
+    "path": "Calculators/Immo/Car/Nissan/Note/Nissan Note Hitag PCF7946.cal"
+  },
+  {
+    "sha": "d89c622fcf2691be2f38953050182a29ca95ca8946102bcd874470a6bb0f4e3c",
+    "path": "Calculators/Immo/Car/Nissan/Micra/Nissan Micra Hitag PCF7946.cal"
+  }
+]

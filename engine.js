@@ -39,7 +39,7 @@ function decode(raw){
  if(match)return match;
  throw new CalError('Кодирование не распознано или контрольная сумма CAL не совпала');
 }
-function parseForm(b){
+function parseForm(b,{validateEvents=true}={}){
  const r=new Reader(b),events={show:r.u16(),apply:r.u16(),change:r.u16()},reserved=r.u16();
  const width=r.u16(),height=r.u16(),controls=[],groups=[];let stack=[],objects=[];
  if(width>10000||height>10000)throw new CalError('Некорректные размеры формы');
@@ -58,7 +58,7 @@ function parseForm(b){
   else{o.id=controls.length;controls.push(o);objects.push(o);}
  }
  if(stack.length)throw new CalError('Незакрытая группа формы');
- for(const [k,ep] of Object.entries(events))if(ep!==65535&&(ep<r.p||ep>=b.length))throw new CalError('Некорректный адрес события '+k);
+ if(validateEvents)for(const [k,ep] of Object.entries(events))if(ep!==65535&&(ep<r.p||ep>=b.length))throw new CalError('Некорректный адрес события '+k);
  return {events,reserved,width,height,controls,groups,objects,codeStart:r.p};
 }
 const layouts={};
@@ -82,28 +82,53 @@ function parse(raw,{sha}={}){
  if(/\bSize\s*\(/i.test(sourceText)&&/\bForm\s*\{/i.test(sourceText)){
   const source=root.CalSource||(typeof require==='function'?require('./cal-source.js'):null);
   if(!source)throw new CalError('Не загружен обработчик текстовых калькуляторов');
-  const program=source.parse(raw);if(Object.hasOwn(memoryProfiles,sha))program.memory=memoryProfiles[sha];return program;
+  const program=source.parse(raw,{sha});if(Object.hasOwn(memoryProfiles,sha))program.memory=memoryProfiles[sha];return program;
  }
- const bytes=decode(raw),form=parseForm(bytes),code={},occupied=new Map(),strings=[],pending=Object.values(form.events).filter(x=>x!==65535),unsupported=new Set();
- function control(id){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id);}
- while(pending.length){let pc=pending.pop();if(code[pc])continue;
-  if(pc<form.codeStart||pc>=bytes.length)throw new CalError('Переход за границы кода');
-  const r=new Reader(bytes,pc),op=r.u8();if(layouts[op]===undefined)throw new CalError('Неизвестная команда 0x'+op.toString(16));
-  const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
-  for(let i=pc;i<r.p;i++){if(occupied.has(i)&&occupied.get(i)!==pc)throw new CalError('Переход внутрь команды');occupied.set(i,pc);}
-  let ins={pc,op,args,next:r.p};code[pc]=ins;
-  if([0x43,0x44,0x4c,0x4d,0x4f].includes(op))unsupported.add('Команда 0x'+op.toString(16)+' ещё не проверена');
-  if(op===0x36){let s=stringAt(bytes,args[1]);ins.text=s.text;strings.push([args[1],s.end]);}
-  if([2].includes(op))control(args[1]);
-  if([3,0x24,0x25,0x26,0x42].includes(op))control(args[0]);
-  if(op===0x25&&![1,2,3].includes(args[1]>>>24))unsupported.add('Неизвестное свойство элемента');
-  if(op===0x1e)pending.push(args[0]);
-  else if(op!==0x1f){pending.push(r.p);if(op>=0x18&&op<=0x1d)pending.push(args[2]);if(op===0x4b)pending.push(args[0]);}
+ const bytes=decode(raw),form=parseForm(bytes,{validateEvents:false}),eventErrors={},graphs={};
+ function eventGraph(event,entry){
+  if(entry<form.codeStart||entry>=bytes.length)throw new CalError('Некорректный адрес события '+event);
+  const code={},occupied=new Map(),strings=[],pending=[entry],unsupported=new Set();
+  function control(id){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id);}
+  while(pending.length){let pc=pending.pop();if(code[pc])continue;
+   if(pc<form.codeStart||pc>=bytes.length)throw new CalError('Переход за границы кода');
+   const r=new Reader(bytes,pc),op=r.u8();if(layouts[op]===undefined)throw new CalError('Неизвестная команда 0x'+op.toString(16));
+   const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
+   for(let i=pc;i<r.p;i++){if(occupied.has(i)&&occupied.get(i)!==pc)throw new CalError('Переход внутрь команды');occupied.set(i,pc);}
+   let ins={pc,op,args,next:r.p};code[pc]=ins;
+   if([0x43,0x44,0x4c,0x4d,0x4f].includes(op))unsupported.add('Команда 0x'+op.toString(16)+' ещё не проверена');
+   if(op===0x36){let s=stringAt(bytes,args[1]);ins.text=s.text;strings.push([args[1],s.end]);}
+   if([2].includes(op))control(args[1]);
+   if([3,0x24,0x25,0x26,0x42].includes(op))control(args[0]);
+   if(op===0x25&&![1,2,3].includes(args[1]>>>24))unsupported.add('Неизвестное свойство элемента');
+   if(op===0x1e)pending.push(args[0]);
+   else if(op!==0x1f){pending.push(r.p);if(op>=0x18&&op<=0x1d)pending.push(args[2]);if(op===0x4b)pending.push(args[0]);}
+  }
+  for(const [start,end] of strings)for(let i=start;i<end;i++)if(occupied.has(i))throw new CalError('Строка пересекает исполняемый код');
+  if(unsupported.size)throw new CalError([...unsupported].join('; '));
+  return {code,occupied,strings};
  }
- for(const [start,end] of strings)for(let i=start;i<end;i++)if(occupied.has(i))throw new CalError('Строка пересекает исполняемый код');
- // These special registers depend on host editor state and are initialized explicitly by VM.
- return {bytes,form,code,unsupported:[...unsupported],executable:unsupported.size===0};
+ for(const [event,entry] of Object.entries(form.events))if(entry!==65535){
+  try{graphs[event]=eventGraph(event,entry);}catch(error){if(!(error instanceof CalError))throw error;eventErrors[event]=error.message;}
+ }
+ // Validate shared code as well: two individually valid handlers must not
+ // interpret overlapping bytes as different instructions, or code as strings.
+ const names=Object.keys(graphs);
+ for(let a=0;a<names.length;a++)for(let b=a+1;b<names.length;b++){
+  const left=graphs[names[a]],right=graphs[names[b]];let reason;
+  for(const [at,pc] of left.occupied)if(right.occupied.has(at)&&right.occupied.get(at)!==pc){reason='Переход внутрь команды';break;}
+  for(const [one,two] of [[left,right],[right,left]])for(const [start,end] of one.strings)for(let at=start;at<end;at++)if(two.occupied.has(at))reason='Строка пересекает исполняемый код';
+  if(reason){eventErrors[names[a]]=reason;eventErrors[names[b]]=reason;}
+ }
+ const validEvents=names.filter(event=>!eventErrors[event]),code={};
+ for(const event of validEvents)Object.assign(code,graphs[event].code);
+ const executable=!eventErrors.show&&validEvents.length>0,partial=executable&&Object.keys(eventErrors).length>0;
+ const unsupported=Object.entries(eventErrors).map(([event,message])=>event+': '+message);
+ if(!validEvents.length&&!unsupported.length)unsupported.push('Нет исполняемых событий');
+ // Original event addresses and bytes are retained; invalid handlers are never
+ // treated as absent. A valid reader can be used while its writer stays blocked.
+ return {bytes,form,code,unsupported,executable,partial,eventErrors,validEvents};
 }
+
 class VM {
  constructor(program,dump){
   if(program.sourceProgram){const source=root.CalSource||(typeof require==='function'?require('./cal-source.js'):null);return new source.VM(program,dump);}
@@ -121,6 +146,7 @@ class VM {
  property(id,v){const c=this.controls[id],type=v>>>24,value=v&0xffffff;if(type===1)c.color=value;else if(type===2)c.bold=!!value;else if(type===3){if(value>2)throw new CalError('Неизвестное выравнивание');c.align=['left','center','right'][value];}else throw new CalError('Неизвестное свойство формы');}
  input(id,value){const o=this.program.form.controls[id];if(!o||!'HDCB'.includes(o.type))throw new CalError('Поле недоступно для ввода');if(!Number.isInteger(value)||value<0||value>0xffffffff)throw new CalError('Число должно быть целым от 0 до 4294967295');if(o.type==='C'&&value>=o.items.length)throw new CalError('Неверный пункт списка');if(o.type==='B'&&value>1)throw new CalError('Неверное значение флажка');this.controls[id].value=value;}
  execute(event,options={}){
+  if(this.program.eventErrors?.[event])throw new CalError(this.program.eventErrors[event]);
   let pc=this.program.form.events[event];if(pc===undefined)throw new CalError('Неизвестное событие');if(pc===65535)return {steps:0};
   const r=this.r,s=this.s,c=this.controls,stack=[],limit=options.maxSteps??MAX_STEPS,start=Date.now();let steps=0;
   function div(a,b){if(!b)throw new CalError('Деление на ноль');return Math.floor(a/b);}

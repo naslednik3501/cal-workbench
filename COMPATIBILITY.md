@@ -1,15 +1,26 @@
-# Compatibility checkpoint — 0.5.1, 2026-11-02
+# Compatibility checkpoint — 0.5.2, 2026-11-03
 
-Current scope is offline calculation on supplied BIN dumps. Hardware/programmer functions are intentionally excluded. See [the owner's project scope and counting rules](PROJECT_SCOPE.md); hardware omissions are not missing calculator functionality.
+The application calculates on supplied BIN dumps; physical programmer operations
+are intentionally out of scope. Original bytes and source paths remain preserved.
 
-The catalog preserves the original 23,944 files and adds one original Polo CAL extracted from an embedded RAR: 23,945 entries, 23,356 CALs, 15,056 distinct CAL contents. All stored payload sizes and SHA-256 hashes are verified by `tests/test_catalog.js`.
+The catalog contains 23,946 archived entries: 23,357 CAL entries with 15,057 distinct
+CAL contents. The UI groups 8,300 exact duplicate instances. Sportage is included.
 
-Static support: 21,550 binary CAL entries and 1,358 text CAL entries. Four entries require the unresolved opcode 0x4D; 444 have remaining syntax, structure or format failures. Supported syntax is not a hardware-compatibility verdict.
+Static handler coverage is 14,712 fully recognized contents, 257 partial/read-only
+contents and 88 unavailable contents. This is not proof of correct calculations on
+real vehicle dumps. Partial programs preserve errors, block their failed handlers
+in the VM, and permit reading only in the UI. OnShow preparation in partial mode
+is never offered as a calculated download. Full programs retain transactional
+OnShow/OnChange preparation and repeatable OnApply from that session.
 
-OnShow and OnChange may prepare a transactional working copy. OnApply starts from that prepared session; original BIN bytes remain separate. Failed events do not commit partial writes. The reviewed RAR Polo source has a SHA-specific 2048-byte scratch region; the downloadable BIN remains 2048 bytes. All other CALs retain strict dump bounds.
+18 exact text variants receive a bounded final-brace parsing repair; original CAL
+exports remain unchanged. Byte mismatch annotations do not modify BIN data. Three
+newly parsed originals have known writer inconsistencies and remain read-only.
+The four FIS readers can open, but opcode 0x4D is still unsupported for writing.
+135 original image assets restore 623 references in 288 unique CAL contents.
 
-Validation: 13 source/decoder checks, 11 app-state checks, 8 Polo check groups, 8 storage checks, full catalog hash verification, and 465 source/binary comparisons (456 exactly matching pairs; nine documented differences). Tests use synthetic data and Node adapters. No original-iProg execution, real-browser rendering, or real-block verification is claimed. Historical private BIN tests were not rerun.
-
-Remaining limitations include malformed or unsupported source syntax, alternative containers, opcode 0x4D, other scratch-memory contracts, and missing images. Lua/IPR/IPP/BLR/BC/EXE execution is not implemented. Sportage 95160 is now preserved in the private source store and has passed retrieval/hash checks; algorithm validation and catalog addition are still pending. Earlier requests to reattach it are obsolete.
-
-See [the detailed implementation and handoff report](IMPLEMENTATION-2026-11-02.md), [current static coverage](reports/calculator-coverage-2026-11-02.json), and [image investigation](IMAGE-RESOURCE-AUDIT.md). Earlier audit documents are historical snapshots.
+Portable Node/Python checks and real Chromium synthetic workflows are documented
+in [the delivery report](DELIVERY-2026-11-03.md). Historical private BIN tests,
+original-iProg execution, physical hardware and Windows were not verified.
+465 text/binary comparisons retain 456 exact matches and nine differing pairs.
+Current coverage: [JSON report](reports/calculator-coverage-2026-11-03.json).
