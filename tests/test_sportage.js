@@ -1,4 +1,4 @@
-// Requires an explicitly supplied, SHA-pinned original from the private source store.
+// Uses the SHA-pinned original now included in the catalog; optional local CAL argument.
 // All BINs below are synthetic. This is not an original-iProg or vehicle oracle.
 'use strict';
 const assert = require('node:assert/strict');
@@ -7,11 +7,17 @@ const crypto = require('node:crypto');
 const E = require('../engine.js');
 
 const SOURCE_SHA = '1544ac94267414e7aebae42bfc455d1699df96e60417469dcdeb118e0770fffa';
-if (process.argv.length !== 3) {
+if (process.argv.length > 3) {
   console.error('Usage: node tests/test_sportage.js /private/cache/Sportage-95160.cal');
   process.exit(2);
 }
-const raw = fs.readFileSync(process.argv[2]);
+let raw;
+if (process.argv[2]) raw = fs.readFileSync(process.argv[2]);
+else {
+  require('../catalog.js');
+  for (const part of require('../catalog-parts.json')) require('../' + part);
+  raw = Buffer.from(CAL_CATALOG.blobs[SOURCE_SHA], 'base64');
+}
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 assert.equal(sha(raw), SOURCE_SHA, 'Refusing a different source version');
 const program = E.parse(raw, {sha: SOURCE_SHA});
