@@ -19,11 +19,28 @@ function validate(r){
 validate(registry);
 function isActive(entry,r=registry){return r.decisions[entry.sha]?.action!=='exclude';}
 function resourceExcluded(calSha,controlId,resourceSha,r=registry){return r.resource_rules.some(x=>x.cal_sha===calSha&&x.control_id===controlId&&x.resource_sha===resourceSha);}
+function sameCalculator(a,b){return !!a&&!!b&&(a===b||(a.ext==='cal'&&b.ext==='cal'&&sha(a.sha)&&a.sha===b.sha));}
+// A display index only: original entries and their relative resource paths are retained.
+function calculatorGroups(entries,r=registry){
+ const groups=[],bySha=new Map();
+ const path=e=>e.path.replaceAll('\\','/').replace(/^Calculators\//i,'');
+ const rank=e=>[e.user?1:0,/^Car\//i.test(path(e))?2:path(e).includes('/')?0:1,path(e),e.source||''];
+ function preferred(a,b){const x=rank(a),y=rank(b);for(let n=0;n<x.length;n++){if(x[n]<y[n])return true;if(x[n]>y[n])return false;}return false;}
+ entries.forEach((e,i)=>{
+  if(e.ext!=='cal'||!isActive(e,r))return;
+  let group=sha(e.sha)?bySha.get(e.sha):null;
+  if(!group){group={e,i,aliases:[]};groups.push(group);if(sha(e.sha))bySha.set(e.sha,group);}
+  group.aliases.push(e);if(preferred(e,group.e)){group.e=e;group.i=i;}
+ });
+ const byPath=new Map();for(const group of groups){const key=path(group.e).toLowerCase();if(!byPath.has(key))byPath.set(key,[]);byPath.get(key).push(group);}
+ for(const versions of byPath.values())if(versions.length>1){versions.sort((a,b)=>(a.e.sha||'').localeCompare(b.e.sha||''));versions.forEach((g,i)=>{g.version=i+1;g.versionCount=versions.length;});}
+ return groups;
+}
 function activeCatalog(db,r=registry){
  validate(r);const entries=db.entries.filter(e=>isActive(e,r)),used=new Set(entries.map(e=>e.sha)),blobs=Object.fromEntries(Object.entries(db.blobs).filter(([hash])=>used.has(hash)));
  const counts={};for(const e of entries)counts[e.ext]=(counts[e.ext]||0)+1;
  return {...db,entries,blobs,meta:{...db.meta,entries:entries.length,calculators:counts.cal||0,uniqueCal:new Set(entries.filter(e=>e.ext==='cal').map(e=>e.sha)).size,counts}};
 }
-const api={registry,validate,isActive,resourceExcluded,activeCatalog};root.CatalogScope=api;
+const api={registry,validate,isActive,resourceExcluded,sameCalculator,calculatorGroups,activeCatalog};root.CatalogScope=api;
 if(node)module.exports=api;else{if(!root.CAL_CATALOG)throw Error('Catalog must load before scope policy');root.CAL_CATALOG=activeCatalog(root.CAL_CATALOG);}
 })(globalThis);

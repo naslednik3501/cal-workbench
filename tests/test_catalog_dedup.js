@@ -1,0 +1,21 @@
+const assert=require('node:assert/strict'),scope=require('../catalog-scope.js');
+const hash=n=>n.toString(16).padStart(64,'0');
+const cal=(path,sha,extra={})=>({path,sha,ext:'cal',source:'Original',...extra});
+const entries=[cal('Calculators/Car/R/Renault/unit.cal',hash(1)),cal('Calculators/Dashboard/Renault/unit.cal',hash(1)),cal('Calculators/Dashboard/Renault/unit.cal',hash(2)),cal('My/new.cal',hash(1),{user:true}),cal('My/unverified.cal',''),cal('My/unverified.cal',''),{path:'Pictures/unit.bmp',sha:hash(1),ext:'bmp'}];
+const snapshot=JSON.stringify(entries),groups=scope.calculatorGroups(entries);
+assert.equal(groups.length,4);assert.equal(groups[0].e,entries[1]);assert.equal(groups[0].i,1);
+assert.deepEqual(groups[0].aliases,[entries[0],entries[1],entries[3]]);
+assert.equal(groups[1].e,entries[2],'different content with identical name stays visible');
+assert.equal(groups[0].version,1);assert.equal(groups[1].version,2);assert.equal(groups[1].versionCount,2);
+assert.equal(groups[2].e,entries[4]);assert.equal(groups[3].e,entries[5]);
+assert(scope.sameCalculator(entries[0],entries[3]));assert(!scope.sameCalculator(entries[4],entries[5]));assert(!scope.sameCalculator(entries[0],entries[6]));
+assert.equal(JSON.stringify(entries),snapshot,'display grouping cannot modify sources or resources');
+assert.equal(scope.calculatorGroups([...entries].reverse()).find(g=>g.e.sha===hash(1)).e,entries[1],'representative is independent of source ordering');
+const excluded={...scope.registry,decisions:{[hash(1)]:{action:'exclude'}}};
+assert.equal(scope.calculatorGroups(entries,excluded).length,3);
+require('../catalog.js');for(const f of require('../catalog-parts.json'))require('../'+f);
+const original=CAL_CATALOG.entries,active=original.filter(e=>e.ext==='cal'&&scope.isActive(e)),real=scope.calculatorGroups(original);
+assert.equal(real.length,new Set(active.map(e=>e.sha)).size);
+assert.equal(real.reduce((n,g)=>n+g.aliases.length,0),active.length);
+for(const group of real){assert.equal(original[group.i],group.e);assert(group.aliases.every(e=>e.sha===group.e.sha));}
+console.log(`PASS catalog dedup: ${active.length} source CALs → ${real.length} visible; ${active.length-real.length} duplicate instances preserved as aliases; distinct content and unverified imports retained`);
