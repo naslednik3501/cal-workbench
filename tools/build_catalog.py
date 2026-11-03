@@ -1,12 +1,16 @@
 """Build a lossless catalog from authorized local archives; never deduplicate paths."""
 import zipfile,hashlib,json,sys,pathlib,base64,collections
+from scope_policy import load_registry, active
+registry=load_registry()
 out=pathlib.Path(__file__).resolve().parents[1]
-entries=[];blobs={};counts=collections.Counter()
+entries=[];blobs={};counts=collections.Counter();excluded=0
 for archive in sys.argv[1:]:
  with zipfile.ZipFile(archive) as z:
   for info in z.infolist():
    if info.is_dir() or info.filename.startswith('__MACOSX/'):continue
    raw=z.read(info);sha=hashlib.sha256(raw).hexdigest()
+   if not active({'sha':sha},registry):
+    excluded+=1;continue
    if sha not in blobs:blobs[sha]=base64.b64encode(raw).decode()
    ext=info.filename.rsplit('.',1)[-1].lower();counts[ext]+=1
    entries.append({'path':info.filename,'sha':sha,'size':len(raw),'ext':ext,'source':pathlib.Path(archive).name})
@@ -34,4 +38,4 @@ if index.exists():
  html=html.replace('<script src="catalog.js"></script>', '<script src="catalog.js"></script>'+''.join('<script src="'+x+'"></script>' for x in chunks))
  index.write_text(html,encoding='utf8')
 (out/'catalog-summary.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf8')
-print(json.dumps(meta,ensure_ascii=False))
+print(json.dumps({'active':meta,'excluded_entries':excluded},ensure_ascii=False))

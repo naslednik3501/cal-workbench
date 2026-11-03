@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "date": "2026-11-03",
+  "source_repository": "naslednik3501/iprocal-sources",
+  "source_ref": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
+  "default_action": "keep",
+  "decisions": {
+    "851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b": {
+      "category": "hardware_only",
+      "kind": "resource",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "evidence": {
+        "report": "IMAGE-RESOURCE-AUDIT.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "category": "hardware_wiring",
+        "mapping_status": "candidate_only"
+      },
+      "original": {
+        "object_path": "objects/85/851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b.json",
+        "sha256_verified": true,
+        "bytes": 246134,
+        "verified_on": "2026-11-03"
+      },
+      "source_paths": [
+        {
+          "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+          "member": 2025,
+          "path": "AIRBAG/VW/Fhaeton/cr16.png",
+          "sha256": "851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b",
+          "bytes": 246134,
+          "crc32": "2e327389"
+        }
+      ]
+    },
+    "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e": {
+      "category": "hardware_only",
+      "kind": "resource",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "evidence": {
+        "report": "IMAGE-RESOURCE-AUDIT.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "category": "hardware_wiring",
+        "mapping_status": "candidate_only"
+      },
+      "original": {
+        "object_path": "objects/ec/ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e.json",
+        "sha256_verified": true,
+        "bytes": 206317,
+        "verified_on": "2026-11-03"
+      },
+      "source_paths": [
+        {
+          "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+          "member": 2341,
+          "path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+          "sha256": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+          "bytes": 206317,
+          "crc32": "885239e6"
+        },
+        {
+          "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+          "member": 2393,
+          "path": "AIRBAG/KIA-HYUNDAI/Sportage/ht4l40k.png",
+          "sha256": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+          "bytes": 206317,
+          "crc32": "885239e6"
+        }
+      ]
+    },
+    "b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407": {
+      "category": "hardware_only",
+      "kind": "resource",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "evidence": {
+        "report": "IMAGE-RESOURCE-AUDIT.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "category": "hardware_wiring",
+        "mapping_status": "candidate_only"
+      },
+      "original": {
+        "object_path": "objects/b7/b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407.json",
+        "sha256_verified": true,
+        "bytes": 215866,
+        "verified_on": "2026-11-03"
+      },
+      "source_paths": [
+        {
+          "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+          "member": 284,
+          "path": "AIRBAG/Land Rover/lrsrs4l40k.png",
+          "sha256": "b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407",
+          "bytes": 215866,
+          "crc32": "416a1925"
+        }
+      ]
+    },
+    "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a": {
+      "category": "hardware_only",
+      "kind": "resource",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "evidence": {
+        "report": "IMAGE-RESOURCE-AUDIT.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "category": "hardware_wiring",
+        "mapping_status": "candidate_only"
+      },
+      "original": {
+        "object_path": "objects/35/35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a.json",
+        "sha256_verified": true,
+        "bytes": 226510,
+        "verified_on": "2026-11-03"
+      },
+      "source_paths": [
+        {
+          "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+          "member": 1543,
+          "path": "AIRBAG/Opel/Astra H/opel4l40k.png",
+          "sha256": "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a",
+          "bytes": 226510,
+          "crc32": "c0a8f6a7"
+        }
+      ]
+    },
+    "5e0e221a61340c43580aa767fa403055ccb842ea4e5bcc6fc1286dc197f1e2c6": {
+      "category": "mixed",
+      "kind": "calculator",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Form contains hardware connection guidance alongside dump calculation. Preserve entire CAL and calculation behavior; separate guidance only after resource relationship review.",
+      "evidence": {
+        "report": "reports/T-001-scope-2026-11-03.md",
+        "form_excerpt": "Subaru.bmp\nrwx93c76.png\nrwx93c761.png\nПробег\n \nKM\nИнфоpмация\n \nОписание\n Введите нужное значение в окне ПРОБЕГ \nи нажмите кнопку <Применить>.\nКалькулятор пробега для Subaru WRX\nEEPROM: 93C76\n<u-vovchika >.\nВНИМАНИЕ !!!\nEEPROM и Точки подключения \nПод задней крышкой !!!",
+        "reachable_instructions": 110,
+        "events": {
+          "show": 559,
+          "apply": 402,
+          "change": 65535
+        },
+        "calculation_correctness": "not independently validated"
+      },
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/WRX  93C76.cal",
+        "Calculators/Car/S/Subaru/WRX  93C76.cal"
+      ]
+    },
+    "fffe83c095b4d2b67b275fbea53d9d03e2734f312e64f47939261f37217cef4d": {
+      "category": "mixed",
+      "kind": "calculator",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Form contains hardware connection guidance alongside dump calculation. Preserve entire CAL and calculation behavior; separate guidance only after resource relationship review.",
+      "evidence": {
+        "report": "reports/T-001-scope-2026-11-03.md",
+        "form_excerpt": "Пробег\n \nKM\nИнформация\n \nОписание\n Введите нужное значение в окне ПРОБЕГ \nи нажмите кнопку <Применить>.\nКалькулятор пробега для Mitsubishi Colt.\nEEPROM: 93C56\nВНИМАНИЕ !!!\nТочки подключения под\nзадней крышкой !!!\nMitsubishi.bmp\ncoltdash.png\ncoltdash1.png",
+        "reachable_instructions": 96,
+        "events": {
+          "show": 382,
+          "apply": 558,
+          "change": 65535
+        },
+        "calculation_correctness": "not independently validated"
+      },
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Colt/Colt 93C56.cal",
+        "Calculators/Car/M/Mitsubishi/Colt/Colt 93C56.cal"
+      ]
+    },
+    "e0088ca4cd9c0fccc464771ab0ab9dd2b2969a83f85e71c5afdbcd265bd0ea04": {
+      "category": "mixed",
+      "kind": "calculator",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Form contains hardware connection guidance alongside dump calculation. Preserve entire CAL and calculation behavior; separate guidance only after resource relationship review.",
+      "evidence": {
+        "report": "reports/T-001-scope-2026-11-03.md",
+        "form_excerpt": "Subaru.bmp\nsfdash93c86.png\nsfdash93c861.png\nПробег\n \nKM\nИнфоpмация\n \nОписание\n Введите нужное значение в окне ПРОБЕГ \nи нажмите кнопку <Применить>.\nКалькулятор пробега для Subaru Forester.\nEEPROM: 93C86\n<u-vovchika >.\nВНИМАНИЕ !!!\nEEPROM и Точки подключения \nПод задней крышкой !!!",
+        "reachable_instructions": 110,
+        "events": {
+          "show": 571,
+          "apply": 414,
+          "change": 65535
+        },
+        "calculation_correctness": "not independently validated"
+      },
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Forester/Forester 93C86.cal",
+        "Calculators/Car/S/Subaru/Forester/Forester 93C86.cal"
+      ]
+    },
+    "32f139716fb43ec4ce653724a92c8c3942508a12af47e5f31c04eb83bd3bb6c1": {
+      "category": "mixed",
+      "kind": "calculator",
+      "action": "keep",
+      "date": "2026-11-02",
+      "reason": "Form contains hardware connection guidance alongside dump calculation. Preserve entire CAL and calculation behavior; separate guidance only after resource relationship review.",
+      "evidence": {
+        "report": "reports/T-001-scope-2026-11-03.md",
+        "form_excerpt": "Subaru.bmp\nsfdash93c76.png\nsfdash93c761.png\nПробег\n \nKM\nИнфоpмация\n \nОписание\n Введите нужное значение в окне ПРОБЕГ \nи нажмите кнопку <Применить>.\nКалькулятор пробега для Subaru Forester.\nEEPROM: 93C76\nВНИМАНИЕ !!!\nТочки подключения \nПод задней крышкой !!!",
+        "reachable_instructions": 109,
+        "events": {
+          "show": 542,
+          "apply": 385,
+          "change": 65535
+        },
+        "calculation_correctness": "not independently validated"
+      },
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Forester/Forester 93C76.cal",
+        "Calculators/Car/S/Subaru/Forester/Forester 93C76.cal"
+      ]
+    }
+  },
+  "resource_rules": []
+}

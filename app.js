@@ -1,5 +1,6 @@
 'use strict';
-const $=id=>document.getElementById(id),E=CalEngine,db=CAL_CATALOG;
+const $=id=>document.getElementById(id),E=CalEngine,db=CAL_CATALOG,scope=CatalogScope;
+scope.validate(scope.registry);
 let entries=[...db.entries],selected=null,program=null,original=null,candidate=null,session=null,name='',digest='',offset=0,resultKind='',generation=0,searchPage=0,dirtyInputs=false;
 let catalogScope='',activeByte=null,rangeAnchor=null,userEntries=[],storageReady=false,storageSaved=false,importBusy=false,binLoading=false;
 const catalogStore=new CatalogStore.Store(),expandedFolders=new Set();
@@ -20,7 +21,7 @@ function displayPath(e){return normalizePath(e.path).replace(/^Calculators\//i,'
 function rootName(e){return displayPath(e).split('/')[0];}
 function renderCatalog(){
  $('tree').replaceChildren();$('searchPager').replaceChildren();const q=$('search').value.trim().toLowerCase();
- const cals=entries.map((e,i)=>({e,i})).filter(({e})=>e.ext==='cal');$('count').textContent=cals.length.toLocaleString('ru-RU');
+ const cals=entries.map((e,i)=>({e,i})).filter(({e})=>e.ext==='cal'&&scope.isActive(e));$('count').textContent=cals.length.toLocaleString('ru-RU');
  $('catalogBack').hidden=!catalogScope&&!q;$('catalogLocation').textContent=q?'Результаты поиска':catalogScope||'Все разделы';
  if(q){const found=cals.filter(({e})=>e.path.toLowerCase().includes(q)),total=found.length,pages=Math.max(1,Math.ceil(total/150));searchPage=Math.min(searchPage,pages-1);found.slice(searchPage*150,(searchPage+1)*150).forEach(({e,i})=>$('tree').append(fileButton(e,i,true)));if(!total)$('tree').append(node('p','Ничего не найдено.','emptyHint'));const prev=node('button','←'),next=node('button','→');prev.disabled=!searchPage;next.disabled=searchPage===pages-1;prev.onclick=()=>{searchPage--;renderCatalog();};next.onclick=()=>{searchPage++;renderCatalog();};$('searchPager').append(prev,node('span',`${total} · ${searchPage+1}/${pages}`),next);return;}
  const root={dirs:new Map(),files:[]};for(const {e,i} of cals){const parts=displayPath(e).split('/');let n=root;for(const d of parts.slice(0,-1)){if(!n.dirs.has(d))n.dirs.set(d,{dirs:new Map(),files:[],count:0});n=n.dirs.get(d);n.count++;}n.files.push({e,i});}
@@ -41,7 +42,7 @@ async function addUserEntries(batch){const now=Date.now();const added=batch.map(
 async function importAction(fn){if(!storageReady||importBusy)return;importBusy=true;syncStorage();try{await fn();}catch(err){log('Калькуляторы не добавлены: '+err.message);}finally{importBusy=false;syncStorage();}}
 function inputName(o){if(o.text.trim())return o.text.trim();let parent=o.parent;while(parent!==null){let g=program.form.groups[parent];if(g.text.trim())return g.text.trim();parent=g.parent;}return 'Значение '+(o.id+1);}
 function normalizePath(p){const a=[];for(const part of p.replaceAll('\\','/').split('/')){if(part==='..')a.pop();else if(part&&part!=='.')a.push(part);}return a.join('/');}
-function picture(o){const dir=selected.path.split('/').slice(0,-1).join('/'),names=[normalizePath(dir+'/'+o.text),normalizePath('Calculators/Pictures/'+o.text)].map(x=>x.toLowerCase());const img=entries.find(e=>names.includes(e.path.toLowerCase())&&['bmp','jpg','jpeg','png'].includes(e.ext));if(!img)return null;const el=node('img',undefined,'calPicture');el.alt=o.text;let b64=db.blobs[img.sha];if(!b64){let binary='';for(const b of img.raw)binary+=String.fromCharCode(b);b64=btoa(binary);}el.src='data:'+{bmp:'image/bmp',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png'}[img.ext]+';base64,'+b64;return el;}
+function picture(o){const dir=selected.path.split('/').slice(0,-1).join('/'),names=[normalizePath(dir+'/'+o.text),normalizePath('Calculators/Pictures/'+o.text)].map(x=>x.toLowerCase());const img=entries.find(e=>names.includes(e.path.toLowerCase())&&['bmp','jpg','jpeg','png'].includes(e.ext));if(!img||scope.resourceExcluded(selected.sha,o.id,img.sha))return null;const el=node('img',undefined,'calPicture');el.alt=o.text;let b64=db.blobs[img.sha];if(!b64){let binary='';for(const b of img.raw)binary+=String.fromCharCode(b);b64=btoa(binary);}el.src='data:'+{bmp:'image/bmp',jpg:'image/jpeg',jpeg:'image/jpeg',png:'image/png'}[img.ext]+';base64,'+b64;return el;}
 function renderForm(){
  inputs.clear();formLabels.clear();readHints.clear();$('formArea').replaceChildren();$('calcDescription').replaceChildren();if(!program)return;
  const f=node('div',undefined,'modernForm'),groups=new Map(),groupShells=new Map(),unitLabels=new Set(),descriptionGroups=new Set(program.form.groups.filter(g=>/описан|description|инструкц/i.test(g.text)).map(g=>g.group));
@@ -81,7 +82,7 @@ function initializeSession(){
 function select(entry){
  selected=entry;program=null;session=null;dirtyInputs=false;inputs.clear();formLabels.clear();readHints.clear();clearResult();
  $('calcTitle').textContent=entry.path.split('/').at(-1);$('calcPath').textContent=entry.path;$('calcError').hidden=true;$('formArea').replaceChildren();$('calcDescription').replaceChildren();$('compatBadge').className='pill';
- try{if(entry.ext!=='cal')throw Error('Поддерживаются только калькуляторы .cal');program=E.parse(raw(entry),{sha:entry.sha});$('compatBadge').textContent=program.executable?'Формат поддерживается':'Пока не поддерживается';$('compatBadge').className='pill '+(program.executable?'compat-ok':'compat-unsupported');$('compat').textContent=program.executable?'Форма и команды распознаны. Исполнение этого файла ещё не сверено с оригинальным iProg.':program.unsupported.join('; ');renderForm();log('Выбран: '+entry.path);if(program.executable)initializeSession();else{$('calcError').textContent=program.unsupported.join('; ');$('calcError').hidden=false;}}
+ try{if(!scope.isActive(entry))throw Error('Этот файл относится к аппаратным функциям и исключён из рабочего каталога.');if(entry.ext!=='cal')throw Error('Поддерживаются только калькуляторы .cal');program=E.parse(raw(entry),{sha:entry.sha});$('compatBadge').textContent=program.executable?'Формат поддерживается':'Пока не поддерживается';$('compatBadge').className='pill '+(program.executable?'compat-ok':'compat-unsupported');$('compat').textContent=program.executable?'Форма и команды распознаны. Исполнение этого файла ещё не сверено с оригинальным iProg.':program.unsupported.join('; ');renderForm();log('Выбран: '+entry.path);if(program.executable)initializeSession();else{$('calcError').textContent=program.unsupported.join('; ');$('calcError').hidden=false;}}
  catch(err){$('compatBadge').textContent='Пока не поддерживается';$('compatBadge').className='pill compat-unsupported';$('compat').textContent=err.message;$('calcError').textContent=err.message;$('calcError').hidden=false;log('Калькулятор недоступен: '+err.message);}sync();
  for(const el of document.querySelectorAll('.fileItem')){const active=entries[Number(el.dataset.index)]===entry;el.classList.toggle('active',active);el.setAttribute('aria-pressed',String(active));}
 }
