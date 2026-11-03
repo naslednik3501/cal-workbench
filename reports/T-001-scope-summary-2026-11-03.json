@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "scope": "Initial evidence-backed scope review; unknown and mixed files remain active. No correctness claim.",
+  "catalog": {
+    "entries": 23945,
+    "uniqueContents": 15345,
+    "activeEntries": 23945,
+    "activeUniqueContents": 15345,
+    "excludedEntries": 0
+  },
+  "reviewedInCatalog": 4,
+  "decisionsOutsideCatalog": [
+    "851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b",
+    "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+    "b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407",
+    "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a"
+  ],
+  "unresolvedContents": 15345,
+  "unknownContents": 15341,
+  "mixedContents": 4,
+  "status": "partial",
+  "next_step": "Review verified CAL-to-resource relationships for the four candidate wiring resources, preserving calculation behavior."
+}
