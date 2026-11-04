@@ -72,9 +72,17 @@ layouts[0x27]='db';layouts[0x28]='db';
 for(const op of [0x2a,0x2c,0x2e,0x30,0x32,0x34,0x36,0x38,0x43,0x46,0x48,0x4a])layouts[op]='bw';
 layouts[0x35]='b';layouts[0x4f]='b';
 function stringAt(b,at){const r=new Reader(b,at),first=r.u8()^128,a=[first];for(let n=0;n<65536;n++){let v=r.u8()^first;if(!v)return {text:cp.decode(new Uint8Array(a)),end:r.p};a.push(v);}throw new CalError('Незавершённая строка');}
-// Explicitly reviewed scratch-memory contract for the original RAR source.
+// Reviewed scratch-memory contracts for exact original CAL variants.
+// Skoda address permutations and full 0x2000..0x27ff coverage: T-014 report/tests.
 // The caller supplies the catalog/import SHA; unknown CALs retain strict BIN bounds.
+const skodaMemory=Object.freeze({dumpBytes:2048,start:0x2000,length:2048});
 const memoryProfiles=Object.freeze({
+ 'b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e':skodaMemory,
+ 'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':skodaMemory,
+ '546b8214be37173aae84b0ec7e1176491c085d6319d43ecb6d4a19fde0c0c149':skodaMemory,
+ '630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1':skodaMemory,
+ '2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970':skodaMemory,
+ 'aa8213cea0bc0b6b3fe3f6d3ce61818f0a1e72e1cd7965aa9f99c945821bbc98':skodaMemory,
  'a0a66442b874d649d9ee00c3bbe5a9a859567cd50ab5a3b7771a6c12bb119956':Object.freeze({dumpBytes:2048,start:0x2000,length:2048})
 });
 function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={}){
@@ -145,7 +153,8 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
  if(!validEvents.length&&!unsupported.length)unsupported.push('Нет исполняемых событий');
  // Original event addresses and bytes are retained; invalid handlers are never
  // treated as absent. A valid reader can be used while its writer stays blocked.
- return {bytes,form,code,unsupported,executable,partial,readOnly,eventErrors,validEvents,absentEvents,eventTermination,eventImplicitReturnPcs};
+ return {bytes,form,code,unsupported,executable,partial,readOnly,eventErrors,validEvents,absentEvents,eventTermination,eventImplicitReturnPcs,
+  ...(Object.hasOwn(memoryProfiles,sha)?{memory:memoryProfiles[sha]}:{})};
 }
 
 class VM {
