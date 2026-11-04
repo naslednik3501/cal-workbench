@@ -1,0 +1,137 @@
+{
+  "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4": {
+    "entry": 261,
+    "apply": 80,
+    "terminal": 538,
+    "rawBytes": 1254,
+    "rawCrc16": 59937,
+    "decodedBytes": 576,
+    "decodedCrc16": 62083
+  },
+  "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780": {
+    "entry": 261,
+    "apply": 15783,
+    "terminal": 538,
+    "rawBytes": 1254,
+    "rawCrc16": 4729,
+    "decodedBytes": 576,
+    "decodedCrc16": 6217
+  },
+  "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a": {
+    "entry": 320,
+    "apply": 36146,
+    "terminal": 597,
+    "rawBytes": 1386,
+    "rawCrc16": 50940,
+    "decodedBytes": 640,
+    "decodedCrc16": 13298
+  },
+  "ce0234df2133742a5b2e0e7a852c6b1ca8dfb8788fbecea0f09adc1c5e5ae3ad": {
+    "entry": 287,
+    "apply": 3623,
+    "terminal": 543,
+    "rawBytes": 1320,
+    "rawCrc16": 12216,
+    "decodedBytes": 608,
+    "decodedCrc16": 36787
+  },
+  "1418d9252ebb88bef5bba2c966535dd3db45968cae887e28602c11c806edfed2": {
+    "entry": 287,
+    "apply": 11641,
+    "terminal": 543,
+    "rawBytes": 1320,
+    "rawCrc16": 64902,
+    "decodedBytes": 608,
+    "decodedCrc16": 1841
+  },
+  "bcce6ded1d1c7d663b525a9a01c0abb9b2546a213df3fb786a462e8d3dd3929b": {
+    "entry": 287,
+    "apply": 52967,
+    "terminal": 543,
+    "rawBytes": 1320,
+    "rawCrc16": 25132,
+    "decodedBytes": 608,
+    "decodedCrc16": 28165
+  },
+  "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88": {
+    "entry": 329,
+    "apply": 18304,
+    "terminal": 669,
+    "rawBytes": 1518,
+    "rawCrc16": 1194,
+    "decodedBytes": 704,
+    "decodedCrc16": 45432
+  },
+  "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e": {
+    "entry": 270,
+    "apply": 9094,
+    "terminal": 679,
+    "rawBytes": 1584,
+    "rawCrc16": 22701,
+    "decodedBytes": 736,
+    "decodedCrc16": 13206
+  },
+  "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643": {
+    "entry": 237,
+    "apply": 16828,
+    "terminal": 583,
+    "rawBytes": 1386,
+    "rawCrc16": 12614,
+    "decodedBytes": 640,
+    "decodedCrc16": 14984
+  },
+  "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483": {
+    "entry": 302,
+    "apply": 63460,
+    "terminal": 573,
+    "rawBytes": 1320,
+    "rawCrc16": 36226,
+    "decodedBytes": 608,
+    "decodedCrc16": 53972
+  },
+  "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c": {
+    "entry": 258,
+    "apply": 57719,
+    "terminal": 535,
+    "rawBytes": 1254,
+    "rawCrc16": 5951,
+    "decodedBytes": 576,
+    "decodedCrc16": 52331
+  },
+  "238b1eb640695efb5226437999e370ea4f8ca28c46155d368ea244f683656b26": {
+    "entry": 258,
+    "apply": 11754,
+    "terminal": 535,
+    "rawBytes": 1254,
+    "rawCrc16": 46801,
+    "decodedBytes": 576,
+    "decodedCrc16": 16724
+  },
+  "cef29d369ba14335be8ead340729232ebaa494cbad5348c076c0b289deadc7ae": {
+    "entry": 317,
+    "apply": 23303,
+    "terminal": 594,
+    "rawBytes": 1386,
+    "rawCrc16": 59154,
+    "decodedBytes": 640,
+    "decodedCrc16": 16784
+  },
+  "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2": {
+    "entry": 255,
+    "apply": 36778,
+    "terminal": 673,
+    "rawBytes": 1584,
+    "rawCrc16": 34047,
+    "decodedBytes": 736,
+    "decodedCrc16": 29185
+  },
+  "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5": {
+    "entry": 310,
+    "apply": 13589,
+    "terminal": 632,
+    "rawBytes": 1452,
+    "rawCrc16": 21248,
+    "decodedBytes": 672,
+    "decodedCrc16": 33645
+  }
+}
