@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 56071,
-      "sha256": "e26ad05c6177ef844b953876272de1e4ed06542b5186bc8809bcac4096c4fc0f"
+      "bytes": 58605,
+      "sha256": "67f8bdf1859e0dbc630b3e435c02f9addd338c68e2fdf1408b46028cc1db0b33"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -340,11 +340,6 @@
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
-    },
-    {
-      "path": "image-assets.json",
-      "bytes": 16533,
-      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1297,6 +1292,11 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
+      "path": "image-assets.json",
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
+    },
+    {
       "path": "image-resource-data.js",
       "bytes": 113446,
       "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
@@ -1378,8 +1378,8 @@
     },
     {
       "path": "reports/T-010-remainder-2026-11-04.json",
-      "bytes": 703745,
-      "sha256": "9c95dfa08cd3b6353d497bb389ee17f402926dc2fdab7b007491f5141760954b"
+      "bytes": 707473,
+      "sha256": "da061e16d420248a6371a0c732bb83d66676a07d5d4da4fa4a53c160a05e59da"
     },
     {
       "path": "reports/T-012-provenance-2026-11-04.json",
@@ -1423,13 +1423,13 @@
     },
     {
       "path": "reports/T-015-container-inventory-2026-11-04.json",
-      "bytes": 19679,
-      "sha256": "8dcf19f066fd3b19b86786fd90b2348bc21d282492a736183a2d0b5a57fdf453"
+      "bytes": 23793,
+      "sha256": "fd792e82bad26565b2992336d5cc4fb5407912aac85262a7eca197796a7aaead"
     },
     {
       "path": "reports/T-015-nested-archives-2026-11-04.md",
-      "bytes": 13778,
-      "sha256": "d7730943e75bbda9623d3474dc5b9735611a8739c56362b1ed69e51c3e3399f6"
+      "bytes": 18717,
+      "sha256": "3a37ff692f19f59bd19411cb952eddd0f27458d56db7345e5e23d908149fddfc"
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
@@ -1862,6 +1862,11 @@
       "sha256": "3556c01e02fea5e3397b8491fc72cf9f69a23e625c93bee69ddaa4ddf0c871e5"
     },
     {
+      "path": "tools/t015_nested_archives.py",
+      "bytes": 15201,
+      "sha256": "c57e3db74247d3393e330eed5eb727bff9ef7db8d714af4bb0b94b13f2129710"
+    },
+    {
       "path": "tools/test-image-resources.js",
       "bytes": 2525,
       "sha256": "9c08062759a5e771aabbe52fa47a6a20979c8cc9662fc388a1078441b7a357ad"
@@ -1891,23 +1896,7 @@
     "original_iprog_execution": "not compared",
     "chromium_release_scenarios": "passed on Linux",
     "real_browser_storage": "tested in Chromium",
-    "windows": "not tested",
-    "T-003": {
-      "targets": 4,
-      "restored": 4,
-      "writer_vectors": 224,
-      "boundary_vectors": 12,
-      "random_reference_samples": 1750,
-      "app_handler_scenarios": 16,
-      "proof": "Static original iProgPro.exe SHA 14a47659...; not executed",
-      "original_iprog": "not executed",
-      "hardware": "not tested",
-      "browser_rendering": "not tested",
-      "pr": 16,
-      "merge": "176bccc79193665b0fa2a288bc7d1bb6a7d37efa",
-      "pages_run": 41846682585,
-      "pages": "success; HTTP 200 and exact index/engine/profile bytes verified"
-    }
+    "windows": "not tested"
   },
   "personal_bin_fixtures_included": false
 }
