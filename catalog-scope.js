@@ -18,7 +18,8 @@ function validate(r){
 }
 validate(registry);
 function isActive(entry,r=registry){return r.decisions[entry.sha]?.action!=='exclude';}
-function resourceExcluded(calSha,controlId,resourceSha,r=registry){return r.resource_rules.some(x=>x.cal_sha===calSha&&x.control_id===controlId&&x.resource_sha===resourceSha);}
+function resourceRule(calSha,controlId,r=registry){return r.resource_rules.find(x=>x.cal_sha===calSha&&x.control_id===controlId)||null;}
+function resourceExcluded(calSha,controlId,resourceSha,r=registry){const rule=resourceRule(calSha,controlId,r);return !!rule&&rule.resource_sha===resourceSha;}
 function sameCalculator(a,b){return !!a&&!!b&&(a===b||(a.ext==='cal'&&b.ext==='cal'&&sha(a.sha)&&a.sha===b.sha));}
 // A display index only: original entries and their relative resource paths are retained.
 function calculatorGroups(entries,r=registry){
@@ -41,6 +42,6 @@ function activeCatalog(db,r=registry){
  const counts={};for(const e of entries)counts[e.ext]=(counts[e.ext]||0)+1;
  return {...db,entries,blobs,meta:{...db.meta,entries:entries.length,calculators:counts.cal||0,uniqueCal:new Set(entries.filter(e=>e.ext==='cal').map(e=>e.sha)).size,counts}};
 }
-const api={registry,validate,isActive,resourceExcluded,sameCalculator,calculatorGroups,activeCatalog};root.CatalogScope=api;
+const api={registry,validate,isActive,resourceRule,resourceExcluded,sameCalculator,calculatorGroups,activeCatalog};root.CatalogScope=api;
 if(node)module.exports=api;else{if(!root.CAL_CATALOG)throw Error('Catalog must load before scope policy');root.CAL_CATALOG=activeCatalog(root.CAL_CATALOG);}
 })(globalThis);

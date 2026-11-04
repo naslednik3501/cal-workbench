@@ -25,6 +25,8 @@ test('Mixed/unknown/resources cannot receive global exclusion; missing original 
 test('Resource suppression requires verified exact CAL/control/resource relation; resource stays shared',()=>{
  const r=registry();r.decisions[c]=decision(c,'resource');r.resource_rules.push({cal_sha:a,resource_sha:c,control_id:2,action:'exclude',mapping_verified:true,evidence:{report:'synthetic'}});
  P.validate(r);assert(P.resourceExcluded(a,2,c,r));assert(!P.resourceExcluded(b,2,c,r));assert(!P.resourceExcluded(a,3,c,r));assert(!P.resourceExcluded(a,2,b,r));
+ assert.equal(P.resourceRule(a,2,r).resource_sha,c);assert.equal(P.resourceRule(a,3,r),null);assert.equal(P.resourceRule(b,2,r),null);
+ assert.equal(P.resourceRule(a,2,r).action,'exclude');
  assert.equal(P.activeCatalog(db,r).entries.length,4);
  r.resource_rules[0].mapping_verified=false;assert.throws(()=>P.validate(r));
  r.resource_rules[0].mapping_verified=true;r.decisions[c].original.object_path='wrong';assert.throws(()=>P.validate(r));
@@ -43,9 +45,21 @@ test('Classic browser scripts apply policy before app; invalid policy fails to l
  // app.js must require a successfully loaded policy rather than silently admitting excluded entries.
  assert.throws(()=>vm.runInContext(fs.readFileSync(require.resolve('../app.js'),'utf8'),vm.createContext({document:{},CalEngine:{},CAL_CATALOG:db})),/CatalogScope/);
 });
-test('Initial real registry retains mixed calculators and candidate-only images',()=>{
+test('Real registry keeps every file and hides only verified hardware resources per CAL/control',()=>{
  for(const d of Object.values(P.registry.decisions))assert.equal(d.action,'keep');
- assert.equal(P.registry.resource_rules.length,0);
+ assert.equal(P.registry.resource_rules.length,9);
+ for(const rule of P.registry.resource_rules){
+  assert.equal(rule.action,'exclude');assert.equal(rule.mapping_verified,true);
+  assert(rule.evidence.report);assert.equal(rule.catalog_paths.length,2);
+  const d=P.registry.decisions[rule.resource_sha];
+  assert.equal(d.category,'hardware_only');assert.equal(d.kind,'resource');assert.equal(d.action,'keep');
+  assert.equal(d.original.sha256_verified,true);
+  assert(P.resourceRule(rule.cal_sha,rule.control_id)===rule);
+  assert.equal(P.resourceRule(rule.cal_sha,rule.control_id+1),null);
+  assert.equal(P.resourceRule((rule.cal_sha[0]==='0'?'1':'0')+rule.cal_sha.slice(1),rule.control_id),null);
+  assert(P.resourceExcluded(rule.cal_sha,rule.control_id,rule.resource_sha));
+  assert(!P.resourceExcluded(rule.cal_sha,rule.control_id+1,rule.resource_sha));
+ }
 });
 test('Registry preserves every current path for each reviewed CAL SHA',()=>{
  require('../catalog.js');

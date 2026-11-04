@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "source_repository": "naslednik3501/iprocal-sources",
   "source_ref": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
   "default_action": "keep",
@@ -10,12 +10,13 @@
       "kind": "resource",
       "action": "keep",
       "date": "2026-11-02",
-      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "reason": "Wiring-only image in the completed visual audit. Its relationship to concrete CAL controls was verified in T-001, so those controls carry address rules. Bytes and provenance are preserved; the resource itself is not excluded globally.",
       "evidence": {
         "report": "IMAGE-RESOURCE-AUDIT.md",
         "table": "reports/image-visual-review-2026-11-02.csv",
         "category": "hardware_wiring",
-        "mapping_status": "candidate_only"
+        "mapping_status": "verified",
+        "rules": "reports/T-001-hardware-wiring-2026-11-04.md"
       },
       "original": {
         "object_path": "objects/85/851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b.json",
@@ -32,6 +33,13 @@
           "bytes": 246134,
           "crc32": "2e327389"
         }
+      ],
+      "mapped_controls": [
+        {
+          "cal_sha": "35a6c6d717a33c1a56d5cb050640d570a3711c0187b47c84cce7ab466f000bc1",
+          "control_id": 7,
+          "reference": "cr16.png"
+        }
       ]
     },
     "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e": {
@@ -39,12 +47,13 @@
       "kind": "resource",
       "action": "keep",
       "date": "2026-11-02",
-      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "reason": "Wiring-only image in the completed visual audit. Its relationship to concrete CAL controls was verified in T-001, so those controls carry address rules. Bytes and provenance are preserved; the resource itself is not excluded globally.",
       "evidence": {
         "report": "IMAGE-RESOURCE-AUDIT.md",
         "table": "reports/image-visual-review-2026-11-02.csv",
         "category": "hardware_wiring",
-        "mapping_status": "candidate_only"
+        "mapping_status": "verified",
+        "rules": "reports/T-001-hardware-wiring-2026-11-04.md"
       },
       "original": {
         "object_path": "objects/ec/ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e.json",
@@ -69,6 +78,38 @@
           "bytes": 206317,
           "crc32": "885239e6"
         }
+      ],
+      "mapped_controls": [
+        {
+          "cal_sha": "0b5f9928e37b012e66b71e4a55b65d74c8929f6c719d50c8b770a673f4b9bff3",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        },
+        {
+          "cal_sha": "89767073ab6a331be1ef6953720ba50782dfcc0506dc663f748f596e11efb43d",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        },
+        {
+          "cal_sha": "a2d8bcfaf8f76840dd24f973c6c509bbd236300e5aaeeae152f39233718369c0",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        },
+        {
+          "cal_sha": "a547ca2d1f378321949a20b8c517a27241ac7b871788cfdbe1f98cef1f5ad965",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        },
+        {
+          "cal_sha": "d068a4999dc80411b66f4e15c06138b22f8b84e9a3427b39b2ca3da9d6066459",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        },
+        {
+          "cal_sha": "dc8670e3e4fffd073f646ccad3058112be396f08dc642f67c89768f57182c965",
+          "control_id": 9,
+          "reference": "ht4l40k.png"
+        }
       ]
     },
     "b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407": {
@@ -76,12 +117,13 @@
       "kind": "resource",
       "action": "keep",
       "date": "2026-11-02",
-      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "reason": "Wiring-only image in the completed visual audit. Its relationship to concrete CAL controls was verified in T-001, so those controls carry address rules. Bytes and provenance are preserved; the resource itself is not excluded globally.",
       "evidence": {
         "report": "IMAGE-RESOURCE-AUDIT.md",
         "table": "reports/image-visual-review-2026-11-02.csv",
         "category": "hardware_wiring",
-        "mapping_status": "candidate_only"
+        "mapping_status": "verified",
+        "rules": "reports/T-001-hardware-wiring-2026-11-04.md"
       },
       "original": {
         "object_path": "objects/b7/b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407.json",
@@ -98,6 +140,13 @@
           "bytes": 215866,
           "crc32": "416a1925"
         }
+      ],
+      "mapped_controls": [
+        {
+          "cal_sha": "0662ba7083d166d8691b4de01cf6db78e1dc978ce3ab470a8a437ea566b64365",
+          "control_id": 8,
+          "reference": "lrsrs4l40k.png"
+        }
       ]
     },
     "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a": {
@@ -105,12 +154,13 @@
       "kind": "resource",
       "action": "keep",
       "date": "2026-11-02",
-      "reason": "Wiring-only image in the completed visual audit. Preserve until its relationship to a concrete CAL control is verified; no global resource exclusion.",
+      "reason": "Wiring-only image in the completed visual audit. Its relationship to concrete CAL controls was verified in T-001, so those controls carry address rules. Bytes and provenance are preserved; the resource itself is not excluded globally.",
       "evidence": {
         "report": "IMAGE-RESOURCE-AUDIT.md",
         "table": "reports/image-visual-review-2026-11-02.csv",
         "category": "hardware_wiring",
-        "mapping_status": "candidate_only"
+        "mapping_status": "verified",
+        "rules": "reports/T-001-hardware-wiring-2026-11-04.md"
       },
       "original": {
         "object_path": "objects/35/35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a.json",
@@ -126,6 +176,13 @@
           "sha256": "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a",
           "bytes": 226510,
           "crc32": "c0a8f6a7"
+        }
+      ],
+      "mapped_controls": [
+        {
+          "cal_sha": "d0fc833bca08b6607f1f4dbee65f36e4e353b62d39f85e403126d26f9c3f3fff",
+          "control_id": 7,
+          "reference": "Opel4l40k.png"
         }
       ]
     },
@@ -218,5 +275,186 @@
       ]
     }
   },
-  "resource_rules": []
+  "resource_rules": [
+    {
+      "cal_sha": "0662ba7083d166d8691b4de01cf6db78e1dc978ce3ab470a8a437ea566b64365",
+      "resource_sha": "b7ed10fc49f8d4b1cfba206e26b1ef7b4fd49ebaddd9b2d44f452ab824bc1407",
+      "control_id": 8,
+      "reference": "lrsrs4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Land Rover/Discovery 3  8H22-14D374-AC.cal",
+        "Calculators/SRS/Land Rover/Discovery 3  8H22-14D374-AC.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/Land Rover/lrsrs4l40k.png",
+        "content": "annotated photograph of the 9S12DT128 processor with iProg+ connection points (BKGD, RST, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "0b5f9928e37b012e66b71e4a55b65d74c8929f6c719d50c8b770a673f4b9bff3",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Huyndai/Tucson/Tucson  95910-2E310.cal",
+        "Calculators/SRS/Huyndai/Tucson/Tucson  95910-2E310.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "35a6c6d717a33c1a56d5cb050640d570a3711c0187b47c84cce7ab466f000bc1",
+      "resource_sha": "851e965699e55bd653ee313bc6fe2f85e335c94ba568b22871de7033c45cc43b",
+      "control_id": 7,
+      "reference": "cr16.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Volkswagen/Fhaeton  3D0 909 601 M  Bosch CR16.cal",
+        "Calculators/SRS/Volkswagen/Fhaeton  3D0 909 601 M  Bosch CR16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/VW/Fhaeton/cr16.png",
+        "content": "annotated photograph of the processor on the board with iProg+ connection points (BKGD, RESET, 5 Volt, GND, \"Подключение к UPA\")"
+      }
+    },
+    {
+      "cal_sha": "89767073ab6a331be1ef6953720ba50782dfcc0506dc663f748f596e11efb43d",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Kia/Sportage/Sportage  95910-0Z000.cal",
+        "Calculators/SRS/Kia/Sportage/Sportage  95910-0Z000.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "a2d8bcfaf8f76840dd24f973c6c509bbd236300e5aaeeae152f39233718369c0",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Huyndai/Tucson/Tucson  95910-2E300.cal",
+        "Calculators/SRS/Huyndai/Tucson/Tucson  95910-2E300.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "a547ca2d1f378321949a20b8c517a27241ac7b871788cfdbe1f98cef1f5ad965",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Kia/Sportage/Sportage  95910-0Z100.cal",
+        "Calculators/SRS/Kia/Sportage/Sportage  95910-0Z100.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "d068a4999dc80411b66f4e15c06138b22f8b84e9a3427b39b2ca3da9d6066459",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Huyndai/Tucson/Tucson  95910-2E400.cal",
+        "Calculators/SRS/Huyndai/Tucson/Tucson  95910-2E400.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "d0fc833bca08b6607f1f4dbee65f36e4e353b62d39f85e403126d26f9c3f3fff",
+      "resource_sha": "35a6e9e8211a149b3ff22c7ad6cbb4370efce48175871baa714a44a54d38847a",
+      "control_id": 7,
+      "reference": "Opel4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Opel/Astra/13 249 347  9S12DG128.cal",
+        "Calculators/SRS/Opel/Astra/13 249 347  9S12DG128.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/Opel/Astra H/opel4l40k.png",
+        "content": "annotated photograph of the SC515845CPV processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    },
+    {
+      "cal_sha": "dc8670e3e4fffd073f646ccad3058112be396f08dc642f67c89768f57182c965",
+      "resource_sha": "ec881e56483e8f1dd52df56818eb9be4adac177588cbedef06f9fad230d53d5e",
+      "control_id": 9,
+      "reference": "ht4l40k.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "catalog_paths": [
+        "Calculators/Airbag/Kia/Sportage/Sportage  95910-0Z200.cal",
+        "Calculators/SRS/Kia/Sportage/Sportage  95910-0Z200.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "table": "reports/image-visual-review-2026-11-02.csv",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
+        "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    }
+  ]
 }
