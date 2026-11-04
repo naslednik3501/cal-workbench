@@ -1,0 +1,176 @@
+{
+  "audit": "reports/calculator-coverage-binary-resolution-2026-11-03.json",
+  "excluded": [
+    "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602",
+    "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4"
+  ],
+  "targets": [
+    {
+      "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2",
+      "paths": [
+        "Calculators/invert.cal"
+      ],
+      "baselineWarnings": [
+        "show: Некорректный адрес события show"
+      ]
+    },
+    {
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x255 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "ce0234df2133742a5b2e0e7a852c6b1ca8dfb8788fbecea0f09adc1c5e5ae3ad",
+      "paths": [
+        "Calculators/CarRadio/Opel/OPEL  CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "1418d9252ebb88bef5bba2c966535dd3db45968cae887e28602c11c806edfed2",
+      "paths": [
+        "Calculators/CarRadio/Opel/CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "bcce6ded1d1c7d663b525a9a01c0abb9b2546a213df3fb786a462e8d3dd3929b",
+      "paths": [
+        "Calculators/CarRadio/Serial calculator/OPEL  CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "paths": [
+        "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+        "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x29d (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "paths": [
+        "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+        "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x2a7 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "paths": [
+        "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+        "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x247 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "paths": [
+        "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+        "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x23d (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery  ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "238b1eb640695efb5226437999e370ea4f8ca28c46155d368ea244f683656b26",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery TaGaz ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "cef29d369ba14335be8ead340729232ebaa494cbad5348c076c0b289deadc7ae",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery 0L72A.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x252 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "paths": [
+        "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+        "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x2a1 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    },
+    {
+      "sha": "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5",
+      "paths": [
+        "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x278 (branch)",
+        "apply: Некорректный адрес события apply"
+      ]
+    }
+  ]
+}

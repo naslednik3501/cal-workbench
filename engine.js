@@ -94,6 +94,8 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
   const program=source.parse(raw,{sha});if(Object.hasOwn(memoryProfiles,sha))program.memory=memoryProfiles[sha];return program;
  }
  const bytes=decode(raw),form=parseForm(bytes,{validateEvents:false}),eventErrors={},graphs={},absentEvents=[],stringRanges=[];
+ const requirements=!skipEventProfiles?eventProfiles?.sourceRequirements?.(sha):null;
+ if(requirements&&(raw.length!==requirements.rawBytes||crc16(raw)!==requirements.rawCrc16||bytes.length!==requirements.decodedBytes||crc16(bytes)!==requirements.decodedCrc16))throw new CalError('Исходный CAL не совпадает с проверенным профилем событий');
  function knownString(at){return stringRanges.find(([start,end])=>at>=start&&at<end);}
  function rememberString(start,end){if(!stringRanges.some(([a,b])=>a===start&&b===end))stringRanges.push([start,end]);}
  function discoverStrings(entry){
@@ -105,12 +107,12 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
    }catch{}
   }
  }
- function eventGraph(event,entry,profileReturns=[]){
+ function eventGraph(event,entry,profileReturns=[],profileBranches=[]){
   if(entry<form.codeStart||entry>=bytes.length)throw new CalError('Некорректный адрес события '+event);
-  const code={},occupied=new Map(),strings=[],pending=[{pc:entry,edge:'entry'}],unsupported=new Set(),implicitReturnPcs=new Set(),allowedReturns=new Set(profileReturns);
+  const code={},occupied=new Map(),strings=[],pending=[{pc:entry,edge:'entry'}],unsupported=new Set(),implicitReturnPcs=new Set(),allowedReturns=new Set(profileReturns),allowedBranches=new Set(profileBranches);
   function control(id,pc){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id+' в команде 0x'+pc.toString(16));}
   while(pending.length){const next=pending.pop();let pc=next.pc;if(code[pc])continue;
-   const data=knownString(pc);if(data){if(pc!==data[0])throw new CalError('Переход внутрь строки');if(discoverImplicitStrings||(allowedReturns.has(pc)&&['fallthrough','jump'].includes(next.edge))){implicitReturnPcs.add(pc);continue;}throw new CalError('Переход в строковые данные: 0x'+pc.toString(16)+' ('+next.edge+')');}
+   const data=knownString(pc);if(data){if(pc!==data[0])throw new CalError('Переход внутрь строки');if(discoverImplicitStrings||(allowedReturns.has(pc)&&(['fallthrough','jump'].includes(next.edge)||(next.edge==='branch'&&allowedBranches.has(pc))))){implicitReturnPcs.add(pc);continue;}throw new CalError('Переход в строковые данные: 0x'+pc.toString(16)+' ('+next.edge+')');}
    if(pc<form.codeStart||pc>=bytes.length)throw new CalError('Переход за границы кода');
    const r=new Reader(bytes,pc),op=r.u8();if(layouts[op]===undefined)throw new CalError('Неизвестная команда 0x'+op.toString(16));
    const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
@@ -131,8 +133,9 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
  for(const [event,entry] of Object.entries(form.events))if(entry!==65535){
   if(!skipEventProfiles&&eventProfiles?.eventAbsent?.(sha,event,entry)){absentEvents.push(event);continue;}
   const profileReturns=!skipEventProfiles?(eventProfiles?.implicitReturns?.(sha,event,entry)||[]):[];
+  const profileBranches=!skipEventProfiles?(eventProfiles?.implicitBranchReturns?.(sha,event,entry)||[]):[];
   if(discoverImplicitStrings||profileReturns.length)discoverStrings(entry);
-  try{const graph=eventGraph(event,entry,profileReturns);if(graph.absent)absentEvents.push(event);else graphs[event]=graph;}catch(error){if(!(error instanceof CalError))throw error;eventErrors[event]=error.message;}
+  try{const graph=eventGraph(event,entry,profileReturns,profileBranches);if(graph.absent)absentEvents.push(event);else graphs[event]=graph;}catch(error){if(!(error instanceof CalError))throw error;eventErrors[event]=error.message;}
  }
  // Validate shared code as well: two individually valid handlers must not
  // interpret overlapping bytes as different instructions, or code as strings.
