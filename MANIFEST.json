@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2213,
-      "sha256": "c4ca816635cbf72002d04bf09563e8e986418a9c802355113af389f481ecb518"
+      "bytes": 2263,
+      "sha256": "1d66154b7496a9eca4d70438d58ce416167520c766801ecbec74a6e3916ff964"
     },
     {
       "path": "AUDIT-2026-11-01.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 41770,
-      "sha256": "d51c33c57af6e1ecc3146544610c2a11d549906d4ae535daa61d968014944631"
+      "bytes": 41225,
+      "sha256": "5840836445690c2386169b8677ac1294c808485582dd2997d2d644820639ee3f"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
