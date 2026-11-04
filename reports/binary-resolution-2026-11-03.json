@@ -1,10 +1,11 @@
 {
-  "schema": 1,
-  "scope": "Exact original SHA-256 profiles for the 254 baseline binary partial CALs",
+  "schema": 2,
+  "scope": "Exact original SHA-256 profiles for the 254 baseline binary partial CALs; updated with confirmed T-003 FIS opcode support",
   "counts": {
     "readOnly": 216,
     "writers": 32,
-    "partial": 4,
+    "restoredFis": 4,
+    "partial": 0,
     "unsupported": 2
   },
   "readers": [
@@ -2591,7 +2592,7 @@
       "applyInstructions": 38
     }
   ],
-  "remaining": [
+  "restoredFis": [
     {
       "sha": "12986cdd7049c56086fc702c32d9e37bda0c9b9b12a70adc4a83dff0dcf2590b",
       "paths": [
@@ -2599,13 +2600,20 @@
       ],
       "applyPointer": 235,
       "decodedBytes": 11936,
-      "eventErrors": {
-        "apply": "Команда 0x4d ещё не проверена"
-      },
       "validEvents": [
-        "show"
+        "show",
+        "apply"
       ],
-      "showInstructions": 54
+      "randomInstruction": {
+        "pc": 664,
+        "op": 77,
+        "args": [
+          255,
+          28
+        ],
+        "next": 670
+      },
+      "instructions": 2020
     },
     {
       "sha": "257d983b362663d8a09e1147bf54cc6c5f8e2ce99e4fd3ced7ad12dc31329cea",
@@ -2614,13 +2622,20 @@
       ],
       "applyPointer": 471,
       "decodedBytes": 11936,
-      "eventErrors": {
-        "apply": "Команда 0x4d ещё не проверена"
-      },
       "validEvents": [
-        "show"
+        "show",
+        "apply"
       ],
-      "showInstructions": 54
+      "randomInstruction": {
+        "pc": 900,
+        "op": 77,
+        "args": [
+          255,
+          28
+        ],
+        "next": 906
+      },
+      "instructions": 2020
     },
     {
       "sha": "5528e06fab6ef5ed02d38c90ff651efce87c81f13b6968b8607b5e10aaa76069",
@@ -2629,13 +2644,20 @@
       ],
       "applyPointer": 471,
       "decodedBytes": 11936,
-      "eventErrors": {
-        "apply": "Команда 0x4d ещё не проверена"
-      },
       "validEvents": [
-        "show"
+        "show",
+        "apply"
       ],
-      "showInstructions": 54
+      "randomInstruction": {
+        "pc": 900,
+        "op": 77,
+        "args": [
+          255,
+          28
+        ],
+        "next": 906
+      },
+      "instructions": 2020
     },
     {
       "sha": "a7336ed79bf2a92b8cbf678ba28973ff442077df577673114db8137d50955d66",
@@ -2644,14 +2666,23 @@
       ],
       "applyPointer": 237,
       "decodedBytes": 11936,
-      "eventErrors": {
-        "apply": "Команда 0x4d ещё не проверена"
-      },
       "validEvents": [
-        "show"
+        "show",
+        "apply"
       ],
-      "showInstructions": 54
-    },
+      "randomInstruction": {
+        "pc": 666,
+        "op": 77,
+        "args": [
+          255,
+          28
+        ],
+        "next": 672
+      },
+      "instructions": 2020
+    }
+  ],
+  "remaining": [
     {
       "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4",
       "paths": [

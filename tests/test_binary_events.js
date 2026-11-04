@@ -35,10 +35,13 @@ test('Original ECU reader extracts PIN directly from little-endian EEPROM bytes 
 test('Original readable-only ECU still rejects undersized BIN without mutation',()=>{
  const dump=new Uint8Array(16).fill(7),vm=new E.VM(ecu,dump);assert.throws(()=>vm.transaction('show'),/границы BIN/);assert.deepEqual(vm.buffer,dump);
 });
-test('Original FIS unknown opcode stays blocked while show graph is available',()=>{
+test('Original FIS confirmed 0x4d remains in the validated apply graph',()=>{
  const p=E.parse(raw('5528e06fab6ef5ed02d38c90ff651efce87c81f13b6968b8607b5e10aaa76069'));
- assert.equal(p.partial,true);assert.deepEqual(p.validEvents,['show']);assert.match(p.eventErrors.apply,/0x4d/);
- const vm=new E.VM(p,new Uint8Array(1024));assert.throws(()=>vm.transaction('apply'),/0x4d/);assert(!Object.values(p.code).some(i=>i.op===0x4d));
+ assert.equal(p.partial,false);assert.deepEqual(p.validEvents,['show','apply']);assert.deepEqual(p.eventErrors,{});
+ const op=Object.values(p.code).find(i=>i.op===0x4d);assert.deepEqual(op.args,[255,28]);
+ const input=new Uint8Array(128);input[16]=input[32]=input[48]=170;input[64]=187;input[96]=204;
+ const vm=new E.VM(p,input),out=vm.transaction('apply',{randomSeed:0}).vm;
+ assert.equal(out.r[255],8);assert.deepEqual([...out.buffer.slice(16,24)],[1,9,139,38,30,43,97,136]);assert.deepEqual(vm.buffer,input);
 });
 test('Original invalid initialization cannot be bypassed through a valid apply handler',()=>{
  const p=E.parse(raw('7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2'));

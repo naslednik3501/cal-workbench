@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 45916,
-      "sha256": "df95598c5b7d818927e890f9ab48d894ee5296b7ddeea3968494f2eaa90be4c4"
+      "bytes": 47081,
+      "sha256": "a844e1fac6221a8d81fb946bb23c585b01a3ef6154b15e5e7d287a28a90b28e8"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -333,13 +333,18 @@
     },
     {
       "path": "engine.js",
-      "bytes": 20599,
-      "sha256": "d274ee32ef9d32d6ea297ab009c277eb0ea8403ffcf6860f412faba87c14aadf"
+      "bytes": 21991,
+      "sha256": "ee61ae1293caceee451a788f033b537a215f0cda9bb9ada9ee35944b3d045eb2"
     },
     {
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
+    },
+    {
+      "path": "image-assets.json",
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1292,11 +1297,6 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
-      "path": "image-assets.json",
-      "bytes": 16533,
-      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
-    },
-    {
       "path": "image-resource-data.js",
       "bytes": 113446,
       "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
@@ -1325,6 +1325,16 @@
       "path": "reports/T-001-scope-summary-2026-11-03.json",
       "bytes": 890,
       "sha256": "6fda5f9bd47e38ad8c6dfba39130ba5603ce4384b2d6be670333351e950318fb"
+    },
+    {
+      "path": "reports/T-003-fis-opcode-2026-11-04.md",
+      "bytes": 11583,
+      "sha256": "ebc63beefc7658506faaa42f299db160190564911033c5af88fa2e42fd74c7d1"
+    },
+    {
+      "path": "reports/T-003-native-proof-2026-11-04.json",
+      "bytes": 36281,
+      "sha256": "d939d11bcab3cb4765f91e4bd73738db7f6c82d9544951a73d0f7c96729888ac"
     },
     {
       "path": "reports/T-004-sportage-95160.md",
@@ -1418,8 +1428,8 @@
     },
     {
       "path": "reports/binary-resolution-2026-11-03.json",
-      "bytes": 78471,
-      "sha256": "1258051f3deb85f1a35550f15a5b05fca90f8ba13fc0aaeaa75f989340ae3f26"
+      "bytes": 78825,
+      "sha256": "53d4f6a8bb85847554916d9a75c3fc6776bc917ca938e1d8b1dab1f8abdc8bb9"
     },
     {
       "path": "reports/calculator-coverage-2026-11-02.json",
@@ -1537,6 +1547,16 @@
       "sha256": "d320fabe4081294c49f6fe6e877a0c06d31fd686ce068756d045cf24dbc1b9b6"
     },
     {
+      "path": "tests/fixtures/t003-fis.json",
+      "bytes": 8734,
+      "sha256": "ea5893490e196c65eda09bdc9e7540c0027b1a3670aa048b38da545429276122"
+    },
+    {
+      "path": "tests/fixtures/t003-random-vectors.json",
+      "bytes": 26832,
+      "sha256": "e293d31a4ae2c0abe729aa227c3d9b54da0b2eaeae014ce04c61ea16f763bc18"
+    },
+    {
       "path": "tests/fixtures/t006-bcd.json",
       "bytes": 1301,
       "sha256": "729ecd1238b687a59da6aba6388d41da741e12ec8e9b8e168b5b5d292ce3ffd4"
@@ -1573,13 +1593,13 @@
     },
     {
       "path": "tests/test_binary_events.js",
-      "bytes": 6573,
-      "sha256": "f11cf59464ab523766094e0cab3bd074b4a5acd46c6a2af272aefde44a6b7e16"
+      "bytes": 6819,
+      "sha256": "925db89469836938837c2d0da938b634a5a8bb617c1691131632a1b15b3e16fc"
     },
     {
       "path": "tests/test_binary_resolution.js",
-      "bytes": 7863,
-      "sha256": "38f3a1e3bc3542eec062a7647843ffed9178357987c3ea594498e048e6bb41e6"
+      "bytes": 8123,
+      "sha256": "4f0cb6118e80c861fec70c63ad9622f5600fe761af5bec11d87ba3d868887c24"
     },
     {
       "path": "tests/test_browser.js",
@@ -1660,6 +1680,16 @@
       "path": "tests/test_sportage.js",
       "bytes": 8307,
       "sha256": "d03f90c3698f26270e954d3fdf81075953ebecd5ac6baf724fad76a1b8808762"
+    },
+    {
+      "path": "tests/test_t003_app.js",
+      "bytes": 7298,
+      "sha256": "25848c05b98bc11dbfdb4fa3675f430eccc710dbdc7b16b3ddc4deea4b20196a"
+    },
+    {
+      "path": "tests/test_t003_fis.js",
+      "bytes": 5156,
+      "sha256": "f64f2a14394fd702a72abd5f3a887b8ada954caec0af90e94377c1ac70559cf2"
     },
     {
       "path": "tests/test_t006_bcd.js",
@@ -1747,6 +1777,21 @@
       "sha256": "420e96a12b59bf5199d349b3f523a27cc8c78573589b4fe183e745f061530b6f"
     },
     {
+      "path": "tools/analyze_t003_fis.js",
+      "bytes": 3127,
+      "sha256": "e4f95476e92cb89e57e06400c0ff5ccda78999e749c4d1a2173b787bdc762ed7"
+    },
+    {
+      "path": "tools/analyze_t003_native.py",
+      "bytes": 2895,
+      "sha256": "c5c96455c315b9d522eb99804b97518fb3173e0c3a9f29ccda5a2d13d0c6e250"
+    },
+    {
+      "path": "tools/analyze_t003_random.py",
+      "bytes": 1328,
+      "sha256": "724875c02f74e3facde506feaee379e1687627e8eb4d204eabc023f1a2dbc692"
+    },
+    {
       "path": "tools/analyze_t008_pairs.js",
       "bytes": 13941,
       "sha256": "6a3e41414608c20d1066a5b278f3248bec45b5ec77a600ad21101bf29ae2ef34"
@@ -1778,8 +1823,8 @@
     },
     {
       "path": "tools/build-binary-event-profiles.js",
-      "bytes": 5705,
-      "sha256": "b90ad10d47e300ac1fa94d1181aee22711fd1d3d71f988d38410e123b6972cd2"
+      "bytes": 6316,
+      "sha256": "a82ad1ff18b8af1825e84350beea54cd476f2897949425f4f93bde63261360d3"
     },
     {
       "path": "tools/build_catalog.py",
@@ -1836,7 +1881,19 @@
     "original_iprog_execution": "not compared",
     "chromium_release_scenarios": "passed on Linux",
     "real_browser_storage": "tested in Chromium",
-    "windows": "not tested"
+    "windows": "not tested",
+    "T-003": {
+      "targets": 4,
+      "restored": 4,
+      "writer_vectors": 224,
+      "boundary_vectors": 12,
+      "random_reference_samples": 1750,
+      "app_handler_scenarios": 16,
+      "proof": "Static original iProgPro.exe SHA 14a47659...; not executed",
+      "original_iprog": "not executed",
+      "hardware": "not tested",
+      "browser_rendering": "not tested"
+    }
   },
   "personal_bin_fixtures_included": false
 }
