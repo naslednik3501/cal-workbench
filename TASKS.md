@@ -150,6 +150,29 @@ Pages отдаёт прежнюю сборку, `catalog-organization-airbag.js`
 проверка живого Pages остаются ручными:
 https://github.com/naslednik3501/cal-workbench/compare/main...task/T-016-cline-deepseek-catalog-roots?expand=1.
 
+### T-016 — P01: Приборные панели (2026-11-04, Москва)
+
+Продолжение назначения `cline-deepseek-20261104-T016-root`; база — свежий
+`main` `35455c1` (P02 уже влит fast-forward), ветка
+`task/T-016-cline-deepseek-catalog-roots`. Карта
+`catalog-organization-dashboard.js` добавляет **4 843 SHA / 4 870 путей**:
+`Dashboard` 4 767, `I` 43, `I_ok` 43, корневые Peugeot `Dash` 3 и 14
+подтверждённых панельных файлов `Car`. 135 папок; 47 неоднозначных —
+`Приборные панели/Неуточнённые` с причиной. `Car` целиком не переносился:
+52 ECU/ABS/Immo-пути оставлены вне панелей. Марки нормализованы, память — по
+подписи/имени, разные SHA не слиты (`· вариант N`). Исходные пути, имена,
+SHA, байты, экспорт и изображения не менялись.
+
+Проверки: `node tests/test_t016_organization.js` **12/12**; 31 профильный
+JS-набор и 2 Python-набора PASS; сборка **249 ресурсов**, выпуск 399 файлов,
+`git diff --check` чисто. Публикация: commit
+`a06116a10d3e8335eaae27ea0a20ca6b3c87e7e4`; API PR по-прежнему без
+авторизации, поэтому `main` обновлён fast-forward без перезаписи.
+Живой сайт: `catalog-organization-dashboard.js` HTTP 200, SHA-256
+`e58830048f903bdae0d9925cecff2e825b54ad45d80c282dfa49e724bde8ae60`
+совпал с локальным; `catalog-organization.js` также совпал.
+
+
 
 
 
