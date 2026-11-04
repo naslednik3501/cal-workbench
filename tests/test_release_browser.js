@@ -40,6 +40,17 @@ if(!base||!['localhost','127.0.0.1','[::1]'].includes(new URL(base).hostname))th
   await selectSha('5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be');
   assert(await page.locator('#apply').isDisabled());assert.equal(await page.locator('#compatBadge').textContent(),'Частично распознан');
   console.log('PASS partial readers: correct PIN, unavailable write, no prepared download, manual HEX isolation, source warning');
+  // Recovery uses the real selection handler and VM in the complete application.
+  await page.evaluate(()=>{program=CalSource.parse(new TextEncoder().encode('Size(10,10);Form{}OnShow{}OnChange{@0=77;}OnApply{@1=88;}'));initializeSession();$('selStart').value='10';$('selEnd').value='01';$('selection').onclick();});
+  assert.equal(await page.locator('#calcError').isVisible(),true);
+  assert.match(await page.locator('#calcError').textContent(),/Диапазон за границами/);
+  await page.evaluate(()=>{$('selStart').value='00';$('selEnd').value='01';$('selection').onclick();});
+  assert.equal(await page.locator('#calcError').isVisible(),false);
+  assert.equal(await page.evaluate(()=>session.buffer[0]),77);
+  assert.equal(await page.evaluate(()=>original[0]),0);
+  await page.evaluate(()=>{$('selStart').value='10';$('selEnd').value='01';$('selection').onclick();});
+  assert.equal(await page.locator('#calcError').isVisible(),true);
+  console.log('PASS real selection handler: invalid range, successful recovery, subsequent error remains visible');
   const assets=await page.evaluate(async()=>{const all=Object.values(CAL_IMAGE_DATA.assets);await Promise.all(all.map(a=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>i.naturalWidth===a.width&&i.naturalHeight===a.height?ok():no(Error(a.src));i.onerror=()=>no(Error(a.src));i.src=a.src;})));return all.length;});
   assert.equal(assets,135);
   const examples=await page.evaluate(()=>{const out=[];for(const category of ['board_chip_location','logo','device_identification']){for(const [key,m] of Object.entries(CAL_IMAGE_DATA.mappings)){if(CAL_IMAGE_DATA.assets[m.sha].category!==category)continue;const sha=key.split(':')[0],e=entries.find(e=>e.sha===sha);if(!e)continue;try{const p=E.parse(raw(e),{sha});if(p.executable){out.push({sha,src:CAL_IMAGE_DATA.assets[m.sha].src});break;}}catch{}}}return out;});

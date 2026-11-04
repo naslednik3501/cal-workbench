@@ -48,6 +48,11 @@ await test('Changed input drops old calculation but preserves explicitly labelle
 await test('OnChange writes only working copy, and Apply starts from that copy',async()=>{
  el('selStart').value='4';el('selEnd').value='5';await el('selection').click();assert.equal(run('session.buffer[4]'),7);assert.equal(run('candidate[4]'),7);assert.equal(run('original[4]'),0);await el('apply').click();assert.equal(run('candidate[4]'),7);assert.equal(run('candidate[1]'),7);
 });
+await test('Selection recovery clears stale error and preserves subsequent errors',async()=>{
+ el('selStart').value='10';el('selEnd').value='01';await el('selection').click();assert.equal(el('calcError').hidden,false);assert.match(el('calcError').textContent,/Диапазон за границами/);
+ el('selStart').value='4';el('selEnd').value='5';await el('selection').click();assert.equal(el('calcError').hidden,true);assert.equal(run('session.buffer[4]'),7);assert.equal(run('original[4]'),0);
+ el('selStart').value='10';el('selEnd').value='01';await el('selection').click();assert.equal(el('calcError').hidden,false);
+});
 await test('Failed Apply cannot expose a partial or stale result',async()=>{
  el('cal-input-0').value='99';await el('cal-input-0').trigger('input');await el('apply').click();assert.equal(run('candidate'),null);assert(el('save').disabled);assert.equal(run('session.buffer[1]'),0);assert.equal(run('session.buffer[4]'),7);assert.equal(run('original[0]'),0);
 });

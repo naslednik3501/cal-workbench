@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 39923,
-      "sha256": "10b665e31f61846abd85d2887fdca466ff83b1402cb24cc668b84dac19fa7540"
+      "bytes": 43294,
+      "sha256": "4ad7237b21aa6eb7bb6ecd85be89510dcc8fd52573596b91fdc9200576b21267"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -73,8 +73,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 40246,
-      "sha256": "c506ea8be2cbe8826f1e24db973d9a0b29d821fcae03400b6123edf00a1349d4"
+      "bytes": 40273,
+      "sha256": "9350e57e20eed71d531da631c3f8b3d30f46f2589e40f08803a05a51270c0115"
     },
     {
       "path": "archive-verification.json",
@@ -1138,8 +1138,8 @@
     },
     {
       "path": "tests/README.md",
-      "bytes": 3543,
-      "sha256": "52a7713b3abe48375eaf4be82f503383443323980b1b118b86f5de82eab14c9e"
+      "bytes": 3945,
+      "sha256": "1047381ecf80cd788fe91dc47bd83e7051fa7258356de992b60eff8f7bb83680"
     },
     {
       "path": "tests/catalog-results.txt",
@@ -1233,13 +1233,13 @@
     },
     {
       "path": "tests/test_preparation.js",
-      "bytes": 9126,
-      "sha256": "a424839734f2da1e2514cadf49ca62068ab0c4fa2453a665cd7d5fc3b8937137"
+      "bytes": 9757,
+      "sha256": "ccf3564deb8ee371583a1d8a3b332e6e505d689571095e87ef6efb3bceb72a3a"
     },
     {
       "path": "tests/test_release_browser.js",
-      "bytes": 6207,
-      "sha256": "7bebbd3eb97f87264490675cf3314029bd013051b9c43c14bce01749d41fbbba"
+      "bytes": 7276,
+      "sha256": "c9ccef0d8a748b150cbed170c714592b5fc4f0c47bcb3efdc9dcaef2dfae1b6f"
     },
     {
       "path": "tests/test_scope.js",
