@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 53313,
-      "sha256": "aac9364113fdec0cae8f63a731960852f9b9acfc0db7256c9f4be69b001e39ff"
+      "bytes": 53954,
+      "sha256": "36d405812896b45b2e0fab80f03cf3192992e2a711040131618ac8eb43d63210"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1428,8 +1428,8 @@
     },
     {
       "path": "reports/T-015-nested-archives-2026-11-04.md",
-      "bytes": 12377,
-      "sha256": "36fda025145d2a29e91882326c18529c13057305665fd9216b3036421c17c1be"
+      "bytes": 13341,
+      "sha256": "f76aef51cd71dc2bc33a368b4f505cfe738fdd354835cf452bbca1e30a836eeb"
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
