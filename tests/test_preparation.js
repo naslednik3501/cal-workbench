@@ -21,7 +21,7 @@ const doc={events:{},addEventListener(k,fn){(this.events[k]??=[]).push(fn);},ids
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const match of html.matchAll(/<(\w+)[^>]*\bid="([^"]+)"[^>]*>/g)){let el=doc.createElement(match[1]);el.id=match[2];el.value=/\bvalue="([^"]*)"/.exec(match[0])?.[1]||'';doc.body.append(el);}
 doc.ids.hex.tBodies=[doc.createElement('tbody')];doc.ids.hex.append(doc.ids.hex.tBodies[0]);
-let urlId=0;const context=vm.createContext({document:doc,CatalogOrganization:require('../catalog-organization.js'),CatalogScope:require('../catalog-scope.js'),CalEngine:require('../engine.js'),CAL_CATALOG,CatalogStore:{...require('../catalog-store.js'),Store:class{async load(){return [];}async save(e){this.saved=e;}}},console,Uint8Array,Blob,TextDecoder,crypto:crypto.webcrypto,atob,btoa,URL:{createObjectURL(blob){let u='blob:test-'+(++urlId);doc.urls.set(u,blob);return u;},revokeObjectURL(){}},setTimeout(){},Date});
+let urlId=0;const context=vm.createContext({document:doc,CAL_IMAGES:require('../image-resources.js'),CatalogOrganization:require('../catalog-organization.js'),CatalogScope:require('../catalog-scope.js'),CalEngine:require('../engine.js'),CAL_CATALOG,CatalogStore:{...require('../catalog-store.js'),Store:class{async load(){return [];}async save(e){this.saved=e;}}},console,Uint8Array,Blob,TextDecoder,crypto:crypto.webcrypto,atob,btoa,URL:{createObjectURL(blob){let u='blob:test-'+(++urlId);doc.urls.set(u,blob);return u;},revokeObjectURL(){}},setTimeout(){},Date});
 vm.runInContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),context);
 const run=s=>vm.runInContext(s,context),el=id=>doc.ids[id];let passed=0;
 async function test(name,fn){await fn();passed++;console.log('PASS '+name);}
@@ -72,6 +72,16 @@ await test('Catalog Polo receives its bounded scratch profile in the actual app'
 });
 await test('Closing clears prepared data and preserves catalog',async()=>{
  const count=run('entries.length');await el('closeBin').click();assert.equal(run('session'),null);assert.equal(run('candidate'),null);assert.equal(run('original'),null);assert.equal(run('entries.length'),count);assert(el('save').disabled);
+});
+await test('Unavailable persistent storage is reported before any import',async()=>{
+ run("catalogStore.load=async()=>{throw Error('storage blocked')};userEntries=[];entries=[...db.entries]");await run('loadUserCatalog()');
+ assert.equal(run('storageProblem'),'storage blocked');assert(!el('storageStatus').hidden);assert.match(el('storageStatus').textContent,/Сохранение в браузере недоступно/);assert.match(el('storageStatus').textContent,/storage blocked/);assert(!el('openCal').disabled);
+ run("catalogStore.load=async()=>[]");await run('loadUserCatalog()');assert(el('storageStatus').hidden);
+});
+await test('Unsupported handler reason stays visible after opening a BIN',async()=>{
+ run("select(entries.find(e=>e.sha==='dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4'))");
+ const reason=el('calcError').textContent;assert(!el('calcError').hidden);assert.match(reason,/apply/);
+ await run('loadBin')(upload(Buffer.alloc(1024),'unsupported.bin'));assert(!el('calcError').hidden);assert.equal(el('calcError').textContent,reason);assert(el('apply').disabled);
 });
 console.log(JSON.stringify({passed,failed:0,scope:'Real app event handlers in Node DOM adapter; no browser rendering'}));clearTimeout(watchdog);
 })().catch(e=>{console.error(e);process.exit(1);});

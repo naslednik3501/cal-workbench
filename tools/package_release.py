@@ -35,7 +35,7 @@ for ref in re.findall(r"\$\('([^']+)'\)", (root / 'app.js').read_text()):
     assert ref in ids, f'Missing app element: {ref}'
 manifest = dict(version=version, files=[dict(path=str(p.relative_to(root)), bytes=p.stat().st_size,
     sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in files],
-    validation=dict(source_tests=13, preparation_tests=11, polo_checks=8, store_tests=8,
+    validation=dict(source_tests=13, preparation_tests=14, polo_checks=8, store_tests=8,
         source_binary_pairs=465, exactly_matching_pairs=456, catalog_hashes='passed',
         private_bin_fixture_tests='not rerun; fixtures not in shared repository',
         binary_resolution=dict(target=254, read_only=216, full_writers=32, partial_fis=4, unsupported=2),
