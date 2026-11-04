@@ -118,7 +118,7 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
    const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
    for(let i=pc;i<r.p;i++){if(occupied.has(i)&&occupied.get(i)!==pc)throw new CalError('Переход внутрь команды');occupied.set(i,pc);}
    let ins={pc,op,args,next:r.p};code[pc]=ins;
-   if([0x43,0x44,0x4c,0x4d,0x4f].includes(op))unsupported.add('Команда 0x'+op.toString(16)+' ещё не проверена');
+   if([0x43,0x44,0x4c,0x4f].includes(op))unsupported.add('Команда 0x'+op.toString(16)+' ещё не проверена');
    if(op===0x36){let s=stringAt(bytes,args[1]);ins.text=s.text;strings.push([args[1],s.end]);rememberString(args[1],s.end);}
    if([2].includes(op))control(args[1],pc);
    if([3,0x24,0x25,0x26,0x42].includes(op))control(args[0],pc);
@@ -160,6 +160,22 @@ function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={
   ...(Object.hasOwn(memoryProfiles,sha)?{memory:memoryProfiles[sha]}:{})};
 }
 
+// T-003: iProgPro.exe SHA 14a47659..., CAL dispatch 0x451ddd -> 0x40f660.
+// MT19937 words are combined low-first, high sign bit cleared, then mod bound.
+// Local to one event: failure/retry cannot advance another VM's random state.
+class CalRandom {
+ constructor(seed){
+  this.words=new Uint32Array(624);this.words[0]=seed;this.index=624;
+  for(let i=1;i<624;i++){const x=this.words[i-1];this.words[i]=(Math.imul(1812433253,x^(x>>>30))+i)>>>0;}
+ }
+ word(){
+  const m=this.words;
+  if(this.index===624){for(let i=0;i<624;i++){const y=(m[i]&0x80000000)|(m[(i+1)%624]&0x7fffffff);m[i]=m[(i+397)%624]^(y>>>1)^((y&1)?0x9908b0df:0);}this.index=0;}
+  let y=m[this.index++];y^=y>>>11;y^=(y<<7)&0x9d2c5680;y^=(y<<15)&0xefc60000;y^=y>>>18;return y>>>0;
+ }
+ bounded(bound){const low=this.word(),high=this.word()&0x7fffffff;return bound?Number(((BigInt(high)<<32n)|BigInt(low))%BigInt(bound)):0;}
+}
+
 class VM {
  constructor(program,dump){
   if(program.sourceProgram){const source=root.CalSource||(typeof require==='function'?require('./cal-source.js'):null);return new source.VM(program,dump);}
@@ -183,6 +199,9 @@ class VM {
   const implicitReturns=new Set(this.program.eventImplicitReturnPcs?.[event]||[]);
   const r=this.r,s=this.s,c=this.controls,stack=[],limit=options.maxSteps??MAX_STEPS,start=Date.now();let steps=0;
   function div(a,b){if(!b)throw new CalError('Деление на ноль');return Math.floor(a/b);}
+  // Original host reseeds each event from GetTickCount. The browser supplies
+  // its own millisecond clock; randomSeed pins that external input in tests.
+  const randomSeed=options.randomSeed??(Math.floor(root.performance?.now?.()??Date.now())>>>0);let random;
   const append=(id,t)=>{s[id]+=t;if(s[id].length>65536)throw new CalError('Лимит длины строки');};
   while(true){
    if(++steps>limit||(steps%4096===0&&Date.now()-start>2000))throw new CalError('Превышен лимит выполнения');
@@ -205,6 +224,9 @@ class VM {
     case 0x3c:case 0x3d:case 0x3e:{let len=[2,4,8][op-0x3c],v=r[b];if(len===2)v&=255;if(len===4)v&=65535;append(a,v.toString(16).toUpperCase().padStart(len,'0'));break;}
     case 0x3f:append(a,String(r[b]));break;case 0x40:append(a,cp.decode(new Uint8Array([r[b]&255])));break;case 0x41:append(a,s[b]);break;case 0x42:c[a].text=s[b];break;
     case 0x45:case 0x46:r[a]&=b;break;case 0x47:case 0x48:r[a]|=b;break;case 0x49:case 0x4a:r[a]^=b;break;
+    case 0x4d:
+     if(!Number.isInteger(randomSeed)||randomSeed<0||randomSeed>0xffffffff)throw new CalError('Seed должен быть целым от 0 до 4294967295');
+     random??=new CalRandom(randomSeed);r[a]=random.bounded(b);break;
     case 0x4b:if(stack.length>=256)throw new CalError('Переполнение стека');stack.push(pc);pc=a;break;case 0x4e:s[a]=s[b];break;
     default:throw new CalError('Неподдержанная команда 0x'+op.toString(16));
    }

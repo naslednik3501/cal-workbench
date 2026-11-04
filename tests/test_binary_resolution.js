@@ -7,6 +7,7 @@ require('../catalog.js');for(const part of require('../catalog-parts.json'))requ
 const baseline=JSON.parse(fs.readFileSync('reports/calculator-coverage-2026-11-03.json','utf8'));
 const target=[...new Set(baseline.unavailable.filter(x=>x.status==='partial'&&x.format==='binary').map(x=>x.sha))];
 assert.equal(target.length,254);
+const fisShas=new Set(require('./fixtures/t003-fis.json').targets.map(t=>t.sha));
 const state={readOnly:[],full:[],partial:[],unsupported:[]};
 for(const sha of target){
  const original=Buffer.from(CAL_CATALOG.blobs[sha],'base64');
@@ -16,7 +17,7 @@ for(const sha of target){
  state[bucket].push({sha,p,original});
 }
 
-assert.deepEqual(Object.fromEntries(Object.entries(state).map(([k,v])=>[k,v.length])),{readOnly:216,full:32,partial:4,unsupported:2});
+assert.deepEqual(Object.fromEntries(Object.entries(state).map(([k,v])=>[k,v.length])),{readOnly:216,full:36,partial:0,unsupported:2});
 assert.equal(profiles.readOnlyShas.length,216);
 assert.equal(new Set(profiles.readOnlyShas).size,216);
 const structuralShas=new Set([
@@ -38,11 +39,11 @@ assert.deepEqual(structuralReaders.map(x=>x.sha).sort(),[
 ]);
 for(const {p} of structuralReaders){assert.deepEqual(p.absentEvents,['apply']);assert.deepEqual(p.validEvents,['show']);}
 
-for(const {p} of state.full){
+for(const {p} of state.full.filter(x=>!fisShas.has(x.sha))){
  assert.deepEqual(p.eventErrors,{});assert(p.validEvents.includes('show'));assert(p.validEvents.includes('apply'));
  assert.equal(p.eventTermination.apply,'string-boundary');assert(p.eventImplicitReturnPcs.apply.length>0);
 }
-for(const {sha,original} of state.full){const strict=E.parse(original,{sha,skipEventProfiles:true});assert.equal(strict.partial,true);assert(strict.eventErrors.apply);}
+for(const {sha,original} of state.full.filter(x=>!fisShas.has(x.sha))){const strict=E.parse(original,{sha,skipEventProfiles:true});assert.equal(strict.partial,true);assert(strict.eventErrors.apply);}
 const bsi=state.full.find(x=>x.sha==='a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877');
 const dump=new Uint8Array(256),opened=new E.VM(bsi.p,dump).transaction('show').vm;opened.input(0,123456);
 const written=opened.transaction('apply').vm;assert.deepEqual(E.diff(dump,written.buffer).ranges,[{start:211,end:214}]);assert.deepEqual([...written.buffer.slice(211,214)],[242,202,36]);assert.deepEqual(dump,new Uint8Array(256));
@@ -75,7 +76,7 @@ const equivalentGroups=[
 ];
 for(const group of equivalentGroups){const path=CAL_CATALOG.entries.find(e=>e.sha===group[0]).path,size=writerSize(path);for(const pattern of [0,1])for(const value of [0,1,123456]){const outputs=group.map(sha=>executeWriter(sha,size,value,pattern));for(const output of outputs.slice(1))assert.deepEqual(output,outputs[0]);}}
 
-for(const {p} of state.partial){assert.deepEqual(p.validEvents,['show']);assert.match(p.eventErrors.apply,/0x4d/);}
+assert.equal(state.partial.length,0);for(const {p}of state.full.filter(x=>fisShas.has(x.sha))){assert.deepEqual(p.validEvents,['show','apply']);assert.deepEqual(p.eventErrors,{});assert(Object.values(p.code).some(i=>i.op===0x4d));}
 assert.deepEqual(state.unsupported.map(x=>x.sha).sort(),[
  'dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4',
  'e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602'
@@ -87,4 +88,4 @@ assert.equal(baselineUnsupported.length,16);
 const t013Readers=new Set(Object.keys(require('./fixtures/t013-readers.json')));assert.equal(t013Readers.size,15);
 for(const sha of baselineUnsupported){const bytes=Buffer.from(CAL_CATALOG.blobs[sha],'base64');const strict=E.parse(bytes,{sha,skipEventProfiles:true});assert.equal(strict.executable,false,'unprofiled original remains unsupported: '+sha);const p=E.parse(bytes,{sha});if(t013Readers.has(sha)){assert(p.executable&&p.readOnly);assert.deepEqual(p.validEvents,['show']);assert.deepEqual(p.absentEvents,['apply']);}else assert.equal(p.executable,false,'invalid initialization remains blocked: '+sha);}
 
-console.log(JSON.stringify({target:target.length,readOnly:216,full:32,partial:4,unsupported:2,writerExecution:'BSI Partner D780949: 256-byte synthetic buffer'}));
+console.log(JSON.stringify({target:target.length,readOnly:216,full:36,partial:0,unsupported:2,writerExecution:'BSI Partner D780949: 256-byte synthetic buffer'}));
