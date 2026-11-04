@@ -17,6 +17,10 @@ const expected=[
  ['31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79','Calculators/Airbag/28556 3AP1B  (93C56).cal','Nissan 28556 3AP1B — сброс Crash (SRS)','Подушки безопасности/Nissan'],
  ['a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf','Calculators/Airbag/96 806 850 5WY67070 ST95160.cal','Chevrolet 96 806 850 (5WY67070) — сброс Crash (SRS)','Подушки безопасности/Chevrolet']
 ];
+const airbagEntries=db.entries.filter(e=>e.ext==='cal'&&/^Calculators\/(Airbag|SRS)\//i.test(e.path));
+const airbagShas=new Set(airbagEntries.map(e=>e.sha));
+const approvedShas=new Set(expected.map(item=>item[0]));
+const generatedEntries=new Map(Object.entries(org.data.entries).filter(([sha])=>!approvedShas.has(sha)));
 
 class Element{
  constructor(tag,doc){this.tagName=tag.toUpperCase();this.doc=doc;this.children=[];this.parentNode=null;this.dataset={};this.style={};this.attrs={};this.events={};this._text='';this.className='';this.value='';this.checked=false;this.disabled=false;this.hidden=false;this.open=false;this.files=[];this.classList={contains:n=>this.className.split(/\s/).includes(n),toggle:(n,on)=>{let s=new Set(this.className.split(/\s/).filter(Boolean));if(on??!s.has(n))s.add(n);else s.delete(n);this.className=[...s].join(' ');},remove:n=>{this.classList.toggle(n,false);}};}
@@ -45,8 +49,8 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 
 (async()=>{
 await run('catalogReady');
-await test('12 approved SHAs have one original path and one display path each',()=>{
- assert.equal(Object.keys(org.data.entries).length,12);assert.equal(expected.length,12);
+await test('the 12 approved SHAs keep their exact names, folders and display paths',()=>{
+ assert.equal(Object.keys(org.data.entries).length,5392);assert.equal(expected.length,12);
  const shown=new Set(),originals=new Set();
  for(const [sha,oldPath,name,folder] of expected){
   const rows=db.entries.filter(e=>e.sha===sha);
@@ -59,6 +63,34 @@ await test('12 approved SHAs have one original path and one display path each',(
  // The display path is virtual: it must never sit on a real catalogue file.
  for(const display of shown)assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/'+display),'collision '+display);
  assert.equal(new Set(db.entries.filter(e=>e.ext==='cal').map(e=>e.sha)).size,db.meta.uniqueCal);
+});
+await test('all Airbag and SRS SHA are covered by unique, reasoned display entries',()=>{
+ assert.equal(airbagEntries.length,7664);assert.equal(airbagShas.size,5383);
+ assert.equal(generatedEntries.size,5380);
+ for(const sha of airbagShas)assert(org.get(sha),'missing '+sha);
+ const outside=[...Object.keys(org.data.entries)].filter(sha=>!airbagShas.has(sha));
+ assert.equal(outside.length,9,'only the nine non-Airbag approved entries stay outside');
+ const display=new Map(),folders=new Set();
+ for(const e of airbagEntries){
+  const item=org.get(e.sha),name=e.path.split('/').at(-1).replace(/\.cal$/i,'');
+  assert(item,e.sha);assert(item.folder.startsWith('Подушки безопасности/'),item.folder);
+  const brand=item.folder.split('/')[1];folders.add(item.folder);
+  assert(!['Huyndai','Infinity','Cherry','Pontiak','China','1 Universal'].includes(brand),brand);
+  if(brand==='Неуточнённые'){
+   assert(item.reason,'reason for '+e.sha);assert(org.title(e).startsWith(name),'original name kept '+e.sha);
+  }else{
+   assert(!item.reason,'no reason outside Неуточнённые '+e.sha);assert(/ — (?:сброс|обнуление)/.test(item.name),item.name);
+  }
+  assert(org.matches(e,name),'old name search '+e.sha);
+  assert(org.matches(e,e.path),'old path search '+e.sha);
+  assert(org.matches(e,item.name),'new name search '+e.sha);
+  assert(org.matches(e,item.folder),'folder search '+e.sha);
+  const key=org.displayPath(e).toLowerCase(),owner=display.get(key);
+  assert(!owner||owner===e.sha,'display collision '+key);display.set(key,e.sha);
+ }
+ for(const brand of ['Hyundai','Infiniti','Chery','Pontiac'])assert(folders.has('Подушки безопасности/'+brand),brand);
+ assert.equal(folders.size,51,'50 brands plus Неуточнённые');
+ assert.equal(org.data.airbag_report,'reports/catalog-organization-airbag-srs-2026-11-04.md');
 });
 await test('every approved SHA stays its own calculator; sibling versions are not merged',()=>{
  const groups=scope.calculatorGroups(db.entries),bySha=new Map(groups.map(g=>[g.e.sha,g]));
@@ -85,14 +117,36 @@ await test('search matches new names, folders, old file names and old paths',()=
  assert(org.matches(radio,'carradio'),'unclassified CAL keeps the original path rule');
 });
 
+await test('different SHA with the same display base stay distinct versions',()=>{
+ const groups=new Map();
+ for(const [sha,item] of Object.entries(org.data.entries)){
+  if(!airbagShas.has(sha))continue;
+  const base=item.name.replace(/ \((?:Airbag|SRS)\)$/,'').replace(/ · вариант \d+$/,'');
+  const key=item.folder+'/'+base;
+  if(!groups.has(key))groups.set(key,[]);groups.get(key).push({sha,item});
+ }
+ const pair=[...groups.values()].find(list=>list.length>1&&new Set(list.map(row=>row.item.name)).size===list.length);
+ assert(pair,'a collision group with distinct names must exist');
+ const paths=new Set();
+ for(const {sha,item} of pair){
+  const e=entry(sha);assert(e,sha);run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
+  assert.equal(el('calcTitle').textContent,item.name,sha);
+  assert(!paths.has(org.displayPath(e)),'distinct display path '+sha);paths.add(org.displayPath(e));
+  assert.equal(run('selected.sha'),sha);assert(!el('exportCal').disabled);
+ }
+ assert(pair.length>1);
+});
+
 await test('the tree shows each approved CAL once under its thematic section',()=>{
  const sections=el('tree').children.filter(c=>c.className==='sectionButton').map(c=>c.children[1].textContent);
  for(const s of ['Подушки безопасности','Приборные панели','Иммобилайзеры и ключи','Магнитолы и навигация','Утилиты'])assert(sections.includes(s),s);
  assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,0,'no CAL is displayed at the root any more');
  const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- run("catalogScope='Подушки безопасности';expandedFolders.add('Подушки безопасности/Toyota');expandedFolders.add('Подушки безопасности/Nissan');expandedFolders.add('Подушки безопасности/Chevrolet');renderCatalog()");
+ const folders=[...new Set([...airbagShas].map(sha=>org.folder(entry(sha))))];
+ run('expandedFolders.clear();catalogScope=\'Подушки безопасности\';'+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
  const airbag=walk(el('tree'),'fileItem');
- assert.equal(airbag.length,3);assert(airbag.every(f=>/сброс Crash/.test(f.textContent)));
+ assert.equal(airbag.length,airbagShas.size,'all Airbag/SRS calculators are shown once');
+ assert(airbag.some(f=>/89170-02810/.test(f.textContent)),'the approved Toyota stays visible');
  run("expandedFolders.clear();catalogScope='';renderCatalog()");
 });
 await test('selecting each CAL shows the new name and keeps the original path and bytes',async()=>{
@@ -112,6 +166,21 @@ await test('selecting each CAL shows the new name and keeps the original path an
  assert(el('calcPath').textContent.includes('Renault'),'the Renault hint stays visible');
  assert(el('calcPath').textContent.includes('не подтверждена'),'the hint is marked as unconfirmed');
 });
+await test('sample Airbag and SRS CAL export original names, bytes and show ambiguous reasons',async()=>{
+ const sample=[...airbagShas].filter((_,index)=>index%211===0);
+ for(const sha of sample){
+  const e=entry(sha);run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
+  assert.equal(el('calcTitle').textContent,org.title(e),sha);
+  assert(el('calcPath').textContent.includes(e.path),'original path visible '+sha);
+  doc.downloads.length=0;await el('exportCal').click();
+  const download=doc.downloads.at(-1);
+  assert.equal(download.name,e.path.split('/').at(-1),'export name '+sha);
+  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sha],'base64'),'export bytes '+sha);
+ }
+ const ambiguous=airbagEntries.find(e=>org.get(e.sha).reason);
+ assert(ambiguous,'an ambiguous entry exists');run('select(entries.find(e=>e.sha==='+JSON.stringify(ambiguous.sha)+'))');
+ assert(el('calcPath').textContent.includes('Причина:'),'the reason is shown');assert.equal(el('calcTitle').textContent,org.title(ambiguous));
+});
 await test('a search row shows the new name plus the old path and opens the same entry',()=>{
  el('search').value='Skoda Fabia 2006 — декриптор EEPROM 93C86';run('searchPage=0;renderCatalog()');
  let rows=el('tree').children.filter(c=>c.className.startsWith('fileItem'));
@@ -122,9 +191,9 @@ await test('a search row shows the new name plus the old path and opens the same
  el('search').value='Calculators/Fabia 93C86 2006 decryptor.cal';run('searchPage=0;renderCatalog()');
  assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,1,'the exact old path still finds it');
  el('search').value='89170-02810';run('searchPage=0;renderCatalog()');
- assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,1,'old file name still finds the entry');
+ assert(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length>=1,'old file name still finds the entry');
  el('search').value='подушки безопасности';run('searchPage=0;renderCatalog()');
- assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,3,'thematic folder finds its three CALs');
+ assert(el('searchPager').textContent.includes(airbagShas.size+' · 1/'),'thematic folder finds every Airbag/SRS calculator');
  el('search').value='';run('searchPage=0;renderCatalog()');
 });
 await test('pictures resolve from the original CAL location, not from the display folder',()=>{

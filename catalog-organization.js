@@ -1,10 +1,11 @@
 /* Verified thematic names and folders for CAL SHA-256; original paths stay untouched. */
 (function(root){
 'use strict';
-const data={
- schema:1,
- source_report:'reports/catalog-organization-root-airbag.md',
- entries:{
+const node=typeof module==='object'&&module.exports;
+// The Airbag/SRS map is generated separately; Node tests can load this file alone.
+if(node&&!root.CAL_ORGANIZATION_AIRBAG)require('./catalog-organization-airbag.js');
+const airbag=root.CAL_ORGANIZATION_AIRBAG||{entries:{}};
+const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Приборные панели/Skoda'},
   '2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970':{name:'Skoda Superb — декриптор EEPROM 93C86',folder:'Приборные панели/Skoda'},
   'd0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':{name:'Philips — заготовка калькулятора кода',folder:'Магнитолы и навигация/Неуточнённые'},
@@ -17,7 +18,12 @@ const data={
   '44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045':{name:'Toyota 89170-02810 — сброс Crash (SRS)',folder:'Подушки безопасности/Toyota'},
   '31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79':{name:'Nissan 28556 3AP1B — сброс Crash (SRS)',folder:'Подушки безопасности/Nissan'},
   'a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf':{name:'Chevrolet 96 806 850 (5WY67070) — сброс Crash (SRS)',folder:'Подушки безопасности/Chevrolet'}
- },
+};
+const data={
+ schema:1,
+ source_report:'reports/catalog-organization-root-airbag.md',
+ airbag_report:airbag.source_report||'',
+ entries:{...airbag.entries,...approved},
  search_aliases:{'d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':['Renault']}
 };
 const sha=s=>typeof s==='string'&&/^[0-9a-f]{64}$/.test(s);
@@ -30,6 +36,7 @@ function validate(d){
   const parts=item.folder.split('/');
   if(parts.length!==2||!sections.includes(parts[0])||!parts[1]||parts[1]==='.'||parts[1]==='..')throw Error('Invalid folder: '+item.folder);
   if(!item.name.trim()||item.name.length>140||/[\\/\\\\]/.test(item.name)||/\\.cal$/i.test(item.name))throw Error('Invalid name: '+item.name);
+  if(item.reason!==undefined&&(typeof item.reason!=='string'||!item.reason.trim()||item.reason.length>240))throw Error('Invalid reason: '+hash);
   const key=(item.folder+'/'+item.name).toLowerCase();
   if(seen.has(key))throw Error('Duplicate display path: '+key);seen.add(key);
  }
@@ -45,12 +52,13 @@ function get(hash){return sha(hash)?data.entries[hash]||null:null;}
 function title(entry){const item=resolved(entry);return item?item.name:entry?entry.path.split('/').at(-1):'';}
 function folder(entry){const item=resolved(entry);return item?item.folder:null;}
 function displayPath(entry){const item=resolved(entry);return item?item.folder+'/'+item.name+'.cal':null;}
+function reason(entry){const item=resolved(entry);return item&&item.reason||'';}
 // Search covers the original path and the new name/folder; aliases are hints, not confirmed brands.
 function hints(entry){return entry&&data.search_aliases[entry.sha]||[];}
 function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
 function searchText(entry){return searchParts(entry).join(' ');}
 function matches(entry,query){const q=String(query||'').toLowerCase();return !!q&&searchParts(entry).some(x=>x.includes(q));}
-const api=Object.freeze({data,get,title,folder,displayPath,hints,searchText,matches});
+const api=Object.freeze({data,get,title,folder,displayPath,reason,hints,searchText,matches});
 root.CatalogOrganization=api;
 if(typeof module==='object'&&module.exports)module.exports=api;
 })(globalThis);

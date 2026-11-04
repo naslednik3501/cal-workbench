@@ -29,6 +29,7 @@ function showCalculatorPaths(entry){
  const target=$('calcPath'),group=calculatorGroup(entry),aliases=group?.aliases||[entry],item=org.get(entry.sha);target.replaceChildren(node('span',item?'Раздел: '+item.folder:entry.path));
  // The thematic name is display-only: the original path stays the alias and the resource key.
  if(item)target.append(node('br'),node('span','Исходный путь: '+entry.path),node('br'),node('span','Исходный файл не перемещён и не изменён.','muted small'));
+ if(item?.reason)target.append(node('br'),node('span','Причина: '+item.reason,'muted small'));
  const hints=org.hints(entry);if(hints.length)target.append(node('br'),node('span','Поисковые подсказки: '+hints.join(', ')+'. Марка формой CAL не подтверждена.','muted small'));
  if(group?.version)target.append(node('br'),node('span','Вариант '+group.version+' из '+group.versionCount+': отдельно сохранённые файлы с одинаковым именем.'));
  if(aliases.length>1){target.append(node('br'),node('span','Одинаковый CAL в источниках: '+aliases.length+'. Пути сохранены:'));

@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 81431,
-      "sha256": "78c35807b928f601858eaab5899e6dbd16dca1b273c3e56524cd687178cf02fd"
+      "bytes": 84961,
+      "sha256": "7b2abcb9f753a1c54d913570704ea1399974ba09e2ef536f60712e5d32b8de3a"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -73,8 +73,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 41047,
-      "sha256": "252cab63f6d4d73d17279ca00897b48a71bc5fb3ba79b4b05f4a86f05ed3cf45"
+      "bytes": 41149,
+      "sha256": "d0934ba7ee1c13e0cfa2021c099882c861ee2a1420b40537e2a0c25089610480"
     },
     {
       "path": "archive-verification.json",
@@ -88,8 +88,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2336,
-      "sha256": "1e370cb7301ec3fcd9f7c087973dc818f06e61425888e97af15c29b304e62804"
+      "bytes": 2370,
+      "sha256": "e6ebdec1a1f8cd3ac41f6ac4b1c54268583174bf4b3b7c3683d6699f5154c839"
     },
     {
       "path": "cal-source.js",
@@ -307,9 +307,14 @@
       "sha256": "c144522d4665ce16430ea785370d5be4266ad15c0a195ded4116b16c7ad54490"
     },
     {
+      "path": "catalog-organization-airbag.js",
+      "bytes": 1087646,
+      "sha256": "6fb7ff17414305d114860a878d435f6e9bbc548c44292695db71171c11f5d934"
+    },
+    {
       "path": "catalog-organization.js",
-      "bytes": 5324,
-      "sha256": "67ed948bc815769563c269aeb47258f2f61caa41f972fa593a186cd6502654b7"
+      "bytes": 5923,
+      "sha256": "ff23652fa37d4820825a055fc3dfcd551d8ad718615c2e64d456832a29f0e50e"
     },
     {
       "path": "catalog-parts.json",
@@ -1318,8 +1323,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11614,
-      "sha256": "40a4f9eab950a2e80f51a0e0e2ca1d79b026508a762b8417c854e6fc2ee2e807"
+      "bytes": 11669,
+      "sha256": "503b4d445457617aa532cbe4e376a32b9e60bd8a757938801a926e835c327576"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1487,19 +1492,29 @@
       "sha256": "ba477450b7e896dafe802fbd20e7ccb60f71f4dff2a94f4b2abf03a3e628e31b"
     },
     {
+      "path": "reports/catalog-airbag-organization-2026-11-04.json",
+      "bytes": 6593,
+      "sha256": "4c95df6b1fe5b9f20ada7da3d5f418308280e0799c6d7e462dc5936ab50145c9"
+    },
+    {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.json",
-      "bytes": 481812,
-      "sha256": "c72de5e4944a03bdc72a6be39982b563252b5f6a3acacc7c8570512e8715b989"
+      "bytes": 338633,
+      "sha256": "d54aa398f25f48404168cf4a894a1bd1f3cbdb492eb069b6743bd007aec804c5"
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.md",
-      "bytes": 20091,
-      "sha256": "48c0e4b0371e39cb9b3366b059e4ac9e64449d57840c21466b4a9185a4eebb10"
+      "bytes": 19205,
+      "sha256": "06536f5f9da99143fa80411f0a30f067a2660a447cf736fe997b0095b26847da"
+    },
+    {
+      "path": "reports/catalog-organization-airbag-srs-2026-11-04.md",
+      "bytes": 12996,
+      "sha256": "6206b71acec7cc4830a1ad830a23c031e7deba2ff76498fb0d73a0244d6b9423"
     },
     {
       "path": "reports/catalog-organization-root-airbag.md",
-      "bytes": 27397,
-      "sha256": "cde6668cacad318cdbc17f5dfedd8fd582773c07614ad2c20e99a1d68cbe32ca"
+      "bytes": 28615,
+      "sha256": "3e674bd479344675c6b6f7e96dc8e13d359a0f59139570011385c3ce78e3e02a"
     },
     {
       "path": "reports/image-reference-groups-2026-11-02.csv",
@@ -1828,8 +1843,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 14905,
-      "sha256": "cfb687cf8dcedb9115c201a9af49b59984074ea6932d7841dabbf0d3cb1badb4"
+      "bytes": 19275,
+      "sha256": "3ea21a0299b280b25afb0587a4121cf3d3ba16ff0e1c3805701f896d6fb87fcf"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -1912,9 +1927,14 @@
       "sha256": "cf21dace2e3e9dcb702b0f59bca7c5480c65e272bbe5405f7fadadce8812e2ed"
     },
     {
+      "path": "tools/catalog_airbag_organization.js",
+      "bytes": 17106,
+      "sha256": "23f341da7c3f5bd1f3292268d1c8f44e1d53d49b38e79875a2093efc75ba28e5"
+    },
+    {
       "path": "tools/catalog_inventory.py",
-      "bytes": 55929,
-      "sha256": "390e5e6b13a5e5170e0bfbe80d9015fef16741e9c68644fab78fe0ea600aa2b5"
+      "bytes": 56231,
+      "sha256": "022c60671a7e0f944a56e93219355030b6c6d1482169f1c661c78d702e13b864"
     },
     {
       "path": "tools/package_release.py",

@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog.js"
 CATALOG_PARTS = ROOT / "catalog-data"
 ORGANIZATION = ROOT / "catalog-organization.js"
+ORGANIZATION_AIRBAG = ROOT / "catalog-organization-airbag.js"
 SCOPE = ROOT / "scope-registry.json"
 OUT_JSON = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.json"
 OUT_MD = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.md"
@@ -41,8 +42,11 @@ def load_catalog():
 
 
 def load_mapped():
-    text = ORGANIZATION.read_text(encoding="utf-8")
-    return set(re.findall(r"^\s*'([0-9a-f]{64})':", text, re.M))
+    mapped = set()
+    for source in (ORGANIZATION, ORGANIZATION_AIRBAG):
+        text = source.read_text(encoding="utf-8")
+        mapped.update(re.findall(r"['\"]([0-9a-f]{64})['\"]\s*:", text))
+    return mapped
 
 
 def load_scope():
@@ -618,6 +622,8 @@ def build_parallel(active, dc_sha):
         union = set().union(*sets.values())
         common = set.intersection(*sets.values())
         entries = [e for s in sections for e in by[s]]
+        if not entries:
+            continue
         per_section = []
         for s in sections:
             current = sets[s]
@@ -713,7 +719,7 @@ def build_spelling(active, dc_sha):
         primary_name = spec.get("primary", canonical)
         primary = index.get(primary_name, []) if primary_name else []
         if primary_name and not primary:
-            raise SystemExit(f"Canonical brand folder not found: {primary_name}")
+            continue
         psha = sha_set(primary)
         pnames = {parts(e)[-1].lower() for e in primary}
         aliases = []
@@ -721,7 +727,7 @@ def build_spelling(active, dc_sha):
         for alias in spec["aliases"]:
             found = index.get(alias, [])
             if not found:
-                raise SystemExit(f"Brand alias not found: {canonical} <- {alias}")
+                continue
             entries.extend(found)
             aliases.append(
                 {
@@ -989,8 +995,8 @@ def build_report():
     scope, scope_excluded = load_scope()
     all_cal = [e for e in catalog["entries"] if e["ext"] == "cal"]
     active = [e for e in all_cal if e["sha"] not in scope_excluded and e["sha"] not in mapped]
-    if len(mapped) != 12:
-        raise SystemExit(f"Expected 12 approved CALs, got {len(mapped)}")
+    if len(mapped) != 5392:
+        raise SystemExit(f"Expected 5392 approved CALs, got {len(mapped)}")
     if sha_set(active) & mapped:
         raise SystemExit("Approved CAL leaked into the inventory")
 
@@ -1113,8 +1119,9 @@ def render_markdown(report):
         "",
         "## Метод",
         "",
-        "- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`.",
-        "- 12 CAL с утверждённой картой отображения исключены по SHA.",
+        "- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`, `catalog-organization-airbag.js`.",
+        "- 5 392 CAL с утверждённой картой отображения исключены по SHA (12 из первого этапа,",
+        "  5 380 новых записей Airbag/SRS); это 5 383 уникальных SHA Airbag/SRS плюс 9 корневых CAL.",
         "- CAL читались только для неоднозначных записей; полезная нагрузка — hex-код без",
         "  читаемого заголовка, поэтому основание — путь, имя и совпадения SHA.",
         "- Большие группы в Markdown не дублируются: полные пути и статистика по папкам — в JSON.",

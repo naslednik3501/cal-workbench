@@ -6,8 +6,9 @@
 
 ## Метод
 
-- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`.
-- 12 CAL с утверждённой картой отображения исключены по SHA.
+- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`, `catalog-organization-airbag.js`.
+- 5 392 CAL с утверждённой картой отображения исключены по SHA (12 из первого этапа,
+  5 380 новых записей Airbag/SRS); это 5 383 уникальных SHA Airbag/SRS плюс 9 корневых CAL.
 - CAL читались только для неоднозначных записей; полезная нагрузка — hex-код без
   читаемого заголовка, поэтому основание — путь, имя и совпадения SHA.
 - Большие группы в Markdown не дублируются: полные пути и статистика по папкам — в JSON.
@@ -15,9 +16,9 @@
 ## Каталог
 
 - Записей: 23,946; CAL-путей: 23,357; уникальных CAL SHA: 15,057.
-- Активных CAL-путей: 23,345; активных SHA: 15,045; прямо в разделах без марки/модели: 194.
-- Исключено реестром области: 0 CAL; адресных правил ресурсов: 9; утверждённой картой: 12.
-- Групп: 70; покрыто 21,734 путей / 13,518 SHA; вне групп — 1,611 обычных путей.
+- Активных CAL-путей: 15,684; активных SHA: 9,665; прямо в разделах без марки/модели: 194.
+- Исключено реестром области: 0 CAL; адресных правил ресурсов: 9; утверждённой картой: 5392.
+- Групп: 66; покрыто 14,073 путей / 8,138 SHA; вне групп — 1,611 обычных путей.
 
 ## Словарь разделов
 
@@ -105,9 +106,7 @@
 | D-cat-motobikes | category_direct | 2 | 2 | Мототехника/Мотоциклы | low |
 | D-cat-snowmobile | category_direct | 2 | 1 | Мототехника/Снегоходы | low |
 | D-cat-immo-convertor | category_direct | 2 | 2 | Иммобилайзеры и ключи/Конвертеры ключей | high |
-| D-cat-china | category_direct | 2 | 2 | Китайские автомобили/Неуточнённые | low |
 | P01 | parallel_sections | 9259 | 4829 | Приборные панели/<марка> | high |
-| P02 | parallel_sections | 7661 | 5380 | Подушки безопасности/<марка> | high |
 | P03 | parallel_sections | 86 | 85 | Приборные панели/Универсальные | high |
 | P04 | parallel_sections | 96 | 76 | Утилиты/Конвертеры US-EU | high |
 | P05 | parallel_sections | 694 | 434 | Мототехника/<ATV|Мотоциклы|Снегоходы> и Грузовые и спецтехника | medium |
@@ -119,14 +118,13 @@
 | S-audi | brand_spelling | 9 | 7 | <раздел устройства>/Audi | high |
 | S-bentley | brand_spelling | 1 | 1 | <раздел устройства>/Bentley | high |
 | S-bmw | brand_spelling | 18 | 18 | <раздел устройства>/BMW | high |
-| S-chery | brand_spelling | 28 | 20 | <раздел устройства>/Chery | high |
+| S-chery | brand_spelling | 12 | 12 | <раздел устройства>/Chery | high |
 | S-chevrolet | brand_spelling | 1 | 1 | <раздел устройства>/Chevrolet | medium |
 | S-chrysler | brand_spelling | 1 | 1 | <раздел устройства>/Chrysler | medium |
 | S-citroen | brand_spelling | 4 | 4 | <раздел устройства>/Citroen | high |
 | S-daihatsu | brand_spelling | 3 | 3 | <раздел устройства>/Daihatsu | high |
 | S-dongfeng | brand_spelling | 11 | 6 | <раздел устройства>/DongFeng | high |
-| S-hyundai | brand_spelling | 346 | 169 | <раздел устройства>/Hyundai | high |
-| S-infiniti | brand_spelling | 165 | 74 | <раздел устройства>/Infiniti | high |
+| S-infiniti | brand_spelling | 91 | 38 | <раздел устройства>/Infiniti | high |
 | S-jac | brand_spelling | 4 | 2 | <раздел устройства>/JAC | high |
 | S-jaguar | brand_spelling | 28 | 14 | <раздел устройства>/Jaguar | high |
 | S-kamaz | brand_spelling | 6 | 6 | <раздел устройства>/KAMAZ | high |
@@ -136,7 +134,6 @@
 | S-mazda | brand_spelling | 2 | 2 | <раздел устройства>/Mazda | high |
 | S-mercedesbenz | brand_spelling | 64 | 64 | <раздел устройства>/Mercedes-Benz | high |
 | S-peugeot | brand_spelling | 5 | 5 | <раздел устройства>/Peugeot | high |
-| S-pontiac | brand_spelling | 6 | 6 | <раздел устройства>/Pontiac | high |
 | S-porsche | brand_spelling | 2 | 2 | <раздел устройства>/Porsche | high |
 | S-saab | brand_spelling | 1 | 1 | <раздел устройства>/Saab | high |
 | S-ssangyong | brand_spelling | 69 | 33 | <раздел устройства>/SsangYong | high |
@@ -145,7 +142,7 @@
 | S-tagaz | brand_spelling | 8 | 4 | <раздел устройства>/TAGAZ | high |
 | S-volkswagen | brand_spelling | 131 | 116 | <раздел устройства>/Volkswagen | high |
 | S-cfmoto | brand_spelling | 13 | 7 | <раздел устройства>/CFMOTO | high |
-| E01 | broken_encoding | 166 | 113 | переименовать папку и файл по декодированному имени | high |
+| E01 | broken_encoding | 59 | 36 | переименовать папку и файл по декодированному имени | high |
 | E02 | broken_encoding | 4 | 3 | нормализовать пробелы в имени папки | high |
 
 ## Параллельные разделы
@@ -158,15 +155,6 @@ Car повторяет Dashboard почти побайтно; Car дополни
 |---|---:|---:|---:|---:|
 | Calculators/Dashboard | 4767 | 4763 | 4414 (93%) | 4763 (100%) |
 | Calculators/Car | 4492 | 4480 | 4414 (98%) | 4480 (100%) |
-
-### P02 — Airbag и SRS: параллельные разделы подушек безопасности (high)
-
-Имена совпадают полностью, общая часть — 2 231 SHA; уникальные хвосты следует сохранить как варианты сборок. Пересечение с другими разделами — Airbag: 2231 SHA (59%); SRS: 2231 SHA (59%).
-
-| Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
-|---|---:|---:|---:|---:|
-| Calculators/Airbag | 3826 | 3802 | 2231 (59%) | 0 (0%) |
-| Calculators/SRS | 3835 | 3809 | 2231 (59%) | 0 (0%) |
 
 ### P03 — I и I_ok: одинаковые имена панелей, разные сборки (high)
 
@@ -250,17 +238,17 @@ OTHER повторяет корневые PIN, Service calc, US-Euro converter �
 | ID | Группа | Файлов | SHA | Уверенность |
 |---|---|---:|---:|---|
 | P01 | Dashboard и Car: две раскладки одного содержимого | 9259 | 4829 | high |
-| P02 | Airbag и SRS: параллельные разделы подушек безопасности | 7661 | 5380 | high |
 | P06 | Региональные France, Germany, CHINA повторяют Dashboard | 850 | 850 | high |
 | P09 | Immo off вложен в Immo | 373 | 364 | high |
-| S-hyundai | Hyundai: варианты написания папки | 346 | 169 | high |
 | D-cat-atv | ATV: файлы прямо в папке категории, без марки | 255 | 169 | high |
 | S-kia | Kia: варианты написания папки | 242 | 149 | high |
 | P08 | OTHER: зеркало утилит в корне каталога | 177 | 177 | high |
-| E01 | Пути с битой кодировкой UTF-8 | 166 | 113 | high |
-| S-infiniti | Infiniti: варианты написания папки | 165 | 74 | high |
 | S-volkswagen | Volkswagen: варианты написания папки | 131 | 116 | high |
 | P04 | US-Euro converter и USA-Euro converter | 96 | 76 | high |
+| S-infiniti | Infiniti: варианты написания папки | 91 | 38 | high |
+| P03 | I и I_ok: одинаковые имена панелей, разные сборки | 86 | 85 | high |
+| S-ssangyong | SsangYong: варианты написания папки | 69 | 33 | high |
+| S-mercedesbenz | Mercedes-Benz: варианты написания папки | 64 | 64 | high |
 
 ## Ограничения
 
