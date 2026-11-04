@@ -246,8 +246,11 @@ P08, P10 и прямые `Tachograf off`/`CRC`; `OTHER` сведён по SHA, 1
 127 активных путей вне групп; сборка **252 ресурса**, выпуск **408 файлов**;
 `py_compile` и `git diff --check` чисто. SHA-256
 `catalog-organization-utilities.js`: `877651a56e0fe87a0237cb92ffc0e6b8dab83877e38c8d58bbf1f1365289915f`.
-Публикация: commit и fast-forward в `main`; после неё проверяются HTTP 200 и
-совпадение SHA. Остаток неоднозначного — `Help.cal` и 24 инвентарные группы
+Публикация: commit `5d49cecc982d3de70d72a577060204a4c300f3b1`, ветка
+`task/T-016-cline-deepseek-catalog-roots` и `main` обновлены fast-forward.
+Живой сайт: `catalog-organization-utilities.js` HTTP 200 и SHA-256 совпал;
+`catalog-organization.js`, `index.html`, отчёты JSON/MD также 200 и совпали.
+Остаток неоднозначного — `Help.cal` и 24 инвентарные группы
 (P06, P07, P05, ATV, написания марок, E01 и прямые файлы без марки).
 
 
