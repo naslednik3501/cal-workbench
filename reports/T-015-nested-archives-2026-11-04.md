@@ -137,3 +137,15 @@ commit `ab589e2bad449d7a94275f8365c1d44e6f700cc6` (те же пять ZIP, чт�
 - Поведение на реальном автомобиле не проверялось, заявлений о правильности расчётов
   на физических блоках нет.
 
+## Публикация
+
+Изменения объединены в main через [PR #17](https://github.com/naslednik3501/cal-workbench/pull/17),
+merge-commit `d50d6bfcace97058acb3d9d7ecd0269cb05e4f0c`. Сборка GitHub Pages
+[41847393821](https://github.com/naslednik3501/cal-workbench/actions/runs/41847393821)
+завершилась успешно. На [сайте](https://naslednik3501.github.io/cal-workbench/) проверены
+HTTP 200 и побайтное совпадение `index.html`, `engine.js`, `app.js`, этого отчёта и
+машиночитаемого инвентаря с локальными файлами. `engine.js` остался
+`ee61ae1293caceee451a788f033b537a215f0cda9bb9ada9ee35944b3d045eb2`, профили T-013 —
+`74808472ebb67d11ededbf05c1897b074ba95c85dbf1bad6b952efa42621002c`, то есть поведение
+калькуляторов не изменилось: T-015 не касалась кода.
+
