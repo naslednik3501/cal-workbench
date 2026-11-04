@@ -84,6 +84,7 @@ for(const {p} of state.unsupported){assert.equal(p.executable,false);assert.matc
 
 const baselineUnsupported=[...new Set(baseline.unavailable.filter(x=>x.status==='unsupported'&&x.format==='binary').map(x=>x.sha))];
 assert.equal(baselineUnsupported.length,16);
-for(const sha of baselineUnsupported){const p=E.parse(Buffer.from(CAL_CATALOG.blobs[sha],'base64'),{sha});assert.equal(p.executable,false,'baseline unsupported CAL must not be promoted: '+sha);}
+const t013Readers=new Set(Object.keys(require('./fixtures/t013-readers.json')));assert.equal(t013Readers.size,15);
+for(const sha of baselineUnsupported){const bytes=Buffer.from(CAL_CATALOG.blobs[sha],'base64');const strict=E.parse(bytes,{sha,skipEventProfiles:true});assert.equal(strict.executable,false,'unprofiled original remains unsupported: '+sha);const p=E.parse(bytes,{sha});if(t013Readers.has(sha)){assert(p.executable&&p.readOnly);assert.deepEqual(p.validEvents,['show']);assert.deepEqual(p.absentEvents,['apply']);}else assert.equal(p.executable,false,'invalid initialization remains blocked: '+sha);}
 
 console.log(JSON.stringify({target:target.length,readOnly:216,full:32,partial:4,unsupported:2,writerExecution:'BSI Partner D780949: 256-byte synthetic buffer'}));

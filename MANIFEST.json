@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 35192,
-      "sha256": "c2fe3b62db13a1bf1030027d9ffed2bbba3fa5f87434a04f0545c5ed35703845"
+      "bytes": 38324,
+      "sha256": "82bba43112c773b700f1207e2a292546d78457bd784b6152304617c71d416ced"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -83,8 +83,8 @@
     },
     {
       "path": "binary-event-profiles.js",
-      "bytes": 41598,
-      "sha256": "bb212bc07b87cf42bf57bc2a30c32f95942d8aea40a511c151848ca95f05ef92"
+      "bytes": 45546,
+      "sha256": "74808472ebb67d11ededbf05c1897b074ba95c85dbf1bad6b952efa42621002c"
     },
     {
       "path": "build_static.py",
@@ -333,13 +333,18 @@
     },
     {
       "path": "engine.js",
-      "bytes": 19976,
-      "sha256": "8ed938feda934f3fa806c4ee7cff9186d79bbe4a20727f82bf0b7e75643e057c"
+      "bytes": 20599,
+      "sha256": "d274ee32ef9d32d6ea297ab009c277eb0ea8403ffcf6860f412faba87c14aadf"
     },
     {
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
+    },
+    {
+      "path": "image-assets.json",
+      "bytes": 15663,
+      "sha256": "7e74f32905e444fb30f8e655dfca1bd143fbc55bfe359373a487b9a7bc6650e5"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1242,11 +1247,6 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
-      "path": "image-assets.json",
-      "bytes": 15663,
-      "sha256": "7e74f32905e444fb30f8e655dfca1bd143fbc55bfe359373a487b9a7bc6650e5"
-    },
-    {
       "path": "image-resource-data.js",
       "bytes": 107124,
       "sha256": "8866972375d0fc3f7f7cbbdbe9c6709d617253aec6bdff5f2a948bc66bab8888"
@@ -1330,6 +1330,26 @@
       "path": "reports/T-012-writers-2026-11-04.md",
       "bytes": 16053,
       "sha256": "899e894eec65bdd4a7bbc9c6ae98b77441c6a400c36336d57a6730c1ca3066d4"
+    },
+    {
+      "path": "reports/T-013-binary-recovery-2026-11-04.md",
+      "bytes": 6420,
+      "sha256": "31f77404f8260e2349b726642bc149d7f2bdef63913907a6a308e4d3c8cb967b"
+    },
+    {
+      "path": "reports/T-013-progress-2026-11-04.md",
+      "bytes": 4058,
+      "sha256": "14507e149d44db9d485f1efc6ea0373cda33ae984680a482ea8f1dfebef6693b"
+    },
+    {
+      "path": "reports/T-013-reader-proof-2026-11-04.json",
+      "bytes": 58283,
+      "sha256": "25d3bacc4c90b45d5934b9a477798c6a049aab4ee576dd13dde865f33c845c33"
+    },
+    {
+      "path": "reports/T-013-results-2026-11-04.json",
+      "bytes": 15562,
+      "sha256": "03ac8147c56687d527ce0edfc2d62b32856ea722d90d98dabf08e63d2d080505"
     },
     {
       "path": "reports/T-014-skoda-2026-11-04.md",
@@ -1482,6 +1502,16 @@
       "sha256": "6c52cd6010dd74088b49abed733f8c6d7133e5147476af0e319933522e587db3"
     },
     {
+      "path": "tests/fixtures/t013-readers.json",
+      "bytes": 3473,
+      "sha256": "5c205135cae9e1af7ab5b9cc99983aa82633c7ee1484774aff2ebbdcf320c974"
+    },
+    {
+      "path": "tests/fixtures/t013-targets.json",
+      "bytes": 6767,
+      "sha256": "34cf4ee17e3db99f039fd6ed9c1d23a55d81e1ded4d9290eb54b2af920030e44"
+    },
+    {
       "path": "tests/fixtures/vw.cal",
       "bytes": 1848,
       "sha256": "b759aefbbb90c3e59830aae3f1d44ae83a094d1b1ec2f2e044b12a81dda55409"
@@ -1493,8 +1523,8 @@
     },
     {
       "path": "tests/test_binary_resolution.js",
-      "bytes": 7446,
-      "sha256": "a55fd64e9c26c8da0e4cb9ce6031f4b71857a4e06057e0150730767ad31175a8"
+      "bytes": 7863,
+      "sha256": "38f3a1e3bc3542eec062a7647843ffed9178357987c3ea594498e048e6bb41e6"
     },
     {
       "path": "tests/test_browser.js",
@@ -1622,6 +1652,21 @@
       "sha256": "0b617e09e7a4d9d9afdf19c3fc0f352e0ac8bb5bcdfd9a735e1c0052e25b879d"
     },
     {
+      "path": "tests/test_t013_app.js",
+      "bytes": 6770,
+      "sha256": "c39ee7ccde5bada458f63cea135a0adf76de083adb94d3b0d463a64667be8596"
+    },
+    {
+      "path": "tests/test_t013_invert.js",
+      "bytes": 1700,
+      "sha256": "16c39adc8b4be8af6e008058a4a5a00c612619bdba799d49818eb5260417c066"
+    },
+    {
+      "path": "tests/test_t013_readers.js",
+      "bytes": 4885,
+      "sha256": "00374503d799c25b01330f426e5df90ad9657a255844b665222f77d603b6ac6e"
+    },
+    {
       "path": "tests/test_t014_app.js",
       "bytes": 5899,
       "sha256": "47df352d8611c82f05028ce12aa3a552c3f06e4c235240039f890f4c3e49e840"
@@ -1678,8 +1723,8 @@
     },
     {
       "path": "tools/build-binary-event-profiles.js",
-      "bytes": 5065,
-      "sha256": "aaa3ed9b11d5d2071f99a193790fa3e4ff79db3038d93931b2e769747f03e839"
+      "bytes": 5705,
+      "sha256": "b90ad10d47e300ac1fa94d1181aee22711fd1d3d71f988d38410e123b6972cd2"
     },
     {
       "path": "tools/build_catalog.py",
@@ -1777,6 +1822,17 @@
       "remaining_unresolved_reference_occurrences": 1639,
       "blank_fields": 70,
       "whitespace_only_fields": 85
+    },
+    "T-013": {
+      "targets": 16,
+      "reader_restored": 15,
+      "writers_restored": 0,
+      "remaining_unavailable": 1,
+      "synthetic_vectors": 90,
+      "app_handler_scenarios": 31,
+      "original_iprog": "not executed",
+      "hardware": "not tested",
+      "browser_rendering": "not tested"
     }
   },
   "personal_bin_fixtures_included": false
