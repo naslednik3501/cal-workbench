@@ -1,0 +1,2686 @@
+{
+  "schema": 1,
+  "scope": "Exact original SHA-256 profiles for the 254 baseline binary partial CALs",
+  "counts": {
+    "readOnly": 216,
+    "writers": 32,
+    "partial": 4,
+    "unsupported": 2
+  },
+  "readers": [
+    {
+      "sha": "00e0f434658b7b756647c15891cd7c86544cf54f5e8d0ed9db06818a095d0dfa",
+      "paths": [
+        "Calculators/CarRadio/Renault/CM7RN41F without display.cal"
+      ],
+      "applyPointer": 8045,
+      "decodedBytes": 608,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "033ea33a90c5ace7bb05d9f7314a79598e2478c92ce0913293b3a1e48417e44f",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHALLENGE 500  GR1110.cal"
+      ],
+      "applyPointer": 30411,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "03c14b764cdb5b833455255551c449189e905b13fc586ddb41198c318d7d3ed6",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/CONCERT EU B7 SOUL AUZ1Z3.cal"
+      ],
+      "applyPointer": 28612,
+      "decodedBytes": 1632,
+      "showInstructions": 255,
+      "controls": 16
+    },
+    {
+      "sha": "045ebf86326374dce6c7ca1fcc4214b5e4a269062e400b1d74afda5383ccbf71",
+      "paths": [
+        "Calculators/CarRadio/Grundig/ALANA MP3 SEZ2Z9  6L0 035 186A.cal"
+      ],
+      "applyPointer": 21159,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "056b33f6a91422d2898020cf258509e3b377d5029eb5384ab9e566ea99203d9e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4490 CD  GR1155.cal"
+      ],
+      "applyPointer": 13449,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "059c386e21bd3640d3b337ff8259bf63be5a114c3dd5ca934256c1412594159f",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA CD SEZ2Y6  1M0 035 186B.cal"
+      ],
+      "applyPointer": 59452,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "05c9065517bc9ee406a8906a67e519c42c249ed09e8e5a703f508ed9b1aef56d",
+      "paths": [
+        "Calculators/CarRadio/Alpine/CM7RN61F without display.cal"
+      ],
+      "applyPointer": 46860,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "0601d3613bdeec3439f86be09871a10b08f81794688eb0d92ab3e033f0cf3830",
+      "paths": [
+        "Calculators/CarRadio/Fiat/AD 183M  FA0926.cal"
+      ],
+      "applyPointer": 39459,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "0661cf828abead2bae7748d1c3d3de9cc9655665ebd1c037d2ae119d0e581a56",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2803 VD STEREO.cal"
+      ],
+      "applyPointer": 26813,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "074a4f33f36a087427f1a91dd503951f45c1583c80e292740031166f02fc93b6",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186 GX 24╤ü16.cal"
+      ],
+      "applyPointer": 2844,
+      "decodedBytes": 960,
+      "showInstructions": 126,
+      "controls": 16
+    },
+    {
+      "sha": "09e1d92177183e1caa77aab3cd76833f169ab2f0e4b27884dfb347af978351e2",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186J.cal"
+      ],
+      "applyPointer": 31625,
+      "decodedBytes": 736,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "0b3a39b00c45eb46f8c3c5f15d2846500809c1b6009e1b103f3a4f0301933fa9",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2804 VD REVERSE.cal"
+      ],
+      "applyPointer": 26042,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "0baf470018a1a548fffbca7865ee5bb549eb8f76e02101ff9cdf6c900d5be851",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SAXO 2014 RDS  GR0947.cal"
+      ],
+      "applyPointer": 53028,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "0cb45ff5563672bc993bd4b85b9678e5bcf0e918eb5b24028d2adb643fde1d22",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  8L0 035 186G.cal"
+      ],
+      "applyPointer": 30653,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "0d71b4e96746f41a7d60f94ff0c7ebdbe44f71fbca24eb74a0051bb60873d04f",
+      "paths": [
+        "Calculators/CarRadio/VW/Alpha-5 Polo Lupo BVX VWZ1Z1.cal"
+      ],
+      "applyPointer": 48298,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "0e32eaaf4db5d35c87ae94cb6cd3f41ba475aaf6a35cb3d5e3dbb5f1fc54242d",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1903 RDS.cal"
+      ],
+      "applyPointer": 42747,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "0f5794ae30c0aab355f0b5268ec356c0657d1cda4aec12e6337340ed5cb8ab6e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  8E0 035 186D.cal"
+      ],
+      "applyPointer": 57654,
+      "decodedBytes": 992,
+      "showInstructions": 126,
+      "controls": 16
+    },
+    {
+      "sha": "103a87d976348a3d8a28ae22920c9f1ff3472a02465b4b0ced9272f0b94346e0",
+      "paths": [
+        "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 4dig.cal"
+      ],
+      "applyPointer": 52460,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "1148097721371cde3cb5416dc42eb9e9a71f775dfb436570be25b1bf698b141d",
+      "paths": [
+        "Calculators/Immo/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal"
+      ],
+      "applyPointer": 62794,
+      "decodedBytes": 672,
+      "showInstructions": 117,
+      "controls": 10
+    },
+    {
+      "sha": "11c907925d49a61ae94ce02f741f564e6f1b27956995f502db33e162958308af",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/SOUND 3000  DB0920.cal"
+      ],
+      "applyPointer": 5136,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "12afe18fbfc0308dd3fc9cd619915db3219364397cc057b8cd0eaf2a7b7e4d2d",
+      "paths": [
+        "Calculators/CarRadio/Skoda/SYMPHONY SKZ2Z3  1U0 035 161C.cal"
+      ],
+      "applyPointer": 40939,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "13c2f55f9d13198f4659d7aefeec6ad1faf5bb63ce9e36e806161641cc009fbe",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BRISA SEZ1Z5 wide  1M0 035 152A.cal"
+      ],
+      "applyPointer": 19617,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "1695d8332c166c9098fd681899753b5765c7ace03f0b079ef32cdcb452d384b0",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186T.cal"
+      ],
+      "applyPointer": 40149,
+      "decodedBytes": 1024,
+      "showInstructions": 129,
+      "controls": 16
+    },
+    {
+      "sha": "194b4dc5c62e8f2c6ced9df31e94e727fbe52152e33bf95e2d5508b524d51312",
+      "paths": [
+        "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186L.cal"
+      ],
+      "applyPointer": 42490,
+      "decodedBytes": 704,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "198b0c71c8eb92ba35439bd75ecc44126a5e383ff05fe8c04fc78f523f88ac21",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHALLENGE 400  GR1109.cal"
+      ],
+      "applyPointer": 11907,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "1bbd5c4877b3cf2d5cb0dae8b4097e0229efa0c619af6808b2acf1f3e9499704",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/MersExquisitcqlp1420l.cal"
+      ],
+      "applyPointer": 12886,
+      "decodedBytes": 416,
+      "showInstructions": 56,
+      "controls": 4
+    },
+    {
+      "sha": "1cf5f0d856f5b06bf756c1f90e8a701264ce37da542c0b85869df39838a46afe",
+      "paths": [
+        "Calculators/CarRadio/Grundig/MUSIC SYSTEM 402 SKZ2Z2  6Y0 035 161A.cal"
+      ],
+      "applyPointer": 53028,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "1da57dd086665f9e18e10918a0b2c44c7199cbd6dc77dce041ac41d4c7f7a0b3",
+      "paths": [
+        "Calculators/Immo/Car/Nissan/Nissan BCM.cal"
+      ],
+      "applyPointer": 856,
+      "decodedBytes": 736,
+      "showInstructions": 102,
+      "controls": 7
+    },
+    {
+      "sha": "2123695973d1e669e15aa20451d79a5cdcc2916102d63e5c26e54624811f4cb7",
+      "paths": [
+        "Calculators/CarRadio/Seat/BRISA SEZ2Z5 wide  1M0 035 152A.cal"
+      ],
+      "applyPointer": 36006,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "21fa0844642a7fa0f624f67c8f5298c3d70d8161851f161f3e2089b743b29e81",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3300 RDS  GR1028.cal"
+      ],
+      "applyPointer": 44804,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "2450276136fdfb2a996adfcd2f40d3c36b56088b0d4aad04824dbb57fedc5d63",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2805 VD REVERSE.cal"
+      ],
+      "applyPointer": 58168,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "25f24abe85a8b6612be362bc58f022c5eb44a4f586ae25498029c6bff8de4c79",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3905 RDS REVERSE.cal"
+      ],
+      "applyPointer": 52000,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "2743b0bd5ef28468ee560fbafa6c817996879c4a7d2326a05ea0ccc0079cbfcb",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3904 RDS REVERSE  GR0579.cal"
+      ],
+      "applyPointer": 52514,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "2769b940ea5693e68a68db7e6f0e2b6a5b9c8f14b0cc9056e888013d38015882",
+      "paths": [
+        "Calculators/CarRadio/Grundig/MUSIC SYSTEM 201A SK1167  1U0 035 160A.cal"
+      ],
+      "applyPointer": 5482,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "27a24433af533d93311cb9a6936be9ac4781a0a939fe5b579acaa2d36aa1293b",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BYZ2Z3.cal"
+      ],
+      "applyPointer": 43518,
+      "decodedBytes": 1024,
+      "showInstructions": 122,
+      "controls": 16
+    },
+    {
+      "sha": "29ed9171cf35ab1150db6be1ed5a83a772d394992a804b7955566e265083e8bd",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3860 VD.cal"
+      ],
+      "applyPointer": 4968,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "2ccb6e48bf5b8b9f93ff1e69de0d2301abaca9df7afa696320ead4ac9ebb4293",
+      "paths": [
+        "Calculators/CarRadio/Skoda/MUSIC SYSTEM 402 SKZ2Z2  6Y0 035 161A.cal"
+      ],
+      "applyPointer": 3865,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "2da40f12ff84d180036ed1a351e326d183cdd620da95a983bcd33b923b1732bb",
+      "paths": [
+        "Calculators/CarRadio/Seat/BRISA SEZ2Z5 wide  1U0 035 161C.cal"
+      ],
+      "applyPointer": 61701,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "314acdf0d8710244634a3518a94f304d9cb8690a8e8810c12593a9d4d30d9af6",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SYMPHONY SKZ2Z3  1U0 035 161D.cal"
+      ],
+      "applyPointer": 7024,
+      "decodedBytes": 896,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "31a12922799b58a3a57773ebde2cc2a4556e0635672bd227bf7d47d82190eab5",
+      "paths": [
+        "Calculators/CarRadio/Seat/LENA SEZ2Z8 panel  6L0 035 152.cal"
+      ],
+      "applyPointer": 16742,
+      "decodedBytes": 864,
+      "showInstructions": 96,
+      "controls": 15
+    },
+    {
+      "sha": "32eee3bb4ec7ec405bb7c91e4305ceca589e9938767ae6327e81a83cfe8c4684",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 3000  DB0994.cal"
+      ],
+      "applyPointer": 50972,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "357bbdbfe86bf0954e2a52f1ebdae5e5b69cb746d33101d29dbba6d0a5e58894",
+      "paths": [
+        "Calculators/CarRadio/VW/SOUND 3000 VWZ2Z8  2D0 035 160.cal"
+      ],
+      "applyPointer": 10341,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "35dbf1f1f228b1306784bd24ef6043cd66b9ba8a48513d6994e768fd6effea09",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4890 CD  GR1571.cal"
+      ],
+      "applyPointer": 13706,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "37d024fa97ba334063d6f98e842f2096ec02965b70049f5d21105035a138f1bd",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 4805 VD REVERSE.cal"
+      ],
+      "applyPointer": 35294,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "38f0e107f4ee4b43a7ae01ee082fa69037d6de9bee29a773010350964f31af47",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3804 REVERSE.cal"
+      ],
+      "applyPointer": 47631,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "3b714008da8c3e3eb9c6ead42e99e1508f7b13fe2432fa867a1a1754cc506b3e",
+      "paths": [
+        "Calculators/CarRadio/Iveco/GRUNDIG CHALLENGE 400  GR1149.cal"
+      ],
+      "applyPointer": 60178,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "3c1dc43e7767553c10aa09632b073e79b3743f6ad0c94af85a0ca9345b75e078",
+      "paths": [
+        "Calculators/CarRadio/Skoda/MUSIC SYSTEM 201A SK1167  1U0 035 160A.cal"
+      ],
+      "applyPointer": 17212,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "3caea3f4b9adb1cbe2e8869743c373ee8d738c2f23d5b0ce552c570b2263f2fb",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4790 CD.cal"
+      ],
+      "applyPointer": 59710,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "3de1cf195ebfdc5330c8d6f55fd3ac2da9947ce94e63e00bd5d538c57c925ff3",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  4B0 035 152C.cal"
+      ],
+      "applyPointer": 35294,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "40198cfabd5c2dc3bf2c2fffa0eeb4fbfa2146752816ecc4b6e0bfb08e03812a",
+      "paths": [
+        "Calculators/CarRadio/Jaguar/AJ 9800R.cal"
+      ],
+      "applyPointer": 30065,
+      "decodedBytes": 544,
+      "showInstructions": 33,
+      "controls": 14
+    },
+    {
+      "sha": "412d05ab11fbbd452fc5ee9f237f489667319181f6de6114bdea1222fef9d3f1",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA V4 SEZ2Z6 wide  1M0 035 186F.cal"
+      ],
+      "applyPointer": 41465,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "419913759766241277f0ac28d4a530f134ce0eb3cc2857b1bbbf0d5a46b5ac8b",
+      "paths": [
+        "Calculators/CarRadio/Renault/CM7RN410 without display  AL9635.cal"
+      ],
+      "applyPointer": 60219,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "41ea537bb5776a653ab8b34a7fd307dc3fb3580e2a716f4ddbb07e3cb193928c",
+      "paths": [
+        "Calculators/CarRadio/Jaguar/AJ 9600R.cal"
+      ],
+      "applyPointer": 42210,
+      "decodedBytes": 576,
+      "showInstructions": 33,
+      "controls": 14
+    },
+    {
+      "sha": "422da5b1ee3aac0d47c09394aef484debb133570ef867a241260bcd255a079f2",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/SOUND 5000  DB0921.cal"
+      ],
+      "applyPointer": 59699,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "42cbecc3c3dd5fd6d444b8b3c13f3ad936eb52f818decb8aa34fafe8c92f10b6",
+      "paths": [
+        "Calculators/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal"
+      ],
+      "applyPointer": 52923,
+      "decodedBytes": 672,
+      "showInstructions": 117,
+      "controls": 10
+    },
+    {
+      "sha": "445deccdf9cb5591ba5cf4c43c553da7bed5ae1f76a1d7ff4380e6ec79ef8b28",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BENZ SOUND 1000  DB1019.cal"
+      ],
+      "applyPointer": 64079,
+      "decodedBytes": 608,
+      "showInstructions": 35,
+      "controls": 14
+    },
+    {
+      "sha": "44bcca1c1fe51acb9971bfe9ddde9a6c1314ece6a6c68abc7c9a3dcedca7914b",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/SOUND 5000  DB0998.cal"
+      ],
+      "applyPointer": 17768,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "4a174df2e0c570b251907ba7f1f4f33dd9dbcd947632f02060dc1b28cacaa3f6",
+      "paths": [
+        "Calculators/CarRadio/Alpine/P04858543AG-A.cal"
+      ],
+      "applyPointer": 56112,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "4e066082ff53249a5bdf7656056d45202e7be8fc535a1c295d4069c9658ffb15",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 3000 VWZ2Z8  2D0 035 160.cal"
+      ],
+      "applyPointer": 2912,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "4f206c2f89a96fb57e5d3c0a73cb04c22885aa4f4a0052499af905465a9dfdec",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8E0 035 152B.cal"
+      ],
+      "applyPointer": 40434,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "503a3bd482ce6d9819389da32fb820e10ebc86c1dadbef4d687ba2247b0123f3",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/BETA VWZ1Z2.cal"
+      ],
+      "applyPointer": 61509,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "516cba241f0f875ec4a3af76d26947b8c7fe1c539947d5b6904f5233585356b2",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CONCERT CD WIDE AUZ2Z3.cal"
+      ],
+      "applyPointer": 15505,
+      "decodedBytes": 960,
+      "showInstructions": 122,
+      "controls": 16
+    },
+    {
+      "sha": "538600258e9c75b9619d564a20523cd2e8b4c9cc0fd686a84986feef50d1ca49",
+      "paths": [
+        "Calculators/CarRadio/Grundig/MUSIC SYSTEM 502 SKZ2Z3  6Y0 035 161.cal"
+      ],
+      "applyPointer": 41976,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "paths": [
+        "Calculators/ECU/ECU 95080.cal"
+      ],
+      "applyPointer": 36972,
+      "decodedBytes": 352,
+      "showInstructions": 33,
+      "controls": 5
+    },
+    {
+      "sha": "548baf1c7e57d7ec7a68dff091260e57db9d06d4850057bc045ca6aa646dabf6",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1650 VD REVERSE.cal"
+      ],
+      "applyPointer": 32724,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "54dd15be7090154e30b37fef26a380f7a40c2b0f9a0311d4e494e31a99686af1",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BRISA V3 SEZ2Z5 wide  1M0 035 152E.cal"
+      ],
+      "applyPointer": 41205,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "55bc494a77cf6e65f206a1567b8927e94cd28c82cd8c7905217c7f0710b40dc5",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4700 RDS.cal"
+      ],
+      "applyPointer": 28355,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "55fc57f6a7fe7582874fcbb9df55a0fa58420880f1829841097925b4fc192ebe",
+      "paths": [
+        "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186T.cal"
+      ],
+      "applyPointer": 33238,
+      "decodedBytes": 1024,
+      "showInstructions": 129,
+      "controls": 16
+    },
+    {
+      "sha": "5838e0f432c0d52b07e587303379f4bdf07e83a5ebaf0c81be2aa34a344cc58d",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 4804 VD REVERSE  GR0624.cal"
+      ],
+      "applyPointer": 48659,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "5ac861735c3ab872d2b8acf5a3c53113c2fb918947f57da9013c2edfd63702ac",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8E0 035 152.cal"
+      ],
+      "applyPointer": 43261,
+      "decodedBytes": 1024,
+      "showInstructions": 128,
+      "controls": 16
+    },
+    {
+      "sha": "5b234b26ab8b4026d9e093d95db04d7d63656930b714495de27e62062bf105cd",
+      "paths": [
+        "Calculators/Immo/Bikes/Honda/FULL KEY VER2.cal"
+      ],
+      "applyPointer": 2747,
+      "decodedBytes": 736,
+      "showInstructions": 78,
+      "controls": 13
+    },
+    {
+      "sha": "5b3432f4f985c2e0dec917554b48d353f0c2b233c3216b5435be34975accde16",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2842 VD.cal"
+      ],
+      "applyPointer": 31953,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "5bed866b89c52838e33efd44087ad759268bf1c1c9d1d5cd2d78f1143d231362",
+      "paths": [
+        "Calculators/CarRadio/Seat/ALANA SEZ2Z9  6L0 035 156.cal"
+      ],
+      "applyPointer": 9336,
+      "decodedBytes": 864,
+      "showInstructions": 94,
+      "controls": 15
+    },
+    {
+      "sha": "5c40cd5de8ca78f1924009272711dafd8eaefa01ae8f86b42e87241408305b15",
+      "paths": [
+        "Calculators/CarRadio/Grundig/GRUNDIG CHALLENGE 400  GR1149.cal"
+      ],
+      "applyPointer": 52771,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "5e4e6f70d4173351ead311c98434a9934ed0e3c6721d5e151d296d39b5a51929",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2803A VD STEREO.cal"
+      ],
+      "applyPointer": 35808,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "5e629ed42e6f32f7696db5504ce485e021756fec40e9c2ad8a853d6c47beed0c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4000 RDS  GM0972.cal"
+      ],
+      "applyPointer": 22701,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "5f094be4aaee26a3affb18a4bf1e3bff237f5aa0ecd5a52ce3ca13c1c0461aec",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 4dig.cal"
+      ],
+      "applyPointer": 25014,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "604dec3cd2e909beee816b65b373eed0d076f7c21a03e0fd637c1853ddb8138c",
+      "paths": [
+        "Calculators/CarRadio/Chrysler/P04858543AE-A.cal"
+      ],
+      "applyPointer": 46324,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "60e9b40230bf4a384d31aa694d0d6a4171d2b0702018319f5093d098e48aeede",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3.cal"
+      ],
+      "applyPointer": 17019,
+      "decodedBytes": 960,
+      "showInstructions": 122,
+      "controls": 16
+    },
+    {
+      "sha": "614f3f9575f7b85411e4bc16cbbc2c131ebb48fdee97d176fc970b0b68a69a7c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  8L0 035 186G.cal"
+      ],
+      "applyPointer": 6767,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "652db924237a0a78ace2f0b59cd1f19b31d5b8154347cbea66a3a9beee5002e0",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2841 VD.cal"
+      ],
+      "applyPointer": 38635,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "6566e0f178ce0f8f72dbe36d2a038b9bf17af974da5374aeef60a5d81fa104af",
+      "paths": [
+        "Calculators/CarRadio/Chrysler/P04858543AD-A.cal"
+      ],
+      "applyPointer": 58387,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "67bf30504d6475b56d42fb6f6e7fffb1a05fb507a32dc1928b44e2eadb1356c3",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1705 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 28098,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "6830cf84697d8ee7720d9cba59d8b42d655466a812de003ec366bea1cd776ea5",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BRISA SEZ2Z5 wide  1U0 035 161C.cal"
+      ],
+      "applyPointer": 22701,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "696663527486a896eec69e1e4a98286880c44f28fe588969cd13a7609c5208f5",
+      "paths": [
+        "Calculators/CarRadio/VW/SOUND 5000 VWZ2Z9  2D0 035 161.cal"
+      ],
+      "applyPointer": 9314,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "6b3c8b17fc40066e6c5e100055f8f165a4d3b2e05960edb5a60dc6e33d5fbbd0",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA V3 SEZ2Z6 wide  1M0 035 186C.cal"
+      ],
+      "applyPointer": 43775,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "6c87d8031c0ac24f079d2c2446b10a47d86063cf58f5dbfca9e3e95d0d91f042",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA CD SEZ2Y6  1M0 035 186K.cal"
+      ],
+      "applyPointer": 10622,
+      "decodedBytes": 832,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "6db38f793b9ca328bde652aa3eccbd508e9ba43a6caffcf19e1b3a403ecd1091",
+      "paths": [
+        "Calculators/CarRadio/Skoda/MUSIC SYSTEM 202A SKZ2Z5  6Y0 035 152A.cal"
+      ],
+      "applyPointer": 57132,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "702c4ec73984b1934408e1cce0f311a95bbd4fb850a29fae9a526cf54e6542c3",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SCD 3390 RDS  GR1118.cal"
+      ],
+      "applyPointer": 20645,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "713cbbcdf16d1eea9c60384bda29712310ad736b07ff4b0b5c19773f227064bf",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CONCERT CD AUZ2Z3  4B0 035 186G.cal"
+      ],
+      "applyPointer": 49430,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "72483e92e4ef9d463ffda52eb25082756d2b26ff9afbf561c2b119b7523f066e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 5000  DB0921.cal"
+      ],
+      "applyPointer": 19874,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "72aaeef4c85259b88440ee2bd382716e3e928191d044d593f9b17c256e22781a",
+      "paths": [
+        "Calculators/CarRadio/Skoda/SYMPHONY SKZ2Z3  1U0 035 161D.cal"
+      ],
+      "applyPointer": 9068,
+      "decodedBytes": 896,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "7539cc283fc793a0f86ad68012312cfb36c3c6e3a3cb65e89e90e64aee23bc7e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 5000  DB0998.cal"
+      ],
+      "applyPointer": 13192,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "757957511befbb154f69b8b65d2af2b746c713d9f47d5cd9bf47acaea2e5bc0e",
+      "paths": [
+        "Calculators/PIN/Opel/hitag2.cal",
+        "Calculators/OTHER/PIN/Opel/hitag2.cal"
+      ],
+      "applyPointer": 13718,
+      "decodedBytes": 640,
+      "showInstructions": 141,
+      "controls": 4
+    },
+    {
+      "sha": "7716fb3ba615bd79d025b1c749006fc023bc4203e4b710b4cebaed9ecd36dc05",
+      "paths": [
+        "Calculators/CarRadio/Renault/CM7RN61F without display.cal"
+      ],
+      "applyPointer": 21119,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "772f8b9f581a0c94d5fb1c82ee4b1fc3242356c0901b40fe95f0acf880817365",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AD 183M  FA0926.cal"
+      ],
+      "applyPointer": 32210,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "78488b6ae60846c4ac8cdc5c23691b579a300ee09bdb2a5519b2ddfb3f2ab9be",
+      "paths": [
+        "Calculators/CarRadio/Fiat/PUNTO LOW  BP9372.cal"
+      ],
+      "applyPointer": 9328,
+      "decodedBytes": 1120,
+      "showInstructions": 174,
+      "controls": 12
+    },
+    {
+      "sha": "784c585c15990a64ceac405413b3aae029568c36dafb04cd35dc0660afbbe14a",
+      "paths": [
+        "Calculators/CarRadio/CITROEN/SAXO 2014 RDS  GR0971.cal"
+      ],
+      "applyPointer": 47842,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "78e6b2a011aa17ab1aa898cdd04f6b94184422bf6d49aa7ab8ae6d72e3751193",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3841  GR0490.cal"
+      ],
+      "applyPointer": 23729,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "792f329ed3022cc27e92d0e0756e2d934b3615ca19bbd474fe2208b5b6e057ce",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/Exquisit CQ-LP1420L.cal"
+      ],
+      "applyPointer": 40834,
+      "decodedBytes": 416,
+      "showInstructions": 56,
+      "controls": 4
+    },
+    {
+      "sha": "799d4c379f7eb6c220e65d5c60b8616b1f93a9ed06a6c27ef53058c9d641fcf4",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  8E0 035 186D.cal"
+      ],
+      "applyPointer": 29314,
+      "decodedBytes": 992,
+      "showInstructions": 126,
+      "controls": 16
+    },
+    {
+      "sha": "79eb5d80c8d554162702190ad34759ae0e6417ceb6a621043e8204c436d5cc75",
+      "paths": [
+        "Calculators/CarRadio/Alpine/CM7RN410 without display  AL9632.cal"
+      ],
+      "applyPointer": 62794,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "7ab52293068cc8c867b4afc6e61fa7eb0ae100d69d980244551bd581131a0027",
+      "paths": [
+        "Calculators/CarRadio/Alpine/CM7RN410 without display  AL9635.cal"
+      ],
+      "applyPointer": 9080,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "7bcc695736ad475db38d1d7a3e36389bce73fa14df395a453fedac33e4b7808e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3680 VD.cal"
+      ],
+      "applyPointer": 37350,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "7c295ee94f2a3df5d482aa82368bf1bb2fc8294806246ce6b5577fe43236781d",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3904 RDS REVERSE  GR0679.cal"
+      ],
+      "applyPointer": 35808,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "7c47fd6f7917d6b63b594558d0fba77e042d0711c95564fb4bacae8b47fcb00c",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT EU B7 SOUL AUZ1Z3.cal"
+      ],
+      "applyPointer": 10072,
+      "decodedBytes": 1632,
+      "showInstructions": 255,
+      "controls": 16
+    },
+    {
+      "sha": "80f6da31d180acee91ff975afedc8bd1f27d76670db5c8b1b847b8df8c394410",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3703 RDS INFOMAT 24v.cal"
+      ],
+      "applyPointer": 60224,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "81248f0194493e469741936a7d9d6712c48f2ecd5eb8efe53c41f8e26ec6f5b3",
+      "paths": [
+        "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8E0 035 152B.cal"
+      ],
+      "applyPointer": 58663,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "8198f707d7ab550720a1cfacc08da7c6b021ac12c5648c2db6bff9cb7788b30b",
+      "paths": [
+        "Calculators/CarRadio/Seat/ALANA SEZ2Z9  6L0 035 156B.cal"
+      ],
+      "applyPointer": 47810,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "85219ec54c4ddae5c9febd86b1ee694a3d7bfa2d65a50bae1f2e8519f58d2eb2",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1670 VD REVERSE.cal"
+      ],
+      "applyPointer": 14991,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "860201fba6031bb8ceff1174852a7ec77a0210c416e1c5890a5c1541830f20aa",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3705 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 3426,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "87fc2752e3cfbe2c611367225b29872a0391846f2821e5c42f2ff44d395491d0",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 5000 VWZ2Z9  2D0 035 161.cal"
+      ],
+      "applyPointer": 39406,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "8964508b1376c173ff48e8f36125d51e534ac1cc0dca17bd74c2b3b81b3f219e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3301 RDS  GR1029.cal"
+      ],
+      "applyPointer": 55598,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f",
+      "paths": [
+        "Calculators/color.cal"
+      ],
+      "applyPointer": 60481,
+      "decodedBytes": 448,
+      "showInstructions": 45,
+      "controls": 9
+    },
+    {
+      "sha": "8b4818f2210cbb06d1e2ff859aeb4bf1c485a795325c439729ac1573cbcf2c5c",
+      "paths": [
+        "Calculators/CarRadio/Fiat/AD 185H(B)  FA0984.cal"
+      ],
+      "applyPointer": 4801,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "8bb947a61eef641108e557005886889374a96968b981bd129eea9f0b33349d2a",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186L.cal"
+      ],
+      "applyPointer": 28557,
+      "decodedBytes": 704,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "8c726ded001f9d0e1b601da5dcd04de0b9e5d6eb0d30c55d3189bbdaef19500d",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SYMPHONY SKZ2Z3  1U0 035 161C.cal"
+      ],
+      "applyPointer": 31953,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "8d3badf9f6e356d1c79ea60cd2de692a3c772d6288e83af1f756c7dd27dde072",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3842  GR0552.cal"
+      ],
+      "applyPointer": 12421,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "8ead4728474dbe0845066bbba2d0a7368673a9eacdcf6c1c221fabaae0868868",
+      "paths": [
+        "Calculators/CarRadio/Ford/FORD2014.cal"
+      ],
+      "applyPointer": 63051,
+      "decodedBytes": 704,
+      "showInstructions": 136,
+      "controls": 5
+    },
+    {
+      "sha": "91cef67cf0bdcd5c687891b5ad2c1aa45dfa3c2f3d7f1fe016073a470a46377f",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/RCD 200 VWZ1Z5.cal"
+      ],
+      "applyPointer": 47888,
+      "decodedBytes": 1088,
+      "showInstructions": 174,
+      "controls": 12
+    },
+    {
+      "sha": "9305953c804e6810e45ff31d7dd784ef3b34f94f47f851a10db33122dd02db4f",
+      "paths": [
+        "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186P.cal"
+      ],
+      "applyPointer": 3940,
+      "decodedBytes": 736,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "93b2c090efe69ec3d3af3f07a38cae09a06be3dc741b6dddf977efeb51c88d57",
+      "paths": [
+        "Calculators/CarRadio/Chrysler/P04858543AG-A.cal"
+      ],
+      "applyPointer": 13226,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "968e92c45d96b3b14d06301a3580d633f31a71b501f76849a6e0776d76dc81a3",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/BENZ CD  MF2297.cal"
+      ],
+      "applyPointer": 45267,
+      "decodedBytes": 640,
+      "showInstructions": 41,
+      "controls": 15
+    },
+    {
+      "sha": "96d502ef4d712db1f6ddcd6e99766b04cec321a60083a34d3c1c5353d08a4484",
+      "paths": [
+        "Calculators/CarRadio/Seat/BRISA V3 SEZ2Z5 wide  1M0 035 152E.cal"
+      ],
+      "applyPointer": 40680,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "970ac047b6bfc671ee9fb84e6bc1a02060fb32d050d3dbee0095bd7e3b18469f",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4200 RDS.cal"
+      ],
+      "applyPointer": 7024,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "98e9439ac03c0f8d130329c7f3b060901f4ce1cd5dcc3d12a46c38d4dbdbbd05",
+      "paths": [
+        "Calculators/Immo/Bikes/Honda/SMK HONDA R5F10Axx v3.cal"
+      ],
+      "applyPointer": 51835,
+      "decodedBytes": 1024,
+      "showInstructions": 133,
+      "controls": 17
+    },
+    {
+      "sha": "995b4899bd2ce8caffe70dbe8f7beea0abb7b89cf18365b10daedf2c098c4c7c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1630 VD REVERSE.cal"
+      ],
+      "applyPointer": 19617,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "9a91b0959e4fbce09b835a9068dc33b2188e3c205d4b500a9f08239a7bc2864e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BRISA V3 SEZ2Z5 wide  1M0 035 152C.cal"
+      ],
+      "applyPointer": 16790,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "9b004e7a3e26ed6151732d19f9903f207a935748d8fa9ff3059f858a1274db1a",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186G.cal"
+      ],
+      "applyPointer": 53459,
+      "decodedBytes": 768,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "9b1345016afe295232f665b518f05382895c92d8cf7e9b2cd9fc02d6aa3a9845",
+      "paths": [
+        "Calculators/CarRadio/Grundig/MUSIC SYSTEM 402 SKZ2Z6  6Y0 035 160A.cal"
+      ],
+      "applyPointer": 49173,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "9b5ae004338a6e9961e997f19de5a98c4fb8b84ce53798b352f613f3b416cf1e",
+      "paths": [
+        "Calculators/CarRadio/CITROEN/SAXO 2014 RDS  GR0947.cal"
+      ],
+      "applyPointer": 3389,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "9ce306eb5dc661a7b8e18ff15af1bc778fd34dc69a47ec6e2b961550fd8686b3",
+      "paths": [
+        "Calculators/CarRadio/Grundig/BRISA SEZ2Z5 wide  1M0 035 152A.cal"
+      ],
+      "applyPointer": 16019,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "9f3aaed99bb85ec2c3f11dca3810fc9de950ee5a9ab195ade9eeef88a231cea1",
+      "paths": [
+        "Calculators/CarRadio/Alpine/P04858543AE-A.cal"
+      ],
+      "applyPointer": 64593,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "a7c3cb05d1226092d7679d10ebe55a46d5bf5dc28b53647b20ca3cf9ffb34d62",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA SEZ1Y6 wide  1M0 035 186A.cal"
+      ],
+      "applyPointer": 64336,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "a7c59c8681481195b0e51071a3c3e129f34b153c0d8e8bcfa0c250dec7ed3d6f",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3707 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 61252,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "a8f4781e4651e7a57c59cb0364b1ed6ec7efea731f32452f75774565d95fb983",
+      "paths": [
+        "Calculators/CarRadio/Alpine/BENZ CD  MF2197.cal"
+      ],
+      "applyPointer": 58425,
+      "decodedBytes": 640,
+      "showInstructions": 41,
+      "controls": 15
+    },
+    {
+      "sha": "ab49205d148e3413a3e3f1e868b8771cec0550f3951eb993747fc6093c5118ba",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA SEZ1Y6 wide  1M0 035 186A.cal"
+      ],
+      "applyPointer": 37037,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "ac67938210ee623afba77eba2ffaa6d8633013ff9b15de55018cddf661eff5da",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1703 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 59967,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "ad67fdc184c97462e65be4d2f935fec45bc7dd6c5abf95c234b12205022a849e",
+      "paths": [
+        "Calculators/CarRadio/Alpine/AJ 9800R.cal"
+      ],
+      "applyPointer": 65107,
+      "decodedBytes": 544,
+      "showInstructions": 33,
+      "controls": 14
+    },
+    {
+      "sha": "adf199183f87670188913cb6acc25ce065cc00e0ff34536ed68a8ad687d07160",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3200 RDS  GR1026.cal"
+      ],
+      "applyPointer": 64079,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "ae60c8c83c9692c256a346c6b251490df15c9d76b550fa11b2beb0c36625553c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3803 VD  24v.cal"
+      ],
+      "applyPointer": 39663,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "b083a2e92588b4ea1e15e68bdb23cac78e7e3f1c7e7c152fa0e0d3a0adb6f427",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2670 VD REVERSE panel.cal"
+      ],
+      "applyPointer": 60224,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "b08f4b833a794b036d80eed70b1355ebde95c550fd88916e58c292c8615f0694",
+      "paths": [
+        "Calculators/CarRadio/Alpine/AJ 9600R.cal"
+      ],
+      "applyPointer": 11907,
+      "decodedBytes": 576,
+      "showInstructions": 33,
+      "controls": 14
+    },
+    {
+      "sha": "b2030af78647df2f23a10a396d714226becd78e9f80230c4d4e897d5b649525d",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CHORUS AUZ2Z2  8Z0 035 152A.cal"
+      ],
+      "applyPointer": 31439,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "b31388d32647b7225c4aa75a06cdae5870afe42090725e6d61dab312d713340f",
+      "paths": [
+        "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8Z0 035 152A.cal"
+      ],
+      "applyPointer": 22440,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "b489f3605cab01b3b506ed31ff92af49229552e8bbe00b881b1c803891ac2c39",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3201 RDS  GR1027.cal"
+      ],
+      "applyPointer": 30411,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "b5ca78265a0e88f4d28f5839327f7a089860d274619fa51b6706112b3207c3a8",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA V3 SEZ2Y6 wide  1M0 035 186B.cal"
+      ],
+      "applyPointer": 54813,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "b7dcbeba24b5bde1a8e7523231dbae76a89b742a28a2628f9ccda0386c097f44",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/Alpha-5 Polo Lupo BVX VWZ1Z1.cal"
+      ],
+      "applyPointer": 9594,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "b9688062da0669a303786f505ec045931afb05ad66734579f610b350444c216f",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA V3 SEZ2Z6 wide  1M0 035 186C.cal"
+      ],
+      "applyPointer": 49614,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "bb3c7851d8b91baffaa0c0259dc587f5d59232e9bc2986b87b81ccf2b61df77f",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/SOUND 3000  DB0994.cal"
+      ],
+      "applyPointer": 1040,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "bccfed0c078ff3bed0df092fe660c22a7d6997f01345a635fce82c54b61e1cb4",
+      "paths": [
+        "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  4B0 035 152C.cal"
+      ],
+      "applyPointer": 10009,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "bcf7387db7161df4d60424e66fc4f6d91fb66d53424de74930154a0bee0e98be",
+      "paths": [
+        "Calculators/CarRadio/Grundig/MUSIC SYSTEM 202A SKZ2Z5  6Y0 035 152A.cal"
+      ],
+      "applyPointer": 22444,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "bd685cf5a7c4d89e781a638e53ceb656035efbbf37fa989aaa6f090e79cbc2d9",
+      "paths": [
+        "Calculators/CarRadio/Skoda/MUSIC SYSTEM 502 SKZ2Z3  6Y0 035 161.cal"
+      ],
+      "applyPointer": 62490,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "bf05f97be7e20f40494350540bed4c8884d188830c3d56c9dc6250928f67cf57",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186C.cal"
+      ],
+      "applyPointer": 53497,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "bfbcbdb92dcfe20357b300f575a79f7e9fb860ac37a6f1dbafd1699dd0ba69e4",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1904 RDS.cal"
+      ],
+      "applyPointer": 55341,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "c096be74c0b022312239c4a87ea719e6a6aacd23e646b2bf58c8b35ccec5f9c9",
+      "paths": [
+        "Calculators/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
+        "Calculators/OTHER/PIN/Audi/Audi A4 Dash RB4  24C08.cal"
+      ],
+      "applyPointer": 6758,
+      "decodedBytes": 800,
+      "showInstructions": 115,
+      "controls": 9
+    },
+    {
+      "sha": "c58d2f4dbf549cde76ca563f7a33eae683db475d0aa1de36cf76735b1109b65e",
+      "paths": [
+        "Calculators/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
+        "Calculators/OTHER/PIN/Chrysler/PT Cruiser 2003 Immo login.cal"
+      ],
+      "applyPointer": 21892,
+      "decodedBytes": 640,
+      "showInstructions": 84,
+      "controls": 7
+    },
+    {
+      "sha": "c5daea961c4f7e9cca863984794a4359a2f4eb7aed88e46a3c321cf9f9498734",
+      "paths": [
+        "Calculators/Immo/Bikes/Honda/FULL KEY O.cal"
+      ],
+      "applyPointer": 51815,
+      "decodedBytes": 736,
+      "showInstructions": 78,
+      "controls": 13
+    },
+    {
+      "sha": "c621e6a6a1941be2f37c2dc9d3b2da781bc6f177ae246a79752be3abe06c1ae6",
+      "paths": [
+        "Calculators/CarRadio/Grundig/R100(D) only tuner  GM0100.cal"
+      ],
+      "applyPointer": 18589,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "c696429f1a0c7a9fbfff21519e7dd97166b2cee18d0943d57dbb13c816d32e1d",
+      "paths": [
+        "Calculators/Immo/Car/Opel/Movano.cal"
+      ],
+      "applyPointer": 54570,
+      "decodedBytes": 2336,
+      "showInstructions": 652,
+      "controls": 5
+    },
+    {
+      "sha": "c6da01a7789c4d360250adaa92bd7e29f4534efa68480a350e3c23e6d1e660d2",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AD 185H(B)  FA0984.cal"
+      ],
+      "applyPointer": 56883,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "c9c36eb3606d63cfc9e1d5e27ce65240d12bc9a192c5e73064d8402fe5a927c7",
+      "paths": [
+        "Calculators/CarRadio/Alpine/P04858543AC-A.cal"
+      ],
+      "applyPointer": 35808,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "cb3a205f761d65a5ef83849ebbf41937169593802ca2d5d8bbaff379d04e857a",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 200 VWZ1Z5.cal"
+      ],
+      "applyPointer": 4375,
+      "decodedBytes": 1088,
+      "showInstructions": 174,
+      "controls": 12
+    },
+    {
+      "sha": "cdd3109220bc9276fa0b5b5a17379b3d61fdd5c2953577523a93f9ff08f86dbd",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/PUNTO LOW  BP9372.cal"
+      ],
+      "applyPointer": 22187,
+      "decodedBytes": 1120,
+      "showInstructions": 174,
+      "controls": 12
+    },
+    {
+      "sha": "cddd4c8341e2ef5e503f038f4d42ff1c91bae38eebdfed4e4bdbce8c573daf71",
+      "paths": [
+        "Calculators/CarRadio/Fiat/AD 182H  FA0925.cal"
+      ],
+      "applyPointer": 11801,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "cfaebd726215554f7520e9cb55d6947b7faa474a162cea0d5ac8285f8f2fcf7f",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA V3 SEZ2Y6 wide  1M0 035 186B.cal"
+      ],
+      "applyPointer": 47631,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "d0f262de53caf11dc5a46e90249192530b151c252bd7408b6166b7e2e905a8b7",
+      "paths": [
+        "Calculators/CarRadio/Matsushita/Exquisit CQ-LP1420L.cal"
+      ],
+      "applyPointer": 17818,
+      "decodedBytes": 416,
+      "showInstructions": 56,
+      "controls": 4
+    },
+    {
+      "sha": "d1505419c90d35270f60390745dc2df7a945e49cda20e461441a97ab8d6d9913",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AD 182H  FA0925.cal"
+      ],
+      "applyPointer": 26556,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "d196af43f52ebb9d4657c735a2fb76d6391cf342c9847029a44845b169b56995",
+      "paths": [
+        "Calculators/CarRadio/Alpine/CM7RN41F without display.cal"
+      ],
+      "applyPointer": 59196,
+      "decodedBytes": 608,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "d224eb5e6b08e59463067ada0c2caea6e4a1ccc4a8b7dc5f2ab5a3da1b1a0a97",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/BENZ CD  MF2197.cal"
+      ],
+      "applyPointer": 41605,
+      "decodedBytes": 640,
+      "showInstructions": 41,
+      "controls": 15
+    },
+    {
+      "sha": "d37266c2d3e75b9210ad03ff8b495ba9271384f426da144be379e28d8258d720",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/SCALA SEZ1Z4  7M7 035 186.cal"
+      ],
+      "applyPointer": 37607,
+      "decodedBytes": 1472,
+      "showInstructions": 222,
+      "controls": 15
+    },
+    {
+      "sha": "d473d50643658120d85e6713ad014129a3ac0764b91362c56e71c204c8036a63",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 1704 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 16533,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "d4c29ec580a03dc6d1917c63f2950c23de97e95d0b48edf63a729768147e535b",
+      "paths": [
+        "Calculators/CarRadio/Seat/BRISA SEZ1Z5 wide  1M0 035 152A.cal"
+      ],
+      "applyPointer": 3873,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "d531e24bc1a0a7034ea11271f3735d12fb244ef76c2408a9e32993b3f2050883",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3670 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 53285,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "d636a43fd8da29f82ffa2905b57197d8869e4d06cd37a254437a4de1bc180fb9",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4290 CD  GR1012.cal"
+      ],
+      "applyPointer": 17818,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "d68bc5d77e49a13125a045dc068707481713db5d63b70e5a18cf5694fa9059b5",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4000 RDS  GR0904.cal"
+      ],
+      "applyPointer": 4711,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "d6f13877e7f87a5d03d3c6249ae80aa7a86c52325f968b131af3477cf9fd0173",
+      "paths": [
+        "Calculators/CarRadio/VW/BETA VWZ1Z2.cal"
+      ],
+      "applyPointer": 9240,
+      "decodedBytes": 1152,
+      "showInstructions": 174,
+      "controls": 13
+    },
+    {
+      "sha": "d86520b12df874f3983e3c1867618f52a94837337ff6a5492192fe9d865487d9",
+      "paths": [
+        "Calculators/CarRadio/Audi/CONCERT CD AUZ2Z3  4B0 035 186G.cal"
+      ],
+      "applyPointer": 37866,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "d873de2e780940fb2d9b995c54a13e7a4297a197c8df5e1891ea09c269f75869",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CONCERT CD WIDE AUZ2Z3  8P0 035 186C.cal"
+      ],
+      "applyPointer": 46603,
+      "decodedBytes": 1024,
+      "showInstructions": 130,
+      "controls": 16
+    },
+    {
+      "sha": "db13a02242752334d012c9faa9f8f0a5a3920814b2082b2578db865fd1fcc524",
+      "paths": [
+        "Calculators/CarRadio/Grundig/ALANA SEZ2Z9  6L0 035 156B.cal"
+      ],
+      "applyPointer": 44547,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "dd53a2e34eeb1536a81614e7fba8009f7c7aa04e1f1eced6aafd7a9d122a2091",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SAXO 2014 RDS  GR0971.cal"
+      ],
+      "applyPointer": 61252,
+      "decodedBytes": 736,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "de567e41557ed8c9009ef1f5e9e25c4bb4ad417cfd636a122dc8aedb38df76ee",
+      "paths": [
+        "Calculators/CarRadio/Grundig/EC 4600 RDS.cal"
+      ],
+      "applyPointer": 60995,
+      "decodedBytes": 1216,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "dfcb2fc7fcdd1a930230d38607ab905b6a3227eac86828ab6fb8225ce2ce35e7",
+      "paths": [
+        "Calculators/CarRadio/Seat/AURA CD SEZ2Y6  1M0 035 186K.cal"
+      ],
+      "applyPointer": 1071,
+      "decodedBytes": 832,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "e00bc6e4413f44b5686cd343ee887f5d9303f84a4599b59591c569fdd725ac5c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA V4 SEZ2Z6 wide  1M0 035 186F.cal"
+      ],
+      "applyPointer": 11393,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "e21c1174911874b8c9180e1c7a44ba9575ffc2a543c6ebd9f762937b452adf68",
+      "paths": [
+        "Calculators/CarRadio/Chrysler/P04858543AC-A.cal"
+      ],
+      "applyPointer": 28862,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "e2c85e6fa6a05e1df4f082d75a55faddbcdc349b1b8602bc3f8eca803626f25e",
+      "paths": [
+        "Calculators/CarRadio/Skoda/MUSIC SYSTEM 402 SKZ2Z6  6Y0 035 160A.cal"
+      ],
+      "applyPointer": 36480,
+      "decodedBytes": 800,
+      "showInstructions": 81,
+      "controls": 16
+    },
+    {
+      "sha": "e2d1f93acb234616d3d634a9afdde24daf5f78d2c275a77e983d5824e8788bb7",
+      "paths": [
+        "Calculators/CarRadio/BENTLEY/BYZ2Z3.cal"
+      ],
+      "applyPointer": 56377,
+      "decodedBytes": 1024,
+      "showInstructions": 122,
+      "controls": 16
+    },
+    {
+      "sha": "e2dcfdfe84510dd21b3748de54e79ae5bc068fa4d6e13d8fe1bf7927c914f885",
+      "paths": [
+        "Calculators/CarRadio/Fiat/AD 182H2  FA0924.cal"
+      ],
+      "applyPointer": 18308,
+      "decodedBytes": 672,
+      "showInstructions": 72,
+      "controls": 14
+    },
+    {
+      "sha": "e333d7d79d770c0a458c70cfccf6337228ffda124e5adeeba245f2e4c7e02028",
+      "paths": [
+        "Calculators/CarRadio/Grundig/CAR200 (D) without display  GM0200.cal"
+      ],
+      "applyPointer": 48145,
+      "decodedBytes": 1248,
+      "showInstructions": 204,
+      "controls": 16
+    },
+    {
+      "sha": "e43933863b22a4d55ed5c3edbaf410e6413703a5650f74c6486e24b5442f1282",
+      "paths": [
+        "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186J.cal"
+      ],
+      "applyPointer": 1627,
+      "decodedBytes": 736,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "e46ebb7c4e07e63feddba1a232255bb3fa9ad91eabc7320b905b2a19b88a2c35",
+      "paths": [
+        "Calculators/CarRadio/Grundig/LENA SEZ2Z8 panel  6L0 035 152.cal"
+      ],
+      "applyPointer": 45575,
+      "decodedBytes": 864,
+      "showInstructions": 96,
+      "controls": 15
+    },
+    {
+      "sha": "e588bb2048809e131d0d7ca7ff392dd6d3231860289119b531bdc6aab19aa841",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 4804 VD REVERSE  GR0601.cal"
+      ],
+      "applyPointer": 5225,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "ef5db052f0b7f0d48ef654a6e105efafe007d5c53b43a1302dc48aae5aade94b",
+      "paths": [
+        "Calculators/CarRadio/Alpine/BENZ CD  MF2297.cal"
+      ],
+      "applyPointer": 61766,
+      "decodedBytes": 640,
+      "showInstructions": 41,
+      "controls": 15
+    },
+    {
+      "sha": "f037be9bc387853da1f890d0f962769b9bd506632efb34701578b09fb695acb9",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AD 182H2  FA0924.cal"
+      ],
+      "applyPointer": 49430,
+      "decodedBytes": 672,
+      "showInstructions": 72,
+      "controls": 14
+    },
+    {
+      "sha": "f09bfa01869e5987194554b5550cb89eefc135ad74cee362b2828db8ca9bb198",
+      "paths": [
+        "Calculators/Immo/Car/Opel/hitag2.cal"
+      ],
+      "applyPointer": 60995,
+      "decodedBytes": 640,
+      "showInstructions": 141,
+      "controls": 4
+    },
+    {
+      "sha": "f0ca7cf57f9558d82aa5f6aaebe5f250c1501c70f5d43f677ef19725e0a7068c",
+      "paths": [
+        "Calculators/CarRadio/Grundig/RCD 300 VWZ2Z2  1KO 035 186G.cal"
+      ],
+      "applyPointer": 1113,
+      "decodedBytes": 768,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "f1629cc1be963bc6fd5a6d867cb786b8616b0595958e44a580aecc4c2ae0d569",
+      "paths": [
+        "Calculators/CarRadio/Seat/BRISA V3 SEZ2Z5 wide  1M0 035 152C.cal"
+      ],
+      "applyPointer": 60681,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "f210816f388c4ee51f51a8684139cdf0a610ab878043c9bf6ce8f686b6ea04c7",
+      "paths": [
+        "Calculators/CarRadio/Grundig/SOUND 3000  DB0920.cal"
+      ],
+      "applyPointer": 26556,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "f26d32a12a28b2cf029727c22f3493b49a9438a053ae3992391170d1e348c7c1",
+      "paths": [
+        "Calculators/CarRadio/Grundig/AURA CD SEZ2Y6  1M0 035 186B.cal"
+      ],
+      "applyPointer": 37864,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "f29f360cb6e1f596bb77e7d07c7bbda8e4f38318fd8d224e98908bb7b69cc470",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 2680 VD REVERSE.cal"
+      ],
+      "applyPointer": 45575,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "f330a3ab0f2349543696ab4ea643ef749fc2d4324a1443c28226e5e63099da73",
+      "paths": [
+        "Calculators/CarRadio/VW/RCD 300 VWZ2Z2  1KO 035 186P.cal"
+      ],
+      "applyPointer": 31142,
+      "decodedBytes": 736,
+      "showInstructions": 73,
+      "controls": 14
+    },
+    {
+      "sha": "f387467a726c5fea9cad6b0e505434ae0ab736c59bdc25b9aecdaf06e2e9fdd0",
+      "paths": [
+        "Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal",
+        "Calculators/Immo/Car/Chrysler/PT Cruiser 2003 Immo login.cal"
+      ],
+      "applyPointer": 23552,
+      "decodedBytes": 640,
+      "showInstructions": 84,
+      "controls": 7
+    },
+    {
+      "sha": "f3daac74567ecd324f10724e9cd9871111995b0a3c036822af83797a08d79c52",
+      "paths": [
+        "Calculators/CarRadio/Mers/MersExquisitcqlp1420l.cal"
+      ],
+      "applyPointer": 54056,
+      "decodedBytes": 416,
+      "showInstructions": 56,
+      "controls": 4
+    },
+    {
+      "sha": "f476c3f6aedcc926fa62f6c0e51330a6f3fa1c39b325c77538484bc6109b55e2",
+      "paths": [
+        "Calculators/CarRadio/Grundig/ALANA SEZ2Z9  6L0 035 156.cal"
+      ],
+      "applyPointer": 18589,
+      "decodedBytes": 864,
+      "showInstructions": 94,
+      "controls": 15
+    },
+    {
+      "sha": "f47c289cfce0c275becd6f064f41b6a83e48930009fd0750d25859c13f4a4ba9",
+      "paths": [
+        "Calculators/CarRadio/Seat/SCALA SEZ1Z4  7M7 035 186.cal"
+      ],
+      "applyPointer": 45009,
+      "decodedBytes": 1472,
+      "showInstructions": 222,
+      "controls": 15
+    },
+    {
+      "sha": "f6cda5ccb98670d5814fcdff62f209d82236c093cfdd133c560854ef88d82267",
+      "paths": [
+        "Calculators/CarRadio/Alpine/P04858543AD-A.cal"
+      ],
+      "applyPointer": 31439,
+      "decodedBytes": 512,
+      "showInstructions": 18,
+      "controls": 14
+    },
+    {
+      "sha": "f71472aa75527f7798542a2ee3b9f7ec0a2361ea9997c9fbaf1d46a909b53cc5",
+      "paths": [
+        "Calculators/CarRadio/Mersedes/BENZ SOUND 1000  DB1019.cal"
+      ],
+      "applyPointer": 18735,
+      "decodedBytes": 608,
+      "showInstructions": 35,
+      "controls": 14
+    },
+    {
+      "sha": "fb75ee01f979458b5e8f727c9f700bfadc6133df666b9aefbaa9b4d90eda325e",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3650 VD.cal"
+      ],
+      "applyPointer": 33495,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "fbe28cbb1bbb38fe3b26545ae386c1b107edba110ab60b17bfcdc4471de9b41e",
+      "paths": [
+        "Calculators/CarRadio/Renault/CM7RN410 without display  AL9632.cal"
+      ],
+      "applyPointer": 61855,
+      "decodedBytes": 640,
+      "showInstructions": 40,
+      "controls": 14
+    },
+    {
+      "sha": "fd2f3074cb09c20323bf5e5a8411caf5336e9c3b2b689a2e51b4e5c063e77c99",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/NVX - JANUS.cal"
+      ],
+      "applyPointer": 20974,
+      "decodedBytes": 800,
+      "showInstructions": 112,
+      "controls": 18
+    },
+    {
+      "sha": "fdf1dbe43a47d4dbf0669baf7feef0d98803909d4c8a8da1b374225c750c780a",
+      "paths": [
+        "Calculators/Immo/Car/Iveco/Iveco Immo    93C56  .cal"
+      ],
+      "applyPointer": 47117,
+      "decodedBytes": 224,
+      "showInstructions": 12,
+      "controls": 5
+    },
+    {
+      "sha": "fe80fc6d37e01b4f7ea9f04ac0afa4a14f5600d8acb9cb7d40db05ea3a1ff4cd",
+      "paths": [
+        "Calculators/CarRadio/Grundig/WKC 3680 RDS INFOMAT.cal"
+      ],
+      "applyPointer": 31953,
+      "decodedBytes": 768,
+      "showInstructions": 81,
+      "controls": 14
+    },
+    {
+      "sha": "fe993cb58fdc65418d36eb9c85aa4670b5e2b90f6834aadcce4c1a397e390eb5",
+      "paths": [
+        "Calculators/CarRadio/Seat/ALANA MP3 SEZ2Z9  6L0 035 186A.cal"
+      ],
+      "applyPointer": 26240,
+      "decodedBytes": 864,
+      "showInstructions": 98,
+      "controls": 15
+    },
+    {
+      "sha": "fff8837324658638a7e09636b36f1caa78efd17fdd97c9a2e8031fa92b4150c9",
+      "paths": [
+        "Calculators/CarRadio/Audi/CHORUS AUZ2Z2  8E0 035 152.cal"
+      ],
+      "applyPointer": 34988,
+      "decodedBytes": 1024,
+      "showInstructions": 128,
+      "controls": 16
+    }
+  ],
+  "structuralReaders": [
+    {
+      "sha": "679c9ec0143099817273017908c6b9934767e3966b278d0d3020de2e7e0599ee",
+      "paths": [
+        "Calculators/Immo/Car/Honda/Honda_Immo_0D28J_PCF7931.cal"
+      ],
+      "applyPointer": 842,
+      "decodedBytes": 960,
+      "stringPointer": 842,
+      "showInstructions": 136
+    },
+    {
+      "sha": "d7ae28ab672582f59045017799e6612ed05d20a8feb87be8a13f51201db166fc",
+      "paths": [
+        "Calculators/Car/Honda/Honda_Immo_0D28J_PCF7931.cal"
+      ],
+      "applyPointer": 842,
+      "decodedBytes": 960,
+      "stringPointer": 842,
+      "showInstructions": 136
+    }
+  ],
+  "writers": [
+    {
+      "sha": "10573466ebbab659704e4abcf910a468889d64e0ed0ec6f15eb9387ee1360140",
+      "paths": [
+        "Calculators/France/Citroen/BSI Berlingo D780949 var1.cal",
+        "Calculators/Dashboard/Citroen/BSI Berlingo D780949 var1.cal",
+        "Calculators/Car/C/Citroen/BSI Berlingo D780949 var1.cal"
+      ],
+      "applyPointer": 708,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        820
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "1112968804097a2aab94755e9ef67c575e85b58b720fa0941dffca4493b92ef4",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "2569f04b1b2ceceba3472a48ab268b818772458fc72ba19847cbba691829a6a8",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "2706317a5a6d0724b0e4657d0425f195914ba0012c6cee5e260541952bd999db",
+      "paths": [
+        "Calculators/Dashboard/Daewoo/Windstorm 9S12HZ128.cal",
+        "Calculators/Car/G/GM/Daewoo/Windstorm 9S12HZ128.cal"
+      ],
+      "applyPointer": 1777,
+      "decodedBytes": 2272,
+      "terminalPcs": [
+        2101
+      ],
+      "applyInstructions": 96
+    },
+    {
+      "sha": "2df91953a624435566014b8d4306d9bbaf0e874170854e89750ec102e2c3ab6e",
+      "paths": [
+        "Calculators/Germany/Mercedes/Vito 93S46.cal",
+        "Calculators/Dashboard/Mercedes/Vito 93S46.cal",
+        "Calculators/Car/M/Mercedes/Vito 93S46.cal"
+      ],
+      "applyPointer": 838,
+      "decodedBytes": 2272,
+      "terminalPcs": [
+        2089
+      ],
+      "applyInstructions": 368
+    },
+    {
+      "sha": "2dfd2b1fae0e10b90cc5141924722c41e98cebec2f9c4173b0c9c1f7d5a16c10",
+      "paths": [
+        "Calculators/Asia/Forklift truck/Hyundai/H940S 24C32.cal"
+      ],
+      "applyPointer": 613,
+      "decodedBytes": 1088,
+      "terminalPcs": [
+        958
+      ],
+      "applyInstructions": 92
+    },
+    {
+      "sha": "315c652c0beac0eb4a5076f1da345755770001c11efe66669044baa98eb89cd7",
+      "paths": [
+        "Calculators/Asia/KATO/KR25HV7 93C66.cal"
+      ],
+      "applyPointer": 1902,
+      "decodedBytes": 4160,
+      "terminalPcs": [
+        4042
+      ],
+      "applyInstructions": 639
+    },
+    {
+      "sha": "3aab5bdbb4cef9ab2a57437379b3a3b96b63dda61c31bc036ebf10d03ef48745",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "5e3823d3f0b5b97bdbfc0f437f814b7cc62a252ab6f62dfd1238f67b6c669405",
+      "paths": [
+        "Calculators/Germany/Mercedes/Atego 93C86 var2.cal",
+        "Calculators/Dashboard/Mercedes/Atego 93C86 var2.cal",
+        "Calculators/Car/M/Mercedes/Atego 93C86 var2.cal"
+      ],
+      "applyPointer": 719,
+      "decodedBytes": 1248,
+      "terminalPcs": [
+        1097
+      ],
+      "applyInstructions": 107
+    },
+    {
+      "sha": "72707ad1670162ade95badec010900871d1b8773548c6ed64a4819aeb20f7a90",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "74121f68e6eedf8a5e691c475a8bd37c4cad9ba52e6398c611a5bc612e1e7e67",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "824e6ab0a3bc0d877c99d496db6ef58b87ce17f0937d31054f5a548cc605be5d",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/KATO/KR25HV7 93C66.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/KATO/KR25HV7 93C66.cal"
+      ],
+      "applyPointer": 1902,
+      "decodedBytes": 4160,
+      "terminalPcs": [
+        4042
+      ],
+      "applyInstructions": 639
+    },
+    {
+      "sha": "8474ed3873251b38cb909209f4ee57ac1fa47a72da6639bd8fd17165a717a1ec",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "8851d8aaa4b2bbdbb8ef065010f8f24b42dac7e732585420ecb5539070522f45",
+      "paths": [
+        "Calculators/EU_US_RU/Kamaz/Kamaz 9S12HY64 ITELMA.cal"
+      ],
+      "applyPointer": 693,
+      "decodedBytes": 1248,
+      "terminalPcs": [
+        1101
+      ],
+      "applyInstructions": 129
+    },
+    {
+      "sha": "93a8f40931f361244e10950b23ef91c00a1ff7a5838b14d8c85a3baeb808590c",
+      "paths": [
+        "Calculators/France/Citroen/BSI Xsara D780949 var2.cal",
+        "Calculators/Dashboard/Citroen/BSI Xsara D780949 var2.cal",
+        "Calculators/Car/C/Citroen/BSI Xsara D780949 var2.cal"
+      ],
+      "applyPointer": 705,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        817
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "956a2ed105e434df5ce461b9dccfba2989221502786be45d562359b2881008ef",
+      "paths": [
+        "Calculators/Dashboard/KATO/KR25HV7 93C66.cal",
+        "Calculators/Car/K/KATO/KR25HV7 93C66.cal"
+      ],
+      "applyPointer": 1902,
+      "decodedBytes": 4160,
+      "terminalPcs": [
+        4042
+      ],
+      "applyInstructions": 639
+    },
+    {
+      "sha": "98373c5498e9da73d06a95482195753627d8a206db885091925d9ef9d8476ba0",
+      "paths": [
+        "Calculators/France/Citroen/BSI Xsara D780949 var1.cal",
+        "Calculators/Dashboard/Citroen/BSI Xsara D780949 var1.cal",
+        "Calculators/Car/C/Citroen/BSI Xsara D780949 var1.cal"
+      ],
+      "applyPointer": 705,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        817
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "9d62e1e0a12123db2e4dd713505a3f802244b61e660641007b79e8b3a59cf658",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "9fe5dca6ae9cc20a6f1baf18d7e1ef0e317a0e94e07d5496a3458e915e3b9e68",
+      "paths": [
+        "Calculators/France/Citroen/BSI Berlingo D780949 var2.cal",
+        "Calculators/Dashboard/Citroen/BSI Berlingo D780949 var2.cal",
+        "Calculators/Car/C/Citroen/BSI Berlingo D780949 var2.cal"
+      ],
+      "applyPointer": 708,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        820
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877",
+      "paths": [
+        "Calculators/France/Peugeot/BSI Partner D780949 var1.cal",
+        "Calculators/Dashboard/Peugeot/BSI Partner D780949 var1.cal",
+        "Calculators/Car/P/Peugeot/BSI Partner D780949 var1.cal"
+      ],
+      "applyPointer": 707,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        819
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "a37ff24f88c17a67df744922eec5fbe418caa10e6772598b3da0be8bb7ba6e2e",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Hyundai/H940S 24C32.cal",
+        "Calculators/Car/F/Forklift truck/Hyundai/H940S 24C32.cal"
+      ],
+      "applyPointer": 613,
+      "decodedBytes": 1088,
+      "terminalPcs": [
+        958
+      ],
+      "applyInstructions": 92
+    },
+    {
+      "sha": "a8895ef0476c30de934a02b5a792dc98cc5a691b065f91efc6c849470780527e",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "ace179c2bb40589a5035346b63c4d717a391db16233c815094dc6eed3ccd0867",
+      "paths": [
+        "Calculators/Dashboard/Mercedes/Sprinter/Sprinter 93S46.cal",
+        "Calculators/Car/M/Mercedes/Sprinter/Sprinter 93S46.cal"
+      ],
+      "applyPointer": 853,
+      "decodedBytes": 2272,
+      "terminalPcs": [
+        2104
+      ],
+      "applyInstructions": 368
+    },
+    {
+      "sha": "af4b86898990324f46d846d49fc3ab5efaab4161b5eb5307dea36bafc69e6c9c",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "b205f4cf493efb11e5a1da7a7321352b1671dc1266701630430cb9ca3072600f",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "b6ec45b89589b2d3457528e67ade230c1d259a309e06866d8741e10f2dc44c25",
+      "paths": [
+        "Calculators/EU_US_RU/Land Rover/Range Rover Sport ECU 95320 diesel.cal"
+      ],
+      "applyPointer": 409,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        756
+      ],
+      "applyInstructions": 90
+    },
+    {
+      "sha": "c0d1f6a2fbbf2911863a6af9d074920d20e363297991160e93d48fc836d29c73",
+      "paths": [
+        "Calculators/Dashboard/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "c3c815e0f53991c1bd96e938a7914f35e605285ba9812100fbc511c85c102451",
+      "paths": [
+        "Calculators/France/Peugeot/BSI Partner D780949 var2.cal",
+        "Calculators/Dashboard/Peugeot/BSI Partner D780949 var2.cal",
+        "Calculators/Car/P/Peugeot/BSI Partner D780949 var2.cal"
+      ],
+      "applyPointer": 707,
+      "decodedBytes": 928,
+      "terminalPcs": [
+        819
+      ],
+      "applyInstructions": 32
+    },
+    {
+      "sha": "cedc41d312c4dd7f2d3f265af65dfd414f3820e1959d0abd8ce11e23d5390a26",
+      "paths": [
+        "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal"
+      ],
+      "applyPointer": 696,
+      "decodedBytes": 1568,
+      "terminalPcs": [
+        1449
+      ],
+      "applyInstructions": 231
+    },
+    {
+      "sha": "e0e8e1c9d786266ace9d8b9329be51c32264206e4ece6ca4688b47cf077bf334",
+      "paths": [
+        "Calculators/Asia/Daewoo/Windstorm 9S12HZ128.cal"
+      ],
+      "applyPointer": 1777,
+      "decodedBytes": 2272,
+      "terminalPcs": [
+        2101
+      ],
+      "applyInstructions": 96
+    },
+    {
+      "sha": "e42e7b03603ff0f48b5c4fc602988d58353d78e13bc448dba66dc5e4190855e2",
+      "paths": [
+        "Calculators/Germany/Mercedes/Sprinter 93S46.cal",
+        "Calculators/Dashboard/Mercedes/Sprinter 93S46.cal",
+        "Calculators/Car/M/Mercedes/Sprinter 93S46.cal"
+      ],
+      "applyPointer": 842,
+      "decodedBytes": 2272,
+      "terminalPcs": [
+        2093
+      ],
+      "applyInstructions": 368
+    },
+    {
+      "sha": "f1a226082a897f8eb977cac12a49cc8c3d8b57f4c4c606faa8dd2ee333147e24",
+      "paths": [
+        "Calculators/Dashboard/Nissan/Liberty 93C46 Yazaki.cal",
+        "Calculators/Car/N/Nissan/Liberty 93C46 Yazaki.cal"
+      ],
+      "applyPointer": 374,
+      "decodedBytes": 640,
+      "terminalPcs": [
+        505
+      ],
+      "applyInstructions": 38
+    }
+  ],
+  "remaining": [
+    {
+      "sha": "12986cdd7049c56086fc702c32d9e37bda0c9b9b12a70adc4a83dff0dcf2590b",
+      "paths": [
+        "Calculators/CarRadio/Navigation/Vw/FIS VW coder.cal"
+      ],
+      "applyPointer": 235,
+      "decodedBytes": 11936,
+      "eventErrors": {
+        "apply": "Команда 0x4d ещё не проверена"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 54
+    },
+    {
+      "sha": "257d983b362663d8a09e1147bf54cc6c5f8e2ce99e4fd3ced7ad12dc31329cea",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/FIS AUDI VW coder.cal"
+      ],
+      "applyPointer": 471,
+      "decodedBytes": 11936,
+      "eventErrors": {
+        "apply": "Команда 0x4d ещё не проверена"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 54
+    },
+    {
+      "sha": "5528e06fab6ef5ed02d38c90ff651efce87c81f13b6968b8607b5e10aaa76069",
+      "paths": [
+        "Calculators/CarRadio/Audi/FIS AUDI VW coder.cal"
+      ],
+      "applyPointer": 471,
+      "decodedBytes": 11936,
+      "eventErrors": {
+        "apply": "Команда 0x4d ещё не проверена"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 54
+    },
+    {
+      "sha": "a7336ed79bf2a92b8cbf678ba28973ff442077df577673114db8137d50955d66",
+      "paths": [
+        "Calculators/CarRadio/Navigation/AUDI/FIS AUDI coder.cal"
+      ],
+      "applyPointer": 237,
+      "decodedBytes": 11936,
+      "eventErrors": {
+        "apply": "Команда 0x4d ещё не проверена"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 54
+    },
+    {
+      "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4",
+      "paths": [
+        "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 5dig.cal"
+      ],
+      "applyPointer": 30907,
+      "decodedBytes": 416,
+      "eventErrors": {
+        "apply": "Некорректный адрес события apply"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 0
+    },
+    {
+      "sha": "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 5dig.cal"
+      ],
+      "applyPointer": 4454,
+      "decodedBytes": 416,
+      "eventErrors": {
+        "apply": "Некорректный адрес события apply"
+      },
+      "validEvents": [
+        "show"
+      ],
+      "showInstructions": 0
+    }
+  ]
+}

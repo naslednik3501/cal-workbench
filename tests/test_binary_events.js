@@ -17,10 +17,11 @@ function encoded({show=13,apply=65535,change=65535,instructions={13:[0x1f]}}={})
  return Buffer.from(Buffer.from(out).toString('hex'));
 }
 let ecu;
-test('Original ECU 95080 exposes only its validated reader and preserves invalid writer address',()=>{
+test('Original ECU 95080 exact profile exposes only its validated reader and preserves invalid writer address',()=>{
  const original=raw(ecuSha),copy=Buffer.from(original);assert.equal(crypto.createHash('sha256').update(original).digest('hex'),ecuSha);
- ecu=E.parse(original);assert.equal(ecu.executable,true);assert.equal(ecu.partial,true);assert.deepEqual(ecu.validEvents,['show']);
- assert.deepEqual(ecu.form.events,{show:153,apply:36972,change:65535});assert.match(ecu.eventErrors.apply,/адрес события apply/);
+ const strict=E.parse(original);assert.equal(strict.partial,true);assert.match(strict.eventErrors.apply,/адрес события apply/);
+ ecu=E.parse(original,{sha:ecuSha});assert.equal(ecu.executable,true);assert.equal(ecu.partial,false);assert.equal(ecu.readOnly,true);assert.deepEqual(ecu.validEvents,['show']);assert.deepEqual(ecu.absentEvents,['apply']);
+ assert.deepEqual(ecu.form.events,{show:153,apply:36972,change:65535});assert.deepEqual(ecu.eventErrors,{});
  assert.deepEqual(original,copy);assert.deepEqual(ecu.bytes,E.decode(original));assert.throws(()=>E.parseForm(ecu.bytes),/адрес события apply/);
 });
 test('Original ECU reader extracts PIN directly from little-endian EEPROM bytes on three vectors',()=>{
@@ -28,7 +29,7 @@ test('Original ECU reader extracts PIN directly from little-endian EEPROM bytes 
   const dump=Uint8Array.from({length:1024},(_,i)=>(i*17+23)&255);dump[0x10e]=low;dump[0x10f]=high;
   const copy=dump.slice(),vm=new E.VM(ecu,dump).transaction('show').vm;
   assert.equal(vm.controls[0].value,low+high*256);assert.equal(vm.controls[1].text,'Дамп ОК.');assert.deepEqual(vm.buffer,copy);assert.deepEqual(dump,copy);
-  assert.throws(()=>vm.transaction('apply'),/адрес события apply/);assert.deepEqual(vm.buffer,copy);assert.equal(vm.transaction('change').steps,0);
+  assert.throws(()=>vm.transaction('apply'),/отсутствует в оригинальном CAL/);assert.deepEqual(vm.buffer,copy);assert.equal(vm.transaction('change').steps,0);
  }
 });
 test('Original readable-only ECU still rejects undersized BIN without mutation',()=>{
@@ -44,8 +45,8 @@ test('Original invalid initialization cannot be bypassed through a valid apply h
  assert.equal(p.executable,false);assert.match(p.eventErrors.show,/адрес события show/);assert.throws(()=>new E.VM(p,new Uint8Array(1024)),/show/);
 });
 test('Unknown opcode isolates failed event without inserting return or retaining failed code',()=>{
- const p=E.parse(encoded({apply:14,instructions:{13:[0x1f,0xc3]}}));assert.equal(p.partial,true);assert.equal(p.form.events.apply,14);
- assert.deepEqual(Object.keys(p.code),['13']);assert.match(p.eventErrors.apply,/0xc3/);assert.throws(()=>new E.VM(p,new Uint8Array(1)).execute('apply'),/0xc3/);
+ const p=E.parse(encoded({apply:20,instructions:{13:[1,0,1,0,0,0,0x1f,0xc3]}}));assert.equal(p.partial,true);assert.equal(p.form.events.apply,20);
+ assert.deepEqual(Object.keys(p.code),['13','19']);assert.match(p.eventErrors.apply,/0xc3/);assert.throws(()=>new E.VM(p,new Uint8Array(1)).execute('apply'),/0xc3/);
 });
 test('Invalid show prevents execution even when apply independently validates',()=>{
  const p=E.parse(encoded({apply:14,instructions:{13:[0xc3,0x1f]}}));assert.equal(p.executable,false);assert.deepEqual(p.validEvents,['apply']);assert.throws(()=>new E.VM(p,new Uint8Array(1)),/0xc3/);
@@ -54,16 +55,16 @@ test('Cross-event jumps into instruction operands invalidate both handlers',()=>
  const p=E.parse(encoded({apply:15,instructions:{13:[1,0,0x1f,0,0,0,0x1f]}}));assert.equal(p.executable,false);
  assert.match(p.eventErrors.show,/внутрь команды/);assert.match(p.eventErrors.apply,/внутрь команды/);
 });
-test('Cross-event string and code overlap invalidates both handlers',()=>{
- const p=E.parse(encoded({apply:33,instructions:{13:[0x36,32,32,0,0x1f],32:[0xc1,0x41,0,0,0x1f]}}));assert.equal(p.executable,false);
- assert.match(p.eventErrors.show,/Строка пересекает/);assert.match(p.eventErrors.apply,/Строка пересекает/);
+test('A handler may end at a referenced string start, but a jump into its interior stays blocked',()=>{
+ const p=E.parse(encoded({apply:33,instructions:{13:[0x36,32,32,0,0x1f],32:[0xc1,0x41,0,0,0x1f]}}));assert.equal(p.partial,true);
+ assert.deepEqual(p.validEvents,['show']);assert.match(p.eventErrors.apply,/Переход внутрь строки/);
 });
 test('Partial reader transaction rolls back writes if a later read exceeds BIN',()=>{
  const p=E.parse(encoded({apply:90,instructions:{13:[0x28,0,0,0,0,7,0x23,0,100,0,0,0,0x1f]}})),dump=new Uint8Array(8),vm=new E.VM(p,dump);
  assert.equal(p.partial,true);assert.throws(()=>vm.transaction('show'),/границы BIN/);assert.deepEqual(vm.buffer,dump);assert.equal(vm.buffer[0],0);
 });
 test('Shared valid event instructions remain supported; all-absent program is unavailable',()=>{
- const p=E.parse(encoded({apply:13}));assert.equal(p.executable,true);assert.equal(p.partial,false);assert.deepEqual(p.validEvents,['show','apply']);assert.deepEqual(p.eventErrors,{});
+ const p=E.parse(encoded({apply:13,instructions:{13:[1,0,1,0,0,0,0x1f]}}));assert.equal(p.executable,true);assert.equal(p.partial,false);assert.deepEqual(p.validEvents,['show','apply']);assert.deepEqual(p.eventErrors,{});
  assert.equal(E.parse(encoded({show:65535})).executable,false);
 });
 test('Truncated source and checksum tampering remain hard parse failures',()=>{

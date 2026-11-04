@@ -9,7 +9,7 @@ import zipfile
 
 root = Path(__file__).resolve().parents[1]
 destination = Path(sys.argv[1]).resolve()
-version = '0.5.1'
+version = '0.5.3'
 
 def included(path):
     rel = path.relative_to(root)
@@ -21,7 +21,8 @@ def included(path):
 
 files = sorted(p for p in root.rglob('*') if included(p))
 for test in ['test_source.js', 'test_preparation.js', 'test_polo.js',
-             'test_source_pairs.js', 'test_catalog_store.js', 'test_catalog.js']:
+             'test_source_pairs.js', 'test_binary_events.js', 'test_binary_resolution.js',
+             'test_catalog_store.js', 'test_catalog.js']:
     subprocess.run(['node', str(root / 'tests' / test)], cwd=root, check=True)
 html = (root / 'index.html').read_text()
 ids = re.findall(r'\bid="([^"]+)"', html)
@@ -35,8 +36,9 @@ manifest = dict(version=version, files=[dict(path=str(p.relative_to(root)), byte
     validation=dict(source_tests=13, preparation_tests=11, polo_checks=8, store_tests=8,
         source_binary_pairs=465, exactly_matching_pairs=456, catalog_hashes='passed',
         private_bin_fixture_tests='not rerun; fixtures not in shared repository',
-        original_iprog_execution='not compared', browser_rendering='not tested',
-        real_browser_storage='not tested', windows='not tested'),
+        binary_resolution=dict(target=254, read_only=216, full_writers=32, partial_fis=4, unsupported=2),
+        original_iprog_execution='not compared', chromium_release_scenarios='passed on Linux',
+        real_browser_storage='tested in Chromium', windows='not tested'),
     personal_bin_fixtures_included=False)
 (root / 'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
 destination.parent.mkdir(parents=True, exist_ok=True)

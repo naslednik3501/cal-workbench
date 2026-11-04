@@ -3,6 +3,7 @@
 (function(root){'use strict';
 const MAX_CODE=1048576, MAX_STEPS=2000000;
 const cp=new TextDecoder('windows-1251');
+const eventProfiles=root.CAL_BINARY_EVENT_PROFILES||(typeof require==='function'?require('./binary-event-profiles.js'):null);
 class CalError extends Error {}
 class Reader {
  constructor(bytes,p=0){this.b=bytes;this.p=p;}
@@ -76,7 +77,7 @@ function stringAt(b,at){const r=new Reader(b,at),first=r.u8()^128,a=[first];for(
 const memoryProfiles=Object.freeze({
  'a0a66442b874d649d9ee00c3bbe5a9a859567cd50ab5a3b7771a6c12bb119956':Object.freeze({dumpBytes:2048,start:0x2000,length:2048})
 });
-function parse(raw,{sha}={}){
+function parse(raw,{sha,skipEventProfiles=false,discoverImplicitStrings=false}={}){
  if(raw.length>MAX_CODE*3)throw new CalError('CAL слишком большой');
  const sourceText=cp.decode(raw).replace(/^\uFEFF/,'');
  if(/\bSize\s*\(/i.test(sourceText)&&/\bForm\s*\{/i.test(sourceText)){
@@ -84,31 +85,46 @@ function parse(raw,{sha}={}){
   if(!source)throw new CalError('Не загружен обработчик текстовых калькуляторов');
   const program=source.parse(raw,{sha});if(Object.hasOwn(memoryProfiles,sha))program.memory=memoryProfiles[sha];return program;
  }
- const bytes=decode(raw),form=parseForm(bytes,{validateEvents:false}),eventErrors={},graphs={};
- function eventGraph(event,entry){
+ const bytes=decode(raw),form=parseForm(bytes,{validateEvents:false}),eventErrors={},graphs={},absentEvents=[],stringRanges=[];
+ function knownString(at){return stringRanges.find(([start,end])=>at>=start&&at<end);}
+ function rememberString(start,end){if(!stringRanges.some(([a,b])=>a===start&&b===end))stringRanges.push([start,end]);}
+ function discoverStrings(entry){
+  const pending=[entry],visited=new Set();
+  while(pending.length){const pc=pending.pop();if(visited.has(pc)||knownString(pc)||pc<form.codeStart||pc>=bytes.length)continue;visited.add(pc);
+   try{const r=new Reader(bytes,pc),op=r.u8();if(layouts[op]===undefined)continue;const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
+    if(op===0x36){const s=stringAt(bytes,args[1]);rememberString(args[1],s.end);}
+    if(op===0x1e)pending.push(args[0]);else if(op!==0x1f){pending.push(r.p);if(op>=0x18&&op<=0x1d)pending.push(args[2]);if(op===0x4b)pending.push(args[0]);}
+   }catch{}
+  }
+ }
+ function eventGraph(event,entry,profileReturns=[]){
   if(entry<form.codeStart||entry>=bytes.length)throw new CalError('Некорректный адрес события '+event);
-  const code={},occupied=new Map(),strings=[],pending=[entry],unsupported=new Set();
-  function control(id){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id);}
-  while(pending.length){let pc=pending.pop();if(code[pc])continue;
+  const code={},occupied=new Map(),strings=[],pending=[{pc:entry,edge:'entry'}],unsupported=new Set(),implicitReturnPcs=new Set(),allowedReturns=new Set(profileReturns);
+  function control(id,pc){if(!form.controls[id])throw new CalError('Ссылка на отсутствующий элемент '+id+' в команде 0x'+pc.toString(16));}
+  while(pending.length){const next=pending.pop();let pc=next.pc;if(code[pc])continue;
+   const data=knownString(pc);if(data){if(pc!==data[0])throw new CalError('Переход внутрь строки');if(discoverImplicitStrings||(allowedReturns.has(pc)&&['fallthrough','jump'].includes(next.edge))){implicitReturnPcs.add(pc);continue;}throw new CalError('Переход в строковые данные: 0x'+pc.toString(16)+' ('+next.edge+')');}
    if(pc<form.codeStart||pc>=bytes.length)throw new CalError('Переход за границы кода');
    const r=new Reader(bytes,pc),op=r.u8();if(layouts[op]===undefined)throw new CalError('Неизвестная команда 0x'+op.toString(16));
    const args=[...layouts[op]].map(x=>x==='b'?r.u8():x==='w'?r.u16():r.u32());
    for(let i=pc;i<r.p;i++){if(occupied.has(i)&&occupied.get(i)!==pc)throw new CalError('Переход внутрь команды');occupied.set(i,pc);}
    let ins={pc,op,args,next:r.p};code[pc]=ins;
    if([0x43,0x44,0x4c,0x4d,0x4f].includes(op))unsupported.add('Команда 0x'+op.toString(16)+' ещё не проверена');
-   if(op===0x36){let s=stringAt(bytes,args[1]);ins.text=s.text;strings.push([args[1],s.end]);}
-   if([2].includes(op))control(args[1]);
-   if([3,0x24,0x25,0x26,0x42].includes(op))control(args[0]);
+   if(op===0x36){let s=stringAt(bytes,args[1]);ins.text=s.text;strings.push([args[1],s.end]);rememberString(args[1],s.end);}
+   if([2].includes(op))control(args[1],pc);
+   if([3,0x24,0x25,0x26,0x42].includes(op))control(args[0],pc);
    if(op===0x25&&![1,2,3].includes(args[1]>>>24))unsupported.add('Неизвестное свойство элемента');
-   if(op===0x1e)pending.push(args[0]);
-   else if(op!==0x1f){pending.push(r.p);if(op>=0x18&&op<=0x1d)pending.push(args[2]);if(op===0x4b)pending.push(args[0]);}
+   if(op===0x1e)pending.push({pc:args[0],edge:'jump'});
+   else if(op!==0x1f){pending.push({pc:r.p,edge:'fallthrough'});if(op>=0x18&&op<=0x1d)pending.push({pc:args[2],edge:'branch'});if(op===0x4b)pending.push({pc:args[0],edge:'call'});}
   }
   for(const [start,end] of strings)for(let i=start;i<end;i++)if(occupied.has(i))throw new CalError('Строка пересекает исполняемый код');
   if(unsupported.size)throw new CalError([...unsupported].join('; '));
-  return {code,occupied,strings};
+  return {code,occupied,strings,implicitReturnPcs:[...implicitReturnPcs],absent:Object.keys(code).length===0&&implicitReturnPcs.size>0};
  }
  for(const [event,entry] of Object.entries(form.events))if(entry!==65535){
-  try{graphs[event]=eventGraph(event,entry);}catch(error){if(!(error instanceof CalError))throw error;eventErrors[event]=error.message;}
+  if(!skipEventProfiles&&eventProfiles?.eventAbsent?.(sha,event,entry)){absentEvents.push(event);continue;}
+  const profileReturns=!skipEventProfiles?(eventProfiles?.implicitReturns?.(sha,event,entry)||[]):[];
+  if(discoverImplicitStrings||profileReturns.length)discoverStrings(entry);
+  try{const graph=eventGraph(event,entry,profileReturns);if(graph.absent)absentEvents.push(event);else graphs[event]=graph;}catch(error){if(!(error instanceof CalError))throw error;eventErrors[event]=error.message;}
  }
  // Validate shared code as well: two individually valid handlers must not
  // interpret overlapping bytes as different instructions, or code as strings.
@@ -119,14 +135,17 @@ function parse(raw,{sha}={}){
   for(const [one,two] of [[left,right],[right,left]])for(const [start,end] of one.strings)for(let at=start;at<end;at++)if(two.occupied.has(at))reason='Строка пересекает исполняемый код';
   if(reason){eventErrors[names[a]]=reason;eventErrors[names[b]]=reason;}
  }
- const validEvents=names.filter(event=>!eventErrors[event]),code={};
+ const validEvents=names.filter(event=>!eventErrors[event]),code={},eventTermination={},eventImplicitReturnPcs={};
  for(const event of validEvents)Object.assign(code,graphs[event].code);
- const executable=!eventErrors.show&&validEvents.length>0,partial=executable&&Object.keys(eventErrors).length>0;
+ for(const event of validEvents){eventTermination[event]=graphs[event].implicitReturnPcs.length?'string-boundary':'return';eventImplicitReturnPcs[event]=graphs[event].implicitReturnPcs;}
+ const usefulEvents=validEvents.filter(event=>Object.values(graphs[event].code).some(i=>i.op!==0x1f));
+ const executable=!eventErrors.show&&usefulEvents.length>0,partial=executable&&Object.keys(eventErrors).length>0;
+ const readOnly=executable&&absentEvents.includes('apply')&&!validEvents.includes('apply');
  const unsupported=Object.entries(eventErrors).map(([event,message])=>event+': '+message);
  if(!validEvents.length&&!unsupported.length)unsupported.push('Нет исполняемых событий');
  // Original event addresses and bytes are retained; invalid handlers are never
  // treated as absent. A valid reader can be used while its writer stays blocked.
- return {bytes,form,code,unsupported,executable,partial,eventErrors,validEvents};
+ return {bytes,form,code,unsupported,executable,partial,readOnly,eventErrors,validEvents,absentEvents,eventTermination,eventImplicitReturnPcs};
 }
 
 class VM {
@@ -147,12 +166,15 @@ class VM {
  input(id,value){const o=this.program.form.controls[id];if(!o||!'HDCB'.includes(o.type))throw new CalError('Поле недоступно для ввода');if(!Number.isInteger(value)||value<0||value>0xffffffff)throw new CalError('Число должно быть целым от 0 до 4294967295');if(o.type==='C'&&value>=o.items.length)throw new CalError('Неверный пункт списка');if(o.type==='B'&&value>1)throw new CalError('Неверное значение флажка');this.controls[id].value=value;}
  execute(event,options={}){
   if(this.program.eventErrors?.[event])throw new CalError(this.program.eventErrors[event]);
+  if(this.program.absentEvents?.includes(event))throw new CalError('Событие '+event+' отсутствует в оригинальном CAL');
   let pc=this.program.form.events[event];if(pc===undefined)throw new CalError('Неизвестное событие');if(pc===65535)return {steps:0};
+  const implicitReturns=new Set(this.program.eventImplicitReturnPcs?.[event]||[]);
   const r=this.r,s=this.s,c=this.controls,stack=[],limit=options.maxSteps??MAX_STEPS,start=Date.now();let steps=0;
   function div(a,b){if(!b)throw new CalError('Деление на ноль');return Math.floor(a/b);}
   const append=(id,t)=>{s[id]+=t;if(s[id].length>65536)throw new CalError('Лимит длины строки');};
   while(true){
    if(++steps>limit||(steps%4096===0&&Date.now()-start>2000))throw new CalError('Превышен лимит выполнения');
+   if(implicitReturns.has(pc)){if(stack.length){pc=stack.pop();continue;}return {steps};}
    const i=this.program.code[pc];if(!i)throw new CalError('Переход на недопустимую команду');
    const op=i.op,[a,b,d]=i.args;pc=i.next;
    if(op>=4&&op<=0x17){let x=r[a],y=(op%2===0)?r[b]:b;switch(op>>1){case 2:r[a]=x+y;break;case 3:r[a]=x-y;break;case 4:r[a]=div(x,y);break;case 5:if(!y)throw new CalError('Деление на ноль');r[a]=x%y;break;case 6:r[a]=Math.imul(x,y);break;case 7:r[a]=x&y;break;case 8:r[a]=x|y;break;case 9:r[a]=x^y;break;case 10:r[a]=x>>>(y&31);break;case 11:r[a]=x<<(y&31);break;}continue;}
