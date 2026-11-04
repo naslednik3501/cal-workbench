@@ -1,0 +1,378 @@
+{
+  "scope": "Exact original 16 from saved current audit; no empty BP8272 or FIS",
+  "counts": {
+    "fully_restored": 0,
+    "reader_restored": 15,
+    "unavailable": 1,
+    "writers_restored": 0
+  },
+  "files": [
+    {
+      "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2",
+      "paths": [
+        "Calculators/invert.cal"
+      ],
+      "baselineWarnings": [
+        "show: Некорректный адрес события show"
+      ],
+      "status": "blocked",
+      "fully_restored": false,
+      "reason": "OnShow=1379 exceeds decoded image length 288 (codeStart=100); OnApply=194 is valid but initialization is not.",
+      "isolated_apply": "XOR 0xff at offsets 0..131071 inclusive; verified only as isolated research, not exposed in production.",
+      "next_step": "Correct original/header-format evidence or an iProg reference establishing initialization and actual event address. Do not guess OnShow."
+    },
+    {
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 261,
+        "apply": 80,
+        "terminal": 538,
+        "rawBytes": 1254,
+        "rawCrc16": 59937,
+        "decodedBytes": 576,
+        "decodedCrc16": 62083
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 261,
+        "apply": 15783,
+        "terminal": 538,
+        "rawBytes": 1254,
+        "rawCrc16": 4729,
+        "decodedBytes": 576,
+        "decodedCrc16": 6217
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x255 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 320,
+        "apply": 36146,
+        "terminal": 597,
+        "rawBytes": 1386,
+        "rawCrc16": 50940,
+        "decodedBytes": 640,
+        "decodedCrc16": 13298
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "ce0234df2133742a5b2e0e7a852c6b1ca8dfb8788fbecea0f09adc1c5e5ae3ad",
+      "paths": [
+        "Calculators/CarRadio/Opel/OPEL  CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 287,
+        "apply": 3623,
+        "terminal": 543,
+        "rawBytes": 1320,
+        "rawCrc16": 12216,
+        "decodedBytes": 608,
+        "decodedCrc16": 36787
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "1418d9252ebb88bef5bba2c966535dd3db45968cae887e28602c11c806edfed2",
+      "paths": [
+        "Calculators/CarRadio/Opel/CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 287,
+        "apply": 11641,
+        "terminal": 543,
+        "rawBytes": 1320,
+        "rawCrc16": 64902,
+        "decodedBytes": 608,
+        "decodedCrc16": 1841
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "bcce6ded1d1c7d663b525a9a01c0abb9b2546a213df3fb786a462e8d3dd3929b",
+      "paths": [
+        "Calculators/CarRadio/Serial calculator/OPEL  CD 70 Simens VDO.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 287,
+        "apply": 52967,
+        "terminal": 543,
+        "rawBytes": 1320,
+        "rawCrc16": 25132,
+        "decodedBytes": 608,
+        "decodedCrc16": 28165
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "paths": [
+        "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+        "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x29d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 329,
+        "apply": 18304,
+        "terminal": 669,
+        "rawBytes": 1518,
+        "rawCrc16": 1194,
+        "decodedBytes": 704,
+        "decodedCrc16": 45432
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "paths": [
+        "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+        "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x2a7 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 270,
+        "apply": 9094,
+        "terminal": 679,
+        "rawBytes": 1584,
+        "rawCrc16": 22701,
+        "decodedBytes": 736,
+        "decodedCrc16": 13206
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "paths": [
+        "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+        "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x247 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 237,
+        "apply": 16828,
+        "terminal": 583,
+        "rawBytes": 1386,
+        "rawCrc16": 12614,
+        "decodedBytes": 640,
+        "decodedCrc16": 14984
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "paths": [
+        "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+        "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x23d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 302,
+        "apply": 63460,
+        "terminal": 573,
+        "rawBytes": 1320,
+        "rawCrc16": 36226,
+        "decodedBytes": 608,
+        "decodedCrc16": 53972
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery  ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 258,
+        "apply": 57719,
+        "terminal": 535,
+        "rawBytes": 1254,
+        "rawCrc16": 5951,
+        "decodedBytes": 576,
+        "decodedCrc16": 52331
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "238b1eb640695efb5226437999e370ea4f8ca28c46155d368ea244f683656b26",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery TaGaz ECU 95080.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 258,
+        "apply": 11754,
+        "terminal": 535,
+        "rawBytes": 1254,
+        "rawCrc16": 46801,
+        "decodedBytes": 576,
+        "decodedCrc16": 16724
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "cef29d369ba14335be8ead340729232ebaa494cbad5348c076c0b289deadc7ae",
+      "paths": [
+        "Calculators/Immo/Car/Chery/Pin Chery 0L72A.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x252 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 317,
+        "apply": 23303,
+        "terminal": 594,
+        "rawBytes": 1386,
+        "rawCrc16": 59154,
+        "decodedBytes": 640,
+        "decodedCrc16": 16784
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "paths": [
+        "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+        "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x2a1 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 255,
+        "apply": 36778,
+        "terminal": 673,
+        "rawBytes": 1584,
+        "rawCrc16": 34047,
+        "decodedBytes": 736,
+        "decodedCrc16": 29185
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    },
+    {
+      "sha": "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5",
+      "paths": [
+        "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal"
+      ],
+      "baselineWarnings": [
+        "show: Переход в строковые данные: 0x278 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "status": "reader_restored",
+      "fully_restored": false,
+      "profile": {
+        "entry": 310,
+        "apply": 13589,
+        "terminal": 632,
+        "rawBytes": 1452,
+        "rawCrc16": 21248,
+        "decodedBytes": 672,
+        "decodedCrc16": 33645
+      },
+      "reason": "Conditional branch reaches exact referenced string-table boundary; contiguous code has no BIN writes and OnApply points outside code.",
+      "next_step": "No writer restoration without an original containing an addressable writer or exact compiled counterpart."
+    }
+  ]
+}

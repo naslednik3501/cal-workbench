@@ -3,12 +3,12 @@
   "source_store_commit": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
   "visual_review": "reports/image-visual-review-2026-11-02.csv",
   "summary": {
-    "reference_occurrences": 623,
-    "control_mappings": 320,
-    "calculator_contents": 288,
-    "unique_assets": 135,
-    "source_context_bindings": 470,
-    "remaining_unresolved_reference_occurrences": 1714
+    "reference_occurrences": 786,
+    "control_mappings": 405,
+    "calculator_contents": 351,
+    "unique_assets": 180,
+    "source_context_bindings": 633,
+    "remaining_unresolved_reference_occurrences": 1639
   },
   "assets": {
     "dbd33ea4c11f1814966d296f8da2cccd28f33094ca20e01914f0e264e6594dbd": {
@@ -2035,6 +2035,681 @@
       "category": "logo",
       "width": 168,
       "height": 115
+    },
+    "9bbf53d0460e2b3702ad08826cdfc8a4a71fce888a76ab15e7da8ce039529373": {
+      "sha256": "9bbf53d0460e2b3702ad08826cdfc8a4a71fce888a76ab15e7da8ce039529373",
+      "bytes": 172687,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 4420,
+        "path": "AIRBAG/VW/Passat/B6/vw8.png",
+        "sha256": "9bbf53d0460e2b3702ad08826cdfc8a4a71fce888a76ab15e7da8ce039529373",
+        "bytes": 172687,
+        "crc32": "a741789f"
+      },
+      "category": "board_chip_location",
+      "width": 283,
+      "height": 212
+    },
+    "8106cf94bc1a4a99b22c6dd62fca9a915a054c28c3d91bc8e689a5a4d9f0c0a0": {
+      "sha256": "8106cf94bc1a4a99b22c6dd62fca9a915a054c28c3d91bc8e689a5a4d9f0c0a0",
+      "bytes": 241047,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2034,
+        "path": "AIRBAG/VW/Touareg/vw1.png",
+        "sha256": "8106cf94bc1a4a99b22c6dd62fca9a915a054c28c3d91bc8e689a5a4d9f0c0a0",
+        "bytes": 241047,
+        "crc32": "d6a56b76"
+      },
+      "category": "board_chip_location",
+      "width": 301,
+      "height": 273
+    },
+    "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1": {
+      "sha256": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+      "bytes": 172480,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2029,
+        "path": "AIRBAG/VW/Jetta/vw8j.png",
+        "sha256": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+        "bytes": 172480,
+        "crc32": "59cba837"
+      },
+      "category": "board_chip_location",
+      "width": 291,
+      "height": 214
+    },
+    "bc41ccc9543c4e1a313597ae62a107fc22cc2a503565b19abedb6017459565ae": {
+      "sha256": "bc41ccc9543c4e1a313597ae62a107fc22cc2a503565b19abedb6017459565ae",
+      "bytes": 263536,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2639,
+        "path": "AIRBAG/Chery/Tiggo/Cht11-36.png",
+        "sha256": "bc41ccc9543c4e1a313597ae62a107fc22cc2a503565b19abedb6017459565ae",
+        "bytes": 263536,
+        "crc32": "2ae2df1a"
+      },
+      "category": "board_chip_location",
+      "width": 307,
+      "height": 301
+    },
+    "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157": {
+      "sha256": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+      "bytes": 195731,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2642,
+        "path": "AIRBAG/Chery/Tiggo/Cht11.png",
+        "sha256": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+        "bytes": 195731,
+        "crc32": "c1e4fa32"
+      },
+      "category": "board_chip_location",
+      "width": 297,
+      "height": 224
+    },
+    "1291b01070eece5095e4fc0a21c08bf8fef3bbd685f54b1d24fe4b5200bf1826": {
+      "sha256": "1291b01070eece5095e4fc0a21c08bf8fef3bbd685f54b1d24fe4b5200bf1826",
+      "bytes": 251114,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2647,
+        "path": "AIRBAG/Chery/M11/m11.png",
+        "sha256": "1291b01070eece5095e4fc0a21c08bf8fef3bbd685f54b1d24fe4b5200bf1826",
+        "bytes": 251114,
+        "crc32": "1a6c88b8"
+      },
+      "category": "board_chip_location",
+      "width": 298,
+      "height": 278
+    },
+    "2f626d311cbc442f6458ee84e0faa73887357ef6c6a1d0093f2593df9f0eb101": {
+      "sha256": "2f626d311cbc442f6458ee84e0faa73887357ef6c6a1d0093f2593df9f0eb101",
+      "bytes": 200818,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1981,
+        "path": "AIRBAG/Acura/RDX/ac1.png",
+        "sha256": "2f626d311cbc442f6458ee84e0faa73887357ef6c6a1d0093f2593df9f0eb101",
+        "bytes": 200818,
+        "crc32": "9a7cacd9"
+      },
+      "category": "board_chip_location",
+      "width": 276,
+      "height": 238
+    },
+    "10de4e66b401646fdf09159b9bb8da55a5a259adf9559fcd242682b4960e709c": {
+      "sha256": "10de4e66b401646fdf09159b9bb8da55a5a259adf9559fcd242682b4960e709c",
+      "bytes": 256465,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2070,
+        "path": "AIRBAG/Lada/Kalina/ladasrs.png",
+        "sha256": "10de4e66b401646fdf09159b9bb8da55a5a259adf9559fcd242682b4960e709c",
+        "bytes": 256465,
+        "crc32": "357e2449"
+      },
+      "category": "board_chip_location",
+      "width": 304,
+      "height": 280
+    },
+    "7bf89fe46b2f5ddadb8afe856b7684fb7a48313d10314b89958d96d9d7901abf": {
+      "sha256": "7bf89fe46b2f5ddadb8afe856b7684fb7a48313d10314b89958d96d9d7901abf",
+      "bytes": 208049,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2596,
+        "path": "AIRBAG/Skoda/SuperB/3t0.png",
+        "sha256": "7bf89fe46b2f5ddadb8afe856b7684fb7a48313d10314b89958d96d9d7901abf",
+        "bytes": 208049,
+        "crc32": "558fc533"
+      },
+      "category": "board_chip_location",
+      "width": 289,
+      "height": 250
+    },
+    "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29": {
+      "sha256": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+      "bytes": 189834,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2600,
+        "path": "AIRBAG/Skoda/Fabia/oc1c0.png",
+        "sha256": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+        "bytes": 189834,
+        "crc32": "c2f5f904"
+      },
+      "category": "board_chip_location",
+      "width": 285,
+      "height": 226
+    },
+    "b64cbcc2428b7f92436ea12452e51b9bee88dd3bc7c8b6acfecf066648d80a0c": {
+      "sha256": "b64cbcc2428b7f92436ea12452e51b9bee88dd3bc7c8b6acfecf066648d80a0c",
+      "bytes": 203243,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2065,
+        "path": "AIRBAG/VW/Caddy/cko.png",
+        "sha256": "b64cbcc2428b7f92436ea12452e51b9bee88dd3bc7c8b6acfecf066648d80a0c",
+        "bytes": 203243,
+        "crc32": "9890a8f5"
+      },
+      "category": "board_chip_location",
+      "width": 276,
+      "height": 253
+    },
+    "b4f9206cac5f582d8d5f086158bf456556eb197fe14630d3df0fa036f3530e21": {
+      "sha256": "b4f9206cac5f582d8d5f086158bf456556eb197fe14630d3df0fa036f3530e21",
+      "bytes": 201985,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2613,
+        "path": "AIRBAG/Skoda/Oktavia/oc1co1.png",
+        "sha256": "b4f9206cac5f582d8d5f086158bf456556eb197fe14630d3df0fa036f3530e21",
+        "bytes": 201985,
+        "crc32": "fd8a19cd"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 256
+    },
+    "4789f3710224eb2d7481f5a09f3147f597c59163bc465c016a220058a1d5f030": {
+      "sha256": "4789f3710224eb2d7481f5a09f3147f597c59163bc465c016a220058a1d5f030",
+      "bytes": 208027,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2608,
+        "path": "AIRBAG/Skoda/Oktavia/ok6q0.png",
+        "sha256": "4789f3710224eb2d7481f5a09f3147f597c59163bc465c016a220058a1d5f030",
+        "bytes": 208027,
+        "crc32": "b6c84717"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 255
+    },
+    "e592a5b137c1e7c88cdcdcdd8995330ed1a865a01832bd259b71c8a95687b88a": {
+      "sha256": "e592a5b137c1e7c88cdcdcdd8995330ed1a865a01832bd259b71c8a95687b88a",
+      "bytes": 232248,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2659,
+        "path": "AIRBAG/Jaguar/XJ/aw93.png",
+        "sha256": "e592a5b137c1e7c88cdcdcdd8995330ed1a865a01832bd259b71c8a95687b88a",
+        "bytes": 232248,
+        "crc32": "32be30cf"
+      },
+      "category": "board_chip_location",
+      "width": 285,
+      "height": 285
+    },
+    "25653cbc657477775c402989117961aee22964e8a91f17842f0324d9fe6c4cfc": {
+      "sha256": "25653cbc657477775c402989117961aee22964e8a91f17842f0324d9fe6c4cfc",
+      "bytes": 208359,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 198,
+        "path": "AIRBAG/MG/h325c640.png",
+        "sha256": "25653cbc657477775c402989117961aee22964e8a91f17842f0324d9fe6c4cfc",
+        "bytes": 208359,
+        "crc32": "4ab91186"
+      },
+      "category": "board_chip_location",
+      "width": 284,
+      "height": 245
+    },
+    "d698fa66c2be4a4e4b0c35f2a7b19757ea1dca7886235dde8e54e47a2531efea": {
+      "sha256": "d698fa66c2be4a4e4b0c35f2a7b19757ea1dca7886235dde8e54e47a2531efea",
+      "bytes": 194251,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1675,
+        "path": "AIRBAG/Infiniti/EX 25, 35/bm1a.png",
+        "sha256": "d698fa66c2be4a4e4b0c35f2a7b19757ea1dca7886235dde8e54e47a2531efea",
+        "bytes": 194251,
+        "crc32": "1c5ef545"
+      },
+      "category": "board_chip_location",
+      "width": 288,
+      "height": 230
+    },
+    "f76805e6b5e601195a8ff4e2af8d2e953249e2d46c1495f91077092a63e437cf": {
+      "sha256": "f76805e6b5e601195a8ff4e2af8d2e953249e2d46c1495f91077092a63e437cf",
+      "bytes": 208145,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1650,
+        "path": "AIRBAG/Infiniti/FX 35, 37/fx35cl71a.png",
+        "sha256": "f76805e6b5e601195a8ff4e2af8d2e953249e2d46c1495f91077092a63e437cf",
+        "bytes": 208145,
+        "crc32": "1e911611"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 253
+    },
+    "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578": {
+      "sha256": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+      "bytes": 200838,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2977,
+        "path": "AIRBAG/Geely/Emgrand/emgrsrs.png",
+        "sha256": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+        "bytes": 200838,
+        "crc32": "69be53c5"
+      },
+      "category": "board_chip_location",
+      "width": 281,
+      "height": 228
+    },
+    "7e3a5284b424b7643710ca361f61013b77d819cb27fcb7fe4ebf609f37fbb383": {
+      "sha256": "7e3a5284b424b7643710ca361f61013b77d819cb27fcb7fe4ebf609f37fbb383",
+      "bytes": 82368,
+      "source": {
+        "archive": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+        "member": 203,
+        "path": "DASHBOARD/╨ó╨░╨ô╨░╨╖/c190.png",
+        "sha256": "7e3a5284b424b7643710ca361f61013b77d819cb27fcb7fe4ebf609f37fbb383",
+        "bytes": 82368,
+        "crc32": "5b2299b0"
+      },
+      "category": "device_identification",
+      "width": 267,
+      "height": 209
+    },
+    "b1db178c05885b89632c242f5a230630ba0fc37da8a808abd843e79adc0cb74e": {
+      "sha256": "b1db178c05885b89632c242f5a230630ba0fc37da8a808abd843e79adc0cb74e",
+      "bytes": 109326,
+      "source": {
+        "archive": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+        "member": 533,
+        "path": "CAR/CARRADIO/Kia/1h000.png",
+        "sha256": "b1db178c05885b89632c242f5a230630ba0fc37da8a808abd843e79adc0cb74e",
+        "bytes": 109326,
+        "crc32": "ab80d30c"
+      },
+      "category": "device_identification",
+      "width": 305,
+      "height": 193
+    },
+    "d36b9a6f4ccd65bb5afddcf9e11f6b9a1beb00a945229bc4913153f36f60d7c7": {
+      "sha256": "d36b9a6f4ccd65bb5afddcf9e11f6b9a1beb00a945229bc4913153f36f60d7c7",
+      "bytes": 112043,
+      "source": {
+        "archive": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+        "member": 560,
+        "path": "CAR/CARRADIO/Jaguar/jagradio.png",
+        "sha256": "d36b9a6f4ccd65bb5afddcf9e11f6b9a1beb00a945229bc4913153f36f60d7c7",
+        "bytes": 112043,
+        "crc32": "7b19032b"
+      },
+      "category": "device_identification",
+      "width": 272,
+      "height": 245
+    },
+    "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7": {
+      "sha256": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "bytes": 192317,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2281,
+        "path": "AIRBAG/KIA-HYUNDAI/Cerato/kcsrs.png",
+        "sha256": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+        "bytes": 192317,
+        "crc32": "e5235894"
+      },
+      "category": "board_chip_location",
+      "width": 280,
+      "height": 237
+    },
+    "6c7ba8536656d72df868bf8f9524d94d7a41bb5b4cbf48e033d0a3d87103fdd5": {
+      "sha256": "6c7ba8536656d72df868bf8f9524d94d7a41bb5b4cbf48e033d0a3d87103fdd5",
+      "bytes": 175330,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2286,
+        "path": "AIRBAG/KIA-HYUNDAI/Cerato/a7020.png",
+        "sha256": "6c7ba8536656d72df868bf8f9524d94d7a41bb5b4cbf48e033d0a3d87103fdd5",
+        "bytes": 175330,
+        "crc32": "28ecc6a2"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 227
+    },
+    "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9": {
+      "sha256": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "bytes": 181623,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2371,
+        "path": "AIRBAG/KIA-HYUNDAI/IX35/spsrs.png",
+        "sha256": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+        "bytes": 181623,
+        "crc32": "7fe857ce"
+      },
+      "category": "board_chip_location",
+      "width": 284,
+      "height": 228
+    },
+    "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af": {
+      "sha256": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "bytes": 179904,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2285,
+        "path": "AIRBAG/KIA-HYUNDAI/Cerato/ko.png",
+        "sha256": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+        "bytes": 179904,
+        "crc32": "c136af7d"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 227
+    },
+    "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8": {
+      "sha256": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+      "bytes": 185332,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2428,
+        "path": "AIRBAG/KIA-HYUNDAI/Ceed/1h200.png",
+        "sha256": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+        "bytes": 185332,
+        "crc32": "ae659efd"
+      },
+      "category": "board_chip_location",
+      "width": 285,
+      "height": 228
+    },
+    "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9": {
+      "sha256": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+      "bytes": 190808,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2456,
+        "path": "AIRBAG/KIA-HYUNDAI/Sorento/3e050.png",
+        "sha256": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+        "bytes": 190808,
+        "crc32": "c3927884"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 250
+    },
+    "0fba042e1a35ef3f6fff7451d8abd75ac4f7261412c2a578d819794d3ed607bc": {
+      "sha256": "0fba042e1a35ef3f6fff7451d8abd75ac4f7261412c2a578d819794d3ed607bc",
+      "bytes": 171834,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2294,
+        "path": "AIRBAG/KIA-HYUNDAI/Morning/picsrs.png",
+        "sha256": "0fba042e1a35ef3f6fff7451d8abd75ac4f7261412c2a578d819794d3ed607bc",
+        "bytes": 171834,
+        "crc32": "f7b7cb61"
+      },
+      "category": "board_chip_location",
+      "width": 279,
+      "height": 217
+    },
+    "9414f0f94a4174035bfc7d05d8659c36eaa16889227488b09ce6e2520f88fbc5": {
+      "sha256": "9414f0f94a4174035bfc7d05d8659c36eaa16889227488b09ce6e2520f88fbc5",
+      "bytes": 192045,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2288,
+        "path": "AIRBAG/KIA-HYUNDAI/Cerato/07620.png",
+        "sha256": "9414f0f94a4174035bfc7d05d8659c36eaa16889227488b09ce6e2520f88fbc5",
+        "bytes": 192045,
+        "crc32": "3410767b"
+      },
+      "category": "board_chip_location",
+      "width": 287,
+      "height": 224
+    },
+    "e54ca6d07ad5edefb4cd2c1b5d5c7fe7f1ec91238242469bc29288e059c6e4a0": {
+      "sha256": "e54ca6d07ad5edefb4cd2c1b5d5c7fe7f1ec91238242469bc29288e059c6e4a0",
+      "bytes": 196134,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1565,
+        "path": "AIRBAG/Opel/Vectra C/vcsrs.png",
+        "sha256": "e54ca6d07ad5edefb4cd2c1b5d5c7fe7f1ec91238242469bc29288e059c6e4a0",
+        "bytes": 196134,
+        "crc32": "0cd0330e"
+      },
+      "category": "board_chip_location",
+      "width": 288,
+      "height": 247
+    },
+    "1f90fbf15815beadca8d141bd84df874a42dfb51e77e7de1f0e52e5eb0bbe063": {
+      "sha256": "1f90fbf15815beadca8d141bd84df874a42dfb51e77e7de1f0e52e5eb0bbe063",
+      "bytes": 183117,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1789,
+        "path": "AIRBAG/Toyota/Mark 2/22090.png",
+        "sha256": "1f90fbf15815beadca8d141bd84df874a42dfb51e77e7de1f0e52e5eb0bbe063",
+        "bytes": 183117,
+        "crc32": "e54d0246"
+      },
+      "category": "board_chip_location",
+      "width": 290,
+      "height": 216
+    },
+    "a392cb953baec0b72c7d6068dcca1efcb29e8bd1f6255bea60bc70162c4cbf0a": {
+      "sha256": "a392cb953baec0b72c7d6068dcca1efcb29e8bd1f6255bea60bc70162c4cbf0a",
+      "bytes": 203090,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2303,
+        "path": "AIRBAG/KIA-HYUNDAI/Getz/1c150.png",
+        "sha256": "a392cb953baec0b72c7d6068dcca1efcb29e8bd1f6255bea60bc70162c4cbf0a",
+        "bytes": 203090,
+        "crc32": "86c53932"
+      },
+      "category": "board_chip_location",
+      "width": 284,
+      "height": 267
+    },
+    "aa1088700cc61376434c040e96ba2677fd467a850a881108b8f3d79a5fd52fd3": {
+      "sha256": "aa1088700cc61376434c040e96ba2677fd467a850a881108b8f3d79a5fd52fd3",
+      "bytes": 176827,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2307,
+        "path": "AIRBAG/KIA-HYUNDAI/I30/i30srs.png",
+        "sha256": "aa1088700cc61376434c040e96ba2677fd467a850a881108b8f3d79a5fd52fd3",
+        "bytes": 176827,
+        "crc32": "f2720f31"
+      },
+      "category": "board_chip_location",
+      "width": 283,
+      "height": 220
+    },
+    "0a08d750c359cefee238b0d8dda220886f6025f4edc161979af03c7f643ffcc9": {
+      "sha256": "0a08d750c359cefee238b0d8dda220886f6025f4edc161979af03c7f643ffcc9",
+      "bytes": 229919,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2319,
+        "path": "AIRBAG/KIA-HYUNDAI/I40/3z300.png",
+        "sha256": "0a08d750c359cefee238b0d8dda220886f6025f4edc161979af03c7f643ffcc9",
+        "bytes": 229919,
+        "crc32": "6c5c00cd"
+      },
+      "category": "board_chip_location",
+      "width": 283,
+      "height": 274
+    },
+    "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2": {
+      "sha256": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+      "bytes": 227954,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2353,
+        "path": "AIRBAG/KIA-HYUNDAI/H-1/4h500.png",
+        "sha256": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+        "bytes": 227954,
+        "crc32": "ed83cc09"
+      },
+      "category": "board_chip_location",
+      "width": 287,
+      "height": 268
+    },
+    "ac9bc615e4af0fc166de70d891954dffed3725eb5772235448cfc0bdcc931a3b": {
+      "sha256": "ac9bc615e4af0fc166de70d891954dffed3725eb5772235448cfc0bdcc931a3b",
+      "bytes": 217630,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2369,
+        "path": "AIRBAG/KIA-HYUNDAI/Sonata/3d100.png",
+        "sha256": "ac9bc615e4af0fc166de70d891954dffed3725eb5772235448cfc0bdcc931a3b",
+        "bytes": 217630,
+        "crc32": "34e3a96b"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 248
+    },
+    "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04": {
+      "sha256": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+      "bytes": 254868,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2491,
+        "path": "AIRBAG/KIA-HYUNDAI/Starex/4h600.png",
+        "sha256": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+        "bytes": 254868,
+        "crc32": "53f9642b"
+      },
+      "category": "board_chip_location",
+      "width": 284,
+      "height": 289
+    },
+    "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44": {
+      "sha256": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+      "bytes": 153365,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2506,
+        "path": "AIRBAG/KIA-HYUNDAI/Elantra/elsrs.png",
+        "sha256": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+        "bytes": 153365,
+        "crc32": "f4ac0547"
+      },
+      "category": "board_chip_location",
+      "width": 281,
+      "height": 188
+    },
+    "da12f43580b6123d192508ddaa105ffa0a8d316aed03d646cb2f3ec42d38d828": {
+      "sha256": "da12f43580b6123d192508ddaa105ffa0a8d316aed03d646cb2f3ec42d38d828",
+      "bytes": 230470,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2529,
+        "path": "AIRBAG/KIA-HYUNDAI/Santa Fe/2b180.png",
+        "sha256": "da12f43580b6123d192508ddaa105ffa0a8d316aed03d646cb2f3ec42d38d828",
+        "bytes": 230470,
+        "crc32": "09580121"
+      },
+      "category": "board_chip_location",
+      "width": 300,
+      "height": 263
+    },
+    "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f": {
+      "sha256": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+      "bytes": 186630,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2351,
+        "path": "AIRBAG/KIA-HYUNDAI/Tucson/1r000.png",
+        "sha256": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+        "bytes": 186630,
+        "crc32": "1ca4a007"
+      },
+      "category": "board_chip_location",
+      "width": 283,
+      "height": 247
+    },
+    "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3": {
+      "sha256": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "bytes": 184036,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2592,
+        "path": "AIRBAG/KIA-HYUNDAI/IX55/ix553j600.png",
+        "sha256": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+        "bytes": 184036,
+        "crc32": "52571b40"
+      },
+      "category": "board_chip_location",
+      "width": 281,
+      "height": 224
+    },
+    "f08dfbe07f7c669e78d38397d4076308358c55a82fe0d6c616166ea9f9d05de4": {
+      "sha256": "f08dfbe07f7c669e78d38397d4076308358c55a82fe0d6c616166ea9f9d05de4",
+      "bytes": 103230,
+      "source": {
+        "archive": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+        "member": 2077,
+        "path": "DASHBOARD/Peugeot/508/508.png",
+        "sha256": "f08dfbe07f7c669e78d38397d4076308358c55a82fe0d6c616166ea9f9d05de4",
+        "bytes": 103230,
+        "crc32": "cee1fbbd"
+      },
+      "category": "device_identification",
+      "width": 285,
+      "height": 185
+    },
+    "2dc6be34ab924d7393c6ff13b7735d211e58d92d328560bc201f32c64ef3c1ab": {
+      "sha256": "2dc6be34ab924d7393c6ff13b7735d211e58d92d328560bc201f32c64ef3c1ab",
+      "bytes": 211247,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2184,
+        "path": "AIRBAG/SUBARU/Tribeca/legsrs.png",
+        "sha256": "2dc6be34ab924d7393c6ff13b7735d211e58d92d328560bc201f32c64ef3c1ab",
+        "bytes": 211247,
+        "crc32": "a4ab50e4"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 254
+    },
+    "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c": {
+      "sha256": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+      "bytes": 183911,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 3026,
+        "path": "AIRBAG/Suzuki/Grand Vitara/gvsrs.png",
+        "sha256": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+        "bytes": 183911,
+        "crc32": "e8474af4"
+      },
+      "category": "board_chip_location",
+      "width": 282,
+      "height": 220
+    },
+    "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc": {
+      "sha256": "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc",
+      "bytes": 90341,
+      "source": {
+        "archive": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+        "member": 3124,
+        "path": "DASHBOARD/Special vehicles/MOTO/Motobikes/Arctic Cat/arcticcat1.png",
+        "sha256": "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc",
+        "bytes": 90341,
+        "crc32": "e7ab709c"
+      },
+      "category": "device_identification",
+      "width": 286,
+      "height": 234
     }
   },
   "bindings": [
@@ -5797,6 +6472,1310 @@
       "reference": "Zaz.jpg",
       "resource_sha": "97494d625a77d80b0218db53f8770831e4fc2f7f54ebe49ef152a84f9fab18cd",
       "evidence": "unique visually reviewed named brand logo and matching calculator brand"
+    },
+    {
+      "cal": "Calculators/Airbag/Volkswagen/VW8 3C0 909 605M (95640).cal",
+      "cal_sha": "c8c846def8553894ced7c854080a74c5b2a81bd3a91f349728b081582a647528",
+      "control": 10,
+      "reference": "Vw8.png",
+      "resource_sha": "9bbf53d0460e2b3702ad08826cdfc8a4a71fce888a76ab15e7da8ce039529373",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Volkswagen/VW8 3C0 909 605M (95640).cal",
+      "cal_sha": "c8c846def8553894ced7c854080a74c5b2a81bd3a91f349728b081582a647528",
+      "control": 10,
+      "reference": "Vw8.png",
+      "resource_sha": "9bbf53d0460e2b3702ad08826cdfc8a4a71fce888a76ab15e7da8ce039529373",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Volkswagen/VW Polo 6R0 959 655 K.cal",
+      "cal_sha": "4235d414016dee768f89fad74ed4eaf575c9fa3bc29f560973b6179f170a1ba2",
+      "control": 9,
+      "reference": "6r0959655j.png",
+      "resource_sha": "f00625587abd5035bdb83c97c42cb47dda94fe7ee414f65b46ed36ef52eb9467",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Volkswagen/VW Polo 6R0 959 655 K.cal",
+      "cal_sha": "4235d414016dee768f89fad74ed4eaf575c9fa3bc29f560973b6179f170a1ba2",
+      "control": 9,
+      "reference": "6r0959655j.png",
+      "resource_sha": "f00625587abd5035bdb83c97c42cb47dda94fe7ee414f65b46ed36ef52eb9467",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Volkswagen/Touareg  7L0 959 655 (95640).cal",
+      "cal_sha": "2426968e7a2aa598d5a873cc1b6a90a70fa9e81f551f2a0f5de1596299da606b",
+      "control": 10,
+      "reference": "vw1.png",
+      "resource_sha": "8106cf94bc1a4a99b22c6dd62fca9a915a054c28c3d91bc8e689a5a4d9f0c0a0",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Volkswagen/Touareg  7L0 959 655 (95640).cal",
+      "cal_sha": "2426968e7a2aa598d5a873cc1b6a90a70fa9e81f551f2a0f5de1596299da606b",
+      "control": 10,
+      "reference": "vw1.png",
+      "resource_sha": "8106cf94bc1a4a99b22c6dd62fca9a915a054c28c3d91bc8e689a5a4d9f0c0a0",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Volkswagen/VW8 Jetta  1K0 909 605 T  Siemens (95160).cal",
+      "cal_sha": "45ab82cbbb8528579637ce1f7b57f3b49dcf81c60e6f82f391afa7951867ef8b",
+      "control": 7,
+      "reference": "Vw8j.png",
+      "resource_sha": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Oktavia  1K0 909 605 T  Siemens (95160).cal",
+      "cal_sha": "e74d630ffee0d03294ee5e874a5e5ddb865de238b02110a09a9ac685fae32317",
+      "control": 7,
+      "reference": "Vw8j.png",
+      "resource_sha": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Volkswagen/VW8 Jetta  1K0 909 605 T  Siemens (95160).cal",
+      "cal_sha": "45ab82cbbb8528579637ce1f7b57f3b49dcf81c60e6f82f391afa7951867ef8b",
+      "control": 7,
+      "reference": "Vw8j.png",
+      "resource_sha": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Oktavia  1K0 909 605 T  Siemens (95160).cal",
+      "cal_sha": "e74d630ffee0d03294ee5e874a5e5ddb865de238b02110a09a9ac685fae32317",
+      "control": 7,
+      "reference": "Vw8j.png",
+      "resource_sha": "e79ad7fd84f296ca1762df316c31e0dc21e3d12f3da0ee82df077da838f8a2f1",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Daewoo/Gentra  94 833 085.cal",
+      "cal_sha": "7cdb0a768118418128c4a8df39f3b93089b5e982e7c14e1b8b326d034c3af3ea",
+      "control": 9,
+      "reference": "lachsrs.png",
+      "resource_sha": "e6e7b582553a476c3011654f1235f4913f3eec9abe006cd5c95a020d88ffd217",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Daewoo/Gentra  94 833 085.cal",
+      "cal_sha": "7cdb0a768118418128c4a8df39f3b93089b5e982e7c14e1b8b326d034c3af3ea",
+      "control": 9,
+      "reference": "lachsrs.png",
+      "resource_sha": "e6e7b582553a476c3011654f1235f4913f3eec9abe006cd5c95a020d88ffd217",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Cherry/T11-3606011  (95160).cal",
+      "cal_sha": "9c75053cfa44bd7a3914c7330fc5828fb3792ce75ef882d7ac1a0dc19fbae6f6",
+      "control": 8,
+      "reference": "Cht11-36.png",
+      "resource_sha": "bc41ccc9543c4e1a313597ae62a107fc22cc2a503565b19abedb6017459565ae",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Cherry/T11-3606011  (95160).cal",
+      "cal_sha": "9c75053cfa44bd7a3914c7330fc5828fb3792ce75ef882d7ac1a0dc19fbae6f6",
+      "control": 8,
+      "reference": "Cht11-36.png",
+      "resource_sha": "bc41ccc9543c4e1a313597ae62a107fc22cc2a503565b19abedb6017459565ae",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Cherry/T11-3606011PD.cal",
+      "cal_sha": "409bb2a9de9828c3394cc14c35274ce2bf616fdec3c0139e907cd0dc7d52d451",
+      "control": 9,
+      "reference": "Cht11.png",
+      "resource_sha": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Cherry/T11-3606011PC.cal",
+      "cal_sha": "dccc241ccacf2de65dbdaa1affa3571a04a4b13d7a3f4f7181da84217fd0a720",
+      "control": 9,
+      "reference": "Cht11.png",
+      "resource_sha": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Cherry/T11-3606011PD.cal",
+      "cal_sha": "409bb2a9de9828c3394cc14c35274ce2bf616fdec3c0139e907cd0dc7d52d451",
+      "control": 9,
+      "reference": "Cht11.png",
+      "resource_sha": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Cherry/T11-3606011PC.cal",
+      "cal_sha": "dccc241ccacf2de65dbdaa1affa3571a04a4b13d7a3f4f7181da84217fd0a720",
+      "control": 9,
+      "reference": "Cht11.png",
+      "resource_sha": "4529fd669a8548d5600e2391fc4b45346eeb27165ca0281e3536550246c8a157",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Cherry/M11-3606010BB.cal",
+      "cal_sha": "f4c566619fd438c921eaaacde20e696ea0a54291c8bdea402d798e7436abf806",
+      "control": 8,
+      "reference": "m11.png",
+      "resource_sha": "1291b01070eece5095e4fc0a21c08bf8fef3bbd685f54b1d24fe4b5200bf1826",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Cherry/M11-3606010BB.cal",
+      "cal_sha": "f4c566619fd438c921eaaacde20e696ea0a54291c8bdea402d798e7436abf806",
+      "control": 8,
+      "reference": "m11.png",
+      "resource_sha": "1291b01070eece5095e4fc0a21c08bf8fef3bbd685f54b1d24fe4b5200bf1826",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Acura/RDX  77960-STK-A210-M2.cal",
+      "cal_sha": "013d2c0f6f3485e4107d3ca6624229cacd33cf32bf316cac4a2ce3ecd98ba7c3",
+      "control": 9,
+      "reference": "ac1.png",
+      "resource_sha": "2f626d311cbc442f6458ee84e0faa73887357ef6c6a1d0093f2593df9f0eb101",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Acura/RDX  77960-STK-A210-M2.cal",
+      "cal_sha": "013d2c0f6f3485e4107d3ca6624229cacd33cf32bf316cac4a2ce3ecd98ba7c3",
+      "control": 9,
+      "reference": "ac1.png",
+      "resource_sha": "2f626d311cbc442f6458ee84e0faa73887357ef6c6a1d0093f2593df9f0eb101",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Lada/2170-3824010-01.cal",
+      "cal_sha": "28d80da736e2b074043a56ab004084555750020b009ea9f57101922286269772",
+      "control": 8,
+      "reference": "ladasrs.png",
+      "resource_sha": "10de4e66b401646fdf09159b9bb8da55a5a259adf9559fcd242682b4960e709c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Lada/2170-3824010-01.cal",
+      "cal_sha": "28d80da736e2b074043a56ab004084555750020b009ea9f57101922286269772",
+      "control": 8,
+      "reference": "ladasrs.png",
+      "resource_sha": "10de4e66b401646fdf09159b9bb8da55a5a259adf9559fcd242682b4960e709c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Lada/Largus 8201 163 278.cal",
+      "cal_sha": "dab50a23ce7c523e93c0a18d2d17f1e6fcccde22213ccd24a440a19894f183ec",
+      "control": 9,
+      "reference": "logsrs.png",
+      "resource_sha": "b44cce1e4e0a8de17b081f20803a3cd420dc7564760f6d88871a36e57c4faab4",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Lada/Largus 8201 163 278.cal",
+      "cal_sha": "dab50a23ce7c523e93c0a18d2d17f1e6fcccde22213ccd24a440a19894f183ec",
+      "control": 9,
+      "reference": "logsrs.png",
+      "resource_sha": "b44cce1e4e0a8de17b081f20803a3cd420dc7564760f6d88871a36e57c4faab4",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Lada/Granta 2190-3824010-00(10).cal",
+      "cal_sha": "481c948452adcb903d54423f0e44d5c1e1a64b1bf28df2b64f6e05fd4cc2806d",
+      "control": 8,
+      "reference": "grantasrs.png",
+      "resource_sha": "13402bbb9cda0139541887be3e861a2efa24acba7a8f2ac54be42473ca59bf2f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Lada/Granta 2190-3824010-00(10).cal",
+      "cal_sha": "481c948452adcb903d54423f0e44d5c1e1a64b1bf28df2b64f6e05fd4cc2806d",
+      "control": 8,
+      "reference": "grantasrs.png",
+      "resource_sha": "13402bbb9cda0139541887be3e861a2efa24acba7a8f2ac54be42473ca59bf2f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/SuperB  VW10 3T0 959 655 B.cal",
+      "cal_sha": "7cb953f0ad82a065e522c530cd245921a4451084b5ac63d50f9d06f40d3ef120",
+      "control": 10,
+      "reference": "3t0.png",
+      "resource_sha": "7bf89fe46b2f5ddadb8afe856b7684fb7a48313d10314b89958d96d9d7901abf",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/SuperB  VW10 3T0 959 655 B.cal",
+      "cal_sha": "7cb953f0ad82a065e522c530cd245921a4451084b5ac63d50f9d06f40d3ef120",
+      "control": 10,
+      "reference": "3t0.png",
+      "resource_sha": "7bf89fe46b2f5ddadb8afe856b7684fb7a48313d10314b89958d96d9d7901abf",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Fabia  1C0 909 605 K  2L52H.cal",
+      "cal_sha": "d1928c98581dfa5c4f20f35278725985cba9fd2b191c3cfc0ca6f9da98093f28",
+      "control": 8,
+      "reference": "oc1c0.png",
+      "resource_sha": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Oktavia  1C0 909 605 K  2L52H.cal",
+      "cal_sha": "beda6c1dcd1ec98ef71d86b0d6f86a9905e3135e96317e279ab199d11dc64ca4",
+      "control": 8,
+      "reference": "oc1c0.png",
+      "resource_sha": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Fabia  1C0 909 605 K  2L52H.cal",
+      "cal_sha": "d1928c98581dfa5c4f20f35278725985cba9fd2b191c3cfc0ca6f9da98093f28",
+      "control": 8,
+      "reference": "oc1c0.png",
+      "resource_sha": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Oktavia  1C0 909 605 K  2L52H.cal",
+      "cal_sha": "beda6c1dcd1ec98ef71d86b0d6f86a9905e3135e96317e279ab199d11dc64ca4",
+      "control": 8,
+      "reference": "oc1c0.png",
+      "resource_sha": "1d3d804b0f3afa6eeaab91e3fb1f596323e98c7a1815ce633cab155d7a7e9a29",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Oktavia  6Q0 909 605 AH.cal",
+      "cal_sha": "3237107ff14e0e7901ed00e8db1a3344e1d0b3fbfdbb588dc6de199b2ae430f0",
+      "control": 10,
+      "reference": "cko.png",
+      "resource_sha": "b64cbcc2428b7f92436ea12452e51b9bee88dd3bc7c8b6acfecf066648d80a0c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Oktavia  6Q0 909 605 AH.cal",
+      "cal_sha": "3237107ff14e0e7901ed00e8db1a3344e1d0b3fbfdbb588dc6de199b2ae430f0",
+      "control": 10,
+      "reference": "cko.png",
+      "resource_sha": "b64cbcc2428b7f92436ea12452e51b9bee88dd3bc7c8b6acfecf066648d80a0c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Oktavia  1C0 909 601 2L52H.cal",
+      "cal_sha": "4c50b4b27b3c052b099d73fc326a0a8aadfed347d044649ca2d98ba9656b718c",
+      "control": 8,
+      "reference": "oc1co1.png",
+      "resource_sha": "b4f9206cac5f582d8d5f086158bf456556eb197fe14630d3df0fa036f3530e21",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Oktavia  1C0 909 601 2L52H.cal",
+      "cal_sha": "4c50b4b27b3c052b099d73fc326a0a8aadfed347d044649ca2d98ba9656b718c",
+      "control": 8,
+      "reference": "oc1co1.png",
+      "resource_sha": "b4f9206cac5f582d8d5f086158bf456556eb197fe14630d3df0fa036f3530e21",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Skoda/Oktavia  6Q0 909 601 0J66D.cal",
+      "cal_sha": "855ecc5b83b0375a0a5fe15ba4d0ccce67f5a04351a3a049bb839fc586474326",
+      "control": 8,
+      "reference": "ok6q0.png",
+      "resource_sha": "4789f3710224eb2d7481f5a09f3147f597c59163bc465c016a220058a1d5f030",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Skoda/Oktavia  6Q0 909 601 0J66D.cal",
+      "cal_sha": "855ecc5b83b0375a0a5fe15ba4d0ccce67f5a04351a3a049bb839fc586474326",
+      "control": 8,
+      "reference": "ok6q0.png",
+      "resource_sha": "4789f3710224eb2d7481f5a09f3147f597c59163bc465c016a220058a1d5f030",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Jaguar/XJ  AW93-14D374-BD (95128).cal",
+      "cal_sha": "4ff3e2aeec40272635b4a511a835667637db884b7416ed1feb9a91d20b74e1b7",
+      "control": 9,
+      "reference": "aw93.png",
+      "resource_sha": "e592a5b137c1e7c88cdcdcdd8995330ed1a865a01832bd259b71c8a95687b88a",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Jaguar/XJ  AW93-14D374-BD (95128).cal",
+      "cal_sha": "4ff3e2aeec40272635b4a511a835667637db884b7416ed1feb9a91d20b74e1b7",
+      "control": 9,
+      "reference": "aw93.png",
+      "resource_sha": "e592a5b137c1e7c88cdcdcdd8995330ed1a865a01832bd259b71c8a95687b88a",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Great Wall/Hover H3  3658160AK80XA 25c640.cal",
+      "cal_sha": "8cb63205ad4ce83fb77e274c2d989432786b1f9214f8f757059a22ebcfac256d",
+      "control": 10,
+      "reference": "h325c640.png",
+      "resource_sha": "25653cbc657477775c402989117961aee22964e8a91f17842f0324d9fe6c4cfc",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Great Wall/Hover H3  3658160AK80XA 25c640.cal",
+      "cal_sha": "8cb63205ad4ce83fb77e274c2d989432786b1f9214f8f757059a22ebcfac256d",
+      "control": 10,
+      "reference": "h325c640.png",
+      "resource_sha": "25653cbc657477775c402989117961aee22964e8a91f17842f0324d9fe6c4cfc",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/FX37  988201WW2A.cal",
+      "cal_sha": "fc07d32141318da5817c562c024e51d90127a641eb09d8b9342224474db4b43a",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/FX35  988201WW0A.cal",
+      "cal_sha": "33a73e56b2ef408a59ed5b988e6a3bd0dd5de780f36cb18f6c9f1c285f652054",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/G25  988201NC0A.cal",
+      "cal_sha": "3cbbd4a70c41225a09618817203c8f19c2ce4c242b9b4fac96f57e0e2f77572e",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/FX37  988201WW2A.cal",
+      "cal_sha": "fc07d32141318da5817c562c024e51d90127a641eb09d8b9342224474db4b43a",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/FX35  988201WW0A.cal",
+      "cal_sha": "33a73e56b2ef408a59ed5b988e6a3bd0dd5de780f36cb18f6c9f1c285f652054",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/G25  988201NC0A.cal",
+      "cal_sha": "3cbbd4a70c41225a09618817203c8f19c2ce4c242b9b4fac96f57e0e2f77572e",
+      "control": 7,
+      "reference": "g25srs.png",
+      "resource_sha": "10f3557f1ae2498b20482f5f8de7740e3dfc058dba237ed8124d8f77a718e1af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/EX35  988201BM1A.cal",
+      "cal_sha": "915fef6da1f134628f16446b4e7c7b885f33e46d19220a0b9bfa03dc510cea24",
+      "control": 7,
+      "reference": "bm1a.png",
+      "resource_sha": "d698fa66c2be4a4e4b0c35f2a7b19757ea1dca7886235dde8e54e47a2531efea",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/EX35  988201BM1A.cal",
+      "cal_sha": "915fef6da1f134628f16446b4e7c7b885f33e46d19220a0b9bfa03dc510cea24",
+      "control": 7,
+      "reference": "bm1a.png",
+      "resource_sha": "d698fa66c2be4a4e4b0c35f2a7b19757ea1dca7886235dde8e54e47a2531efea",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/FX35  98820CL71A 93c66 (RL66).cal",
+      "cal_sha": "c5d620522655434f1724b0324e1cc02227312a1d58323b1db06c209c0cabfae0",
+      "control": 7,
+      "reference": "fx35cl71a.png",
+      "resource_sha": "f76805e6b5e601195a8ff4e2af8d2e953249e2d46c1495f91077092a63e437cf",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/FX35  98820CL71A 93c66 (RL66).cal",
+      "cal_sha": "c5d620522655434f1724b0324e1cc02227312a1d58323b1db06c209c0cabfae0",
+      "control": 7,
+      "reference": "fx35cl71a.png",
+      "resource_sha": "f76805e6b5e601195a8ff4e2af8d2e953249e2d46c1495f91077092a63e437cf",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Geely/Emgrand  06300103.cal",
+      "cal_sha": "045ccddee31becd9e0b2500220b53c67c313068116c6386af18d5de175f5d454",
+      "control": 9,
+      "reference": "emgrsrs.png",
+      "resource_sha": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Geely/Emgrand  06300102.cal",
+      "cal_sha": "9d29bf12362ed513943ba1962bfd434a569af05b431331ced057f8ad3f04d4ff",
+      "control": 9,
+      "reference": "emgrsrs.png",
+      "resource_sha": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Geely/Emgrand  06300103.cal",
+      "cal_sha": "045ccddee31becd9e0b2500220b53c67c313068116c6386af18d5de175f5d454",
+      "control": 9,
+      "reference": "emgrsrs.png",
+      "resource_sha": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Geely/Emgrand  06300102.cal",
+      "cal_sha": "9d29bf12362ed513943ba1962bfd434a569af05b431331ced057f8ad3f04d4ff",
+      "control": 9,
+      "reference": "emgrsrs.png",
+      "resource_sha": "1d5d3444dea999be01184826c16274db65807c0bc3d712eeb522428d09dda578",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal",
+      "cal_sha": "57b377a67d8f28b5f01b275e823688358dea2710c0b9d26a9ab1f876d8a2cd83",
+      "control": 11,
+      "reference": "c190.png",
+      "resource_sha": "7e3a5284b424b7643710ca361f61013b77d819cb27fcb7fe4ebf609f37fbb383",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/Car/T/TaGAZ/TaGAZ  C190  93C66.cal",
+      "cal_sha": "57b377a67d8f28b5f01b275e823688358dea2710c0b9d26a9ab1f876d8a2cd83",
+      "control": 11,
+      "reference": "c190.png",
+      "resource_sha": "7e3a5284b424b7643710ca361f61013b77d819cb27fcb7fe4ebf609f37fbb383",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/CarRadio/KIA/96160-1H000  (24c64).cal",
+      "cal_sha": "465766995821ec1b974370ed98d1fbb4efee8eac2b1f3fad664d7e4318753b60",
+      "control": 11,
+      "reference": "1h000.png",
+      "resource_sha": "b1db178c05885b89632c242f5a230630ba0fc37da8a808abd843e79adc0cb74e",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/CarRadio/Jaguar/JAGUAR  24C08.cal",
+      "cal_sha": "22f44549aef657c64ec853e6a303150827dc9c27a39f0f999d215b9725c63bf2",
+      "control": 16,
+      "reference": "jagradio.png",
+      "resource_sha": "d36b9a6f4ccd65bb5afddcf9e11f6b9a1beb00a945229bc4913153f36f60d7c7",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/CarRadio/Serial calculator/JAGUAR  24C08.cal",
+      "cal_sha": "22c73fdb8aad9ade22156e90ff8a26e267f1dc734bc331800951e45e3b99ac69",
+      "control": 16,
+      "reference": "jagradio.png",
+      "resource_sha": "d36b9a6f4ccd65bb5afddcf9e11f6b9a1beb00a945229bc4913153f36f60d7c7",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/Airbag/Mitsubishi/Lancer/Lancer  P8635A060.cal",
+      "cal_sha": "1f73573439bb3e25ba1dec3509aef078c5391a623df887defa75e3db048a0926",
+      "control": 10,
+      "reference": "outsrs.png",
+      "resource_sha": "57e052c6122101f0b34cf44b1956992b03fa0c48d55766cb79129723f90a55f9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Mitsubishi/Lancer/Lancer  P8635A073.cal",
+      "cal_sha": "5236b830e37d1f71ebd9d5de538a0bd65e8734db936951e26b096c563ec65a9a",
+      "control": 10,
+      "reference": "outsrs.png",
+      "resource_sha": "57e052c6122101f0b34cf44b1956992b03fa0c48d55766cb79129723f90a55f9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Mitsubishi/Lancer/Lancer  P8635A060.cal",
+      "cal_sha": "1f73573439bb3e25ba1dec3509aef078c5391a623df887defa75e3db048a0926",
+      "control": 10,
+      "reference": "outsrs.png",
+      "resource_sha": "57e052c6122101f0b34cf44b1956992b03fa0c48d55766cb79129723f90a55f9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Mitsubishi/Lancer/Lancer  P8635A073.cal",
+      "cal_sha": "5236b830e37d1f71ebd9d5de538a0bd65e8734db936951e26b096c563ec65a9a",
+      "control": 10,
+      "reference": "outsrs.png",
+      "resource_sha": "57e052c6122101f0b34cf44b1956992b03fa0c48d55766cb79129723f90a55f9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M650.cal",
+      "cal_sha": "7b27b50abd3ae7ea0d6f228c961241ca2dde0a3b31a66e232e1ed5220f7fcf56",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M250.cal",
+      "cal_sha": "b9036fb239619081f9e16593efa03e0aabaed909703ea957d66641c16894de37",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M350.cal",
+      "cal_sha": "10e50fe44d4a19c8ef652b1f30f903cf5a0490ecaa6d89296a846c893c454df9",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M200.cal",
+      "cal_sha": "f724b77193409429dc4962a3f21519ac92e8ecaca2d82168e1287f9dc7fa5d21",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M600.cal",
+      "cal_sha": "ce5cd79c9ddc0439d77f3571d5860ece775575c551ceab4c6719dbc8b49d9fc8",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-1M300.cal",
+      "cal_sha": "6e4d9fe54a289c4f6feb6ee3a491c5a5498f02e2a14669a5653da1c3aecf635b",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M650.cal",
+      "cal_sha": "7b27b50abd3ae7ea0d6f228c961241ca2dde0a3b31a66e232e1ed5220f7fcf56",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M250.cal",
+      "cal_sha": "b9036fb239619081f9e16593efa03e0aabaed909703ea957d66641c16894de37",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M350.cal",
+      "cal_sha": "10e50fe44d4a19c8ef652b1f30f903cf5a0490ecaa6d89296a846c893c454df9",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M200.cal",
+      "cal_sha": "f724b77193409429dc4962a3f21519ac92e8ecaca2d82168e1287f9dc7fa5d21",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M600.cal",
+      "cal_sha": "ce5cd79c9ddc0439d77f3571d5860ece775575c551ceab4c6719dbc8b49d9fc8",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-1M300.cal",
+      "cal_sha": "6e4d9fe54a289c4f6feb6ee3a491c5a5498f02e2a14669a5653da1c3aecf635b",
+      "control": 9,
+      "reference": "kcsrs.png",
+      "resource_sha": "e7437e8cb7c9c4897fe791e3cc99f06d5610a9697906186bda7d9c2b5bd5e8e7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Cerato/Cerato  95910-A7020.cal",
+      "cal_sha": "3f194ee1e27a7e7727028fecff9c65c65cc476f49eef32b5a3462366072d8309",
+      "control": 9,
+      "reference": "a7020.png",
+      "resource_sha": "6c7ba8536656d72df868bf8f9524d94d7a41bb5b4cbf48e033d0a3d87103fdd5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Cerato/Cerato  95910-A7020.cal",
+      "cal_sha": "3f194ee1e27a7e7727028fecff9c65c65cc476f49eef32b5a3462366072d8309",
+      "control": 9,
+      "reference": "a7020.png",
+      "resource_sha": "6c7ba8536656d72df868bf8f9524d94d7a41bb5b4cbf48e033d0a3d87103fdd5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Sportage/Sportage  95910-3U100.cal",
+      "cal_sha": "9ea986f2f3cdcfacf7c9b7878a2757db2c528eaff15b895868c0d5bb6ae516eb",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Sportage/Sportage  95910-3U600.cal",
+      "cal_sha": "d84730d9fd1537eba59335d71f9b173d6a578ba6ce06c8845955d8440f04a780",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/IX35/IX35  95910-2Y300.cal",
+      "cal_sha": "21730835f1af04b1ba93c4bc5557a96f2392fdf6f9ad52c5b5c6c2edeed8294a",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/IX35/IX35  95910-2Y200.cal",
+      "cal_sha": "cec7c38e4a70eef7913596f3ed9a486ada29f1e87b040c544984dd979ab2f688",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Sportage/Sportage  95910-3U100.cal",
+      "cal_sha": "9ea986f2f3cdcfacf7c9b7878a2757db2c528eaff15b895868c0d5bb6ae516eb",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Sportage/Sportage  95910-3U600.cal",
+      "cal_sha": "d84730d9fd1537eba59335d71f9b173d6a578ba6ce06c8845955d8440f04a780",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/IX35/IX35  95910-2Y300.cal",
+      "cal_sha": "21730835f1af04b1ba93c4bc5557a96f2392fdf6f9ad52c5b5c6c2edeed8294a",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/IX35/IX35  95910-2Y200.cal",
+      "cal_sha": "cec7c38e4a70eef7913596f3ed9a486ada29f1e87b040c544984dd979ab2f688",
+      "control": 8,
+      "reference": "spsrs.png",
+      "resource_sha": "73eba205239875c5685e1dba33cc91bc4dc528ec5be22e5c14b47a4480ddcaa9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Optima/Optima 95910-2T310.cal",
+      "cal_sha": "8895f0e18ce1707ecaafc7c65b0efa8e581fb14c220d30fcd7b0765e745ce06f",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Rio/Rio  95910-4Y100.cal",
+      "cal_sha": "b3a9f1420b66fadd96801b22f57b7c370414a632edea43c232b193b80c2ce311",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Rio/Rio  95910-4Y200.cal",
+      "cal_sha": "8d80a605d9a93c80e07c6f61b75695d647eb363deaf696dd4b641d1844851bd3",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Elantra/95910-3X800  (95128).cal",
+      "cal_sha": "f95098c71dbbc42c5ee626ecba922d2f71044f98083cc2c29bebf5b862626771",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Optima/Optima 95910-2T310.cal",
+      "cal_sha": "8895f0e18ce1707ecaafc7c65b0efa8e581fb14c220d30fcd7b0765e745ce06f",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Rio/Rio  95910-4Y100.cal",
+      "cal_sha": "b3a9f1420b66fadd96801b22f57b7c370414a632edea43c232b193b80c2ce311",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Rio/Rio  95910-4Y200.cal",
+      "cal_sha": "8d80a605d9a93c80e07c6f61b75695d647eb363deaf696dd4b641d1844851bd3",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Elantra/95910-3X800  (95128).cal",
+      "cal_sha": "f95098c71dbbc42c5ee626ecba922d2f71044f98083cc2c29bebf5b862626771",
+      "control": 9,
+      "reference": "ko.png",
+      "resource_sha": "bfa643a369826d23d1c369279d24fe1556fc376cc1cea3db6eacd29ad22b95af",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-1H000.cal",
+      "cal_sha": "4a9775e29d03abbb8837728ca2af40dd8ece9487c998514ab6a4be0ef380b402",
+      "control": 8,
+      "reference": "1h200.png",
+      "resource_sha": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-1H200.cal",
+      "cal_sha": "c9a83f5ac0b67641f7658a61fb322650cbb6c64a69c5f8c060b90ebd213c1d82",
+      "control": 8,
+      "reference": "1h200.png",
+      "resource_sha": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-1H000.cal",
+      "cal_sha": "4a9775e29d03abbb8837728ca2af40dd8ece9487c998514ab6a4be0ef380b402",
+      "control": 8,
+      "reference": "1h200.png",
+      "resource_sha": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-1H200.cal",
+      "cal_sha": "c9a83f5ac0b67641f7658a61fb322650cbb6c64a69c5f8c060b90ebd213c1d82",
+      "control": 8,
+      "reference": "1h200.png",
+      "resource_sha": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Sorento/Sorento  95910-3E050.cal",
+      "cal_sha": "5a071df8bf25f4e8bf321dc7ceda2a3d303873f9c007814598242f2162431fa6",
+      "control": 9,
+      "reference": "3e050.png",
+      "resource_sha": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Sorento/Sorento  95910-3E060.cal",
+      "cal_sha": "1e4abdeba44ceafb0e78c6ba7f7af1f1a365e0f2cfe52a3ba1b9aaab179f63da",
+      "control": 9,
+      "reference": "3e050.png",
+      "resource_sha": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Sorento/Sorento  95910-3E050.cal",
+      "cal_sha": "5a071df8bf25f4e8bf321dc7ceda2a3d303873f9c007814598242f2162431fa6",
+      "control": 9,
+      "reference": "3e050.png",
+      "resource_sha": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Sorento/Sorento  95910-3E060.cal",
+      "cal_sha": "1e4abdeba44ceafb0e78c6ba7f7af1f1a365e0f2cfe52a3ba1b9aaab179f63da",
+      "control": 9,
+      "reference": "3e050.png",
+      "resource_sha": "ac45528caf23d1316ff610d2ff1ceff3feaa0253469ab4f82540f8b2c12718b9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Picanto/Picanto  95910-1Y010.cal",
+      "cal_sha": "230678e9837dfabb46586f9ec149afab7d512cfc1c5f597bdb76354060a085d6",
+      "control": 9,
+      "reference": "picsrs.png",
+      "resource_sha": "0fba042e1a35ef3f6fff7451d8abd75ac4f7261412c2a578d819794d3ed607bc",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Picanto/Picanto  95910-1Y010.cal",
+      "cal_sha": "230678e9837dfabb46586f9ec149afab7d512cfc1c5f597bdb76354060a085d6",
+      "control": 9,
+      "reference": "picsrs.png",
+      "resource_sha": "0fba042e1a35ef3f6fff7451d8abd75ac4f7261412c2a578d819794d3ed607bc",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Picanto/95910-07620  25320.cal",
+      "cal_sha": "64091162ac01ba07c53485857efae3f00c5177538f6ad2c3c5ed89fa49e699c9",
+      "control": 8,
+      "reference": "07620.png",
+      "resource_sha": "9414f0f94a4174035bfc7d05d8659c36eaa16889227488b09ce6e2520f88fbc5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Picanto/95910-07620  25320.cal",
+      "cal_sha": "64091162ac01ba07c53485857efae3f00c5177538f6ad2c3c5ed89fa49e699c9",
+      "control": 8,
+      "reference": "07620.png",
+      "resource_sha": "9414f0f94a4174035bfc7d05d8659c36eaa16889227488b09ce6e2520f88fbc5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Mohave/Mohave   95910-2J500.cal",
+      "cal_sha": "9c02e4c86ab24429c576ceb06ba9a37c60d1b0bdfdcc4feba35975fadbd1821b",
+      "control": 9,
+      "reference": "95910-2j550.png",
+      "resource_sha": "eb14c4a66f13fd95c670c76e03c6c5145c54c28d54145a7d38a18e62bce738ec",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Mohave/Mohave   95910-2J580.cal",
+      "cal_sha": "1b576f605a2e5cb2f9aedaf0ebcbbc967adb33010b2b2b54ed5fa1013b23f83b",
+      "control": 9,
+      "reference": "95910-2j550.png",
+      "resource_sha": "eb14c4a66f13fd95c670c76e03c6c5145c54c28d54145a7d38a18e62bce738ec",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Mohave/Mohave   95910-2J500.cal",
+      "cal_sha": "9c02e4c86ab24429c576ceb06ba9a37c60d1b0bdfdcc4feba35975fadbd1821b",
+      "control": 9,
+      "reference": "95910-2j550.png",
+      "resource_sha": "eb14c4a66f13fd95c670c76e03c6c5145c54c28d54145a7d38a18e62bce738ec",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Mohave/Mohave   95910-2J580.cal",
+      "cal_sha": "1b576f605a2e5cb2f9aedaf0ebcbbc967adb33010b2b2b54ed5fa1013b23f83b",
+      "control": 9,
+      "reference": "95910-2j550.png",
+      "resource_sha": "eb14c4a66f13fd95c670c76e03c6c5145c54c28d54145a7d38a18e62bce738ec",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Opel/Vectra/13 186 948  (95160).cal",
+      "cal_sha": "0bd2a68600f2efc04ae91fe85765560009bf283c66182772bfd945f28c763d40",
+      "control": 7,
+      "reference": "vcsrs.png",
+      "resource_sha": "e54ca6d07ad5edefb4cd2c1b5d5c7fe7f1ec91238242469bc29288e059c6e4a0",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Opel/Corsa/13 283 819  (95160).cal",
+      "cal_sha": "51f4e03706cd6d3235490c5554043274a61f144cb815994523784d5fc60c5894",
+      "control": 6,
+      "reference": "13283818.png",
+      "resource_sha": "0e58368c4718b38776b3f6b106d91e5afaf1ad488ab7b511b920f9ee9ba4aa72",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Opel/Corsa/13 283 820  (95160).cal",
+      "cal_sha": "3523106c6f40a115fd7df8eb444ace352a4a04eb99eeaf2cbae9ca7e118f3c07",
+      "control": 6,
+      "reference": "13283818.png",
+      "resource_sha": "0e58368c4718b38776b3f6b106d91e5afaf1ad488ab7b511b920f9ee9ba4aa72",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Toyota/Mark II/89170-22090  93C56.cal",
+      "cal_sha": "1011a86c6db1ae2b1d8b319dc0a2108cb43aef53ae6e0b0b7f9ac6f4d7b96d97",
+      "control": 6,
+      "reference": "22090.png",
+      "resource_sha": "1f90fbf15815beadca8d141bd84df874a42dfb51e77e7de1f0e52e5eb0bbe063",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Getz/95910-1C150  (25320).cal",
+      "cal_sha": "2cdbb237a3b5c0957d66c43ad59b875f8f095a1bdef7c28a38521f27b98aa4a8",
+      "control": 7,
+      "reference": "1c150.png",
+      "resource_sha": "a392cb953baec0b72c7d6068dcca1efcb29e8bd1f6255bea60bc70162c4cbf0a",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Getz/95910-1C150  (25320).cal",
+      "cal_sha": "2cdbb237a3b5c0957d66c43ad59b875f8f095a1bdef7c28a38521f27b98aa4a8",
+      "control": 7,
+      "reference": "1c150.png",
+      "resource_sha": "a392cb953baec0b72c7d6068dcca1efcb29e8bd1f6255bea60bc70162c4cbf0a",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/I30/I30   95910-2R000.cal",
+      "cal_sha": "fc8b01224c1403a5707a9fa988651f5c054c4569a76f080ea60d959edb149761",
+      "control": 8,
+      "reference": "i30srs.png",
+      "resource_sha": "aa1088700cc61376434c040e96ba2677fd467a850a881108b8f3d79a5fd52fd3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/I30/I30   95910-2R000.cal",
+      "cal_sha": "fc8b01224c1403a5707a9fa988651f5c054c4569a76f080ea60d959edb149761",
+      "control": 8,
+      "reference": "i30srs.png",
+      "resource_sha": "aa1088700cc61376434c040e96ba2677fd467a850a881108b8f3d79a5fd52fd3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/I40/I40   95910-3Z300.cal",
+      "cal_sha": "6d5378b4ba05bf650c72629a3e1d5f7a9688f74efa44450fda88f074cd3afabe",
+      "control": 9,
+      "reference": "3z300.png",
+      "resource_sha": "0a08d750c359cefee238b0d8dda220886f6025f4edc161979af03c7f643ffcc9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/I40/I40   95910-3Z300.cal",
+      "cal_sha": "6d5378b4ba05bf650c72629a3e1d5f7a9688f74efa44450fda88f074cd3afabe",
+      "control": 9,
+      "reference": "3z300.png",
+      "resource_sha": "0a08d750c359cefee238b0d8dda220886f6025f4edc161979af03c7f643ffcc9",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/H-1/H-1 95910-4H500.cal",
+      "cal_sha": "dfac16fd4f92d2ada4d0a1ff9ea2f90599335f8cc54a03f4d6d2043ee8418352",
+      "control": 8,
+      "reference": "4h500.png",
+      "resource_sha": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/H-1/H-1 95910-4H600.cal",
+      "cal_sha": "ec75d6f56f480b4175e0dd2374744e00a6645546e60612b659137f69b5af40cc",
+      "control": 8,
+      "reference": "4h500.png",
+      "resource_sha": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/H-1/H-1 95910-4H500.cal",
+      "cal_sha": "dfac16fd4f92d2ada4d0a1ff9ea2f90599335f8cc54a03f4d6d2043ee8418352",
+      "control": 8,
+      "reference": "4h500.png",
+      "resource_sha": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/H-1/H-1 95910-4H600.cal",
+      "cal_sha": "ec75d6f56f480b4175e0dd2374744e00a6645546e60612b659137f69b5af40cc",
+      "control": 8,
+      "reference": "4h500.png",
+      "resource_sha": "c375f8f49f66c9a9257693b06db185100d14abef38b4602ab87662466b9109c2",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Sonata/95910-3D100.cal",
+      "cal_sha": "3204d9fae514638731ff45e4167e9e503534ec21cf0978e74cf6c65d24d285fb",
+      "control": 6,
+      "reference": "3d100.png",
+      "resource_sha": "ac9bc615e4af0fc166de70d891954dffed3725eb5772235448cfc0bdcc931a3b",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Sonata/95910-3D100.cal",
+      "cal_sha": "3204d9fae514638731ff45e4167e9e503534ec21cf0978e74cf6c65d24d285fb",
+      "control": 6,
+      "reference": "3d100.png",
+      "resource_sha": "ac9bc615e4af0fc166de70d891954dffed3725eb5772235448cfc0bdcc931a3b",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Starex/95910-4H600  (95320).cal",
+      "cal_sha": "ad54bb8574c381c489c52f4f8af3b0378463c1653532fcf5d4ab0420df311ad9",
+      "control": 8,
+      "reference": "4h600.png",
+      "resource_sha": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Starex/95910-4H500  (95320).cal",
+      "cal_sha": "34fcd57d0652ed007134bf22a8d8076a77231da059083f583538bfc6080d82bc",
+      "control": 8,
+      "reference": "4h600.png",
+      "resource_sha": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Starex/95910-4H600  (95320).cal",
+      "cal_sha": "ad54bb8574c381c489c52f4f8af3b0378463c1653532fcf5d4ab0420df311ad9",
+      "control": 8,
+      "reference": "4h600.png",
+      "resource_sha": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Starex/95910-4H500  (95320).cal",
+      "cal_sha": "34fcd57d0652ed007134bf22a8d8076a77231da059083f583538bfc6080d82bc",
+      "control": 8,
+      "reference": "4h600.png",
+      "resource_sha": "1ac000cfd72e7bf5b4678455e0da7f62c123b944c27c07a08913393b57b60f04",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Elantra/95910-2H200.cal",
+      "cal_sha": "26778b87a79dc8957317dddbee6eafdbf31d50677b9f69f9cc04d5666afeedac",
+      "control": 9,
+      "reference": "elsrs.png",
+      "resource_sha": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Elantra/95910-2H100.cal",
+      "cal_sha": "398ca3d279e360ba8d10f06e729fe000baee22e08219965c7934389f4fcb5c26",
+      "control": 9,
+      "reference": "elsrs.png",
+      "resource_sha": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Elantra/95910-2H200.cal",
+      "cal_sha": "26778b87a79dc8957317dddbee6eafdbf31d50677b9f69f9cc04d5666afeedac",
+      "control": 9,
+      "reference": "elsrs.png",
+      "resource_sha": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Elantra/95910-2H100.cal",
+      "cal_sha": "398ca3d279e360ba8d10f06e729fe000baee22e08219965c7934389f4fcb5c26",
+      "control": 9,
+      "reference": "elsrs.png",
+      "resource_sha": "a161c5dc76fc98337e1fb0abdb5c0c5bb17fe2028a91a310708792b070990b44",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Santa Fe/Santa Fe   95910-2B180.cal",
+      "cal_sha": "7d8d458ed4c22f801854a2a7b5248fa637d2aa787d17b7399262095e0b541163",
+      "control": 9,
+      "reference": "2b180.png",
+      "resource_sha": "da12f43580b6123d192508ddaa105ffa0a8d316aed03d646cb2f3ec42d38d828",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Santa Fe/Santa Fe   95910-2B180.cal",
+      "cal_sha": "7d8d458ed4c22f801854a2a7b5248fa637d2aa787d17b7399262095e0b541163",
+      "control": 9,
+      "reference": "2b180.png",
+      "resource_sha": "da12f43580b6123d192508ddaa105ffa0a8d316aed03d646cb2f3ec42d38d828",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Solaris/Solaris 95910-1R000.cal",
+      "cal_sha": "a0b1f859746fc78dda5cafb8cc1368c4b0f657da842b2fa6f725f96d2eff310d",
+      "control": 8,
+      "reference": "1r000.png",
+      "resource_sha": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/Solaris/Solaris 95910-1R100.cal",
+      "cal_sha": "9c3772bcb5168a9c57ef14e0bf5010180af66e48c5267782ba35a7eaead4f4a1",
+      "control": 8,
+      "reference": "1r000.png",
+      "resource_sha": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Solaris/Solaris 95910-1R000.cal",
+      "cal_sha": "a0b1f859746fc78dda5cafb8cc1368c4b0f657da842b2fa6f725f96d2eff310d",
+      "control": 8,
+      "reference": "1r000.png",
+      "resource_sha": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/Solaris/Solaris 95910-1R100.cal",
+      "cal_sha": "9c3772bcb5168a9c57ef14e0bf5010180af66e48c5267782ba35a7eaead4f4a1",
+      "control": 8,
+      "reference": "1r000.png",
+      "resource_sha": "40f891b9a0eec8f6a9ee3897dc5abf09124d87070cae7c0be2dc7061596f7f4f",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/IX55/IX55  95910-3J500.cal",
+      "cal_sha": "f4948af3fce9c889d3e38e14e42288efe99814046f64ad8b6e6c211a5f26d0f5",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/IX55/IX55  95910-3J600.cal",
+      "cal_sha": "60f6375e5b02fc1c3f5d63c92d63d3a1c8cd2b80b6a9cf499cca561ab5d4903c",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Huyndai/IX55/IX55  95910-3J200.cal",
+      "cal_sha": "27c824bd47d3bb54b0270f7f5357ddb7067855a5230ad08de2a7447180ee9598",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/IX55/IX55  95910-3J500.cal",
+      "cal_sha": "f4948af3fce9c889d3e38e14e42288efe99814046f64ad8b6e6c211a5f26d0f5",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/IX55/IX55  95910-3J600.cal",
+      "cal_sha": "60f6375e5b02fc1c3f5d63c92d63d3a1c8cd2b80b6a9cf499cca561ab5d4903c",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Huyndai/IX55/IX55  95910-3J200.cal",
+      "cal_sha": "27c824bd47d3bb54b0270f7f5357ddb7067855a5230ad08de2a7447180ee9598",
+      "control": 8,
+      "reference": "ix553j600.png",
+      "resource_sha": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Nissan/Versa/Versa   98820 3AA1A.cal",
+      "cal_sha": "d96ae4d8c16caff126e5f6d246615f1277835aa67458026dc9d1ae4633049824",
+      "control": 9,
+      "reference": "nj.png",
+      "resource_sha": "b91574063e3cd1d26c25ccca406e8338efb64387b812896f0f3a3c6a18bd00a5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Nissan/Versa/Versa   98820 3AA1A.cal",
+      "cal_sha": "d96ae4d8c16caff126e5f6d246615f1277835aa67458026dc9d1ae4633049824",
+      "control": 9,
+      "reference": "nj.png",
+      "resource_sha": "b91574063e3cd1d26c25ccca406e8338efb64387b812896f0f3a3c6a18bd00a5",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Peugeot/508/508  96 779 106 80  (95640).cal",
+      "cal_sha": "5499d3e80091ca7b248a561787a945bae7efae5b4cfa08afed7c58218f60e56b",
+      "control": 9,
+      "reference": "508.png",
+      "resource_sha": "f08dfbe07f7c669e78d38397d4076308358c55a82fe0d6c616166ea9f9d05de4",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/SRS/Peugeot/508/508  96 779 106 80  (95640).cal",
+      "cal_sha": "5499d3e80091ca7b248a561787a945bae7efae5b4cfa08afed7c58218f60e56b",
+      "control": 9,
+      "reference": "508.png",
+      "resource_sha": "f08dfbe07f7c669e78d38397d4076308358c55a82fe0d6c616166ea9f9d05de4",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/Airbag/Subaru/Legacy/Legacy  152300-0710.cal",
+      "cal_sha": "a1142ef88b12b02f4626fd5c385c9227783b8b6d68e67353d5dc3c77c493f108",
+      "control": 7,
+      "reference": "legsrs.png",
+      "resource_sha": "2dc6be34ab924d7393c6ff13b7735d211e58d92d328560bc201f32c64ef3c1ab",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Subaru/Legacy/Legacy  152300-0710.cal",
+      "cal_sha": "a1142ef88b12b02f4626fd5c385c9227783b8b6d68e67353d5dc3c77c493f108",
+      "control": 7,
+      "reference": "legsrs.png",
+      "resource_sha": "2dc6be34ab924d7393c6ff13b7735d211e58d92d328560bc201f32c64ef3c1ab",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Citroen/Jumper/Jamper  01370978080.cal",
+      "cal_sha": "dc380bc3aaf6bdb58985d1c30fb9e2ca349575235ab22aaaebef31bbc5351fae",
+      "control": 8,
+      "reference": "8080.png",
+      "resource_sha": "765d60e821163a7527f479a5555460d7656586527e4d3792814d4f9b02b8f5f7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Citroen/Jumper/Jamper  01370978080.cal",
+      "cal_sha": "dc380bc3aaf6bdb58985d1c30fb9e2ca349575235ab22aaaebef31bbc5351fae",
+      "control": 8,
+      "reference": "8080.png",
+      "resource_sha": "765d60e821163a7527f479a5555460d7656586527e4d3792814d4f9b02b8f5f7",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Suzuki/Grant Vitara/Grand Vitara  38910-65J50.cal",
+      "cal_sha": "03897b82357bf5963b4ae9311eceba1d9887988c927f344c461754b12ecea0b1",
+      "control": 8,
+      "reference": "gvsrs.png",
+      "resource_sha": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/Airbag/Suzuki/Grant Vitara/Grand Vitara  38910-65J30.cal",
+      "cal_sha": "6e8e9448bb6f98c2d83f5ba603cd226996905114f5209d308d92a277d5400e0f",
+      "control": 8,
+      "reference": "gvsrs.png",
+      "resource_sha": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Suzuki/Grant Vitara/Grand Vitara  38910-65J50.cal",
+      "cal_sha": "03897b82357bf5963b4ae9311eceba1d9887988c927f344c461754b12ecea0b1",
+      "control": 8,
+      "reference": "gvsrs.png",
+      "resource_sha": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/SRS/Suzuki/Grant Vitara/Grand Vitara  38910-65J30.cal",
+      "cal_sha": "6e8e9448bb6f98c2d83f5ba603cd226996905114f5209d308d92a277d5400e0f",
+      "control": 8,
+      "reference": "gvsrs.png",
+      "resource_sha": "cc6c766d81d073d0a89b0d0389bffed98f9ed4515c90aaa41e019ee57d5ccd3c",
+      "evidence": "unique matching part number, reviewed board_chip_location image"
+    },
+    {
+      "cal": "Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal",
+      "cal_sha": "65750a08fe473694cffd14760018938c2a88621fc08b61c09b60bac3688738cb",
+      "control": 17,
+      "reference": "Arcticcat1.png",
+      "resource_sha": "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc",
+      "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/MOTO - TRUCK - ATV/Motobikes/Arktic Cat/Arctic Cat 24c08.cal",
+      "cal_sha": "65750a08fe473694cffd14760018938c2a88621fc08b61c09b60bac3688738cb",
+      "control": 17,
+      "reference": "Arcticcat1.png",
+      "resource_sha": "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc",
+      "evidence": "unique matching name, reviewed device_identification image"
     }
   ]
 }
