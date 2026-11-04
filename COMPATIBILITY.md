@@ -1,26 +1,50 @@
-# Compatibility checkpoint — 0.5.2, 2026-11-03
+# Совместимость и известные ограничения
 
-The application calculates on supplied BIN dumps; physical programmer operations
-are intentionally out of scope. Original bytes and source paths remain preserved.
+Сводка на 4 ноября 2026 года, по интегрированным результатам исследований.
+Это описание состояния продукта, а не очередь заданий.
 
-The catalog contains 23,946 archived entries: 23,357 CAL entries with 15,057 distinct
-CAL contents. The UI groups 8,300 exact duplicate instances. Sportage is included.
+## Каталог и поддержка
+23 946 исходных записей, включая 23 357 CAL-путей и 15 057 уникальных CAL.
+8 300 точных повторов объединены в интерфейсе, все исходные пути сохранены.
 
-Static handler coverage is 14,712 fully recognized contents, 257 partial/read-only
-contents and 88 unavailable contents. This is not proof of correct calculations on
-real vehicle dumps. Partial programs preserve errors, block their failed handlers
-in the VM, and permit reading only in the UI. OnShow preparation in partial mode
-is never offered as a calculated download. Full programs retain transactional
-OnShow/OnChange preparation and repeatable OnApply from that session.
+| Состояние уникального CAL | Количество |
+|---|---:|
+| Поддержаны предусмотренные обработчики | 14 767 |
+| Исходный читатель; доступная запись в оригинале не найдена | 231 |
+| Чтение доступно, запись ограничена | 17 |
+| Недоступен | 42 |
+| Всего | 15 057 |
 
-18 exact text variants receive a bounded final-brace parsing repair; original CAL
-exports remain unchanged. Byte mismatch annotations do not modify BIN data. Three
-newly parsed originals have known writer inconsistencies and remain read-only.
-The four FIS readers can open, but opcode 0x4D is still unsupported for writing.
-135 original image assets restore 623 references in 288 unique CAL contents.
+Это сводка целевых изменений, не новый массовый прогон. Поддержка обработчиков
+не означает проверку всех расчётов на реальных автомобилях.
+Ограничения переноса затрагивают 59 CAL (17 + 42). Нельзя считать все их
+причины доказанными дефектами исходного iProg.
 
-Portable Node/Python checks and real Chromium synthetic workflows are documented
-in [the delivery report](DELIVERY-2026-11-03.md). Historical private BIN tests,
-original-iProg execution, physical hardware and Windows were not verified.
-465 text/binary comparisons retain 456 exact matches and nine differing pairs.
-Current coverage: [JSON report](reports/calculator-coverage-2026-11-03.json).
+## Зафиксированные ограничения
+- 17 частичных текстовых писателей: материалы T-006 и T-012.
+- 42 недоступных: 27 текстовых, один invert.cal с недействительным OnShow,
+  два пустых BP8272 и 12 файлов других форматов.
+- 231 исходный читатель не является обещанием отсутствующего писателя.
+- Четыре FIS восстановлены для чтения и записи; декрипторы Skoda исправлены.
+- 18 каталожных записей сохраняют уточнения: у 13 не указана конкретная модель,
+  у пяти недостаточно сведений о марке или операции.
+- В реестре изображений 190 ресурсов, 430 привязок, 371 уникальный CAL.
+  После адресного исключения 18 аппаратных ссылок остаются 1 582 открытые
+  записи ссылок, включая пустые поля и неустановленные соответствия.
+- Исключение 18 ссылок на подключение не является полной классификацией
+  всех аппаратных материалов.
+
+## Пределы проверки
+В репозитории есть предметные синтетические тесты, проверки каталога, сохранности
+BIN, форм, экспорта и браузерных сценариев. Требования к окружению и личным
+фикстурам описаны в tests/README.md. Отсутствующая личная фикстура не означает
+ошибку приложения. Тест карты каталога не проверяет алгоритм CAL.
+
+Полное сравнение всех расчётов с оригинальным iProg и испытания всех
+калькуляторов на физических блоках не проведены. Неподдержанные операции
+блокируются явно; исходный BIN сохраняется отдельно.
+
+## Технические источники
+Доказательства и точные SHA находятся в reports/: T-005, T-006, T-007, T-012,
+T-013, T-003, T-014, T-010, T-015 и T-016. Их старые назначения, статусы
+«В работе» и следующие шаги не являются действующими поручениями.

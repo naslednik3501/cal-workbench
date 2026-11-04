@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2263,
-      "sha256": "1d66154b7496a9eca4d70438d58ce416167520c766801ecbec74a6e3916ff964"
+      "bytes": 2261,
+      "sha256": "3acb1609f97c73a6d102f67f6a8d25e89c160481053180103dda0d70d4de6753"
     },
     {
       "path": "AUDIT-2026-11-01.md",
@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 1657,
-      "sha256": "7107d442179cca516a39bb5c3af4efd4aaae4dd425aa2134eb17f6c91da510c3"
+      "bytes": 4191,
+      "sha256": "07b170fe83af9a3eb6a1aa183308ee9ab3a0c910f043f9aa4af9325be27669a3"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "DEVELOPMENT.md",
-      "bytes": 13174,
-      "sha256": "f4fc340a9db33f955713f4858d34fff81578ca40c7b3b8cb6d77dc10a12fbe79"
+      "bytes": 2405,
+      "sha256": "135863cb739739d5b3dd3a209a940b828ff4711697ff6d31e885f6ada29a5b31"
     },
     {
       "path": "IMAGE-RESOURCE-AUDIT.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "PROJECT_SCOPE.md",
-      "bytes": 7521,
-      "sha256": "1bea7b82f88477ee32eece19b1cb3c771a6d231931ad93f9c97e34853ad2b7c8"
+      "bytes": 2661,
+      "sha256": "4f0aae1c416f607cd25c959755cc281c04f24c695b52a2dfb664d41ae44daf7e"
     },
     {
       "path": "README.html",
@@ -53,18 +53,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 5762,
-      "sha256": "ad91ae25011fa3fab18e9369369707528a03d7ec41476f5a34a243c54997c2b5"
+      "bytes": 5731,
+      "sha256": "5cb6d0b0d5d23e177449b6bf841bcfe957c4ec7a2b8d4f72e02a9b460b30eeac"
     },
     {
       "path": "SOURCE_STORAGE.md",
-      "bytes": 11392,
-      "sha256": "8b00e6acd46024da2d02a84dd7dbf34b1fec1e45d8ce48a044054a3b957fe3c3"
-    },
-    {
-      "path": "TASKS.md",
-      "bytes": 103842,
-      "sha256": "a3c8b91d37774e5c54631e78791305a375b652576a40c50dafc64abeca4cf719"
+      "bytes": 11424,
+      "sha256": "bb5ed26dea8a3fb8703a0a618585c9d27dbac559f15551a46fc7e44f6915945c"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1462,11 +1457,6 @@
       "sha256": "68aa8787e057e854cd2b5258ef8862800cceefce0aba066a9d04f72ca142e138"
     },
     {
-      "path": "reports/T-013-progress-2026-11-04.md",
-      "bytes": 4058,
-      "sha256": "14507e149d44db9d485f1efc6ea0373cda33ae984680a482ea8f1dfebef6693b"
-    },
-    {
       "path": "reports/T-013-reader-proof-2026-11-04.json",
       "bytes": 58283,
       "sha256": "25d3bacc4c90b45d5934b9a477798c6a049aab4ee576dd13dde865f33c845c33"
@@ -1640,11 +1630,6 @@
       "path": "reports/source-storage-status-2026-11-02.json",
       "bytes": 5143,
       "sha256": "d652573960aefc78af2c4fca9fd76e87e811f56133ac24cd5a6eebf1981ac739"
-    },
-    {
-      "path": "reports/task-history-through-2026-11-04.md",
-      "bytes": 41526,
-      "sha256": "b68841f64b0ff958f80720ad9b22e9e8458aa8b537af106d4a4466ebfe6583b1"
     },
     {
       "path": "scope-data.js",
