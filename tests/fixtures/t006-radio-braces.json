@@ -1,0 +1,132 @@
+[
+  {
+    "sha": "2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00",
+    "bytes": 1669,
+    "paths": [
+      "Calculators/CarRadio/Mitsubishi/CT-903 CD.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+    "profile": [
+      1669,
+      56323,
+      1
+    ]
+  },
+  {
+    "sha": "7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f",
+    "bytes": 1680,
+    "paths": [
+      "Calculators/CarRadio/Mitsubishi/CR-902 RDS.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+    "profile": [
+      1680,
+      4555,
+      1
+    ]
+  },
+  {
+    "sha": "a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68",
+    "bytes": 1672,
+    "paths": [
+      "Calculators/CarRadio/Mitsubishi/CR-906.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+    "profile": [
+      1672,
+      37814,
+      1
+    ]
+  },
+  {
+    "sha": "268a83695dcbb8385b8524686da5835edb994a0e6566e521f3a6d49d68502e43",
+    "bytes": 1683,
+    "paths": [
+      "Calculators/CarRadio/Mitsubishi/SC-805.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+    "profile": [
+      1683,
+      42787,
+      1
+    ]
+  },
+  {
+    "sha": "e0098cff725446d55d378be2be016f51a8684ddcce6b3d4ab57d625a12e174d0",
+    "bytes": 1679,
+    "paths": [
+      "Calculators/CarRadio/Mitsubishi/SC-802.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+    "profile": [
+      1679,
+      46760,
+      1
+    ]
+  },
+  {
+    "sha": "2e9f8a7e81f06ff7063bd5aa641d80b2b12e9ffb61355a93a651dee6c1eb0ee6",
+    "bytes": 2599,
+    "paths": [
+      "Calculators/CarRadio/Alpine/BENZ AUDIO 10 CD  MF2910.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+    "profile": [
+      2599,
+      22485,
+      2
+    ]
+  },
+  {
+    "sha": "22232dd142725b2fd8f774bbcbb7a838fbfb6bce6740363e89b25f45212ac3fe",
+    "bytes": 2321,
+    "paths": [
+      "Calculators/CarRadio/Renault/RENRDW330-15.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+    "profile": [
+      2321,
+      26318,
+      1
+    ]
+  },
+  {
+    "sha": "ab663457a6c78d268ba7a80757ab334465abdae08fe8e73b09a3779ea66c0fe2",
+    "bytes": 2342,
+    "paths": [
+      "Calculators/CarRadio/Renault/RENRNC 471-16.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+    "profile": [
+      2342,
+      38324,
+      1
+    ]
+  },
+  {
+    "sha": "6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111",
+    "bytes": 4110,
+    "paths": [
+      "Calculators/CarRadio/Iveco/DAILY CD BP7005 no cancheck.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 107)",
+    "profile": [
+      4110,
+      12383,
+      1
+    ]
+  },
+  {
+    "sha": "db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0",
+    "bytes": 2469,
+    "paths": [
+      "Calculators/CarRadio/Delco/LICEO  SEZ4Z1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+    "profile": [
+      2469,
+      17014,
+      1
+    ]
+  }
+]

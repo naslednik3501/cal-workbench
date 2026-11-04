@@ -21,7 +21,7 @@ function tokenize(text){
 }
 const precedence={'||':1,'&&':2,'|':3,'^':4,'&':5,'=':6,'==':6,'!=':6,'<':7,'>':7,'<=':7,'>=':7,'<<':8,'>>':8,'+':9,'-':9,'*':10,'/':10,'%':10};
 class Parser{
- constructor(text){this.ts=tokenize(text);this.p=0;this.depth=0;this.controls=[];this.groups=[];this.objects=[];this.names=new Map();this.variables=new Set();this.procs=new Map();}
+ constructor(text,{extraClosings=0}={}){this.extraClosings=extraClosings;this.removedClosings=0;this.ts=tokenize(text);this.p=0;this.depth=0;this.controls=[];this.groups=[];this.objects=[];this.names=new Map();this.variables=new Set();this.procs=new Map();}
  peek(){return this.ts[this.p];} take(k){const t=this.peek();if(t.k===k||t.k==='id'&&t.v===k){this.p++;return t;}return null;}
  need(k){const t=this.take(k);if(!t)fail('ожидалось '+k+', найдено '+this.peek().v,this.peek());return t;}
  node(n){return n;}
@@ -64,8 +64,10 @@ class Parser{
   this.need('=');const value=this.expr();this.need(';');return {kind:'assign',target,value};
  }
  parse(){this.need('size');const a=this.args();if(a.length!==2||a.some(x=>x.k!=='num'||x.v>10000))fail('неверный размер формы');this.need(';');this.need('form');this.form();
-  while(this.peek().k!=='eof'){if(this.take(';'))continue;if(this.take('var')){do{this.variables.add(this.need('id').v);}while(this.take(','));this.need(';');continue;}
+  while(this.peek().k!=='eof'){if(this.take(';'))continue;
+   if(this.extraClosings>this.removedClosings&&this.take('}')){this.removedClosings++;continue;}if(this.take('var')){do{this.variables.add(this.need('id').v);}while(this.take(','));this.need(';');continue;}
    this.procedure();}
+  if(this.removedClosings!==this.extraClosings)fail('исходник не совпадает с числом лишних скобок');
   if(!['onshow','onapply','onchange'].some(k=>this.procs.has(k)))fail('не найдено обработчиков калькулятора');
   const validName=n=>this.names.has(n)||this.variables.has(n)||/^(var|str)\d+$/.test(n)&&Number(n.match(/\d+$/)[0])<256||['selstart','selend','bufsize','cursoradr','true','false'].includes(n);
   const visit=(n,depth=0)=>{if(depth>MAX_DEPTH*2)fail('слишком сложный исходник');if(!n||typeof n!=='object')return;if(n.kind==='name'&&!validName(n.name))fail('неизвестное имя '+n.name);if(n.kind==='call'&&!this.procs.has(n.name))fail('неизвестная процедура '+n.name);if(n.kind==='property'&&(!this.names.has(n.name)||!['color','bold','alignment'].includes(n.property)))fail('неизвестное свойство '+n.name+'.'+n.property);for(const v of Object.values(n))if(Array.isArray(v))v.forEach(x=>visit(x,depth+1));else if(v&&typeof v==='object')visit(v,depth+1);};
@@ -99,6 +101,20 @@ const finalBraceRepairs=Object.freeze({
 });
 // T-012: exact-source evidence and required references are in reports/T-012-writers-2026-11-04.md.
 // Preserve the original operations; no guessed login-copy repair or shift precedence.
+// T-006: exact originals with redundant closing braces at top level only.
+// Length/CRC and an exact count guard against stale caller-provided SHA values.
+const topLevelBraceRepairs=Object.freeze({
+ '2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00':[1669, 56323, 1],
+ '7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f':[1680, 4555, 1],
+ 'a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68':[1672, 37814, 1],
+ '268a83695dcbb8385b8524686da5835edb994a0e6566e521f3a6d49d68502e43':[1683, 42787, 1],
+ 'e0098cff725446d55d378be2be016f51a8684ddcce6b3d4ab57d625a12e174d0':[1679, 46760, 1],
+ '2e9f8a7e81f06ff7063bd5aa641d80b2b12e9ffb61355a93a651dee6c1eb0ee6':[2599, 22485, 2],
+ '22232dd142725b2fd8f774bbcbb7a838fbfb6bce6740363e89b25f45212ac3fe':[2321, 26318, 1],
+ 'ab663457a6c78d268ba7a80757ab334465abdae08fe8e73b09a3779ea66c0fe2':[2342, 38324, 1],
+ '6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111':[4110, 12383, 1],
+ 'db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0':[2469, 17014, 1],
+});
 const unverifiedWriters=Object.freeze({
  '5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be':'Запись заблокирована: в оригинальном CAL OnApply меняет 0x32–0x3F, но OnShow сравнивает логин с неизменёнными 0x42–0x43. После смены логина оригинал отвергает собственный результат. Нужен исправленный авторский CAL или эталон записи iProg; алгоритм не изменён.',
  '3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
@@ -109,7 +125,10 @@ function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишко
  text=text.replace(/^\uFEFF/,'').replace(/^\s*\[[^\r\n\]]*\]\s*/,'').replace(/^\s*![^\r\n]*$/gm,'');
  const repair=Object.hasOwn(finalBraceRepairs,sha)?finalBraceRepairs[sha]:null;
  if(repair){if(raw.length!==repair[0]||E.crc16(raw)!==repair[1])fail('исходник не совпадает с профилем исправления');if(!/}\s*$/.test(text))fail('не найдено исправляемой скобки');text=text.replace(/}\s*$/,'');}
- const program=new Parser(text).parse();if(repair)program.sourceRepairs=['Удалена одна лишняя завершающая скобка из известной версии CAL; оригинал сохранён.'];
+ const topRepair=Object.hasOwn(topLevelBraceRepairs,sha)?topLevelBraceRepairs[sha]:null;
+ if(topRepair&&(raw.length!==topRepair[0]||E.crc16(raw)!==topRepair[1]))fail('исходник не совпадает с профилем исправления');
+ const program=new Parser(text,{extraClosings:topRepair?topRepair[2]:0}).parse();
+ if(topRepair)program.sourceRepairs=['Пропущены лишние закрывающие скобки верхнего уровня: '+topRepair[2]+'. Обработчики и выражения сохранены.'];if(repair)program.sourceRepairs=['Удалена одна лишняя завершающая скобка из известной версии CAL; оригинал сохранён.'];
  if(Object.hasOwn(unverifiedWriters,sha)){program.partial=true;program.writerBlockReason=unverifiedWriters[sha];program.eventErrors={apply:unverifiedWriters[sha]};program.validEvents=['show'];program.unsupported=['apply: '+unverifiedWriters[sha]];}
  return program;
 }

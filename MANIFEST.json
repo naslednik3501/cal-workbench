@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 23050,
-      "sha256": "37f218b36b0d7abbb7e48c9b8bf9f1e4e703e1edc174b90a492c87a1ceadfb22"
+      "bytes": 25112,
+      "sha256": "25e0cbb624cf567607abd59c31f93093f3595575d304ada482a718be5241e1f1"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -93,8 +93,8 @@
     },
     {
       "path": "cal-source.js",
-      "bytes": 18654,
-      "sha256": "690ed9d03cb43a52419d2dd4615fcc04ac7d1ec4932d15352abc1feef7686c70"
+      "bytes": 20547,
+      "sha256": "cb632470f781cea32f7e41c9b83fd0a936f67912031d80c9b6e746712cedf9e3"
     },
     {
       "path": "catalog-data/part-000.js",
@@ -1062,6 +1062,11 @@
       "sha256": "a3855c62e92798a7677487e17be4805e489bf32b8cccfd374db33f2f680b3260"
     },
     {
+      "path": "reports/T-006-text-recovery-2026-11-04.md",
+      "bytes": 5447,
+      "sha256": "e64d8b7a55cf44d6cae6a69fb97748bf3c225edff73d44196e35fab50f1c559a"
+    },
+    {
       "path": "reports/T-012-provenance-2026-11-04.json",
       "bytes": 1911,
       "sha256": "caf748d5d8eaa5964d1340779800c1a49f7f9d28e0e37860438a6e47a4b285e8"
@@ -1207,6 +1212,16 @@
       "sha256": "d320fabe4081294c49f6fe6e877a0c06d31fd686ce068756d045cf24dbc1b9b6"
     },
     {
+      "path": "tests/fixtures/t006-radio-braces.json",
+      "bytes": 3469,
+      "sha256": "4d90e691fac6abbb3fc242a42dfdf7fe1a42c9e43aed6a99eda386c630084890"
+    },
+    {
+      "path": "tests/fixtures/t006-targets.json",
+      "bytes": 20423,
+      "sha256": "6c52cd6010dd74088b49abed733f8c6d7133e5147476af0e319933522e587db3"
+    },
+    {
       "path": "tests/fixtures/vw.cal",
       "bytes": 1848,
       "sha256": "b759aefbbb90c3e59830aae3f1d44ae83a094d1b1ec2f2e044b12a81dda55409"
@@ -1300,6 +1315,16 @@
       "path": "tests/test_sportage.js",
       "bytes": 8307,
       "sha256": "d03f90c3698f26270e954d3fdf81075953ebecd5ac6baf724fad76a1b8808762"
+    },
+    {
+      "path": "tests/test_t006_radio.js",
+      "bytes": 3863,
+      "sha256": "6090742860a0a8de5f0b23a9f3e4cd92a025930e94c572f3c1786f082f3dcf28"
+    },
+    {
+      "path": "tests/test_t006_radio_app.js",
+      "bytes": 5765,
+      "sha256": "79582d91fa1fc0a71db0ad0ecb11fceb34977d5f560a401c2f9c697c02df5d28"
     },
     {
       "path": "tests/test_t012_app.js",
