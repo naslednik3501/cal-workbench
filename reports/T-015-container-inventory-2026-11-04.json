@@ -1,0 +1,552 @@
+{
+ "task": "T-015",
+ "title": "Вложенные архивные контейнеры пяти оригинальных ZIP",
+ "date": "2026-11-04",
+ "agent": "cline-deepseek-20261104-T015",
+ "base_commit": "95e09dc5277b2bd4cb6a2b1e6d3f9d9d3f2d1b6e",
+ "source_store_commit": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
+ "method": [
+  "полный перебор 23 678 уникальных объектов хранилища по сигнатурам PK\\x03\\x04, Rar!\\x1a\\x07, 7z, BZh, gzip, xz, tar",
+  "выборочное получение найденных контейнеров из объектов хранилища и распаковка как данных (libarchive); программы не запускались",
+  "сверка каждого вложенного файла с каталогом приложения и с индексом хранилища по SHA-256",
+  "сверка остатка T-010 с содержимым контейнеров по имени, по полному пути и по исходной папке CAL"
+ ],
+ "scan": {
+  "store_unique_objects": 23678,
+  "magic_scanned": 23678,
+  "container_index_rows": 14,
+  "containers_unique": 13,
+  "rows_by_format": {
+   "rar": 13,
+   "odt_zip": 1
+  },
+  "other_container_formats": {
+   "asz": {
+    "files": 78,
+    "verdict": "пакеты скинов программы (Options.dat, Btn_Huge.bmp), вне задачи"
+   },
+   "ipp": {
+    "files": 315,
+    "verdict": "двоичные проекты программ iProg, признаков CAL нет"
+   },
+   "exe": {
+    "files": 22,
+    "verdict": "исполняемые программы; внутри только одиночная пустая ZIP-подпись, вложенных архивов нет; не запускались"
+   }
+  }
+ },
+ "totals": {
+  "containers": 13,
+  "container_member_entries": 470,
+  "container_member_files": 462,
+  "unique_member_sha256": 324,
+  "cal_members_unique": 2,
+  "new_unique_cal": 0,
+  "new_unique_images": 97,
+  "new_unique_images_cal_folders": 11,
+  "new_unique_images_program_icons": 86,
+  "document_thumbnail": 1,
+  "images_already_present": 3,
+  "proven_cal_image_bindings": 0,
+  "blocked": 0
+ },
+ "containers": [
+  {
+   "outer_archive_sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+   "outer_archive": "6fe8a078",
+   "container_path": "AIRBAG/Lada/Priora/grantasrs.rar",
+   "container_sha256": "1d817cb700672fa20ef56f8206fb4158e149a23bbb4f1467d4ce121fdcd8ad9f",
+   "container_bytes": 210985,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 1,
+   "unique_member_sha256": 1,
+   "counts": {
+    "image_present": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 1,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [
+    "png:image_present"
+   ],
+   "verdict": "проверен: одиночное изображение, уже присутствует в приложении (тот же SHA)"
+  },
+  {
+   "outer_archive_sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+   "outer_archive": "6fe8a078",
+   "container_path": "AIRBAG/MAZDA/MAZDA_6_INFINEON.rar",
+   "container_sha256": "ca8beae99393fe35770d76b0706d5c6afdc92697b0adbfb36d42d47bc0cfdb09",
+   "container_bytes": 2003499,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 18,
+   "unique_member_sha256": 16,
+   "counts": {
+    "other": 11,
+    "image_new": 7
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 5,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "MAZDA_6_INFINEON/0.png",
+     "MAZDA_6_INFINEON/1.png",
+     "MAZDA_6_INFINEON/2.png",
+     "MAZDA_6_INFINEON/3.png",
+     "MAZDA_6_INFINEON/4.png",
+     "MAZDA_6_INFINEON/SRS_MAZDA_6_CX5_IFINEON.png",
+     "MAZDA_6_INFINEON/SRS_MAZDA_6_IFINEON_R_W.png"
+    ]
+   },
+   "other": [
+    "bin:other",
+    "db:other",
+    "ipr:other"
+   ],
+   "verdict": "проверен: программа Infineon и 8 дампов 57K30; 7 изображений принадлежат программе (.ipr ссылается на 0.png), не CAL"
+  },
+  {
+   "outer_archive_sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+   "outer_archive": "6fe8a078",
+   "container_path": "AIRBAG/VW/Pointer.rar",
+   "container_sha256": "714bead4e71c66ccba89c4a923ea31e22bb6d5708448011052f09f662fb9ced2",
+   "container_bytes": 253062,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 6,
+   "unique_member_sha256": 6,
+   "counts": {
+    "image_new": 2,
+    "other": 3,
+    "image_present": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 2,
+    "already_present_unique_sha": 1,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "Pointer/377 909 603-A  MC68HC11E9.png",
+     "Pointer/377909603-a.png"
+    ]
+   },
+   "other": [
+    "blr:other",
+    "db:other",
+    "ipr:other",
+    "png:image_present"
+   ],
+   "verdict": "проверен: программа MC68HC11E9, vw.png уже в приложении, 2 фото блока без ссылок CAL"
+  },
+  {
+   "outer_archive_sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+   "outer_archive": "8e6b5f0b",
+   "container_path": "Calculators/Dashboard/Volkswagen/Polo 93C86 crypto.rar",
+   "container_sha256": "64d0913a1c72471aa79a4a9778ad00f86411732c3d0de1db5461e5cf5329d788",
+   "container_bytes": 1473,
+   "format": "rar",
+   "index_rows": 2,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 1,
+   "unique_member_sha256": 1,
+   "counts": {
+    "cal_present": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [
+    {
+     "inner": "Polo 93C86 crypto.cal",
+     "bytes": 6202,
+     "sha256": "a0a66442b874d649d9ee00c3bbe5a9a859567cd50ab5a3b7771a6c12bb119956",
+     "status": "already_in_catalog"
+    }
+   ],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [],
+   "verdict": "уже обработан ранее: единственный CAL вложен в каталог как Polo (RAR source)"
+  },
+  {
+   "outer_archive_sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+   "outer_archive": "8e6b5f0b",
+   "container_path": "Config/can.rar",
+   "container_sha256": "9c0c2b41a79efa1d50938a578506d3e76fea481c332fe795f4beb5f090b17a77",
+   "container_bytes": 2372,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 1,
+   "unique_member_sha256": 1,
+   "counts": {
+    "other": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [
+    "inc:other"
+   ],
+   "verdict": "проверен: один файл include-конфигурации .inc, не CAL"
+  },
+  {
+   "outer_archive_sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+   "outer_archive": "affb707e",
+   "container_path": "DASHBOARD/Honda/Honda MB91F06x OBD2.rar",
+   "container_sha256": "45666678f9266682380d1d1f5789986201ff5569f62dc4b022c959c7d0e3bd3c",
+   "container_bytes": 2216891,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 88,
+   "unique_member_sha256": 82,
+   "counts": {
+    "image_new": 2,
+    "other": 86
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 2,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "Honda MB91F06x OBD2/Honda060.jpg",
+     "Honda MB91F06x OBD2/Honda061.jpg"
+    ]
+   },
+   "other": [
+    "bin:other",
+    "ipr:other",
+    "pro:other"
+   ],
+   "verdict": "проверен: 2 программы OBD2, 83 дампа Flash, 2 фото подключения; ссылок CAL нет"
+  },
+  {
+   "outer_archive_sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+   "outer_archive": "affb707e",
+   "container_path": "DASHBOARD/Kamaz/╨Ü╨░╨╝╨░╨╖ ╨É╨ƒ.rar",
+   "container_sha256": "c709a8080ba573219d36e81931e0e74a510942d92fcfa4dcbc3eb364edd06582",
+   "container_bytes": 225757,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 3,
+   "unique_member_sha256": 3,
+   "counts": {
+    "image_new": 2,
+    "other": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 2,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "Dash_Connection.jpg",
+     "Info.png"
+    ]
+   },
+   "other": [
+    "ipr:other"
+   ],
+   "verdict": "проверен"
+  },
+  {
+   "outer_archive_sha256": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+   "outer_archive": "affb707e",
+   "container_path": "DASHBOARD/Kia-Hyndai/H-1/EDC 16x.rar",
+   "container_sha256": "a03f6bc6d0eabad6fa36c7dbf7ab468ce19b160855ead47c6f09856b2e048415",
+   "container_bytes": 24207,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 3,
+   "unique_member_sha256": 3,
+   "counts": {
+    "other": 2,
+    "image_present": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 1,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [
+    "blr:other",
+    "ipr:other",
+    "png:image_present"
+   ],
+   "verdict": "проверен: программа EDC16 и уже имеющееся изображение hyundai.png"
+  },
+  {
+   "outer_archive_sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3",
+   "outer_archive": "61d047c3",
+   "container_path": "OTHER/BLR.rar",
+   "container_sha256": "0baf9034bbbd6962e7c5b85696d136bffac34c3b0fd4acadd4834cc70c823163",
+   "container_bytes": 73326,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 82,
+   "unique_member_sha256": 81,
+   "counts": {
+    "other": 82
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [
+    "blr:other"
+   ],
+   "verdict": "проверен: 82 аппаратных загрузчика .blr и тестовые программы; расчётов по дампу нет, вне задачи"
+  },
+  {
+   "outer_archive_sha256": "61d047c3acc4e42bcaf6d7faac38742ca3794435f072947c06eb9e924201c0a3",
+   "outer_archive": "61d047c3",
+   "container_path": "OTHER/BLR/CAN_SCAN_proba.rar",
+   "container_sha256": "fc03ce835e1adf8fb1b51ee0cfa9d5ebafee52205f51e66331ed5d5f47c0632b",
+   "container_bytes": 2458,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 1,
+   "unique_member_sha256": 1,
+   "counts": {
+    "other": 1
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": []
+   },
+   "other": [
+    "blr:other"
+   ],
+   "verdict": "проверен: один .blr, повтор уже обработанного материала"
+  },
+  {
+   "outer_archive_sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+   "outer_archive": "8e6b5f0b",
+   "container_path": "iProgPro.rar",
+   "container_sha256": "eac3747c5f3f114bccdfef86923e2edd26d8d7e0b95978abb4400deb3a9e882b",
+   "container_bytes": 1845665,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 124,
+   "unique_member_sha256": 119,
+   "counts": {
+    "other": 30,
+    "program": 2,
+    "cal_present": 1,
+    "image_new": 91
+   },
+   "new_unique_cal": 0,
+   "cal_members": [
+    {
+     "inner": "Calculators/hitag2.cal",
+     "bytes": 3942,
+     "sha256": "b3503228dbb6c6b5e45352dd753f61c4d1b472bf04f84f1ff15a0c3fe57a2224",
+     "status": "already_in_catalog"
+    }
+   ],
+   "images": {
+    "new_unique_sha": 86,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "Toolbars/BlueSphere/0.png",
+     "Toolbars/BlueSphere/1.png",
+     "Toolbars/BlueSphere/10.png",
+     "Toolbars/BlueSphere/11.png",
+     "Toolbars/BlueSphere/12.png",
+     "Toolbars/BlueSphere/13.png",
+     "Toolbars/BlueSphere/2.png",
+     "Toolbars/BlueSphere/3.png",
+     "Toolbars/BlueSphere/4.png",
+     "Toolbars/BlueSphere/5.png",
+     "Toolbars/BlueSphere/6.png",
+     "Toolbars/BlueSphere/7.png"
+    ]
+   },
+   "other": [
+    "db:other",
+    "dll:program",
+    "exe:program",
+    "inc:other",
+    "inf:other",
+    "lng:other",
+    "lua:other",
+    "svg:other",
+    "txt:other"
+   ],
+   "verdict": "проверен: программа iProgPro и 86 уникальных иконок панели (88 файлов в Toolbars/*); hitag2.cal совпадает по SHA с каталогом"
+  },
+  {
+   "outer_archive_sha256": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+   "outer_archive": "8e6b5f0b",
+   "container_path": "iProgPro69.rar",
+   "container_sha256": "2460091807edfdd3ca46fa43c768b9d9251605dba40e560da55938f030d3ef71",
+   "container_bytes": 1853691,
+   "format": "rar",
+   "index_rows": 1,
+   "extraction": "extracted as data with libarchive (bsdtar), no program started",
+   "members_total": 124,
+   "unique_member_sha256": 119,
+   "counts": {
+    "other": 30,
+    "program": 2,
+    "cal_present": 1,
+    "image_new": 91
+   },
+   "new_unique_cal": 0,
+   "cal_members": [
+    {
+     "inner": "Calculators/hitag2.cal",
+     "bytes": 3942,
+     "sha256": "b3503228dbb6c6b5e45352dd753f61c4d1b472bf04f84f1ff15a0c3fe57a2224",
+     "status": "already_in_catalog"
+    }
+   ],
+   "images": {
+    "new_unique_sha": 86,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "new_files": [
+     "Toolbars/BlueSphere/0.png",
+     "Toolbars/BlueSphere/1.png",
+     "Toolbars/BlueSphere/10.png",
+     "Toolbars/BlueSphere/11.png",
+     "Toolbars/BlueSphere/12.png",
+     "Toolbars/BlueSphere/13.png",
+     "Toolbars/BlueSphere/2.png",
+     "Toolbars/BlueSphere/3.png",
+     "Toolbars/BlueSphere/4.png",
+     "Toolbars/BlueSphere/5.png",
+     "Toolbars/BlueSphere/6.png",
+     "Toolbars/BlueSphere/7.png"
+    ]
+   },
+   "other": [
+    "db:other",
+    "dll:program",
+    "exe:program",
+    "inc:other",
+    "inf:other",
+    "lng:other",
+    "lua:other",
+    "svg:other",
+    "txt:other"
+   ],
+   "verdict": "проверен: та же программа другой версии (другие байты iProgPro.exe и russian.lng), hitag2.cal совпадает по SHA"
+  },
+  {
+   "outer_archive_sha256": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+   "outer_archive": "6fe8a078",
+   "container_path": "AIRBAG/KIA-HYUNDAI/KIA HYUNDAI SRS Mobis.odt",
+   "container_sha256": "66898004ffc53b006d876ca9aaf68ee3bf42c6009660d471349e83f334814653",
+   "container_bytes": 15776,
+   "format": "zip (OpenDocument text)",
+   "index_rows": 1,
+   "extraction": "raw bytes read from the store and opened as ZIP data, no program started",
+   "members_total": 18,
+   "unique_member_sha256": 10,
+   "counts": {
+    "files": 10
+   },
+   "new_unique_cal": 0,
+   "cal_members": [],
+   "images": {
+    "new_unique_sha": 0,
+    "already_present_unique_sha": 0,
+    "proven_cal_bindings": 0,
+    "not_calculator_resources": [
+     "Thumbnails/thumbnail.png (эскиз документа, не ресурс CAL)"
+    ]
+   },
+   "other": [
+    "document parts: content.xml, styles.xml, settings.xml, meta.xml, META-INF/manifest.xml, manifest.rdf"
+   ],
+   "verdict": "проверен: текстовый документ (content.xml 22 152 байта) без признаков CAL, эскиз документа не является ресурсом калькулятора"
+  }
+ ],
+ "cal_coverage_check": {
+  "unique_cal_in_store": 15056,
+  "unique_cal_in_catalog": 15057,
+  "store_cal_missing_from_catalog": 0,
+  "note": "15 057 = 15 056 уникальных CAL из пяти ZIP + текстовый вариант Polo 93C86 crypto из вложенного RAR; все байты CAL уже в приложении"
+ },
+ "reference_check": {
+  "t010_remainder": 1600,
+  "checked_no_source": 1309,
+  "checked_ambiguous": 118,
+  "by_reason": {
+   "no_source_by_name_index": 1309,
+   "ambiguous_multiple_contents": 118,
+   "hardware_wiring_out_of_scope": 18,
+   "whitespace_only_picture_control": 85,
+   "empty_picture_control": 70
+  },
+  "resolvable_by_container_name": 0,
+  "resolvable_by_exact_target_path": 0,
+  "resolvable_from_original_cal_folder": 0,
+  "name_matches_in_containers": 0,
+  "name_match_verdict": "ни одно имя ссылки из остатка T-010 не совпадает ни с одним членом контейнеров (сравнение без учёта регистра по базовому имени и по внутреннему пути)",
+  "conclusion": "содержимое вложенных контейнеров как источник для T-010 исключено; в пяти ZIP этих изображений нет"
+ },
+ "non_cal_text_scan": {
+  "scanned_objects": 23678,
+  "cal_like_objects": 1488,
+  "by_extension": {
+   "cal": 1487,
+   "123": 1
+  },
+  "absent_from_catalog": 0,
+  "note": "поиск текста CAL по содержимому независимо от расширения: новых расчётных файлов нет"
+ },
+ "blocked": [],
+ "conclusions": [
+  "вложенные контейнеры не содержат ни одного нового уникального CAL: Polo 93C86 crypto.cal и hitag2.cal побайтно совпадают с каталогом",
+  "97 новых уникальных изображений из контейнеров не имеют доказанной ссылки ни к одному CAL: 86 — иконки панели iProgPro, 11 — фото программ и подключения",
+  "ни одна из 1 309 ссылок без источника и 118 неоднозначных из остатка T-010 не разрешается содержимым контейнеров",
+  "приложение уже содержит все уникальные байты CAL пяти ZIP, поэтому новых калькуляторов этап не добавляет"
+ ],
+ "next_steps": [
+  "для T-010 отсутствующие изображения в пяти ZIP не найдены; содержимое вложенных контейнеров как источник исключено",
+  "восемь дампов Mazda 57K30 «OK» могут служить эталонами для проверки существующих CAL Mazda, если владелец захочет такую проверку"
+ ]
+}

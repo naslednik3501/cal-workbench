@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 49361,
-      "sha256": "5d2ab46fece19a95983ec7bb7433eeb7d22b7a9ac393582d3ed3fa6dd85863c2"
+      "bytes": 53313,
+      "sha256": "aac9364113fdec0cae8f63a731960852f9b9acfc0db7256c9f4be69b001e39ff"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1378,8 +1378,8 @@
     },
     {
       "path": "reports/T-010-remainder-2026-11-04.json",
-      "bytes": 699090,
-      "sha256": "1de4b2227c508f45cd6046d9ed6b687638bc8cc704454f216d55a7cfc17800b0"
+      "bytes": 703745,
+      "sha256": "9c95dfa08cd3b6353d497bb389ee17f402926dc2fdab7b007491f5141760954b"
     },
     {
       "path": "reports/T-012-provenance-2026-11-04.json",
@@ -1420,6 +1420,16 @@
       "path": "reports/T-014-skoda-2026-11-04.md",
       "bytes": 7380,
       "sha256": "04bbcaedbbb522ca63384ed8c391cbcf7c5a251ebdb3f9fe7ded211ad3b38da1"
+    },
+    {
+      "path": "reports/T-015-container-inventory-2026-11-04.json",
+      "bytes": 19679,
+      "sha256": "8dcf19f066fd3b19b86786fd90b2348bc21d282492a736183a2d0b5a57fdf453"
+    },
+    {
+      "path": "reports/T-015-nested-archives-2026-11-04.md",
+      "bytes": 12377,
+      "sha256": "36fda025145d2a29e91882326c18529c13057305665fd9216b3036421c17c1be"
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
