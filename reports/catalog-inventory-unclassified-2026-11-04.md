@@ -16,9 +16,9 @@
 ## Каталог
 
 - Записей: 23,946; CAL-путей: 23,357; уникальных CAL SHA: 15,057.
-- Активных CAL-путей: 15,684; активных SHA: 9,665; прямо в разделах без марки/модели: 194.
-- Исключено реестром области: 0 CAL; адресных правил ресурсов: 9; утверждённой картой: 5392.
-- Групп: 66; покрыто 14,073 путей / 8,138 SHA; вне групп — 1,611 обычных путей.
+- Активных CAL-путей: 3,213; активных SHA: 2,846; прямо в разделах без марки/модели: 12.
+- Исключено реестром области: 0 CAL; адресных правил ресурсов: 9; утверждённой картой: 12211.
+- Групп: 31; покрыто 3,028 путей / 2,712 SHA; вне групп — 185 обычных путей.
 
 ## Словарь разделов
 
@@ -78,92 +78,48 @@
 
 | ID | Тип | Файлов | SHA | Предложение | Уверенность |
 |---|---|---:|---:|---|---|
-| D-ATV-brpbombardier | direct_section | 25 | 25 | Мототехника/ATV/BRP (Bombardier) | high |
-| D-ATV-cfmoto | direct_section | 16 | 16 | Мототехника/ATV/CFMOTO | high |
-| D-ATV-polaris | direct_section | 10 | 10 | Мототехника/ATV/Polaris | high |
-| D-ATV-stels | direct_section | 8 | 8 | Мототехника/ATV/Stels | high |
-| D-ATV-yamaha | direct_section | 5 | 5 | Мототехника/ATV/Yamaha | high |
-| D-ATV-honda | direct_section | 4 | 4 | Мототехника/ATV/Honda | high |
-| D-ATV-suzuki | direct_section | 4 | 4 | Мототехника/ATV/Suzuki | high |
-| D-ATV-baltmotors | direct_section | 2 | 2 | Мототехника/ATV/Baltmotors | high |
-| D-ATV-kawasaki | direct_section | 2 | 2 | Мототехника/ATV/Kawasaki | high |
-| D-ATV-kymco | direct_section | 2 | 2 | Мототехника/ATV/Kymco | high |
-| D-ATV-russkaya-mehanika | direct_section | 2 | 2 | Мототехника/ATV/Русская Механика | high |
-| D-root-renault | root_brand_section | 15 | 15 | Приборные панели/Renault | medium |
-| D-root-peugeot-bsi | root_brand_section | 5 | 5 | BSI и кузовные блоки/Peugeot | high |
-| D-root-peugeot-dash | root_brand_section | 3 | 3 | Приборные панели/Peugeot | high |
-| D-root-mb | root_brand_section | 2 | 2 | Иммобилайзеры и ключи/Mercedes-Benz | high |
+| D-ATV-brpbombardier | direct_section | 2 | 2 | Мототехника/ATV/BRP (Bombardier) | high |
+| D-ATV-kymco | direct_section | 1 | 1 | Мототехника/ATV | medium |
+| D-root-peugeot-bsi | root_brand_section | 3 | 3 | BSI и кузовные блоки/Peugeot | high |
 | D-ecu-generic | direct_section | 2 | 2 | Двигатель/Универсальные | medium |
 | D-ecu-citroen-peugeot | direct_section | 1 | 1 | Двигатель/Citroen и Peugeot | medium |
 | D-tachograf-off | direct_section | 4 | 4 | Утилиты/Тахографы | high |
-| D-immo-off | direct_section | 2 | 2 | Иммобилайзеры и ключи/SsangYong | high |
-| D-immo-renault-uch | direct_section | 1 | 1 | Иммобилайзеры и ключи/Renault | high |
 | D-china-generic | direct_section | 1 | 1 | Китайские автомобили/Неуточнённые | low |
 | D-crc-dash | direct_section | 1 | 1 | Утилиты/CRC | high |
-| D-carradio-universal | direct_section | 1 | 1 | Магнитолы и навигация/Универсальные | medium |
-| D-cat-atv | category_direct | 255 | 169 | Мототехника/ATV/<марка> | high |
-| D-cat-jetski | category_direct | 12 | 11 | Мототехника/Гидроциклы/<марка> | high |
+| D-cat-atv | category_direct | 84 | 84 | Мототехника/ATV/<марка> | high |
+| D-cat-jetski | category_direct | 5 | 5 | Мототехника/Гидроциклы/<марка> | high |
 | D-cat-motobikes | category_direct | 2 | 2 | Мототехника/Мотоциклы | low |
 | D-cat-snowmobile | category_direct | 2 | 1 | Мототехника/Снегоходы | low |
-| D-cat-immo-convertor | category_direct | 2 | 2 | Иммобилайзеры и ключи/Конвертеры ключей | high |
-| P01 | parallel_sections | 9259 | 4829 | Приборные панели/<марка> | high |
-| P03 | parallel_sections | 86 | 85 | Приборные панели/Универсальные | high |
+| P01 | parallel_sections | 1 | 1 | Приборные панели/<марка> | high |
 | P04 | parallel_sections | 96 | 76 | Утилиты/Конвертеры US-EU | high |
-| P05 | parallel_sections | 694 | 434 | Мототехника/<ATV|Мотоциклы|Снегоходы> и Грузовые и спецтехника | medium |
-| P06 | parallel_sections | 850 | 850 | существующий раздел устройства/<марка> | high |
-| P07 | parallel_sections | 2220 | 2220 | существующий раздел устройства/<марка> | medium |
-| P08 | parallel_sections | 177 | 177 | Утилиты/<функция> | high |
-| P09 | parallel_sections | 373 | 364 | Иммобилайзеры и ключи/<марка> | high |
-| P10 | parallel_sections | 61 | 61 | Утилиты/Сервисные функции | medium |
-| S-audi | brand_spelling | 9 | 7 | <раздел устройства>/Audi | high |
-| S-bentley | brand_spelling | 1 | 1 | <раздел устройства>/Bentley | high |
-| S-bmw | brand_spelling | 18 | 18 | <раздел устройства>/BMW | high |
-| S-chery | brand_spelling | 12 | 12 | <раздел устройства>/Chery | high |
-| S-chevrolet | brand_spelling | 1 | 1 | <раздел устройства>/Chevrolet | medium |
-| S-chrysler | brand_spelling | 1 | 1 | <раздел устройства>/Chrysler | medium |
-| S-citroen | brand_spelling | 4 | 4 | <раздел устройства>/Citroen | high |
-| S-daihatsu | brand_spelling | 3 | 3 | <раздел устройства>/Daihatsu | high |
-| S-dongfeng | brand_spelling | 11 | 6 | <раздел устройства>/DongFeng | high |
-| S-infiniti | brand_spelling | 91 | 38 | <раздел устройства>/Infiniti | high |
-| S-jac | brand_spelling | 4 | 2 | <раздел устройства>/JAC | high |
-| S-jaguar | brand_spelling | 28 | 14 | <раздел устройства>/Jaguar | high |
-| S-kamaz | brand_spelling | 6 | 6 | <раздел устройства>/KAMAZ | high |
-| S-kia | brand_spelling | 242 | 149 | <раздел устройства>/Kia | high |
-| S-lada | brand_spelling | 1 | 1 | <раздел устройства>/Lada | high |
-| S-landrover | brand_spelling | 51 | 47 | <раздел устройства>/Land Rover | high |
-| S-mazda | brand_spelling | 2 | 2 | <раздел устройства>/Mazda | high |
-| S-mercedesbenz | brand_spelling | 64 | 64 | <раздел устройства>/Mercedes-Benz | high |
+| P05 | parallel_sections | 389 | 208 | Мототехника/<ATV|Мотоциклы|Снегоходы> и Грузовые и спецтехника | medium |
+| P06 | parallel_sections | 96 | 96 | существующий раздел устройства/<марка> | high |
+| P07 | parallel_sections | 2148 | 2148 | существующий раздел устройства/<марка> | medium |
+| P08 | parallel_sections | 176 | 176 | Утилиты/<функция> | high |
+| P10 | parallel_sections | 60 | 60 | Утилиты/Сервисные функции | medium |
+| S-bmw | brand_spelling | 13 | 13 | <раздел устройства>/BMW | high |
+| S-chery | brand_spelling | 10 | 10 | <раздел устройства>/Chery | high |
+| S-dongfeng | brand_spelling | 1 | 1 | <раздел устройства>/DongFeng | high |
+| S-infiniti | brand_spelling | 1 | 1 | <раздел устройства>/Infiniti | high |
+| S-kia | brand_spelling | 49 | 49 | <раздел устройства>/Kia | high |
+| S-landrover | brand_spelling | 38 | 38 | <раздел устройства>/Land Rover | high |
 | S-peugeot | brand_spelling | 5 | 5 | <раздел устройства>/Peugeot | high |
-| S-porsche | brand_spelling | 2 | 2 | <раздел устройства>/Porsche | high |
-| S-saab | brand_spelling | 1 | 1 | <раздел устройства>/Saab | high |
-| S-ssangyong | brand_spelling | 69 | 33 | <раздел устройства>/SsangYong | high |
-| S-subaru | brand_spelling | 5 | 5 | <раздел устройства>/Subaru | high |
-| S-suzuki | brand_spelling | 7 | 7 | <раздел устройства>/Suzuki | high |
-| S-tagaz | brand_spelling | 8 | 4 | <раздел устройства>/TAGAZ | high |
-| S-volkswagen | brand_spelling | 131 | 116 | <раздел устройства>/Volkswagen | high |
+| S-ssangyong | brand_spelling | 1 | 1 | <раздел устройства>/SsangYong | high |
+| S-volkswagen | brand_spelling | 23 | 23 | <раздел устройства>/Volkswagen | high |
 | S-cfmoto | brand_spelling | 13 | 7 | <раздел устройства>/CFMOTO | high |
-| E01 | broken_encoding | 59 | 36 | переименовать папку и файл по декодированному имени | high |
-| E02 | broken_encoding | 4 | 3 | нормализовать пробелы в имени папки | high |
+| E01 | broken_encoding | 18 | 14 | переименовать папку и файл по декодированному имени | high |
+| E02 | broken_encoding | 2 | 1 | нормализовать пробелы в имени папки | high |
 
 ## Параллельные разделы
 
 ### P01 — Dashboard и Car: две раскладки одного содержимого (high)
 
-Car повторяет Dashboard почти побайтно; Car дополнительно смешивает буквенные папки и папки марок. Пересечение с другими разделами — Dashboard: 4414 SHA (93%); Car: 4414 SHA (98%).
+Car повторяет Dashboard почти побайтно; Car дополнительно смешивает буквенные папки и папки марок. Пересечение с другими разделами — Dashboard: 0 SHA (0%); Car: 0 SHA (0%).
 
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
-| Calculators/Dashboard | 4767 | 4763 | 4414 (93%) | 4763 (100%) |
-| Calculators/Car | 4492 | 4480 | 4414 (98%) | 4480 (100%) |
-
-### P03 — I и I_ok: одинаковые имена панелей, разные сборки (high)
-
-43 имени в каждом разделе совпадают, но SHA почти не пересекаются: это не побайтовые дубликаты, а разные версии. Пересечение с другими разделами — I: 1 SHA (2%); I_ok: 1 SHA (2%).
-
-| Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
-|---|---:|---:|---:|---:|
-| Calculators/I | 43 | 43 | 1 (2%) | 22 (51%) |
-| Calculators/I_ok | 43 | 43 | 1 (2%) | 0 (0%) |
+| Calculators/Dashboard | 0 | 0 | 0 (0%) | 0 (0%) |
+| Calculators/Car | 1 | 1 | 0 (0%) | 1 (100%) |
 
 ### P04 — US-Euro converter и USA-Euro converter (high)
 
@@ -176,13 +132,13 @@ Car повторяет Dashboard почти побайтно; Car дополни
 
 ### P05 — MOTO, MOTO - TRUCK - ATV и ATV (medium)
 
-MOTO полностью входит в MOTO - TRUCK - ATV, ATV почти полностью; при этом в MOTO - TRUCK - ATV есть уникальные грузовые и спецтехника. Пересечение с другими разделами — MOTO: 182 SHA (100%); MOTO - TRUCK - ATV: 259 SHA (60%); ATV: 77 SHA (96%).
+MOTO полностью входит в MOTO - TRUCK - ATV, ATV почти полностью; при этом в MOTO - TRUCK - ATV есть уникальные грузовые и спецтехника. Пересечение с другими разделами — MOTO: 181 SHA (100%); MOTO - TRUCK - ATV: 181 SHA (88%); ATV: 0 SHA (0%).
 
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
-| Calculators/MOTO | 182 | 182 | 182 (100%) | 1 (0%) |
-| Calculators/MOTO - TRUCK - ATV | 432 | 431 | 259 (60%) | 226 (52%) |
-| Calculators/ATV | 80 | 80 | 77 (96%) | 77 (96%) |
+| Calculators/MOTO | 181 | 181 | 181 (100%) | 0 (0%) |
+| Calculators/MOTO - TRUCK - ATV | 205 | 205 | 181 (88%) | 0 (0%) |
+| Calculators/ATV | 3 | 3 | 0 (0%) | 0 (0%) |
 
 ### P06 — Региональные France, Germany, CHINA повторяют Dashboard (high)
 
@@ -190,9 +146,9 @@ MOTO полностью входит в MOTO - TRUCK - ATV, ATV почти по�
 
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
-| Calculators/France | 392 | 392 | 0 (0%) | 377 (96%) |
-| Calculators/Germany | 358 | 358 | 0 (0%) | 281 (78%) |
-| Calculators/CHINA | 100 | 100 | 0 (0%) | 96 (96%) |
+| Calculators/France | 15 | 15 | 0 (0%) | 0 (0%) |
+| Calculators/Germany | 77 | 77 | 0 (0%) | 0 (0%) |
+| Calculators/CHINA | 4 | 4 | 0 (0%) | 0 (0%) |
 
 ### P07 — Asia и EU_US_RU: альтернативные сборки тех же моделей (medium)
 
@@ -200,8 +156,8 @@ MOTO полностью входит в MOTO - TRUCK - ATV, ATV почти по�
 
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
-| Calculators/Asia | 1458 | 1458 | 0 (0%) | 48 (3%) |
-| Calculators/EU_US_RU | 762 | 762 | 0 (0%) | 24 (3%) |
+| Calculators/Asia | 1410 | 1410 | 0 (0%) | 0 (0%) |
+| Calculators/EU_US_RU | 738 | 738 | 0 (0%) | 0 (0%) |
 
 ### P08 — OTHER: зеркало утилит в корне каталога (high)
 
@@ -209,18 +165,9 @@ OTHER повторяет корневые PIN, Service calc, US-Euro converter �
 
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
-| Calculators/OTHER | 177 | 177 | 0 (0%) | 1 (1%) |
+| Calculators/OTHER | 176 | 176 | 0 (0%) | 0 (0%) |
 
-Зеркала `OTHER`: PIN — 54 файлов, общих SHA 54; Service calc — 52 файлов, общих SHA 52; Synchronization — 11 файлов, общих SHA 4; Tachograf off — 4 файлов, общих SHA 0; CRC — 1 файлов, общих SHA 1; US-Euro converter — 55 файлов, общих SHA 55.
-
-### P09 — Immo off вложен в Immo (high)
-
-Все SHA Immo off уже есть в Immo; отдельный раздел не нужен. Пересечение с другими разделами — Immo: 3 SHA (1%); Immo off: 3 SHA (100%).
-
-| Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
-|---|---:|---:|---:|---:|
-| Calculators/Immo | 368 | 364 | 3 (1%) | 4 (1%) |
-| Calculators/Immo off | 5 | 3 | 3 (100%) | 0 (0%) |
+Зеркала `OTHER`: PIN — 54 файлов, общих SHA 54; Service calc — 51 файлов, общих SHA 51; Synchronization — 11 файлов, общих SHA 4; Tachograf off — 4 файлов, общих SHA 0; CRC — 1 файлов, общих SHA 1; US-Euro converter — 55 файлов, общих SHA 55.
 
 ### P10 — Service и Service calc (medium)
 
@@ -229,7 +176,7 @@ OTHER повторяет корневые PIN, Service calc, US-Euro converter �
 | Раздел | Файлов | SHA | Пересечение с остальными | Совпадает с Dashboard/Car |
 |---|---:|---:|---:|---:|
 | Calculators/Service | 9 | 9 | 0 (0%) | 0 (0%) |
-| Calculators/Service calc | 52 | 52 | 0 (0%) | 1 (2%) |
+| Calculators/Service calc | 51 | 51 | 0 (0%) | 0 (0%) |
 
 ## Очередные группы
 
@@ -237,18 +184,18 @@ OTHER повторяет корневые PIN, Service calc, US-Euro converter �
 
 | ID | Группа | Файлов | SHA | Уверенность |
 |---|---|---:|---:|---|
-| P01 | Dashboard и Car: две раскладки одного содержимого | 9259 | 4829 | high |
-| P06 | Региональные France, Germany, CHINA повторяют Dashboard | 850 | 850 | high |
-| P09 | Immo off вложен в Immo | 373 | 364 | high |
-| D-cat-atv | ATV: файлы прямо в папке категории, без марки | 255 | 169 | high |
-| S-kia | Kia: варианты написания папки | 242 | 149 | high |
-| P08 | OTHER: зеркало утилит в корне каталога | 177 | 177 | high |
-| S-volkswagen | Volkswagen: варианты написания папки | 131 | 116 | high |
+| P08 | OTHER: зеркало утилит в корне каталога | 176 | 176 | high |
 | P04 | US-Euro converter и USA-Euro converter | 96 | 76 | high |
-| S-infiniti | Infiniti: варианты написания папки | 91 | 38 | high |
-| P03 | I и I_ok: одинаковые имена панелей, разные сборки | 86 | 85 | high |
-| S-ssangyong | SsangYong: варианты написания папки | 69 | 33 | high |
-| S-mercedesbenz | Mercedes-Benz: варианты написания папки | 64 | 64 | high |
+| P06 | Региональные France, Germany, CHINA повторяют Dashboard | 96 | 96 | high |
+| D-cat-atv | ATV: файлы прямо в папке категории, без марки | 84 | 84 | high |
+| S-kia | Kia: варианты написания папки | 49 | 49 | high |
+| S-landrover | Land Rover: варианты написания папки | 38 | 38 | high |
+| S-volkswagen | Volkswagen: варианты написания папки | 23 | 23 | high |
+| E01 | Пути с битой кодировкой UTF-8 | 18 | 14 | high |
+| S-bmw | BMW: варианты написания папки | 13 | 13 | high |
+| S-cfmoto | CFMOTO: варианты написания папки | 13 | 7 | high |
+| S-chery | Chery: варианты написания папки | 10 | 10 | high |
+| D-cat-jetski | Jet ski: гидроциклы без папки марки | 5 | 5 | high |
 
 ## Ограничения
 
@@ -256,4 +203,4 @@ OTHER повторяет корневые PIN, Service calc, US-Euro converter �
 - Совпадение имён при разных SHA — разные сборки; байтовое слияние для них запрещено.
 - `Asia` и `EU_US_RU` требуют сверки версий, а не механического объединения.
 - Содержимое CAL не даёт читаемых названий; уточнение марок для `CHINA 24C08`,
-  `ECU 95080`, `EDC16` и `Any model by dump` остаётся открытым.
+  `ECU 95080` и `EDC16` остаётся открытым. `Any model by dump` уже отображён в P10.

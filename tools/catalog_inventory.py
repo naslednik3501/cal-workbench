@@ -27,6 +27,9 @@ CATALOG = ROOT / "catalog.js"
 CATALOG_PARTS = ROOT / "catalog-data"
 ORGANIZATION = ROOT / "catalog-organization.js"
 ORGANIZATION_AIRBAG = ROOT / "catalog-organization-airbag.js"
+ORGANIZATION_DASHBOARD = ROOT / "catalog-organization-dashboard.js"
+ORGANIZATION_IMMO = ROOT / "catalog-organization-immo.js"
+ORGANIZATION_RADIO = ROOT / "catalog-organization-radio.js"
 SCOPE = ROOT / "scope-registry.json"
 OUT_JSON = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.json"
 OUT_MD = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.md"
@@ -43,7 +46,13 @@ def load_catalog():
 
 def load_mapped():
     mapped = set()
-    for source in (ORGANIZATION, ORGANIZATION_AIRBAG):
+    for source in (
+        ORGANIZATION,
+        ORGANIZATION_AIRBAG,
+        ORGANIZATION_DASHBOARD,
+        ORGANIZATION_IMMO,
+        ORGANIZATION_RADIO,
+    ):
         text = source.read_text(encoding="utf-8")
         mapped.update(re.findall(r"['\"]([0-9a-f]{64})['\"]\s*:", text))
     return mapped
@@ -995,8 +1004,8 @@ def build_report():
     scope, scope_excluded = load_scope()
     all_cal = [e for e in catalog["entries"] if e["ext"] == "cal"]
     active = [e for e in all_cal if e["sha"] not in scope_excluded and e["sha"] not in mapped]
-    if len(mapped) != 5392:
-        raise SystemExit(f"Expected 5392 approved CALs, got {len(mapped)}")
+    if len(mapped) != 12211:
+        raise SystemExit(f"Expected 12211 mapped CALs, got {len(mapped)}")
     if sha_set(active) & mapped:
         raise SystemExit("Approved CAL leaked into the inventory")
 
@@ -1055,8 +1064,12 @@ def build_report():
                 "catalog.js",
                 "scope-registry.json",
                 "catalog-organization.js",
+                "catalog-organization-airbag.js",
+                "catalog-organization-dashboard.js",
+                "catalog-organization-immo.js",
+                "catalog-organization-radio.js",
             ],
-            "approved_map": "reports/catalog-organization-root-airbag.md",
+            "approved_map": "reports/catalog-organization-{root-airbag,airbag-srs,dashboard,immo,radio}*",
             "path_rules": [
                 "CAL прямо в разделе: Calculators/<раздел>/<файл>.cal",
                 "Марка: второй уровень, кроме буквенных папок Car и папок-категорий (Car, Bikes, ATV, China и т.п.)",
@@ -1212,7 +1225,7 @@ def render_markdown(report):
         "- Совпадение имён при разных SHA — разные сборки; байтовое слияние для них запрещено.",
         "- `Asia` и `EU_US_RU` требуют сверки версий, а не механического объединения.",
         "- Содержимое CAL не даёт читаемых названий; уточнение марок для `CHINA 24C08`,",
-        "  `ECU 95080`, `EDC16` и `Any model by dump` остаётся открытым.",
+        "  `ECU 95080` и `EDC16` остаётся открытым. `Any model by dump` уже отображён в P10.",
         "",
     ]
     return "\n".join(lines)

@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 90549,
-      "sha256": "f481e76bd0072263d3aee0f0c3325aaf3f8f3ef718b029a713446e5eedeee88f"
+      "bytes": 90749,
+      "sha256": "a3d681df9ac080df0f79c96cdb01e5799382b7b2ecf9eafd565e9696c7df37db"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1513,13 +1513,13 @@
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.json",
-      "bytes": 338633,
-      "sha256": "d54aa398f25f48404168cf4a894a1bd1f3cbdb492eb069b6743bd007aec804c5"
+      "bytes": 141268,
+      "sha256": "d7709c85589bc1773a04aa5f83a5e1f6053cbfe6d8d5db3590962d582cbc6c95"
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.md",
-      "bytes": 19205,
-      "sha256": "06536f5f9da99143fa80411f0a30f067a2660a447cf736fe997b0095b26847da"
+      "bytes": 14575,
+      "sha256": "4b7f0cd08d64c3f45b1bf8f0c21b8c2948c66b1a5f5c22e4b89b8cb739b1f6be"
     },
     {
       "path": "reports/catalog-organization-airbag-srs-2026-11-04.md",
@@ -1983,8 +1983,8 @@
     },
     {
       "path": "tools/catalog_inventory.py",
-      "bytes": 56231,
-      "sha256": "022c60671a7e0f944a56e93219355030b6c6d1482169f1c661c78d702e13b864"
+      "bytes": 56792,
+      "sha256": "8ec51e954653912fa02b47af2c2c5436b4a141583e5b07bbbb2aa1d55740e735"
     },
     {
       "path": "tools/package_release.py",
