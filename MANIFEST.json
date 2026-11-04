@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 58605,
-      "sha256": "67f8bdf1859e0dbc630b3e435c02f9addd338c68e2fdf1408b46028cc1db0b33"
+      "bytes": 61732,
+      "sha256": "eda35fc81854a8cae21b47abd13b55d9026666f8d23fc241c9a62cfa6c93f419"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -340,6 +340,11 @@
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
+    },
+    {
+      "path": "image-assets.json",
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1292,11 +1297,6 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
-      "path": "image-assets.json",
-      "bytes": 16533,
-      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
-    },
-    {
       "path": "image-resource-data.js",
       "bytes": 113446,
       "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
@@ -1355,6 +1355,26 @@
       "path": "reports/T-006-text-recovery-2026-11-04.md",
       "bytes": 17240,
       "sha256": "0f014a8ed122506a05fb082670aac426ea02d6d7424e7c1c2666a034613f466a"
+    },
+    {
+      "path": "reports/T-007-byte-evidence-2026-11-04.json",
+      "bytes": 16481,
+      "sha256": "37363ac79e8fb0ca2fdd9dbf35f90b3b97c655b7134ccfaf8512cd858d3ee83c"
+    },
+    {
+      "path": "reports/T-007-format-register-2026-11-04.json",
+      "bytes": 16983,
+      "sha256": "f09cdaea3c1206e57041e207ebe942dca6134046ecba83c4b5b4f0e853d5b4bc"
+    },
+    {
+      "path": "reports/T-007-native-evidence-2026-11-04.json",
+      "bytes": 4244,
+      "sha256": "7b745d639e4b51103bc9dd0a33f4c186bac467936a9946bfe47cfcdf437b0d0c"
+    },
+    {
+      "path": "reports/T-007-other-formats-2026-11-04.md",
+      "bytes": 12275,
+      "sha256": "3e8adc450c711c76a3999149754cd7a6f9ce1f21d2bac983cb59b9fddedb9ea0"
     },
     {
       "path": "reports/T-008-pair-differences-2026-11-04.json",
@@ -1732,6 +1752,11 @@
       "sha256": "a9e44de90c0363b2b8dff5f2502ea409c9e1725682f0ee3d7b4b914940285ff0"
     },
     {
+      "path": "tests/test_t007_formats.js",
+      "bytes": 1707,
+      "sha256": "a060442320d5e247e63aa56bc7661340d2f39a076fe4a6a4877a4518b8ce0d10"
+    },
+    {
       "path": "tests/test_t008_pairs.js",
       "bytes": 3698,
       "sha256": "308ecd8f9c61e8e4744bc950d512eb4cbbc080d3c4ef6923f030cc73f2eb9d8e"
@@ -1800,6 +1825,16 @@
       "path": "tools/analyze_t003_random.py",
       "bytes": 1328,
       "sha256": "724875c02f74e3facde506feaee379e1687627e8eb4d204eabc023f1a2dbc692"
+    },
+    {
+      "path": "tools/analyze_t007_formats.js",
+      "bytes": 4051,
+      "sha256": "2b5811351c9c45cef6f341c686ba4e98ab57b6ba11ec6ea45d47c0b157f94f5e"
+    },
+    {
+      "path": "tools/analyze_t007_native.py",
+      "bytes": 2637,
+      "sha256": "21159e7349f6fc7e1b334df26e894514bdeba26185067f6b3a74b8689393d1be"
     },
     {
       "path": "tools/analyze_t008_pairs.js",
@@ -1896,7 +1931,20 @@
     "original_iprog_execution": "not compared",
     "chromium_release_scenarios": "passed on Linux",
     "real_browser_storage": "tested in Chromium",
-    "windows": "not tested"
+    "windows": "not tested",
+    "T-007": {
+      "targets": 12,
+      "fully_restored": 0,
+      "partially_restored": 0,
+      "excluded": 0,
+      "blocked": 12,
+      "payload_wrapper_probes": 32,
+      "launcher_wrapper_probes": 2,
+      "original_executables_run": 0,
+      "native_pe_static_metadata": 2,
+      "runtime_changes": false,
+      "calculator_execution_tests": "none restored; no execution claim"
+    }
   },
   "personal_bin_fixtures_included": false
 }

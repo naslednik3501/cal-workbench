@@ -1,0 +1,119 @@
+{
+  "scope": "Static PE metadata and named method addresses only, not a recovered algorithm or execution test",
+  "files": [
+    {
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "machine": 332,
+      "entryRva": 4096,
+      "entryBytes": "b85ce145005064ff35000000006489250000000033c089084d414e455820536f",
+      "versionStrings": {
+        "CompanyName": "MANEX",
+        "FileDescription": "",
+        "FileVersion": "2.6.0.0",
+        "InternalName": "VDO Crypto",
+        "LegalCopyright": "MANEX",
+        "LegalTrademarks": "MANEX",
+        "OriginalFilename": "",
+        "ProductName": "Audi VDO Crypto calculator",
+        "ProductVersion": "2.5.0.0",
+        "Comments": ""
+      },
+      "resources": [
+        {
+          "name": "DVCLAL",
+          "bytes": 0,
+          "prefix": "",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "PACKAGEINFO",
+          "bytes": 0,
+          "prefix": "",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "TFORM1",
+          "bytes": 0,
+          "prefix": "",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "machine": 332,
+      "entryRva": 335808,
+      "entryBytes": "558bec83c4f4b8681e4500e89042fbffa1143e45008b00e8dc16ffffa1143e45",
+      "versionStrings": {
+        "CompanyName": "MANEX",
+        "FileDescription": "",
+        "FileVersion": "2.6.0.0",
+        "InternalName": "VDO Crypto",
+        "LegalCopyright": "MANEX",
+        "LegalTrademarks": "MANEX",
+        "OriginalFilename": "",
+        "ProductName": "Audi VDO Crypto calculator",
+        "ProductVersion": "2.5.0.0",
+        "Comments": ""
+      },
+      "resources": [
+        {
+          "name": "DVCLAL",
+          "bytes": 16,
+          "prefix": "263d4f38c28237b8f3244203179b3a83",
+          "sha256": "88d14cc6638af8a0836f6d868dfab60df92907a2d7becaefbbd7e007acb75610"
+        },
+        {
+          "name": "PACKAGEINFO",
+          "bytes": 444,
+          "prefix": "010000cc000000002a00000001e74175",
+          "sha256": "5e3bec77bfd31f74c71681023a52178d85f06fa14093f8b6d870dc070cd6bcb9"
+        },
+        {
+          "name": "TFORM1",
+          "bytes": 13454,
+          "prefix": "545046300654466f726d3105466f726d",
+          "sha256": "cd8e7d62fd90e254d66b11067449b53e092379d19b9bb807979a83d6ce81c3f9"
+        }
+      ],
+      "methods": [
+        {
+          "name": "Make_Decrypt",
+          "va": "0x44f454",
+          "tableFileOffset": "0x4dd4e"
+        },
+        {
+          "name": "Open_encrypted_buttonClick",
+          "va": "0x451a28",
+          "tableFileOffset": "0x4df48"
+        },
+        {
+          "name": "Open_decrypted_buttonClick",
+          "va": "0x451a4c",
+          "tableFileOffset": "0x4dfab"
+        },
+        {
+          "name": "Save_encrypted_buttonClick",
+          "va": "0x451a34",
+          "tableFileOffset": "0x4df69"
+        },
+        {
+          "name": "Save_decrypted_buttonClick",
+          "va": "0x451a40",
+          "tableFileOffset": "0x4df8a"
+        },
+        {
+          "name": "Set_KM_buttonClick",
+          "va": "0x451a58",
+          "tableFileOffset": "0x4dfcc"
+        }
+      ],
+      "decryptionEntryProof": {
+        "va": "0x44f454",
+        "fileOffset": "0x4f454",
+        "firstBytes": "558bec33c951515151515356578945fc33c055687df5440064ff30648920668b15ec6145008b45fce83ffeffff8bd066b8ff03662b05506645006633d08b45fce827feffff8bd88d4df00fb7c3ba03000000e8218bfbff8b4df08d45f4ba94f54400e82d48fbff8b55f48b45fc8b80dc020000e81467fdff66bb0100beec594500bfec51450066b80004662bc3668945fa8d55ec8b45fc8b80dc020000e8ba66fdff8b45ece84a8bfbff50668b55fa8b45fce8b5fdffff8bd0586633c28bd34a668955f86689060fb7c0668b0445ec494500663345f86633054e6645006689074383c70283c6026681fb010475988b45fce84e0000008b45fc8b8074030000b2",
+        "operations": "Static code references 16-bit transformation 0x44f2c0, 1024-word loop, XOR and lookup table 0x4549ec; further GUI/file routines not ported."
+      }
+    }
+  ]
+}
