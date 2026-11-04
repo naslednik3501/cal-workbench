@@ -211,3 +211,12 @@ BIN ни для одного из 12 CAL не проверялась; брауз
 исходные ZIP, `catalog.js`, `catalog-parts.json`, `image-resources` и CAL-файлы не
 изменялись. Отчёты аудита изображений и остатка T-010 продолжают использовать
 исходные пути и потому не требуют пересборки.
+
+Публикация: ветка запушена (`784ee71`). PR не создан, точная преграда — в среде нет
+`gh`, переменные `GH_TOKEN` и `GITHUB_TOKEN` не заданы, GitHub API на создание PR
+отвечает 401 «Requires authentication»; push работает через `osxkeychain`, но
+извлекать оттуда токен запрещено. Ссылка для ручного PR:
+https://github.com/naslednik3501/cal-workbench/compare/main...task/T-016-cline-deepseek-catalog-roots?expand=1.
+Merge в main и обновление Pages поэтому не выполнялись. Локально собранный `dist`
+проверен: `index.html` и все `script src` отдают 200, карта загружается; текущий
+Pages отдаёт прежнюю сборку (200, `catalog-organization.js` — 404).
