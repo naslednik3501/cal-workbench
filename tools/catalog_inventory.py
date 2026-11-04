@@ -30,6 +30,7 @@ ORGANIZATION_AIRBAG = ROOT / "catalog-organization-airbag.js"
 ORGANIZATION_DASHBOARD = ROOT / "catalog-organization-dashboard.js"
 ORGANIZATION_IMMO = ROOT / "catalog-organization-immo.js"
 ORGANIZATION_RADIO = ROOT / "catalog-organization-radio.js"
+ORGANIZATION_UTILITIES = ROOT / "catalog-organization-utilities.js"
 SCOPE = ROOT / "scope-registry.json"
 OUT_JSON = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.json"
 OUT_MD = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.md"
@@ -52,6 +53,7 @@ def load_mapped():
         ORGANIZATION_DASHBOARD,
         ORGANIZATION_IMMO,
         ORGANIZATION_RADIO,
+        ORGANIZATION_UTILITIES,
     ):
         text = source.read_text(encoding="utf-8")
         mapped.update(re.findall(r"['\"]([0-9a-f]{64})['\"]\s*:", text))
@@ -1004,8 +1006,8 @@ def build_report():
     scope, scope_excluded = load_scope()
     all_cal = [e for e in catalog["entries"] if e["ext"] == "cal"]
     active = [e for e in all_cal if e["sha"] not in scope_excluded and e["sha"] not in mapped]
-    if len(mapped) != 12211:
-        raise SystemExit(f"Expected 12211 mapped CALs, got {len(mapped)}")
+    if len(mapped) != 12428:
+        raise SystemExit(f"Expected 12428 mapped CALs, got {len(mapped)}")
     if sha_set(active) & mapped:
         raise SystemExit("Approved CAL leaked into the inventory")
 
@@ -1068,8 +1070,9 @@ def build_report():
                 "catalog-organization-dashboard.js",
                 "catalog-organization-immo.js",
                 "catalog-organization-radio.js",
+                "catalog-organization-utilities.js",
             ],
-            "approved_map": "reports/catalog-organization-{root-airbag,airbag-srs,dashboard,immo,radio}*",
+            "approved_map": "reports/catalog-organization-{root-airbag,airbag-srs,dashboard,immo,radio,utilities}*",
             "path_rules": [
                 "CAL прямо в разделе: Calculators/<раздел>/<файл>.cal",
                 "Марка: второй уровень, кроме буквенных папок Car и папок-категорий (Car, Bikes, ATV, China и т.п.)",
@@ -1078,8 +1081,9 @@ def build_report():
             ],
             "content_policy": (
                 "Содержимое CAL открывалось только для неоднозначных записей (EDC16, ECU 95080, CHINA 24C08, "
-                "Any model by dump, CITROEN PEUGEOUT, dash_crc_vin). Полезная нагрузка — hex-код без читаемого "
-                "заголовка, поэтому решения опираются на пути, имена и совпадения SHA."
+                "Any model by dump, CITROEN PEUGEOUT, dash_crc_vin, Help.cal). Полезная нагрузка — hex-код "
+                "без читаемого заголовка, поэтому решения опираются на пути, имена и совпадения SHA; "
+                "неподтверждённый Help.cal оставлен в «Неуточнённые»."
             ),
             "confidence": {
                 "high": "Однозначная опечатка/регистр/кодировка либо побайтовое совпадение подтверждено SHA.",
@@ -1132,9 +1136,9 @@ def render_markdown(report):
         "",
         "## Метод",
         "",
-        "- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`, `catalog-organization-airbag.js`.",
-        "- 5 392 CAL с утверждённой картой отображения исключены по SHA (12 из первого этапа,",
-        "  5 380 новых записей Airbag/SRS); это 5 383 уникальных SHA Airbag/SRS плюс 9 корневых CAL.",
+        "- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`, `catalog-organization-airbag.js`, `catalog-organization-{dashboard,immo,radio,utilities}.js`.",
+        "- 12 428 CAL с утверждённой картой отображения исключены по SHA, включая 217 утилит",
+        "  (CRC, PIN/IMMO, сервисные функции, синхронизация, тахографы, конвертеры US-EU).",
         "- CAL читались только для неоднозначных записей; полезная нагрузка — hex-код без",
         "  читаемого заголовка, поэтому основание — путь, имя и совпадения SHA.",
         "- Большие группы в Markdown не дублируются: полные пути и статистика по папкам — в JSON.",
@@ -1225,7 +1229,8 @@ def render_markdown(report):
         "- Совпадение имён при разных SHA — разные сборки; байтовое слияние для них запрещено.",
         "- `Asia` и `EU_US_RU` требуют сверки версий, а не механического объединения.",
         "- Содержимое CAL не даёт читаемых названий; уточнение марок для `CHINA 24C08`,",
-        "  `ECU 95080` и `EDC16` остаётся открытым. `Any model by dump` уже отображён в P10.",
+        "  `ECU 95080` и `EDC16` остаётся открытым. `Any model by dump` уже отображён",
+        "  в разделе магнитол, `Help.cal` — в `Утилиты/Неуточнённые`.",
         "",
     ]
     return "\n".join(lines)

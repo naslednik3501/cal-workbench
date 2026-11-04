@@ -1,0 +1,4457 @@
+{
+  "date": "2026-11-04",
+  "section": "Утилиты",
+  "source_report": "reports/catalog-organization-utilities-2026-11-04.md",
+  "generated_file": "catalog-organization-utilities.js",
+  "inputs": [
+    "catalog.js",
+    "catalog-data/*.js",
+    "engine.js"
+  ],
+  "purpose": "CRC, PIN/IMMO, сервисные функции, синхронизация, тахографы и конвертеры US-EU.",
+  "scope": [
+    "Calculators/CRC/**/*.cal",
+    "Calculators/PIN/**/*.cal",
+    "Calculators/Service/**/*.cal",
+    "Calculators/Service calc/**/*.cal",
+    "Calculators/Synchronization/**/*.cal",
+    "Calculators/Tachograf off/**/*.cal",
+    "Calculators/US-Euro converter/**/*.cal",
+    "Calculators/USA-Euro converter/**/*.cal",
+    "Calculators/OTHER/**/*.cal"
+  ],
+  "totals": {
+    "paths": 404,
+    "unique_sha": 218,
+    "generated_entries": 217,
+    "approved_unchanged": 1,
+    "ambiguous": 1,
+    "car_only_selected": 0,
+    "collision_groups": 52,
+    "source_groups": 0,
+    "version_groups": 52
+  },
+  "source_paths": {
+    "Tachograf off": 4,
+    "CRC": 1,
+    "USA-Euro converter": 41,
+    "PIN": 54,
+    "Synchronization": 11,
+    "US-Euro converter": 55,
+    "OTHER": 177,
+    "Service calc": 52,
+    "Service": 9
+  },
+  "car_only_selected_paths": [],
+  "approved_unchanged": [
+    {
+      "sha": "4d299384cfd5cec8bed185135b1bd1acd84dfa0460211212561171ea1b0a2159",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW 9S12 (ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW 9S12 (ASSYSTPLUS).cal"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "sha": "01fa7b6a6d63a78d3327f5bbfd1b7e0c20505497b636e2d581e2eace8d1102a6",
+      "name": "Acura MDX 93C76 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Honda/Acura MDX 93C76+service.cal",
+      "paths": [
+        "Calculators/Service/Honda/Acura MDX 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "04d9a0d0267471e1cc06224e6197e5dc6564dbdd0a3762ce2e5cf0f6b955dea3",
+      "name": "Citroen BSI Berlingo 95128 PIN — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Citroen/Berlingo/BSI Berlingo 95128 PIN.cal",
+      "paths": [
+        "Calculators/PIN/Citroen/Berlingo/BSI Berlingo 95128 PIN.cal",
+        "Calculators/OTHER/PIN/Citroen/Berlingo/BSI Berlingo 95128 PIN.cal"
+      ]
+    },
+    {
+      "sha": "04e8dd21004903b353f2c608086714d7f672fa466d98a18bcc8e63cb17c8d813",
+      "name": "Lexus GS300 US-EU Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/GS300 US-EU Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/GS300 US-EU Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/GS300 US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "05acf602ac4a0b6a095b81363e34b49a0859fa9051b02b53955e04f027297dec",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 93c86 var2 M — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal",
+        "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal"
+      ]
+    },
+    {
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "name": "Opel Immobox Vectra A 05 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+        "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal"
+      ]
+    },
+    {
+      "sha": "07d5888e025574f083542fc98640007891c8c5873ff4cf18e8e4c38a48556169",
+      "name": "Fiat Doblo 93c66 BCU PIN — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Fiat/Doblo/Doblo  93c66  BCU PIN.cal",
+      "paths": [
+        "Calculators/PIN/Fiat/Doblo/Doblo  93c66  BCU PIN.cal",
+        "Calculators/OTHER/PIN/Fiat/Doblo/Doblo  93c66  BCU PIN.cal"
+      ]
+    },
+    {
+      "sha": "0934abc9f784fe4473ef344ea21b338bec0966f783efaba2b4a10386cc8e030e",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V2 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal",
+        "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal"
+      ]
+    },
+    {
+      "sha": "0d72e680037caf104bf3ba11e138be8af3dd29f35dfd22c4039b65486261e47d",
+      "name": "Mercedes CGW HC912 ASSYSTPLUS — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal"
+      ]
+    },
+    {
+      "sha": "0e406f2fe5ec0d8c8b3cf51797cdf5002db270e137e4b4a6beba0c1a8c6e3706",
+      "name": "Mazda CX-7 Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Mazda/Mazda CX-7 Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Mazda/Mazda CX-7 Dash.cal"
+      ]
+    },
+    {
+      "sha": "0e99b282268086ae4759a50e92075efc0025feb7a43ddad2e9b40fcda9e7054b",
+      "name": "Toyota Camry 30 Dash 83800-06653 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal"
+      ]
+    },
+    {
+      "sha": "0fbe3d4bf4bf150106550f98a23936f2fcfb54e4ca8b210782f2f8c31ccb3367",
+      "name": "Corsa VDO PIN 35080 new — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Corsa D/Corsa VDO PIN 35080 new.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Corsa D/Corsa VDO PIN 35080 new.cal",
+        "Calculators/OTHER/PIN/Opel/Corsa D/Corsa VDO PIN 35080 new.cal"
+      ]
+    },
+    {
+      "sha": "12256d131da3eababf7c22d9e3e5df00d3220c4403dc12c9abfe647b2423462e",
+      "name": "Ford Focus TDCI PCM — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Focus/Focus TDCI PCM.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Focus/Focus TDCI PCM.cal"
+      ]
+    },
+    {
+      "sha": "166071bb6a1525f9e7b860e5704974dd08e58007a1d976656fddd400a91edef2",
+      "name": "Lexus is350 dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/is350_dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/is350_dash.cal",
+        "Calculators/US-Euro converter/Lexus/is350_dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/is350_dash.cal"
+      ]
+    },
+    {
+      "sha": "17713b8e261981e113b94476a5f132b081e0df189bf088d89298ddc222dec3b1",
+      "name": "Toyota Camry 40 Body — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Body.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Body.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 40 Body.cal"
+      ]
+    },
+    {
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "name": "Mazda 3 Dash — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+      "paths": [
+        "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+        "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal"
+      ]
+    },
+    {
+      "sha": "18c301b5998ac70dac22c9c96e889e352e152a83a108e9384aa9f774372ceb0f",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal",
+      "paths": [
+        "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal"
+      ]
+    },
+    {
+      "sha": "1911391161a6cacc5b769129bd9dee915a58428e3988993106a54d32ae04778a",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256.cal"
+      ]
+    },
+    {
+      "sha": "1993eae6703fa8353f175e1522954517c55f30d08bea80d296bc8fa2feb6df16",
+      "name": "Corsa VDO PIN 35080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Corsa D/Corsa VDO PIN 35080.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Corsa D/Corsa VDO PIN 35080.cal",
+        "Calculators/OTHER/PIN/Opel/Corsa D/Corsa VDO PIN 35080.cal"
+      ]
+    },
+    {
+      "sha": "1b68d25e200e6ce3669b4d7ac6219f24b81c1c5433db0b6acbad255fd4845182",
+      "name": "Subaru Tribeca B9 93C56 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Tribeca B9 93C56.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Tribeca B9 93C56.cal",
+        "Calculators/US-Euro converter/Subaru/Tribeca B9 93C56.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Tribeca B9 93C56.cal"
+      ]
+    },
+    {
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "name": "Pin Chery ECU 95080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal"
+      ]
+    },
+    {
+      "sha": "1cd043b4d810d40ee41c506e2777a3c24935f253c575cd56b072b617f5caa3ae",
+      "name": "BMW ISN EWS4 9S12DG64 2L86D KM — ISN и коррекция пробега",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "ISN и коррекция пробега",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal",
+      "paths": [
+        "Calculators/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal",
+        "Calculators/OTHER/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal"
+      ]
+    },
+    {
+      "sha": "1d2b057f6281ea82fd1a1322e280aad4bd769ae0ca05bc57e646eaadeffc7faa",
+      "name": "Ford Connect ECU — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Connect/Connect ECU.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Connect/Connect ECU.cal"
+      ]
+    },
+    {
+      "sha": "1d5aba9fb8dd780d2872eea6af42d1a4d85d9fa9fbddb56e4e314aaf5c528e5d",
+      "name": "Mercedes-Benz ESP tire pressure 95080 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/ESP(tire pressure) 95080.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/ESP(tire pressure) 95080.cal",
+        "Calculators/OTHER/Service calc/Mercedes/ESP(tire pressure) 95080.cal"
+      ]
+    },
+    {
+      "sha": "1f0274f6fa432f80c839fa2b9eafa93aa09157f594c1cba9cc7af997a3bc9f41",
+      "name": "Renault Kangoo 93C66 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Renault/Kangoo 93C66 + service.cal",
+      "paths": [
+        "Calculators/Service/Renault/Kangoo 93C66 + service.cal"
+      ]
+    },
+    {
+      "sha": "211c9834d03042f59db1138bfbabde838157ee8d44d77f4335c65ed6070a24f6",
+      "name": "Mercedes-Benz Sprinter W609 95640 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal",
+        "Calculators/OTHER/Service calc/Mercedes/Sprinter W609 95640 Service.cal"
+      ]
+    },
+    {
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "name": "Ford Connect Dash — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal"
+      ]
+    },
+    {
+      "sha": "221a191115f3b2c2b0d4e8c958cf20aec08afbabac0e23995ef67462926e3d0e",
+      "name": "Ford Fusion TDCI ECU 93c56 — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c56.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c56.cal"
+      ]
+    },
+    {
+      "sha": "22f811c7a13aa0a7312908f2ee59d20d5e8ad1207f1bda6c388c86d9c1d76a72",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 24c16 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal",
+        "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal"
+      ]
+    },
+    {
+      "sha": "23530534bc9c695ce979e7bd838e99441447aff8fcad3285105dbce366e81e77",
+      "name": "Mercedes-Benz V W639 MM 95080 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/V W639 MM 95080 service.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/V W639 MM 95080 service.cal",
+        "Calculators/OTHER/Service calc/Mercedes/V W639 MM 95080 service.cal"
+      ]
+    },
+    {
+      "sha": "2378ba0966046998739760999ffc9f3e72ddef1849f2294702b6d3c8c730b54b",
+      "name": "Toyota Avalon Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Avalon/Avalon  Dash.cal"
+      ]
+    },
+    {
+      "sha": "237ac5c24de39cdd0f274adc1bc44404fbfcc059f084abafb131973ba538d338",
+      "name": "Honda Ridgeline 9S12H256 V3 ml — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal",
+        "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal"
+      ]
+    },
+    {
+      "sha": "23ac9810fb2e62a216d9b1eca4e702e5c642b9d891682b5a41964bbffddfb33a",
+      "name": "Mercedes-Benz ML W164 Conversion+Russian menu 24C16 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal"
+      ]
+    },
+    {
+      "sha": "23d0262c1e181a9f28e8eadad2cc2f1886c8b6d0d22de692be79966e1194bf9b",
+      "name": "Audi A6 EDC15 LOGIN 24C04 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Audi/Audi A6  EDC15  LOGIN  24C04.cal",
+      "paths": [
+        "Calculators/PIN/Audi/Audi A6  EDC15  LOGIN  24C04.cal",
+        "Calculators/OTHER/PIN/Audi/Audi A6  EDC15  LOGIN  24C04.cal"
+      ]
+    },
+    {
+      "sha": "23f10bc50f8c943e7d6f064ff080948de2b8c869f2d7463256e3285eef1a8ff7",
+      "name": "Opel Astra J BCU PIN immo 25160 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal",
+        "Calculators/OTHER/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal"
+      ]
+    },
+    {
+      "sha": "290b3559b8d07bc001f7f883d0d18ce66fe12e32ab12805130b39766f4a35d80",
+      "name": "Mazda CX-7 Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Mazda/Mazda CX-7 Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Mazda/Mazda CX-7 Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Mazda/Mazda CX-7 Dash.cal"
+      ]
+    },
+    {
+      "sha": "29a8ee2a30e217665349f89baeddfc9be7c8654f2ce7d5c1e5cbef97ad486666",
+      "name": "Mercedes-Benz E W211 CGW HC912DG128 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 CGW HC912DG128.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 CGW HC912DG128.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 CGW HC912DG128.cal"
+      ]
+    },
+    {
+      "sha": "2c1c934e53b32f7cf4d054be2f9ea5663a0b1d5934e36752f2bd5a49d3c871ab",
+      "name": "Nissan 93C66 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Nissan/Nissan 93C66.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Nissan/Nissan 93C66.cal",
+        "Calculators/OTHER/US-Euro converter/Nissan/Nissan 93C66.cal"
+      ]
+    },
+    {
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "name": "Ford Focus TDCI Dash — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal"
+      ]
+    },
+    {
+      "sha": "2ef69a8a24ac1ed593f5a5c4d9579df55b6a9f41e59bede7e5fa579b285f235b",
+      "name": "Lexus RX350 93C66 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal"
+      ]
+    },
+    {
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "name": "Passat Dash VDO 93c66 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+      "paths": [
+        "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+        "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal"
+      ]
+    },
+    {
+      "sha": "31ce967ff091cb0c668a5ee842090f2bae06249eb8d0c7145ee40a4e6c3bf41a",
+      "name": "Mercedes-Benz E W211 AB 68HC912DG128 — сброс Crash (SRS)",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сброс Crash (SRS)",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211  AB 68HC912DG128.cal"
+      ]
+    },
+    {
+      "sha": "326fb69b78dc05d3c84e5743a420ebac661012783ba6e10b3f18525e0e1ac788",
+      "name": "Honda CR-V 93C76 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Honda/CR-V 93C76+service.cal",
+      "paths": [
+        "Calculators/Service/Honda/CR-V 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "35b24e92d0a6d3e2c013ca4754dcb00fdec95a315a1d5b7ee6b14ea4966d4c40",
+      "name": "Honda Accord 93C76 var1 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Accord 93C76 var1 + service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Accord 93C76 var1 + service.cal",
+        "Calculators/OTHER/Service calc/Honda/Accord 93C76 var1 + service.cal"
+      ]
+    },
+    {
+      "sha": "3606461dc4646032f072886981e97939b3b9905f237b56dd54405727ce23a379",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal",
+      "paths": [
+        "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal"
+      ]
+    },
+    {
+      "sha": "36840b2e3ee626c428ab691986c9409fed8da0996d7f2f65fa34f72462edb416",
+      "name": "Kia IMMO ECU ME17.9.11 TC1762 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Kia/ME17.9.11/Kia  IMMO ECU ME17.9.11  TC1762 .cal",
+      "paths": [
+        "Calculators/PIN/Kia/ME17.9.11/Kia  IMMO ECU ME17.9.11  TC1762 .cal",
+        "Calculators/OTHER/PIN/Kia/ME17.9.11/Kia  IMMO ECU ME17.9.11  TC1762 .cal"
+      ]
+    },
+    {
+      "sha": "37971d6d4c8b3964c079facc438e4f5f3f719e022af1585ce63c3c5d3140a2db",
+      "name": "Ford Connect PCM — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Connect/Connect PCM.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Connect/Connect PCM.cal"
+      ]
+    },
+    {
+      "sha": "3852712f3d9ab13817c276a4578147ad499fb4c90fef2b1cb6ed55acb56be869",
+      "name": "Lexus is250 body — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/is250_body.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/is250_body.cal",
+        "Calculators/US-Euro converter/Lexus/is250_body.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/is250_body.cal"
+      ]
+    },
+    {
+      "sha": "395f195bd6473c7c7643f5470efae0d219a6ae6de6117273376ce51fb81229b5",
+      "name": "Ford Focus TDCI ECU — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Focus/Focus TDCI ECU.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Focus/Focus TDCI ECU.cal"
+      ]
+    },
+    {
+      "sha": "3b16a0893c8debef071fb40df0da4bc129adb0b74f2a6ed438ddb207a570bbb9",
+      "name": "Mercedes-Benz W169 CGW ASSYSTPLUS — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal"
+      ]
+    },
+    {
+      "sha": "3c45e619d29bd5672f7a8849a1aca86bf018ad6b049d8813408bcf72601cee2d",
+      "name": "Renault Kangoo 93C66 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Renault/Kangoo 93C66 + service.cal",
+      "paths": [
+        "Calculators/Service calc/Renault/Kangoo 93C66 + service.cal",
+        "Calculators/OTHER/Service calc/Renault/Kangoo 93C66 + service.cal"
+      ]
+    },
+    {
+      "sha": "3e148f42e7ba776189f706df342c4bfa390ed3babd27e71dbd80133e54d97fec",
+      "name": "Mercedes-Benz W164 Rear SAM V3 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/W164 Rear SAM V3.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/W164 Rear SAM V3.cal",
+        "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V3.cal"
+      ]
+    },
+    {
+      "sha": "3f85d2768cdf6ad1a522b4b8ca0dd8d4a214611a5bafa2d8cf96fc8096e437ab",
+      "name": "Mercedes-Benz W-220 HC08 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mercedes/W-220 HC08/W-220  HC08.cal",
+      "paths": [
+        "Calculators/PIN/Mercedes/W-220 HC08/W-220  HC08.cal",
+        "Calculators/OTHER/PIN/Mercedes/W-220 HC08/W-220  HC08.cal"
+      ]
+    },
+    {
+      "sha": "3fce856addf2cc0b458eeeb14c0d50f2f8eafd0f293c701eaa89bd9eb37a3211",
+      "name": "Nissan Armada 9S12H256 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Nissan/Armada 9S12H256.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Nissan/Armada 9S12H256.cal",
+        "Calculators/US-Euro converter/Nissan/Armada 9S12H256.cal",
+        "Calculators/OTHER/US-Euro converter/Nissan/Armada 9S12H256.cal"
+      ]
+    },
+    {
+      "sha": "4085af84e6876c16cbcc4dbaa56515bdf58d22882120a498ab6e607baf9b1134",
+      "name": "Ford Connect PCM — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Connect/Connect PCM.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Connect/Connect PCM.cal"
+      ]
+    },
+    {
+      "sha": "4124e2057d85ed953c6d8163160b2ffd79e0e654149c4f8b162190dde3fced22",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 93c86 var1 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal",
+        "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal"
+      ]
+    },
+    {
+      "sha": "4129b6124aabb5e96bd3bdab59a7735bbec1b07fd8d73e1a7566df22f5fa4922",
+      "name": "Mercedes-Benz ESP tire pressure 95080 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal",
+      "paths": [
+        "Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal"
+      ]
+    },
+    {
+      "sha": "41f4b57432a60aec26cc736de0cae27835acf4b9df9571c97586d014d0663a71",
+      "name": "Mercedes-Benz E W211 AB MC9S12DG128 — сброс Crash (SRS)",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сброс Crash (SRS)",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal"
+      ]
+    },
+    {
+      "sha": "42b9115f20c47e601bde2e57e8b0b28005d9d008b01db75d0cd2ce21564e6723",
+      "name": "IMMO ECU Ford Ranger 95320 — PIN и данные IMMO · вариант 2",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal",
+        "Calculators/OTHER/PIN/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal"
+      ]
+    },
+    {
+      "sha": "45bf018b99644d54462fe34d062176d8e11bec6652eebb5ae5d1397cf7c3aa50",
+      "name": "Toyota camry dash 93c46 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/camry_dash_93c46.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/camry_dash_93c46.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/camry_dash_93c46.cal"
+      ]
+    },
+    {
+      "sha": "47aa1eb1b2dfbf8330dbb1c3d383dc7d0b43d5631bdfc6c36166bdfa3ed44c32",
+      "name": "Lexus RX350 US-EU Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/RX350 US-EU Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/RX350 US-EU Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX350 US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "493192cab6891d45ea64e87ea3aab53e5aab0c522c84d328e123dc01d098e0f9",
+      "name": "Subaru Outback V1 Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Outback V1 Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Outback V1 Dash.cal"
+      ]
+    },
+    {
+      "sha": "4ae1f1289ec260fe63304aff67d52c54250fb022ca628bf55342419a9b5a7051",
+      "name": "IMMO ECU Ford Ranger 95320 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal",
+        "Calculators/OTHER/PIN/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal"
+      ]
+    },
+    {
+      "sha": "4af9a2bb47d51f0c02f9e72888569366350d3510d752d36eae556ec6710092f6",
+      "name": "Acura RDX US-EU dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Acura/Acura RDX US-EU dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Acura/Acura RDX US-EU dash.cal",
+        "Calculators/US-Euro converter/Acura/Acura RDX US-EU dash.cal",
+        "Calculators/OTHER/US-Euro converter/Acura/Acura RDX US-EU dash.cal"
+      ]
+    },
+    {
+      "sha": "4ba530fb71ca83cba3e176572be52a6eb36fc6ffe1689597823ad1ce43663deb",
+      "name": "Citroen Jumper 93c56 Immobox PIN — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal",
+      "paths": [
+        "Calculators/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal",
+        "Calculators/OTHER/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal"
+      ]
+    },
+    {
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "name": "Opel IMMO-2 TMS 370 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+        "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal"
+      ]
+    },
+    {
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "name": "Citroen ECU Berlingo Bosch ME7.4.5 95320 PIN — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+      "paths": [
+        "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+        "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal"
+      ]
+    },
+    {
+      "sha": "5275adb3254b2880c76ae73026a2e618fd6a8343b9e4b5687cdca1c68d8c4ea5",
+      "name": "Lexus RX 350 body — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX 350_body.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX 350_body.cal"
+      ]
+    },
+    {
+      "sha": "52d7f024acefc9813d0375c4f958dacf285f57b3b80dc6265c0ea11b12f59719",
+      "name": "Subaru Forester 2002-03 Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Forester 2002-03 Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Forester 2002-03 Dash.cal"
+      ]
+    },
+    {
+      "sha": "536f5b44285e1b581f456526175015fbd98bc495d8e117118990991c6c1cd5a0",
+      "name": "Subaru Tribeka FULL 93C66 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Tribeka FULL 93C66.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Tribeka FULL 93C66.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Tribeka FULL 93C66.cal"
+      ]
+    },
+    {
+      "sha": "53a6647d4adb7bb4f0905fd6572d2cecb6a43b3cc8ff4bc2dfb3970945bdab97",
+      "name": "Mazda 3 ECU 93c56 — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Mazda/Mazda 3 ECU 93c56.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Mazda/Mazda 3 ECU 93c56.cal"
+      ]
+    },
+    {
+      "sha": "543b4164ba8336c83de6787c8353cb4df9d58734edb4c5c8baf7f075ab552f51",
+      "name": "Toyota Siena 93C46 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Siena 93C46.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Siena 93C46.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Siena 93C46.cal"
+      ]
+    },
+    {
+      "sha": "57ad68f36aedfcb424dcd8a166618edaf4745ec5178119439f95da4ab3773e72",
+      "name": "Lexus RX300 US-EU BCU — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX300 US-EU BCU.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX300 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "5965199aaa7076a7b9680251a4f064f8baf7c7c25a0898770764e7169010a374",
+      "name": "VW T5 v1 — отключение тахографа · вариант 2",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "Tachograf off"
+      ],
+      "canonical_path": "Calculators/Tachograf off/VW T5 v1 Tachograf off.cal",
+      "paths": [
+        "Calculators/Tachograf off/VW T5 v1 Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "5a2c2de1e92d98151aad31a57e93c630f52c58dc8f73f292abdb13ba98dbf175",
+      "name": "Ford Fusion TDCI Dash — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Fusion TDCI Dash.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Fusion TDCI Dash.cal",
+        "Calculators/OTHER/PIN/Ford/Fusion TDCI Dash.cal"
+      ]
+    },
+    {
+      "sha": "5ae28d3d5752db21314d3a60b46677570bce33fcd7faef3edcc6c469b9e58144",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 93c86 var2 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal",
+        "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal"
+      ]
+    },
+    {
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "name": "Pin Chery 0L72A — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal"
+      ]
+    },
+    {
+      "sha": "608d77f5fdfab430e79fbc5f7be6ba169c52823532c690ffa3f2e60b3241a689",
+      "name": "Honda Ridgeline 9S12H256 V2 ml — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal",
+        "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal"
+      ]
+    },
+    {
+      "sha": "615b4ea417297975148d920fbc845325e0f79c786c7e25722aa667fa424e5ae9",
+      "name": "Pontiac Vibe 93C46 FD — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Pontiac/Vibe 93C46 FD.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Pontiac/Vibe 93C46 FD.cal",
+        "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46 FD.cal"
+      ]
+    },
+    {
+      "sha": "6359ffd5d549b0b794a32578d74191d9bcca195f667791207c08a098246ac8a2",
+      "name": "Acura MDX 93C76 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Acura/MDX 93C76.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Acura/MDX 93C76.cal",
+        "Calculators/US-Euro converter/Acura/MDX 93C76.cal",
+        "Calculators/OTHER/US-Euro converter/Acura/MDX 93C76.cal"
+      ]
+    },
+    {
+      "sha": "6461e91804e9970f94bebc23680f7ed07083aac78fed0bc69f6fb6a6df9b2d05",
+      "name": "Honda Accord 93C76 var2 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Accord 93C76 var2 + service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Accord 93C76 var2 + service.cal",
+        "Calculators/OTHER/Service calc/Honda/Accord 93C76 var2 + service.cal"
+      ]
+    },
+    {
+      "sha": "6710c4eee521f81946e4fd382530929340e5442f994a9e8c8b6f7d2001827592",
+      "name": "Smart TPM 95080 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Smart/TPM 95080.cal",
+      "paths": [
+        "Calculators/Service calc/Smart/TPM 95080.cal",
+        "Calculators/OTHER/Service calc/Smart/TPM 95080.cal"
+      ]
+    },
+    {
+      "sha": "6722062247e777da2b276675aecd36876f805a3b859c831c1243861d2450627e",
+      "name": "VW Crafter — отключение тахографа · вариант 2",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "Tachograf off"
+      ],
+      "canonical_path": "Calculators/Tachograf off/VW Crafter Tachograf off.cal",
+      "paths": [
+        "Calculators/Tachograf off/VW Crafter Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "6833b28ea7035005d855eff3c71f84410cac741ee320fdce378d55c52ee95a7f",
+      "name": "Lexus GS300 US-EU Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/GS300 US-EU Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/GS300 US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "6973c62cf6b1ccbe78fd9de91c409c4d0037541c0d434d90a3c553b22ccf9870",
+      "name": "Ford Connect Dash — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Connect Dash.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Connect Dash.cal",
+        "Calculators/OTHER/PIN/Ford/Connect Dash.cal"
+      ]
+    },
+    {
+      "sha": "6c75bdb3fa0577293af7200d9b9afbc6d8b3beb48de028dc4f33cfd373c294bb",
+      "name": "Toyota Camry 40 Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Dash.cal"
+      ]
+    },
+    {
+      "sha": "6ca0a875a19df8cf140b5e5f997fc4ad3d6b2f6fbdaf85aef71833c43886d804",
+      "name": "Toyota camry dash 93c46 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
+        "Calculators/US-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Camry/camry_dash_93c46.cal"
+      ]
+    },
+    {
+      "sha": "6df1bcd59ae4515b76fd96c01122bfc32efa5218350779fcbd7c043cb34d64da",
+      "name": "Subaru Tribeka dash 93c66 var1 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal"
+      ]
+    },
+    {
+      "sha": "6eb2e19e124668695b407bc8ee0aa38d202950e5119c5f4c5c1a570f88047311",
+      "name": "Opel Astra H Display PIN 25080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Astra H/Astra  H  Display PIN 25080.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Astra H/Astra  H  Display PIN 25080.cal",
+        "Calculators/OTHER/PIN/Opel/Astra H/Astra  H  Display PIN 25080.cal"
+      ]
+    },
+    {
+      "sha": "6f0ae9c7d4efcbd2f184650a00291e50fdd79629ace9b8c1a2254b4ed5ce6213",
+      "name": "Chevrolet Cruze BCU PIN immo 24C16 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
+      "paths": [
+        "Calculators/PIN/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
+        "Calculators/OTHER/PIN/Chevrolet/Cruze  BCU PIN immo 24C16.cal"
+      ]
+    },
+    {
+      "sha": "6f78be32245cb09951e7be4a2f8b47ef1b6a9dadf21beeae71ad2e8ad38b0a6d",
+      "name": "Jaguar XF 24C64 service plus — сервисные функции и коррекция пробега · вариант 3",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal",
+      "paths": [
+        "Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal"
+      ]
+    },
+    {
+      "sha": "6f888ebf7a137daee50c5432abc84277c71262de4233268135b926dcdedadb6b",
+      "name": "Lexus RX350 93C66 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal"
+      ]
+    },
+    {
+      "sha": "7082de546d496132dd0893fa9aff11853aff72b6e340d8d70d3c462c59235ea4",
+      "name": "BMW ISN CAS 3+ 9S12XDP512 — ISN и коррекция пробега",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "ISN и коррекция пробега",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal",
+      "paths": [
+        "Calculators/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal",
+        "Calculators/OTHER/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal"
+      ]
+    },
+    {
+      "sha": "72469f0b6a25843c2d50510dbe1a97341c82962dc5e5b35034bc9d284a07ea88",
+      "name": "Subaru Forester -2002 Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Forester -2002  Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Forester -2002  Dash.cal"
+      ]
+    },
+    {
+      "sha": "757957511befbb154f69b8b65d2af2b746c713d9f47d5cd9bf47acaea2e5bc0e",
+      "name": "Opel hitag2 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/hitag2.cal",
+      "paths": [
+        "Calculators/PIN/Opel/hitag2.cal",
+        "Calculators/OTHER/PIN/Opel/hitag2.cal"
+      ]
+    },
+    {
+      "sha": "75edf57610eb401d5aa90a92859a59f494e66e1a57aacad70758449c97d88e36",
+      "name": "Mercedes-Benz ML W164 Conversion+Russian menu 24C16 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
+        "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal"
+      ]
+    },
+    {
+      "sha": "770dbf617cd071de14d5310e822c6cb6f7df63b178efd7c548b6c232f70914f5",
+      "name": "Ford Fusion TDCI ECU 93c56 — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c56.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c56.cal"
+      ]
+    },
+    {
+      "sha": "77cd142598d7f1a0b860c81d52a83c63e321e755fc485e8da37d1b82dbb69b23",
+      "name": "Renault Trafic — отключение тахографа",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Tachograf off/Renault Trafic Tachograf off.cal",
+      "paths": [
+        "Calculators/OTHER/Tachograf off/Renault Trafic Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "796f912d6bcc02b5d3049ce58a5e0404fae821027a08c2a738ca0d1a56e3d6cf",
+      "name": "Toyota Matrix 93C46 var2 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
+        "Calculators/US-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal"
+      ]
+    },
+    {
+      "sha": "79ba1524d63246b99ae78a8f9f6ad8c94ed327ade65d70794445c538124a2c66",
+      "name": "Subaru Forester -2002 Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Forester -2002  Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Forester -2002  Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Forester -2002  Dash.cal"
+      ]
+    },
+    {
+      "sha": "7b36ffdafbdce79ed39c064da4e8e177d175f5cf03f08c4794774b8dcba744c2",
+      "name": "Chevrolet Aveo BCU PIN immo 25160 — PIN и данные IMMO · вариант 2",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/GM/Chevrolet/Aveo  BCU PIN immo 25160.cal",
+      "paths": [
+        "Calculators/PIN/GM/Chevrolet/Aveo  BCU PIN immo 25160.cal",
+        "Calculators/OTHER/PIN/GM/Chevrolet/Aveo  BCU PIN immo 25160.cal"
+      ]
+    },
+    {
+      "sha": "7b76cd1f8ddae600d0f80ee382a21176045052b7f118e065d1d5d4d9104826f9",
+      "name": "Honda Ridgeline 9S12H256 V1 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V1.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V1.cal",
+        "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V1.cal"
+      ]
+    },
+    {
+      "sha": "7bd5b41e85d64d8a77224b3ac769fd37896d7cebee973c74a8f3d3e2591f6482",
+      "name": "BMW ISN CAS 3 9S12X-series — ISN и коррекция пробега",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "ISN и коррекция пробега",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Bmw/ISN  CAS_3_9S12X-series.cal",
+      "paths": [
+        "Calculators/PIN/Bmw/ISN  CAS_3_9S12X-series.cal",
+        "Calculators/OTHER/PIN/Bmw/ISN  CAS_3_9S12X-series.cal"
+      ]
+    },
+    {
+      "sha": "7c072e61987baee10c0d8afadef26e83395bac0107ae75f599b481c20b20fc42",
+      "name": "Honda Ridgeline 9S12H256 V2 km — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal",
+        "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal"
+      ]
+    },
+    {
+      "sha": "7cce68317110bc17cead78675ceb80de9546affe7c30d01e7b759be8bfaba0a4",
+      "name": "Toyota Camry 30 Dash 83800-06653 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal"
+      ]
+    },
+    {
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "name": "Opel Meriva Dash 95080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+        "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal"
+      ]
+    },
+    {
+      "sha": "7efef1b0524f2fd1f743c9fb7ca390a031579cb94f53a27f7991279cfc2a3b08",
+      "name": "VW T5 v1 — отключение тахографа",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Tachograf off/VW T5 v1 Tachograf off.cal",
+      "paths": [
+        "Calculators/OTHER/Tachograf off/VW T5 v1 Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "7ffb53a8476d8f4a80536f7a1b303bcf0592fcd3904f74ee135b8b4fca3e994b",
+      "name": "Nissan Yuke BCU PIN immo 93C66 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal",
+      "paths": [
+        "Calculators/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal",
+        "Calculators/OTHER/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal"
+      ]
+    },
+    {
+      "sha": "8125b98ab9860e898d9f976a3fc699da762b63cca9cd1a652be4cf67bf37c137",
+      "name": "Mazda 3 ECU 93c56 — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Mazda/Mazda 3 ECU 93c56.cal",
+      "paths": [
+        "Calculators/Synchronization/Mazda/Mazda 3 ECU 93c56.cal"
+      ]
+    },
+    {
+      "sha": "8158fba73ee8214b11ebc960cfa034aa3e065f7e6b90e40642fa46cef9b09ae6",
+      "name": "Honda Accord 93C76 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Accord 93C76+service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Accord 93C76+service.cal",
+        "Calculators/OTHER/Service calc/Honda/Accord 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "81f924370da3f144c2393d34be201aa9c71a538d0280237e6a93b418d9622005",
+      "name": "Toyota rav4 dash 93c56 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/rav4_dash_93c56.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/rav4_dash_93c56.cal",
+        "Calculators/US-Euro converter/Toyota/rav4_dash_93c56.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/rav4_dash_93c56.cal"
+      ]
+    },
+    {
+      "sha": "820f39de0ecfd6a9f9196cce1a193f31df93209659d6a4255bea6eebaec98a52",
+      "name": "VW T5 v2 — отключение тахографа · вариант 2",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "Tachograf off"
+      ],
+      "canonical_path": "Calculators/Tachograf off/VW T5 v2 Tachograf off.cal",
+      "paths": [
+        "Calculators/Tachograf off/VW T5 v2 Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "83485aa8d87fe8f0498adb052abfa1511bd805eefc8106366b6d2f568ea0333d",
+      "name": "Mercedes-Benz W164 Rear SAM V1 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/W164 Rear SAM V1.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/W164 Rear SAM V1.cal",
+        "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V1.cal"
+      ]
+    },
+    {
+      "sha": "8352b8e260944cbd4e03996663a720c466277019c8e8ea0452dfd7431d8db40d",
+      "name": "Renault Trafic — отключение тахографа · вариант 2",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "Tachograf off"
+      ],
+      "canonical_path": "Calculators/Tachograf off/Renault Trafic Tachograf off.cal",
+      "paths": [
+        "Calculators/Tachograf off/Renault Trafic Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "8392a4ef79f8e356b5372a3c06d112890d5ca64e8a7802584365565bc5e731f2",
+      "name": "Subaru Tribeka dash 93c66 var2 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal"
+      ]
+    },
+    {
+      "sha": "8510ce2f020e93460df1fe04da240f1bc18b76122674b20fc4a532b081832437",
+      "name": "Ford Focus TDCI ECU — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI ECU.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI ECU.cal"
+      ]
+    },
+    {
+      "sha": "856c80f73c338fa0f8fe67e068ba380bb481425af1b6c07d7adfc3c35727307e",
+      "name": "Acura MDX 93C76 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Acura MDX 93C76+service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Acura MDX 93C76+service.cal",
+        "Calculators/OTHER/Service calc/Honda/Acura MDX 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "85840045b0fb8fb0df99fb82cd419346e71ea7d34946fdebf7409192deda5fb4",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V3 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal",
+        "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal"
+      ]
+    },
+    {
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "name": "Ford Fusion TDCI Dash — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal"
+      ]
+    },
+    {
+      "sha": "85ae00361c007b59742cc7c2f4454bc421faf5819fa2a0aa9794377967980341",
+      "name": "Subaru Impreza V2 93C56 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Impreza V2 93C56.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Impreza V2 93C56.cal",
+        "Calculators/US-Euro converter/Subaru/Impreza V2 93C56.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Impreza V2 93C56.cal"
+      ]
+    },
+    {
+      "sha": "860cff791152a7fb52538adcc5d4df8d5e79d3daed9f5684db506e9ffc88423d",
+      "name": "Volkswagen Crafter 95640 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
+      "paths": [
+        "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
+        "Calculators/OTHER/Service calc/Vw/Crafter 95640 Service.cal"
+      ]
+    },
+    {
+      "sha": "863a1d8c651c678bc80a6cbb08b0229770e06b26c8a90cb868103941eea589c7",
+      "name": "Ford Fusion TDCI ECU 93c86 — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c86.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c86.cal"
+      ]
+    },
+    {
+      "sha": "88ba2ecb955ea6d59b0b23da833c13d33b85b91924230cb9f4b1ebbba7c281d3",
+      "name": "Mercedes-Benz S W221 AB 95640 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/S W221 AB 95640.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/S W221 AB 95640.cal",
+        "Calculators/OTHER/Service calc/Mercedes/S W221 AB 95640.cal"
+      ]
+    },
+    {
+      "sha": "89bc94f752cbbfd2394c3189106ba65a1eb98d93b072bd52b447875d5a38fb5f",
+      "name": "Hyundai Accent 93S56 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Hyundai/Accent 93S56.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Hyundai/Accent 93S56.cal",
+        "Calculators/US-Euro converter/Hyundai/Accent 93S56.cal",
+        "Calculators/OTHER/US-Euro converter/Hyundai/Accent 93S56.cal"
+      ]
+    },
+    {
+      "sha": "8b2d4d977cb04db29e02272a329ca92c6647a591a2c754a559c787652b471d03",
+      "name": "BMW ISN EWS3+US 68HC11EA9 0D46J — ISN и коррекция пробега",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "ISN и коррекция пробега",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal",
+      "paths": [
+        "Calculators/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal",
+        "Calculators/OTHER/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal"
+      ]
+    },
+    {
+      "sha": "8b70fad2797da190dae545a4f68ecdf52ff3b84cb238ea2ce4fd03396ba0ff27",
+      "name": "Ford Fusion TDCI ECU 93c86 — восстановление синхронизации · вариант 2",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "Synchronization"
+      ],
+      "canonical_path": "Calculators/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c86.cal",
+      "paths": [
+        "Calculators/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c86.cal"
+      ]
+    },
+    {
+      "sha": "8df5cdc6a893e08a45623b5112b955e1f9b9222bd1cf791e13b80f882c4a03d7",
+      "name": "Lexus LS460 93C56 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/LS460 93C56.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/LS460 93C56.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/LS460 93C56.cal"
+      ]
+    },
+    {
+      "sha": "8e414a35a190b67fc53e1eba3597f80443ae39c3b847280006f14a2f8aecd0d1",
+      "name": "Chevrolet Cruze BCU PIN immo 24C16 — PIN и данные IMMO · вариант 2",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/GM/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
+      "paths": [
+        "Calculators/PIN/GM/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
+        "Calculators/OTHER/PIN/GM/Chevrolet/Cruze  BCU PIN immo 24C16.cal"
+      ]
+    },
+    {
+      "sha": "92f73cff7648a40f1b977fb8e02d1354edaf6218d9b3c46c01aeb911f0a3db3f",
+      "name": "Ford Focus TDCI Dash — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Focus TDCI Dash.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Focus TDCI Dash.cal",
+        "Calculators/OTHER/PIN/Ford/Focus TDCI Dash.cal"
+      ]
+    },
+    {
+      "sha": "93262d22bdb72e4184e45b9c56171e80a33033a9cf3d95598f6a1ba274c6dab6",
+      "name": "Honda Ridgeline 9S12H256 V3 km — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal",
+        "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal"
+      ]
+    },
+    {
+      "sha": "93fc9390a0d6d3c368d32d29182d2bacee87af62997c66dc8238bca2abdd285a",
+      "name": "Mercedes-Benz Sprinter W906 95640 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal",
+        "Calculators/OTHER/Service calc/Mercedes/Sprinter W906 95640 Service.cal"
+      ]
+    },
+    {
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "name": "Mercedes CGW ASSYSTPLUS — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal"
+      ]
+    },
+    {
+      "sha": "95dd70b2ee6bc95c7f7a3efda11c2c3eb58adbc14bd740114856d246ef2292b7",
+      "name": "Mercedes-Benz E W211 AB 68HC912DG128 var2 — сброс Crash (SRS)",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сброс Crash (SRS)",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal"
+      ]
+    },
+    {
+      "sha": "963073ca60a549e393ba7665e7e0f5ab9ff6cfca451d9ae80fe59b50fb6f0853",
+      "name": "Ford Connect ECU — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Connect/Connect ECU.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Connect/Connect ECU.cal"
+      ]
+    },
+    {
+      "sha": "9644e1f8e81d860b38cbfdca2e770999e5df79fcff84c83cf2c1c6e829805912",
+      "name": "Lexus RX330 US-EU BCU — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX330 US-EU BCU.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX330 US-EU BCU.cal",
+        "Calculators/US-Euro converter/Lexus/RX330 US-EU BCU.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX330 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "969227db16dfd28fc36bd7443a1bbe437292ee8f3b0847e3ccf04f6e76701cad",
+      "name": "Lexus RX400h US-EU dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX400h US-EU dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX400h US-EU dash.cal",
+        "Calculators/US-Euro converter/Lexus/RX400h US-EU dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX400h US-EU dash.cal"
+      ]
+    },
+    {
+      "sha": "97d610bfdf1b28b20dc2bea7fc2854c0618c1baf5134bfa283267f1d1cd51f33",
+      "name": "Chevrolet Malibu 93C46 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Chevrolet/Malibu 93C46.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Chevrolet/Malibu 93C46.cal",
+        "Calculators/OTHER/US-Euro converter/Chevrolet/Malibu 93C46.cal"
+      ]
+    },
+    {
+      "sha": "991e67fc3925c4a5df3e8898a64bd36166eb1e233196e814d1de6fb72e691507",
+      "name": "Jaguar XF 24C64 service plus — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Jaguar/XF 24C64(service plus).cal",
+      "paths": [
+        "Calculators/Service calc/Jaguar/XF 24C64(service plus).cal",
+        "Calculators/OTHER/Service calc/Jaguar/XF 24C64(service plus).cal"
+      ]
+    },
+    {
+      "sha": "9b0ceec5075db7073c7038bb82e041974654fd0fe2c5247be9ffc651e0b20561",
+      "name": "Volkswagen T4 93C86 tacho off — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Vw/T4 93C86 tacho off.cal",
+      "paths": [
+        "Calculators/Service calc/Vw/T4 93C86 tacho off.cal",
+        "Calculators/OTHER/Service calc/Vw/T4 93C86 tacho off.cal"
+      ]
+    },
+    {
+      "sha": "9b37e528e04d0ea83b34f2702c45045d3ea1a851478598d49b9a4ee1f9689b44",
+      "name": "Mercedes-Benz M W163 DASH SERVICE 93C66 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal",
+        "Calculators/OTHER/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal"
+      ]
+    },
+    {
+      "sha": "9d3af73d5b67ea112ecdba6a16ee9cf2c5325fc101f1f1b02bc2b34c8c18ed38",
+      "name": "Lexus is350 body — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/is350_body.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/is350_body.cal",
+        "Calculators/US-Euro converter/Lexus/is350_body.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/is350_body.cal"
+      ]
+    },
+    {
+      "sha": "9e920b8bf03ec07f7dc96f837d3b5abc1e4ea5aebf6fe7b1cde5ef444debcc45",
+      "name": "Lexus GS300 US-EU BCU — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/GS300 US-EU BCU.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/GS300 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "9fab5f19a9d9afe354e30e4c681104e354898cc5a7a3c1a01c989c82e2136800",
+      "name": "Lexus is250 dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/is250_dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/is250_dash.cal",
+        "Calculators/US-Euro converter/Lexus/is250_dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/is250_dash.cal"
+      ]
+    },
+    {
+      "sha": "a032f68abf25dc79c243f8e9617455100a84ac636cb68232ad221cfa263b69e3",
+      "name": "Mercedes-Benz S W220 DASH SERVICE 24C04 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal",
+        "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal"
+      ]
+    },
+    {
+      "sha": "a0fc7dc8de28677bbe39c1cf872784492cdb672fb6cf846f47053587bd28a4e6",
+      "name": "Mercedes-Benz C W203 DASH ASSYST 24c16 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal",
+        "Calculators/OTHER/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal"
+      ]
+    },
+    {
+      "sha": "a2a11e66730ce55227bf04126c72f5eeaf4b2e17f45fc80ec10f2d4a7ccf0abc",
+      "name": "Subaru Forester 2002-03 Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Forester 2002-03 Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Forester 2002-03 Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Forester 2002-03 Dash.cal"
+      ]
+    },
+    {
+      "sha": "a387e36bb793a570c61e250f8f42604e9ea739e81f3a403eda74770f6dc2a058",
+      "name": "Pontiac Vibe 93C46 01 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Pontiac/Vibe 93C46 01.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Pontiac/Vibe 93C46 01.cal",
+        "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46 01.cal"
+      ]
+    },
+    {
+      "sha": "a4d65469fdd2a383a0408675da704fff465b53978d8f4b8e73d603f4b0ba3169",
+      "name": "Lexus GS300 US-EU BCU — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/GS300 US-EU BCU.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/GS300 US-EU BCU.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/GS300 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "a52c9390a3ea88612a2d6dc69ba1ef12d60b14518de6f639a870f6511950218c",
+      "name": "Mercedes-Benz B W169 AB 25320 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/B W169 AB 25320.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/B W169 AB 25320.cal",
+        "Calculators/OTHER/Service calc/Mercedes/B W169 AB 25320.cal"
+      ]
+    },
+    {
+      "sha": "a76d6e69b77b5bc66eb48800dcfd11b577c85d03361124c5d4d4476e747537fe",
+      "name": "Mercedes-Benz ML W164 Conversion 24C16 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
+        "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Conversion 24C16.cal"
+      ]
+    },
+    {
+      "sha": "a78a7e7c3e6d6c2b481541d51a1722b6171de927a03628ea740204d590b7001d",
+      "name": "Mazda 3 Dash — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mazda/Mazda 3 Dash.cal",
+      "paths": [
+        "Calculators/PIN/Mazda/Mazda 3 Dash.cal",
+        "Calculators/OTHER/PIN/Mazda/Mazda 3 Dash.cal"
+      ]
+    },
+    {
+      "sha": "a78b86e9faa9bf751407c905ec6bcfb27092213460322b7ee2bf61560e375d41",
+      "name": "Great Wall Hover H3 ECU — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Great Wall/Hover/Hover H3  ECU .cal",
+      "paths": [
+        "Calculators/PIN/Great Wall/Hover/Hover H3  ECU .cal",
+        "Calculators/OTHER/PIN/Great Wall/Hover/Hover H3  ECU .cal"
+      ]
+    },
+    {
+      "sha": "a96ab40157ccaa4eb2d5876c3b8d0888de119259792190167ca9d4302fc25cda",
+      "name": "Mercedes-Benz E W210 DASH SERVICE 93C66 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal"
+      ]
+    },
+    {
+      "sha": "ab774ce727f8cec9aba97f88c452229935064334186f2e8fb1b492076568fffb",
+      "name": "VW Crafter — отключение тахографа",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Tachograf off/VW Crafter Tachograf off.cal",
+      "paths": [
+        "Calculators/OTHER/Tachograf off/VW Crafter Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "abd15bdfc13971150ecf0f672a4f99f27d28a824efb7b74dd68b78d0856f4a33",
+      "name": "Ford Connect Dash immo 9S12H256 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Transit Connect/Connect Dash immo  9S12H256.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Transit Connect/Connect Dash immo  9S12H256.cal",
+        "Calculators/OTHER/PIN/Ford/Transit Connect/Connect Dash immo  9S12H256.cal"
+      ]
+    },
+    {
+      "sha": "ad1be682031fc02949f2c0dc6ebcd448fde13234cf80fbd37690e5ea3d2cc08a",
+      "name": "Mercedes-Benz W164 Rear SAM V2 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/W164 Rear SAM V2.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/W164 Rear SAM V2.cal",
+        "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V2.cal"
+      ]
+    },
+    {
+      "sha": "ad56ed26469267fec6514cf6ef26fe978d7306b132774d214f0ecfaf1623e52a",
+      "name": "Pontiac Vibe 93C46 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Pontiac/Vibe 93C46.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Pontiac/Vibe 93C46.cal",
+        "Calculators/US-Euro converter/Pontiac/Vibe 93C46.cal",
+        "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46.cal"
+      ]
+    },
+    {
+      "sha": "ad784840a5534cee7b3a75fa0567246b965fffdee76b21a0b5177986d71de3c6",
+      "name": "Toyota Matrix US-EU Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "af206e1593d364cd8402425ff020350ba34b7a7cc954ff638a6be9d1d26265ac",
+      "name": "Mazda 323 93C46 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Mazda/323 93C46.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Mazda/323 93C46.cal",
+        "Calculators/US-Euro converter/Mazda/323 93C46.cal",
+        "Calculators/OTHER/US-Euro converter/Mazda/323 93C46.cal"
+      ]
+    },
+    {
+      "sha": "aff3a4150710f3e204146c94c2de9a3850b3fd4c0a18269061c27f4c716293cb",
+      "name": "Ford IMMO ECU Focus 95040 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/FF2+/IMMO ECU Focus 95040.cal",
+      "paths": [
+        "Calculators/PIN/Ford/FF2+/IMMO ECU Focus 95040.cal",
+        "Calculators/OTHER/PIN/Ford/FF2+/IMMO ECU Focus 95040.cal"
+      ]
+    },
+    {
+      "sha": "b050ca11a49cf8fff02f685770d7fac9930fe33057463cbf38f79ff4d0b8ccbf",
+      "name": "Lexus RX350 US-EU BCU — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX350 US-EU BCU.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX350 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "b1a2d621d1a65ea8ddb3d5d05ffd2f0768a9e91dbe607bc0b10681be3fe8d9cf",
+      "name": "CRC и VIN в дампе панели — отдельная сборка",
+      "folder": "Утилиты/CRC",
+      "operation": "правка CRC и VIN по выделению",
+      "sources": [
+        "CRC",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/CRC/dash_crc_vin.cal",
+      "paths": [
+        "Calculators/CRC/dash_crc_vin.cal",
+        "Calculators/OTHER/CRC/dash_crc_vin.cal"
+      ]
+    },
+    {
+      "sha": "b43185bc9a589a286b3d1e744d199337bdac96691c33ebe76555429a7a2b1a43",
+      "name": "Mercedes-Benz TPM 3L40K — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/TPM 3L40K.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/TPM 3L40K.cal",
+        "Calculators/OTHER/Service calc/Mercedes/TPM 3L40K.cal"
+      ]
+    },
+    {
+      "sha": "b63e228ad91add0415af513980d1d8e0bd8796200e1624943d44ae2265c5a18d",
+      "name": "Mercedes-Benz ML W164 Conversion 24C16 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion 24C16.cal"
+      ]
+    },
+    {
+      "sha": "b6603217ef1b773082572632c7a71367ce89fee829e301bf16f21acccad8a5d8",
+      "name": "Toyota Camry 40 Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 40 Dash.cal"
+      ]
+    },
+    {
+      "sha": "b704c7236aa084ad6624bd4cb1dd23c18c57f886e4697ee0a9d2703768806cdb",
+      "name": "Ford IMMO DASH Focus 9S12XHZ512 mask 1M80F 4KB — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
+      "paths": [
+        "Calculators/PIN/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
+        "Calculators/OTHER/PIN/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal"
+      ]
+    },
+    {
+      "sha": "b7b02a95b99f2ec0cc525311c29ea6596e73cad11980d7a70e25d49f13737115",
+      "name": "Mercedes-Benz Sprinter 93C66 km — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/Sprinter 93C66 km.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Sprinter 93C66 km.cal",
+        "Calculators/OTHER/Service calc/Mercedes/Sprinter 93C66 km.cal"
+      ]
+    },
+    {
+      "sha": "bd86100172f6f72d26cad0b7800b2a1a56432ae50b22443aac40649af64e8f50",
+      "name": "Honda CR-V 93C76 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/CR-V 93C76+service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/CR-V 93C76+service.cal",
+        "Calculators/OTHER/Service calc/Honda/CR-V 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "name": "Pin Chery TaGaz ECU 95080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal"
+      ]
+    },
+    {
+      "sha": "bfb52f8d65a09de7639447da148ecc4b9abcec5698288e65df8012d5942e8ff4",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V1 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal",
+        "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal"
+      ]
+    },
+    {
+      "sha": "c096be74c0b022312239c4a87ea719e6a6aacd23e646b2bf58c8b35ccec5f9c9",
+      "name": "Audi A4 Dash RB4 24C08 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
+      "paths": [
+        "Calculators/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
+        "Calculators/OTHER/PIN/Audi/Audi A4 Dash RB4  24C08.cal"
+      ]
+    },
+    {
+      "sha": "c1ac0222b44d30e9a99cd4e0fbdb517e873fbb21dcf3be86d06058abac23726b",
+      "name": "Subaru Outback V1 Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Subaru/Outback V1 Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Subaru/Outback V1 Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Outback V1 Dash.cal"
+      ]
+    },
+    {
+      "sha": "c249659ff7507ddb5a5efd8a9e52cbfa27371dc1c1d6465a25e4209298e6be6d",
+      "name": "Mercedes-Benz W-210 HC05 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mercedes/W-210 HC05/W-210  HC05.cal",
+      "paths": [
+        "Calculators/PIN/Mercedes/W-210 HC05/W-210  HC05.cal",
+        "Calculators/OTHER/PIN/Mercedes/W-210 HC05/W-210  HC05.cal"
+      ]
+    },
+    {
+      "sha": "c3bfcb27893dc11eec71d5724ddd5fa05b5355f6ca24aa45da05bc9b60993527",
+      "name": "Jaguar XF 24C64 service plus — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal",
+      "paths": [
+        "Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal",
+        "Calculators/OTHER/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal"
+      ]
+    },
+    {
+      "sha": "c5451e7f838fae7304545947b7b254d8d21c58c176e0c042d731e88e9fb468ce",
+      "name": "Chevrolet Cobalt BCU PIN immo 25160 — PIN и данные IMMO · вариант 2",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/GM/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
+      "paths": [
+        "Calculators/PIN/GM/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
+        "Calculators/OTHER/PIN/GM/Chevrolet/Cobalt  BCU PIN immo 25160.cal"
+      ]
+    },
+    {
+      "sha": "c58d2f4dbf549cde76ca563f7a33eae683db475d0aa1de36cf76735b1109b65e",
+      "name": "Chrysler PT Cruiser 2003 Immo login — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "paths": [
+        "Calculators/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
+        "Calculators/OTHER/PIN/Chrysler/PT Cruiser 2003 Immo login.cal"
+      ]
+    },
+    {
+      "sha": "c6f6eacbffbd28a22b1b868d0456cced1f3ce9ea7cd6e6135452d4c742e3bcd5",
+      "name": "Acura TL 93C46 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Honda/Acura TL 93C46+service.cal",
+      "paths": [
+        "Calculators/Service/Honda/Acura TL 93C46+service.cal"
+      ]
+    },
+    {
+      "sha": "c79f40e875298ae5f8c9dd81af95ccc2f50e789a8f1f07257c8e984ccc4c71e6",
+      "name": "Lexus RX300 US-EU BCU — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/RX300 US-EU BCU.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/RX300 US-EU BCU.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX300 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "c807cc583a315e929000a6f18f14cb53519b5abe0ac516a586e8e1c109c416f8",
+      "name": "Acura TL 93C46 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Honda/Acura TL 93C46+service.cal",
+      "paths": [
+        "Calculators/Service calc/Honda/Acura TL 93C46+service.cal",
+        "Calculators/OTHER/Service calc/Honda/Acura TL 93C46+service.cal"
+      ]
+    },
+    {
+      "sha": "ca095b0960feef32ce0e44a19d87c1bef30034a0162e981e6a531b1244e44ef3",
+      "name": "Mercedes-Benz ML W164 Russian menu 24C16 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal"
+      ]
+    },
+    {
+      "sha": "ccee9a5d0a5e432bfc66cb9bf4b46d9f834baf90593696850e35f6fdb5d9bd85",
+      "name": "Toyota Matrix US-EU Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "cd2c0d2f236efca4a6e80dd30a446a01f884551df7faa57d01b91436184bad2b",
+      "name": "Chevrolet Aveo BCU PIN immo 25160 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chevrolet/Aveo  BCU PIN immo 25160.cal",
+      "paths": [
+        "Calculators/PIN/Chevrolet/Aveo  BCU PIN immo 25160.cal",
+        "Calculators/OTHER/PIN/Chevrolet/Aveo  BCU PIN immo 25160.cal"
+      ]
+    },
+    {
+      "sha": "cefa20aea49618eb4fd77f6012b54e161a146f18feb77db6cd3dc5fa5b56d23a",
+      "name": "Honda Accord 93C76 — сервисные функции и коррекция пробега · вариант 2",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service"
+      ],
+      "canonical_path": "Calculators/Service/Honda/Accord 93C76+service.cal",
+      "paths": [
+        "Calculators/Service/Honda/Accord 93C76+service.cal"
+      ]
+    },
+    {
+      "sha": "d1410eed661a9cac23d7aeb236e4b9a163bc34efe1472f8d9ffa4ebe0ccb9470",
+      "name": "Lexus ES350 US-EU Dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/ES350 US-EU Dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/ES350 US-EU Dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/ES350 US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "d673e62139fc72c948dbf89476a107a7923ac94b134dd230b6fd865080f6fbe8",
+      "name": "Pin Chery TaGaz immo 24c02 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chery/Pin Chery TaGaz immo 24c02.cal",
+      "paths": [
+        "Calculators/PIN/Chery/Pin Chery TaGaz immo 24c02.cal",
+        "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz immo 24c02.cal"
+      ]
+    },
+    {
+      "sha": "d882cc53d42e4fa66c4e43396afd45d4de9aa1e345a8fe4e6427ee5231acc522",
+      "name": "PIN ECU Mazda BT-50 ED16 eep 95320 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mazda/BT-50/PIN ECU Mazda BT-50  ED16 eep 95320.cal",
+      "paths": [
+        "Calculators/PIN/Mazda/BT-50/PIN ECU Mazda BT-50  ED16 eep 95320.cal",
+        "Calculators/OTHER/PIN/Mazda/BT-50/PIN ECU Mazda BT-50  ED16 eep 95320.cal"
+      ]
+    },
+    {
+      "sha": "d93a9787f3b5ceebccbbd54afefeecd4ff23db1aa7274932f5abb50884b1191d",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal"
+      ]
+    },
+    {
+      "sha": "dc280627d5d655c021841acd23eecc6aed19ab68a0f2616964564e3d0b9b4418",
+      "name": "Toyota Camry 40 Body — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Body.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Body.cal"
+      ]
+    },
+    {
+      "sha": "de1378f2822eb3b4389cee33bd368cdb6bdbba03fd7855f6de363bc0d1a65172",
+      "name": "Mercedes-Benz ML W164 Russian menu 24C16 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
+        "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal"
+      ]
+    },
+    {
+      "sha": "df725cc741a67abddc2cf7cd8287458f7cdcb7f2aa6c5c68d68ce91de75a7c53",
+      "name": "Astra H VDO PIN 35080 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Astra H/Astra  H VDO PIN 35080.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Astra H/Astra  H VDO PIN 35080.cal",
+        "Calculators/OTHER/PIN/Opel/Astra H/Astra  H VDO PIN 35080.cal"
+      ]
+    },
+    {
+      "sha": "dfa4d7ac72138cd0c26bb82654c3c51b092e66df31637033e442cd96fff1f242",
+      "name": "Toyota Matrix 93c46 var1 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Matrix 93c46 var1.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Matrix 93c46 var1.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Matrix 93c46 var1.cal"
+      ]
+    },
+    {
+      "sha": "dfa7c86adf6dd544348a3f3859d68606d1d503a22d21bccd47a666bb61261855",
+      "name": "Fiat Albea 9S12DG256 BCU PIN — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Fiat/Albea/Albea 9S12DG256  BCU PIN.cal",
+      "paths": [
+        "Calculators/PIN/Fiat/Albea/Albea 9S12DG256  BCU PIN.cal",
+        "Calculators/OTHER/PIN/Fiat/Albea/Albea 9S12DG256  BCU PIN.cal"
+      ]
+    },
+    {
+      "sha": "e0ccbcc27549934463993e2fe4b3f8bfd6bf8edc1dbbbc474a21cb85381718f7",
+      "name": "Geely Emgrand immobox 93c56 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Geely/Emgrand/Emgrand  immobox 93c56.cal",
+      "paths": [
+        "Calculators/PIN/Geely/Emgrand/Emgrand  immobox 93c56.cal",
+        "Calculators/OTHER/PIN/Geely/Emgrand/Emgrand  immobox 93c56.cal"
+      ]
+    },
+    {
+      "sha": "e230942f027f73aedff4d65e03a5faeac78239aff233932888d88f9cf02f7f95",
+      "name": "Opel Corsa D Bosch7.6.2 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Corsa D/Corsa D Bosch7.6.2.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Corsa D/Corsa D Bosch7.6.2.cal",
+        "Calculators/OTHER/PIN/Opel/Corsa D/Corsa D Bosch7.6.2.cal"
+      ]
+    },
+    {
+      "sha": "e513d56c067dc02907cc963149c05ed2d851878b63a0bda38e56c7805a8f9b00",
+      "name": "Lexus RX330 US-EU dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/RX330 US-EU dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/RX330 US-EU dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX330 US-EU dash.cal"
+      ]
+    },
+    {
+      "sha": "e564a92717eabc0b9387e5a87d00808fee0364d6198a1efaba7bb6749b4799dd",
+      "name": "Lexus es300 dash — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/es300_dash.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/es300_dash.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/es300_dash.cal"
+      ]
+    },
+    {
+      "sha": "e6055b7c4fb78f797a1a991fbf62f2de5303214f5cda23221ff695ad0f9a5aa2",
+      "name": "Subaru Tribeka dash 93c66 var1 ok — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
+        "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
+        "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal"
+      ]
+    },
+    {
+      "sha": "e62563acfda5fe04588e2748d38e32f2c1827425dfb09c83011e32c252f0c0e8",
+      "name": "Toyota Avalon Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Avalon/Avalon  Dash.cal"
+      ]
+    },
+    {
+      "sha": "e6d64c71209cfef15e5595d7ffa905d687c9077faa3c0400c3118391a0457cf1",
+      "name": "Toyota Matrix 93c46 var1 — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
+        "Calculators/US-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal"
+      ]
+    },
+    {
+      "sha": "e86516bb77f78cf72085d69ccdb4a8c498cf97bf5675fdef45046895a59a7a24",
+      "name": "Lexus RX350 US-EU BCU — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/RX350 US-EU BCU.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/RX350 US-EU BCU.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX350 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "e868b04330b08ed7df0f4d4e0056c83306d4044d2849aa84a9625e037419ee74",
+      "name": "BMW ISN EWS3 68HC11EA9 0D46J — ISN и коррекция пробега",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "ISN и коррекция пробега",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal",
+      "paths": [
+        "Calculators/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal",
+        "Calculators/OTHER/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal"
+      ]
+    },
+    {
+      "sha": "e89090eed2a3cd6bf40ae5932866fc70858128e282af2d4f98a3ae2ae88c0ba8",
+      "name": "Ford Connect ECU 95320 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Ford/Transit Connect/Connect  ECU 95320.cal",
+      "paths": [
+        "Calculators/PIN/Ford/Transit Connect/Connect  ECU 95320.cal",
+        "Calculators/OTHER/PIN/Ford/Transit Connect/Connect  ECU 95320.cal"
+      ]
+    },
+    {
+      "sha": "e9e95d276b883512a6d19c2e1b062e9e41e47f1902efca27912a334340cd889b",
+      "name": "Mercedes-Benz E W211 AB CR16MCS9 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/E W211 AB CR16MCS9.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 AB CR16MCS9.cal",
+        "Calculators/OTHER/Service calc/Mercedes/E W211 AB CR16MCS9.cal"
+      ]
+    },
+    {
+      "sha": "ecbe231ccba77ffd6b0d22973a922cafc1cff83a297f12e91ab19d7bbe1c6b8a",
+      "name": "Mercedes-Benz S W220 DASH SERVICE 93c66 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal",
+        "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal"
+      ]
+    },
+    {
+      "sha": "ed9279a376954662eb2ec46d1d7a040172c4ec4578afc9dea531cfb5cc4d5308",
+      "name": "Acura RDX 93C66 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter",
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Acura/Acura RDX 93C66.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Acura/Acura RDX 93C66.cal",
+        "Calculators/US-Euro converter/Acura/Acura RDX 93C66.cal",
+        "Calculators/OTHER/US-Euro converter/Acura/Acura RDX 93C66.cal"
+      ]
+    },
+    {
+      "sha": "ee4e6a84ad6b547d8b9b69ffc645f51ff7fc0a689458bf75c5f14df92e4654c3",
+      "name": "Lexus RX 350 body — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/RX 350_body.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/RX 350_body.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/RX 350_body.cal"
+      ]
+    },
+    {
+      "sha": "efdecad11d6032360a0fb629d61c6b09b5cbae2a0380729c1ea536210dca579e",
+      "name": "Opel Mokko BCU PIN immo 24C16 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Opel/Mokko/Mokko  BCU PIN immo 24C16.cal",
+      "paths": [
+        "Calculators/PIN/Opel/Mokko/Mokko  BCU PIN immo 24C16.cal",
+        "Calculators/OTHER/PIN/Opel/Mokko/Mokko  BCU PIN immo 24C16.cal"
+      ]
+    },
+    {
+      "sha": "efe44cfd243f40b6bf7d4349f7286bccaedd684ab13887a9f988a2a011511777",
+      "name": "Chevrolet Cobalt BCU PIN immo 25160 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
+      "paths": [
+        "Calculators/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
+        "Calculators/OTHER/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal"
+      ]
+    },
+    {
+      "sha": "f00fc2546842b3f77ea651383fe5153e5e705fdd03bb44b9cb06c03afb57f66f",
+      "name": "Mitsubishi Help — назначение не подтверждено",
+      "folder": "Утилиты/Неуточнённые",
+      "operation": "",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mitsubishi/Help.cal",
+      "paths": [
+        "Calculators/PIN/Mitsubishi/Help.cal",
+        "Calculators/OTHER/PIN/Mitsubishi/Help.cal"
+      ],
+      "reason": "имя Help и форма не подтверждают назначение расчёта"
+    },
+    {
+      "sha": "f02a99be3c3a90ba5a5be197ee42ae674615f73ae0d6eb87617c37c32e65ba4c",
+      "name": "VW T5 v2 — отключение тахографа",
+      "folder": "Утилиты/Тахографы",
+      "operation": "отключение тахографа",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Tachograf off/VW T5 v2 Tachograf off.cal",
+      "paths": [
+        "Calculators/OTHER/Tachograf off/VW T5 v2 Tachograf off.cal"
+      ]
+    },
+    {
+      "sha": "f1a77b139c9e3af5e3eba66a2c38f3fdace26b47c17b76f37acb7ebbc8beca39",
+      "name": "Lexus ES350 US-EU BCU — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Lexus/ES350 US-EU BCU.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Lexus/ES350 US-EU BCU.cal",
+        "Calculators/OTHER/US-Euro converter/Lexus/ES350 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "f255b317bdd5c58021dd6e708ffe036f9965a8f4a4558f459a4a5c536ddfefbc",
+      "name": "Lexus RX350 US-EU Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/RX350 US-EU Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/RX350 US-EU Dash.cal"
+      ]
+    },
+    {
+      "sha": "f6014f22c0b85349ae5dc319a1f20a935f4c2bf9964cefef61c16534c20e267a",
+      "name": "Mercedes-Benz ML W164 AB 95640 — сервисные функции и коррекция пробега",
+      "folder": "Утилиты/Сервисные функции",
+      "operation": "сервисные функции и коррекция пробега",
+      "sources": [
+        "Service calc",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/Service calc/Mercedes/ML W164 AB 95640.cal",
+      "paths": [
+        "Calculators/Service calc/Mercedes/ML W164 AB 95640.cal",
+        "Calculators/OTHER/Service calc/Mercedes/ML W164 AB 95640.cal"
+      ]
+    },
+    {
+      "sha": "f62b1eeafb0fe333999800429f8470451b807d5727a29f6e514fc7df7cc7327b",
+      "name": "Toyota Matrix 93C46 var2 — конверсия миль ↔ км",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "US-Euro converter",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/US-Euro converter/Toyota/Matrix 93C46 var2.cal",
+      "paths": [
+        "Calculators/US-Euro converter/Toyota/Matrix 93C46 var2.cal",
+        "Calculators/OTHER/US-Euro converter/Toyota/Matrix 93C46 var2.cal"
+      ]
+    },
+    {
+      "sha": "fabb6cce9843c8eb5e426f03f9ecef720702949940e66365459b9778aedfb8b6",
+      "name": "Mitsubishi Outlander XL BCU PIN immo 24C16 — PIN и данные IMMO",
+      "folder": "Утилиты/PIN и IMMO",
+      "operation": "PIN и данные IMMO",
+      "sources": [
+        "PIN",
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/PIN/Mitsubishi/Outlander XL/Outlander XL  BCU PIN immo 24C16.cal",
+      "paths": [
+        "Calculators/PIN/Mitsubishi/Outlander XL/Outlander XL  BCU PIN immo 24C16.cal",
+        "Calculators/OTHER/PIN/Mitsubishi/Outlander XL/Outlander XL  BCU PIN immo 24C16.cal"
+      ]
+    },
+    {
+      "sha": "fb0e1bd83a4fb107fbfaa3c285cb92e7ee1544cf91d7476a619522db17aa71f4",
+      "name": "Lexus ES350 US-EU BCU — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/ES350 US-EU BCU.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/ES350 US-EU BCU.cal"
+      ]
+    },
+    {
+      "sha": "fcb747fcf2fdf6d74b6438f34225589d97a7bae5a7cfb0474446f1f0f91fa41c",
+      "name": "Ford Focus TDCI PCM — восстановление синхронизации",
+      "folder": "Утилиты/Синхронизация",
+      "operation": "восстановление синхронизации",
+      "sources": [
+        "OTHER"
+      ],
+      "canonical_path": "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI PCM.cal",
+      "paths": [
+        "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI PCM.cal"
+      ]
+    },
+    {
+      "sha": "fdaf1780999b0c1a5613dcab98e4f7ee09f0122e5ac1972094d5f67d6487ec01",
+      "name": "Lexus ES350 US-EU Dash — конверсия миль ↔ км · вариант 2",
+      "folder": "Утилиты/Конвертеры US-EU",
+      "operation": "конверсия миль ↔ км",
+      "sources": [
+        "USA-Euro converter"
+      ],
+      "canonical_path": "Calculators/USA-Euro converter/Lexus/ES350 US-EU Dash.cal",
+      "paths": [
+        "Calculators/USA-Euro converter/Lexus/ES350 US-EU Dash.cal"
+      ]
+    }
+  ],
+  "non_cal_resources": {
+    "total": 193,
+    "by_ext": {
+      "bc": 5,
+      "png": 1,
+      "bmp": 181,
+      "jpg": 6
+    },
+    "note": "Не-CAL файлы сохранены как есть; в отображение не переносились и мусором не объявлялись.",
+    "items": [
+      {
+        "path": "Calculators/CRC/CRC calc.bc",
+        "ext": "bc",
+        "sha": "674a779fdee9bfd6d0d798cefe90614b9ff22fb1c3b6d14e04f6e3c4d6eec469",
+        "bytes": 1991
+      },
+      {
+        "path": "Calculators/CRC/SumXorCalc.bc",
+        "ext": "bc",
+        "sha": "9b1707b7e55b60a733580af657fe03cda763744ff0cbc53a1a82784d5a598ae6",
+        "bytes": 851
+      },
+      {
+        "path": "Calculators/OTHER/CRC/CRC calc.bc",
+        "ext": "bc",
+        "sha": "674a779fdee9bfd6d0d798cefe90614b9ff22fb1c3b6d14e04f6e3c4d6eec469",
+        "bytes": 1991
+      },
+      {
+        "path": "Calculators/OTHER/CRC/SumXorCalc.bc",
+        "ext": "bc",
+        "sha": "9b1707b7e55b60a733580af657fe03cda763744ff0cbc53a1a82784d5a598ae6",
+        "bytes": 851
+      },
+      {
+        "path": "Calculators/OTHER/icon.png",
+        "ext": "png",
+        "sha": "cb09fcf6995e997cec4a0ba4aac5ead51557144f410ffa014a8b3eb07fba6c7f",
+        "bytes": 209
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/[Originals]/Lifan.BMP",
+        "ext": "bmp",
+        "sha": "655bdc013ecb45e9eab6a5ace22c8786fa0fbf69f9578e6450a9bd736328bf8d",
+        "bytes": 9294
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/2803.bmp",
+        "ext": "bmp",
+        "sha": "318324aaf23771ef376c74fcae305af8a7ae1640c514a27ff6bc0d5c869db242",
+        "bytes": 95118
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/ABS_Pcb.JPG",
+        "ext": "jpg",
+        "sha": "b6b849e4ad43b55e549ddd354faa84b2a63b11233ee210832b3c9045dd6aa078",
+        "bytes": 268765
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Acura.bmp",
+        "ext": "bmp",
+        "sha": "73b741b7dbbb035889378d3ad9c61ab6e91b629f0e2a2d557e99bf823e58fe7c",
+        "bytes": 13382
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/admiral.bmp",
+        "ext": "bmp",
+        "sha": "f9863c74f7909e643926b39d39fd759672038c6957f009d50dc06b4155a17eb3",
+        "bytes": 9070
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/aixam.bmp",
+        "ext": "bmp",
+        "sha": "57f7d3161788e33464783d8f4aa93941b5cd73b5339fc696d79415df6d453634",
+        "bytes": 9294
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/alfa_romeo.bmp",
+        "ext": "bmp",
+        "sha": "65fb9e8d606445bc34cc090046ac5e9cdca451d760f9d8679bcc8c1557217e54",
+        "bytes": 20156
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/alfa.bmp",
+        "ext": "bmp",
+        "sha": "e3b95888dc52a72111634f9e3ddc267e0b13f1a35f1320ad1b3f986ba96d621d",
+        "bytes": 13518
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/AMartin.bmp",
+        "ext": "bmp",
+        "sha": "647da46b660e8891e3ce8a5c510b331d3fae82311d5fb819620e5cdebc8a9d07",
+        "bytes": 12330
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ankai.bmp",
+        "ext": "bmp",
+        "sha": "59209e549405f8888c7fedf25ed1e763e2fb2499c4d1e7b0e21232b2a69542ac",
+        "bytes": 21966
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/arctic cat.bmp",
+        "ext": "bmp",
+        "sha": "8d01fa2d3630f06a070ea2201283f138c6fd6bf7f1907f9a44a6ba395760f175",
+        "bytes": 12954
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Aston Martin.bmp",
+        "ext": "bmp",
+        "sha": "d8b72c4cf5d6639bae9dacfbde04df473ccbff7bc6115bcdb2f27556241886cf",
+        "bytes": 9018
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/aston_martin.bmp",
+        "ext": "bmp",
+        "sha": "32afef82c57c1bb4bcd1f4e3511e36e6e72fc15da6c093c2e655f1a2b14bcc05",
+        "bytes": 20156
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/audi.bmp",
+        "ext": "bmp",
+        "sha": "e5f056ff4cee36160e2fd72ff8c0b3e4aed80acdb8298e2d80bcae6945f2badf",
+        "bytes": 8118
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/bajaj.bmp",
+        "ext": "bmp",
+        "sha": "1dfa6fa07815fc91f981908a941ab89ef960165ea2a1e8e72f79bcdbde6c96c9",
+        "bytes": 9774
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/baltmot.bmp",
+        "ext": "bmp",
+        "sha": "7b13b48f6b0acad1bd608cf1dba0022eadca26ddefe9bb4714cc1aec8298124a",
+        "bytes": 10854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/belarus.bmp",
+        "ext": "bmp",
+        "sha": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab",
+        "bytes": 11214
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/bentley.bmp",
+        "ext": "bmp",
+        "sha": "a6685f77f99a624fe7d13f9d62e2b65d149cf5cb3f2fbd0192cd04b8c46deb0a",
+        "bytes": 12854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/BMW.bmp",
+        "ext": "bmp",
+        "sha": "a92cf7a0c9fb77320f805a3c0212e372145960caf5b09abec65723527c762632",
+        "bytes": 10134
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/bobcat.bmp",
+        "ext": "bmp",
+        "sha": "ae66b8311aeaf7dab29e555217551bd4b1e51cfb213b585f6e1fdb9fc257efcf",
+        "bytes": 13014
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/bogdan.bmp",
+        "ext": "bmp",
+        "sha": "0ad7070e4fde01e3c32932f508aa0557bd8565cd59feef6402a51760a814ff43",
+        "bytes": 9798
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/brilliance.bmp",
+        "ext": "bmp",
+        "sha": "fc794e3bcbabed26f9ad294f6b1bc5458d4bd85ede97ef82d6796d6f9b5cf4c9",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/BRP.bmp",
+        "ext": "bmp",
+        "sha": "703753e83f20a389cd45e2e0b02faedec1b8b5f647a2451917252a5f142de4a3",
+        "bytes": 10854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/bugatti.bmp",
+        "ext": "bmp",
+        "sha": "53a12d99bbbd1fa68f82d9e6d7bde5114bd51960416de8b2e74a7ffd18684986",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Buick.bmp",
+        "ext": "bmp",
+        "sha": "d05ac37e895bf08c55f5b9cf335a42c5753eff92465c1a79adcd67025735397c",
+        "bytes": 5630
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/byd.bmp",
+        "ext": "bmp",
+        "sha": "2ebdc768b9b5bc601f2f51cc1dcb29983d780c237ab74f42a7c61cc99e8489b7",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/cadil.bmp",
+        "ext": "bmp",
+        "sha": "73e9d2e297c5ad8e42dc15e7c75b70df11bc8f756d90b20bc690ddd8f868eedb",
+        "bytes": 15062
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Cadillac.bmp",
+        "ext": "bmp",
+        "sha": "7831e4cafcbbfc15cbe22d3780b59ce596f62bc59aa4ac0c1af9ae14447631d0",
+        "bytes": 14614
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/camc.bmp",
+        "ext": "bmp",
+        "sha": "2ad31d8e74a65058f33fe4215ec768e94824f35ecfd52d52bfff493ff3aa0478",
+        "bytes": 7974
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/car2003.bmp",
+        "ext": "bmp",
+        "sha": "3412df919b36f3c1de3a161202b37baf780748ab47527e596572e2a973aeae2f",
+        "bytes": 121854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CAR2004.bmp",
+        "ext": "bmp",
+        "sha": "e8b71f595af0ba65bb8b107a59bdd647deb913b1b8454892af55e782b318a9e8",
+        "bytes": 121042
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CAR300.bmp",
+        "ext": "bmp",
+        "sha": "912c8938d1aa752a40ee6c4d6c62e914363bac4ce7e50cf3326ae61a610ff185",
+        "bytes": 66638
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Case.bmp",
+        "ext": "bmp",
+        "sha": "df406b02181b6b7e2446678a497e558d5db3e5145f0e5b8c20223f9a8ae8c494",
+        "bytes": 10254
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CAT.bmp",
+        "ext": "bmp",
+        "sha": "453e71ba815f4f3f183bcbb943a3b7666a670fa5d08e756612a29219551accc9",
+        "bytes": 12822
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CDR2005.bmp",
+        "ext": "bmp",
+        "sha": "1f83dc6364a10603a1166410681053f1d9d256060c789131f59abef01393d414",
+        "bytes": 129974
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CDR2005d.bmp",
+        "ext": "bmp",
+        "sha": "f4b97f79a13fea91e91794b55e9193b2980fffb70f2724ec71d0060cd8af05e5",
+        "bytes": 123478
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CDR500.bmp",
+        "ext": "bmp",
+        "sha": "2f1cae63c7c7c72c342249a63ffe7147e9154c001b5d01d83bbd14dc9a60ad36",
+        "bytes": 67450
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/cdr500d.bmp",
+        "ext": "bmp",
+        "sha": "be8ec17cb3cd175fff7a9b454a500a67101abc5866c0f9bcab7744317287a721",
+        "bytes": 71510
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CFmoto.bmp",
+        "ext": "bmp",
+        "sha": "2ce538dfb582f851353d539dcb9485d651b6200bb4940d7473fa7e375a24e5df",
+        "bytes": 13854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Changan.bmp",
+        "ext": "bmp",
+        "sha": "0beacaa330f692827894f687b97f323ba17d57fd072e4a284d70933bf1310796",
+        "bytes": 14646
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Chery.bmp",
+        "ext": "bmp",
+        "sha": "692c83c61b99c6c60747776628432a6d8a522a7a60e516dcfcee44752cbaad8e",
+        "bytes": 14158
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Chevrolet.bmp",
+        "ext": "bmp",
+        "sha": "36ae22138bc1d214e3a7e42149568a343a0c828370401b133e44dd8b729884cc",
+        "bytes": 14406
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Chrys.bmp",
+        "ext": "bmp",
+        "sha": "050b39fa0ab09a6a64c5c72485195f752c8b98cf805b5b81522bbf6e865e6d46",
+        "bytes": 10674
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Chrysler.bmp",
+        "ext": "bmp",
+        "sha": "72d938d6f5d715ca1209ea49f148b4cad09feb7a48a1ebe3b3b1ffbd985ff5ef",
+        "bytes": 14390
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/CHTZ.bmp",
+        "ext": "bmp",
+        "sha": "93197e7d907a9c2a510c3403db3f4ee19eba85d046e302f52083168c597be1b2",
+        "bytes": 15186
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/citroen.bmp",
+        "ext": "bmp",
+        "sha": "0a3576b5b9c0ab2e1e1f15f3cbb43d4583200b63f325e6db1cc41e0f9e501247",
+        "bytes": 12774
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Dacia.bmp",
+        "ext": "bmp",
+        "sha": "b42bb9a4fd07ec2c4c474a49fd7164b2fefce48d479b85ae3028defca0beddac",
+        "bytes": 7050
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Daewoo.bmp",
+        "ext": "bmp",
+        "sha": "a3c609987857270edba5c28671c28aebe7e00960a1e3c5ba3db6010217dfe36f",
+        "bytes": 9258
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/daf.bmp",
+        "ext": "bmp",
+        "sha": "591b034897b5e3a2da5b4dc32422b66bb9015f80eef94da22607b18b98d2f8f5",
+        "bytes": 5598
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/dahatsu.bmp",
+        "ext": "bmp",
+        "sha": "2529b0d06cde3ec0e2bdbffc1970902a4e220755462ce31968476e1bc8432a4a",
+        "bytes": 6102
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Daihatsu.bmp",
+        "ext": "bmp",
+        "sha": "c0a025f841d231555dfccaae153e488ff2f15dd8408066a3bc27161cf8c68620",
+        "bytes": 14526
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Dashboard Ford Focus Focus3 MC9S12XHZ512 (1M80F).JPG",
+        "ext": "jpg",
+        "sha": "cd567cce854b052358ecae9871bff3af21a3b6059782acdde18d26090b5bb2d9",
+        "bytes": 1874245
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Dashboard Mitsubishi ASX - 93C86 YNS.jpg",
+        "ext": "jpg",
+        "sha": "2f361dfc81a3d482dde58d3678b3f00a1d41212a11f6eca7b02498fbc1b13207",
+        "bytes": 22694
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Datsun.bmp",
+        "ext": "bmp",
+        "sha": "806877da3f123a36b905e6d13de3f9629895226ef137666205470e143f667c1c",
+        "bytes": 14742
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/derways.bmp",
+        "ext": "bmp",
+        "sha": "ee513a1fff5aed7fc7de6a8b847b1c88e412cbd2a633c106727fcfd134d19bc0",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/DF.bmp",
+        "ext": "bmp",
+        "sha": "a9d3f87e4d46c4f8888db911c02530b7c4a85635fa90bfe533e6142711f79b62",
+        "bytes": 10674
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Dodge.bmp",
+        "ext": "bmp",
+        "sha": "81aaaa5e2ded898c00ebebd2fe49f1bcf20952a47591a4b8ab0f3683a7164a9a",
+        "bytes": 17134
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ducati bikes.bmp",
+        "ext": "bmp",
+        "sha": "9c312b15cb2909a355dd38621cf4848039e2088cf0f6a3418933050b69da2714",
+        "bytes": 90054
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ducati.bmp",
+        "ext": "bmp",
+        "sha": "19feced4af433c63277cd5fe7d0d1cd44837da9153f3a686be19d21ec771500d",
+        "bytes": 13722
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/FAW.BMP",
+        "ext": "bmp",
+        "sha": "c5eb5c6f0fac14b0934583e1ff3d6555cd59d0afc63f65ee39f1a8ffb58b10a8",
+        "bytes": 11886
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Feeler.bmp",
+        "ext": "bmp",
+        "sha": "87947ba4187096d7560927fd12563b515ce5635e102e48cbc27ca883d5695bf0",
+        "bytes": 10798
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ferrari.bmp",
+        "ext": "bmp",
+        "sha": "805482f2cd8c74b85a2f37dfe935862ba9952d6dfd30b2ba6e74f75c8b63124f",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/fiat.bmp",
+        "ext": "bmp",
+        "sha": "fd7c091006ec389b6714c429671118d8fd5cc3924ac028d107349be29d79829f",
+        "bytes": 16470
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/force.bmp",
+        "ext": "bmp",
+        "sha": "54d5c4a38c087fdf0cf8f1f0251db9ff3a703508b5b112eb3e64461a4a836232",
+        "bytes": 13926
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ford.bmp",
+        "ext": "bmp",
+        "sha": "c62232c8b4f8dfa12118d54bd4000ecbb2ed46b56a0145de73cba1f6a7e487a7",
+        "bytes": 9030
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Foton.bmp",
+        "ext": "bmp",
+        "sha": "5b4866174b9fe6264aed04fd45ff99cc18ea76da5cd41e3229c22628d9121d49",
+        "bytes": 14682
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Freightliner.bmp",
+        "ext": "bmp",
+        "sha": "ef477991ce8ae556868b48b0519085cb5767b84614b481fb55f336d4211edebb",
+        "bytes": 12702
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/gaz.bmp",
+        "ext": "bmp",
+        "sha": "3cde29c05da29a1e2550085e3bed083b419b32d79652dc6fd95d28e1db28f07a",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/geely.bmp",
+        "ext": "bmp",
+        "sha": "2eb3c9e2f1d6bc26b03f4f95357b85dc7eded5f3e15c01fcb60e2e9ef34c3e31",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/gilera.bmp",
+        "ext": "bmp",
+        "sha": "fa64212e3c569cabe304f726e147c3f888729689d9e22de2ac8255e04c96c2dd",
+        "bytes": 13742
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/GMC.bmp",
+        "ext": "bmp",
+        "sha": "43e7809b00d0ed85fea96f844ce1b3f6dacc35e51683aa59e64eb311bf5d9a55",
+        "bytes": 4662
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/GoldenDragon.bmp",
+        "ext": "bmp",
+        "sha": "f24128e82c1026c67f8c0775b85a914ae316d02d4f3e18795414e1cc40ef2bf7",
+        "bytes": 10854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/great.bmp",
+        "ext": "bmp",
+        "sha": "3f8b4eae678bcdcb1811184e0fd7b3d0379251b101d79be675dfb34204f55746",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/greatwall.bmp",
+        "ext": "bmp",
+        "sha": "76ef34aeef6ce1a67e50575da594fa0a727ae629bf793870afddcaee93325c7d",
+        "bytes": 8310
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/hafei.bmp",
+        "ext": "bmp",
+        "sha": "53f597ceda2b7d5b16f2ee3b3a848f5f8a7f54621374c99868a185ff4b070a02",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/haima.bmp",
+        "ext": "bmp",
+        "sha": "ffe2e1218e280709190bac2d2fa0acc57f647c73f3dfb58b357142e3a0f3b642",
+        "bytes": 8530
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hamm.bmp",
+        "ext": "bmp",
+        "sha": "19f2f55dc9f8691d71276f422b5762ddf9fea59428fa527db47fa6ff2ba34143",
+        "bytes": 9054
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Harley.bmp",
+        "ext": "bmp",
+        "sha": "4d9c6104884154c790687509f4238e4d9af9d5707c1d2ed16ce70003825a8aaf",
+        "bytes": 24054
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hero Honda.bmp",
+        "ext": "bmp",
+        "sha": "30b5c047d248b5a4473ab5f2c7fd8e7d41f0d5045ba87e74008638cee9485708",
+        "bytes": 8022
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hidromek.bmp",
+        "ext": "bmp",
+        "sha": "011c12a45b35bccccbe2dd7dc8cca112e8baf25c900af855cf9d72147f4908b4",
+        "bytes": 4778
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Higer.bmp",
+        "ext": "bmp",
+        "sha": "23ad72506a8e48de686c38446dcd769a1a77ade385d860cbbcd3f94aa6c619e2",
+        "bytes": 11714
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hino.BMP",
+        "ext": "bmp",
+        "sha": "ac92ddc492ce6b98e70b4b405701c8a1364c8d491fff3ef3f7a404dfa2d474a6",
+        "bytes": 11714
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hitachi.bmp",
+        "ext": "bmp",
+        "sha": "a30f91e2347612b6777876d319315309d301b65984534d9267dd4224945e79d2",
+        "bytes": 11718
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/holden.bmp",
+        "ext": "bmp",
+        "sha": "083a3ce0ad335b668a23b87b696285afac49ad634c8a629b698fd4805e4d8b66",
+        "bytes": 10958
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Honda.bmp",
+        "ext": "bmp",
+        "sha": "9d1fe482a914843c3af5dd77bf1608ddc10eda36f7479afbd9234958152bde1b",
+        "bytes": 10230
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hummer.bmp",
+        "ext": "bmp",
+        "sha": "228bf0c3e1f5b26af9b46bf6f9ad138a8bbc2313fd8e96da1eeb6df505220746",
+        "bytes": 12374
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Hyndai.bmp",
+        "ext": "bmp",
+        "sha": "0e07cd6bb1dc89ae8af26a8d31d2e4e521b0053fc80ffcecbe23bfa47f84d28b",
+        "bytes": 9894
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/hyundai.bmp",
+        "ext": "bmp",
+        "sha": "7fddbd42260679894be791640f043be275d5fd0c5563b0ed7468444c5ec02b52",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Infiniti.bmp",
+        "ext": "bmp",
+        "sha": "fa773b2067a630ebfe290b55f02e207d29f0d73166868fc3fcefcb255d3f8074",
+        "bytes": 13026
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/International.bmp",
+        "ext": "bmp",
+        "sha": "460200b6727d238381b0be8ec0cba02d8f2b295c849717b987ba3073af2fde53",
+        "bytes": 12014
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Isuzu.bmp",
+        "ext": "bmp",
+        "sha": "355a3f0b2e4659ce698de6c61e38894f6f274bba4ecf88c40b81c56ccda083ff",
+        "bytes": 10494
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Iveco.bmp",
+        "ext": "bmp",
+        "sha": "499787c8842f017523165eab94d8aed42e4c1e40c7694dc1c3e56b85af641661",
+        "bytes": 8262
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/JAC.bmp",
+        "ext": "bmp",
+        "sha": "05782a51e7610ea913e3a155b42de79f25aa3b1b8f3c9a01d1e82724f17c87ef",
+        "bytes": 13198
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Jaguar.bmp",
+        "ext": "bmp",
+        "sha": "0678ab3a3407fac7a74aca6a56c0e60fb6ac387592753a733972db469b4e27fa",
+        "bytes": 14454
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/JCB.bmp",
+        "ext": "bmp",
+        "sha": "bfdd16094007c53c85249880f63ae9f1d3019ca93e52de8b7d31691549d6db5d",
+        "bytes": 10834
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/jeep.bmp",
+        "ext": "bmp",
+        "sha": "be85179888cbaae564ce969275b993101e2d537d31f1d1ca0e207b7502da1896",
+        "bytes": 13254
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/jmc.bmp",
+        "ext": "bmp",
+        "sha": "154864d0172b081c1e92d121f864bca99398bed561bd739c4d5dfd2d603b08d3",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/John Deere.bmp",
+        "ext": "bmp",
+        "sha": "421fae0da1f85f6befc1bff4094142d2e38b9b2cf26f0dd77c218c09a0773232",
+        "bytes": 13254
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/kamaz.bmp",
+        "ext": "bmp",
+        "sha": "ae386c2e762be2c361e5f7108759489bd62da333d23ac9261c845531b4f9c9aa",
+        "bytes": 2139
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/KATO.bmp",
+        "ext": "bmp",
+        "sha": "f7c7b147ff0bfedd6bf694608419dce0f0c0e8dbd02234714161d26d58b1244e",
+        "bytes": 5814
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Kawasaki.bmp",
+        "ext": "bmp",
+        "sha": "3d2757ce015be18c241a62de8e58667d5fa2008e0c9bfff0bae82b405b2ea9c2",
+        "bytes": 9910
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/kenwood.bmp",
+        "ext": "bmp",
+        "sha": "8e4ed602b9d20100b3f7ed805d01c7a9c59cd971c7158718f683abfd917214d3",
+        "bytes": 21174
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Kia.bmp",
+        "ext": "bmp",
+        "sha": "e870478438e70d12e6ef86f11ecc512f36425dc6706b738a6368aca022f5e4d9",
+        "bytes": 10718
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Kirovec.bmp",
+        "ext": "bmp",
+        "sha": "1cd94f849a7dc8e779b02221ff73991ebd5eff1666ba4d291cae9349488cb091",
+        "bytes": 12854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/komatsu.bmp",
+        "ext": "bmp",
+        "sha": "cfebe3f0ec552081ba1636461885f55a793f961f4bfe1307ff0e6c3c8f820094",
+        "bytes": 14894
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/ktm.bmp",
+        "ext": "bmp",
+        "sha": "5a8e1aadbbf163ee0406de28a674ca40b8a4e4cfa8b9e04b1a24fd46b026c646",
+        "bytes": 10710
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Kymco.bmp",
+        "ext": "bmp",
+        "sha": "f6385dd05d96990d44b25b03f4f1d4b78751037ff2327ff1fe23b06c6c06a539",
+        "bytes": 8166
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Lada.bmp",
+        "ext": "bmp",
+        "sha": "2575dcb9e358c4eeeff02c83a31ff73838e7cb3af74b8c8f716fa938b5403b8b",
+        "bytes": 16782
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/lamborgini.bmp",
+        "ext": "bmp",
+        "sha": "ebfa25da2dfd5cd6f8dab9d8ff0e7eb75deeac1962cbc64332f60a2250c23b84",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Lancia.bmp",
+        "ext": "bmp",
+        "sha": "a66f7899b6aec9e75f8811efa856250884353c5dd0804d9972bf377f0f90a591",
+        "bytes": 9438
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/land_rover.bmp",
+        "ext": "bmp",
+        "sha": "9ebb2a9169e5002decf50bc96469efa35c12f69c7091933461ec06c1bfda9ea5",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/LDV.bmp",
+        "ext": "bmp",
+        "sha": "d856b247d9b5e9bea1b68fbb16296fad3f28987817ae536496e75300b8e8e007",
+        "bytes": 12838
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Lexus.bmp",
+        "ext": "bmp",
+        "sha": "803cae5f7cf64a12bc932b1fa6d1c39ff0a765ed951b4a35793a285e029dd310",
+        "bytes": 4202
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/liaz.bmp",
+        "ext": "bmp",
+        "sha": "17d0054f62584b80eec3385efc3a8c20937181ea5ac99dca8405b1eaba09abb8",
+        "bytes": 11574
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/lifan.bmp",
+        "ext": "bmp",
+        "sha": "655bdc013ecb45e9eab6a5ace22c8786fa0fbf69f9578e6450a9bd736328bf8d",
+        "bytes": 9294
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/lincoln.bmp",
+        "ext": "bmp",
+        "sha": "98c6df64b0bc8bf4b3a538bf0af57c55b59440ac96d11879a2b0cf501b284eaf",
+        "bytes": 2898
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/lotus.bmp",
+        "ext": "bmp",
+        "sha": "f22181fb23805bede3107675a28e2cce19f9a3cbb7afff361fac0ab69911912f",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Lrover.bmp",
+        "ext": "bmp",
+        "sha": "008add195c11fb68f94f8d0e1eb7132027466f2d5b1a52a6e34cff716398bd3d",
+        "bytes": 11318
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/luxgen.bmp",
+        "ext": "bmp",
+        "sha": "f65c02ea06fb5ce7649c66af598bbac67445d22c8ce54c82e0832987e89d7fdc",
+        "bytes": 12794
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mahindra.bmp",
+        "ext": "bmp",
+        "sha": "eb5e6db209595674d27f98b86c9c098d27b405c69c0fc745b2b0016ad41c7cba",
+        "bytes": 13302
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/man.bmp",
+        "ext": "bmp",
+        "sha": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+        "bytes": 12822
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Maserati.bmp",
+        "ext": "bmp",
+        "sha": "eb60c7eec0e957a851ce2c6a1b1c255f6cdcf3084fbec514f2063dc5fcc25605",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/maybach.bmp",
+        "ext": "bmp",
+        "sha": "636b1e2eb792a7e142449439629ddbb4889baf7be4f65a18ae8dad1063a934b3",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/MAZ.bmp",
+        "ext": "bmp",
+        "sha": "ba35acc3507f2383dfd9fa29cb251972112585ce047c819604e307e27364142c",
+        "bytes": 16554
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mazda.bmp",
+        "ext": "bmp",
+        "sha": "e6f19f455955f98badf038fc343154136ec2fae3652c9e94712c0a97b8ab77a7",
+        "bytes": 10654
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mccormick.bmp",
+        "ext": "bmp",
+        "sha": "b198ee4d76319392f979f52b9d8c801beea0ee23e22da607361615dda4976b01",
+        "bytes": 10254
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mercedes.bmp",
+        "ext": "bmp",
+        "sha": "d6daa857219c175b450007f4259ddbfbbd5427ba0ffa97223d0c9e119107bd37",
+        "bytes": 17814
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/mercury.bmp",
+        "ext": "bmp",
+        "sha": "2368406b60485b94311ed16ef7c253b189679c48cdc05aa1408bc77f16103f8f",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/MG.bmp",
+        "ext": "bmp",
+        "sha": "74883a727649ee9d9c344f3fe5cf8a45efd9b425f5cd5605ea45fdf9e308aa06",
+        "bytes": 11456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mini.bmp",
+        "ext": "bmp",
+        "sha": "2e1cdc02d7a9eebac4a793c716ddaf37b2e92f3fb267e1e1dfdbecc0836087c1",
+        "bytes": 22474
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Mitsubishi.bmp",
+        "ext": "bmp",
+        "sha": "5af50121cdf0329a81bba4a83012377d4940a2f8ab5df774b1e77410b9e7bb78",
+        "bytes": 10206
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/nav_plus.bmp",
+        "ext": "bmp",
+        "sha": "0b5e41cf20e641f7b30d6a936c06a3e420f758cc4a9d88b845eb51ebe29c377b",
+        "bytes": 153654
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/New Holland.bmp",
+        "ext": "bmp",
+        "sha": "8ab0ed3ed8e1bb386d4c4deb66434fc20b43bbe9b9b483feb890bb66693c25c2",
+        "bytes": 15534
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Nissan.bmp",
+        "ext": "bmp",
+        "sha": "3f682100751b15bd536e8a8cf882c9289bd17c6b9802846b8b574c397fc158c1",
+        "bytes": 9846
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Opel.bmp",
+        "ext": "bmp",
+        "sha": "8cccfb6530f7e2b0bb492951493d2315f90844625bca4c8dfc885baff87bc7a0",
+        "bytes": 1622
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Panasonic.bmp",
+        "ext": "bmp",
+        "sha": "e3571552e2129cb24169c4eb5b385436fde0c1398524280513932a32e98e240a",
+        "bytes": 15430
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Panasonic.JPG",
+        "ext": "jpg",
+        "sha": "54b776bd404cabdec4b831774d0a2a163f15b334dd575bfcfe494f5edd9d8e12",
+        "bytes": 1974
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/peugeot.bmp",
+        "ext": "bmp",
+        "sha": "a51164fa2646abb5dbe583c1e68389fb8726b4d5fa35c061da8452d9315de2b3",
+        "bytes": 9954
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/piaggio.bmp",
+        "ext": "bmp",
+        "sha": "f7dab8b4fea5f01b0f9d4970f10faf53e8cd94ed47ca550b0058a40e7f2a3b79",
+        "bytes": 11934
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Piaggio.JPG",
+        "ext": "jpg",
+        "sha": "4912084dcdf62af49762b9dcef9151f6af0259b3b0d86e4d86fd0b18c00dd1fc",
+        "bytes": 1616
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Polaris.bmp",
+        "ext": "bmp",
+        "sha": "aca27aeec4f9cba80de9ab7b3728e67e69c7c8c3864b80a6262979dff5122f19",
+        "bytes": 12054
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Pontiac.bmp",
+        "ext": "bmp",
+        "sha": "bbb8d903c88d90d4c7c5922c04b586614882fbd0534960c34976a47000725d09",
+        "bytes": 17206
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Porsche.bmp",
+        "ext": "bmp",
+        "sha": "f4dec9560211b8ded325d1988f6e5082c893a57385baddde29ace7c6a03c2a40",
+        "bytes": 10998
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Renault.bmp",
+        "ext": "bmp",
+        "sha": "2aa56bf720d2cf4f776c7556bc8603aa95ecae548d20acdfa4b38783d2071f8d",
+        "bytes": 6874
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/RM.bmp",
+        "ext": "bmp",
+        "sha": "8882d59582996b121f40891e0defdccbb54961fa7bb517029817660eb5bd1081",
+        "bytes": 8758
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/rolls_royce.bmp",
+        "ext": "bmp",
+        "sha": "5275ad7545a35cef469a779cab48c0b82ba3b2edc08496e7e1fbbc58c48d71d2",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/rolls.bmp",
+        "ext": "bmp",
+        "sha": "cebdc8725d653fb769524ddfbddc2e98ea351a73a9b15c7789a9f7e0d6c3acb3",
+        "bytes": 16182
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Rover.bmp",
+        "ext": "bmp",
+        "sha": "346f923095b672bba4cd33398e5c3d50884114be24153ddfc74dbe65029b1bf7",
+        "bytes": 11958
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Saab.bmp",
+        "ext": "bmp",
+        "sha": "ff633fa9e168640d31dbfe4acf0b688d977c35ee34edd7dcc5ab8cac1b3b7600",
+        "bytes": 9294
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Samand.bmp",
+        "ext": "bmp",
+        "sha": "1d973b43553185587d45aa9c6f05c309fac08665fbcebd21bbe60c0e34db17a4",
+        "bytes": 13382
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Samsung.bmp",
+        "ext": "bmp",
+        "sha": "663f7d56ead3c24f3e34ff50d17fb61d8b00c442715797922ce7e8c807bf9c8b",
+        "bytes": 13214
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/saturn.bmp",
+        "ext": "bmp",
+        "sha": "67849040f065c45fa1146ebf3deb36eb9f7ffe611cd7d50fee886b021567e5e9",
+        "bytes": 9478
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/SC202.bmp",
+        "ext": "bmp",
+        "sha": "df6534f51a88010af9bb8077bfb576d0195e6ca985568f060b6701267adb65d9",
+        "bytes": 69886
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/SC303D.bmp",
+        "ext": "bmp",
+        "sha": "e4a00714212eba4e355d92ca5796574eb91b664a2545b547bf82c2d55c39f30e",
+        "bytes": 69074
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Scion.bmp",
+        "ext": "bmp",
+        "sha": "ec17d94363eb17feafda6d1ba2e734584a36bcf8e82ffd383c98344c72c252bb",
+        "bytes": 18702
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Seat.bmp",
+        "ext": "bmp",
+        "sha": "7dbe4617c4b0f31d63070c0bede9f4ff31c4d453987e6bfd425edfcf88bf438f",
+        "bytes": 6214
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Shaanxi.bmp",
+        "ext": "bmp",
+        "sha": "fa5ce4b23c89653abccc80e8cd58fffcece9ee6f6d03589cd41fdbf65032b458",
+        "bytes": 12794
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/shuanghuan.bmp",
+        "ext": "bmp",
+        "sha": "771b4632817b06460e21e00404b9b3747ca39ae448aa8027324c09e8dbb2f208",
+        "bytes": 12534
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Sinotruk.bmp",
+        "ext": "bmp",
+        "sha": "aacc9ac42b02eb7ddf9d3158ca3a7a06e934dc27b1e95f2ede4b3c5480362d40",
+        "bytes": 12342
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/skoda.bmp",
+        "ext": "bmp",
+        "sha": "08bf558e0091149dc0ac4e7e811e4ccb61515c66218ea2469419ff13ce9738fc",
+        "bytes": 17382
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Smart.bmp",
+        "ext": "bmp",
+        "sha": "16c88ecbecbd43dff8dca4cb41728fd4815f95dff9993006f79726e954358536",
+        "bytes": 13494
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/SPA52198.jpg",
+        "ext": "jpg",
+        "sha": "db6a60f59460b8c26e6523372a9654db8547df9f961f59214943d010e236b9b4",
+        "bytes": 97831
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Ssang Yong.bmp",
+        "ext": "bmp",
+        "sha": "35b8db0d58dc6df986dceb6991253c45791b89c436d6c671c22b67dbfb1a9f84",
+        "bytes": 14574
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/ssangyong.bmp",
+        "ext": "bmp",
+        "sha": "4339c44b8deea3803087c1a84d5865aee5d16cdb7a5776824890ef9b771d382a",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/stels.bmp",
+        "ext": "bmp",
+        "sha": "aa5aa93f58150a1c441ca75c26bfecc90dcbc45af1afd8d0bcc475689e974f0c",
+        "bytes": 6742
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Subaru.bmp",
+        "ext": "bmp",
+        "sha": "c2686c363090674e8ec9e21a20c7a3c255b1c50afc2e1e0c83f76940cc254243",
+        "bytes": 7958
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Suzuki.bmp",
+        "ext": "bmp",
+        "sha": "545c651d7a0d529c1275daf700f6e132842e86d10ea27c762d0b85def4eb1a5b",
+        "bytes": 5390
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/SY.bmp",
+        "ext": "bmp",
+        "sha": "35b8db0d58dc6df986dceb6991253c45791b89c436d6c671c22b67dbfb1a9f84",
+        "bytes": 14574
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/SYM.bmp",
+        "ext": "bmp",
+        "sha": "71ef3f5b0d02b7ca2234c2a043b80fbe98c5f0d2368b37e4b4dc5444a51bc281",
+        "bytes": 11522
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/tagaz.bmp",
+        "ext": "bmp",
+        "sha": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b",
+        "bytes": 16554
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/TCM.bmp",
+        "ext": "bmp",
+        "sha": "54b3ec705d4e1b1f97e24dd05785c510593686d432a778cfb3bbf63e26707cde",
+        "bytes": 9354
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/terex.bmp",
+        "ext": "bmp",
+        "sha": "bd0c5a1ed7e9d9e2d50889ee813c792879bf73398e744cdb2fe4e5a7d3e40738",
+        "bytes": 11574
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Tesla.bmp",
+        "ext": "bmp",
+        "sha": "6cda282a505857a4cf980e9f8579d6470aa041653640b854892da83cfc0b4407",
+        "bytes": 8414
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/TFN.bmp",
+        "ext": "bmp",
+        "sha": "bbad8b8d815c4dc922ee63705b64c670daf24868679d3098ee6158c72d1a706d",
+        "bytes": 7474
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Toyota.bmp",
+        "ext": "bmp",
+        "sha": "e1547d171b477b6878e15d35e349161cafe22081e7c6319707daea38c06de26f",
+        "bytes": 11714
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Trend.bmp",
+        "ext": "bmp",
+        "sha": "3485c31335fcd6c671c46e48c47079b4656c866214038bb7a8d63776b362fbac",
+        "bytes": 6054
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Triumph.bmp",
+        "ext": "bmp",
+        "sha": "2d788dc9818625e987027c60b1b084104ea34679d101a598ab1f21d03d794e73",
+        "bytes": 14330
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/uaz.bmp",
+        "ext": "bmp",
+        "sha": "73b7a811d3d0105eed121f52e149305d07492ee09a37597fe43bb69b0560e201",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/UDM-2.bmp",
+        "ext": "bmp",
+        "sha": "514ce58270a0cd3b6bea753a46c2a3e548ad1e58705d92dd76a1e04c543f30a3",
+        "bytes": 13722
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/vaz.bmp",
+        "ext": "bmp",
+        "sha": "286c3e1257a8f13162743263b65ca1ce754b7ba4a13254e935943592a19fc6a8",
+        "bytes": 13456
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Volvo.bmp",
+        "ext": "bmp",
+        "sha": "682891be27736a6b850e3153444a3cc80108a53cb3e85ecf52694b71f58204cb",
+        "bytes": 11522
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/vortex.bmp",
+        "ext": "bmp",
+        "sha": "e634fbdc155a1a0408f09a47a46604663a8a831fdf5d34a4210018d98f68cfc4",
+        "bytes": 12906
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/VW.bmp",
+        "ext": "bmp",
+        "sha": "60297cef7252cb39d5bf7a89f99828602c8d02565e381ad2823ff43a303e642e",
+        "bytes": 7854
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/XCMG.bmp",
+        "ext": "bmp",
+        "sha": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e",
+        "bytes": 5754
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Yamaha.bmp",
+        "ext": "bmp",
+        "sha": "213b87b4ed0b0474c25edc7858aaea2f83619a40e1502efc19cb3fc5588f4c77",
+        "bytes": 7974
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/Yanmar.bmp",
+        "ext": "bmp",
+        "sha": "e4eb0407430c0ce10fc8eeaab83dfd1c55f916d2494e1cbe6d1b3484cbcc601e",
+        "bytes": 15342
+      },
+      {
+        "path": "Calculators/OTHER/Pictures/zaz.bmp",
+        "ext": "bmp",
+        "sha": "664367c287a74756328da26d7cc02474b3b526eeda6f664878ece2b006bb2f51",
+        "bytes": 7966
+      },
+      {
+        "path": "Calculators/OTHER/SumXorCalc.bc",
+        "ext": "bc",
+        "sha": "9b1707b7e55b60a733580af657fe03cda763744ff0cbc53a1a82784d5a598ae6",
+        "bytes": 851
+      }
+    ]
+  },
+  "hardware_policy": {
+    "registry_decisions": 8,
+    "resource_rules": 9,
+    "new_cal_exclusions": 0,
+    "note": "Подтверждённые аппаратные ссылки уже исключены адресными правилами T-001; среди утилит новых hardware-only CAL не найдено, Help.cal оставлен неопределённым."
+  },
+  "by_brand": {
+    "Утилиты/Тахографы": 8,
+    "Утилиты/CRC": 1,
+    "Утилиты/Конвертеры US-EU": 76,
+    "Утилиты/Неуточнённые": 1,
+    "Утилиты/Синхронизация": 22,
+    "Утилиты/PIN и IMMO": 49,
+    "Утилиты/Сервисные функции": 60
+  },
+  "by_operation": {
+    "отключение тахографа": 8,
+    "правка CRC и VIN по выделению": 1,
+    "конверсия миль ↔ км": 76,
+    "(не подтверждена)": 1,
+    "восстановление синхронизации": 22,
+    "PIN и данные IMMO": 44,
+    "ISN и коррекция пробега": 5,
+    "сервисные функции и коррекция пробега": 57,
+    "сброс Crash (SRS)": 3
+  },
+  "ambiguous": [
+    {
+      "sha": "f00fc2546842b3f77ea651383fe5153e5e705fdd03bb44b9cb06c03afb57f66f",
+      "paths": [
+        "Calculators/PIN/Mitsubishi/Help.cal",
+        "Calculators/OTHER/PIN/Mitsubishi/Help.cal"
+      ],
+      "title": "Mitsubishi Help — назначение не подтверждено",
+      "reason": "имя Help и форма не подтверждают назначение расчёта"
+    }
+  ],
+  "car_only_not_selected": []
+}

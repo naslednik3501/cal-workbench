@@ -10,16 +10,17 @@
    "catalog-organization-airbag.js",
    "catalog-organization-dashboard.js",
    "catalog-organization-immo.js",
-   "catalog-organization-radio.js"
+   "catalog-organization-radio.js",
+   "catalog-organization-utilities.js"
   ],
-  "approved_map": "reports/catalog-organization-{root-airbag,airbag-srs,dashboard,immo,radio}*",
+  "approved_map": "reports/catalog-organization-{root-airbag,airbag-srs,dashboard,immo,radio,utilities}*",
   "path_rules": [
    "CAL прямо в разделе: Calculators/<раздел>/<файл>.cal",
    "Марка: второй уровень, кроме буквенных папок Car и папок-категорий (Car, Bikes, ATV, China и т.п.)",
    "Параллельные разделы: совпадение SHA и/или имён файлов между разделами",
    "Опечатки: сравнение папок марок с эталонным написанием и редакционное расстояние"
   ],
-  "content_policy": "Содержимое CAL открывалось только для неоднозначных записей (EDC16, ECU 95080, CHINA 24C08, Any model by dump, CITROEN PEUGEOUT, dash_crc_vin). Полезная нагрузка — hex-код без читаемого заголовка, поэтому решения опираются на пути, имена и совпадения SHA.",
+  "content_policy": "Содержимое CAL открывалось только для неоднозначных записей (EDC16, ECU 95080, CHINA 24C08, Any model by dump, CITROEN PEUGEOUT, dash_crc_vin, Help.cal). Полезная нагрузка — hex-код без читаемого заголовка, поэтому решения опираются на пути, имена и совпадения SHA; неподтверждённый Help.cal оставлен в «Неуточнённые».",
   "confidence": {
    "high": "Однозначная опечатка/регистр/кодировка либо побайтовое совпадение подтверждено SHA.",
    "medium": "Опечатка или параллельный раздел очевидны, но цель требует уточнения по содержимому.",
@@ -31,10 +32,10 @@
   "entries": 23946,
   "cal_paths": 23357,
   "cal_unique_sha": 15057,
-  "active_cal_paths": 3213,
-  "active_cal_unique_sha": 2846,
-  "direct_cal_paths": 12,
-  "approved_map_sha": 12211,
+  "active_cal_paths": 2811,
+  "active_cal_unique_sha": 2629,
+  "direct_cal_paths": 7,
+  "approved_map_sha": 12428,
   "scope_excluded_sha": 0,
   "scope_decisions": 8,
   "scope_resource_rules": 9
@@ -542,29 +543,6 @@
    "paths_complete": true
   },
   {
-   "id": "D-tachograf-off",
-   "type": "direct_section",
-   "title": "Tachograf off: файлы в корне раздела",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/Тахографы"
-   },
-   "confidence": "high",
-   "basis": "Имена содержат Tachograf off; копии с теми же именами есть в OTHER/Tachograf off, но SHA другие (другие сборки).",
-   "counts": {
-    "files": 4,
-    "unique_sha": 4,
-    "duplicate_sha": 0
-   },
-   "paths": [
-    "Calculators/Tachograf off/Renault Trafic Tachograf off.cal",
-    "Calculators/Tachograf off/VW Crafter Tachograf off.cal",
-    "Calculators/Tachograf off/VW T5 v1 Tachograf off.cal",
-    "Calculators/Tachograf off/VW T5 v2 Tachograf off.cal"
-   ],
-   "paths_complete": true
-  },
-  {
    "id": "D-china-generic",
    "type": "direct_section",
    "title": "CHINA: единственный файл без марки и модели",
@@ -581,26 +559,6 @@
    },
    "paths": [
     "Calculators/CHINA/CHINA 24C08.cal"
-   ],
-   "paths_complete": true
-  },
-  {
-   "id": "D-crc-dash",
-   "type": "direct_section",
-   "title": "CRC: dash_crc_vin без папки функции",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/CRC"
-   },
-   "confidence": "high",
-   "basis": "Имя dash_crc_vin совпадает с утверждённой утилитой CRC, но SHA другой — это отдельная сборка, а не тот же файл.",
-   "counts": {
-    "files": 1,
-    "unique_sha": 1,
-    "duplicate_sha": 0
-   },
-   "paths": [
-    "Calculators/CRC/dash_crc_vin.cal"
    ],
    "paths_complete": true
   },
@@ -828,155 +786,6 @@
    "duplicate_sha_in_dashboard_car": 1,
    "paths": [
     "Calculators/Car/M/Mazda/MAZDA 2 93C86-2017.cal"
-   ],
-   "paths_complete": true
-  },
-  {
-   "id": "P04",
-   "type": "parallel_sections",
-   "title": "US-Euro converter и USA-Euro converter",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/Конвертеры US-EU"
-   },
-   "confidence": "high",
-   "basis": "41 имя совпадает, половина SHA общая; остальное — другие сборки. Пересечение с другими разделами — US-Euro converter: 20 SHA (36%); USA-Euro converter: 20 SHA (49%).",
-   "counts": {
-    "files": 96,
-    "unique_sha": 76,
-    "duplicate_sha": 20
-   },
-   "sections": [
-    "Calculators/US-Euro converter",
-    "Calculators/USA-Euro converter"
-   ],
-   "per_section": [
-    {
-     "section": "Calculators/US-Euro converter",
-     "files": 55,
-     "unique_sha": 55,
-     "shared_sha_with_other_sections": 20,
-     "containment": 0.364,
-     "shared_sha_with_dashboard_car": 0,
-     "share_with_dashboard_car": 0.0
-    },
-    {
-     "section": "Calculators/USA-Euro converter",
-     "files": 41,
-     "unique_sha": 41,
-     "shared_sha_with_other_sections": 20,
-     "containment": 0.488,
-     "shared_sha_with_dashboard_car": 0,
-     "share_with_dashboard_car": 0.0
-    }
-   ],
-   "pairwise": [
-    {
-     "a": "US-Euro converter",
-     "b": "USA-Euro converter",
-     "shared_sha": 20,
-     "shared_names": 41
-    }
-   ],
-   "shared_sha_all_sections": 20,
-   "duplicate_sha_in_dashboard_car": 0,
-   "paths": [
-    "Calculators/US-Euro converter/Acura/Acura RDX 93C66.cal",
-    "Calculators/US-Euro converter/Acura/Acura RDX US-EU dash.cal",
-    "Calculators/US-Euro converter/Acura/MDX 93C76.cal",
-    "Calculators/US-Euro converter/Chevrolet/Malibu 93C46.cal",
-    "Calculators/US-Euro converter/Hyundai/Accent 93S56.cal",
-    "Calculators/US-Euro converter/Lexus/ES350 US-EU BCU.cal",
-    "Calculators/US-Euro converter/Lexus/ES350 US-EU Dash.cal",
-    "Calculators/US-Euro converter/Lexus/GS300 US-EU BCU.cal",
-    "Calculators/US-Euro converter/Lexus/GS300 US-EU Dash.cal",
-    "Calculators/US-Euro converter/Lexus/LS460 93C56.cal",
-    "Calculators/US-Euro converter/Lexus/RX 350_body.cal",
-    "Calculators/US-Euro converter/Lexus/RX300 US-EU BCU.cal",
-    "Calculators/US-Euro converter/Lexus/RX330 US-EU BCU.cal",
-    "Calculators/US-Euro converter/Lexus/RX330 US-EU dash.cal",
-    "Calculators/US-Euro converter/Lexus/RX350 US-EU BCU.cal",
-    "Calculators/US-Euro converter/Lexus/RX350 US-EU Dash.cal",
-    "Calculators/US-Euro converter/Lexus/RX400h US-EU dash.cal",
-    "Calculators/US-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
-    "Calculators/US-Euro converter/Lexus/es300_dash.cal",
-    "Calculators/US-Euro converter/Lexus/is250_body.cal",
-    "Calculators/US-Euro converter/Lexus/is250_dash.cal",
-    "Calculators/US-Euro converter/Lexus/is350_body.cal",
-    "Calculators/US-Euro converter/Lexus/is350_dash.cal",
-    "Calculators/US-Euro converter/Mazda/323 93C46.cal",
-    "Calculators/US-Euro converter/Mazda/Mazda CX-7 Dash.cal",
-    "Calculators/US-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
-    "Calculators/US-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
-    "Calculators/US-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
-    "Calculators/US-Euro converter/Nissan/Armada 9S12H256.cal",
-    "Calculators/US-Euro converter/Nissan/Nissan 93C66.cal",
-    "Calculators/US-Euro converter/Pontiac/Vibe 93C46 01.cal",
-    "Calculators/US-Euro converter/Pontiac/Vibe 93C46 FD.cal",
-    "Calculators/US-Euro converter/Pontiac/Vibe 93C46.cal",
-    "Calculators/US-Euro converter/Subaru/Forester -2002  Dash.cal",
-    "Calculators/US-Euro converter/Subaru/Forester 2002-03 Dash.cal",
-    "Calculators/US-Euro converter/Subaru/Impreza V2 93C56.cal",
-    "Calculators/US-Euro converter/Subaru/Outback V1 Dash.cal",
-    "Calculators/US-Euro converter/Subaru/Tribeca B9 93C56.cal",
-    "Calculators/US-Euro converter/Subaru/Tribeka FULL 93C66.cal",
-    "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal",
-    "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
-    "Calculators/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal",
-    "Calculators/US-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
-    "Calculators/US-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
-    "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Body.cal",
-    "Calculators/US-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
-    "Calculators/US-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
-    "Calculators/US-Euro converter/Toyota/Matrix 93C46 var2.cal",
-    "Calculators/US-Euro converter/Toyota/Matrix 93c46 var1.cal",
-    "Calculators/US-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
-    "Calculators/US-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
-    "Calculators/US-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
-    "Calculators/US-Euro converter/Toyota/Siena 93C46.cal",
-    "Calculators/US-Euro converter/Toyota/camry_dash_93c46.cal",
-    "Calculators/US-Euro converter/Toyota/rav4_dash_93c56.cal",
-    "Calculators/USA-Euro converter/Acura/Acura RDX 93C66.cal",
-    "Calculators/USA-Euro converter/Acura/Acura RDX US-EU dash.cal",
-    "Calculators/USA-Euro converter/Acura/MDX 93C76.cal",
-    "Calculators/USA-Euro converter/Hyundai/Accent 93S56.cal",
-    "Calculators/USA-Euro converter/Lexus/ES350 US-EU BCU.cal",
-    "Calculators/USA-Euro converter/Lexus/ES350 US-EU Dash.cal",
-    "Calculators/USA-Euro converter/Lexus/GS300 US-EU BCU.cal",
-    "Calculators/USA-Euro converter/Lexus/GS300 US-EU Dash.cal",
-    "Calculators/USA-Euro converter/Lexus/RX 350_body.cal",
-    "Calculators/USA-Euro converter/Lexus/RX300 US-EU BCU.cal",
-    "Calculators/USA-Euro converter/Lexus/RX330 US-EU BCU.cal",
-    "Calculators/USA-Euro converter/Lexus/RX350 US-EU BCU.cal",
-    "Calculators/USA-Euro converter/Lexus/RX350 US-EU Dash.cal",
-    "Calculators/USA-Euro converter/Lexus/RX400h US-EU dash.cal",
-    "Calculators/USA-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
-    "Calculators/USA-Euro converter/Lexus/is250_body.cal",
-    "Calculators/USA-Euro converter/Lexus/is250_dash.cal",
-    "Calculators/USA-Euro converter/Lexus/is350_body.cal",
-    "Calculators/USA-Euro converter/Lexus/is350_dash.cal",
-    "Calculators/USA-Euro converter/Mazda/323 93C46.cal",
-    "Calculators/USA-Euro converter/Mazda/Mazda CX-7 Dash.cal",
-    "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
-    "Calculators/USA-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
-    "Calculators/USA-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
-    "Calculators/USA-Euro converter/Nissan/Armada 9S12H256.cal",
-    "Calculators/USA-Euro converter/Pontiac/Vibe 93C46.cal",
-    "Calculators/USA-Euro converter/Subaru/Forester -2002  Dash.cal",
-    "Calculators/USA-Euro converter/Subaru/Forester 2002-03 Dash.cal",
-    "Calculators/USA-Euro converter/Subaru/Impreza V2 93C56.cal",
-    "Calculators/USA-Euro converter/Subaru/Outback V1 Dash.cal",
-    "Calculators/USA-Euro converter/Subaru/Tribeca B9 93C56.cal",
-    "Calculators/USA-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
-    "Calculators/USA-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
-    "Calculators/USA-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
-    "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Body.cal",
-    "Calculators/USA-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
-    "Calculators/USA-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
-    "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
-    "Calculators/USA-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
-    "Calculators/USA-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
-    "Calculators/USA-Euro converter/Toyota/rav4_dash_93c56.cal"
    ],
    "paths_complete": true
   },
@@ -2520,369 +2329,6 @@
    ]
   },
   {
-   "id": "P08",
-   "type": "parallel_sections",
-   "title": "OTHER: зеркало утилит в корне каталога",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/<функция>"
-   },
-   "confidence": "high",
-   "basis": "OTHER повторяет корневые PIN, Service calc, US-Euro converter и CRC побайтно; остальные функции совпадают по именам.",
-   "counts": {
-    "files": 176,
-    "unique_sha": 176,
-    "duplicate_sha": 0
-   },
-   "sections": [
-    "Calculators/OTHER"
-   ],
-   "per_section": [
-    {
-     "section": "Calculators/OTHER",
-     "files": 176,
-     "unique_sha": 176,
-     "shared_sha_with_other_sections": 0,
-     "containment": 0.0,
-     "shared_sha_with_dashboard_car": 0,
-     "share_with_dashboard_car": 0.0
-    }
-   ],
-   "pairwise": [],
-   "shared_sha_all_sections": 176,
-   "duplicate_sha_in_dashboard_car": 0,
-   "mirrors": [
-    {
-     "utility": "PIN",
-     "other_files": 54,
-     "root_files": 54,
-     "same_sha": 54
-    },
-    {
-     "utility": "Service calc",
-     "other_files": 51,
-     "root_files": 51,
-     "same_sha": 51
-    },
-    {
-     "utility": "Synchronization",
-     "other_files": 11,
-     "root_files": 11,
-     "same_sha": 4
-    },
-    {
-     "utility": "Tachograf off",
-     "other_files": 4,
-     "root_files": 4,
-     "same_sha": 0
-    },
-    {
-     "utility": "CRC",
-     "other_files": 1,
-     "root_files": 1,
-     "same_sha": 1
-    },
-    {
-     "utility": "US-Euro converter",
-     "other_files": 55,
-     "root_files": 55,
-     "same_sha": 55
-    }
-   ],
-   "paths": [
-    "Calculators/OTHER/CRC/dash_crc_vin.cal",
-    "Calculators/OTHER/PIN/Audi/Audi A4 Dash RB4  24C08.cal",
-    "Calculators/OTHER/PIN/Audi/Audi A6  EDC15  LOGIN  24C04.cal",
-    "Calculators/OTHER/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal",
-    "Calculators/OTHER/PIN/Bmw/ISN  CAS_3_9S12X-series.cal",
-    "Calculators/OTHER/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal",
-    "Calculators/OTHER/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal",
-    "Calculators/OTHER/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal",
-    "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal",
-    "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal",
-    "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
-    "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz immo 24c02.cal",
-    "Calculators/OTHER/PIN/Chevrolet/Aveo  BCU PIN immo 25160.cal",
-    "Calculators/OTHER/PIN/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
-    "Calculators/OTHER/PIN/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
-    "Calculators/OTHER/PIN/Chrysler/PT Cruiser 2003 Immo login.cal",
-    "Calculators/OTHER/PIN/Citroen/Berlingo/BSI Berlingo 95128 PIN.cal",
-    "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
-    "Calculators/OTHER/PIN/Citroen/Jumper/Jumper  93c56  Immobox PIN.cal",
-    "Calculators/OTHER/PIN/Fiat/Albea/Albea 9S12DG256  BCU PIN.cal",
-    "Calculators/OTHER/PIN/Fiat/Doblo/Doblo  93c66  BCU PIN.cal",
-    "Calculators/OTHER/PIN/Ford/Connect Dash.cal",
-    "Calculators/OTHER/PIN/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
-    "Calculators/OTHER/PIN/Ford/FF2+/IMMO ECU Focus 95040.cal",
-    "Calculators/OTHER/PIN/Ford/Focus TDCI Dash.cal",
-    "Calculators/OTHER/PIN/Ford/Fusion TDCI Dash.cal",
-    "Calculators/OTHER/PIN/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal",
-    "Calculators/OTHER/PIN/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal",
-    "Calculators/OTHER/PIN/Ford/Transit Connect/Connect  ECU 95320.cal",
-    "Calculators/OTHER/PIN/Ford/Transit Connect/Connect Dash immo  9S12H256.cal",
-    "Calculators/OTHER/PIN/GM/Chevrolet/Aveo  BCU PIN immo 25160.cal",
-    "Calculators/OTHER/PIN/GM/Chevrolet/Cobalt  BCU PIN immo 25160.cal",
-    "Calculators/OTHER/PIN/GM/Chevrolet/Cruze  BCU PIN immo 24C16.cal",
-    "Calculators/OTHER/PIN/Geely/Emgrand/Emgrand  immobox 93c56.cal",
-    "Calculators/OTHER/PIN/Great Wall/Hover/Hover H3  ECU .cal",
-    "Calculators/OTHER/PIN/Kia/ME17.9.11/Kia  IMMO ECU ME17.9.11  TC1762 .cal",
-    "Calculators/OTHER/PIN/Mazda/BT-50/PIN ECU Mazda BT-50  ED16 eep 95320.cal",
-    "Calculators/OTHER/PIN/Mazda/Mazda 3 Dash.cal",
-    "Calculators/OTHER/PIN/Mercedes/W-210 HC05/W-210  HC05.cal",
-    "Calculators/OTHER/PIN/Mercedes/W-220 HC08/W-220  HC08.cal",
-    "Calculators/OTHER/PIN/Mitsubishi/Help.cal",
-    "Calculators/OTHER/PIN/Mitsubishi/Outlander XL/Outlander XL  BCU PIN immo 24C16.cal",
-    "Calculators/OTHER/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal",
-    "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
-    "Calculators/OTHER/PIN/Opel/Astra H/Astra  H  Display PIN 25080.cal",
-    "Calculators/OTHER/PIN/Opel/Astra H/Astra  H VDO PIN 35080.cal",
-    "Calculators/OTHER/PIN/Opel/Astra J/Astra J  BCU PIN immo 25160.cal",
-    "Calculators/OTHER/PIN/Opel/Corsa D/Corsa D Bosch7.6.2.cal",
-    "Calculators/OTHER/PIN/Opel/Corsa D/Corsa VDO PIN 35080 new.cal",
-    "Calculators/OTHER/PIN/Opel/Corsa D/Corsa VDO PIN 35080.cal",
-    "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal",
-    "Calculators/OTHER/PIN/Opel/Mokko/Mokko  BCU PIN immo 24C16.cal",
-    "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
-    "Calculators/OTHER/PIN/Opel/hitag2.cal",
-    "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
-    "Calculators/OTHER/Service calc/Honda/Accord 93C76 var1 + service.cal",
-    "Calculators/OTHER/Service calc/Honda/Accord 93C76 var2 + service.cal",
-    "Calculators/OTHER/Service calc/Honda/Accord 93C76+service.cal",
-    "Calculators/OTHER/Service calc/Honda/Acura MDX 93C76+service.cal",
-    "Calculators/OTHER/Service calc/Honda/Acura TL 93C46+service.cal",
-    "Calculators/OTHER/Service calc/Honda/CR-V 93C76+service.cal",
-    "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V1.cal",
-    "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal",
-    "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal",
-    "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal",
-    "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal",
-    "Calculators/OTHER/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal",
-    "Calculators/OTHER/Service calc/Jaguar/XF 24C64(service plus).cal",
-    "Calculators/OTHER/Service calc/Mercedes/B W169 AB 25320.cal",
-    "Calculators/OTHER/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal",
-    "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal",
-    "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal",
-    "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal",
-    "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211  AB 68HC912DG128.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 AB CR16MCS9.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256.cal",
-    "Calculators/OTHER/Service calc/Mercedes/E W211 CGW HC912DG128.cal",
-    "Calculators/OTHER/Service calc/Mercedes/ESP(tire pressure) 95080.cal",
-    "Calculators/OTHER/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal",
-    "Calculators/OTHER/Service calc/Mercedes/ML W164 AB 95640.cal",
-    "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal",
-    "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
-    "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal",
-    "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal",
-    "Calculators/OTHER/Service calc/Mercedes/S W221 AB 95640.cal",
-    "Calculators/OTHER/Service calc/Mercedes/Sprinter 93C66 km.cal",
-    "Calculators/OTHER/Service calc/Mercedes/Sprinter W609 95640 Service.cal",
-    "Calculators/OTHER/Service calc/Mercedes/Sprinter W906 95640 Service.cal",
-    "Calculators/OTHER/Service calc/Mercedes/TPM 3L40K.cal",
-    "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal",
-    "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal",
-    "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal",
-    "Calculators/OTHER/Service calc/Mercedes/V W639 MM 95080 service.cal",
-    "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V1.cal",
-    "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V2.cal",
-    "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V3.cal",
-    "Calculators/OTHER/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal",
-    "Calculators/OTHER/Service calc/Renault/Kangoo 93C66 + service.cal",
-    "Calculators/OTHER/Service calc/Smart/TPM 95080.cal",
-    "Calculators/OTHER/Service calc/Vw/Crafter 95640 Service.cal",
-    "Calculators/OTHER/Service calc/Vw/T4 93C86 tacho off.cal",
-    "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal",
-    "Calculators/OTHER/Synchronization/Ford/Connect/Connect ECU.cal",
-    "Calculators/OTHER/Synchronization/Ford/Connect/Connect PCM.cal",
-    "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
-    "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI ECU.cal",
-    "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI PCM.cal",
-    "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
-    "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c56.cal",
-    "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI ECU 93c86.cal",
-    "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal",
-    "Calculators/OTHER/Synchronization/Mazda/Mazda 3 ECU 93c56.cal",
-    "Calculators/OTHER/Tachograf off/Renault Trafic Tachograf off.cal",
-    "Calculators/OTHER/Tachograf off/VW Crafter Tachograf off.cal",
-    "Calculators/OTHER/Tachograf off/VW T5 v1 Tachograf off.cal",
-    "Calculators/OTHER/Tachograf off/VW T5 v2 Tachograf off.cal",
-    "Calculators/OTHER/US-Euro converter/Acura/Acura RDX 93C66.cal",
-    "Calculators/OTHER/US-Euro converter/Acura/Acura RDX US-EU dash.cal",
-    "Calculators/OTHER/US-Euro converter/Acura/MDX 93C76.cal",
-    "Calculators/OTHER/US-Euro converter/Chevrolet/Malibu 93C46.cal",
-    "Calculators/OTHER/US-Euro converter/Hyundai/Accent 93S56.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/ES350 US-EU BCU.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/ES350 US-EU Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/GS300 US-EU BCU.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/GS300 US-EU Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/LS460 93C56.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX 350_body.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX300 US-EU BCU.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX330 US-EU BCU.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX330 US-EU dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX350 US-EU BCU.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX350 US-EU Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/RX400h US-EU dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/US-Euro converter Lexus RX350 93C66.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/es300_dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/is250_body.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/is250_dash.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/is350_body.cal",
-    "Calculators/OTHER/US-Euro converter/Lexus/is350_dash.cal",
-    "Calculators/OTHER/US-Euro converter/Mazda/323 93C46.cal",
-    "Calculators/OTHER/US-Euro converter/Mazda/Mazda CX-7 Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Conversion 24C16.cal",
-    "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Conversion+Russian menu 24C16.cal",
-    "Calculators/OTHER/US-Euro converter/Mercedes/ML W164 Russian menu 24C16.cal",
-    "Calculators/OTHER/US-Euro converter/Nissan/Armada 9S12H256.cal",
-    "Calculators/OTHER/US-Euro converter/Nissan/Nissan 93C66.cal",
-    "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46 01.cal",
-    "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46 FD.cal",
-    "Calculators/OTHER/US-Euro converter/Pontiac/Vibe 93C46.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Forester -2002  Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Forester 2002-03 Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Impreza V2 93C56.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Outback V1 Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Tribeca B9 93C56.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Tribeka FULL 93C66.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var1.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var1_ok.cal",
-    "Calculators/OTHER/US-Euro converter/Subaru/Tribeka dash 93c66 var2.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Avalon/Avalon  Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 30 Dash (83800-06653).cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 40 Body.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Camry/Camry 40 Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Camry/camry_dash_93c46.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Matrix 93C46 var2.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Matrix 93c46 var1.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix 93C46 var2.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix 93c46 var1.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Matrix/Matrix US-EU Dash.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/Siena 93C46.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/camry_dash_93c46.cal",
-    "Calculators/OTHER/US-Euro converter/Toyota/rav4_dash_93c56.cal"
-   ],
-   "paths_complete": true
-  },
-  {
-   "id": "P10",
-   "type": "parallel_sections",
-   "title": "Service и Service calc",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/Сервисные функции"
-   },
-   "confidence": "medium",
-   "basis": "Имена совпадают, общих SHA нет: это разные сборки одной функции. Пересечение с другими разделами — Service: 0 SHA (0%); Service calc: 0 SHA (0%).",
-   "counts": {
-    "files": 60,
-    "unique_sha": 60,
-    "duplicate_sha": 0
-   },
-   "sections": [
-    "Calculators/Service",
-    "Calculators/Service calc"
-   ],
-   "per_section": [
-    {
-     "section": "Calculators/Service",
-     "files": 9,
-     "unique_sha": 9,
-     "shared_sha_with_other_sections": 0,
-     "containment": 0.0,
-     "shared_sha_with_dashboard_car": 0,
-     "share_with_dashboard_car": 0.0
-    },
-    {
-     "section": "Calculators/Service calc",
-     "files": 51,
-     "unique_sha": 51,
-     "shared_sha_with_other_sections": 0,
-     "containment": 0.0,
-     "shared_sha_with_dashboard_car": 0,
-     "share_with_dashboard_car": 0.0
-    }
-   ],
-   "pairwise": [
-    {
-     "a": "Service",
-     "b": "Service calc",
-     "shared_sha": 0,
-     "shared_names": 9
-    }
-   ],
-   "shared_sha_all_sections": 0,
-   "duplicate_sha_in_dashboard_car": 0,
-   "paths": [
-    "Calculators/Service calc/Honda/Accord 93C76 var1 + service.cal",
-    "Calculators/Service calc/Honda/Accord 93C76 var2 + service.cal",
-    "Calculators/Service calc/Honda/Accord 93C76+service.cal",
-    "Calculators/Service calc/Honda/Acura MDX 93C76+service.cal",
-    "Calculators/Service calc/Honda/Acura TL 93C46+service.cal",
-    "Calculators/Service calc/Honda/CR-V 93C76+service.cal",
-    "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V1.cal",
-    "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal",
-    "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal",
-    "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal",
-    "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal",
-    "Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal",
-    "Calculators/Service calc/Jaguar/XF 24C64(service plus).cal",
-    "Calculators/Service calc/Mercedes/B W169 AB 25320.cal",
-    "Calculators/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal",
-    "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal",
-    "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal",
-    "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal",
-    "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal",
-    "Calculators/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal",
-    "Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal",
-    "Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal",
-    "Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal",
-    "Calculators/Service calc/Mercedes/E W211 AB CR16MCS9.cal",
-    "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal",
-    "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256.cal",
-    "Calculators/Service calc/Mercedes/E W211 CGW HC912DG128.cal",
-    "Calculators/Service calc/Mercedes/ESP(tire pressure) 95080.cal",
-    "Calculators/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal",
-    "Calculators/Service calc/Mercedes/ML W164 AB 95640.cal",
-    "Calculators/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal",
-    "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
-    "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal",
-    "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal",
-    "Calculators/Service calc/Mercedes/S W221 AB 95640.cal",
-    "Calculators/Service calc/Mercedes/Sprinter 93C66 km.cal",
-    "Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal",
-    "Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal",
-    "Calculators/Service calc/Mercedes/TPM 3L40K.cal",
-    "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal",
-    "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal",
-    "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal",
-    "Calculators/Service calc/Mercedes/V W639 MM 95080 service.cal",
-    "Calculators/Service calc/Mercedes/W164 Rear SAM V1.cal",
-    "Calculators/Service calc/Mercedes/W164 Rear SAM V2.cal",
-    "Calculators/Service calc/Mercedes/W164 Rear SAM V3.cal",
-    "Calculators/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal",
-    "Calculators/Service calc/Renault/Kangoo 93C66 + service.cal",
-    "Calculators/Service calc/Smart/TPM 95080.cal",
-    "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
-    "Calculators/Service calc/Vw/T4 93C86 tacho off.cal",
-    "Calculators/Service/Honda/Accord 93C76+service.cal",
-    "Calculators/Service/Honda/Acura MDX 93C76+service.cal",
-    "Calculators/Service/Honda/Acura TL 93C46+service.cal",
-    "Calculators/Service/Honda/CR-V 93C76+service.cal",
-    "Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal",
-    "Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal",
-    "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal",
-    "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal",
-    "Calculators/Service/Renault/Kangoo 93C66 + service.cal"
-   ],
-   "paths_complete": true
-  },
-  {
    "id": "S-bmw",
    "type": "brand_spelling",
    "title": "BMW: варианты написания папки",
@@ -2891,10 +2337,10 @@
     "folder": "<раздел устройства>/BMW"
    },
    "confidence": "high",
-   "basis": "Различие только в регистре. Вариантов: 1, файлов: 13; общих SHA с папкой BMW: 0.",
+   "basis": "Различие только в регистре. Вариантов: 1, файлов: 8; общих SHA с папкой BMW: 0.",
    "counts": {
-    "files": 13,
-    "unique_sha": 13,
+    "files": 8,
+    "unique_sha": 8,
     "duplicate_sha": 0
    },
    "brand": "BMW",
@@ -2907,15 +2353,13 @@
    "aliases": [
     {
      "name": "Bmw",
-     "files": 13,
-     "unique_sha": 13,
+     "files": 8,
+     "unique_sha": 8,
      "sections": [
-      "Calculators/ECU",
-      "Calculators/PIN"
+      "Calculators/ECU"
      ],
      "directories": [
-      "Calculators/ECU/Bmw",
-      "Calculators/PIN/Bmw"
+      "Calculators/ECU/Bmw"
      ],
      "case_only": true,
      "similarity": 1.0,
@@ -2932,12 +2376,7 @@
     "Calculators/ECU/Bmw/E65 DDE M57 95640.cal",
     "Calculators/ECU/Bmw/E65 DME 95320.cal",
     "Calculators/ECU/Bmw/E70 DDE M57 95640.cal",
-    "Calculators/ECU/Bmw/E70 DME MSV80 95640.cal",
-    "Calculators/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal",
-    "Calculators/PIN/Bmw/ISN  CAS_3_9S12X-series.cal",
-    "Calculators/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal",
-    "Calculators/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal",
-    "Calculators/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal"
+    "Calculators/ECU/Bmw/E70 DME MSV80 95640.cal"
    ],
    "paths_complete": true
   },
@@ -2958,8 +2397,8 @@
    },
    "brand": "Chery",
    "canonical_counts": {
-    "files": 21,
-    "unique_sha": 21,
+    "files": 17,
+    "unique_sha": 17,
     "duplicate_sha": 0
    },
    "same_sha_as_canonical": 0,
@@ -3082,99 +2521,6 @@
    "duplicate_sha_in_dashboard_car": 0,
    "paths": [
     "Calculators/Asia/Infinity/FX35 93C66 Kansey miles v2.cal"
-   ],
-   "paths_complete": true
-  },
-  {
-   "id": "S-kia",
-   "type": "brand_spelling",
-   "title": "Kia: варианты написания папки",
-   "proposed": {
-    "section": "по разделу устройства",
-    "folder": "<раздел устройства>/Kia"
-   },
-   "confidence": "high",
-   "basis": "Различие только в регистре; сборки местами различаются. Вариантов: 1, файлов: 49; общих SHA с папкой Kia: 0.",
-   "counts": {
-    "files": 49,
-    "unique_sha": 49,
-    "duplicate_sha": 0
-   },
-   "brand": "Kia",
-   "canonical_counts": {
-    "files": 1,
-    "unique_sha": 1,
-    "duplicate_sha": 0
-   },
-   "same_sha_as_canonical": 0,
-   "aliases": [
-    {
-     "name": "KIA",
-     "files": 49,
-     "unique_sha": 49,
-     "sections": [
-      "Calculators/Asia"
-     ],
-     "directories": [
-      "Calculators/Asia/KIA"
-     ],
-     "case_only": true,
-     "similarity": 1.0,
-     "same_sha_as_canonical": 0,
-     "same_model_names_as_canonical": 0
-    }
-   ],
-   "duplicate_sha_in_dashboard_car": 0,
-   "paths": [
-    "Calculators/Asia/KIA/Bongo 93S56.cal",
-    "Calculators/Asia/KIA/Carens 93C46.cal",
-    "Calculators/Asia/KIA/Carnival 93C46.cal",
-    "Calculators/Asia/KIA/Ceed 24C16 var1.cal",
-    "Calculators/Asia/KIA/Ceed 24C16 var2.cal",
-    "Calculators/Asia/KIA/Ceed 93S56.cal",
-    "Calculators/Asia/KIA/Cerato 93C46.cal",
-    "Calculators/Asia/KIA/Cerato 93C66.cal",
-    "Calculators/Asia/KIA/Cerato Koup 93C56.cal",
-    "Calculators/Asia/KIA/Clarus 93C46.cal",
-    "Calculators/Asia/KIA/Forte 93C66.cal",
-    "Calculators/Asia/KIA/K5 24C16.cal",
-    "Calculators/Asia/KIA/K5 D70F35xx.cal",
-    "Calculators/Asia/KIA/Kondo 93C46.cal",
-    "Calculators/Asia/KIA/Kondo 93C56.cal",
-    "Calculators/Asia/KIA/Magentis 24C16.cal",
-    "Calculators/Asia/KIA/Magentis 93S56.cal",
-    "Calculators/Asia/KIA/Magentis NEC.cal",
-    "Calculators/Asia/KIA/Mohave 93S66.cal",
-    "Calculators/Asia/KIA/Morning 93C56.cal",
-    "Calculators/Asia/KIA/Opirus 93C46.cal",
-    "Calculators/Asia/KIA/Opirus 93C56.cal",
-    "Calculators/Asia/KIA/Optima 24C16.cal",
-    "Calculators/Asia/KIA/Optima NEC.cal",
-    "Calculators/Asia/KIA/Picanto 93C46.cal",
-    "Calculators/Asia/KIA/Picanto 93C56.cal",
-    "Calculators/Asia/KIA/Picanto 93C66.cal",
-    "Calculators/Asia/KIA/Pride 93S56.cal",
-    "Calculators/Asia/KIA/Rio 93C46.cal",
-    "Calculators/Asia/KIA/Rio 93C66.cal",
-    "Calculators/Asia/KIA/Rio 93S56.cal",
-    "Calculators/Asia/KIA/Rondo 93C46.cal",
-    "Calculators/Asia/KIA/Rondo 93C56.cal",
-    "Calculators/Asia/KIA/Sedona 93C46.cal",
-    "Calculators/Asia/KIA/Sephia 24C16.cal",
-    "Calculators/Asia/KIA/Sephia 93C46.cal",
-    "Calculators/Asia/KIA/Shuma 93C46.cal",
-    "Calculators/Asia/KIA/Sorento 24C16.cal",
-    "Calculators/Asia/KIA/Sorento 93C46.cal",
-    "Calculators/Asia/KIA/Sorento 93C56.cal",
-    "Calculators/Asia/KIA/Sorento D70F35xx.cal",
-    "Calculators/Asia/KIA/Soul 24C16.cal",
-    "Calculators/Asia/KIA/Soul 93S56.cal",
-    "Calculators/Asia/KIA/Spectra 93C46.cal",
-    "Calculators/Asia/KIA/Sportage 24C16.cal",
-    "Calculators/Asia/KIA/Sportage 93C46.cal",
-    "Calculators/Asia/KIA/Sportage 93S56.cal",
-    "Calculators/Asia/KIA/Sportage D70F35xx.cal",
-    "Calculators/Asia/KIA/Venga 93S56.cal"
    ],
    "paths_complete": true
   },
@@ -3378,10 +2724,10 @@
     "folder": "<раздел устройства>/Volkswagen"
    },
    "confidence": "high",
-   "basis": "Общеупотребительное сокращение и вариант регистра. Вариантов: 2, файлов: 23; общих SHA с папкой Volkswagen: 0.",
+   "basis": "Общеупотребительное сокращение и вариант регистра. Вариантов: 2, файлов: 20; общих SHA с папкой Volkswagen: 0.",
    "counts": {
-    "files": 23,
-    "unique_sha": 23,
+    "files": 20,
+    "unique_sha": 20,
     "duplicate_sha": 0
    },
    "brand": "Volkswagen",
@@ -3394,18 +2740,16 @@
    "aliases": [
     {
      "name": "VW",
-     "files": 6,
-     "unique_sha": 6,
+     "files": 5,
+     "unique_sha": 5,
      "sections": [
       "Calculators/ECU",
-      "Calculators/EU_US_RU",
-      "Calculators/PIN"
+      "Calculators/EU_US_RU"
      ],
      "directories": [
       "Calculators/ECU/VW",
       "Calculators/EU_US_RU/VW/Touareg",
-      "Calculators/EU_US_RU/VW/Vento",
-      "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66"
+      "Calculators/EU_US_RU/VW/Vento"
      ],
      "case_only": false,
      "similarity": 0.33,
@@ -3414,15 +2758,13 @@
     },
     {
      "name": "Vw",
-     "files": 17,
-     "unique_sha": 17,
+     "files": 15,
+     "unique_sha": 15,
      "sections": [
-      "Calculators/CRYPTO+",
-      "Calculators/Service calc"
+      "Calculators/CRYPTO+"
      ],
      "directories": [
-      "Calculators/CRYPTO+/Vw",
-      "Calculators/Service calc/Vw"
+      "Calculators/CRYPTO+/Vw"
      ],
      "case_only": false,
      "similarity": 0.33,
@@ -3451,10 +2793,7 @@
     "Calculators/ECU/VW/EDC16 95320.cal",
     "Calculators/ECU/VW/EDC16.CAL",
     "Calculators/EU_US_RU/VW/Touareg/VWTouareg2004.cal",
-    "Calculators/EU_US_RU/VW/Vento/VWVentoTRW.cal",
-    "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
-    "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
-    "Calculators/Service calc/Vw/T4 93C86 tacho off.cal"
+    "Calculators/EU_US_RU/VW/Vento/VWVentoTRW.cal"
    ],
    "paths_complete": true
   },
@@ -3530,9 +2869,9 @@
    "confidence": "high",
    "basis": "Имена декодируются из cp437 в UTF-8: папки «Обновы»/«обновы» и «ПА 8090 Беларусь», а также имена файлов с русскими буквами; байты CAL не затронуты.",
    "counts": {
-    "files": 18,
-    "unique_sha": 14,
-    "duplicate_sha": 4
+    "files": 16,
+    "unique_sha": 13,
+    "duplicate_sha": 3
    },
    "repaired_directories": [],
    "repaired_filenames": [
@@ -3579,10 +2918,6 @@
     {
      "original": "Yamaha WaveRunner 93╨í46.cal",
      "repaired": "Yamaha WaveRunner 93С46.cal"
-    },
-    {
-     "original": "Yuke  BCU PIN immo 93╤ü66.cal",
-     "repaired": "Yuke  BCU PIN immo 93с66.cal"
     }
    ],
    "paths": [
@@ -3601,79 +2936,20 @@
     "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
     "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
     "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
-    "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-    "Calculators/OTHER/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal",
-    "Calculators/PIN/Nissan/Yuke/Yuke  BCU PIN immo 93╤ü66.cal"
-   ],
-   "paths_complete": true
-  },
-  {
-   "id": "E02",
-   "type": "broken_encoding",
-   "title": "Папки с двойными пробелами в имени",
-   "proposed": {
-    "section": "без изменения раздела",
-    "folder": "нормализовать пробелы в имени папки"
-   },
-   "confidence": "high",
-   "basis": "Двойные пробелы в RENRNC640-10  NAVI_TV и B5 Dash VDO  93c66; смысл имени не меняется.",
-   "counts": {
-    "files": 2,
-    "unique_sha": 1,
-    "duplicate_sha": 1
-   },
-   "directories": [
-    {
-     "path": "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66",
-     "files": 1,
-     "unique_sha": 1
-    },
-    {
-     "path": "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66",
-     "files": 1,
-     "unique_sha": 1
-    }
-   ],
-   "paths": [
-    "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
-    "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal"
+    "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal"
    ],
    "paths_complete": true
   }
  ],
  "coverage": {
-  "groups": 31,
-  "files": 3028,
-  "unique_sha": 2712,
-  "group_listings": 3248,
-  "remaining_active_cal_paths": 185,
+  "groups": 24,
+  "files": 2684,
+  "unique_sha": 2502,
+  "group_listings": 2850,
+  "remaining_active_cal_paths": 127,
   "note": "Файл может входить в две группы разного типа (например, Huyndai в SRS и в опечатках); покрытие считается по уникальным путям."
  },
  "next_groups": [
-  {
-   "id": "P08",
-   "title": "OTHER: зеркало утилит в корне каталога",
-   "type": "parallel_sections",
-   "files": 176,
-   "unique_sha": 176,
-   "confidence": "high",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/<функция>"
-   }
-  },
-  {
-   "id": "P04",
-   "title": "US-Euro converter и USA-Euro converter",
-   "type": "parallel_sections",
-   "files": 96,
-   "unique_sha": 76,
-   "confidence": "high",
-   "proposed": {
-    "section": "Утилиты",
-    "folder": "Утилиты/Конвертеры US-EU"
-   }
-  },
   {
    "id": "P06",
    "title": "Региональные France, Germany, CHINA повторяют Dashboard",
@@ -3699,18 +2975,6 @@
    }
   },
   {
-   "id": "S-kia",
-   "title": "Kia: варианты написания папки",
-   "type": "brand_spelling",
-   "files": 49,
-   "unique_sha": 49,
-   "confidence": "high",
-   "proposed": {
-    "section": "по разделу устройства",
-    "folder": "<раздел устройства>/Kia"
-   }
-  },
-  {
    "id": "S-landrover",
    "title": "Land Rover: варианты написания папки",
    "type": "brand_spelling",
@@ -3726,8 +2990,8 @@
    "id": "S-volkswagen",
    "title": "Volkswagen: варианты написания папки",
    "type": "brand_spelling",
-   "files": 23,
-   "unique_sha": 23,
+   "files": 20,
+   "unique_sha": 20,
    "confidence": "high",
    "proposed": {
     "section": "по разделу устройства",
@@ -3738,24 +3002,12 @@
    "id": "E01",
    "title": "Пути с битой кодировкой UTF-8",
    "type": "broken_encoding",
-   "files": 18,
-   "unique_sha": 14,
+   "files": 16,
+   "unique_sha": 13,
    "confidence": "high",
    "proposed": {
     "section": "без изменения раздела",
     "folder": "переименовать папку и файл по декодированному имени"
-   }
-  },
-  {
-   "id": "S-bmw",
-   "title": "BMW: варианты написания папки",
-   "type": "brand_spelling",
-   "files": 13,
-   "unique_sha": 13,
-   "confidence": "high",
-   "proposed": {
-    "section": "по разделу устройства",
-    "folder": "<раздел устройства>/BMW"
    }
   },
   {
@@ -3783,6 +3035,18 @@
    }
   },
   {
+   "id": "S-bmw",
+   "title": "BMW: варианты написания папки",
+   "type": "brand_spelling",
+   "files": 8,
+   "unique_sha": 8,
+   "confidence": "high",
+   "proposed": {
+    "section": "по разделу устройства",
+    "folder": "<раздел устройства>/BMW"
+   }
+  },
+  {
    "id": "D-cat-jetski",
    "title": "Jet ski: гидроциклы без папки марки",
    "type": "category_direct",
@@ -3792,6 +3056,42 @@
    "proposed": {
     "section": "Мототехника",
     "folder": "Мототехника/Гидроциклы/<марка>"
+   }
+  },
+  {
+   "id": "S-peugeot",
+   "title": "Peugeot: варианты написания папки",
+   "type": "brand_spelling",
+   "files": 5,
+   "unique_sha": 5,
+   "confidence": "high",
+   "proposed": {
+    "section": "по разделу устройства",
+    "folder": "<раздел устройства>/Peugeot"
+   }
+  },
+  {
+   "id": "D-root-peugeot-bsi",
+   "title": "Peugeot: BSI в корне каталога",
+   "type": "root_brand_section",
+   "files": 3,
+   "unique_sha": 3,
+   "confidence": "high",
+   "proposed": {
+    "section": "BSI и кузовные блоки",
+    "folder": "BSI и кузовные блоки/Peugeot"
+   }
+  },
+  {
+   "id": "D-ATV-brpbombardier",
+   "title": "ATV: файлы марки BRP (Bombardier) без папки марки",
+   "type": "direct_section",
+   "files": 2,
+   "unique_sha": 2,
+   "confidence": "high",
+   "proposed": {
+    "section": "Мототехника",
+    "folder": "Мототехника/ATV/BRP (Bombardier)"
    }
   }
  ]

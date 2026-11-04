@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 90740,
-      "sha256": "93a51a4930bc7a9a5ddba8b0071ced593fb21c4522efb1c5a24b11c08d0603e4"
+      "bytes": 93730,
+      "sha256": "a7630cfc29a421c29fa6e31c2f0d3e0403b48393a41a9866a6085a89056d96db"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2472,
-      "sha256": "b9c1756702b35d81fd3384c90272c94309d7e10e701e1482f96d654818541d2b"
+      "bytes": 2509,
+      "sha256": "7ba6f08496971f7cf2e9e14db57b7e2b2385f5e0d14e99b9dd9cadd1a6a9b3f7"
     },
     {
       "path": "cal-source.js",
@@ -327,9 +327,14 @@
       "sha256": "eeae55fba2d9c6340c667319945fab615254a67c95a624c9a006a10ddd44acfe"
     },
     {
+      "path": "catalog-organization-utilities.js",
+      "bytes": 46810,
+      "sha256": "877651a56e0fe87a0237cb92ffc0e6b8dab83877e38c8d58bbf1f1365289915f"
+    },
+    {
       "path": "catalog-organization.js",
-      "bytes": 6517,
-      "sha256": "88c24e51c0327d48802321571b7cf647d074f1fdb964ecc7027ccc751dc4f06e"
+      "bytes": 6738,
+      "sha256": "336d2268a70570b5c2464c3d8c86afe35232b7a2f5ff03ad4d27da7ee680a255"
     },
     {
       "path": "catalog-parts.json",
@@ -1338,8 +1343,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11834,
-      "sha256": "93372ba210f5b94a6194eeec7b8dba97fe983c8059c1148d6ac52f00ed22b137"
+      "bytes": 11892,
+      "sha256": "1d0d5f58c7b089c5479d2d8dd1b78d78608153e5ff2c9009eff7862319a25490"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1513,13 +1518,13 @@
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.json",
-      "bytes": 141268,
-      "sha256": "d7709c85589bc1773a04aa5f83a5e1f6053cbfe6d8d5db3590962d582cbc6c95"
+      "bytes": 107182,
+      "sha256": "e3ea82cdd184f21f3b67e6003b7a55344e1fcd1183a8dad04af6448387bc07be"
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.md",
-      "bytes": 14575,
-      "sha256": "4b7f0cd08d64c3f45b1bf8f0c21b8c2948c66b1a5f5c22e4b89b8cb739b1f6be"
+      "bytes": 12229,
+      "sha256": "6f496d53b8e7128a433a31fc1f350e75754bac98064f109684a16ed712e19859"
     },
     {
       "path": "reports/catalog-organization-airbag-srs-2026-11-04.md",
@@ -1560,6 +1565,16 @@
       "path": "reports/catalog-organization-root-airbag.md",
       "bytes": 28615,
       "sha256": "3e674bd479344675c6b6f7e96dc8e13d359a0f59139570011385c3ce78e3e02a"
+    },
+    {
+      "path": "reports/catalog-organization-utilities-2026-11-04.json",
+      "bytes": 178944,
+      "sha256": "74405e81e6ec9c79845e5b2f7eaefe4f9a015c9ba4cd533faae97737d2fc70df"
+    },
+    {
+      "path": "reports/catalog-organization-utilities-2026-11-04.md",
+      "bytes": 54703,
+      "sha256": "76ff48e4fcbe0ec3bd35294574354b52345b3339c047882cef6cf859ef96ca89"
     },
     {
       "path": "reports/image-reference-groups-2026-11-02.csv",
@@ -1888,8 +1903,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 30583,
-      "sha256": "84f8663367fd5458b96b2b5affb1e25b4385ec1ca793853b3163b371383d1051"
+      "bytes": 36224,
+      "sha256": "bed6e28b84da196a3f85997754de5669c23d74f969d1910168d87ca22cb21e14"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -1978,13 +1993,13 @@
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 30782,
-      "sha256": "28d028092cd94116914f7f0af9413f2904c2d85167d4b1416c37e373ffd02daf"
+      "bytes": 38416,
+      "sha256": "b2c3fc085e4a80e480230c9565975ed65c18495e1e19b158933bebe36710169f"
     },
     {
       "path": "tools/catalog_inventory.py",
-      "bytes": 56792,
-      "sha256": "8ec51e954653912fa02b47af2c2c5436b4a141583e5b07bbbb2aa1d55740e735"
+      "bytes": 57237,
+      "sha256": "ca5d95d1888148b6f321fd35eb865772c0a446cbc9964da1253cb915de221191"
     },
     {
       "path": "tools/package_release.py",
