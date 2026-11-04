@@ -1,0 +1,1911 @@
+{
+ "task": "T-008",
+ "scope": "Read-only analysis; synthetic dumps; both implementations are ours (not an original-iProg oracle).",
+ "pairs": [
+  {
+   "id": 1,
+   "size": 8192,
+   "text": {
+    "sha": "709f5e618e96b204a21e92a262307528d65beb85ca07f53e6524f8dd87190fbf",
+    "path": "Calculators/Airbag/Ford/2S6T 14B056 BN.cal",
+    "otherPaths": [
+     "Calculators/SRS/Ford/2S6T 14B056 BN.cal"
+    ]
+   },
+   "binary": {
+    "sha": "e3102a11ba6514a26c57b1503038528a992fff93b65ca39fb27c87dcdae8cbc0",
+    "path": "Calculators/Airbag/Ford/Fusion/2S6T 14B056 BN.cal",
+    "otherPaths": [
+     "Calculators/SRS/Ford/Fusion/2S6T 14B056 BN.cal"
+    ]
+   },
+   "labels": [
+    " ",
+    "Калькулятор для Ford Fusion\\2S6T 14B056 BN",
+    "Eeprom 95160",
+    "Чтобы стереть CRASH и ошибки",
+    "нажмите кнопку <Применить>."
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [
+     {
+      "start": "0xf8",
+      "end": "0xfa",
+      "length": 2
+     },
+     {
+      "start": "0x290",
+      "end": "0x291",
+      "length": 1
+     }
+    ],
+    "binary": [
+     {
+      "start": "0xf8",
+      "end": "0xfa",
+      "length": 2
+     },
+     {
+      "start": "0x380",
+      "end": "0x381",
+      "length": 1
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x290",
+      "end": "0x291",
+      "length": 1,
+      "value": "0x00"
+     }
+    ],
+    "onlyBinary": [
+     {
+      "start": "0x380",
+      "end": "0x381",
+      "length": 1,
+      "value": "0x00"
+     }
+    ]
+   },
+   "onApplyWrites": {
+    "text": [
+     {
+      "start": "0x27c",
+      "end": "0x280",
+      "length": 4,
+      "value": "0xff"
+     },
+     {
+      "start": "0x290",
+      "end": "0x3df",
+      "length": 335,
+      "value": "0xff"
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x27b",
+      "end": "0x280",
+      "length": 5,
+      "value": "0xff"
+     },
+     {
+      "start": "0x290",
+      "end": "0x3c0",
+      "length": 304,
+      "value": "0xff"
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x3c0",
+      "end": "0x3df",
+      "length": 31,
+      "value": "0xff"
+     }
+    ],
+    "onlyBinary": [
+     {
+      "start": "0x27b",
+      "end": "0x27c",
+      "length": 1,
+      "value": "0xff"
+     }
+    ],
+    "sameAddressDifferentValue": [],
+    "textBytes": 339,
+    "binaryBytes": 309,
+    "textMaxAddress": "0x3de",
+    "binaryMaxAddress": "0x3bf"
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 339,
+      "changedBytesBinary": 309,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 338,
+      "changedBytesBinary": 308,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "selfConsistency": [
+    {
+     "fill": 0,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    },
+    {
+     "fill": 85,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    }
+   ],
+   "classification": [
+    "different OnShow read addresses (crash-flag byte)",
+    "different OnApply write footprint"
+   ]
+  },
+  {
+   "id": 2,
+   "size": 8192,
+   "text": {
+    "sha": "44156680bf2e0ca156f4a9aad90fcf3403db59800130a967df8bceeda0e4b3a9",
+    "path": "Calculators/Airbag/Ford/603 95 10 00.cal",
+    "otherPaths": [
+     "Calculators/SRS/Ford/603 95 10 00.cal"
+    ]
+   },
+   "binary": {
+    "sha": "c1188383e16fc849ceb0f7533ca2735ead8e125026d9437930b7c8b33e3d623b",
+    "path": "Calculators/Airbag/Ford/Mondeo/603 95 10 00.cal",
+    "otherPaths": [
+     "Calculators/SRS/Ford/Mondeo/603 95 10 00.cal"
+    ]
+   },
+   "labels": [
+    " ",
+    "Калькулятор для Ford Mondeo\\603 95 10 00",
+    "Eeprom 95160",
+    "Чтобы стереть CRASH и ошибки",
+    "нажмите кнопку <Применить>."
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [
+     {
+      "start": "0x2ea",
+      "end": "0x2ec",
+      "length": 2
+     },
+     {
+      "start": "0x330",
+      "end": "0x331",
+      "length": 1
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x2ea",
+      "end": "0x2ec",
+      "length": 2
+     },
+     {
+      "start": "0x320",
+      "end": "0x321",
+      "length": 1
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x330",
+      "end": "0x331",
+      "length": 1,
+      "value": "0x00"
+     }
+    ],
+    "onlyBinary": [
+     {
+      "start": "0x320",
+      "end": "0x321",
+      "length": 1,
+      "value": "0x00"
+     }
+    ]
+   },
+   "onApplyWrites": {
+    "text": [
+     {
+      "start": "0x29c",
+      "end": "0x2b4",
+      "length": 24,
+      "value": "0x00"
+     },
+     {
+      "start": "0x2b4",
+      "end": "0x2d0",
+      "length": 28,
+      "value": "0xff"
+     },
+     {
+      "start": "0x320",
+      "end": "0x456",
+      "length": 310,
+      "value": "0x00"
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x29c",
+      "end": "0x2b4",
+      "length": 24,
+      "value": "0x00"
+     },
+     {
+      "start": "0x2b4",
+      "end": "0x2d2",
+      "length": 30,
+      "value": "0xff"
+     },
+     {
+      "start": "0x320",
+      "end": "0x456",
+      "length": 310,
+      "value": "0x00"
+     }
+    ],
+    "onlyText": [],
+    "onlyBinary": [
+     {
+      "start": "0x2d0",
+      "end": "0x2d2",
+      "length": 2,
+      "value": "0xff"
+     }
+    ],
+    "sameAddressDifferentValue": [],
+    "textBytes": 362,
+    "binaryBytes": 364,
+    "textMaxAddress": "0x455",
+    "binaryMaxAddress": "0x455"
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 0,
+        "field": "text",
+        "text": "Обнаружен CRASH!",
+        "binary": "Дамп чистый!"
+       },
+       {
+        "control": 0,
+        "field": "color",
+        "text": 255,
+        "binary": 16711680
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 28,
+      "changedBytesBinary": 30,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 334,
+      "changedBytesBinary": 334,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 361,
+      "changedBytesBinary": 363,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "selfConsistency": [
+    {
+     "fill": 0,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Обнаружен CRASH!"
+     },
+     "binary": {
+      "statusBeforeApply": "Дамп чистый!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    },
+    {
+     "fill": 85,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Обнаружен CRASH!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    }
+   ],
+   "classification": [
+    "different OnShow read addresses (crash-flag byte)",
+    "different OnApply write footprint"
+   ]
+  },
+  {
+   "id": 3,
+   "size": 8192,
+   "text": {
+    "sha": "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba",
+    "path": "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+    "otherPaths": [
+     "Calculators/SRS/Huyndai/95910-3╨Ü400.cal"
+    ]
+   },
+   "binary": {
+    "sha": "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54",
+    "path": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
+    "otherPaths": [
+     "Calculators/SRS/Huyndai/Sonata/95910-3╨Ü400.cal"
+    ]
+   },
+   "labels": [
+    " ",
+    "Калькулятор для Sonata\\95910-3К400",
+    " Eeprom 25640",
+    "Чтобы стереть CRASH и ошибки",
+    "нажмите кнопку <Применить>."
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [
+     {
+      "start": "0x200",
+      "end": "0x201",
+      "length": 1
+     },
+     {
+      "start": "0x400",
+      "end": "0x402",
+      "length": 2
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x200",
+      "end": "0x201",
+      "length": 1
+     },
+     {
+      "start": "0x400",
+      "end": "0x402",
+      "length": 2
+     }
+    ],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [
+     {
+      "start": "0x100",
+      "end": "0x152",
+      "length": 82,
+      "value": "0x00"
+     },
+     {
+      "start": "0x200",
+      "end": "0x2f0",
+      "length": 240,
+      "value": "0x00"
+     },
+     {
+      "start": "0xd00",
+      "end": "0xdff",
+      "length": 255,
+      "value": "0x00"
+     },
+     {
+      "start": "0xdff",
+      "end": "0xe00",
+      "length": 1,
+      "value": "0xff"
+     },
+     {
+      "start": "0xe00",
+      "end": "0xec9",
+      "length": 201,
+      "value": "0x00"
+     },
+     {
+      "start": "0xec9",
+      "end": "0xf00",
+      "length": 55,
+      "value": "0xff"
+     },
+     {
+      "start": "0xf00",
+      "end": "0xfff",
+      "length": 255,
+      "value": "0x00"
+     },
+     {
+      "start": "0xfff",
+      "end": "0x1000",
+      "length": 1,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1000",
+      "end": "0x1064",
+      "length": 100,
+      "value": "0x00"
+     },
+     {
+      "start": "0x1064",
+      "end": "0x1100",
+      "length": 156,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1100",
+      "end": "0x11ff",
+      "length": 255,
+      "value": "0x00"
+     },
+     {
+      "start": "0x11ff",
+      "end": "0x1200",
+      "length": 1,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1200",
+      "end": "0x1264",
+      "length": 100,
+      "value": "0x00"
+     },
+     {
+      "start": "0x1264",
+      "end": "0x1300",
+      "length": 156,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1308",
+      "end": "0x1310",
+      "length": 8,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1314",
+      "end": "0x1320",
+      "length": 12,
+      "value": "0xff"
+     },
+     {
+      "start": "0x1324",
+      "end": "0x1ffe",
+      "length": 3290,
+      "value": "0xff"
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x100",
+      "end": "0x160",
+      "length": 96,
+      "value": "0x00"
+     },
+     {
+      "start": "0x200",
+      "end": "0x2f0",
+      "length": 240,
+      "value": "0x00"
+     },
+     {
+      "start": "0xd00",
+      "end": "0x1324",
+      "length": 1572,
+      "value": "0x00"
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x1324",
+      "end": "0x1ffe",
+      "length": 3290,
+      "value": "0xff"
+     }
+    ],
+    "onlyBinary": [
+     {
+      "start": "0x152",
+      "end": "0x160",
+      "length": 14,
+      "value": "0x00"
+     },
+     {
+      "start": "0x1300",
+      "end": "0x1308",
+      "length": 8,
+      "value": "0x00"
+     },
+     {
+      "start": "0x1310",
+      "end": "0x1314",
+      "length": 4,
+      "value": "0x00"
+     },
+     {
+      "start": "0x1320",
+      "end": "0x1324",
+      "length": 4,
+      "value": "0x00"
+     }
+    ],
+    "sameAddressDifferentValue": [
+     {
+      "start": "0xdff",
+      "end": "0xe00",
+      "length": 1,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0xec9",
+      "end": "0xf00",
+      "length": 55,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0xfff",
+      "end": "0x1000",
+      "length": 1,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0x1064",
+      "end": "0x1100",
+      "length": 156,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0x11ff",
+      "end": "0x1200",
+      "length": 1,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0x1264",
+      "end": "0x1300",
+      "length": 156,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0x1308",
+      "end": "0x1310",
+      "length": 8,
+      "value": "0xtext=255,binary=0"
+     },
+     {
+      "start": "0x1314",
+      "end": "0x1320",
+      "length": 12,
+      "value": "0xtext=255,binary=0"
+     }
+    ],
+    "textBytes": 5168,
+    "binaryBytes": 1908,
+    "textMaxAddress": "0x1ffd",
+    "binaryMaxAddress": "0x1323"
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 3680,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 1488,
+      "changedBytesBinary": 1908,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 5146,
+      "changedBytesBinary": 1900,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "selfConsistency": [
+    {
+     "fill": 0,
+     "text": {
+      "statusBeforeApply": "Дамп чистый!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Дамп чистый!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    },
+    {
+     "fill": 85,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    }
+   ],
+   "classification": [
+    "different OnApply write footprint"
+   ]
+  },
+  {
+   "id": 4,
+   "size": 8192,
+   "text": {
+    "sha": "b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e",
+    "path": "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/Fabia 93C86 2006 decryptor.cal"
+    ]
+   },
+   "binary": {
+    "sha": "faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a",
+    "path": "Calculators/Fabia 93C86 2006 decryptor.cal",
+    "otherPaths": []
+   },
+   "labels": [
+    "Декриптор EEPROM",
+    "для Skoda Fabia 2006 года.",
+    "EEPROM 93C86.",
+    "Выберите нужное действие и",
+    "нажмите кнопку <Применить>.",
+    " "
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 0,
+    "binaryBytes": 0,
+    "textMaxAddress": null,
+    "binaryMaxAddress": null
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "validSignatureRuns": {
+    "dumpBytes": 10240,
+    "rows": [
+     {
+      "mode": "decode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4072,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4080,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4088,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     }
+    ],
+    "realChipSizeProbe": {
+     "dumpBytes": 2048,
+     "rows": [
+      {
+       "mode": "decode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x258a"
+      },
+      {
+       "mode": "decode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x258a"
+      },
+      {
+       "mode": "encode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      },
+      {
+       "mode": "encode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      }
+     ]
+    }
+   },
+   "classification": [
+    "cosmetic: initial message text is empty in text form and a single space in binary form"
+   ]
+  },
+  {
+   "id": 5,
+   "size": 8192,
+   "text": {
+    "sha": "b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e",
+    "path": "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/Fabia 93C86 2006 decryptor.cal"
+    ]
+   },
+   "binary": {
+    "sha": "546b8214be37173aae84b0ec7e1176491c085d6319d43ecb6d4a19fde0c0c149",
+    "path": "Calculators/Dashboard/Skoda/Fabia/Fabia 93C86 2006 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/Fabia/Fabia 93C86 2006 decryptor.cal"
+    ]
+   },
+   "labels": [
+    "Декриптор EEPROM",
+    "для Skoda Fabia 2006 года.",
+    "EEPROM 93C86.",
+    "Выберите нужное действие и",
+    "нажмите кнопку <Применить>.",
+    " "
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 0,
+    "binaryBytes": 0,
+    "textMaxAddress": null,
+    "binaryMaxAddress": null
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "validSignatureRuns": {
+    "dumpBytes": 10240,
+    "rows": [
+     {
+      "mode": "decode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4072,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4080,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4088,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     }
+    ],
+    "realChipSizeProbe": {
+     "dumpBytes": 2048,
+     "rows": [
+      {
+       "mode": "decode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x258a"
+      },
+      {
+       "mode": "decode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x258a"
+      },
+      {
+       "mode": "encode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      },
+      {
+       "mode": "encode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      }
+     ]
+    }
+   },
+   "classification": [
+    "cosmetic: initial message text is empty in text form and a single space in binary form"
+   ]
+  },
+  {
+   "id": 6,
+   "size": 65536,
+   "text": {
+    "sha": "630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1",
+    "path": "Calculators/Dashboard/Skoda/Super B 93C86 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/Super B 93C86 decryptor.cal"
+    ]
+   },
+   "binary": {
+    "sha": "2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970",
+    "path": "Calculators/Super B 93C86 decryptor.cal",
+    "otherPaths": []
+   },
+   "labels": [
+    "Декриптор EEPROM",
+    "для Skoda Super B.",
+    "EEPROM 93C86.",
+    "Выберите нужное действие и",
+    "нажмите кнопку <Применить>.",
+    " "
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 0,
+    "binaryBytes": 0,
+    "textMaxAddress": null,
+    "binaryMaxAddress": null
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4088,
+      "changedBytesBinary": 4088,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4088,
+      "changedBytesBinary": 4088,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4076,
+      "changedBytesBinary": 4076,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "validSignatureRuns": {
+    "dumpBytes": 10240,
+    "rows": [
+     {
+      "mode": "decode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4078,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4075,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     }
+    ],
+    "realChipSizeProbe": {
+     "dumpBytes": 2048,
+     "rows": [
+      {
+       "mode": "decode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2572"
+      },
+      {
+       "mode": "decode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2572"
+      },
+      {
+       "mode": "encode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      },
+      {
+       "mode": "encode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      }
+     ]
+    }
+   },
+   "classification": [
+    "cosmetic: initial message text is empty in text form and a single space in binary form"
+   ]
+  },
+  {
+   "id": 7,
+   "size": 65536,
+   "text": {
+    "sha": "630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1",
+    "path": "Calculators/Dashboard/Skoda/Super B 93C86 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/Super B 93C86 decryptor.cal"
+    ]
+   },
+   "binary": {
+    "sha": "aa8213cea0bc0b6b3fe3f6d3ce61818f0a1e72e1cd7965aa9f99c945821bbc98",
+    "path": "Calculators/Dashboard/Skoda/SuperB/Super B 93C86 decryptor.cal",
+    "otherPaths": [
+     "Calculators/Car/S/Skoda/SuperB/Super B 93C86 decryptor.cal"
+    ]
+   },
+   "labels": [
+    "Декриптор EEPROM",
+    "для Skoda Super B.",
+    "EEPROM 93C86.",
+    "Выберите нужное действие и",
+    "нажмите кнопку <Применить>.",
+    " "
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [],
+    "binary": [],
+    "onlyText": [],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 0,
+    "binaryBytes": 0,
+    "textMaxAddress": null,
+    "binaryMaxAddress": null
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4088,
+      "changedBytesBinary": 4088,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4088,
+      "changedBytesBinary": 4088,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 6,
+        "field": "text",
+        "text": "",
+        "binary": " "
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 4076,
+      "changedBytesBinary": 4076,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "validSignatureRuns": {
+    "dumpBytes": 10240,
+    "rows": [
+     {
+      "mode": "decode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4081,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "decode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4078,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 1,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 2,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4079,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     },
+     {
+      "mode": "encode",
+      "seed": 3,
+      "bytesEqual": true,
+      "bytesChangedByTextVersion": 4075,
+      "finalMessageText": "Готово",
+      "controlDiffs": []
+     }
+    ],
+    "realChipSizeProbe": {
+     "dumpBytes": 2048,
+     "rows": [
+      {
+       "mode": "decode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2572"
+      },
+      {
+       "mode": "decode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2572"
+      },
+      {
+       "mode": "encode",
+       "form": "text",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      },
+      {
+       "mode": "encode",
+       "form": "binary",
+       "result": "error",
+       "error": "Выход за границы BIN: 0x2000"
+      }
+     ]
+    }
+   },
+   "classification": [
+    "cosmetic: initial message text is empty in text form and a single space in binary form"
+   ]
+  },
+  {
+   "id": 8,
+   "size": 8192,
+   "text": {
+    "sha": "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f",
+    "path": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+    "otherPaths": []
+   },
+   "binary": {
+    "sha": "5c6b0d755437edaf5ba8859356a465c7925f0fa40dbabd4a679381255a1f86aa",
+    "path": "Calculators/Airbag/Nissan/Micra/0 285 001 420.cal",
+    "otherPaths": [
+     "Calculators/SRS/Nissan/Micra/0 285 001 420.cal"
+    ]
+   },
+   "labels": [
+    " ",
+    "Калькулятор для Nissan\\Primera\\0 285 001 420",
+    "HC12BE32",
+    "Чтобы стереть CRASH и ошибки",
+    "нажмите кнопку <Применить>."
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [
+     {
+      "start": "0x0",
+      "end": "0x2",
+      "length": 2
+     },
+     {
+      "start": "0x60",
+      "end": "0x62",
+      "length": 2
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x0",
+      "end": "0x2",
+      "length": 2
+     },
+     {
+      "start": "0x50",
+      "end": "0x52",
+      "length": 2
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x60",
+      "end": "0x62",
+      "length": 2,
+      "value": "0x00"
+     }
+    ],
+    "onlyBinary": [
+     {
+      "start": "0x50",
+      "end": "0x52",
+      "length": 2,
+      "value": "0x00"
+     }
+    ]
+   },
+   "onApplyWrites": {
+    "text": [
+     {
+      "start": "0x10",
+      "end": "0x100",
+      "length": 240,
+      "value": "0xff"
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x10",
+      "end": "0x100",
+      "length": 240,
+      "value": "0xff"
+     }
+    ],
+    "onlyText": [],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 240,
+    "binaryBytes": 240,
+    "textMaxAddress": "0xff",
+    "binaryMaxAddress": "0xff"
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 240,
+      "changedBytesBinary": 240,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": [
+       {
+        "control": 0,
+        "field": "text",
+        "text": "Дамп чистый!",
+        "binary": "Обнаружен CRASH!"
+       },
+       {
+        "control": 0,
+        "field": "color",
+        "text": 16711680,
+        "binary": 255
+       }
+      ]
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 239,
+      "changedBytesBinary": 239,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "selfConsistency": [
+    {
+     "fill": 0,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    },
+    {
+     "fill": 85,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    }
+   ],
+   "classification": [
+    "different OnShow read addresses (crash-flag byte)"
+   ]
+  },
+  {
+   "id": 9,
+   "size": 8192,
+   "text": {
+    "sha": "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff",
+    "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+    "otherPaths": []
+   },
+   "binary": {
+    "sha": "77038d1df5d3b5861316ab438863b3112bae122a1c37d31e08a74475ade25bc9",
+    "path": "Calculators/Airbag/Honda/SEA-G820-M1.cal",
+    "otherPaths": [
+     "Calculators/SRS/Honda/SEA-G820-M1.cal"
+    ]
+   },
+   "labels": [
+    " ",
+    "Калькулятор для Honda\\SEA-G820-M1",
+    "25320",
+    "Чтобы стереть CRASH и ошибки",
+    "нажмите кнопку <Применить>."
+   ],
+   "formControlsEqualIgnoringNames": true,
+   "formDifferences": [],
+   "onShowReads": {
+    "text": [
+     {
+      "start": "0x580",
+      "end": "0x581",
+      "length": 1
+     },
+     {
+      "start": "0x900",
+      "end": "0x902",
+      "length": 2
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x580",
+      "end": "0x581",
+      "length": 1
+     },
+     {
+      "start": "0x900",
+      "end": "0x902",
+      "length": 2
+     }
+    ],
+    "onlyText": [],
+    "onlyBinary": []
+   },
+   "onApplyWrites": {
+    "text": [
+     {
+      "start": "0x570",
+      "end": "0x800",
+      "length": 656,
+      "value": "0x00"
+     }
+    ],
+    "binary": [
+     {
+      "start": "0x580",
+      "end": "0x800",
+      "length": 640,
+      "value": "0x00"
+     }
+    ],
+    "onlyText": [
+     {
+      "start": "0x570",
+      "end": "0x580",
+      "length": 16,
+      "value": "0x00"
+     }
+    ],
+    "onlyBinary": [],
+    "sameAddressDifferentValue": [],
+    "textBytes": 656,
+    "binaryBytes": 640,
+    "textMaxAddress": "0x7ff",
+    "binaryMaxAddress": "0x7ff"
+   },
+   "results": [
+    {
+     "fill": 0,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": 255,
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 656,
+      "changedBytesBinary": 640,
+      "controlDiffs": []
+     }
+    },
+    {
+     "fill": "pattern",
+     "show": {
+      "bytesEqual": true,
+      "changedBytesText": 0,
+      "changedBytesBinary": 0,
+      "controlDiffs": []
+     },
+     "apply": {
+      "bytesEqual": false,
+      "changedBytesText": 654,
+      "changedBytesBinary": 638,
+      "controlDiffs": []
+     }
+    }
+   ],
+   "selfConsistency": [
+    {
+     "fill": 0,
+     "text": {
+      "statusBeforeApply": "Дамп чистый!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Дамп чистый!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    },
+    {
+     "fill": 85,
+     "text": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     },
+     "binary": {
+      "statusBeforeApply": "Обнаружен CRASH!",
+      "statusAfterApplyAndShowAgain": "Дамп чистый!"
+     }
+    }
+   ],
+   "classification": [
+    "different OnApply write footprint"
+   ]
+  }
+ ],
+ "binaryTwins": [
+  {
+   "shas": [
+    "faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a",
+    "546b8214be37173aae84b0ec7e1176491c085d6319d43ecb6d4a19fde0c0c149"
+   ],
+   "sameFormAndInstructionsAndStrings": true,
+   "decodedLength": 1472,
+   "usedBytesEnd": "0x5b4",
+   "differingDecodedBytes": 12,
+   "firstDifferingOffset": "0x5b4",
+   "lastDifferingOffset": "0x5bf",
+   "allDifferencesAfterUsedBytes": true
+  },
+  {
+   "shas": [
+    "2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970",
+    "aa8213cea0bc0b6b3fe3f6d3ce61818f0a1e72e1cd7965aa9f99c945821bbc98"
+   ],
+   "sameFormAndInstructionsAndStrings": true,
+   "decodedLength": 1536,
+   "usedBytesEnd": "0x5fd",
+   "differingDecodedBytes": 3,
+   "firstDifferingOffset": "0x5fd",
+   "lastDifferingOffset": "0x5ff",
+   "allDifferencesAfterUsedBytes": true
+  }
+ ]
+}

@@ -26,3 +26,7 @@ Version 0.5: 29 app checks, 52 total with engine/store. Covers full session rese
 These require only Node and repository contents: `test_source.js` (13), `test_preparation.js` (11), `test_polo.js` (8 groups), `test_catalog_store.js` (8), `test_catalog.js`, and `test_source_pairs.js` (465 pairs × three synthetic vectors). The last suite preserves nine explicitly recorded source-version differences, rather than asserting all same-name files are equivalent. Polo uses a separate direct permutation formulation and four write/readback values. No hardware or original-iProg claim follows from these tests.
 
 `test_source.js` also loads engine and source interpreter as classic browser scripts without CommonJS. The app harness is still a Node adapter, not a rendering test. Private-fixture suites and their old result logs remain historical until the BINs are provided again.
+
+## T-008 pair analysis, 2026-11-04
+
+`node tests/test_t008_pairs.js` runs `tools/analyze_t008_pairs.js` and pins the file-derived findings about the nine differing text/binary pairs (see `reports/T-008-pair-differences-2026-11-04.md`). It uses only repository contents, synthetic dumps and our own engine; it is not an original-iProg comparison and does not pin engine behaviour that may change later.
