@@ -1,0 +1,275 @@
+{
+  "task": "T-012",
+  "scope": "Three original text CALs; current engine vs independent arithmetic. Alternate shift grouping is an unverified hypothesis, never enabled in production.",
+  "restored": 0,
+  "blocked": 3,
+  "files": [
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "bytes": 1432,
+      "paths": [
+        "Calculators/ECU/Audi/ECU 95080.cal"
+      ],
+      "status": "blocked-original-self-inconsistency",
+      "required": "Corrected author source or exact original-iProg output/format reference establishing intended login copies.",
+      "rows": [
+        {
+          "input": 0,
+          "acceptedBySource": true,
+          "outputHex": "fb2000000000000000000000000000004b701234",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 14
+        },
+        {
+          "input": 1,
+          "acceptedBySource": true,
+          "outputHex": "fb2000010001000100010001000100014b701234",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 14
+        },
+        {
+          "input": 4660,
+          "acceptedBySource": true,
+          "outputHex": "fb2012341234123412341234123412344b701234",
+          "readback": 4660,
+          "readMessage": "Дамп ОК. Введите логин.",
+          "changedBytes": 12
+        },
+        {
+          "input": 4661,
+          "acceptedBySource": true,
+          "outputHex": "fb2012351235123512351235123512354b701234",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 13
+        },
+        {
+          "input": 65535,
+          "acceptedBySource": true,
+          "outputHex": "fb20ffffffffffffffffffffffffffff4b701234",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 14
+        },
+        {
+          "input": 65536,
+          "acceptedBySource": false,
+          "outputHex": "fb2012348fb4d9fe23486d92b7dc01264b701234",
+          "readback": 4660,
+          "readMessage": "Дамп ОК. Введите логин.",
+          "changedBytes": 0
+        },
+        {
+          "input": 4294967295,
+          "acceptedBySource": false,
+          "outputHex": "fb2012348fb4d9fe23486d92b7dc01264b701234",
+          "readback": 4660,
+          "readMessage": "Дамп ОК. Введите логин.",
+          "changedBytes": 0
+        }
+      ]
+    },
+    {
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "bytes": 2329,
+      "paths": [
+        "Calculators/Dashboard/Hyundai/Grandeur 93C66.cal",
+        "Calculators/Car/H/Hyundai/G/Grandeur 93C66.cal"
+      ],
+      "status": "blocked-missing-original-shift-semantics",
+      "required": "Authoritative source operator precedence or compiled version of this exact source; alternatively original-iProg BIN output for a defined input.",
+      "rows": [
+        {
+          "input": 0,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 99,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 100,
+          "acceptedBySource": true,
+          "outputHex": "fffc01ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 127,
+          "acceptedBySource": true,
+          "outputHex": "fffc01ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 128,
+          "acceptedBySource": true,
+          "outputHex": "fffb07ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 160,
+          "acceptedBySource": true,
+          "outputHex": "fffa1fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 100000,
+          "acceptedBySource": true,
+          "outputHex": "f3ca1e790f3c001e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 62
+        },
+        {
+          "input": 123456,
+          "acceptedBySource": true,
+          "outputHex": "f0ed007800f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 999900,
+          "acceptedBySource": true,
+          "outputHex": "85f10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 999901,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 4294967295,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        }
+      ]
+    },
+    {
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "bytes": 2352,
+      "paths": [
+        "Calculators/Dashboard/Hyundai/Grandier 93S66 Siemens-VDO.cal",
+        "Calculators/Car/H/Hyundai/G/Grandier 93S66 Siemens-VDO.cal"
+      ],
+      "status": "blocked-missing-original-shift-semantics",
+      "required": "Authoritative source operator precedence or compiled version of this exact source; alternatively original-iProg BIN output for a defined input.",
+      "rows": [
+        {
+          "input": 0,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 99,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 100,
+          "acceptedBySource": true,
+          "outputHex": "fffc01ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 127,
+          "acceptedBySource": true,
+          "outputHex": "fffc01ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 128,
+          "acceptedBySource": true,
+          "outputHex": "fffb07ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 160,
+          "acceptedBySource": true,
+          "outputHex": "fffa1fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 100000,
+          "acceptedBySource": true,
+          "outputHex": "f3ca1e790f3c001e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 62
+        },
+        {
+          "input": 123456,
+          "acceptedBySource": true,
+          "outputHex": "f0ed007800f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 999900,
+          "acceptedBySource": true,
+          "outputHex": "85f10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "readback": 0,
+          "readMessage": "Неверный дамп!",
+          "changedBytes": 64
+        },
+        {
+          "input": 999901,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        },
+        {
+          "input": 4294967295,
+          "acceptedBySource": false,
+          "outputHex": "f3ca557a9fc4e90e33587da2c7ec11365b80a5caef14395e83a8cdf2173c6186f3caf51a3f6489aed3f81d42678cb1d6fb20456a8fb4d9fe23486d92b7dc0126",
+          "readback": 100000,
+          "readMessage": "Дамп ОК. Введите пробег.",
+          "changedBytes": 0
+        }
+      ]
+    }
+  ]
+}
