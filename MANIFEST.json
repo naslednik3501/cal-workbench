@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 47081,
-      "sha256": "a844e1fac6221a8d81fb946bb23c585b01a3ef6154b15e5e7d287a28a90b28e8"
+      "bytes": 49361,
+      "sha256": "5d2ab46fece19a95983ec7bb7433eeb7d22b7a9ac393582d3ed3fa6dd85863c2"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1328,8 +1328,8 @@
     },
     {
       "path": "reports/T-003-fis-opcode-2026-11-04.md",
-      "bytes": 11583,
-      "sha256": "ebc63beefc7658506faaa42f299db160190564911033c5af88fa2e42fd74c7d1"
+      "bytes": 12202,
+      "sha256": "3e36b5f1fa82fe233f7c34a7c20d394269c473238c08f13a5ecf0bd855279c09"
     },
     {
       "path": "reports/T-003-native-proof-2026-11-04.json",
@@ -1892,7 +1892,11 @@
       "proof": "Static original iProgPro.exe SHA 14a47659...; not executed",
       "original_iprog": "not executed",
       "hardware": "not tested",
-      "browser_rendering": "not tested"
+      "browser_rendering": "not tested",
+      "pr": 16,
+      "merge": "176bccc79193665b0fa2a288bc7d1bb6a7d37efa",
+      "pages_run": 41846682585,
+      "pages": "success; HTTP 200 and exact index/engine/profile bytes verified"
     }
   },
   "personal_bin_fixtures_included": false
