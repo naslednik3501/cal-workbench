@@ -22,9 +22,14 @@ if(!base||!['localhost','127.0.0.1','[::1]'].includes(new URL(base).hostname))th
   const dump=Buffer.from(Array.from({length:1024},(_,i)=>(i*17+23)&255));dump[0]=dump[1]=0;dump[0x10e]=0x34;dump[0x10f]=0x12;
   await selectSha(ecu);await upload(dump);
   assert.equal(await page.locator('#cal-input-0').inputValue(),'4660');
-  assert.equal(await page.locator('#compatBadge').textContent(),'Только чтение');
+  assert.equal(await page.locator('#compatBadge').textContent(),'Чтение поддерживается');
   for(const id of ['apply','save','selection'])assert(await page.locator('#'+id).isDisabled());
-  assert.match(await page.locator('#compat').textContent(),/apply/);
+  assert.match(await page.locator('#compat').textContent(),/обработчика записи в оригинале нет/);
+  const bsi='a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877';
+  await selectSha(bsi);await upload(Buffer.alloc(256));assert.equal(await page.locator('#compatBadge').textContent(),'Формат поддерживается');
+  assert(!(await page.locator('#apply').isDisabled()));await page.locator('#cal-input-0').fill('123456');await page.locator('#apply').click();
+  assert(await page.evaluate(()=>CalEngine.diff(original,candidate).count>0));assert(!(await page.locator('#save').isDisabled()));
+  await selectSha('e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602');assert.equal(await page.locator('#compatBadge').textContent(),'Пока не поддерживается');assert(await page.locator('#apply').isDisabled());
   // Even a readable OnShow that prepares bytes must never offer those bytes as a result.
   await page.evaluate(()=>{const p=CalSource.parse(new TextEncoder().encode('Size(10,10);Form{}OnShow{@0=77;}OnApply{@1=88;}'));p.partial=true;p.eventErrors={apply:'invalid apply'};program=p;initializeSession();});
   assert.equal(await page.evaluate(()=>session.buffer[0]),77);
@@ -33,7 +38,7 @@ if(!base||!['localhost','127.0.0.1','[::1]'].includes(new URL(base).hostname))th
   // Manual HEX edits still begin from the original, never the hidden prepared bytes.
   await page.evaluate(()=>commitByte(1,22));assert.deepEqual(await page.evaluate(()=>[candidate[0],candidate[1],original[1]]),[0,22,0]);
   await selectSha('5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be');
-  assert(await page.locator('#apply').isDisabled());assert.equal(await page.locator('#compatBadge').textContent(),'Только чтение');
+  assert(await page.locator('#apply').isDisabled());assert.equal(await page.locator('#compatBadge').textContent(),'Частично распознан');
   console.log('PASS partial readers: correct PIN, unavailable write, no prepared download, manual HEX isolation, source warning');
   const assets=await page.evaluate(async()=>{const all=Object.values(CAL_IMAGE_DATA.assets);await Promise.all(all.map(a=>new Promise((ok,no)=>{const i=new Image();i.onload=()=>i.naturalWidth===a.width&&i.naturalHeight===a.height?ok():no(Error(a.src));i.onerror=()=>no(Error(a.src));i.src=a.src;})));return all.length;});
   assert.equal(assets,135);

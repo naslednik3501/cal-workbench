@@ -1,4 +1,4 @@
-# iProCal 0.5.2
+# iProCal 0.5.3
 
 Очередь задач, статусы, исполнители и передача работы между чатами: **[TASKS.md](TASKS.md)**.
 
@@ -11,7 +11,7 @@
 Подробная постановка задачи и честное разделение «поддерживается»/«проверено»:
 [PROJECT_SCOPE.md](https://github.com/naslednik3501/cal-workbench/blob/main/PROJECT_SCOPE.md).
 
-Текущий результат: [DELIVERY-2026-11-03.md](DELIVERY-2026-11-03.md). В каталоге 15 057 разных CAL: точные повторы объединены, Sportage добавлен, оригинальные картинки восстановлены для 288 калькуляторов. Поддержка всех CAL пока не завершена.
+Текущий результат: [DELIVERY-2026-11-03.md](DELIVERY-2026-11-03.md). В каталоге 15 057 разных CAL: точные повторы объединены, Sportage добавлен, оригинальные картинки восстановлены для 288 калькуляторов. Из прежних 254 частично распознанных двоичных CAL 248 теперь имеют окончательный безопасный статус; четыре FIS остаются отдельной задачей, два пустых BP8272 недоступны.
 
 ## Как собрать
 
@@ -30,7 +30,7 @@ node tests/test_catalog.js
 node tests/test_catalog_store.js
 ```
 
-Без личных BIN также работают test_source, test_preparation, test_polo, test_sportage, test_scope, test_catalog_dedup, test_binary_events и test_text_variants. Браузерные test_scope_browser, test_catalog_dedup_browser и test_release_browser требуют Playwright/Chromium и localhost URL. Старые test_engine, test_browser и test_ui_state требуют личных BIN из `tests/README.md`.
+Без личных BIN также работают test_source, test_preparation, test_polo, test_sportage, test_scope, test_catalog_dedup, test_binary_events, test_binary_resolution и test_text_variants. Браузерные test_scope_browser, test_catalog_dedup_browser и test_release_browser требуют Playwright/Chromium и localhost URL. Старые test_engine, test_browser и test_ui_state требуют личных BIN из `tests/README.md`.
 
 ## GitHub Pages
 

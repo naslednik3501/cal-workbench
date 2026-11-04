@@ -1,0 +1,1142 @@
+{
+  "scopePolicy": {
+    "registry": "scope-registry.json",
+    "archivedEntries": 23946,
+    "activeEntries": 23946,
+    "excludedEntries": 0
+  },
+  "scope": "Static parsing and supported command vocabulary only; not execution/hardware validation",
+  "engineSha256": "528778cf4cb6e8844b517db445d69f05e01f078e6bab851f77a2a213550e6b75",
+  "sourceEngineSha256": "e3a7c3fa3dc27792d6c0aa7d97f9d3ad7bdf72438dd0ff54d1697a85fe806b28",
+  "entries": {
+    "unsupported": 26,
+    "binary": 21613,
+    "read-only": 220,
+    "text": 1382,
+    "rejected": 107,
+    "partial": 9
+  },
+  "unique": {
+    "unsupported": 18,
+    "binary": 14007,
+    "read-only": 216,
+    "text": 737,
+    "rejected": 72,
+    "partial": 7
+  },
+  "unavailable": [
+    {
+      "path": "Calculators/invert.cal",
+      "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Некорректный адрес события show"
+      ],
+      "validEvents": [
+        "apply"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "apply": "return"
+      }
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/PIN/Chery/Pin Chery 0L72A.cal",
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x255 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 97)"
+    },
+    {
+      "path": "Calculators/ECU/Audi/ECU 95080.cal",
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: OnApply не обновляет копию логина, которую проверяет OnShow; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 263)"
+    },
+    {
+      "path": "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal",
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ( (строка 36)"
+    },
+    {
+      "path": "Calculators/Dashboard/Isuzu/A092 93C46.cal",
+      "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Sonata VI 93C66.cal",
+      "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Grandeur 93C66.cal",
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Hyundai Accent new  2011 24c16.cal",
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 123)"
+    },
+    {
+      "path": "Calculators/Dashboard/Hyundai/Grandier 93S66 Siemens-VDO.cal",
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto.cal",
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal",
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A3 VDO 93C86 Crypto.cal",
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/bosch.cal.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal",
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal",
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/bosch.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto 2.cal",
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Dashboard/Subaru/Tribeka 93c66.cal",
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 100)"
+    },
+    {
+      "path": "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Ridgeline 9S12H256 miles.cal",
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Ridgeline 9S12H256 km.cal",
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Dashboard/Honda/Accord denso 93C46.cal",
+      "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 59)"
+    },
+    {
+      "path": "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 82)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CT-903 CD.cal",
+      "sha": "2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CR-902 RDS.cal",
+      "sha": "7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/CR-906.cal",
+      "sha": "a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/SC-805.cal",
+      "sha": "268a83695dcbb8385b8524686da5835edb994a0e6566e521f3a6d49d68502e43",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mitsubishi/SC-802.cal",
+      "sha": "e0098cff725446d55d378be2be016f51a8684ddcce6b3d4ab57d625a12e174d0",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 56)"
+    },
+    {
+      "path": "Calculators/CarRadio/Alpine/BENZ AUDIO 10 CD  MF2910.cal",
+      "sha": "2e9f8a7e81f06ff7063bd5aa641d80b2b12e9ffb61355a93a651dee6c1eb0ee6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/RENRDW330-15.cal",
+      "sha": "22232dd142725b2fd8f774bbcbb7a838fbfb6bce6740363e89b25f45212ac3fe",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Renault/RENRNC 471-16.cal",
+      "sha": "ab663457a6c78d268ba7a80757ab334465abdae08fe8e73b09a3779ea66c0fe2",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 69)"
+    },
+    {
+      "path": "Calculators/CarRadio/Mersedes/BENZ SOUND 5 BE7076.cal",
+      "sha": "1df2e9b3810a45b62ea2388aa6c3367e6746ae7c8be6d534a822b3ad736047e1",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 92)"
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/OPEL  CD 70 Simens VDO.cal",
+      "sha": "ce0234df2133742a5b2e0e7a852c6b1ca8dfb8788fbecea0f09adc1c5e5ae3ad",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/HONDA 39101-SND-A510-M1.cal",
+      "sha": "4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 43)"
+    },
+    {
+      "path": "Calculators/CarRadio/Opel/CD 70 Simens VDO.cal",
+      "sha": "1418d9252ebb88bef5bba2c966535dd3db45968cae887e28602c11c806edfed2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/CarRadio/Iveco/DAILY CD BP7005 no cancheck.cal",
+      "sha": "6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 107)"
+    },
+    {
+      "path": "Calculators/CarRadio/Audi/FIS AUDI VW coder.cal",
+      "sha": "5528e06fab6ef5ed02d38c90ff651efce87c81f13b6968b8607b5e10aaa76069",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO 2000  BE1430.cal",
+      "sha": "d17efa0ff5e0fef14f30509a59ccd9dcb888908a2a4b2141f63a99ef513c06ef",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 78)"
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO CD  BE0876.cal",
+      "sha": "57f9a9c0d0f48aa6325bee9eda1eaa92e6b318e8287f511f5cac5daa35ed7cb1",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Becker/MEXICO CD  BE0879.cal",
+      "sha": "96446c8b29740b927d08c27bb78e652428a267c4d3305bde0ef89a49e3237a4e",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Delco/LICEO  SEZ4Z1.cal",
+      "sha": "db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/CarRadio/Pioneer/Pioneerke92zbm.cal",
+      "sha": "6644d71cab945296f8b6dac979081a6039b37373535abf36702e1e742a374a5d",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 3251 RDS BP5500 v2.cal",
+      "sha": "08143f0fa059905766fd1758109dddce5a0695187f61c82372033151096ab130",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 4251 BP5510 v2.cal",
+      "sha": "17f2ee835b801ebd07e3286a685c2832041044692154864e0013bf8ee537ce1e",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 5dig.cal",
+      "sha": "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/FIS AUDI VW coder.cal",
+      "sha": "257d983b362663d8a09e1147bf54cc6c5f8e2ce99e4fd3ced7ad12dc31329cea",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/ACR 4250 BP5511 v2.cal",
+      "sha": "5ed4c018a8fd1914ba7b2fb2640563028b824440572f43d665664b8834aebc22",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное имя resetcounter"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BlauWith25160.cal",
+      "sha": "ffee1fd8ee562587febc510eadac7a5ee7592b80362214602ea053bfec41f128",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/BlauLubecCrypt.cal",
+      "sha": "46a4acbd2face8e57cc471fa4316adb2b43d03f2a7616337c1e2199b2733e6b5",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Blaupunkt/Blauserial.cal",
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-JH2810A.cal",
+      "sha": "a075634d3d0456fa57f691a511249ed7a1492f8447d840e644f81f1c304e0e5e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-JH8161Z.cal",
+      "sha": "d1458949593102a4e5398d433d4cfd2ec939c9e220a3fe757441f6b4757870e7",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1TN0  6CD.cal",
+      "sha": "147640b99c86bec7981c5d0ff2e7df29d02068545d16961fbab71264672317fe",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/CQ-EH8280A.cal",
+      "sha": "7fa97edc39c34a201da7efbd4ca735fd1958bc88b7550e81046c8fcf8cfc8996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1SA3.cal",
+      "sha": "6e1ed379e3588b9ca4c37d99656d4c3049895aed74fa815adffad7157128a632",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1XP1.cal",
+      "sha": "7f26881c5f205f87ec9e6fdc25eb0769a30de677ae9e4c5eb38ba7567c90ef30",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ BOSE.cal",
+      "sha": "728ed75959a18737f982fa38918375cba19a74cf37dd83f0947f9c90bd3b1c2e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9926.cal",
+      "sha": "8eff29d8cba9423e5e53935e97920ada9bcfe2f4847c61513dd7401b2b742805",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9715.cal",
+      "sha": "e2ea7cb94f91554d6ec5526772dd974bf0f0dc6a22a6fed16e0ea63e81d83a22",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено { (строка 88)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1XM1.cal",
+      "sha": "09571dab29212bcea7a1494f5d93fe67f8127af1df7b62b9c70df76d2d4eabd1",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1TN0 6CD  CQ-EH8160AK.cal",
+      "sha": "75e77b42f753f65289de6f0be1aaf989a9217c2de5394d4a469f941500dc4c13",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/Matsushita/1SC0.cal",
+      "sha": "3645acde20c0a92b465a7ebc47849908d1d7615706893aab674fcd1aafb393f8",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось =, найдено ( (строка 79)"
+    },
+    {
+      "path": "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 5dig.cal",
+      "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Serial calculator/OPEL  CD 70 Simens VDO.cal",
+      "sha": "bcce6ded1d1c7d663b525a9a01c0abb9b2546a213df3fb786a462e8d3dd3929b",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21f (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Car/I/Isuzu/A092 93C46.cal",
+      "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Car/S/Subaru/Tribeka 93c66.cal",
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 100)"
+    },
+    {
+      "path": "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto.cal",
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/audi_a4_bosch_24C08.cal",
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A3 VDO 93C86 Crypto.cal",
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/bosch.cal.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/Audi VDO crypto 2.6.cal",
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/audi A6 93C86 Crypto.cal",
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/bosch.cal",
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto 2.cal",
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "status": "rejected",
+      "error": "Текстовый CAL: неизвестное поле form (строка 5)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline 9S12H256 miles.cal",
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline 9S12H256 km.cal",
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 42)"
+    },
+    {
+      "path": "Calculators/Car/M/Mitsubishi/Pajero 93C66.cal",
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ( (строка 36)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 263)"
+    },
+    {
+      "path": "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 267)"
+    },
+    {
+      "path": "Calculators/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x29d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x2a7 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x247 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x23d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Leganza v1.cal",
+      "sha": "40fd400d053de6d366f947364d07daaeee51a6931bf704fd2ca52de690448ebf",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 204)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Espero v1.cal",
+      "sha": "78ff5aa6157668fb144f6042cb2f3e2b5eefb818a83da6ad0b9c88d226a3becf",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 203)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Nexia v1.cal",
+      "sha": "db469036905e3875444fa6e3d0f3fd4413c72dfb8a0171ce38147680aebd7434",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Nubira v1.cal",
+      "sha": "64e12bb4c92b08b1ea9975f6e081d8c3d8b46c34d167898e0ace488c3635ef25",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Matiz v1.cal",
+      "sha": "193209b8cc7a72196a8b84fb01a0dee20b06e875f68494596397d0b372394060",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Daewoo/Lanos v1.cal",
+      "sha": "9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 202)"
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "238b1eb640695efb5226437999e370ea4f8ca28c46155d368ea244f683656b26",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x217 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Immo/Car/Chery/Pin Chery 0L72A.cal",
+      "sha": "cef29d369ba14335be8ead340729232ebaa494cbad5348c076c0b289deadc7ae",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x252 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery  ECU 95080.cal",
+      "sha": "1c2381dc8f9dbe0f2b8eab4cd864bbe3439c8d50816c97bc095b40f3ba3b64b4",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery TaGaz ECU 95080.cal",
+      "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x21a (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Chery/Pin Chery 0L72A.cal",
+      "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x255 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal",
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 97)"
+    },
+    {
+      "path": "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 82)"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/CarRadio/Navigation/AUDI/FIS AUDI coder.cal",
+      "sha": "a7336ed79bf2a92b8cbf678ba28973ff442077df577673114db8137d50955d66",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Navigation/Vw/FIS VW coder.cal",
+      "sha": "12986cdd7049c56086fc702c32d9e37bda0c9b9b12a70adc4a83dff0dcf2590b",
+      "format": "binary",
+      "status": "partial",
+      "warnings": [
+        "apply: Команда 0x4d ещё не проверена"
+      ],
+      "validEvents": [
+        "show"
+      ],
+      "absentEvents": [],
+      "eventTermination": {
+        "show": "return"
+      }
+    },
+    {
+      "path": "Calculators/CarRadio/Serial calculator/Blaupunkt/Blauserial.cal",
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "status": "rejected",
+      "error": "Исходный текст, внешняя программа или другой формат: исполнение пока не поддерживается"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/G/Grandeur 93C66.cal",
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/G/Grandier 93S66 Siemens-VDO.cal",
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "format": "text",
+      "status": "partial",
+      "warnings": [
+        "apply: Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма."
+      ],
+      "validEvents": [
+        "show"
+      ]
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/S/Sonata VI 93C66.cal",
+      "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 51)"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/A/Hyundai Accent new  2011 24c16.cal",
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено eof (строка 123)"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/A/Accord denso 93C46.cal",
+      "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось ), найдено ; (строка 59)"
+    },
+    {
+      "path": "Calculators/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x2a1 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x278 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Vectra A/Immobox Vectra A 05.cal",
+      "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x29d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Astra G/IMMO-2 TMS 370.cal",
+      "sha": "4f3db2ed0e5ab3f131419915341ff0f52aeeadab22def801195d80fdd601160e",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x2a7 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Opel/Meriva/Meriva Dash  95080.cal",
+      "sha": "7ee2a98f6b596348821a55d164cd675ae63716ae8318b0513775b92d144bc643",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x247 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/PIN/Citroen/Berlingo/ECU Berlingo Bosch ME7.4.5  95320 PIN.cal",
+      "sha": "5127ace4a277270fd005dbf1c815452d1365100f0a10a09ff7f77bfede566483",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x23d (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal",
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "status": "rejected",
+      "error": "Текстовый CAL: ожидалось id, найдено } (строка 93)"
+    },
+    {
+      "path": "Calculators/OTHER/PIN/VW/Passat/B5 Dash VDO  93c66/Passat Dash VDO  93c66.cal",
+      "sha": "2faf31ffdb43f74af953ff7e334dddde4b11cd76e1d34d515df6de0ab3375ee2",
+      "format": "binary",
+      "status": "unsupported",
+      "warnings": [
+        "show: Переход в строковые данные: 0x2a1 (branch)",
+        "apply: Некорректный адрес события apply"
+      ],
+      "validEvents": [],
+      "absentEvents": [],
+      "eventTermination": {}
+    }
+  ]
+}

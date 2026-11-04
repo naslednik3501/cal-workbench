@@ -18,7 +18,7 @@ for entry in manifest["files"]:
     if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
         raise SystemExit("Source differs from release manifest: " + entry["path"])
 
-assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "engine.js", "cal-source.js",
+assets = ["index.html", "README.html", "style.css", "favicon.svg", "app.js", "binary-event-profiles.js", "engine.js", "cal-source.js",
           "catalog.js", "catalog-store.js", "scope-data.js", "catalog-scope.js", "image-resource-data.js", "image-resources.js"]
 assets += json.loads((ROOT / "catalog-parts.json").read_text())
 assets += json.loads((ROOT / "image-assets.json").read_text())
