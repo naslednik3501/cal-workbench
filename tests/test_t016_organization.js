@@ -93,7 +93,7 @@ await test('utility names contain only evidenced operations and confirmed SRS is
  const utilitySource=[...Object.values(org.data.entries)].filter(x=>x.folder.startsWith('OTHER/'));
  assert.equal(utilitySource.length,216,'216 utility subfolder entries');
  for(const item of utilitySource){
-  assert(!/сервисные функции и коррекция пробега|ISN и коррекция пробега|сервисные функции/i.test(item.name),item.name);
+  assert(!/сервисные функции и коррекция пробега|сервисные функции/i.test(item.name),item.name);
   assert(!/Конвертеры US-EU|Сервисные функции|PIN и IMMO|Синхронизация|Тахографы/i.test(item.folder),item.folder);
  }
  for(const path of ['Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal','Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal','Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal']){

@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 99921,
-      "sha256": "41a46c24e5285cc5d0bb398c9c4b78ca654f42012bb97ef6d3f5d422dd8a0efd"
+      "bytes": 102682,
+      "sha256": "2f1bb217c0ad6362db4e0d6a10575a00b46515d5c1038aebb892f26a37855eb7"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -328,18 +328,18 @@
     },
     {
       "path": "catalog-organization-remainder.js",
-      "bytes": 352234,
-      "sha256": "114d0e1121268de9790591b063a6e7e8e31a456d7e81f11762e9b617ef073fc3"
+      "bytes": 346470,
+      "sha256": "0664f2ba6c077e4957064d74370e3f7481a54c8e985f02cf2ca7836f795174c2"
     },
     {
       "path": "catalog-organization-utilities.js",
-      "bytes": 39490,
-      "sha256": "9e24402326a2a8b0c527d43d18534187b0a37b36a129ca912361eb8f7b7e1147"
+      "bytes": 53246,
+      "sha256": "5786c2b81f9e8c973930fbd9921578796a891caeb88a9b05a14879261bcaa747"
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 7990,
-      "sha256": "9cc8559d99d1f571f7f2ef010f04833e5019297720b56b4c62ca383ff08fd085"
+      "bytes": 8076,
+      "sha256": "71fbac788098df29bf84f79a91e9b00dc9ec14251e100c7d46cda36d351819db"
     },
     {
       "path": "catalog-parts.json",
@@ -1497,14 +1497,24 @@
       "sha256": "60516bc3e5f11507979d41a72df7e8518d2ecb08833c0d6962a2bbdd076e31e8"
     },
     {
+      "path": "reports/T-016-group-review-2026-11-04.json",
+      "bytes": 237239,
+      "sha256": "7700d8a7d06da95e05c4ec9c9142787bbe5e44a592dd6e960801e459e5d56e88"
+    },
+    {
+      "path": "reports/T-016-group-review-2026-11-04.md",
+      "bytes": 9384,
+      "sha256": "b32f5fb085d1389c24d17ad7685e48e64bfd12a6106fd64fa9cbf7072ae6ca1c"
+    },
+    {
       "path": "reports/T-016-name-audit-2026-11-04.json",
-      "bytes": 105143,
-      "sha256": "04130885e7d5e32f3329285747bde77c220fb79e0f0480a58517fc6caa706fd1"
+      "bytes": 128813,
+      "sha256": "3461c7c4151154387a397e1625e2e98fa131ec2506d5a7dce35342f14589d361"
     },
     {
       "path": "reports/T-016-systematization-2026-11-04.md",
-      "bytes": 9324,
-      "sha256": "fe3681bb6eae658febf00fa618ac956c5571eb876a0e30eb0d30e811905c6dff"
+      "bytes": 10060,
+      "sha256": "c5b7b7c2985a9f23e981604c2aab72beef3c9827e2b557fedac80566d890b35a"
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
@@ -1583,13 +1593,13 @@
     },
     {
       "path": "reports/catalog-organization-remainder-2026-11-04.json",
-      "bytes": 1155597,
-      "sha256": "96a131b06df9fd9f98bda09697914055bb230fe4638b2cc4b8b67a6411e96fbf"
+      "bytes": 1138988,
+      "sha256": "7337806b943e97ed18331565cf6d887dbab180623b0c5951bf24b794e9ac1e14"
     },
     {
       "path": "reports/catalog-organization-remainder-2026-11-04.md",
-      "bytes": 1648,
-      "sha256": "e57aa9560d9580f90f3e351435c3cc7b65592281002b602b45f6144339b40a06"
+      "bytes": 2000,
+      "sha256": "86e670efe02313335cb23f8cee80f08470736e5f48a152140d741356891188c4"
     },
     {
       "path": "reports/catalog-organization-root-airbag.md",
@@ -1598,8 +1608,8 @@
     },
     {
       "path": "reports/catalog-organization-utilities-2026-11-04.json",
-      "bytes": 169770,
-      "sha256": "f201c12744b3cf96c697823c31b6482d341e5652666146ca08ebc31561ff6df3"
+      "bytes": 193126,
+      "sha256": "829f344e14204d834e9b53ee1be0d7ccd1633f3913794d0123d876e8aa5129ef"
     },
     {
       "path": "reports/catalog-organization-utilities-2026-11-04.md",
@@ -1932,9 +1942,14 @@
       "sha256": "821017fcf143453a849dac826df12d19a172bd74bdea63a00e1541876e6854c0"
     },
     {
+      "path": "tests/test_t016_group_review.js",
+      "bytes": 4370,
+      "sha256": "28bc59e125e68273cdaef3d4e2edf5c37cea2a26dac64d031d6984836ae1b59d"
+    },
+    {
       "path": "tests/test_t016_organization.js",
-      "bytes": 17401,
-      "sha256": "9b4817298b9292d85b13857be4929cddfff1126c7a895db4fe431f2f21cdfae0"
+      "bytes": 17360,
+      "sha256": "ba249b321b3cc234be19973502b8986ddfffa4e111c20206fc24585ace6aea38"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -1980,6 +1995,11 @@
       "path": "tools/analyze_t008_pairs.js",
       "bytes": 13941,
       "sha256": "6a3e41414608c20d1066a5b278f3248bec45b5ec77a600ad21101bf29ae2ef34"
+    },
+    {
+      "path": "tools/apply_t016_group_review.py",
+      "bytes": 9704,
+      "sha256": "874edc86b29e0ef78ddedc2512f335a53e5cc6517cefa6db50104294001601bc"
     },
     {
       "path": "tools/audit-calculators.js",
@@ -2038,8 +2058,8 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 2887,
-      "sha256": "8d383e24a5affb97e75ac75f3e5e07c002157bb9ddb94cefa6763eb1ef245ebb"
+      "bytes": 2916,
+      "sha256": "b2d9607a1a706316339e3d3f2376e3ece4b4b1864606f5947598c208b9b7a4aa"
     },
     {
       "path": "tools/publish_source_store.py",

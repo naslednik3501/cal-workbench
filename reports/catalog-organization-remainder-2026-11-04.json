@@ -19,7 +19,10 @@
   "after": {
     "distributed_sha": 2629,
     "distributed_paths_represented": 2811,
-    "outside_map_sha": 0
+    "outside_map_sha": 0,
+    "reviewed_sha": 112,
+    "resolved_sha": 94,
+    "remaining_review_sha": 18
   },
   "processing_order": [
     "Asia",
@@ -126,1138 +129,1236 @@
     "Car": 1
   },
   "collision_groups": 1,
-  "ambiguous": 112,
+  "ambiguous": 18,
   "decisions": [
     {
       "sha": "ebf96d97196847d03bc3d68c80459a454d04693ed58faf7f3d7e9a48c174c13d",
-      "name": "ATV BRP Outlander v1",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "BRP Outlander v1 (24C02) — коррекция пробега",
+      "folder": "ATV/BRP",
       "canonical_path": "Calculators/ATV/ATV BRP Outlander  v1.cal",
       "paths": [
         "Calculators/ATV/ATV BRP Outlander  v1.cal"
       ],
       "source_sections": [
         "ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/ATV/ATV BRP Outlander v1.cal; form: КМ | Калькулятор пробега для BRP Outlander. | EEPROM 24C02 . | Autor: sswift83@mail.ru 2012 | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "1cb1aa2747f3c3d5477e5661c75ca768cba20d44000e2289896f5d59bf0a761c",
-      "name": "ATV BRP Outlander v2",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "BRP Outlander v2 (24C02) — коррекция пробега",
+      "folder": "ATV/BRP",
       "canonical_path": "Calculators/ATV/ATV BRP Outlander v2.cal",
       "paths": [
         "Calculators/ATV/ATV BRP Outlander v2.cal"
       ],
       "source_sections": [
         "ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/ATV/ATV BRP Outlander v2.cal; form: КМ | Калькулятор пробега для BRP Outlander. | EEPROM 24C02 . | Autor: sswift83@mail.ru 2012 | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "198e9cdd16ddf9f5fd3aa9a0a1d80ee846212cddedc95ef8798115d996318013",
-      "name": "ATV Kymco China",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Kymco ATV China (93C46) — коррекция пробега",
+      "folder": "ATV/Kymco",
       "canonical_path": "Calculators/ATV/ATV Kymco China.cal",
       "paths": [
         "Calculators/ATV/ATV Kymco China.cal"
       ],
       "source_sections": [
         "ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/ATV/ATV Kymco China.cal; form: КМ | Калькулятор пробега ATV Kymco | EEPROM 93С46. | Autor: sswift83@mail.ru 2012 | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "5abfedf36f428ec4991de70c9fe3b38f56b6002fc5c1d62310276c9c932a6763",
-      "name": "Baltmotors Jumbo 700 MAX 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Baltmotors Jumbo 700 MAX 93C46 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Baltmotors",
       "canonical_path": "Calculators/Asia/ATV/Baltmotors Jumbo 700 MAX 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/Baltmotors Jumbo 700 MAX 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Baltmotors Jumbo 700 MAX 93C46.cal; form: KM | HR | Калькулятор пробега Baltmotors Jumbo 700. | EEPROM 93C46 (ATMHL920) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4b5dc792510a6c1243625c91ca71c05bf81000fc1050a5d73549d10b9e775716",
-      "name": "Baltmotors MBX 720 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Baltmotors MBX 720 93C46 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Baltmotors",
       "canonical_path": "Calculators/Asia/ATV/Baltmotors MBX 720 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/Baltmotors MBX 720 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Baltmotors MBX 720 93C46.cal; form: KM | HR | Калькулятор пробега Baltmotors MBX 720. | EEPROM 93C46 (ATMLH236) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "68948a2ddb8e100b1e64ee20139b75c4c9c746c50fe20c7e92921ff9de89bac3",
-      "name": "Bombardier 908AZ60A",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 908AZ60A — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 908AZ60A.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 908AZ60A.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 908AZ60A.cal; form: KM | MIL | Калькулятор пробега Ski-Doo Bombardier. | Motorola 908AZ60A | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "4f261f4383eeab38d7c4940330856759fab72f0c4f2c0e2d9f5f9857d222924d",
-      "name": "Bombardier 9S12HZ256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ256 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ256.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ256.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "d0d99db754bd7f6299597fd4808fb682e7ee3431873b5e1f7486719a192fdcda",
-      "name": "Bombardier 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "376faeb9f6b4252ce2117813ecb8a99fc95ee7022fd783d63d57d8ddadbc0eb7",
-      "name": "Bombardier 9S12HZ64 V1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V1 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "db8d8a6cf5b5526fdd90a891fa1437ec60f52edfe2e73783665e8a96c029e0b0",
-      "name": "Bombardier 9S12HZ64 V2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V2 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "7ad598258277b464922a19f36fbbe4330d3b5450ec2c8cebb6c8fae1100432e0",
-      "name": "Bombardier 9S12HZ64 V3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V3 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "6b3e3d358df64e903254849eb6980e336a357dcdaa9938c5a39dba34ce0efe0a",
-      "name": "Bombardier 9S12HZ64 V4",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V4 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "a73d9388ecac791a23466ddaa707a4b019d834ca9ba22ccf8d3ebe18c287b25f",
-      "name": "Bombardier 9S12HZ64 V5",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V5 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "7ddb6c167e0584b1b15d91fbf8491b9c39400a829eae6f591136246c45d1449d",
-      "name": "Bombardier Outlander 1000 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander 1000 9S12HZ64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 1000 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander 1000 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander 1000 9S12HZ64.cal; form: KM | Калькулятор пробега BRP Outlander 1000. | MCU 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "303c6717713f6917bd60e4ac622a3ad0687951b69ca77f44950dbd6e7a2b00f4",
-      "name": "Bombardier Outlander 1000XT 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander 1000XT 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 1000XT 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander 1000XT 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander 1000XT 24C08.cal; form: KM | Калькулятор пробега BRP Outlander 1000XT. | EEPROM 24AA08 (B4MJ) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "c8c85c45122f4b9cc2112bb4378c4787d43dbd28ce3da6995b68eb04552d0743",
-      "name": "Bombardier Outlander 800 908AZ60A",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander 800 908AZ60A — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 800 908AZ60A.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander 800 908AZ60A.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander 800 908AZ60A.cal; form: KM | MIL | Калькулятор пробега BRP Outlander 800. | Motorola 908AZ60A | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "49a6d7639bc7cada3de0bd050cf964715ad2c9ce020cadcba4ee40aadc5196df",
-      "name": "Bombardier Outlander 800R X-MR 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander 800R X-MR 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 800R X-MR 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander 800R X-MR 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander 800R X-MR 24C08.cal; form: KM | Калькулятор пробега BRP Outlander 800R X-MR EFI. | EEPROM 24AA08 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "da1a271983d28a7951c61d54fc91c856c07af218e7d3391def9e43778d620d38",
-      "name": "Bombardier Outlander L 500 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander L 500 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander L 500 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander L 500 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander L 500 24C08.cal; form: KM | Калькулятор пробега BRP Outlander L 500. | EEPROM 24AA08 (B40G) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "81208b5a1a057cf1a93b59993ca8292235ffd6581f5cb750e6aca0c9821d5f29",
-      "name": "Bombardier Outlander Limited 1000 9S12HY64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander Limited 1000 9S12HY64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander Limited 1000 9S12HY64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander Limited 1000 9S12HY64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander Limited 1000 9S12HY64.cal; form: KM | Калькулятор для BRP Outlander Limited 1000. | MCU 9S12HY64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "aa96e447df4a31b59c57817328bb4c80a7846823cf212c6b70c6d63867d9fcfa",
-      "name": "Bombardier Outlander MAX400 24C01",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX400 24C01 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C01.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C01.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX400 24C01.cal; form: KM | HR | Калькулятор для BRP Outlander MAX400. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "256115fc8cdd5c08c771d85e9f14f704de0d41ad153c16564c08c06ed1dba1fd",
-      "name": "Bombardier Outlander MAX400 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX400 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX400 24C08.cal; form: KM | Калькулятор пробега BRP Outlander MAX400. | EEPROM 24C08 (B44W) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f7126cd4ae67c2a77fb8eb090baac9a1a877c23d9988cee8da15bbcd02a250d4",
-      "name": "Bombardier Outlander MAX500 24C08 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX500 24C08 var1 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var1.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var1.cal; form: KM | Калькулятор пробега BRP Outlander MAX500. | EEPROM 24C08 (B483) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "083c2b8a2a0799f3a7f407f6564917de87fc1f3b6256d414f2f2b70a3687b478",
-      "name": "Bombardier Outlander MAX500 24C08 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX500 24C08 var2 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var2.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var2.cal; form: KM | Калькулятор пробега BRP Outlander MAX500. | EEPROM 24C08 (B483) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "562393ce4999db110696a533e3ba745e9d0bd5a6947564238179768fd1d7527c",
-      "name": "Bombardier Outlander MAX650 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX650 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX650 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX650 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX650 24C08.cal; form: KM | Калькулятор пробега BRP Outlander MAX650. | EEPROM 24C08 (B44W) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "463710c2e3335f96436e9f595f5865341f51dd26f4f6aef54ff16c35cef71f00",
-      "name": "Bombardier Outlander MAX800 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX800 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX800 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX800 24C08.cal; form: KM | Калькулятор пробега BRP Outlander MAX800. | EEPROM 24C08 (B44W) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "5cc5bb5ab6e5f2fc918869d71a852396eb07c703b47a2cec5abea3eeddb6f97d",
-      "name": "Bombardier Outlander MAX800 XT-P 9S12HY64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX800 XT-P 9S12HY64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800 XT-P 9S12HY64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX800 XT-P 9S12HY64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX800 XT-P 9S12HY64.cal; form: KM | Калькулятор для BRP Outlander MAX800 XT-P. | MCU 9S12HY64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "8fdfd969a04b23f12dfad9e46b1269304470329dbdbded176e5cb7e64b1ff0c9",
-      "name": "Bombardier Outlander MAX800R XT 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander MAX800R XT 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800R XT 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander MAX800R XT 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander MAX800R XT 24C08.cal; form: KM | Калькулятор пробега BRP Outlander MAX800R XT 24C08. | EEPROM 24C08 (B457) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "c69e0884b9aa573385caa9cf9ced036dda91a3b924dc544f71fa21fb9d84353c",
-      "name": "Bombardier Outlander XMR 1000 EFI 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Outlander XMR 1000 EFI 9S12HZ64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander XMR 1000 EFI 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Outlander XMR 1000 EFI 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Outlander XMR 1000 EFI 9S12HZ64.cal; form: KM | Калькулятор пробега CAN-AM Outlander XMR 1000 EFI. | MCU 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2ed77c9e5e296e329581a13cada3e398497331243adf6b1a59110a86a0e8ac60",
-      "name": "Bombardier Renegade 1000 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Renegade 1000 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Renegade 1000 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Renegade 1000 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Renegade 1000 24C08.cal; form: KM | Калькулятор пробега BRP Renegade 1000. | EEPROM 24AA08 (B40G) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "a0ea4c5757be242f9ddac7c3ad831c0eb81e3e8db2dfd36d1449d175f9f210ac",
-      "name": "Bombardier Renegade 800R 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier Renegade 800R 9S12HZ64 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Bombardier",
       "canonical_path": "Calculators/Asia/ATV/Bombardier Renegade 800R 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier Renegade 800R 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier Renegade 800R 9S12HZ64.cal; form: KM | HR | Калькулятор пробега BRP Renegade 800R. | MCU 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "048f75ef853a91986ea0b9959c3efd36a83d652ef92587462caef69a1abec4b4",
-      "name": "BRP Spyder 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "BRP Spyder 9S12HZ64 — коррекция пробега",
+      "folder": "Asia/ATV/BRP",
       "canonical_path": "Calculators/Asia/ATV/BRP Spyder 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/BRP Spyder 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/BRP Spyder 9S12HZ64.cal; form: KM | Калькулятор пробега BRP Spyder. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "1b2268be2259a077aea19b2fbf9445411a0e5402dc97e0c35d11144345969d1a",
-      "name": "CFMOTO 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C02 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C02.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С02. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "8bb9b6ac7a567fad2a937f94f0f01e8d0c0909bcfc0d08774a74d7b57e9de822",
-      "name": "CFMOTO 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C04.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С04. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "f77564b82d984d26366715a1f954118d499fd4351fa332422f3d864155841871",
-      "name": "CFMOTO 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C08.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "b834964bfec63240e62c48e5fdc221b57e13bfc6d9353801b3b450bd20cd5bd7",
-      "name": "CFMOTO CF500-2A 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO CF500-2A 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500-2A 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO CF500-2A 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO CF500-2A 24C08.cal; form: КМ | Калькулятор пробега ATV CFMOTO CF500-2A. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "87f00d8e8b4d4f5cef1a6734e6ba095a4a8895c1eafb7bb21e034e9d3ab5ac07",
-      "name": "CFMOTO CF500A 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO CF500A 24C02 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO CF500A 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO CF500A 24C02.cal; form: КМ | Калькулятор пробега ATV CFMOTO CF500-A. | EEPROM 24С02. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4a44b02834b6d3f381784af415f663a9265aa7e2bcfd1e02386dd170a8f3da71",
-      "name": "CFMOTO CF500A 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO CF500A 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO CF500A 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO CF500A 24C08.cal; form: КМ | Калькулятор пробега ATV CFMOTO CF500-A. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "febf628fcb417a333e42a17d0b5f3ddd14b91cb486e96da8a73abd8d2180ac96",
-      "name": "CFMOTO CF500A Basic 93C46-8 bit",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO CF500A Basic 93C46-8 bit — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A Basic 93C46-8 bit.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO CF500A Basic 93C46-8 bit.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO CF500A Basic 93C46-8 bit.cal; form: КМ | Калькулятор пробега ATV CFMOTO CF500-A Basic. | EEPROM 93C46 - читать как 8 bit. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b56a89479cda941c94e3881a0228e2b7abbfbb505ba5be06cff94d25ad6671c1",
-      "name": "CFMOTO CF800-X8 EFI 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO CF800-X8 EFI 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO CF800-X8 EFI 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO CF800-X8 EFI 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO CF800-X8 EFI 24C04.cal; form: КМ | Калькулятор пробега CFMOTO CF800-X8 EFI. | EEPROM 24С04. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "31a55cc77def8c071f4325f6e9701d8db5146a0ea4a3492ededd274243d1139b",
-      "name": "CFMOTO X5 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X5 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X5 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X5 24C08.cal; form: КМ | Калькулятор пробега ATV CFMOTO X5. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "72707ad1670162ade95badec010900871d1b8773548c6ed64a4819aeb20f7a90",
-      "name": "CFMOTO X5 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X5 PIC16F1933 - 256 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal; form: КМ | Калькулятор пробега ATV CFMOTO X5. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "9d62e1e0a12123db2e4dd713505a3f802244b61e660641007b79e8b3a59cf658",
-      "name": "CFMOTO X5 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X5 PIC16F1933 - 512 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal; form: КМ | Калькулятор пробега ATV CFMOTO X5. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2ce10d63bb2289e01ab022de822625abc9a0bf0ed011c8893477806fb027599a",
-      "name": "CFMOTO X6 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X6 24C02 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X6 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X6 24C02.cal; form: КМ | Калькулятор пробега ATV CFMOTO X6. | EEPROM 24С02. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "1112968804097a2aab94755e9ef67c575e85b58b720fa0941dffca4493b92ef4",
-      "name": "CFMOTO X6 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X6 PIC16F1933 - 256 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal; form: КМ | Калькулятор пробега ATV CFMOTO X6. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "3aab5bdbb4cef9ab2a57437379b3a3b96b63dda61c31bc036ebf10d03ef48745",
-      "name": "CFMOTO X6 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X6 PIC16F1933 - 512 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal; form: КМ | Калькулятор пробега ATV CFMOTO X6. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "aef40b990498805c323d90a0a2580e22b1089d158dd3111a6cb3b5b888917494",
-      "name": "CFMOTO X8 24C08 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X8 24C08 var1 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X8 24C08 var1.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X8 24C08 var1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X8 24C08 var1.cal; form: КМ | Калькулятор пробега ATV CFMOTO X8. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "14b6b9ac8773069893a3bb6058c6806102bacdbeb242990472e3e526c6e022fb",
-      "name": "CFMOTO X8 24C08 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO X8 24C08 var2 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO X8 24C08 var2.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO X8 24C08 var2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO X8 24C08 var2.cal; form: КМ | Калькулятор пробега ATV CFMOTO X8. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "cedc41d312c4dd7f2d3f265af65dfd414f3820e1959d0abd8ce11e23d5390a26",
-      "name": "CFMOTO Z8 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO Z8 PIC16F1933 - 256 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal; form: КМ | Калькулятор пробега ATV CFMOTO Z8. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b205f4cf493efb11e5a1da7a7321352b1671dc1266701630430cb9ca3072600f",
-      "name": "CFMOTO Z8 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO Z8 PIC16F1933 - 512 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal; form: КМ | Калькулятор пробега ATV CFMOTO Z8. | PIC 16F1933. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4df502e1b33b34befa1807377781f05e9c63715c5cc22a809941ed7506352ae3",
-      "name": "Grizzly 700 24C02 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Grizzly 700 24C02 var1 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var1.cal",
       "paths": [
         "Calculators/Asia/ATV/Grizzly 700 24C02 var1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Grizzly 700 24C02 var1.cal; form: KM | HR | Калькулятор пробега Yamaha Grizzly 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f9f7a06cbb3e416e80982b96871adbdd90c80928490a6ecc57e7607daaf2008f",
-      "name": "Grizzly 700 24C02 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Grizzly 700 24C02 var2 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var2.cal",
       "paths": [
         "Calculators/Asia/ATV/Grizzly 700 24C02 var2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Grizzly 700 24C02 var2.cal; form: KM | HR | Калькулятор пробега Yamaha Grizzly 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "57dffa05454fec7a96cf2f01ea59de7399bbb31b3fd9632271eaef592ffaa71f",
-      "name": "Grizzly 700 24C02 var3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Grizzly 700 24C02 var3 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var3.cal",
       "paths": [
         "Calculators/Asia/ATV/Grizzly 700 24C02 var3.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Grizzly 700 24C02 var3.cal; form: KM | HR | Калькулятор пробега Yamaha Grizzly 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "53a4a3637e9880b1494547ab6dacfc25c265620dcee1522620ac57ba9d2e40ca",
-      "name": "Grizzly 800 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Grizzly 800 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Grizzly 800 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/Grizzly 800 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Grizzly 800 24C02.cal; form: KM | HR | Калькулятор пробега Yamaha Grizzly 800. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "d1777fb2055197e9cab90b0cec03ead0620038f2d2d9f976a6c8c449d55f15d4",
-      "name": "Honda Foreman 500 93C66 kansey",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Honda Foreman 500 93C66 Kansey — коррекция пробега",
+      "folder": "Asia/ATV/Honda",
       "canonical_path": "Calculators/Asia/ATV/Honda Foreman 500 93C66 kansey.cal",
       "paths": [
         "Calculators/Asia/ATV/Honda Foreman 500 93C66 kansey.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Honda Foreman 500 93C66 kansey.cal; form: KM | Калькулятор пробега ATV Honda Foreman 500. | EEPROM 93C66 (Kansey) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "ca30523c2d747e2a6068c2595ec71bd356c51f6d6b7fd879a5b5fe70249844c4",
-      "name": "Honda Foreman 500 93C66 NS",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Honda Foreman 500 93C66 NS — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Honda",
       "canonical_path": "Calculators/Asia/ATV/Honda Foreman 500 93C66 NS.cal",
       "paths": [
         "Calculators/Asia/ATV/Honda Foreman 500 93C66 NS.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Honda Foreman 500 93C66 NS.cal; form: KM | HR | Калькулятор пробега ATV Honda Foreman 500. | EEPROM 93C66 (NS) | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "e4bfe5ae6efbb462b243706adc437f39aaa732a68919b426dbe72aeacc28e49e",
-      "name": "Honda TRX500 93C66 kansey",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Honda TRX500 93C66 Kansey — коррекция пробега",
+      "folder": "Asia/ATV/Honda",
       "canonical_path": "Calculators/Asia/ATV/Honda TRX500 93C66 kansey.cal",
       "paths": [
         "Calculators/Asia/ATV/Honda TRX500 93C66 kansey.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Honda TRX500 93C66 kansey.cal; form: KM | Калькулятор пробега ATV Honda TRX500. | EEPROM 93C66 (Kansey) | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "510f3833b867bd22d751c83086f708f37cdadf8e6bc69c80daa2be6aa963f1fb",
-      "name": "kawasaki bruteforce 650 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Kawasaki BruteForce 650 93C46 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Kawasaki",
       "canonical_path": "Calculators/Asia/ATV/kawasaki bruteforce 650 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/kawasaki bruteforce 650 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/kawasaki bruteforce 650 93C46.cal; form: KM | HR | Калькулятор для ATV Kawasaki BruteForce 650 | EEPROM 93C46 | Введите нужные значения | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b95e9a347487ca2b4c96ff038098bfe959d05862463bab4043f5b82cc77c6d9d",
-      "name": "kawasaki bruteforce 750 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Kawasaki BruteForce 750 93C46 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Kawasaki",
       "canonical_path": "Calculators/Asia/ATV/kawasaki bruteforce 750 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/kawasaki bruteforce 750 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/kawasaki bruteforce 750 93C46.cal; form: KM | HR | Калькулятор для ATV Kawasaki BruteForce 750 | EEPROM 93C46 | Введите нужные значения | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4d68031dd3c99b9e5d96b3fc119bee652f4749b03475cca2e0b7e85710b1155b",
-      "name": "Kymco MXU 500 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Kymco MXU 500 93C46 — коррекция пробега",
+      "folder": "Asia/ATV/Kymco",
       "canonical_path": "Calculators/Asia/ATV/Kymco MXU 500 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/Kymco MXU 500 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Kymco MXU 500 93C46.cal; form: KM | Калькулятор пробега Kymco MXU 500. | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "17c030420ee412f1eceeb78a412eb8bbe1acaeb420d1adbb75ed1cc813b16397",
-      "name": "Polaris RZR 1000 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris RZR 1000 24C32 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris RZR 1000 24C32.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris RZR 1000 24C32.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris RZR 1000 24C32.cal; form: KM | HR | Калькулятор пробега Polaris RZR 1000 | EEPROM 24C32. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "7a1bd721dd7e5114a61141743d2d09dc9c9ff9c1fffdc1f3c666a8971357799a",
-      "name": "Polaris RZR 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris RZR 24C32 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris RZR 24C32.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris RZR 24C32.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris RZR 24C32.cal; form: KM | HR | Калькулятор пробега Polaris RZR | EEPROM 24C32. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b8ea9923bd85046426d5c38fcbc5688faaba29e16713453f1bcb6644ae40c62c",
-      "name": "Polaris RZR 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris RZR 93C66 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris RZR 93C66.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris RZR 93C66.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris RZR 93C66.cal; form: KM | HR | Калькулятор пробега Polaris RZR | EEPROM 93C66. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "e5e4af7ff472baeb298c1cb53ceba0f98897abf20fa47cfc4fa7a3d4a24141a2",
-      "name": "Polaris Sportsman 400 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman 400 93C66 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 400 93C66.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman 400 93C66.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman 400 93C66.cal; form: KM | HR | Калькулятор пробега Sportsman 400 | EEPROM 93C66 | Введите нужные значения | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4bae57ed2f5e14e8e2f5570ee35d896dcedbf89f6bfd2430fbe0ffa4a8f35d0e",
-      "name": "Polaris Sportsman 500",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman 500 (93C66) — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 500.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman 500.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman 500.cal; form: KM | HR | Калькулятор пробега Polaris Sportsman 500. | EEPROM 93C66. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "3bc0d643c485101064df5ab2c56d7fbcd256b1b7b92bd41803a7157ccfd9bb25",
-      "name": "Polaris Sportsman 800 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman 800 var1 — коррекция пробега",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var1.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman 800 var1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman 800 var1.cal; form: KM | Калькулятор пробега Polaris Sportsman 800. | EEPROM 93C66. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "e1c5371aa1b84db2f1a8f17b8e2ebcbe4452c83103408e2bf6a4318665ceed16",
-      "name": "Polaris Sportsman 800 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman 800 var2 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var2.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman 800 var2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman 800 var2.cal; form: KM | HR | Калькулятор пробега Polaris Sportsman 800. | EEPROM 93C66. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4061ce3996d16a1a9d9eb1de6b6df0e814e9aa6b39c37b0ab974203f44d0386d",
-      "name": "Polaris Sportsman 800 var3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman 800 var3 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var3.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman 800 var3.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman 800 var3.cal; form: KM | HR | Калькулятор пробега Polaris Sportsman 800. | EEPROM 93C66. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "04fc0c5107e70312fa819b8a4dad27fd222bd9155fc237bc8f83c2d65c2af5c7",
-      "name": "Polaris Sportsman Touring 550 EPS 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman Touring 550 EPS 24C32 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman Touring 550 EPS 24C32.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman Touring 550 EPS 24C32.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman Touring 550 EPS 24C32.cal; form: KM | HR | Калькулятор пробега Polaris Sportsman Touring | EEPROM 24C32. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2760d2bc06d55be122faf76085481f2c51069c60159341afcd249e71f39aa3ee",
-      "name": "Polaris Sportsman WV850 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman WV850 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman WV850 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman WV850 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman WV850 24C04.cal; form: KM | Калькулятор пробега Polaris Sportsman WV850. | EEPROM 24C04 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "0d0341b772257b665e3f2efcb66c99b75ebbc0110e2b259bff95740a3cf3ecda",
-      "name": "Polaris Sportsman XP 850 EPS 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Polaris Sportsman XP 850 EPS 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/Polaris",
       "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman XP 850 EPS 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/Polaris Sportsman XP 850 EPS 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Polaris Sportsman XP 850 EPS 24C04.cal; form: KM | Калькулятор для Polaris Sportsman XP 850 EPS. | EEPROM 24C04 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f9b2ebc18c539bd1ea74b263bc1fdcb22f6bd37aa680f712dcf69c00dc62e048",
-      "name": "Raptor 700R 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Raptor 700R 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Raptor 700R 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/Raptor 700R 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Raptor 700R 24C02.cal; form: KM | HR | Калькулятор пробега Yamaha Raptor 700R. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "7cfd00fff98bc202b2a1b6984f45e8f30e5e8fd90c7dbd97c9638553af3f6968",
-      "name": "Rhino 700 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha Rhino 700 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Yamaha",
       "canonical_path": "Calculators/Asia/ATV/Rhino 700 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/Rhino 700 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Rhino 700 24C02.cal; form: KM | HR | Калькулятор пробега Yamaha Rhino 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "5312391fb7dde9d5d4acc42d5de85f40bfcfbdeeab81877743692da5e16548b1",
-      "name": "Russkaya Mehanika Gamax AX600 24C01",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Russkaya Mehanika Gamax AX600 24C01 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Russkaya Mehanika",
       "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika Gamax AX600 24C01.cal",
       "paths": [
         "Calculators/Asia/ATV/Russkaya Mehanika Gamax AX600 24C01.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Russkaya Mehanika Gamax AX600 24C01.cal; form: Km | Hr | Калькулятор для ATV RM Gamax AX600 24C01. | EEPROM 24C01 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "347d813e7a72c13d3af0c976349a1d93f574bf6892224a320b0ae44132c6762a",
-      "name": "Russkaya Mehanika Persheron500A 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Russkaya Mehanika Persheron500A 93C46 — коррекция пробега",
+      "folder": "Asia/ATV/Russkaya Mehanika",
       "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika Persheron500A 93C46.cal",
       "paths": [
         "Calculators/Asia/ATV/Russkaya Mehanika Persheron500A 93C46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Russkaya Mehanika Persheron500A 93C46.cal; form: KM | Калькулятор пробега ATV RM Persheron 500A. | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "28cd447a7d47e8224f821ab078046b27fabe319c064229908a4a5942cce11b5a",
-      "name": "Russkaya Mehanika RM500 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Russkaya Mehanika RM500 93C66 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Russkaya Mehanika",
       "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika RM500 93C66.cal",
       "paths": [
         "Calculators/Asia/ATV/Russkaya Mehanika RM500 93C66.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Russkaya Mehanika RM500 93C66.cal; form: Km | Hr | Калькулятор пробега ATV RM500. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2986a9e7a02d0165626151345628121826ed2b8a3f2c5cfae09025c0a120e402",
-      "name": "Stels 300 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 300 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 300 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 300 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 300 24c02.cal; form: KM | HR | Калькулятор пробега и часов Stels 300. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "775fb0d3f99105449f78ee607967b7a8c6c385fa1fe8ab3b77a9516e0ad59a67",
-      "name": "Stels 450H 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 450H 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 450H 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 450H 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 450H 24c02.cal; form: KM | HR | Калькулятор пробега и часов Stels 450H. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "1124da8532829604e846cd3cbfcf49629529e6fb7a069daa6b0de74296c35a10",
-      "name": "Stels 500GT 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 500GT 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 500GT 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 500GT 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 500GT 24C04.cal; form: KM | Калькулятор пробега и часов Stels 500GT. | EEPROM 24C04 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "15dd21c2c134d4f373bcac53ab3a71d5c82ef4189b5d1b14c495c034b15ee46d",
-      "name": "Stels 500H 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 500H 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 500H 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 500H 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 500H 24c02.cal; form: KM | HR | Калькулятор пробега и часов Stels 500H. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "28bf7e383715ce01a65cdb70631c0fba1d9f96691c2360531a3e258a44a49ead",
-      "name": "Stels 600GT 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 600GT 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 600GT 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 600GT 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 600GT 24c02.cal; form: KM | HR | Калькулятор пробега и часов Stels 600GT. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b76efad5c75dc198058c227dc3928ab93a1d9e91bb75783ce48f947b67348bce",
-      "name": "Stels 700 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 700 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels 700 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels 700 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 700 24c02.cal; form: KM | HR | Калькулятор Stels 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "c87486ea0cd2d7c8856ce1592c8f4d7b86910e18084381bb7515f0d33300988a",
-      "name": "Stels 800 GT max EFI 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels 800 GT max EFI 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels  800 GT max EFI 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels  800 GT max EFI 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels 800 GT max EFI 24c02.cal; form: KM | HR | Калькулятор Stels 800 GT max EFI. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "50e4cfc0493badcc0245635585f54be38b67e40450241ad7d1f84c155769e2e9",
-      "name": "Stels Dinli 800 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Stels Dinli 800 24C02 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Stels",
       "canonical_path": "Calculators/Asia/ATV/Stels Dinli 800 24c02.cal",
       "paths": [
         "Calculators/Asia/ATV/Stels Dinli 800 24c02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Stels Dinli 800 24c02.cal; form: KM | HR | Калькулятор пробега и часов Stels Dinli 800. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "b8c9e833c002253a86b2a05f3078e5dd39fab8988daf5d3a7f8e5a9f9354a40d",
-      "name": "Suzuki KingQuad 700 24C02 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Suzuki KingQuad 700 24C02 var1 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Suzuki",
       "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var1.cal",
       "paths": [
         "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var1.cal; form: KM | HR | Калькулятор для Suzuki KingQuad 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "4384741727686e9edf969c2bd4db67d0275700cf097a917e0c1dce75a9845bdd",
-      "name": "Suzuki KingQuad 700 24C02 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Suzuki KingQuad 700 24C02 var2 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Suzuki",
       "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var2.cal",
       "paths": [
         "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var2.cal; form: KM | HR | Калькулятор для Suzuki KingQuad 700. | EEPROM 24C02 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "1404643ae3bfd24ba5b266716393740c2a8eb95a45ebfbdf1fb6119cd85fa349",
-      "name": "Suzuki KingQuad 700 93C56",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Suzuki KingQuad 700 93C56 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Suzuki",
       "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 93C56.cal",
       "paths": [
         "Calculators/Asia/ATV/Suzuki KingQuad 700 93C56.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Suzuki KingQuad 700 93C56.cal; form: KM | HR | Калькулятор пробега Suzuki KingQuad 700 | EEPROM 93C56 | Введите нужные значения | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "ba8323655776ddbd931b7d591a12fbf7fe77c781dc552f370c8b14ddd0cbe65d",
-      "name": "Suzuki KingQuad 750 93C56",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Suzuki KingQuad 750 93C56 — коррекция пробега и моточасов",
+      "folder": "Asia/ATV/Suzuki",
       "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 750 93C56.cal",
       "paths": [
         "Calculators/Asia/ATV/Suzuki KingQuad 750 93C56.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Suzuki KingQuad 750 93C56.cal; form: KM | HR | Калькулятор пробега Suzuki KingQuad 750 | EEPROM 93C56 | Введите нужные значения | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f78d3aefc314d9ddbc0beaf272a5f72315a352f9986cbbb52d948b6c3c14f10b",
@@ -6825,68 +6926,73 @@
     },
     {
       "sha": "eca25ada4a56c9c2175c52b0cd11ea4f83b8cdd084307765b90a3262a5c12209",
-      "name": "Aquatrax 93c56",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Honda Aquatrax 93c56 — коррекция моточасов",
+      "folder": "Asia/Jet ski/Honda",
       "canonical_path": "Calculators/Asia/Jet ski/Aquatrax 93c56.cal",
       "paths": [
         "Calculators/Asia/Jet ski/Aquatrax 93c56.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Jet ski/Aquatrax 93c56.cal; form: HR | Калькулятор часов Jet ski Honda Aquatrax. | EEPROM 93C56 | Введите нужное значение в окне ЧАСЫ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "7f10ec402df015207f3b5edad71c4be67f95e83e172004df9eddfe3c1b3e0946",
-      "name": "SEA-DOO GS 93С56",
-      "folder": "Asia/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "name": "Sea-Doo GS 93C56 — коррекция пробега",
+      "folder": "Asia/Jet ski/BRP",
       "canonical_path": "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal",
       "paths": [
         "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "db8295e3b5817016177261e642b9d91ba0f7498ebed551880a18aea301a18cf6",
-      "name": "Yamaha F60CET 24C02",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha F60CET 24C02 — коррекция моточасов",
+      "folder": "Asia/Jet ski/Yamaha",
       "canonical_path": "Calculators/Asia/Jet ski/Yamaha F60CET 24C02.cal",
       "paths": [
         "Calculators/Asia/Jet ski/Yamaha F60CET 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Jet ski/Yamaha F60CET 24C02.cal; form: HR | Калькулятор часов Yamaha F60CET. | EEPROM S24CS02A | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "9d7e33930644dc351c206daea65c23d0af497fc4f6188757bcab9cc7129dc0df",
-      "name": "Yamaha FX1100-FR 93C66",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha FX1100-FR 93C66 — коррекция моточасов",
+      "folder": "Asia/Jet ski/Yamaha",
       "canonical_path": "Calculators/Asia/Jet ski/Yamaha FX1100-FR 93C66.cal",
       "paths": [
         "Calculators/Asia/Jet ski/Yamaha FX1100-FR 93C66.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Jet ski/Yamaha FX1100-FR 93C66.cal; form: HR | Калькулятор часов Yamaha FX1100-FR | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "95a77c3376f87f67dd3c8b84a9d09e1d56fba3367ede6c90ddb209995e518fbc",
-      "name": "Yamaha WaveRunner 93С46",
-      "folder": "Asia/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "name": "Yamaha WaveRunner 93C46 — коррекция моточасов",
+      "folder": "Asia/Jet ski/Yamaha",
       "canonical_path": "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal",
       "paths": [
         "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "315c652c0beac0eb4a5076f1da345755770001c11efe66669044baa98eb89cd7",
@@ -10712,16 +10818,17 @@
     },
     {
       "sha": "e3ba8bcc3188b62d474427e07eb590ce95d05c4103960825cc25824a137b5447",
-      "name": "Boulevard С90T 93C46 Denso",
+      "name": "Suzuki Boulevard C90T 93C46 Denso — коррекция пробега",
       "folder": "Asia/Motobikes/Suzuki",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal",
       "paths": [
         "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal; form: KM | Калькулятор пробега Suzuki Boulevard С90T. | EEPROM 93C46, панель Denso. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "14552360c424ccbccaff6ae2710d9f23a093543c6320238398f1206cb7757704",
@@ -11531,29 +11638,31 @@
     },
     {
       "sha": "a95c78452d6c42f7fdb28d4044a27fcd02c56169e490ad9b16798560f8e61347",
-      "name": "Cliper 93с56 Yazaki",
+      "name": "Nissan Cliper 93C56 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal",
       "paths": [
         "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "5958c9c29a72b80d87c54df85c3758cb00ece0e16e231e32ff2ec6ed4607fc58",
-      "name": "Cliper 93с66 NS",
+      "name": "Nissan Cliper 93C66 NS — коррекция пробега",
       "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal",
       "paths": [
         "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f15fd13a64576dd2a3e901b42d9b7638be154ae32fac895915bd5ce4ab16e495",
@@ -11869,16 +11978,17 @@
     },
     {
       "sha": "420e3b48e83f9dd94627cd6d87a7f658e81b1d2fe495a15abad708871129480a",
-      "name": "March 2000 93с56 Yazaki",
+      "name": "Nissan March 2000 93C56 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal",
       "paths": [
         "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal; form: KM | Калькулятор пробега Nissan March. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "105ac733f6bc620f8adea54d435b7be1d60ad98cf7da56c826972017064bb927",
@@ -12402,16 +12512,17 @@
     },
     {
       "sha": "89b29f041a52ae53399fa52fa258fcd77c5da786eb740cf1e7483a2501cdbd27",
-      "name": "Presia 93с46 Yazaki",
+      "name": "Nissan Presia 93C46 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal",
       "paths": [
         "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal; form: KM | Калькулятор пробега Nissan Presia. | EEPROM 93c46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "e78b181f65f882259fb8a7af6c7c31ae0e4349195630efbdcef5acf23aab3b86",
@@ -13143,16 +13254,17 @@
     },
     {
       "sha": "bac461f208a09c3a385de5c1a32234bd50948848c190465b3eb0954e50348554",
-      "name": "X-trail 9S12ХНZ256",
+      "name": "Nissan X-Trail 9S12XHZ256 — коррекция пробега",
       "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal",
       "paths": [
         "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal; form: КМ | 128 | Constant - | Калькулятор пробега для Nissan X-trail. | Процессор MC9S12XHZ256. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2a3f20e7c82e071157e665dd0d104ef0f6857ff9e0f31b8a716a73efe154913c",
@@ -13429,16 +13541,17 @@
     },
     {
       "sha": "b6260a4b492dab5f01e06b2c853a016c25f113e6e93cb115a9b73024281bbd9e",
-      "name": "SX3255DR384 93С66",
+      "name": "Shaanxi SX3255DR384 93C66 — коррекция пробега",
       "folder": "Asia/Shaanxi",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal",
       "paths": [
         "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal; form: КМ | Калькулятор пробега Shaanxi SX3255DR384. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "af8f726b5d09fd110d154e8e587b154ac6ac5862e54841ce9a2aa7f78188a6a3",
@@ -18642,16 +18755,18 @@
     },
     {
       "sha": "2abefdbef21e206e618cf280b67341304f50867aac4d95750232f6d156980cce",
-      "name": "CHINA 24C08",
+      "name": "CHINA 24C08 — коррекция пробега",
       "folder": "CHINA",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
       "canonical_path": "Calculators/CHINA/CHINA 24C08.cal",
       "paths": [
         "Calculators/CHINA/CHINA 24C08.cal"
       ],
       "source_sections": [
         "CHINA"
-      ]
+      ],
+      "review_evidence": "path Calculators/CHINA/CHINA 24C08.cal; form: KM | CONSTANT | DAO ANH TUAN | 189 LELOI - HVT - BACGIANG | 0165 999 8878 | HOANGTU.BACGIANG@GMAIL.COM; source section: CHINA",
+      "review_confidence": "partial"
     },
     {
       "sha": "0de9fb077367222e210ff8f8edd05e9dae19e570aa9c2fac557fe3165ff9a328",
@@ -20553,42 +20668,47 @@
     },
     {
       "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
-      "name": "CITROEN PEUGEOUT",
-      "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "name": "Citroen-Peugeot IAW 6LPB (ST10F280) — коррекция пробега",
+      "folder": "ECU/Citroen-Peugeot",
       "canonical_path": "Calculators/ECU/CITROEN PEUGEOUT   .cal",
       "paths": [
         "Calculators/ECU/CITROEN PEUGEOUT   .cal"
       ],
       "source_sections": [
         "ECU"
-      ]
+      ],
+      "review_evidence": "path Calculators/ECU/CITROEN PEUGEOUT .cal; form: КМ | Citroen \\ Peugeot . | ECU IAW 6LPB IAW6LP/08 флеш ST 10F280 . | < u-vovchika >.; source section: ECU",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
-      "name": "ECU 95080",
-      "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "name": "ECU Audi 95080",
+      "folder": "ECU/Audi",
+      "reason": "марка подтверждена формой, операция не подтверждена",
       "canonical_path": "Calculators/ECU/ECU 95080.cal",
       "paths": [
         "Calculators/ECU/ECU 95080.cal"
       ],
       "source_sections": [
         "ECU"
-      ]
+      ],
+      "review_evidence": "path Calculators/ECU/ECU 95080.cal; form: Калькулятор для ECU audi . | EEPROM 95080; source section: ECU",
+      "review_confidence": "partial"
     },
     {
       "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
-      "name": "EDC16",
+      "name": "EDC16 — параметры",
       "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
       "canonical_path": "Calculators/ECU/EDC16.CAL",
       "paths": [
         "Calculators/ECU/EDC16.CAL"
       ],
       "source_sections": [
         "ECU"
-      ]
+      ],
+      "review_evidence": "path Calculators/ECU/EDC16.CAL; form: Бит 0 | Бит 1 | Бит 2 | Бит 3 | Бит 4 | Бит 5 | Бит 6 | Бит 7; source section: ECU",
+      "review_confidence": "partial"
     },
     {
       "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
@@ -29887,16 +30007,17 @@
     },
     {
       "sha": "e449836b43f780a01a35ba4b0b13c0e66ac04f459f6fd897bf973f9dc21f82d3",
-      "name": "Schetmash 25040 3801010-Т",
+      "name": "Schetmash 25040 3801010-Т — коррекция пробега",
       "folder": "EU_US_RU/VAZ",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
       "canonical_path": "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal",
       "paths": [
         "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal"
       ],
       "source_sections": [
         "EU_US_RU"
-      ]
+      ],
+      "review_evidence": "path Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal; form: KM | Калькулятор пробега VAZ 2110-2115. | Производитель панели Schetmash. EEPROM 25040. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: EU_US_RU",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "aca6ffc64fda856a12258854076fdc1b44a0cdf9bfed08537ff5666c0b65ee96",
@@ -31668,29 +31789,33 @@
     },
     {
       "sha": "a313e4da61746694a2b267c91489690671ae3f882a12da42de1544d4479d3e50",
-      "name": "MT 9",
+      "name": "MT 9 — коррекция пробега",
       "folder": "MOTO - TRUCK - ATV/Motobikes",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal"
       ],
       "source_sections": [
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal; form: KM | ANH TUAN | BAC GIANG. | anhtuan.solution@gmail.com | 0165 999 8878 - 093 658 1984; source section: MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "0c43ae8521e5cf6020477243d6443c64b95c175b436719c708ed7d012e625ce6",
       "name": "SLASH-93C56-SPSM-14H18-115",
       "folder": "MOTO - TRUCK - ATV/Motobikes",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal"
       ],
       "source_sections": [
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal; form: GIO | ANH TUAN | BAC GIANG | ANHTUAN.SOLUTION@GMAIL.COM | 0165 999 8878 - 093 658 1984; source section: MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "65750a08fe473694cffd14760018938c2a88621fc08b61c09b60bac3688738cb",
@@ -33550,9 +33675,9 @@
     },
     {
       "sha": "4774b3b211603a17b8e49c7bcbdc8e4f81297c0c2d9262ef1e228b9058b92ebe",
-      "name": "24C164 Proba",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "BRP 24C164 Proba — коррекция пробега и моточасов",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal",
@@ -33561,7 +33686,9 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "3a87ff75d64f39f19a1b277ab59341988ca2c7173dff56eb3beeedcffbbdc289",
@@ -33685,9 +33812,9 @@
     },
     {
       "sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
-      "name": "24с04 Proba",
+      "name": "BRP 24C04 Proba — коррекция пробега и моточасов",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
@@ -33696,7 +33823,9 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "dc3e64b43f3e499b08f0ff336dc8d625c4c27e686f6da3fca1055b1d47be3eeb",
@@ -34060,9 +34189,8 @@
     },
     {
       "sha": "6c5875d3a9b01a73a7b35e82a0cc261026aa346183ce9bbbff2ed4e0ed7aed90",
-      "name": "Aquatrax 93c56",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Honda Aquatrax 93c56 — коррекция моточасов",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Honda",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal",
@@ -34071,13 +34199,14 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal; form: HR | Калькулятор часов Jet ski Honda Aquatrax. | EEPROM 93C56 | Введите нужное значение в окне ЧАСЫ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2287a466d1828a33de172955bdb8518047b313604f7d7a37e1410c5bf9685683",
-      "name": "SEA-DOO GS 93С56",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "name": "Sea-Doo GS 93C56 — коррекция пробега",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/BRP",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
@@ -34086,13 +34215,14 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "2d98fc2720c66b93f7833795c53ca70fb675af2cb522c00b4cfd2d64eabab48e",
-      "name": "Yamaha F60CET 24C02",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Yamaha F60CET 24C02 — коррекция моточасов",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal",
@@ -34101,13 +34231,14 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal; form: HR | Калькулятор часов Yamaha F60CET. | EEPROM S24CS02A | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "f90cbd6a323f7cc90d5c2cd5653979d75d56d081f008ccc206f4daa88c257e0f",
-      "name": "Yamaha WaveRunner 93С46",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "name": "Yamaha WaveRunner 93C46 — коррекция моточасов",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
@@ -34116,7 +34247,9 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "confirmed"
     },
     {
       "sha": "ff7021c692cff69a8f0b6b661af6a9b74b85e72fb696a7f2b110040954c073ce",
@@ -34672,1388 +34805,250 @@
   ],
   "ambiguous_entries": [
     {
-      "sha": "ebf96d97196847d03bc3d68c80459a454d04693ed58faf7f3d7e9a48c174c13d",
-      "name": "ATV BRP Outlander v1",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/ATV/ATV BRP Outlander  v1.cal",
-      "paths": [
-        "Calculators/ATV/ATV BRP Outlander  v1.cal"
-      ],
-      "source_sections": [
-        "ATV"
-      ]
-    },
-    {
-      "sha": "1cb1aa2747f3c3d5477e5661c75ca768cba20d44000e2289896f5d59bf0a761c",
-      "name": "ATV BRP Outlander v2",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/ATV/ATV BRP Outlander v2.cal",
-      "paths": [
-        "Calculators/ATV/ATV BRP Outlander v2.cal"
-      ],
-      "source_sections": [
-        "ATV"
-      ]
-    },
-    {
-      "sha": "198e9cdd16ddf9f5fd3aa9a0a1d80ee846212cddedc95ef8798115d996318013",
-      "name": "ATV Kymco China",
-      "folder": "ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/ATV/ATV Kymco China.cal",
-      "paths": [
-        "Calculators/ATV/ATV Kymco China.cal"
-      ],
-      "source_sections": [
-        "ATV"
-      ]
-    },
-    {
-      "sha": "5abfedf36f428ec4991de70c9fe3b38f56b6002fc5c1d62310276c9c932a6763",
-      "name": "Baltmotors Jumbo 700 MAX 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Baltmotors Jumbo 700 MAX 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Baltmotors Jumbo 700 MAX 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4b5dc792510a6c1243625c91ca71c05bf81000fc1050a5d73549d10b9e775716",
-      "name": "Baltmotors MBX 720 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Baltmotors MBX 720 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Baltmotors MBX 720 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
       "sha": "68948a2ddb8e100b1e64ee20139b75c4c9c746c50fe20c7e92921ff9de89bac3",
-      "name": "Bombardier 908AZ60A",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 908AZ60A — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 908AZ60A.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 908AZ60A.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 908AZ60A.cal; form: KM | MIL | Калькулятор пробега Ski-Doo Bombardier. | Motorola 908AZ60A | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "4f261f4383eeab38d7c4940330856759fab72f0c4f2c0e2d9f5f9857d222924d",
-      "name": "Bombardier 9S12HZ256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ256 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ256.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ256.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ256.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "d0d99db754bd7f6299597fd4808fb682e7ee3431873b5e1f7486719a192fdcda",
-      "name": "Bombardier 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "376faeb9f6b4252ce2117813ecb8a99fc95ee7022fd783d63d57d8ddadbc0eb7",
-      "name": "Bombardier 9S12HZ64 V1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V1 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "db8d8a6cf5b5526fdd90a891fa1437ec60f52edfe2e73783665e8a96c029e0b0",
-      "name": "Bombardier 9S12HZ64 V2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V2 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "7ad598258277b464922a19f36fbbe4330d3b5450ec2c8cebb6c8fae1100432e0",
-      "name": "Bombardier 9S12HZ64 V3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V3 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "6b3e3d358df64e903254849eb6980e336a357dcdaa9938c5a39dba34ce0efe0a",
-      "name": "Bombardier 9S12HZ64 V4",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V4 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "a73d9388ecac791a23466ddaa707a4b019d834ca9ba22ccf8d3ebe18c287b25f",
-      "name": "Bombardier 9S12HZ64 V5",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "Bombardier 9S12HZ64 V5 — коррекция пробега",
+      "folder": "Asia/ATV/Bombardier",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal",
       "paths": [
         "Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
-    },
-    {
-      "sha": "7ddb6c167e0584b1b15d91fbf8491b9c39400a829eae6f591136246c45d1449d",
-      "name": "Bombardier Outlander 1000 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 1000 9S12HZ64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander 1000 9S12HZ64.cal"
       ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "303c6717713f6917bd60e4ac622a3ad0687951b69ca77f44950dbd6e7a2b00f4",
-      "name": "Bombardier Outlander 1000XT 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 1000XT 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander 1000XT 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "c8c85c45122f4b9cc2112bb4378c4787d43dbd28ce3da6995b68eb04552d0743",
-      "name": "Bombardier Outlander 800 908AZ60A",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 800 908AZ60A.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander 800 908AZ60A.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "49a6d7639bc7cada3de0bd050cf964715ad2c9ce020cadcba4ee40aadc5196df",
-      "name": "Bombardier Outlander 800R X-MR 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander 800R X-MR 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander 800R X-MR 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "da1a271983d28a7951c61d54fc91c856c07af218e7d3391def9e43778d620d38",
-      "name": "Bombardier Outlander L 500 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander L 500 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander L 500 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "81208b5a1a057cf1a93b59993ca8292235ffd6581f5cb750e6aca0c9821d5f29",
-      "name": "Bombardier Outlander Limited 1000 9S12HY64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander Limited 1000 9S12HY64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander Limited 1000 9S12HY64.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "aa96e447df4a31b59c57817328bb4c80a7846823cf212c6b70c6d63867d9fcfa",
-      "name": "Bombardier Outlander MAX400 24C01",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C01.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C01.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "256115fc8cdd5c08c771d85e9f14f704de0d41ad153c16564c08c06ed1dba1fd",
-      "name": "Bombardier Outlander MAX400 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX400 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "f7126cd4ae67c2a77fb8eb090baac9a1a877c23d9988cee8da15bbcd02a250d4",
-      "name": "Bombardier Outlander MAX500 24C08 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var1.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var1.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "083c2b8a2a0799f3a7f407f6564917de87fc1f3b6256d414f2f2b70a3687b478",
-      "name": "Bombardier Outlander MAX500 24C08 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var2.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX500 24C08 var2.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "562393ce4999db110696a533e3ba745e9d0bd5a6947564238179768fd1d7527c",
-      "name": "Bombardier Outlander MAX650 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX650 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX650 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "463710c2e3335f96436e9f595f5865341f51dd26f4f6aef54ff16c35cef71f00",
-      "name": "Bombardier Outlander MAX800 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX800 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "5cc5bb5ab6e5f2fc918869d71a852396eb07c703b47a2cec5abea3eeddb6f97d",
-      "name": "Bombardier Outlander MAX800 XT-P 9S12HY64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800 XT-P 9S12HY64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX800 XT-P 9S12HY64.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "8fdfd969a04b23f12dfad9e46b1269304470329dbdbded176e5cb7e64b1ff0c9",
-      "name": "Bombardier Outlander MAX800R XT 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander MAX800R XT 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander MAX800R XT 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "c69e0884b9aa573385caa9cf9ced036dda91a3b924dc544f71fa21fb9d84353c",
-      "name": "Bombardier Outlander XMR 1000 EFI 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Outlander XMR 1000 EFI 9S12HZ64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Outlander XMR 1000 EFI 9S12HZ64.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "2ed77c9e5e296e329581a13cada3e398497331243adf6b1a59110a86a0e8ac60",
-      "name": "Bombardier Renegade 1000 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Renegade 1000 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Renegade 1000 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "a0ea4c5757be242f9ddac7c3ad831c0eb81e3e8db2dfd36d1449d175f9f210ac",
-      "name": "Bombardier Renegade 800R 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Bombardier Renegade 800R 9S12HZ64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Bombardier Renegade 800R 9S12HZ64.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "048f75ef853a91986ea0b9959c3efd36a83d652ef92587462caef69a1abec4b4",
-      "name": "BRP Spyder 9S12HZ64",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/BRP Spyder 9S12HZ64.cal",
-      "paths": [
-        "Calculators/Asia/ATV/BRP Spyder 9S12HZ64.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
+      "review_evidence": "path Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal; form: KM | Калькулятор пробега Ski-Doo Bombardier. | Motorola 9S12HZ64 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "1b2268be2259a077aea19b2fbf9445411a0e5402dc97e0c35d11144345969d1a",
-      "name": "CFMOTO 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C02 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C02.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C02.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C02.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С02. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "8bb9b6ac7a567fad2a937f94f0f01e8d0c0909bcfc0d08774a74d7b57e9de822",
-      "name": "CFMOTO 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C04 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C04.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C04.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
+      ],
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C04.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С04. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "f77564b82d984d26366715a1f954118d499fd4351fa332422f3d864155841871",
-      "name": "CFMOTO 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "CFMOTO 24C08 — коррекция пробега",
+      "folder": "Asia/ATV/CFMOTO",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/Asia/ATV/CFMOTO 24C08.cal",
       "paths": [
         "Calculators/Asia/ATV/CFMOTO 24C08.cal"
       ],
       "source_sections": [
         "Asia"
-      ]
-    },
-    {
-      "sha": "b834964bfec63240e62c48e5fdc221b57e13bfc6d9353801b3b450bd20cd5bd7",
-      "name": "CFMOTO CF500-2A 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500-2A 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO CF500-2A 24C08.cal"
       ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "87f00d8e8b4d4f5cef1a6734e6ba095a4a8895c1eafb7bb21e034e9d3ab5ac07",
-      "name": "CFMOTO CF500A 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A 24C02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO CF500A 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4a44b02834b6d3f381784af415f663a9265aa7e2bcfd1e02386dd170a8f3da71",
-      "name": "CFMOTO CF500A 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO CF500A 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "febf628fcb417a333e42a17d0b5f3ddd14b91cb486e96da8a73abd8d2180ac96",
-      "name": "CFMOTO CF500A Basic 93C46-8 bit",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO CF500A Basic 93C46-8 bit.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO CF500A Basic 93C46-8 bit.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b56a89479cda941c94e3881a0228e2b7abbfbb505ba5be06cff94d25ad6671c1",
-      "name": "CFMOTO CF800-X8 EFI 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO CF800-X8 EFI 24C04.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO CF800-X8 EFI 24C04.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "31a55cc77def8c071f4325f6e9701d8db5146a0ea4a3492ededd274243d1139b",
-      "name": "CFMOTO X5 24C08",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 24C08.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X5 24C08.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "72707ad1670162ade95badec010900871d1b8773548c6ed64a4819aeb20f7a90",
-      "name": "CFMOTO X5 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 256.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "9d62e1e0a12123db2e4dd713505a3f802244b61e660641007b79e8b3a59cf658",
-      "name": "CFMOTO X5 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X5 PIC16F1933 - 512.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "2ce10d63bb2289e01ab022de822625abc9a0bf0ed011c8893477806fb027599a",
-      "name": "CFMOTO X6 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 24C02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X6 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "1112968804097a2aab94755e9ef67c575e85b58b720fa0941dffca4493b92ef4",
-      "name": "CFMOTO X6 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 256.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "3aab5bdbb4cef9ab2a57437379b3a3b96b63dda61c31bc036ebf10d03ef48745",
-      "name": "CFMOTO X6 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X6 PIC16F1933 - 512.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "aef40b990498805c323d90a0a2580e22b1089d158dd3111a6cb3b5b888917494",
-      "name": "CFMOTO X8 24C08 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X8 24C08 var1.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X8 24C08 var1.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "14b6b9ac8773069893a3bb6058c6806102bacdbeb242990472e3e526c6e022fb",
-      "name": "CFMOTO X8 24C08 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO X8 24C08 var2.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO X8 24C08 var2.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "cedc41d312c4dd7f2d3f265af65dfd414f3820e1959d0abd8ce11e23d5390a26",
-      "name": "CFMOTO Z8 PIC16F1933 - 256",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 256.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b205f4cf493efb11e5a1da7a7321352b1671dc1266701630430cb9ca3072600f",
-      "name": "CFMOTO Z8 PIC16F1933 - 512",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal",
-      "paths": [
-        "Calculators/Asia/ATV/CFMOTO Z8 PIC16F1933 - 512.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4df502e1b33b34befa1807377781f05e9c63715c5cc22a809941ed7506352ae3",
-      "name": "Grizzly 700 24C02 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var1.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Grizzly 700 24C02 var1.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "f9f7a06cbb3e416e80982b96871adbdd90c80928490a6ecc57e7607daaf2008f",
-      "name": "Grizzly 700 24C02 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var2.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Grizzly 700 24C02 var2.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "57dffa05454fec7a96cf2f01ea59de7399bbb31b3fd9632271eaef592ffaa71f",
-      "name": "Grizzly 700 24C02 var3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Grizzly 700 24C02 var3.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Grizzly 700 24C02 var3.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "53a4a3637e9880b1494547ab6dacfc25c265620dcee1522620ac57ba9d2e40ca",
-      "name": "Grizzly 800 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Grizzly 800 24C02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Grizzly 800 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "d1777fb2055197e9cab90b0cec03ead0620038f2d2d9f976a6c8c449d55f15d4",
-      "name": "Honda Foreman 500 93C66 kansey",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Honda Foreman 500 93C66 kansey.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Honda Foreman 500 93C66 kansey.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "ca30523c2d747e2a6068c2595ec71bd356c51f6d6b7fd879a5b5fe70249844c4",
-      "name": "Honda Foreman 500 93C66 NS",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Honda Foreman 500 93C66 NS.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Honda Foreman 500 93C66 NS.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "e4bfe5ae6efbb462b243706adc437f39aaa732a68919b426dbe72aeacc28e49e",
-      "name": "Honda TRX500 93C66 kansey",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Honda TRX500 93C66 kansey.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Honda TRX500 93C66 kansey.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "510f3833b867bd22d751c83086f708f37cdadf8e6bc69c80daa2be6aa963f1fb",
-      "name": "kawasaki bruteforce 650 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/kawasaki bruteforce 650 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/kawasaki bruteforce 650 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b95e9a347487ca2b4c96ff038098bfe959d05862463bab4043f5b82cc77c6d9d",
-      "name": "kawasaki bruteforce 750 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/kawasaki bruteforce 750 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/kawasaki bruteforce 750 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4d68031dd3c99b9e5d96b3fc119bee652f4749b03475cca2e0b7e85710b1155b",
-      "name": "Kymco MXU 500 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Kymco MXU 500 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Kymco MXU 500 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "17c030420ee412f1eceeb78a412eb8bbe1acaeb420d1adbb75ed1cc813b16397",
-      "name": "Polaris RZR 1000 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris RZR 1000 24C32.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris RZR 1000 24C32.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "7a1bd721dd7e5114a61141743d2d09dc9c9ff9c1fffdc1f3c666a8971357799a",
-      "name": "Polaris RZR 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris RZR 24C32.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris RZR 24C32.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b8ea9923bd85046426d5c38fcbc5688faaba29e16713453f1bcb6644ae40c62c",
-      "name": "Polaris RZR 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris RZR 93C66.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris RZR 93C66.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "e5e4af7ff472baeb298c1cb53ceba0f98897abf20fa47cfc4fa7a3d4a24141a2",
-      "name": "Polaris Sportsman 400 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 400 93C66.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman 400 93C66.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4bae57ed2f5e14e8e2f5570ee35d896dcedbf89f6bfd2430fbe0ffa4a8f35d0e",
-      "name": "Polaris Sportsman 500",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 500.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman 500.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "3bc0d643c485101064df5ab2c56d7fbcd256b1b7b92bd41803a7157ccfd9bb25",
-      "name": "Polaris Sportsman 800 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var1.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman 800 var1.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "e1c5371aa1b84db2f1a8f17b8e2ebcbe4452c83103408e2bf6a4318665ceed16",
-      "name": "Polaris Sportsman 800 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var2.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman 800 var2.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4061ce3996d16a1a9d9eb1de6b6df0e814e9aa6b39c37b0ab974203f44d0386d",
-      "name": "Polaris Sportsman 800 var3",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman 800 var3.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman 800 var3.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "04fc0c5107e70312fa819b8a4dad27fd222bd9155fc237bc8f83c2d65c2af5c7",
-      "name": "Polaris Sportsman Touring 550 EPS 24C32",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman Touring 550 EPS 24C32.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman Touring 550 EPS 24C32.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "2760d2bc06d55be122faf76085481f2c51069c60159341afcd249e71f39aa3ee",
-      "name": "Polaris Sportsman WV850 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman WV850 24C04.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman WV850 24C04.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "0d0341b772257b665e3f2efcb66c99b75ebbc0110e2b259bff95740a3cf3ecda",
-      "name": "Polaris Sportsman XP 850 EPS 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Polaris Sportsman XP 850 EPS 24C04.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Polaris Sportsman XP 850 EPS 24C04.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "f9b2ebc18c539bd1ea74b263bc1fdcb22f6bd37aa680f712dcf69c00dc62e048",
-      "name": "Raptor 700R 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Raptor 700R 24C02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Raptor 700R 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "7cfd00fff98bc202b2a1b6984f45e8f30e5e8fd90c7dbd97c9638553af3f6968",
-      "name": "Rhino 700 24C02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Rhino 700 24C02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Rhino 700 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "5312391fb7dde9d5d4acc42d5de85f40bfcfbdeeab81877743692da5e16548b1",
-      "name": "Russkaya Mehanika Gamax AX600 24C01",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika Gamax AX600 24C01.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Russkaya Mehanika Gamax AX600 24C01.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "347d813e7a72c13d3af0c976349a1d93f574bf6892224a320b0ae44132c6762a",
-      "name": "Russkaya Mehanika Persheron500A 93C46",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika Persheron500A 93C46.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Russkaya Mehanika Persheron500A 93C46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "28cd447a7d47e8224f821ab078046b27fabe319c064229908a4a5942cce11b5a",
-      "name": "Russkaya Mehanika RM500 93C66",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Russkaya Mehanika RM500 93C66.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Russkaya Mehanika RM500 93C66.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "2986a9e7a02d0165626151345628121826ed2b8a3f2c5cfae09025c0a120e402",
-      "name": "Stels 300 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 300 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 300 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "775fb0d3f99105449f78ee607967b7a8c6c385fa1fe8ab3b77a9516e0ad59a67",
-      "name": "Stels 450H 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 450H 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 450H 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "1124da8532829604e846cd3cbfcf49629529e6fb7a069daa6b0de74296c35a10",
-      "name": "Stels 500GT 24C04",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 500GT 24C04.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 500GT 24C04.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "15dd21c2c134d4f373bcac53ab3a71d5c82ef4189b5d1b14c495c034b15ee46d",
-      "name": "Stels 500H 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 500H 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 500H 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "28bf7e383715ce01a65cdb70631c0fba1d9f96691c2360531a3e258a44a49ead",
-      "name": "Stels 600GT 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 600GT 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 600GT 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b76efad5c75dc198058c227dc3928ab93a1d9e91bb75783ce48f947b67348bce",
-      "name": "Stels 700 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels 700 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels 700 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "c87486ea0cd2d7c8856ce1592c8f4d7b86910e18084381bb7515f0d33300988a",
-      "name": "Stels 800 GT max EFI 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels  800 GT max EFI 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels  800 GT max EFI 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "50e4cfc0493badcc0245635585f54be38b67e40450241ad7d1f84c155769e2e9",
-      "name": "Stels Dinli 800 24c02",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Stels Dinli 800 24c02.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Stels Dinli 800 24c02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b8c9e833c002253a86b2a05f3078e5dd39fab8988daf5d3a7f8e5a9f9354a40d",
-      "name": "Suzuki KingQuad 700 24C02 var1",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var1.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var1.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "4384741727686e9edf969c2bd4db67d0275700cf097a917e0c1dce75a9845bdd",
-      "name": "Suzuki KingQuad 700 24C02 var2",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var2.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Suzuki KingQuad 700 24C02 var2.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "1404643ae3bfd24ba5b266716393740c2a8eb95a45ebfbdf1fb6119cd85fa349",
-      "name": "Suzuki KingQuad 700 93C56",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 700 93C56.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Suzuki KingQuad 700 93C56.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "ba8323655776ddbd931b7d591a12fbf7fe77c781dc552f370c8b14ddd0cbe65d",
-      "name": "Suzuki KingQuad 750 93C56",
-      "folder": "Asia/ATV",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/ATV/Suzuki KingQuad 750 93C56.cal",
-      "paths": [
-        "Calculators/Asia/ATV/Suzuki KingQuad 750 93C56.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "eca25ada4a56c9c2175c52b0cd11ea4f83b8cdd084307765b90a3262a5c12209",
-      "name": "Aquatrax 93c56",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/Jet ski/Aquatrax 93c56.cal",
-      "paths": [
-        "Calculators/Asia/Jet ski/Aquatrax 93c56.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "7f10ec402df015207f3b5edad71c4be67f95e83e172004df9eddfe3c1b3e0946",
-      "name": "SEA-DOO GS 93С56",
-      "folder": "Asia/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal",
-      "paths": [
-        "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "db8295e3b5817016177261e642b9d91ba0f7498ebed551880a18aea301a18cf6",
-      "name": "Yamaha F60CET 24C02",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/Jet ski/Yamaha F60CET 24C02.cal",
-      "paths": [
-        "Calculators/Asia/Jet ski/Yamaha F60CET 24C02.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "9d7e33930644dc351c206daea65c23d0af497fc4f6188757bcab9cc7129dc0df",
-      "name": "Yamaha FX1100-FR 93C66",
-      "folder": "Asia/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/Asia/Jet ski/Yamaha FX1100-FR 93C66.cal",
-      "paths": [
-        "Calculators/Asia/Jet ski/Yamaha FX1100-FR 93C66.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "95a77c3376f87f67dd3c8b84a9d09e1d56fba3367ede6c90ddb209995e518fbc",
-      "name": "Yamaha WaveRunner 93С46",
-      "folder": "Asia/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-      "paths": [
-        "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "e3ba8bcc3188b62d474427e07eb590ce95d05c4103960825cc25824a137b5447",
-      "name": "Boulevard С90T 93C46 Denso",
-      "folder": "Asia/Motobikes/Suzuki",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal",
-      "paths": [
-        "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "a95c78452d6c42f7fdb28d4044a27fcd02c56169e490ad9b16798560f8e61347",
-      "name": "Cliper 93с56 Yazaki",
-      "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal",
-      "paths": [
-        "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "5958c9c29a72b80d87c54df85c3758cb00ece0e16e231e32ff2ec6ed4607fc58",
-      "name": "Cliper 93с66 NS",
-      "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal",
-      "paths": [
-        "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "420e3b48e83f9dd94627cd6d87a7f658e81b1d2fe495a15abad708871129480a",
-      "name": "March 2000 93с56 Yazaki",
-      "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal",
-      "paths": [
-        "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "89b29f041a52ae53399fa52fa258fcd77c5da786eb740cf1e7483a2501cdbd27",
-      "name": "Presia 93с46 Yazaki",
-      "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal",
-      "paths": [
-        "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "bac461f208a09c3a385de5c1a32234bd50948848c190465b3eb0954e50348554",
-      "name": "X-trail 9S12ХНZ256",
-      "folder": "Asia/Nissan",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal",
-      "paths": [
-        "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
-    },
-    {
-      "sha": "b6260a4b492dab5f01e06b2c853a016c25f113e6e93cb115a9b73024281bbd9e",
-      "name": "SX3255DR384 93С66",
-      "folder": "Asia/Shaanxi",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal",
-      "paths": [
-        "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal"
-      ],
-      "source_sections": [
-        "Asia"
-      ]
+      "review_evidence": "path Calculators/Asia/ATV/CFMOTO 24C08.cal; form: КМ | Калькулятор пробега ATV CFMOTO. | EEPROM 24С08. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_confidence": "partial"
     },
     {
       "sha": "2abefdbef21e206e618cf280b67341304f50867aac4d95750232f6d156980cce",
-      "name": "CHINA 24C08",
+      "name": "CHINA 24C08 — коррекция пробега",
       "folder": "CHINA",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
       "canonical_path": "Calculators/CHINA/CHINA 24C08.cal",
       "paths": [
         "Calculators/CHINA/CHINA 24C08.cal"
       ],
       "source_sections": [
         "CHINA"
-      ]
-    },
-    {
-      "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
-      "name": "CITROEN PEUGEOUT",
-      "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/ECU/CITROEN PEUGEOUT   .cal",
-      "paths": [
-        "Calculators/ECU/CITROEN PEUGEOUT   .cal"
       ],
-      "source_sections": [
-        "ECU"
-      ]
+      "review_evidence": "path Calculators/CHINA/CHINA 24C08.cal; form: KM | CONSTANT | DAO ANH TUAN | 189 LELOI - HVT - BACGIANG | 0165 999 8878 | HOANGTU.BACGIANG@GMAIL.COM; source section: CHINA",
+      "review_confidence": "partial"
     },
     {
       "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
-      "name": "ECU 95080",
-      "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "name": "ECU Audi 95080",
+      "folder": "ECU/Audi",
+      "reason": "марка подтверждена формой, операция не подтверждена",
       "canonical_path": "Calculators/ECU/ECU 95080.cal",
       "paths": [
         "Calculators/ECU/ECU 95080.cal"
       ],
       "source_sections": [
         "ECU"
-      ]
+      ],
+      "review_evidence": "path Calculators/ECU/ECU 95080.cal; form: Калькулятор для ECU audi . | EEPROM 95080; source section: ECU",
+      "review_confidence": "partial"
     },
     {
       "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
-      "name": "EDC16",
+      "name": "EDC16 — параметры",
       "folder": "ECU",
-      "reason": "файл лежит прямо в корне исходного раздела; отдельной папки марки/модели в источнике нет",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
       "canonical_path": "Calculators/ECU/EDC16.CAL",
       "paths": [
         "Calculators/ECU/EDC16.CAL"
       ],
       "source_sections": [
         "ECU"
-      ]
-    },
-    {
-      "sha": "e449836b43f780a01a35ba4b0b13c0e66ac04f459f6fd897bf973f9dc21f82d3",
-      "name": "Schetmash 25040 3801010-Т",
-      "folder": "EU_US_RU/VAZ",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal",
-      "paths": [
-        "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal"
       ],
-      "source_sections": [
-        "EU_US_RU"
-      ]
+      "review_evidence": "path Calculators/ECU/EDC16.CAL; form: Бит 0 | Бит 1 | Бит 2 | Бит 3 | Бит 4 | Бит 5 | Бит 6 | Бит 7; source section: ECU",
+      "review_confidence": "partial"
     },
     {
       "sha": "a313e4da61746694a2b267c91489690671ae3f882a12da42de1544d4479d3e50",
-      "name": "MT 9",
+      "name": "MT 9 — коррекция пробега",
       "folder": "MOTO - TRUCK - ATV/Motobikes",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal"
       ],
       "source_sections": [
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal; form: KM | ANH TUAN | BAC GIANG. | anhtuan.solution@gmail.com | 0165 999 8878 - 093 658 1984; source section: MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "0c43ae8521e5cf6020477243d6443c64b95c175b436719c708ed7d012e625ce6",
       "name": "SLASH-93C56-SPSM-14H18-115",
       "folder": "MOTO - TRUCK - ATV/Motobikes",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal"
       ],
       "source_sections": [
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal; form: GIO | ANH TUAN | BAC GIANG | ANHTUAN.SOLUTION@GMAIL.COM | 0165 999 8878 - 093 658 1984; source section: MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "4774b3b211603a17b8e49c7bcbdc8e4f81297c0c2d9262ef1e228b9058b92ebe",
-      "name": "24C164 Proba",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
+      "name": "BRP 24C164 Proba — коррекция пробега и моточасов",
+      "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal",
@@ -36062,13 +35057,15 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
+      ],
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     },
     {
       "sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
-      "name": "24с04 Proba",
+      "name": "BRP 24C04 Proba — коррекция пробега и моточасов",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
+      "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
       "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
       "paths": [
         "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
@@ -36077,67 +35074,9 @@
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
-      ]
-    },
-    {
-      "sha": "6c5875d3a9b01a73a7b35e82a0cc261026aa346183ce9bbbff2ed4e0ed7aed90",
-      "name": "Aquatrax 93c56",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal",
-      "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/Aquatrax 93c56.cal"
       ],
-      "source_sections": [
-        "MOTO",
-        "MOTO - TRUCK - ATV"
-      ]
-    },
-    {
-      "sha": "2287a466d1828a33de172955bdb8518047b313604f7d7a37e1410c5bf9685683",
-      "name": "SEA-DOO GS 93С56",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
-      "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal"
-      ],
-      "source_sections": [
-        "MOTO",
-        "MOTO - TRUCK - ATV"
-      ]
-    },
-    {
-      "sha": "2d98fc2720c66b93f7833795c53ca70fb675af2cb522c00b4cfd2d64eabab48e",
-      "name": "Yamaha F60CET 24C02",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "файл лежит прямо в папке категории; отдельной папки марки/модели в источнике нет",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal",
-      "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha F60CET 24C02.cal"
-      ],
-      "source_sections": [
-        "MOTO",
-        "MOTO - TRUCK - ATV"
-      ]
-    },
-    {
-      "sha": "f90cbd6a323f7cc90d5c2cd5653979d75d56d081f008ccc206f4daa88c257e0f",
-      "name": "Yamaha WaveRunner 93С46",
-      "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski",
-      "reason": "в исходном пути нарушена кодировка; отображается восстановленное имя, исходный путь сохранён",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-      "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal"
-      ],
-      "source_sections": [
-        "MOTO",
-        "MOTO - TRUCK - ATV"
-      ]
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_confidence": "partial"
     }
   ],
   "policy": {
@@ -36145,6 +35084,13 @@
     "names": "Имя файла без .cal, пробелы нормализованы; функции не добавляются.",
     "versions": "Одинаковые видимые имена разных SHA получают · вариант N.",
     "encoding": "Битая кодировка исправлена только в отображаемом имени; исходный путь не изменён.",
-    "unresolved": "Неоднозначные записи остаются доступны в исходном разделе с конкретной причиной."
+    "unresolved": "После адресной проверки 112 записей 18 оставлены с причиной: 13 — марка подтверждена, но конкретная модель в пути/форме не указана; 5 — недостаточно данных о марке/операции. Остальные получили подтверждённую папку и имя."
+  },
+  "review": {
+    "date": "2026-11-04",
+    "registry": "reports/T-016-group-review-2026-11-04.json",
+    "checked_ambiguous": 112,
+    "resolved": 94,
+    "remaining": 18
   }
 }

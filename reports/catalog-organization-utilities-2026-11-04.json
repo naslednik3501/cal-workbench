@@ -76,7 +76,7 @@
   "decisions": [
     {
       "sha": "01fa7b6a6d63a78d3327f5bbfd1b7e0c20505497b636e2d581e2eace8d1102a6",
-      "name": "Acura MDX 93C76 — коррекция пробега",
+      "name": "Acura MDX 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -85,7 +85,8 @@
       "canonical_path": "Calculators/Service/Honda/Acura MDX 93C76+service.cal",
       "paths": [
         "Calculators/Service/Honda/Acura MDX 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Honda/Acura MDX 93C76+service.cal; form: Km | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Калькулятор пробега для Acura MDX. | EEPROM: 93C76 | Maintenance items, counters and oil life reset; key: checkbox Maintenance items, counters and oil life reset"
     },
     {
       "sha": "04d9a0d0267471e1cc06224e6197e5dc6564dbdd0a3762ce2e5cf0f6b955dea3",
@@ -119,7 +120,7 @@
     },
     {
       "sha": "05acf602ac4a0b6a095b81363e34b49a0859fa9051b02b53955e04f027297dec",
-      "name": "Mercedes-Benz C W203 DASH SERVICE 93c86 var2 M — коррекция пробега",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 93c86 var2 M — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -130,7 +131,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal",
         "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2 M.cal; form: КМ | 1 KM 6 | 2 KM 7 | 3 KM 8 | 4 KM 9 | 5 KM 10 | Reset oil adds/refills; key: checkbox Reset oil adds/refills"
     },
     {
       "sha": "076eaccad2ec3be23feecff04a656290f536428ef41de5a2afebd7c208589c88",
@@ -164,7 +166,7 @@
     },
     {
       "sha": "0934abc9f784fe4473ef344ea21b338bec0966f783efaba2b4a10386cc8e030e",
-      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V2 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V2 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -175,11 +177,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal",
         "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V2.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/V W639 95640 (ASSYST, ASSYST PLUS) V2.cal; form: KM | D | Entry# | ASSYST | Exceeded | MERCEDES W639 . | Eeprom 95460 | Enter value needed | and press button <Apply>.; key: labels KM/D/Entry#/ASSYST"
     },
     {
       "sha": "0d72e680037caf104bf3ba11e138be8af3dd29f35dfd22c4039b65486261e47d",
-      "name": "Mercedes CGW HC912 ASSYSTPLUS — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes CGW HC912 ASSYSTPLUS — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -190,7 +193,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal",
         "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/Mercedes CGW HC912 (ASSYSTPLUS).cal; form: KM | Entry# | All days | D | Калькулятор ASSYST PLUS для Mercedes . | (E211) HC912DG128 | Введите нужное значение в окнax | и нажмите кнопку <Применить>.; key: labels KM/Entry#/All days/D, title ASSYST PLUS"
     },
     {
       "sha": "0e406f2fe5ec0d8c8b3cf51797cdf5002db270e137e4b4a6beba0c1a8c6e3706",
@@ -295,7 +299,7 @@
     },
     {
       "sha": "18c301b5998ac70dac22c9c96e889e352e152a83a108e9384aa9f774372ceb0f",
-      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — коррекция пробега, сервисные интервалы и сброс тормозных данных",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -304,11 +308,12 @@
       "canonical_path": "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal",
       "paths": [
         "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256.cal; form: КМ | 1 KM | Интервал времени | дн | 2 KM | 3 KM | 4 KM | 5 KM | Reset Brake data; key: labels 1 KM..5 KM, checkbox Reset Brake data"
     },
     {
       "sha": "1911391161a6cacc5b769129bd9dee915a58428e3988993106a54d32ae04778a",
-      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 — коррекция пробега, сервисные интервалы и сброс тормозных данных",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -319,7 +324,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256.cal",
         "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256.cal; form: КМ | 1 KM | Интервал времени | дн | 2 KM | 3 KM | 4 KM | 5 KM | Reset Brake data; key: labels 1 KM..5 KM, checkbox Reset Brake data"
     },
     {
       "sha": "1993eae6703fa8353f175e1522954517c55f30d08bea80d296bc8fa2feb6df16",
@@ -370,7 +376,7 @@
     },
     {
       "sha": "1cd043b4d810d40ee41c506e2777a3c24935f253c575cd56b072b617f5caa3ae",
-      "name": "BMW ISN EWS4 9S12DG64 2L86D KM — коррекция пробега",
+      "name": "BMW ISN EWS4 9S12DG64 2L86D KM — ISN и коррекция пробега",
       "folder": "OTHER/PIN",
       "operation": "коррекция пробега",
       "sources": [
@@ -381,7 +387,8 @@
       "paths": [
         "Calculators/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal",
         "Calculators/OTHER/PIN/Bmw/ISN  EWS4_9S12DG64 (2L86D)KM.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/PIN/Bmw/ISN EWS4_9S12DG64 (2L86D)KM.cal; form: KM | Калькулятор пробега для BMW EWS4. | MCU: 9S12DG64 (2L86D) | < u-vovchika >.; key: path ISN EWS4; label KM; title EWS4"
     },
     {
       "sha": "1d2b057f6281ea82fd1a1322e280aad4bd769ae0ca05bc57e646eaadeffc7faa",
@@ -398,7 +405,7 @@
     },
     {
       "sha": "1d5aba9fb8dd780d2872eea6af42d1a4d85d9fa9fbddb56e4e314aaf5c528e5d",
-      "name": "Mercedes-Benz ESP tire pressure 95080 — коррекция пробега",
+      "name": "Mercedes-Benz ESP tire pressure 95080 — коррекция пробега и данных TPMS",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -409,11 +416,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/ESP(tire pressure) 95080.cal",
         "Calculators/OTHER/Service calc/Mercedes/ESP(tire pressure) 95080.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/ESP(tire pressure) 95080.cal; form: KM | Kilometer reading at warning no. 1 | Kilometer reading at warning no. 2 | Kilometer reading at warning no. 3 | Kilometer reading at reactivation 1 | Kilometer reading at reactivation 2 | Kilometer reading at reactivation 3 | Kilometer reading at deactivation; key: labels warning/reactivation/deactivation"
     },
     {
       "sha": "1f0274f6fa432f80c839fa2b9eafa93aa09157f594c1cba9cc7af997a3bc9f41",
-      "name": "Renault Kangoo 93C66 — коррекция пробега",
+      "name": "Renault Kangoo 93C66 — коррекция пробега и подготовка дампа для сброса",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -422,11 +430,12 @@
       "canonical_path": "Calculators/Service/Renault/Kangoo 93C66 + service.cal",
       "paths": [
         "Calculators/Service/Renault/Kangoo 93C66 + service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Renault/Kangoo 93C66 + service.cal; form: KM | Подготовить дамп для сброса процедурой | Калькулятор для Renault Kangoo. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; key: checkbox Подготовить дамп для сброса процедурой"
     },
     {
       "sha": "211c9834d03042f59db1138bfbabde838157ee8d44d77f4335c65ed6070a24f6",
-      "name": "Mercedes-Benz Sprinter W609 95640 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz Sprinter W609 95640 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -437,7 +446,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal",
         "Calculators/OTHER/Service calc/Mercedes/Sprinter W609 95640 Service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal; form: КМ | Калькулятор Service для Sprinter W609. | VDO. EEPROM 95640. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: title Калькулятор Service; filename Service"
     },
     {
       "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
@@ -469,7 +479,7 @@
     },
     {
       "sha": "22f811c7a13aa0a7312908f2ee59d20d5e8ad1207f1bda6c388c86d9c1d76a72",
-      "name": "Mercedes-Benz C W203 DASH SERVICE 24c16 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz C W203 DASH SERVICE 24c16 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -480,7 +490,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal",
         "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/C W203 DASH SERVICE 24c16.cal; form: КМ | KM | Интервал времени | дн; key: labels Интервал времени/дн"
     },
     {
       "sha": "23530534bc9c695ce979e7bd838e99441447aff8fcad3285105dbce366e81e77",
@@ -495,7 +506,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/V W639 MM 95080 service.cal",
         "Calculators/OTHER/Service calc/Mercedes/V W639 MM 95080 service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/V W639 MM 95080 service.cal; form: КМ | Калькулятор пробега Mercedes Vito. | Кузов W639. M.MARELLI. EEPROM 95080. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; key: labels КМ; title Калькулятор пробега"
     },
     {
       "sha": "2378ba0966046998739760999ffc9f3e72ddef1849f2294702b6d3c8c730b54b",
@@ -514,7 +526,7 @@
     },
     {
       "sha": "237ac5c24de39cdd0f274adc1bc44404fbfcc059f084abafb131973ba538d338",
-      "name": "Honda Ridgeline 9S12H256 V3 ml — коррекция пробега",
+      "name": "Honda Ridgeline 9S12H256 V3 ml — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -525,7 +537,8 @@
       "paths": [
         "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal",
         "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 ml.cal; form: ML | Калькулятор пробега Honda Ridgeline. | Motorola 9S12H256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilometer ; key: labels MAIN MAINTENANCE/RESET 1..6"
     },
     {
       "sha": "23ac9810fb2e62a216d9b1eca4e702e5c642b9d891682b5a41964bbffddfb33a",
@@ -587,7 +600,7 @@
     },
     {
       "sha": "29a8ee2a30e217665349f89baeddfc9be7c8654f2ce7d5c1e5cbef97ad486666",
-      "name": "Mercedes-Benz E W211 CGW HC912DG128 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W211 CGW HC912DG128 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -598,7 +611,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/E W211 CGW HC912DG128.cal",
         "Calculators/OTHER/Service calc/Mercedes/E W211 CGW HC912DG128.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/E W211 CGW HC912DG128.cal; form: КМ | 1 KM | Интервал времени | дн | 2 KM | 3 KM | 4 KM | 5 KM; key: labels 1 KM..5 KM/Интервал времени"
     },
     {
       "sha": "2c1c934e53b32f7cf4d054be2f9ea5663a0b1d5934e36752f2bd5a49d3c871ab",
@@ -660,7 +674,7 @@
     },
     {
       "sha": "326fb69b78dc05d3c84e5743a420ebac661012783ba6e10b3f18525e0e1ac788",
-      "name": "Honda CR-V 93C76 — коррекция пробега",
+      "name": "Honda CR-V 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -669,11 +683,12 @@
       "canonical_path": "Calculators/Service/Honda/CR-V 93C76+service.cal",
       "paths": [
         "Calculators/Service/Honda/CR-V 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Honda/CR-V 93C76+service.cal; form: Km | Калькулятор пробега для Honda CR-V | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "35b24e92d0a6d3e2c013ca4754dcb00fdec95a315a1d5b7ee6b14ea4966d4c40",
-      "name": "Honda Accord 93C76 var1 — коррекция пробега",
+      "name": "Honda Accord 93C76 var1 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -684,11 +699,12 @@
       "paths": [
         "Calculators/Service calc/Honda/Accord 93C76 var1 + service.cal",
         "Calculators/OTHER/Service calc/Honda/Accord 93C76 var1 + service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Accord 93C76 var1 + service.cal; form: KM | Калькулятор пробега Honda Accord | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "3606461dc4646032f072886981e97939b3b9905f237b56dd54405727ce23a379",
-      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -697,7 +713,8 @@
       "canonical_path": "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal",
       "paths": [
         "Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Mercedes/Service/E W211 CGW 9S12DT256 var2.cal; form: КМ | 1 KM | Интервал времени | дн | 2 KM | 3 KM | 4 KM | 5 KM; key: labels 1 KM..5 KM/Интервал времени"
     },
     {
       "sha": "36840b2e3ee626c428ab691986c9409fed8da0996d7f2f65fa34f72462edb416",
@@ -759,7 +776,7 @@
     },
     {
       "sha": "3b16a0893c8debef071fb40df0da4bc129adb0b74f2a6ed438ddb207a570bbb9",
-      "name": "Mercedes-Benz W169 CGW ASSYSTPLUS — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz W169 CGW ASSYSTPLUS — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -770,11 +787,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal",
         "Calculators/OTHER/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/W169 CGW(ASSYSTPLUS).cal; form: KM | Entry# | D | Калькулятор ASSYST PLUS для Mercedes . | W169 'B' Class 9S12DT256 | Введите нужное значение в окнax | и нажмите кнопку <Применить>. | Reset Oil change; key: labels ASSYST PLUS; checkbox Reset Oil change"
     },
     {
       "sha": "3c45e619d29bd5672f7a8849a1aca86bf018ad6b049d8813408bcf72601cee2d",
-      "name": "Renault Kangoo 93C66 — коррекция пробега",
+      "name": "Renault Kangoo 93C66 — коррекция пробега и подготовка дампа для сброса",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -785,7 +803,8 @@
       "paths": [
         "Calculators/Service calc/Renault/Kangoo 93C66 + service.cal",
         "Calculators/OTHER/Service calc/Renault/Kangoo 93C66 + service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Renault/Kangoo 93C66 + service.cal; form: KM | Подготовить дамп для сброса процедурой | Калькулятор для Renault Kangoo. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; key: checkbox Подготовить дамп для сброса процедурой"
     },
     {
       "sha": "3e148f42e7ba776189f706df342c4bfa390ed3babd27e71dbd80133e54d97fec",
@@ -800,7 +819,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/W164 Rear SAM V3.cal",
         "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V3.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/W164 Rear SAM V3.cal; form: Калькулятор пробега Rear SAM. | EEPROM 93C76. 8bit | Check box to reset mileage; key: labels KM; title Калькулятор пробега Rear SAM"
     },
     {
       "sha": "3f85d2768cdf6ad1a522b4b8ca0dd8d4a214611a5bafa2d8cf96fc8096e437ab",
@@ -860,11 +880,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal",
         "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var1.cal; form: КМ | 1 KM 6 | 2 KM 7 | 3 KM 8 | 4 KM 9 | 5 KM 10; key: labels 1 KM..5 KM; filename DASH SERVICE"
     },
     {
       "sha": "4129b6124aabb5e96bd3bdab59a7735bbec1b07fd8d73e1a7566df22f5fa4922",
-      "name": "Mercedes-Benz ESP tire pressure 95080 — коррекция пробега",
+      "name": "Mercedes-Benz ESP tire pressure 95080 — коррекция пробега и данных TPMS",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -873,7 +894,8 @@
       "canonical_path": "Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal",
       "paths": [
         "Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Mercedes/ESP(tire pressure) 95080.cal; form: KM | Kilometer reading at warning no. 1 | Kilometer reading at warning no. 2 | Kilometer reading at warning no. 3 | Kilometer reading at reactivation 1 | Kilometer reading at reactivation 2 | Kilometer reading at reactivation 3 | Kilometer reading at deactivation; key: labels warning/reactivation/deactivation"
     },
     {
       "sha": "42b9115f20c47e601bde2e57e8b0b28005d9d008b01db75d0cd2ce21564e6723",
@@ -1133,7 +1155,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal",
         "Calculators/OTHER/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/C W203 DASH SERVICE 93c86 var2.cal; form: КМ | 1 KM 6 | 2 KM 7 | 3 KM 8 | 4 KM 9 | 5 KM 10; key: labels 1 KM..5 KM"
     },
     {
       "sha": "5b4a494102b8297dd6612c455d771de009e543541a744ea59743b64b0b8d6c3a",
@@ -1152,7 +1175,7 @@
     },
     {
       "sha": "608d77f5fdfab430e79fbc5f7be6ba169c52823532c690ffa3f2e60b3241a689",
-      "name": "Honda Ridgeline 9S12H256 V2 ml — коррекция пробега",
+      "name": "Honda Ridgeline 9S12H256 V2 ml — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1163,7 +1186,8 @@
       "paths": [
         "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal",
         "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 ml.cal; form: ML | Калькулятор пробега Honda Ridgeline. | Motorola 9S12H256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilometer ; key: labels MAIN MAINTENANCE/RESET 1..6"
     },
     {
       "sha": "615b4ea417297975148d920fbc845325e0f79c786c7e25722aa667fa424e5ae9",
@@ -1199,7 +1223,7 @@
     },
     {
       "sha": "6461e91804e9970f94bebc23680f7ed07083aac78fed0bc69f6fb6a6df9b2d05",
-      "name": "Honda Accord 93C76 var2 — коррекция пробега",
+      "name": "Honda Accord 93C76 var2 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1210,11 +1234,12 @@
       "paths": [
         "Calculators/Service calc/Honda/Accord 93C76 var2 + service.cal",
         "Calculators/OTHER/Service calc/Honda/Accord 93C76 var2 + service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Accord 93C76 var2 + service.cal; form: KM | Калькулятор пробега Honda Accord | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Do not use for Hybrid cars !!! | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "6710c4eee521f81946e4fd382530929340e5442f994a9e8c8b6f7d2001827592",
-      "name": "Smart TPM 95080 — коррекция пробега",
+      "name": "Smart TPM 95080 — коррекция пробега и данных TPMS",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1225,7 +1250,8 @@
       "paths": [
         "Calculators/Service calc/Smart/TPM 95080.cal",
         "Calculators/OTHER/Service calc/Smart/TPM 95080.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Smart/TPM 95080.cal; form: KM | Kilometer at Reactivation no. 1 | Kilometer at Reactivation no. 2 | Kilometer at Reactivation no. 3 | Kilometer at Reactivation no. 4 | Kilometer at Reactivation no. 5; key: labels Reactivation no. 1..5"
     },
     {
       "sha": "6722062247e777da2b276675aecd36876f805a3b859c831c1243861d2450627e",
@@ -1354,7 +1380,8 @@
       "canonical_path": "Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal",
       "paths": [
         "Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Jaguar/Jaguar XF 24C64(service plus).cal; form: КМ | Калькулятор пробега для Jaguar XF. | 'Visteon' Eeprom 24C64.; key: labels КМ; title Jaguar XF; filename service plus"
     },
     {
       "sha": "6f888ebf7a137daee50c5432abc84277c71262de4233268135b926dcdedadb6b",
@@ -1373,7 +1400,7 @@
     },
     {
       "sha": "7082de546d496132dd0893fa9aff11853aff72b6e340d8d70d3c462c59235ea4",
-      "name": "BMW ISN CAS 3+ 9S12XDP512 — коррекция пробега",
+      "name": "BMW ISN CAS 3+ 9S12XDP512 — ISN и коррекция пробега",
       "folder": "OTHER/PIN",
       "operation": "коррекция пробега",
       "sources": [
@@ -1384,7 +1411,8 @@
       "paths": [
         "Calculators/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal",
         "Calculators/OTHER/PIN/Bmw/ISN  CAS_3+_9S12XDP512.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/PIN/Bmw/ISN CAS_3+_9S12XDP512.cal; form: KM | Кальк пробега и для BMW CAS+. | MCU: 9S12XDP512 Mask 0L15Y | Для установки пробега 0 | нажмите кнопку <Применить>. | < u-vovchika >; key: path ISN CAS 3+; labels ISN/пробег"
     },
     {
       "sha": "72469f0b6a25843c2d50510dbe1a97341c82962dc5e5b35034bc9d284a07ea88",
@@ -1504,7 +1532,7 @@
     },
     {
       "sha": "7b76cd1f8ddae600d0f80ee382a21176045052b7f118e065d1d5d4d9104826f9",
-      "name": "Honda Ridgeline 9S12H256 V1 — коррекция пробега",
+      "name": "Honda Ridgeline 9S12H256 V1 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1515,11 +1543,12 @@
       "paths": [
         "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V1.cal",
         "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V1.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Ridgeline 9S12H256+service V1.cal; form: Km | Калькулятор пробега Honda Ridgeline. | Motorola 9S12H256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | KM | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilom; key: labels MAIN MAINTENANCE/RESET 1..6"
     },
     {
       "sha": "7bd5b41e85d64d8a77224b3ac769fd37896d7cebee973c74a8f3d3e2591f6482",
-      "name": "BMW ISN CAS 3 9S12X-series — коррекция пробега",
+      "name": "BMW ISN CAS 3 9S12X-series — ISN и коррекция пробега",
       "folder": "OTHER/PIN",
       "operation": "коррекция пробега",
       "sources": [
@@ -1530,11 +1559,12 @@
       "paths": [
         "Calculators/PIN/Bmw/ISN  CAS_3_9S12X-series.cal",
         "Calculators/OTHER/PIN/Bmw/ISN  CAS_3_9S12X-series.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/PIN/Bmw/ISN CAS_3_9S12X-series.cal; form: KM | Кальк пробега и для BMW CAS. | MCU: 9S12X-series | Для установки пробега 0 | нажмите кнопку <Применить>. | < u-vovchika >; key: path ISN CAS 3; labels ISN/пробег"
     },
     {
       "sha": "7c072e61987baee10c0d8afadef26e83395bac0107ae75f599b481c20b20fc42",
-      "name": "Honda Ridgeline 9S12H256 V2 km — коррекция пробега",
+      "name": "Honda Ridgeline 9S12H256 V2 km — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1545,7 +1575,8 @@
       "paths": [
         "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal",
         "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Ridgeline 9S12H256+service V2 km.cal; form: KM | Калькулятор пробега Honda Ridgeline. | Motorola 9S12H256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilometer ; key: labels MAIN MAINTENANCE/RESET 1..6"
     },
     {
       "sha": "7cce68317110bc17cead78675ceb80de9546affe7c30d01e7b759be8bfaba0a4",
@@ -1620,7 +1651,7 @@
     },
     {
       "sha": "8158fba73ee8214b11ebc960cfa034aa3e065f7e6b90e40642fa46cef9b09ae6",
-      "name": "Honda Accord 93C76 — коррекция пробега",
+      "name": "Honda Accord 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1631,7 +1662,8 @@
       "paths": [
         "Calculators/Service calc/Honda/Accord 93C76+service.cal",
         "Calculators/OTHER/Service calc/Honda/Accord 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Accord 93C76+service.cal; form: Km | Калькулятор пробега для Honda Accord | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "81f924370da3f144c2393d34be201aa9c71a538d0280237e6a93b418d9622005",
@@ -1676,7 +1708,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/W164 Rear SAM V1.cal",
         "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V1.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/W164 Rear SAM V1.cal; form: KM | Kilometer reading no. 1 | Kilometer reading no. 2 | Kilometer reading no. 3 | Kilometer reading no. 4 | Kilometer reading no. 5 | Kilometer reading no. 6 | Kilometer reading no. 7 | Kilometer reading no. 8 | Kilometer reading no. 9 | Kilometer reading no. 10 | Check box to reset mileage; key: labels Kilometer reading no. 1..10"
     },
     {
       "sha": "8352b8e260944cbd4e03996663a720c466277019c8e8ea0452dfd7431d8db40d",
@@ -1721,7 +1754,7 @@
     },
     {
       "sha": "856c80f73c338fa0f8fe67e068ba380bb481425af1b6c07d7adfc3c35727307e",
-      "name": "Acura MDX 93C76 — коррекция пробега",
+      "name": "Acura MDX 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1732,11 +1765,12 @@
       "paths": [
         "Calculators/Service calc/Honda/Acura MDX 93C76+service.cal",
         "Calculators/OTHER/Service calc/Honda/Acura MDX 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Acura MDX 93C76+service.cal; form: Km | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Калькулятор пробега для Acura MDX. | EEPROM: 93C76 | Maintenance items, counters and oil life reset; key: checkbox Maintenance items, counters and oil life reset"
     },
     {
       "sha": "85840045b0fb8fb0df99fb82cd419346e71ea7d34946fdebf7409192deda5fb4",
-      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V3 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V3 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -1747,7 +1781,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal",
         "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V3.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/V W639 95640 (ASSYST, ASSYST PLUS) V3.cal; form: KM | D | Entry# | ASSYST | Exceeded | MERCEDES W639 . | Eeprom 95460 | Enter value needed | and press button <Apply>.; key: labels KM/D/Entry#/ASSYST"
     },
     {
       "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
@@ -1783,7 +1818,7 @@
     },
     {
       "sha": "860cff791152a7fb52538adcc5d4df8d5e79d3daed9f5684db506e9ffc88423d",
-      "name": "Volkswagen Crafter 95640 — коррекция пробега и сервисных интервалов",
+      "name": "Volkswagen Crafter 95640 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -1794,7 +1829,8 @@
       "paths": [
         "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
         "Calculators/OTHER/Service calc/Vw/Crafter 95640 Service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Vw/Crafter 95640 Service.cal; form: КМ | Калькулятор Service для VW Crafter. | VDO. EEPROM 95640. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: title Калькулятор Service; filename Service"
     },
     {
       "sha": "863a1d8c651c678bc80a6cbb08b0229770e06b26c8a90cb868103941eea589c7",
@@ -1811,7 +1847,7 @@
     },
     {
       "sha": "88ba2ecb955ea6d59b0b23da833c13d33b85b91924230cb9f4b1ebbba7c281d3",
-      "name": "Mercedes-Benz S W221 AB 95640 — коррекция пробега",
+      "name": "Mercedes-Benz S W221 AB 95640 — коррекция моточасов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1822,7 +1858,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/S W221 AB 95640.cal",
         "Calculators/OTHER/Service calc/Mercedes/S W221 AB 95640.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/S W221 AB 95640.cal; form: Hours | Калькулятор часов для Mercedes S class. | Кузов W221.AB.95640. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: labels Hours; title Калькулятор часов"
     },
     {
       "sha": "89bc94f752cbbfd2394c3189106ba65a1eb98d93b072bd52b447875d5a38fb5f",
@@ -1843,7 +1880,7 @@
     },
     {
       "sha": "8b2d4d977cb04db29e02272a329ca92c6647a591a2c754a559c787652b471d03",
-      "name": "BMW ISN EWS3+US 68HC11EA9 0D46J — коррекция пробега",
+      "name": "BMW ISN EWS3+US 68HC11EA9 0D46J — ISN и коррекция пробега",
       "folder": "OTHER/PIN",
       "operation": "коррекция пробега",
       "sources": [
@@ -1854,7 +1891,8 @@
       "paths": [
         "Calculators/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal",
         "Calculators/OTHER/PIN/Bmw/ISN  EWS3+US_68HC11EA9 (0D46J).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/PIN/Bmw/ISN EWS3+US_68HC11EA9 (0D46J).cal; form: KM | Кальк пробега и ISN для EWS3+ BMW | 68HC11EA9 (0D46J) internal EEPROM | < u-vovchika >.; key: path ISN EWS3+US; labels ISN/пробег"
     },
     {
       "sha": "8b70fad2797da190dae545a4f68ecdf52ff3b84cb238ea2ce4fd03396ba0ff27",
@@ -1916,7 +1954,7 @@
     },
     {
       "sha": "93262d22bdb72e4184e45b9c56171e80a33033a9cf3d95598f6a1ba274c6dab6",
-      "name": "Honda Ridgeline 9S12H256 V3 km — коррекция пробега",
+      "name": "Honda Ridgeline 9S12H256 V3 km — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -1927,11 +1965,12 @@
       "paths": [
         "Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal",
         "Calculators/OTHER/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Ridgeline 9S12H256+service V3 km.cal; form: KM | Калькулятор пробега Honda Ridgeline. | Motorola 9S12H256 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilometer ; key: labels MAIN MAINTENANCE/RESET 1..6"
     },
     {
       "sha": "93fc9390a0d6d3c368d32d29182d2bacee87af62997c66dc8238bca2abdd285a",
-      "name": "Mercedes-Benz Sprinter W906 95640 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz Sprinter W906 95640 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -1942,11 +1981,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal",
         "Calculators/OTHER/Service calc/Mercedes/Sprinter W906 95640 Service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal; form: КМ | Калькулятор Service для Sprinter W906. | VDO. EEPROM 95640. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: title Калькулятор Service; filename Service"
     },
     {
       "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
-      "name": "Mercedes CGW ASSYSTPLUS — сервисные интервалы",
+      "name": "Mercedes CGW ASSYSTPLUS — коррекция пробега и сброс ASSYST PLUS",
       "folder": "OTHER/Service calc",
       "operation": "сервисные интервалы",
       "sources": [
@@ -1957,7 +1997,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
         "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal; form: Текстовый CAL: else без соответствующего if (строка 75); key: source text ASSYSTPLUS; Reset Oil change; OnApply writes mileage"
     },
     {
       "sha": "963073ca60a549e393ba7665e7e0f5ab9ff6cfca451d9ae80fe59b50fb6f0853",
@@ -2034,11 +2075,12 @@
       "paths": [
         "Calculators/Service calc/Jaguar/XF 24C64(service plus).cal",
         "Calculators/OTHER/Service calc/Jaguar/XF 24C64(service plus).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Jaguar/XF 24C64(service plus).cal; form: КМ | Калькулятор пробега Jaguar XF. | 'Visteon' Eeprom 24C64. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: labels КМ; title Jaguar XF; filename service plus"
     },
     {
       "sha": "9b0ceec5075db7073c7038bb82e041974654fd0fe2c5247be9ffc651e0b20561",
-      "name": "Volkswagen T4 93C86 tacho off — коррекция пробега",
+      "name": "Volkswagen T4 93C86 tacho off — коррекция пробега и отключение тахографа",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2049,11 +2091,12 @@
       "paths": [
         "Calculators/Service calc/Vw/T4 93C86 tacho off.cal",
         "Calculators/OTHER/Service calc/Vw/T4 93C86 tacho off.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Vw/T4 93C86 tacho off.cal; form: KM | Tachograf | Калькулятор пробега VW Transporter. | VDO. EEPROM 93C86. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; key: combobox Tachograf On/Off"
     },
     {
       "sha": "9b37e528e04d0ea83b34f2702c45045d3ea1a851478598d49b9a4ee1f9689b44",
-      "name": "Mercedes-Benz M W163 DASH SERVICE 93C66 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz M W163 DASH SERVICE 93C66 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2064,7 +2107,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal",
         "Calculators/OTHER/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/M W163 DASH SERVICE 93C66.cal; form: КМ | KM | Интервал времени | дн; key: labels KM/Интервал времени/дн"
     },
     {
       "sha": "9d3af73d5b67ea112ecdba6a16ee9cf2c5325fc101f1f1b02bc2b34c8c18ed38",
@@ -2115,7 +2159,7 @@
     },
     {
       "sha": "a032f68abf25dc79c243f8e9617455100a84ac636cb68232ad221cfa263b69e3",
-      "name": "Mercedes-Benz S W220 DASH SERVICE 24C04 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz S W220 DASH SERVICE 24C04 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2126,11 +2170,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal",
         "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/S W220 DASH SERVICE 24C04.cal; form: КМ | KM | Интервал времени | дн | Reset Oil Changes | Reset Oil Replenishments; key: labels Интервал времени; checkboxes Reset Oil Changes/Oil Replenishments"
     },
     {
       "sha": "a0fc7dc8de28677bbe39c1cf872784492cdb672fb6cf846f47053587bd28a4e6",
-      "name": "Mercedes-Benz C W203 DASH ASSYST 24c16 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz C W203 DASH ASSYST 24c16 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2141,7 +2186,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal",
         "Calculators/OTHER/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/C W203 DASH ASSYST 24c16.cal; form: КМ | KM | Since last oil change | дн | Reinitialize ASSYST; key: label Since last oil change; checkbox Reinitialize ASSYST"
     },
     {
       "sha": "a2a11e66730ce55227bf04126c72f5eeaf4b2e17f45fc80ec10f2d4a7ccf0abc",
@@ -2190,7 +2236,7 @@
     },
     {
       "sha": "a52c9390a3ea88612a2d6dc69ba1ef12d60b14518de6f639a870f6511950218c",
-      "name": "Mercedes-Benz B W169 AB 25320 — коррекция пробега",
+      "name": "Mercedes-Benz B W169 AB 25320 — коррекция моточасов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2201,7 +2247,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/B W169 AB 25320.cal",
         "Calculators/OTHER/Service calc/Mercedes/B W169 AB 25320.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/B W169 AB 25320.cal; form: Hours | Калькулятор часов для Mercedes B class. | Кузов W169.AB.Eeprom 95320. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: labels Hours; title Калькулятор часов"
     },
     {
       "sha": "a76d6e69b77b5bc66eb48800dcfd11b577c85d03361124c5d4d4476e747537fe",
@@ -2250,7 +2297,7 @@
     },
     {
       "sha": "a96ab40157ccaa4eb2d5876c3b8d0888de119259792190167ca9d4302fc25cda",
-      "name": "Mercedes-Benz E W210 DASH SERVICE 93C66 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W210 DASH SERVICE 93C66 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2261,7 +2308,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal",
         "Calculators/OTHER/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/E W210 DASH SERVICE 93C66.cal; form: КМ | KM | Интервал времени | дн; key: labels KM/Интервал времени/дн"
     },
     {
       "sha": "ab774ce727f8cec9aba97f88c452229935064334186f2e8fb1b492076568fffb",
@@ -2304,7 +2352,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/W164 Rear SAM V2.cal",
         "Calculators/OTHER/Service calc/Mercedes/W164 Rear SAM V2.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/W164 Rear SAM V2.cal; form: KM | Kilometer reading no. 1 | Kilometer reading no. 2 | Kilometer reading no. 3 | Kilometer reading no. 4 | Kilometer reading no. 5 | Kilometer reading no. 6 | Kilometer reading no. 7 | Kilometer reading no. 8 | Kilometer reading no. 9 | Kilometer reading no. 10 | Check box to reset mileage; key: labels Kilometer reading no. 1..10"
     },
     {
       "sha": "ad56ed26469267fec6514cf6ef26fe978d7306b132774d214f0ecfaf1623e52a",
@@ -2400,7 +2449,7 @@
     },
     {
       "sha": "b43185bc9a589a286b3d1e744d199337bdac96691c33ebe76555429a7a2b1a43",
-      "name": "Mercedes-Benz TPM 3L40K — коррекция пробега",
+      "name": "Mercedes-Benz TPM 3L40K — коррекция пробега и данных TPMS",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2411,7 +2460,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/TPM 3L40K.cal",
         "Calculators/OTHER/Service calc/Mercedes/TPM 3L40K.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/TPM 3L40K.cal; form: KM | Kilometer reading at warning no. 1 | Kilometer reading at warning no. 2 | Kilometer reading at warning no. 3 | Kilometer reading at warning no. 4 | Kilometer reading at warning no. 5 | Kilometer reading at reactivation 1 | Kilometer reading at reactivation 2 | Kilometer reading at reactivation 3 | Kilometer readin; key: labels warning/reactivation no. 1..5"
     },
     {
       "sha": "b63e228ad91add0415af513980d1d8e0bd8796200e1624943d44ae2265c5a18d",
@@ -2458,7 +2508,7 @@
     },
     {
       "sha": "b7b02a95b99f2ec0cc525311c29ea6596e73cad11980d7a70e25d49f13737115",
-      "name": "Mercedes-Benz Sprinter 93C66 km — коррекция пробега",
+      "name": "Mercedes-Benz Sprinter 93C66 km — коррекция пробега, отключение тахографа и выбор единиц",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2469,11 +2519,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/Sprinter 93C66 km.cal",
         "Calculators/OTHER/Service calc/Mercedes/Sprinter 93C66 km.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/Sprinter 93C66 km.cal; form: Тахограф Kienzle | Работа панели в | KM | Калькулятор пробега Mercedes Sprinter. | VDO. EEPROM 93C66smd. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; key: comboboxes Tachograf Kienzle On/Off; Работа панели K M/M i l l"
     },
     {
       "sha": "bd86100172f6f72d26cad0b7800b2a1a56432ae50b22443aac40649af64e8f50",
-      "name": "Honda CR-V 93C76 — коррекция пробега",
+      "name": "Honda CR-V 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2484,7 +2535,8 @@
       "paths": [
         "Calculators/Service calc/Honda/CR-V 93C76+service.cal",
         "Calculators/OTHER/Service calc/Honda/CR-V 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/CR-V 93C76+service.cal; form: Km | Калькулятор пробега для Honda CR-V | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "bea0c1eee76cca87785c4e4c42851a68355953f82762cd4ffd66c424f2499780",
@@ -2503,7 +2555,7 @@
     },
     {
       "sha": "bfb52f8d65a09de7639447da148ecc4b9abcec5698288e65df8012d5942e8ff4",
-      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V1 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz V W639 95640 ASSYST, ASSYST PLUS V1 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2514,7 +2566,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal",
         "Calculators/OTHER/Service calc/Mercedes/V W639 95640 (ASSYST,  ASSYST PLUS) V1.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/V W639 95640 (ASSYST, ASSYST PLUS) V1.cal; form: KM | D | Entry# | ASSYST | Exceeded | MERCEDES W639 . | Eeprom 95460 | Enter value needed | and press button <Apply>.; key: labels KM/D/Entry#/ASSYST"
     },
     {
       "sha": "c096be74c0b022312239c4a87ea719e6a6aacd23e646b2bf58c8b35ccec5f9c9",
@@ -2574,7 +2627,8 @@
       "paths": [
         "Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal",
         "Calculators/OTHER/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal; form: КМ | Калькулятор пробега для Jaguar XF. | 'Visteon' Eeprom 24C64.; key: labels КМ; title Jaguar XF; filename service plus"
     },
     {
       "sha": "c5451e7f838fae7304545947b7b254d8d21c58c176e0c042d731e88e9fb468ce",
@@ -2608,7 +2662,7 @@
     },
     {
       "sha": "c6f6eacbffbd28a22b1b868d0456cced1f3ce9ea7cd6e6135452d4c742e3bcd5",
-      "name": "Acura TL 93C46 — коррекция пробега",
+      "name": "Acura TL 93C46 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -2617,7 +2671,8 @@
       "canonical_path": "Calculators/Service/Honda/Acura TL 93C46+service.cal",
       "paths": [
         "Calculators/Service/Honda/Acura TL 93C46+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Honda/Acura TL 93C46+service.cal; form: Km | Калькулятор пробега для Acura TL. | DENSO. EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | KM | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilome; key: labels MAIN MAINTENANCE/RESET 1..6; checkbox reset maitenance"
     },
     {
       "sha": "c79f40e875298ae5f8c9dd81af95ccc2f50e789a8f1f07257c8e984ccc4c71e6",
@@ -2636,7 +2691,7 @@
     },
     {
       "sha": "c807cc583a315e929000a6f18f14cb53519b5abe0ac516a586e8e1c109c416f8",
-      "name": "Acura TL 93C46 — коррекция пробега",
+      "name": "Acura TL 93C46 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -2647,7 +2702,8 @@
       "paths": [
         "Calculators/Service calc/Honda/Acura TL 93C46+service.cal",
         "Calculators/OTHER/Service calc/Honda/Acura TL 93C46+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Honda/Acura TL 93C46+service.cal; form: Km | Калькулятор пробега для Acura TL. | DENSO. EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | MAIN MAINTENANCE | KM | Kilometer reading at RESET 1 | Kilometer reading at RESET 2 | Kilometer reading at RESET 3 | Kilometer reading at RESET 4 | Kilometer reading at RESET 5 | Kilome; key: labels MAIN MAINTENANCE/RESET 1..6; checkbox reset maitenance"
     },
     {
       "sha": "ca095b0960feef32ce0e44a19d87c1bef30034a0162e981e6a531b1244e44ef3",
@@ -2692,7 +2748,7 @@
     },
     {
       "sha": "cefa20aea49618eb4fd77f6012b54e161a146f18feb77db6cd3dc5fa5b56d23a",
-      "name": "Honda Accord 93C76 — коррекция пробега",
+      "name": "Honda Accord 93C76 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service",
       "operation": "коррекция пробега",
       "sources": [
@@ -2701,7 +2757,8 @@
       "canonical_path": "Calculators/Service/Honda/Accord 93C76+service.cal",
       "paths": [
         "Calculators/Service/Honda/Accord 93C76+service.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service/Honda/Accord 93C76+service.cal; form: Km | Калькулятор пробега для Honda Accord | EEPROM 93C76, панель YNS | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>. | Check box to reset maitenance sub items; key: checkbox reset maitenance sub items"
     },
     {
       "sha": "d1410eed661a9cac23d7aeb236e4b9a163bc34efe1472f8d9ffa4ebe0ccb9470",
@@ -2750,7 +2807,7 @@
     },
     {
       "sha": "d93a9787f3b5ceebccbbd54afefeecd4ff23db1aa7274932f5abb50884b1191d",
-      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz E W211 CGW 9S12DT256 var2 — коррекция пробега и сервисные интервалы",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -2761,7 +2818,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal",
         "Calculators/OTHER/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/E W211 CGW 9S12DT256 var2.cal; form: КМ | 1 KM | Интервал времени | дн | 2 KM | 3 KM | 4 KM | 5 KM; key: labels 1 KM..5 KM/Интервал времени"
     },
     {
       "sha": "dc280627d5d655c021841acd23eecc6aed19ab68a0f2616964564e3d0b9b4418",
@@ -2960,7 +3018,7 @@
     },
     {
       "sha": "e868b04330b08ed7df0f4d4e0056c83306d4044d2849aa84a9625e037419ee74",
-      "name": "BMW ISN EWS3 68HC11EA9 0D46J — коррекция пробега",
+      "name": "BMW ISN EWS3 68HC11EA9 0D46J — ISN и коррекция пробега",
       "folder": "OTHER/PIN",
       "operation": "коррекция пробега",
       "sources": [
@@ -2971,7 +3029,8 @@
       "paths": [
         "Calculators/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal",
         "Calculators/OTHER/PIN/Bmw/ISN  EWS3_68HC11EA9 (0D46J).cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/PIN/Bmw/ISN EWS3_68HC11EA9 (0D46J).cal; form: KM | Кальк пробега и ISN для EWS BMW | 68HC11EA9 (0D46J) internal EEPROM | < u-vovchika >.; key: path ISN EWS3; labels ISN/пробег"
     },
     {
       "sha": "e89090eed2a3cd6bf40ae5932866fc70858128e282af2d4f98a3ae2ae88c0ba8",
@@ -2990,7 +3049,7 @@
     },
     {
       "sha": "e9e95d276b883512a6d19c2e1b062e9e41e47f1902efca27912a334340cd889b",
-      "name": "Mercedes-Benz E W211 AB CR16MCS9 — коррекция пробега",
+      "name": "Mercedes-Benz E W211 AB CR16MCS9 — коррекция моточасов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -3001,11 +3060,12 @@
       "paths": [
         "Calculators/Service calc/Mercedes/E W211 AB CR16MCS9.cal",
         "Calculators/OTHER/Service calc/Mercedes/E W211 AB CR16MCS9.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/E W211 AB CR16MCS9.cal; form: Hours | Калькулятор часов для Mercedes E class. | Кузов W211.AB.CR16MCS9. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: labels Hours; title Калькулятор часов"
     },
     {
       "sha": "ecbe231ccba77ffd6b0d22973a922cafc1cff83a297f12e91ab19d7bbe1c6b8a",
-      "name": "Mercedes-Benz S W220 DASH SERVICE 93c66 — коррекция пробега и сервисных интервалов",
+      "name": "Mercedes-Benz S W220 DASH SERVICE 93c66 — коррекция пробега и сброс сервисных интервалов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега и сервисных интервалов",
       "sources": [
@@ -3016,7 +3076,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal",
         "Calculators/OTHER/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/S W220 DASH SERVICE 93c66.cal; form: КМ | KM | Интервал времени | дн | Reset oil adds/refills | Reinitilase ASSYST; key: labels Интервал времени; checkboxes Reset oil adds/refills/Reinitilase ASSYST"
     },
     {
       "sha": "ed9279a376954662eb2ec46d1d7a040172c4ec4578afc9dea531cfb5cc4d5308",
@@ -3139,7 +3200,7 @@
     },
     {
       "sha": "f6014f22c0b85349ae5dc319a1f20a935f4c2bf9964cefef61c16534c20e267a",
-      "name": "Mercedes-Benz ML W164 AB 95640 — коррекция пробега",
+      "name": "Mercedes-Benz ML W164 AB 95640 — коррекция моточасов",
       "folder": "OTHER/Service calc",
       "operation": "коррекция пробега",
       "sources": [
@@ -3150,7 +3211,8 @@
       "paths": [
         "Calculators/Service calc/Mercedes/ML W164 AB 95640.cal",
         "Calculators/OTHER/Service calc/Mercedes/ML W164 AB 95640.cal"
-      ]
+      ],
+      "review_evidence": "path Calculators/Service calc/Mercedes/ML W164 AB 95640.cal; form: Hours | Калькулятор часов для Mercedes ML class. | Кузов W164.AB.95640. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; key: labels Hours; title Калькулятор часов"
     },
     {
       "sha": "f62b1eeafb0fe333999800429f8470451b807d5727a29f6e514fc7df7cc7327b",
@@ -4430,5 +4492,11 @@
       "reason": "имя Help и форма не подтверждают назначение расчёта"
     }
   ],
-  "car_only_not_selected": []
+  "car_only_not_selected": [],
+  "review": {
+    "date": "2026-11-04",
+    "registry": "reports/T-016-group-review-2026-11-04.json",
+    "checked_generic": 62,
+    "changed_records": 62
+  }
 }

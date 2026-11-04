@@ -91,7 +91,7 @@ function legacyParts(item){
  const [root,...rest]=item.folder.split('/'),tail=rest.join('/');
  return (legacyRoots[root]||[]).flatMap(alias=>[alias,...(tail?[alias+'/'+tail]:[])]);
 }
-function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
+function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...(item.old_name?[item.old_name]:[]),...(item.previous_name?[item.previous_name]:[]),...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
 function searchText(entry){return searchParts(entry).join(' ');}
 function matches(entry,query){const q=String(query||'').toLowerCase();return !!q&&searchParts(entry).some(x=>x.includes(q));}
 const api=Object.freeze({data,get,title,folder,displayPath,reason,hints,searchText,matches});
