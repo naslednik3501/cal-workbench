@@ -201,7 +201,8 @@
           "apply": 402,
           "change": 65535
         },
-        "calculation_correctness": "not independently validated"
+        "calculation_correctness": "not independently validated",
+        "element_rules": "reports/T-001-hardware-wiring-2026-11-04.md: exact warning group hidden; calculation, input and board photos kept"
       },
       "catalog_paths": [
         "Calculators/Dashboard/Subaru/WRX  93C76.cal",
@@ -223,7 +224,8 @@
           "apply": 558,
           "change": 65535
         },
-        "calculation_correctness": "not independently validated"
+        "calculation_correctness": "not independently validated",
+        "element_rules": "reports/T-001-hardware-wiring-2026-11-04.md: exact warning group hidden; calculation, input and board photos kept"
       },
       "catalog_paths": [
         "Calculators/Dashboard/Mitsubishi/Colt/Colt 93C56.cal",
@@ -245,7 +247,8 @@
           "apply": 414,
           "change": 65535
         },
-        "calculation_correctness": "not independently validated"
+        "calculation_correctness": "not independently validated",
+        "element_rules": "reports/T-001-hardware-wiring-2026-11-04.md: exact warning group hidden; calculation, input and board photos kept"
       },
       "catalog_paths": [
         "Calculators/Dashboard/Subaru/Forester/Forester 93C86.cal",
@@ -267,7 +270,8 @@
           "apply": 385,
           "change": 65535
         },
-        "calculation_correctness": "not independently validated"
+        "calculation_correctness": "not independently validated",
+        "element_rules": "reports/T-001-hardware-wiring-2026-11-04.md: exact warning group hidden; calculation, input and board photos kept"
       },
       "catalog_paths": [
         "Calculators/Dashboard/Subaru/Forester/Forester 93C76.cal",
@@ -454,6 +458,4124 @@
         "record": "reports/T-010-remainder-2026-11-04.json",
         "source_path": "AIRBAG/KIA-HYUNDAI/Tucson/ht4l40k.png",
         "content": "annotated photograph of the processor with iProg+ connection points (BKGD, RESET, 5 Volt, GND)"
+      }
+    }
+  ],
+  "element_rules": [
+    {
+      "cal_sha": "0011ea700e5b8839e30bf41bffecd2861b0053adb3ca15839446a7fdee06ece5",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal",
+        "Calculators/Car/S/Ssang Yong/Actyon/Actyon 93╤ü66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM 93c66  (C66)"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "под задней крышкой  !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "00be365be8e66d740583cbac0ef80774ab4dd2362c7ef93382ecfb5991f629a6",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Citroen/C4/C4 Dash 24c16.cal",
+        "Calculators/Car/C/Citroen/C4/C4 Dash 24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Освободить от корпуса !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "0216a874b8845ad7113990841f1e8ec138bedb11c86be6abbb2a9daf41382591",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Примечание: Код находится в 24С04 ближе к процессору.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Philips/22DC962_62.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "03cd7139a1cf804909705228235bf44d461e5451a96b4e98881ea34b51e16ee3",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/REVERSE  22DC596_60 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "03cf38187dcac6c073bbd118a62d321d33d25b5134b2f7776d42da61dc0b4ded",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/SC7  24C04.cal",
+        "Calculators/CHINA/Geely/SC7  24C04.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "07ba2ba321a72328154b40fa2d69285d08a99a013fe7d84dcd06c70ab090f175",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Opel/Vectra/Vectra C VDO PIN  93C66.cal",
+        "Calculators/Car/O/Opel/Vectra/Vectra C VDO PIN  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "ПОЛНЫЙ разбор щитка !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "ЕЕPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "дисплеем !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "07e7eaf0fd5d43713681be6124dfb90a0a2c834b4b5d39ba080f4f820d30356b",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Elantra/Elantra 93C46.cal",
+        "Calculators/Car/H/Hyundai/E/Elantra/Elantra 93C46.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "07f3f18d52e29b82636e0b700948cdb27eb66d035a93c4ac8a84485bb45fd37c",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/KIA/Rio/Rio 93C66.cal",
+        "Calculators/Car/K/KIA/Rio/Rio 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "СТРЕЛКИ И ДИСПЛЕЙ"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "СНИМАТЬ !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "0c48f6947f7eabf2e7a0bdf783e9b337e018f3fbef7aba54e1c1aac925293ced",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Almera/Almera 93C66 J control.cal",
+        "Calculators/Car/N/Nissan/Almera/Almera 93C66 J control.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "0c654e93db0c03fe60145ca75411839547ac95bf2ac11bbf3d6676f86f7b198d",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/Taiga/24C16  Proba.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Taiga/24C16  Proba.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 14,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "0d70af54d5c853abc00d9a4ebf38588b5f7bd3651f6f81e8c240d144a2a7dc8a",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Outlander/Outlander XL 2010 93C76.cal",
+        "Calculators/Car/M/Mitsubishi/Outlander/Outlander XL 2010 93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "0fe4d8d294679e3aba03746ced920715918d0a4e5ce797fdb3a912f586653fb1",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Fiat/Ducato 95040.cal",
+        "Calculators/Car/F/Fiat/Ducato 95040.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "1126d6c5f50dbc36c86ca07711c122091ca103ea48aa818a3f666afda1b9cadb",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Tucson 93C46.cal",
+        "Calculators/Car/H/Hyundai/T/Tucson 93C46.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "132522dea23c89c23a2d39f8e7bb57744a1df537485a1ed042490ef46d21cf17",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Teana/Teana  93C86 Kansey.cal",
+        "Calculators/Car/N/Nissan/Teana/Teana  93C86 Kansey.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 8,
+      "reference": "Считать FLASH, сохранить дамп",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 9,
+      "reference": "Считать EEPROM, сохранить дамп",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 10,
+      "reference": "Считать FUSE, сохранить",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Обнулить процессор ATMega 16",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Залить сохраненный FLASH",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "148faedce46ecfcdef90fefb5e124ab22cb84770594bb8c27ac0074d8cf88b6a",
+      "element_type": "L",
+      "element_id": 14,
+      "reference": "Залить EEPROM с новым пробегом",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK Cross ATMega16.cal",
+        "Calculators/CHINA/Geely/MK Cross ATMega16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "15ce21376f418bd9735b784da3a2355e054f19c0e5f5a31e67f6ab94db48324b",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/RAV-4/RAV4  93C66.cal",
+        "Calculators/Car/T/Toyota/RAV-4/RAV4  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Стрелки снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "15cfea3e395d11cf77ca7cf7e8d95439da854a2ff88ae545bf6aed4b0661e1f1",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Almera/Almera  25020.cal",
+        "Calculators/Car/N/Nissan/Almera/Almera  25020.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "162c2d3396762d84afbf35b4095861c506cf11d4fedd827c3032e704f7ec2785",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "Отпаять плату дисплеев !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "193a0dd6264236d56fcea7d08da49abd6d743c57ce06ca10bb04d2b80411288f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/KIA/Quoris  93C66.cal",
+        "Calculators/Car/K/KIA/Quoris  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "19f91a18e3001f082b6c506303b97f78dada5d29cfcb09346ed2fccc40407da7",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/L200/L200  93C56.cal",
+        "Calculators/Car/M/Mitsubishi/L200/L200  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "1b768cead1df87d50024e369b34695b7b96b467c86a996b329d5a7c770a95e8f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Qashqai/Qashqai  93C86 Kansey km.cal",
+        "Calculators/Car/N/Nissan/Qashqai/Qashqai  93C86 Kansey km.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "1e660352bb29691ab8d824c23bd2f7cc842e16d579ab3eaf42e8c7ff4b7868a6",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/KIA/Sportage/Sportage  24c16.cal",
+        "Calculators/Car/K/KIA/Sportage/Sportage  24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "1f95bb593ca003ab832589c6656568707aeb45c6550f451b8e7aa9954a9f2173",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/KIA/Soul/Soul  24c16.cal",
+        "Calculators/Car/K/KIA/Soul/Soul  24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "находится под"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 8,
+      "reference": "Считать FLASH, сохранить дамп",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 9,
+      "reference": "Считать EEPROM, сохранить дамп",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 10,
+      "reference": "Считать FUSE, сохранить",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Обнулить процессор ATMega 32",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Залить сохраненный FLASH",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "25629fba95d0b8f736c4a3492785d1ab25eaa7b5771ccba8a8b2591e717dfcbd",
+      "element_type": "L",
+      "element_id": 14,
+      "reference": "Залить EEPROM с новым пробегом",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/QQ/QQ  ATMega32.cal",
+        "Calculators/Car/C/Chery/QQ/QQ  ATMega32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "259cc563fa1ab6d600d6898bb5243df393f882472cb7030e76cfc811975c0d4a",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Renault/Logan/Logan  Dash  95160.cal",
+        "Calculators/Car/R/Renault/Logan/Logan  Dash  95160.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный рабор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "2b32c72c5ad25e6e0bb4b6751982122e238c2eadff543e1ccc79c108c3fca09f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/TATA/TATA I-Van LPT613  95040.cal",
+        "Calculators/Car/T/TATA/TATA I-Van LPT613  95040.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "2ed5d77d147fec1e0df8b1e5574dcc503858fecfdb96d23e27518749afaaec1c",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Commander  S12HZ64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Commander  S12HZ64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          },
+          {
+            "id": 15,
+            "type": "L",
+            "text": "Часы находятся в ECU !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "2f295fc3ae27e4a8408ffc7fad424c86f283a41e87e2bdce62657d160bb7e560",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Citroen/C-Crosser/C-Crosser Dash  93C86 v3.cal",
+        "Calculators/Car/C/Citroen/C-Crosser/C-Crosser Dash  93C86 v3.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "32720fec6a730c6173431b8974039124d96f0d21136ef266b71f8787e6714636",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/REVERSE  22DC596_60 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "32f139716fb43ec4ce653724a92c8c3942508a12af47e5f31c04eb83bd3bb6c1",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Forester/Forester 93C76.cal",
+        "Calculators/Car/S/Subaru/Forester/Forester 93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Точки подключения"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "Под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "335052e2b49d852c759e4a7e60b3751ac1f49290a0e8d239a1ad26c6fcc5d9df",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Expedition LE900  9S12HY64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Expedition LE900  9S12HY64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "36865755f6fc56ebc6bd580d0f8f8bda34c80bf5377682e3f9ebfff8526d7fc8",
+      "element_type": "L",
+      "element_id": 6,
+      "reference": "93C56 находится в ECU",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Immo/Car/Toyota/Camry -2004 93C56-93C86 ECU 4C.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "37102127cbce82852fb2705a66f0d8719d9bfc6595da6fef49e73abd105dce14",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Honda/Accord/Accord DENSO 93C86.cal",
+        "Calculators/Car/H/Honda/A/Accord DENSO 93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "3924c6b5ca6fecf3fb53cbd45c1971d0691d1d22a28cf0ea1d3c125420849408",
+      "element_type": "L",
+      "element_id": 6,
+      "reference": "93C56 находится в ECU",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Immo/Car/Toyota/Corolla ECU 93C56 4C.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "3d379baccac35c05e12fdd6d5c251db5f0335473b181d209fb416788a19e5508",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara 24c16 Visteon.cal",
+        "Calculators/Car/S/Suzuki/Grand Vitara/Grand Vitara 24c16 Visteon.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "3dceba6ce3dbfc4b103eba0a79ea00826857a14071a9ee1d530aa773d7af451f",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Peugeot/301/Dash 301  93C86.cal",
+        "Calculators/Car/P/Peugeot/301/Dash 301  93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "щитка приборов !!! ."
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Стрелки тугие !!! ."
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "Вынимать наверх !!! ."
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "3df27e63beff2014ec0474dc111a13cd0764708ce0d204d9d5b312316fc04e43",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mazda/3/Mazda 3  93c76.cal",
+        "Calculators/Car/M/Mazda/3/Mazda 3  93c76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM 93c76 находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "3e5a6f82b2919767638e4b2a2318a287dc64fa9eb181e84d89dd069a4f737a3c",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Vitec 600   MC9S12HY64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Vitec 600   MC9S12HY64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4271ce0ca7d401f61fdb57d10ea2789746c873bb454d877560c46864bfb5f80d",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander MXZ 800  (9S12HZ64).cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander MXZ 800  (9S12HZ64).cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "438cf3dd04dff404f4132f9417d3d01f79ebfee2b6db2a5c1d783b5bebf62bc6",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Citroen/C-Elysee/Dash  C-Elysee  93C86.cal",
+        "Calculators/Car/C/Citroen/C-Elysee/Dash  C-Elysee  93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "щитка приборов !!! ."
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Стрелки тугие !!! ."
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "Вынимать наверх !!! ."
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "44c828c236bdb21db4bff7e961c3238aa9adbafa43a57d8f5eeed0d68b979ab0",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Camry/Camry V50  93C66.cal",
+        "Calculators/Car/T/Toyota/Camry/Camry V50  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "3 дисплея"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "и стрелки снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4568062f213d28b9b67db30c20c91923d04aa798cbadcd8b9c7c057e8e25c423",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Renault/Duster/Duster  93C56.cal",
+        "Calculators/Car/R/Renault/Duster/Duster  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный рабор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "45b2deba54b14714cc864136c1e651fb4a91a2e0f0d1337876a632a6ea99353c",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Ford/Expedition/Expedition 93C46.cal",
+        "Calculators/Car/F/Ford/Expedition/Expedition 93C46.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Колпачки и кольца на"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "защелках !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "46d9bb46b376aaf68d9f9262aeab243131dda41f66e2f335c30460458ebbbf72",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/I40 93C66.cal",
+        "Calculators/Car/H/Hyundai/I/I40 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4774b3b211603a17b8e49c7bcbdc8e4f81297c0c2d9262ef1e228b9058b92ebe",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/24C164 Proba.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "47c305265590e117de34a9cb4c67462025f22327e5598f30aba21785087745e4",
+      "element_type": "L",
+      "element_id": 6,
+      "reference": "25040 находится в ECU",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Immo/Car/Toyota/Yaris ECU 25040  4C.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "48877333f7688df0b60002068e3f1d9d91c239b5bf3398f66f78234444b45627",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Infinity/Infinity M37  93C86 Kansey km.cal",
+        "Calculators/Car/I/Infinity/Infinity M37  93C86 Kansey km.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4c4c2a6dbebef04185585dc6a49d0d7a9661af940a5fc9f2bd8085afba6b3295",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Hilux/Toyota Hilux - 93C66 Yazaki 17.cal",
+        "Calculators/Car/T/Toyota/Hilux/Toyota Hilux - 93C66 Yazaki 17.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4e262c8d6cf3fc1509e5d263088511629c47a35f11c08e30d473fab8521a5d67",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Ford/Kuga/Kuga 24C32.cal",
+        "Calculators/Car/F/Ford/Kuga/Kuga 24C32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "4f2721688123f3659466c7eb4499bcf00b790996c30c3e402b92fce1e4e50fb1",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/BUSINESS RDS  DC705 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "5e0e221a61340c43580aa767fa403055ccb842ea4e5bcc6fc1286dc197f1e2c6",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/WRX  93C76.cal",
+        "Calculators/Car/S/Subaru/WRX  93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "EEPROM и Точки подключения"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "62def3f9e61725a430bf156415115142a1aceef04344d767165af786ff80072b",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Great Wall/Great Wall Hover 24c32.cal",
+        "Calculators/CHINA/Great Wall/Great Wall Hover 24c32.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "63f50cb07a409ae7bdf0f5fa25720a3a1e7e81547fafd661dc6885e341ddf7cb",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Renault/Koleos  24c16.cal",
+        "Calculators/Car/R/Renault/Koleos  24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "65750a08fe473694cffd14760018938c2a88621fc08b61c09b60bac3688738cb",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Arktic Cat/Arctic Cat 24c08.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Полный разбор !!!"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "1. Снять рамку. Вынуть стрелку"
+          },
+          {
+            "id": 14,
+            "type": "L",
+            "text": "2. Аккуратно отсоединить накладку"
+          },
+          {
+            "id": 15,
+            "type": "L",
+            "text": "3. Вынуть внутренности"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "681a672238263c196f5c9c5791db94fb9eb1fbd93e9d298fcc95ea40e977f171",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/RCD100-02 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "68fc1022d1bba064392dcfc66474f0b68bf031d1e30adb41115c1c19b11e8611",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mazda/2/Mazda 2  93C66.cal",
+        "Calculators/Car/M/Mazda/2/Mazda 2  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "6ff7910267ea0ceff845fe0db7060629ab1c960574dfd31fb5a743a53e8aeb4a",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Fiat/Albea 95080.cal",
+        "Calculators/Car/F/Fiat/Albea 95080.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Стрелки снимать"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "СТРОГО наверх !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "747c6ac6cf8da5a2a00675c3178e4fa91f6f8f6090588798bab80a74c9be7774",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Range Rover/Sport 35080.cal",
+        "Calculators/Car/R/Range Rover/Sport 35080.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "7a4000dfad34707cbc3f1ced39da2aa5321d0ff838cbd8850b52aae2b8135e90",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Renault/Logan/Logan  Dash  93C56.cal",
+        "Calculators/Car/R/Renault/Logan/Logan  Dash  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный рабор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "83bedd06e695ea47828e3f8cabe96d4920b2b01b90aca4bce0b98b67fbea51ff",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Teana/Teana  24c16.cal",
+        "Calculators/Car/N/Nissan/Teana/Teana  24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "84283bf120ed2b89c536b598e5fc307a31d44767ccb57d63ff5ceb960bb07b07",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/ix35 93C66.cal",
+        "Calculators/Car/H/Hyundai/I/ix35 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "858f534f39da1d098ccbf712c2669e2b23b8ba85e02eba72c9227d6d7cb08514",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chevrolet/Captiva/Captiva 93c86.cal",
+        "Calculators/Car/C/Chevrolet/Captiva/Captiva 93c86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "88b6af4dd37669187fda78f4b5def4777fecfb5dd3c346d1233dbebae8193e83",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/KIA/Mohave/Mohave  93C66.cal",
+        "Calculators/Car/K/KIA/Mohave/Mohave  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "893f4ce61020ecb1846c838a1f91afcf0c05306bc80801093fffc09a391cbeca",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander MAX1000 XT-P  S12HZ64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander MAX1000 XT-P  S12HZ64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          },
+          {
+            "id": 15,
+            "type": "L",
+            "text": "Часы находятся в ECU !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "8d4cf96a7f57e85bd5b0a732c8edeb1adc9a9921cf8f76dcb72567aea017f540",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Примечание: Код находится в 24С04 ближе к процессору.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Renault/22DC982_62.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "9090e3c3bd16abb22033f650cc3dd7a8f647cd835d485e2f67b85e086cbc2213",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Solaris/Hyundai Solariis 2011 24c16.cal",
+        "Calculators/Car/H/Hyundai/S/Solaris/Hyundai Solariis 2011 24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "90de2b185ca8864bed1e0f41421f105db3c8e096d36e8d3380e57c064963bc99",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/RCD100-01 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "94d57d0b757b7ffe953f9faee511a21700e49e610d42d9c5b9cfecd493f0e5bc",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 25 93C86.cal",
+        "Calculators/Car/T/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 25 93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9596be5a2b026ecc2926287c1a04455d85e705cf0dec85b87b903a231a89e4cf",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/RCC100-07 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "96a8f2ddb0ad6decdc58b3728d0dfb28ff4850f0b340037dff3d7a737a782ae6",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Corolla/Corolla 93C66.cal",
+        "Calculators/Car/T/Toyota/Corolla/Corolla 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Стрелки и дисплей"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9c0e60b7873353dcb8320ec5ebe31a9ca32e273feaa8fddf7c88b5d18f80b4f5",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/L200/L200  93C76.cal",
+        "Calculators/Car/M/Mitsubishi/L200/L200  93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9c17e2cf2c24b2c3bfea2ad0b9b1e33d8ab1dd82d245ac1aae585eec414b7436",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chevrolet/Epica/Epica 93C56.cal",
+        "Calculators/Car/C/Chevrolet/Epica/Epica 93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9d39141439cb488c8718e5cfa330c9292943c7e25f09634d6ad92ce9a83ea82c",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Ford/Focus/Focus 3  (95320).cal",
+        "Calculators/Car/F/Ford/Focus/Focus 3  (95320).cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9d8e0bfd077ad9c5c34edc21a1d2aa395049815f25785fae8c02f033e77c3883",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Special vehicles/XCMG/XCMG500KN  24C64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/XCMG/XCMG500KN  24C64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Отпаять плату дисплеев !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9e921a3344a1416c7fe72c25750beb20a251bb95add8f4b4e2621741153aef22",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Jeep/Grand Cherokee Dash  93C76.cal",
+        "Calculators/Car/J/Jeep/Grand Cherokee Dash  93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "9fbaf16c55a702d8e34e4465d01c787d004c70ba10e081527c18192d1df15ec5",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Daewoo/Gentra 93C56.cal",
+        "Calculators/Car/G/GM/Daewoo/Gentra 93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a0e1ee4e42da8b7b42c789c9563db173bdfce5eb3f419eea60955310c71cbdfe",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/BUSINESS CD RDS 22DC806 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "a0fbcc4847849220b7c72c470ea26f2e78ad071433ad4198cdb26e2cdc96d083",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Peugeot/Partner/Dash Partner 12  25020.cal",
+        "Calculators/Car/P/Peugeot/Partner/Dash Partner 12  25020.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a102d414cde2cfb454b3ba32458e328d8b3e7edeb6326767425bc07bff8dcde9",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Renault/Sandero/Sandero  25020.cal",
+        "Calculators/Car/R/Renault/Sandero/Sandero  25020.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a42d34a3e92a7b1781fb278537ee256cc2e13af3df11e6a9a56ba8a44589baa1",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Sentra/Sentra  93C86 Kansey.cal",
+        "Calculators/Car/N/Nissan/Sentra/Sentra  93C86 Kansey.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ТОЧКИ находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a4f063ecc9f4c62793bcb8370ba86fbac314d3006c57d25c9791a3c81901a486",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Opel/Corsa/Corsa VDO PIN 35080.cal",
+        "Calculators/Car/O/Opel/Corsa/Corsa VDO PIN 35080.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 13,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 14,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a52af3d54dd959a4fe17107108abcca425299bb06f1d78f36bb455a44f298386",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Almera/Almera  93C56 JC.cal",
+        "Calculators/Car/N/Nissan/Almera/Almera  93C56 JC.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный рабор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a5b0051749a5c59745c02725616d6ae0dd919c0435550f20a89cc4752c8fb479",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/Tiggo/Tiggo New 93C66.cal",
+        "Calculators/Car/C/Chery/Tiggo/Tiggo New 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a715802fe81d7fe394df96e917b4505131a61214c4872b2eb2ed40485d20951f",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Fiat/Ducato 1ver 25040.cal",
+        "Calculators/Car/F/Fiat/Ducato 1ver 25040.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "a9356685102d267562a65801c663ab8ca4e1bf5f2e99a95e6aaf9039c63a785f",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Tundra  S12HZ64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Tundra  S12HZ64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          },
+          {
+            "id": 15,
+            "type": "L",
+            "text": "Часы находятся в ECU !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "aa745feb679b6e602ee7e770eb9f36d1d71e28541843191863ceb9706e9823c4",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Haima/Haima 7  (24C04).cal",
+        "Calculators/CHINA/Haima/Haima 7  (24C04).cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Полный разбор !!!"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "acd87a70ba674402650c268c1966213e38b1e01546c2cb660edbded3906a35e8",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Suzuki/Liana/Liana 93C56 newDenco.cal",
+        "Calculators/Car/S/Suzuki/Liana/Liana 93C56 newDenco.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "b04c8427ab8fa24b11e673d9d1070d880ab8f9f87eea06be6985979a280054d3",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/MK New 24C02.cal",
+        "Calculators/CHINA/Geely/MK New 24C02.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "b6a6b0249c258e01dd04d1fb4bdae08b82eecab3d7ea1316547933871733f7b8",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Murano/Murano  24C16.cal",
+        "Calculators/Car/N/Nissan/Murano/Murano  24C16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "b82370e529f4462ff72bc8ceb6732956e2b407da381a3c4bb0bce1e027493261",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Fiat/Ducato 95160.cal",
+        "Calculators/Car/F/Fiat/Ducato 95160.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "Стрелки снимать"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "СТРОГО наверх !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "b9e4a5247d78eaba1a0a981868831aba449172aebe74ee9ba1c26d15d654037b",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/BUSINESS CD RDS 22DC806 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "bca7f4dda19538d1bf8725bb48381819b80c1678ddfe00c37276ce776379b330",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Lancer/Lancer   93C86 Yazaki.cal",
+        "Calculators/Car/M/Mitsubishi/Lancer/Lancer   93C86 Yazaki.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 13,
+            "type": "L",
+            "text": "Точки находятся под"
+          },
+          {
+            "id": 14,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "bde62b11a81f12742dc9d5cd55fe4cb074ee5f58b3fa2aefe3dab52f511b1917",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Suzuki/Grand Vitara/Grand Vitara   24c16 VDO.cal",
+        "Calculators/Car/S/Suzuki/Grand Vitara/Grand Vitara   24c16 VDO.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "Задней крышкой !!!"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c0fb47ecfdd4d9bd604a9f83571a0bf16bd7319935dc4ee851a9f7ea1cf7b84e",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Lada/Largus  93C56.cal",
+        "Calculators/Car/L/Lada/Largus  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный рабор"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "щитка !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c1469bfc18cfefd10e7b9f5ff2a8cca46e2b8939a18cdbe4fafe3742112fe521",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/BRP/BRP renegate MXZ 800  (9S12HZ64).cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP renegate MXZ 800  (9S12HZ64).cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c54e197165fc2d824fddbdbbf0348574abe52e8d57b55f85ef23791886504ccd",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Honda/CRV/CRV 2010  93C76.cal",
+        "Calculators/Car/H/Honda/C/CRV/CRV 2010  93C76.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "EEPROM  93c76  под задней"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "крышкой"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c5f325cf249c9f6825bd43d5cb2823967109614528f2c096994609b4693aec4f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 17 93C86.cal",
+        "Calculators/Car/T/Toyota/Land Cruiser/Toyota Land Cruiser Yazaki 17 93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c784a7df00fc821d09e63d510f25b041f6de8d9a046c87cbe5522cc18eb488cf",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Freeride 146 800R  S12HY64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Freeride 146 800R  S12HY64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "c93ed95ac87d7ba5496c12943fceb192af6dfa4325ef573670a05b85a6e1c393",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Примечание: Код находится в 24С04 ближе к процессору.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Philips/22DC982_62.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "c941f03052e682b96b04bc7eeb52f60e2a4d80d58edb7ab29fa1df03aad1e3ca",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/RCC100-07 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "ca3634162a5b868558e1bc8694136990bc95ae4c8d9d8df8850a1fb86f9bf6f2",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/RCD100-01 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "ca82f2fb608c8784c3b94fb616d6092bafedfa71978e0327b09248f122954a03",
+      "element_type": "L",
+      "element_id": 13,
+      "reference": "Примечание: Код находится в 24С04 ближе к процессору.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Renault/22DC962_62.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "ccbc326d7426f63b0ecd5ed57fefb60822723363ad8d53fdbbe8cb9429091226",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/HD78  93C56.cal",
+        "Calculators/Car/H/Hyundai/H/HD78  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "cf89c454650ec91f87468fe367f1ab19d1b50cd7e6822dbbda8340aee6ac00f8",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Corolla/Corolla 93C86 Siemens-VDO.cal",
+        "Calculators/Car/T/Toyota/Corolla/Corolla 93C86 Siemens-VDO.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "cf9e1d953ce13967da3e4f6711fae9e83be0fe0c38fb2d65ea10741687838e49",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Pajero/Pajero 93C66.cal",
+        "Calculators/Car/M/Mitsubishi/Pajero/Pajero 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 6,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 7,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d05343e28b7b73a458f5fce68783390f4576032255dd83ffa9789d115dc00e6e",
+      "element_type": "L",
+      "element_id": 6,
+      "reference": "93C56 находится в ECU",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/Immo/Car/Lexus/93C56 Inside ECU 4C.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "d0fa815edf48211548d326c3deff3a7c5388372e1be296ec4e309748b2b56353",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 500A  24C02.cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 500A  24C02.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "Полный разбор шитка !!!"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "со стороны разъемов !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d140850d30e25f525e9798fe4ff6325fbd6052131b62936ac924204db79188fb",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Camry/Camry V40  Denso  93C56.cal",
+        "Calculators/Car/T/Toyota/Camry/Camry V40  Denso  93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d4afe6b97073e4f93c2826f3d44c6aa79c7c3fce59e21e5e12c63aa6bb735bf8",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Santa Fe/Santa Fe 93c66.cal",
+        "Calculators/Car/H/Hyundai/S/Santa Fe/Santa Fe 93c66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d4c9ab6786cb8de5114a5d74b8a22f0d55d608d2ed26e0339cbdb0fb1d5e419b",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Motobikes/BRP/BRP Max-XTp   MC9S12HY64.cal",
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Max-XTp   MC9S12HY64.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 12,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d6e5be258167d7b36d7c4df9313658b6442922bc58521de4a403588dd665bf65",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Tribeka/Tribeka B9 93c66.cal",
+        "Calculators/Car/S/Subaru/Tribeka/Tribeka B9 93c66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d838b610f47862612a3365d76a3416a7831f4e3a4de3f4b1950710d6998b7623",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Land Rover/LR Voque  24C16.cal",
+        "Calculators/Car/L/Land Rover/LR Voque  24C16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d838b610f47862612a3365d76a3416a7831f4e3a4de3f4b1950710d6998b7623",
+      "element_type": "P",
+      "element_id": 3,
+      "reference": "24c16.png",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Обе доступные версии 24c16.png — аппаратные схемы распиновки I2C, а не иллюстрация расчёта; элемент скрыт по точной версии CAL и номеру P-элемента.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Land Rover/LR Voque  24C16.cal",
+        "Calculators/Car/L/Land Rover/LR Voque  24C16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "record": "reports/T-010-remainder-2026-11-04.json",
+        "method": "T-010 candidate review; both candidate images decoded from iprocal-sources and SHA-256 verified; content shown as I2C pinout.",
+        "candidate_images": [
+          {
+            "sha256": "34e838b506edca3f2c9c7e75e3a3b4808a16882c88b631f8dd6aa693ebecec16",
+            "category": "hardware_wiring",
+            "path": "EEPROM/24XX I2C/24C16.png"
+          },
+          {
+            "sha256": "9145526093135ec6a3f54330961451fcbfa00235f93ab551bacc53b9df0cad73",
+            "category": "hardware_wiring",
+            "path": "SmartEEPROM/I2C (24CXXX)/24C16.png"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d8765ff3a22763b0eca72e128e95dc60fa24c1a8b95038a4d1c793b03e3c3880",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Lexus/GS250  93C66.cal",
+        "Calculators/Car/L/Lexus/GS250  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "и стрелки снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "d9ebb4cbf3efbe6db1ca0530042399d07f5a45562eeb105ebb6345da138f939f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Suzuki/Jimny/Jimny 93C56 New denso.cal",
+        "Calculators/Car/S/Suzuki/Jimny/Jimny 93C56 New denso.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Полный разбор щитка !!!"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Стрелки снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "dc3e64b43f3e499b08f0ff336dc8d625c4c27e686f6da3fca1055b1d47be3eeb",
+      "element_type": "G",
+      "element_id": 5,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 14,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР"
+          },
+          {
+            "id": 15,
+            "type": "L",
+            "text": "ЩИТКА !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "ded952f29f5b1e4d04c58323dc2e5f3b06478b2dcbbf169d5634fb389e32f469",
+      "element_type": "L",
+      "element_id": 12,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/BUSINESS RDS  DC705 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "e0088ca4cd9c0fccc464771ab0ab9dd2b2969a83f85e71c5afdbcd265bd0ea04",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Forester/Forester 93C86.cal",
+        "Calculators/Car/S/Subaru/Forester/Forester 93C86.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 11,
+            "type": "L",
+            "text": "EEPROM и Точки подключения"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "Под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "e1bc589a4eaedb04e005c1c4ea6ef5bf8edd100904e7cb147141a4872915c4ee",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Geely/Geely Emgrand 93C66.cal",
+        "Calculators/CHINA/Geely/Geely Emgrand 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "e27fb9390a5adce822062545860c35f7625a3ccb00bbf7b513d8e1465d822e5e",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Getz 93C46.cal",
+        "Calculators/Car/H/Hyundai/G/Getz 93C46.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Стрелки и дисплей"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "e4c8ec81ed1179c7cd1f85375179734394ea312cdbe136adc84faf8c8a24c7fb",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Note/Note  24C16.cal",
+        "Calculators/Car/N/Nissan/Note/Note  24C16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "e7b244815c77882dbd7d44ed320c6ee25c66e29e1724be1ff1ea45dbfda4b5b5",
+      "element_type": "L",
+      "element_id": 11,
+      "reference": "Take 5V from pin8 of EEPROM, END to Chassis.",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Аппаратное указание в текстовом элементе формы; расчёт, ввод и идентификация сохраняются.",
+      "catalog_paths": [
+        "Calculators/CarRadio/Immo/Philips/RCD100-02 no immo.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only."
+      }
+    },
+    {
+      "cal_sha": "ef986ef70d2e1a86c818a66f9aed92998e4a19085aa5b10114f7f7ab9a5da3ec",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Citroen/Jumper/Jumper  95040 v1.cal",
+        "Calculators/Car/C/Citroen/Jumper/Jumper  95040 v1.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Полный разбор"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "щитка приборов !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "eff219444c54f8b3207a47f2981544be53055d0f3a62623c3dba29380ce1f442",
+      "element_type": "G",
+      "element_id": 1,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Avensis/Toyota Avensis 93C46 Denso.cal",
+        "Calculators/Car/T/Toyota/Avensis/Toyota Avensis 93C46 Denso.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "eff6f1983c038a94a048ed49019fcf4cc2cc0adf4b5f24afc50f64ca2da6c34f",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Nissan/Teana/Teana  93C66 Kansey.cal",
+        "Calculators/Car/N/Nissan/Teana/Teana  93C66 Kansey.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f003cd2d6fa98964dfba423eb21194a884a5369f7cfeab4eb4e67f29cf4b72d2",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Ford/Ranger/Ranger 24c16.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f098a197b5c6ad69208afbd4f46b9ec95fe6a55d3651a1c7b54aa2e1aef4e1d8",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Auris/Auris  Denso  93C66.cal",
+        "Calculators/Car/T/Toyota/Auris/Auris  Denso  93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "ПОЛНЫЙ РАЗБОР !!!"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "Дисплей"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "и стрелки снимать !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f0addbba63cd755bc625b4f138d4c809c916bceed0a26a3b1baa382a53b3096e",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Chery/Indis  93c66.cal",
+        "Calculators/Car/C/Chery/Indis  93c66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f1c69c98516265eb993164e78bc61b0a8d9a474d113aed54fbbc98593364fbaf",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Toyota/Highlander/Toyota Highlander 93C66 Denso.cal",
+        "Calculators/Car/T/Toyota/Highlander/Toyota Highlander 93C66 Denso.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f30ee3bb42fa4004c366adce20740c7289e031579efee6674f5f15090081dcc1",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Pajero/Pajero Sport  93C56 v1.cal",
+        "Calculators/Car/M/Mitsubishi/Pajero/Pajero Sport  93C56 v1.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f7b46a917064e74813df265c1950bda471ebd51f37d38c7772507525a0aca970",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Outlander/Outlander 2010 93C76 V1.cal",
+        "Calculators/Car/M/Mitsubishi/Outlander/Outlander 2010 93C76 V1.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "Точки находятся"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "под задней крышкой !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "f9aca85abfdfa8b9d56d74eda542bd8b916d2b0991ed5381f3f77cf3ca1361cf",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Suzuki/SX-4/SX-4  24c16 VDO.cal",
+        "Calculators/Car/S/Suzuki/SX-4/SX-4  24c16 VDO.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 12,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 13,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "ff6502cdf2e3a975d6d134b095413dc65c2c1a296ed42eef52b03b928c10da54",
+      "element_type": "G",
+      "element_id": 4,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mercedes/Sprinter/Sprinter 93C66.cal",
+        "Calculators/Car/M/Mercedes/Sprinter/Sprinter 93C66.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 8,
+            "type": "L",
+            "text": "EEPROM находится под"
+          },
+          {
+            "id": 9,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          },
+          {
+            "id": 10,
+            "type": "L",
+            "text": "EEPROM is located"
+          },
+          {
+            "id": 11,
+            "type": "L",
+            "text": "under the back cover !!!"
+          }
+        ]
+      }
+    },
+    {
+      "cal_sha": "fffe83c095b4d2b67b275fbea53d9d03e2734f312e64f47939261f37217cef4d",
+      "element_type": "G",
+      "element_id": 3,
+      "reference": "ВНИМАНИЕ !!!",
+      "action": "exclude",
+      "mapping_verified": true,
+      "date": "2026-11-04",
+      "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Colt/Colt 93C56.cal",
+        "Calculators/Car/M/Mitsubishi/Colt/Colt 93C56.cal"
+      ],
+      "evidence": {
+        "report": "reports/T-001-hardware-wiring-2026-11-04.md",
+        "method": "Exact CAL SHA-256 and form element from the embedded original CAL; static parse only.",
+        "children": [
+          {
+            "id": 7,
+            "type": "L",
+            "text": "Точки подключения под"
+          },
+          {
+            "id": 8,
+            "type": "L",
+            "text": "задней крышкой !!!"
+          }
+        ]
       }
     }
   ]

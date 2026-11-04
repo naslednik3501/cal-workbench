@@ -7,7 +7,7 @@ def digest(b):return hashlib.sha256(b).hexdigest()
 a,b,c=map(digest,[b'hardware',b'changed',b'image'])
 def decision(sha,kind='standalone_program'):
  return dict(category='hardware_only',kind=kind,action='keep' if kind=='resource' else 'exclude',date='2026-11-03',reason='synthetic evidence',evidence={'report':'synthetic'},original={'sha256_verified':True,'object_path':f'objects/{sha[:2]}/{sha}.json'})
-r=dict(schema=1,default_action='keep',source_repository='owner/private',source_ref='1'*40,decisions={a:decision(a),c:decision(c,'resource')},resource_rules=[])
+r=dict(schema=1,default_action='keep',source_repository='owner/private',source_ref='1'*40,decisions={a:decision(a),c:decision(c,'resource')},resource_rules=[],element_rules=[])
 variants=[r]
 for field,value in [('category','mixed'),('kind','resource'),('action','invalid')]:
  bad=copy.deepcopy(r);bad['decisions'][a][field]=value;variants.append(bad)
@@ -17,13 +17,22 @@ rule=dict(cal_sha=b,resource_sha=c,control_id=0,action='exclude',mapping_verifie
 with_rule=copy.deepcopy(r);with_rule['resource_rules']=[rule];variants.append(with_rule)
 for field,value in [('mapping_verified',False),('control_id',True),('resource_sha',a)]:
  bad=copy.deepcopy(with_rule);bad['resource_rules'][0][field]=value;variants.append(bad)
+element=dict(cal_sha=b,element_type='L',element_id=1,reference='hardware note',action='exclude',mapping_verified=True,evidence={'report':'synthetic'})
+with_element=copy.deepcopy(r);with_element['element_rules']=[element];variants.append(with_element)
+for field,value in [('mapping_verified',False),('element_type','B')]:
+ bad=copy.deepcopy(with_element);bad['element_rules'][0][field]=value;variants.append(bad)
+bad=copy.deepcopy(with_element);bad['element_rules'].append(copy.deepcopy(element));variants.append(bad)
+group=copy.deepcopy(r);group['element_rules']=[dict(cal_sha=b,element_type='G',element_id=1,reference='warning',action='exclude',mapping_verified=True,evidence={'report':'synthetic'})];variants.append(copy.deepcopy(group))
+group['element_rules'][0]['evidence']['children']=[dict(id=2,type='L',text='hardware')];variants.append(copy.deepcopy(group))
+picture=copy.deepcopy(r);picture['element_rules']=[dict(cal_sha=b,element_type='P',element_id=1,reference='24c16.png',action='exclude',mapping_verified=True,evidence={'report':'synthetic'})];variants.append(copy.deepcopy(picture))
+picture['element_rules'][0]['evidence']['candidate_images']=[dict(sha256=c,category='hardware_wiring',path='EEPROM/24C16.png')];variants.append(copy.deepcopy(picture))
 results=[]
 for x in variants:
  try:P.validate_registry(x);results.append(True)
  except (ValueError,KeyError,TypeError):results.append(False)
 js="const p=require('./catalog-scope.js');const rs=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(rs.map(r=>{try{p.validate(r);return true}catch{return false}})))"
 assert json.loads(subprocess.check_output(['node','-e',js],input=json.dumps(variants).encode(),cwd=ROOT))==results
-assert results==[True,False,False,False,False,False,True,False,False,False]
+assert results==[True,False,False,False,False,False,True,False,False,False,True,False,False,False,False,True,False,True]
 with tempfile.TemporaryDirectory() as tmp:
  root=pathlib.Path(tmp);(root/'tools').mkdir()
  for file in ['build_catalog.py','scope_policy.py']:shutil.copy(ROOT/'tools'/file,root/'tools'/file)
