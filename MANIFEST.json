@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 61732,
-      "sha256": "eda35fc81854a8cae21b47abd13b55d9026666f8d23fc241c9a62cfa6c93f419"
+      "bytes": 63661,
+      "sha256": "53fe95a54d9f4129384d3c0053b661bb7e8e329da6cf15b50bcde6da593c3bab"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1373,8 +1373,8 @@
     },
     {
       "path": "reports/T-007-other-formats-2026-11-04.md",
-      "bytes": 12275,
-      "sha256": "3e8adc450c711c76a3999149754cd7a6f9ce1f21d2bac983cb59b9fddedb9ea0"
+      "bytes": 13531,
+      "sha256": "999f76fd6955a51b39c6f0ec484fa964525daa30c8516c03e38b60306da3b288"
     },
     {
       "path": "reports/T-008-pair-differences-2026-11-04.json",
@@ -1943,7 +1943,11 @@
       "original_executables_run": 0,
       "native_pe_static_metadata": 2,
       "runtime_changes": false,
-      "calculator_execution_tests": "none restored; no execution claim"
+      "calculator_execution_tests": "none restored; no execution claim",
+      "pr": 21,
+      "merge": "507a6a4a72555146dab0f2f158973354d4536150",
+      "pages_run": 41850150069,
+      "pages": "success; evidence registry HTTP 200 and exact bytes, no runtime changes"
     }
   },
   "personal_bin_fixtures_included": false
