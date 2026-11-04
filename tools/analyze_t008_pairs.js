@@ -40,9 +40,15 @@ function ranges(map) { // Map(addr -> value) or Set(addr) -> [{start,end,value?}
   return out.map(r => ({ start: '0x' + r.start.toString(16), end: '0x' + r.end.toString(16), length: r.end - r.start, ...(r.value === undefined ? {} : { value: '0x' + r.value.toString(16).padStart(2, '0') }) }));
 }
 
+// Padded analysis buffers are not production BINs; do not apply the reviewed
+// exact-chip-size profile to these historical comparison cases.
+function analysisVM(program, dump) {
+  return new E.VM(program.memory && dump.length !== program.memory.dumpBytes ? { ...program, memory: undefined } : program, dump);
+}
+
 function footprint(program, size) {
   const dump = new Uint8Array(size); // all zero: OnShow reaches the deeper crash-flag branch
-  const vm = new E.VM(program, dump);
+  const vm = analysisVM(program, dump);
   rec = { reads: new Set(), writes: new Map() };
   const shown = vm.transaction('show', { maxSteps: 500000 }).vm; const reads = rec.reads;
   rec = { reads: new Set(), writes: new Map() };
@@ -64,7 +70,7 @@ const view = v => v.controls.map(c => ({ value: c.value, text: c.text, color: c.
 
 function runCase(program, size, fill, event) {
   const dump = Uint8Array.from({ length: size }, (_, i) => fill === 'pattern' ? (i * 17 + 23) & 255 : fill);
-  let v = new E.VM(program, dump).transaction('show', { maxSteps: 500000 }).vm;
+  let v = analysisVM(program, dump).transaction('show', { maxSteps: 500000 }).vm;
   if (event === 'apply') {
     for (const o of program.form.controls) if ('DHCB'.includes(o.type)) v.input(o.id, o.type === 'C' ? Math.min(1, o.items.length - 1) : o.type === 'B' ? 1 : o.type === 'H' ? 0x1234 : 123456);
     v = v.transaction('apply', { maxSteps: 500000 }).vm;
@@ -87,7 +93,7 @@ function validDumpRuns(text, bin, size, model) {
       const dump = Uint8Array.from({ length: size }, () => rnd() & 255);
       for (const [a, w] of Object.entries(sig)) { dump[+a] = w & 255; dump[+a + 1] = w >> 8; }
       const run = p => {
-        let v = new E.VM(p, dump); const mc = p.form.controls.findIndex(c => c.type === 'C'); v.input(mc, mode);
+        let v = analysisVM(p, dump); const mc = p.form.controls.findIndex(c => c.type === 'C'); v.input(mc, mode);
         v = v.transaction('apply', { maxSteps: 5000000 }).vm; return { buffer: Buffer.from(v.buffer), controls: view(v) };
       };
       const a = run(text), b = run(bin), changed = a.buffer.reduce((n, x, k) => n + (x !== dump[k]), 0);
@@ -96,7 +102,7 @@ function validDumpRuns(text, bin, size, model) {
     }
   });
   // The decoders also use scratch addresses from 0x2000, beyond a real 2048-byte 93C86 dump.
-  // engine.js grants scratch memory only to one reviewed SHA, so probe a real-size BIN too.
+  // Probe the current production SHA profiles on real-size BINs separately from padded analysis.
   const probe = [];
   signatures[model].forEach((sig, mode) => {
     const dump = Uint8Array.from({ length: 2048 }, (_, k) => (k * 29 + 7) & 255);

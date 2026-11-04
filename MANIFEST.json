@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 15438,
-      "sha256": "99941f22d9304bd6cb36a45b12958888e1f2e6eccd98e3f1e3551856d2381c54"
+      "bytes": 16429,
+      "sha256": "80052ad756a8a3a100507050554255aff4e01e08709e3e7e564d15c685eb0225"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -333,8 +333,8 @@
     },
     {
       "path": "engine.js",
-      "bytes": 19262,
-      "sha256": "528778cf4cb6e8844b517db445d69f05e01f078e6bab851f77a2a213550e6b75"
+      "bytes": 19976,
+      "sha256": "8ed938feda934f3fa806c4ee7cff9186d79bbe4a20727f82bf0b7e75643e057c"
     },
     {
       "path": "favicon.svg",
@@ -1062,6 +1062,11 @@
       "sha256": "a3855c62e92798a7677487e17be4805e489bf32b8cccfd374db33f2f680b3260"
     },
     {
+      "path": "reports/T-014-skoda-2026-11-04.md",
+      "bytes": 6573,
+      "sha256": "527ca1d302f629b75884c6eb068ab7228844ea329f8e87aeb5a540b9f9f5e71e"
+    },
+    {
       "path": "reports/binary-readers-2026-11-03.json",
       "bytes": 63723,
       "sha256": "126696d8b2000ce3c10bb1739a4704f0e1bbbf543ba9cc05173b31c5e4897a6c"
@@ -1282,6 +1287,16 @@
       "sha256": "d03f90c3698f26270e954d3fdf81075953ebecd5ac6baf724fad76a1b8808762"
     },
     {
+      "path": "tests/test_t014_app.js",
+      "bytes": 5899,
+      "sha256": "47df352d8611c82f05028ce12aa3a552c3f06e4c235240039f890f4c3e49e840"
+    },
+    {
+      "path": "tests/test_t014_skoda.js",
+      "bytes": 5030,
+      "sha256": "821017fcf143453a849dac826df12d19a172bd74bdea63a00e1541876e6854c0"
+    },
+    {
       "path": "tests/test_text_variants.js",
       "bytes": 4811,
       "sha256": "453ea3938d7554f75c31e74c97acb928e2699f66b0a050ee91d5e265d7a09c9f"
@@ -1295,6 +1310,11 @@
       "path": "tests/ui-state-results.txt",
       "bytes": 2209,
       "sha256": "420e96a12b59bf5199d349b3f523a27cc8c78573589b4fe183e745f061530b6f"
+    },
+    {
+      "path": "tools/analyze_t008_pairs.js",
+      "bytes": 13941,
+      "sha256": "6a3e41414608c20d1066a5b278f3248bec45b5ec77a600ad21101bf29ae2ef34"
     },
     {
       "path": "tools/audit-calculators.js",
@@ -1381,7 +1401,16 @@
     "original_iprog_execution": "not compared",
     "chromium_release_scenarios": "passed on Linux",
     "real_browser_storage": "tested in Chromium",
-    "windows": "not tested"
+    "windows": "not tested",
+    "T-014": {
+      "variants": 6,
+      "synthetic_vectors": 36,
+      "app_handler_scenarios": 12,
+      "polo_checks": 8,
+      "original_iprog": "not executed",
+      "vehicle": "not tested",
+      "browser_rendering": "not tested"
+    }
   },
   "personal_bin_fixtures_included": false
 }
