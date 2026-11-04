@@ -7,12 +7,12 @@ const policy=require('../catalog-scope.js'),catalog=policy.activeCatalog(CAL_CAT
 const cache=new Map(),details=[];
 for(const e of catalog.entries.filter(e=>e.ext==='cal')){
  let r=cache.get(e.sha);
- if(!r){try{const p=E.parse(Buffer.from(CAL_CATALOG.blobs[e.sha],'base64'),{sha:e.sha});r={format:p.format||'binary',status:p.partial?'partial':p.executable?'supported':'unsupported',warnings:p.unsupported,repairs:p.sourceRepairs,validEvents:p.validEvents};}catch(err){r={status:'rejected',error:err.message};}cache.set(e.sha,r);}
+ if(!r){try{const p=E.parse(Buffer.from(CAL_CATALOG.blobs[e.sha],'base64'),{sha:e.sha});r={format:p.format||'binary',status:p.partial?'partial':p.executable?(p.readOnly?'read-only':'supported'):'unsupported',warnings:p.unsupported,repairs:p.sourceRepairs,validEvents:p.validEvents,absentEvents:p.absentEvents,eventTermination:p.eventTermination};}catch(err){r={status:'rejected',error:err.message};}cache.set(e.sha,r);}
  details.push({path:e.path,sha:e.sha,...r});
 }
 const counts=a=>a.reduce((s,e)=>{const k=e.status==='supported'?e.format:e.status;s[k]=(s[k]||0)+1;return s;},{});
 const report={scopePolicy:{registry:'scope-registry.json',archivedEntries:CAL_CATALOG.entries.length,activeEntries:catalog.entries.length,excludedEntries:CAL_CATALOG.entries.length-catalog.entries.length},scope:'Static parsing and supported command vocabulary only; not execution/hardware validation',
  engineSha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'engine.js'))).digest('hex'),
  sourceEngineSha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'cal-source.js'))).digest('hex'),
- entries:counts(details),unique:counts([...cache.values()]),unavailable:details.filter(e=>e.status!=='supported')};
+ entries:counts(details),unique:counts([...cache.values()]),unavailable:details.filter(e=>!['supported','read-only'].includes(e.status))};
 fs.mkdirSync(path.dirname(path.resolve(process.argv[2])),{recursive:true});fs.writeFileSync(process.argv[2],JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({entries:report.entries,unique:report.unique}));
