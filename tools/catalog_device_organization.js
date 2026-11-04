@@ -17,7 +17,7 @@ const scopeRegistry = JSON.parse(fs.readFileSync(path.join(ROOT, 'scope-registry
 
 const CONFIG = {
   dashboard: {
-    display: 'Приборные панели',
+    display: 'Dashboard',
     output: 'catalog-organization-dashboard.js',
     report: 'reports/catalog-organization-dashboard-2026-11-04.json',
     sourceReport: 'reports/catalog-organization-dashboard-2026-11-04.md',
@@ -25,7 +25,7 @@ const CONFIG = {
     purpose: 'Щитки, панели приборов, одометры и коррекция пробега.'
   },
   immo: {
-    display: 'Иммобилайзеры и ключи',
+    display: 'Immo',
     output: 'catalog-organization-immo.js',
     report: 'reports/catalog-organization-immo-2026-11-04.json',
     sourceReport: 'reports/catalog-organization-immo-2026-11-04.md',
@@ -33,7 +33,7 @@ const CONFIG = {
     purpose: 'IMMO, EZS, транспондеры, IDEN и конвертеры ключей.'
   },
   radio: {
-    display: 'Магнитолы и навигация',
+    display: 'CarRadio',
     output: 'catalog-organization-radio.js',
     report: 'reports/catalog-organization-radio-2026-11-04.json',
     sourceReport: 'reports/catalog-organization-radio-2026-11-04.md',
@@ -41,7 +41,7 @@ const CONFIG = {
     purpose: 'Автомагнитолы, навигация, коды, IMMO, карты и серийные калькуляторы.'
   },
   utilities: {
-    display: 'Утилиты',
+    display: 'OTHER',
     output: 'catalog-organization-utilities.js',
     report: 'reports/catalog-organization-utilities-2026-11-04.json',
     sourceReport: 'reports/catalog-organization-utilities-2026-11-04.md',
@@ -433,8 +433,8 @@ const immoShas = new Set(db.entries
   .map(entry => entry.sha));
 
 const UTILITY_FOLDERS = new Set([
-  'CRC', 'PIN и IMMO', 'Сервисные функции', 'Синхронизация', 'Тахографы',
-  'Конвертеры US-EU', 'Неуточнённые'
+  'CRC', 'PIN', 'Service', 'Service calc', 'Synchronization',
+  'Tachograf off', 'US-Euro converter', 'USA-Euro converter', 'OTHER'
 ]);
 
 function utilityBase(file) {
@@ -465,48 +465,45 @@ function utilityBrand(file) {
   return found[0] || '';
 }
 
-function utilityCategory(file, labels) {
+function utilityCategory(file) {
+  return utilitySource(file) || 'OTHER';
+}
+
+function utilityAmbiguous(file, labels) {
   const source = utilitySource(file);
-  const text = [...(labels || []), file].join(' | ');
-  if (source === 'CRC') return 'CRC';
-  if (source === 'Tachograf off') return 'Тахографы';
-  if (source === 'Synchronization') return 'Синхронизация';
-  if (source === 'US-Euro converter' || source === 'USA-Euro converter') return 'Конвертеры US-EU';
-  if (source === 'Service' || source === 'Service calc') return 'Сервисные функции';
-  if (source === 'PIN') {
-    if (/synchroni[sz]ation|восстановлен.*синхрон/i.test(text)) return 'Синхронизация';
-    if (/^help$/i.test(utilityBase(file))
-      && (labels || []).filter(label => label.trim().length > 1).length <= 1) return 'Неуточнённые';
-    return 'PIN и IMMO';
-  }
-  return 'Неуточнённые';
+  return source === 'PIN'
+    && /^help$/i.test(utilityBase(file))
+    && (labels || []).filter(label => label.trim().length > 1).length <= 1;
 }
 
 function utilityOperation(category, labels, file) {
-  const text = [...(labels || []), file].join(' | ');
+  // The source folder chooses the section, not an operation promise. Only
+  // visible labels and the original file name are evidence for a function.
+  const base = file.split('/').at(-1);
+  const evidence = [...(labels || []), base].join(' | ');
+  const labelText = (labels || []).join(' | ');
   if (category === 'CRC') return 'правка CRC и VIN по выделению';
-  if (category === 'Тахографы') return 'отключение тахографа';
-  if (category === 'Синхронизация') return 'восстановление синхронизации';
-  if (category === 'Конвертеры US-EU') return 'конверсия миль ↔ км';
-  if (category === 'Сервисные функции') {
-    if (/\bSRS\b|crash/i.test(text)) return 'сброс Crash (SRS)';
-    return 'сервисные функции и коррекция пробега';
-  }
-  if (category === 'PIN и IMMO') {
-    if (/\bISN\b/i.test(text)) return 'ISN и коррекция пробега';
-    if (/\bPIN\b|\bIMMO\b|immobil|transponder|\bVIN\b|\blogin\b|данные\s+IMMO/i.test(text)) {
-      return 'PIN и данные IMMO';
-    }
-    if (/пробег|одометр|mileage|odometer|\bkm\b|км/i.test(text)) return 'коррекция пробега';
+  if (category === 'Tachograf off') return 'отключение тахографа';
+  if (category === 'Synchronization') return 'восстановление синхронизации';
+  if (category === 'US-Euro converter' || category === 'USA-Euro converter') return 'конверсия миль ↔ км';
+  if (/\bSRS\b|crash/i.test(evidence)) return 'сброс Crash (SRS)';
+  const km = /пробег|одометр|mileage|miles|odometer|(^|[^A-Za-zА-Яа-яЁё])(?:km|км)(?![A-Za-zА-Яа-яЁё])/i.test(evidence);
+  const service = /assy|service|сервис|interval|интервал/i.test(labelText) || /assy/i.test(base);
+  if (service && km) return 'коррекция пробега и сервисных интервалов';
+  if (service) return 'сервисные интервалы';
+  if (km) return 'коррекция пробега';
+  if (category === 'PIN' && /\bISN\b/i.test(evidence)) return 'ISN';
+  if (category === 'PIN' && /\bPIN\b|\bIMMO\b|immobil|transponder|\bVIN\b|\blogin\b|данные\s+IMMO/i.test(evidence)) {
+    return 'PIN и данные IMMO';
   }
   return '';
 }
 
-function utilityName(file, category, labels) {
+function utilityName(file, category, labels, ambiguous = false) {
   const base = utilityBase(file);
   const brand = utilityBrand(file);
   const labeled = brand && !brandsIn(base).length ? `${brand} ${base}`.trim() : base;
-  if (category === 'Неуточнённые') return `${labeled} — назначение не подтверждено`;
+  if (ambiguous) return labeled;
   if (category === 'CRC' && /dash[_\s-]*crc[_\s-]*vin/i.test(base)) {
     return 'CRC и VIN в дампе панели — отдельная сборка';
   }
@@ -557,7 +554,8 @@ for (const entry of selected) {
 const approvedShas = new Set();
 for (const file of ['catalog-organization.js', 'catalog-organization-airbag.js',
   'catalog-organization-dashboard.js', 'catalog-organization-immo.js',
-  'catalog-organization-radio.js']) {
+  'catalog-organization-radio.js', 'catalog-organization-utilities.js']) {
+  if (file === cfg.output) continue;
   const text = fs.readFileSync(path.join(ROOT, file), 'utf8');
   for (const match of text.matchAll(/'([0-9a-f]{64})':/g)) approvedShas.add(match[1]);
 }
@@ -578,7 +576,7 @@ for (const [sha, entries] of groups) {
   const universal = (SECTION === 'dashboard' && (source === 'I' || source === 'I_ok' || parts[2] === '1'))
     || (SECTION === 'radio' && /Any model by dump/i.test(canonical));
   const convertor = SECTION === 'immo' && /\/Convertor\//i.test(canonical);
-  const utilityFolder = SECTION === 'utilities' ? utilityCategory(canonical, labels) : '';
+  const utilityFolder = SECTION === 'utilities' ? utilityCategory(canonical) : '';
   let brand = universal ? '' : pathBrand(canonical);
   if (!brand && !universal && parsed.images.length) brand = imageBrand(parsed.images);
   if (!brand && !universal && labels.length) {
@@ -594,7 +592,7 @@ for (const [sha, entries] of groups) {
         : utilityOperation(utilityFolder, labels, canonical);
   let reason = '';
   if (SECTION === 'utilities') {
-    if (utilityFolder === 'Неуточнённые') reason = 'имя Help и форма не подтверждают назначение расчёта';
+    if (utilityAmbiguous(canonical, labels)) reason = 'имя Help и форма не подтверждают назначение расчёта';
   } else {
     if (!universal && !convertor && !brand) reason = 'марка не подтверждена путём или формой CAL';
     if (SECTION === 'dashboard' && !reason && !operation) reason = 'в форме нет подтверждения операции панели';
@@ -603,13 +601,16 @@ for (const [sha, entries] of groups) {
     if (SECTION === 'radio' && !reason && !operation) reason = 'в форме нет подтверждения операции магнитолы';
   }
 
+  const sourceFolder = canonical.split('/')[1] || '';
   const folder = SECTION === 'utilities'
-    ? (reason ? 'Неуточнённые' : utilityFolder)
-    : reason ? 'Неуточнённые' : universal ? 'Универсальные' : convertor ? 'Конвертеры ключей' : brand;
+    ? utilityFolder
+    : reason ? (SECTION === 'dashboard' ? (sourceFolder === 'Dashboard' ? '' : sourceFolder) : SECTION === 'immo' ? sourceFolder : SECTION === 'radio' ? 'CarRadio' : '')
+      : universal ? (sourceFolder === 'CarRadio' ? 'Any model by dump' : sourceFolder === 'Dashboard' ? '' : sourceFolder)
+        : convertor ? 'Convertor' : brand;
   let name = '';
   if (reason) {
     name = SECTION === 'utilities'
-      ? utilityName(canonical, 'Неуточнённые', labels)
+      ? utilityName(canonical, utilityFolder, labels, true) + ' — назначение не подтверждено'
       : clean(canonical.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
   } else if (SECTION === 'utilities') {
     name = utilityName(canonical, utilityFolder, labels);
@@ -677,30 +678,26 @@ for (const list of byDisplay.values()) {
   }
 }
 
-const allowedFolders = new Set(SECTION === 'utilities'
-  ? [...UTILITY_FOLDERS].map(folder => `${cfg.display}/${folder}`)
-  : [
-    'Приборные панели/Универсальные',
-    'Приборные панели/Неуточнённые'
-  ]);
 const display = new Set();
 for (const row of rows) {
-  row.folder = `${cfg.display}/${row.folder}`;
+  const relativeFolder = row.folder || '';
+  row.folder = relativeFolder ? `${cfg.display}/${relativeFolder}` : cfg.display;
   row.name = String(row.name || '')
     .replace(/\s+/g, ' ')
     .replace(/\s*\/\s*/g, '⁄')
     .trim()
     .replace(/(?:\.cal)+$/i, '')
     .trim();
-  allowedFolders.add(row.folder);
-  if (SECTION === 'utilities' && !UTILITY_FOLDERS.has(row.folder.slice(cfg.display.length + 1))) {
+  if (relativeFolder && (/[\\/]/.test(relativeFolder) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeFolder))) {
+    throw new Error(`Unexpected folder: ${row.folder}`);
+  }
+  if (SECTION === 'utilities' && !UTILITY_FOLDERS.has(relativeFolder)) {
     throw new Error(`Unexpected utility folder: ${row.folder}`);
   }
   if (!row.name || row.name.length > 140 || /[\\/]/.test(row.name) || /\.cal$/i.test(row.name)) {
     throw new Error(`Invalid name: ${row.name}`);
   }
-  if (row.folder.endsWith('/Неуточнённые') && !row.reason) throw new Error(`Missing reason: ${row.sha}`);
-  if (!row.folder.endsWith('/Неуточнённые') && row.reason) throw new Error(`Unexpected reason: ${row.sha}`);
+  if (row.reason && (!row.reason.trim() || row.reason.length > 240)) throw new Error(`Invalid reason: ${row.sha}`);
   const key = `${row.folder}/${row.name}`.toLowerCase();
   if (display.has(key)) throw new Error(`Duplicate display path: ${key}`);
   display.add(key);

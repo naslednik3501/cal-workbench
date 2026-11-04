@@ -2,27 +2,7 @@
 // This is not browser rendering or a vehicle compatibility check.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),vm=require('vm'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..');require('../catalog.js');for(const f of require('../catalog-parts.json'))require('../'+f);
-const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js'),dashboard=require('../catalog-organization-dashboard.js'),immo=require('../catalog-organization-immo.js'),radio=require('../catalog-organization-radio.js'),utilities=require('../catalog-organization-utilities.js');
-const mapOverlap=[...Object.keys(dashboard.entries)].filter(sha=>immo.entries[sha]).length;
-const radioOverlap=[...Object.keys(radio.entries)].filter(sha=>dashboard.entries[sha]||immo.entries[sha]).length;
-const expected=[
- ['faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a','Calculators/Fabia 93C86 2006 decryptor.cal','Skoda Fabia 2006 — декриптор EEPROM 93C86','Приборные панели/Skoda'],
- ['2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970','Calculators/Super B 93C86 decryptor.cal','Skoda Superb — декриптор EEPROM 93C86','Приборные панели/Skoda'],
- ['d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877','Calculators/philips temp.cal','Philips — заготовка калькулятора кода','Магнитолы и навигация/Неуточнённые'],
- ['b3503228dbb6c6b5e45352dd753f61c4d1b472bf04f84f1ff15a0c3fe57a2224','Calculators/hitag2.cal','Hitag2 — контрольная сумма CRC по выделению','Утилиты/CRC'],
- ['4f38ff98c567bd82e80821515a7e948c214cdc2a30aa26e15de3fc27bc7da1f1','Calculators/Immo_Outlander_crc_vin.cal','Mitsubishi Outlander — CRC и VIN в IMMO по выделению','Иммобилайзеры и ключи/Mitsubishi'],
- ['b5d3f7c4be6434423a32c1a2f0c09a0bbf640cbddd0f16c9547022d5efe49621','Calculators/dash_crc_vin.cal','CRC и VIN в дампе панели — правка по выделению','Утилиты/CRC'],
- ['21b6963bdadeb104e7fe4b807542c56b79931aac78a5d388ac67e14729c01f9b','Calculators/MasterKey to Kmrw 2.cal','MasterKey → Kmrw — конвертер данных транспондера (8 или 16 байт)','Иммобилайзеры и ключи/Конвертеры ключей'],
- ['89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f','Calculators/color.cal','Etsmart — справочник цветовых кодов','Утилиты/Справочники'],
- ['7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2','Calculators/invert.cal','Инверсия первых 128 КиБ дампа','Утилиты/Инверсия'],
- ['44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045','Calculators/Airbag/89170-02810(93C56).cal','Toyota 89170-02810 — сброс Crash (SRS)','Подушки безопасности/Toyota'],
- ['31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79','Calculators/Airbag/28556 3AP1B  (93C56).cal','Nissan 28556 3AP1B — сброс Crash (SRS)','Подушки безопасности/Nissan'],
- ['a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf','Calculators/Airbag/96 806 850 5WY67070 ST95160.cal','Chevrolet 96 806 850 (5WY67070) — сброс Crash (SRS)','Подушки безопасности/Chevrolet']
-];
-const airbagEntries=db.entries.filter(e=>e.ext==='cal'&&/^Calculators\/(Airbag|SRS)\//i.test(e.path));
-const airbagShas=new Set(airbagEntries.map(e=>e.sha));
-const approvedShas=new Set(expected.map(item=>item[0]));
-const generatedEntries=new Map(Object.entries(org.data.entries).filter(([sha])=>airbagShas.has(sha)&&!approvedShas.has(sha)));
+const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js');
 
 class Element{
  constructor(tag,doc){this.tagName=tag.toUpperCase();this.doc=doc;this.children=[];this.parentNode=null;this.dataset={};this.style={};this.attrs={};this.events={};this._text='';this.className='';this.value='';this.checked=false;this.disabled=false;this.hidden=false;this.open=false;this.files=[];this.classList={contains:n=>this.className.split(/\s/).includes(n),toggle:(n,on)=>{let s=new Set(this.className.split(/\s/).filter(Boolean));if(on??!s.has(n))s.add(n);else s.delete(n);this.className=[...s].join(' ');},remove:n=>{this.classList.toggle(n,false);}};}
@@ -51,372 +31,146 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 
 (async()=>{
 await run('catalogReady');
-await test('the 12 approved SHAs keep their exact names, folders and display paths',()=>{
- assert.equal(Object.keys(org.data.entries).length,5392+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length+Object.keys(radio.entries).length+Object.keys(utilities.entries).length-mapOverlap-radioOverlap);assert.equal(expected.length,12);
- const shown=new Set(),originals=new Set();
- for(const [sha,oldPath,name,folder] of expected){
-  const rows=db.entries.filter(e=>e.sha===sha);
-  assert.equal(rows.length,1,sha);assert.equal(rows[0].path,oldPath,sha);assert.equal(rows[0].source,'Calculators.zip');
-  assert.equal(org.title(rows[0]),name);assert.equal(org.folder(rows[0]),folder);
-  const display=folder+'/'+name+'.cal';assert.equal(org.displayPath(rows[0]),display);
-  assert(!shown.has(display.toLowerCase()),'duplicate display '+display);shown.add(display.toLowerCase());
-  assert(!originals.has(oldPath),'duplicate original '+oldPath);originals.add(oldPath);
- }
- // The display path is virtual: it must never sit on a real catalogue file.
- for(const display of shown)assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/'+display),'collision '+display);
- assert.equal(new Set(db.entries.filter(e=>e.ext==='cal').map(e=>e.sha)).size,db.meta.uniqueCal);
- for(const [sha,item] of Object.entries(org.data.entries))if(item.folder.endsWith('/Неуточнённые'))assert(item.reason,'uncertain entry needs a reason: '+sha);
-});
-await test('all Airbag and SRS SHA are covered by unique, reasoned display entries',()=>{
- assert.equal(airbagEntries.length,7664);assert.equal(airbagShas.size,5383);
- assert.equal(generatedEntries.size,5380);
- for(const sha of airbagShas)assert(org.get(sha),'missing '+sha);
- const outside=[...Object.keys(org.data.entries)].filter(sha=>!airbagShas.has(sha));
- assert.equal(outside.length,9+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length+Object.keys(radio.entries).length+Object.keys(utilities.entries).length-mapOverlap-radioOverlap,'only approved, dashboard, immo, radio and utilities entries stay outside Airbag');
- const display=new Map(),folders=new Set();
- for(const e of airbagEntries){
-  const item=org.get(e.sha),name=e.path.split('/').at(-1).replace(/\.cal$/i,'');
-  assert(item,e.sha);assert(item.folder.startsWith('Подушки безопасности/'),item.folder);
-  const brand=item.folder.split('/')[1];folders.add(item.folder);
-  assert(!['Huyndai','Infinity','Cherry','Pontiak','China','1 Universal'].includes(brand),brand);
-  if(brand==='Неуточнённые'){
-   assert(item.reason,'reason for '+e.sha);assert(org.title(e).startsWith(name),'original name kept '+e.sha);
-  }else{
-   assert(!item.reason,'no reason outside Неуточнённые '+e.sha);assert(/ — (?:сброс|обнуление)/.test(item.name),item.name);
-  }
-  assert(org.matches(e,name),'old name search '+e.sha);
-  assert(org.matches(e,e.path),'old path search '+e.sha);
-  assert(org.matches(e,item.name),'new name search '+e.sha);
-  assert(org.matches(e,item.folder),'folder search '+e.sha);
-  const key=org.displayPath(e).toLowerCase(),owner=display.get(key);
-  assert(!owner||owner===e.sha,'display collision '+key);display.set(key,e.sha);
- }
- for(const brand of ['Hyundai','Infiniti','Chery','Pontiac'])assert(folders.has('Подушки безопасности/'+brand),brand);
- assert.equal(folders.size,51,'50 brands plus Неуточнённые');
- assert.equal(org.data.airbag_report,'reports/catalog-organization-airbag-srs-2026-11-04.md');
- assert.equal(org.data.dashboard_report,'reports/catalog-organization-dashboard-2026-11-04.md');
-});
-await test('dashboard source paths are covered once, while Car ECU/Immo keep their own rules',()=>{
- const report=require('../reports/catalog-organization-dashboard-2026-11-04.json');
- assert.equal(Object.keys(dashboard.entries).length,report.totals.unique_sha);
- const selected=db.entries.filter(e=>e.ext==='cal'&&(
-  e.path.startsWith('Calculators/Dashboard/')||
-  e.path.startsWith('Calculators/I/')||
-  e.path.startsWith('Calculators/I_ok/')||
-  /\/Dash\b/i.test(e.path)&&e.path.startsWith('Calculators/Peugeot/')
- ));
- const carOnly=new Set(report.car_only_selected_paths);
- for(const e of selected)assert(org.get(e.sha),'dashboard path is mapped '+e.path);
- for(const e of db.entries.filter(e=>e.ext==='cal'&&carOnly.has(e.path)))assert(org.get(e.sha),'confirmed Car dashboard is mapped '+e.path);
- const display=new Set();
- for(const [sha,item] of Object.entries(dashboard.entries)){
-  assert(item.folder.startsWith('Приборные панели/'),item.folder);
-  assert(org.get(sha),sha);
-  if(item.folder.endsWith('/Неуточнённые'))assert(item.reason&&item.reason.length<240,sha);
-  else assert(!item.reason&&/ — /.test(item.name),sha);
-  const key=(item.folder+'/'+item.name).toLowerCase();
-  assert(!display.has(key),'dashboard display collision '+key);display.add(key);
- }
- for(const path of [
-  'Calculators/Car/Ford/Mondeo ECU TMS 370 4C.cal',
-  'Calculators/Car/Daihatsu/Move v1.cal',
-  'Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal',
-  'Calculators/Car/Ford/Ka  Immo 7701 4C.cal'
- ]){
-  const e=db.entries.find(item=>item.path===path);assert(e,path);
-  const item=org.get(e.sha);
-  assert(!item||!item.folder.startsWith('Приборные панели/'),'non-dashboard Car entry must not be mapped as a panel '+path);
-  assert(org.matches(e,'car'),'old path search still works '+path);
- }
- const sample=selected.find(e=>org.get(e.sha)&&!org.get(e.sha).reason);
- assert(org.matches(sample,org.title(sample)),'new dashboard name is searchable');
-});
-
-await test('immo source paths are covered once and dashboard/ECU entries are not stolen',async()=>{
- const report=require('../reports/catalog-organization-immo-2026-11-04.json');
- assert.equal(Object.keys(immo.entries).length,report.totals.unique_sha);
- assert.equal(report.totals.ambiguous,0);
- const source=db.entries.filter(e=>e.ext==='cal'&&['Immo','Immo off','MB'].includes(e.path.split('/')[1]));
- for(const e of source)assert(org.get(e.sha),'immo source is mapped '+e.path);
- const carOnly=new Set(report.car_only_selected_paths);
- for(const e of db.entries.filter(e=>e.ext==='cal'&&carOnly.has(e.path)))assert(org.get(e.sha),'confirmed Car IMMO is mapped '+e.path);
- for(const [sha,item] of Object.entries(immo.entries)){
-  assert(item.folder.startsWith('Иммобилайзеры и ключи/'),item.folder);
-  assert(org.get(sha),sha);
-  assert(/ — (?:данные|чтение|идентификация|отключение|конвертер)/.test(item.name),item.name);
-  if(item.folder.endsWith('/Неуточнённые'))assert(item.reason,sha);
- }
- for(const path of [
-  'Calculators/Car/M/Mazda/MAZDA 2 93C86-2017.cal'
- ]){
-  const e=db.entries.find(item=>item.path===path);assert(e,path);
-  assert.equal(org.get(e.sha),null,'non-IMMO Car entry stays unclassified '+path);
- }
- const panel=db.entries.find(e=>e.path==='Calculators/Car/Citroen/Citroen/Berlingo/Dash Berlingo 25020.cal');
- assert(panel&&org.folder(panel).startsWith('Приборные панели/'),'dashboard evidence remains a panel');
- const sample=db.entries.find(e=>e.path==='Calculators/Immo/Car/Fiat/Barchetta v1.cal');
- run('select(entries.find(e=>e.sha==='+JSON.stringify(sample.sha)+'))');
- assert.equal(el('calcTitle').textContent,org.title(sample));
- assert(el('calcPath').textContent.includes(sample.path));
- doc.downloads.length=0;await el('exportCal').click();
- const download=doc.downloads.at(-1);
- assert.equal(download.name,sample.path.split('/').at(-1));
- assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sample.sha],'base64'));
- const folders=[...new Set(Object.values(immo.entries).map(item=>item.folder))];
- const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Иммобилайзеры и ключи/')).length;
- run("expandedFolders.clear();catalogScope='Иммобилайзеры и ключи';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
- const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all IMMO calculators are shown once');
- el('search').value='иммобилайзеры и ключи';run('searchPage=0;renderCatalog()');
- assert(el('searchPager').textContent.includes(sectionCount+' · 1/'));
- el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
-});
-
-await test('radio and navigation paths keep operations, brands and original exports',async()=>{
- const report=require('../reports/catalog-organization-radio-2026-11-04.json');
- assert.equal(Object.keys(radio.entries).length,report.totals.unique_sha);
- assert.equal(report.totals.ambiguous,0);
- const source=db.entries.filter(e=>e.ext==='cal'&&e.path.startsWith('Calculators/CarRadio/'));
- for(const e of source)assert(org.get(e.sha),'radio source is mapped '+e.path);
- const display=new Set();
- for(const [sha,item] of Object.entries(radio.entries)){
-  assert(item.folder.startsWith('Магнитолы и навигация/'),item.folder);
-  assert(org.get(sha),sha);
-  if(item.folder.endsWith('/Универсальные'))assert(/код[а]? магнитолы/.test(item.name),item.name);
-  else assert(/ — код(?: |$)/.test(item.name),item.name);
-  if(item.folder.endsWith('/Неуточнённые'))assert(item.reason,sha);
-  const key=(item.folder+'/'+item.name).toLowerCase();
-  assert(!display.has(key),'radio display collision '+key);display.add(key);
- }
- const check=(path,operation)=>{
-  const e=db.entries.find(item=>item.path===path);assert(e,path);
-  const item=org.get(e.sha);assert(item,path);assert(item.name.includes(operation),path+' -> '+item.name);
- };
- check('Calculators/CarRadio/Diodes/Daewoo/AKL-1626JS.cal','код по диодной матрице');
- check('Calculators/CarRadio/Serial calculator/BECKER SN.cal','код по серийному номеру');
- check('Calculators/CarRadio/Navigation/AUDI/FIS AUDI coder.cal','код навигации');
- const any=db.entries.find(e=>e.path==='Calculators/CarRadio/Any model by dump.cal');
- assert(any&&org.folder(any)==='Магнитолы и навигация/Универсальные');
- const sample=db.entries.find(e=>e.path==='Calculators/CarRadio/Philips/22DC679.cal');
- run('select(entries.find(e=>e.sha==='+JSON.stringify(sample.sha)+'))');
- assert.equal(el('calcTitle').textContent,org.title(sample));
- assert(el('calcPath').textContent.includes(sample.path));
- doc.downloads.length=0;await el('exportCal').click();
- const download=doc.downloads.at(-1);
- assert.equal(download.name,sample.path.split('/').at(-1));
- assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sample.sha],'base64'));
- const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Магнитолы и навигация/')).length;
- const folders=[...new Set(Object.values(org.data.entries).filter(item=>item.folder.startsWith('Магнитолы и навигация/')).map(item=>item.folder))];
- run("expandedFolders.clear();catalogScope='Магнитолы и навигация';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
- const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all radio calculators are shown once');
- el('search').value='магнитолы и навигация';run('searchPage=0;renderCatalog()');
- assert(el('searchPager').textContent.includes(sectionCount+' · 1/'));
- el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
-});
-
-await test('every approved SHA stays its own calculator; sibling versions are not merged',()=>{
- const groups=scope.calculatorGroups(db.entries),bySha=new Map(groups.map(g=>[g.e.sha,g]));
- for(const [sha] of expected){const g=bySha.get(sha);assert(g,sha);assert.equal(g.aliases.length,1,sha);}
- const outlander=bySha.get('86ff4298a9d5323fb0b47388c8d9c412a78b0509b41817d930ecdb36fbed44c6'),dash=bySha.get('b1a2d621d1a65ea8ddb3d5d05ffd2f0768a9e91dbe607bc0b10681be3fe8d9cf');
- assert(outlander,'the Outlander twin must stay in the catalogue');assert(dash,'the dash CRC twin must stay in the catalogue');
- assert(outlander.aliases.some(a=>a.path==='Calculators/Immo/Car/Mitsubishi/Immo_Outlander_crc_vin.cal'));
- assert(dash.aliases.some(a=>a.path==='Calculators/CRC/dash_crc_vin.cal'));
- assert.notEqual(org.displayPath(outlander.aliases[0]),org.displayPath(bySha.get(expected[4][0]).aliases[0]));
- assert.notEqual(outlander.e.sha,bySha.get(expected[4][0]).e.sha);assert.notEqual(dash.e.sha,bySha.get(expected[5][0]).e.sha);
- assert.equal(org.folder(dash.e),'Утилиты/CRC','the CRC dual is now in the utilities map');
- assert.notEqual(org.displayPath(dash.e),org.displayPath(bySha.get(expected[5][0]).e),'both CRC builds keep distinct display paths');
-});
-await test('search matches new names, folders, old file names and old paths',()=>{
- for(const [sha,oldPath,name,folder] of expected){
-  const e=entry(sha),base=oldPath.split('/').at(-1);
-  for(const q of [base,base.replace(/\.cal$/i,''),oldPath,name,folder.split('/')[1]])assert(org.matches(e,q),sha+' should match '+q);
-  assert(org.matches(e,base.toLowerCase()),'case-insensitive '+sha);
- }
- const philips=entry(expected[2][0]);
- assert(org.matches(philips,'renault'),'Renault stays a search hint');
- assert(!/Renault/i.test(org.title(philips)),'Renault is not presented as a confirmed brand');
- const radio=db.entries.find(e=>e.path==='Calculators/CarRadio/Philips/22DC679.cal');
- assert(org.displayPath(radio).startsWith('Магнитолы и навигация/'),'radio is mapped to its section');
- assert(org.title(radio).includes('22DC679'),'radio keeps its model');
- assert(org.matches(radio,'22DC679')&&org.matches(radio,'carradio'),'old radio search still works');
-});
-
-await test('different SHA with the same display base stay distinct versions',()=>{
- const groups=new Map();
+const allCal=db.entries.filter(e=>e.ext==='cal');
+const uniqueCal=new Set(allCal.map(e=>e.sha));
+const groups=scope.calculatorGroups(db.entries);
+const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
+const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
+const folderRows=()=>el('tree').children.filter(c=>c.tagName==='DETAILS').map(c=>({name:c.children[0].children[1].textContent,count:Number(c.children[0].children[2].textContent)}));
+const sectionRows=()=>el('tree').children.filter(c=>c.className==='sectionButton').map(c=>({name:c.children[1].textContent,count:Number(c.children[2].textContent.replace(/\s/g,''))}));
+const approvedExpected=[
+ ['faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a','Skoda Fabia 2006 — декриптор EEPROM 93C86','Dashboard/Skoda'],
+ ['2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970','Skoda Superb — декриптор EEPROM 93C86','Dashboard/Skoda'],
+ ['d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877','Philips — заготовка калькулятора кода','CarRadio'],
+ ['b3503228dbb6c6b5e45352dd753f61c4d1b472bf04f84f1ff15a0c3fe57a2224','Hitag2 — контрольная сумма CRC по выделению','OTHER/CRC'],
+ ['4f38ff98c567bd82e80821515a7e948c214cdc2a30aa26e15de3fc27bc7da1f1','Mitsubishi Outlander — CRC и VIN в IMMO по выделению','Immo/Mitsubishi'],
+ ['b5d3f7c4be6434423a32c1a2f0c09a0bbf640cbddd0f16c9547022d5efe49621','CRC и VIN в дампе панели — правка по выделению','OTHER/CRC'],
+ ['21b6963bdadeb104e7fe4b807542c56b79931aac78a5d388ac67e14729c01f9b','MasterKey → Kmrw — конвертер данных транспондера (8 или 16 байт)','Immo/Convertor'],
+ ['89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f','Etsmart — справочник цветовых кодов','OTHER'],
+ ['7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2','Инверсия первых 128 КиБ дампа','OTHER'],
+ ['44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045','Toyota 89170-02810 — сброс Crash (SRS)','Airbag/Toyota'],
+ ['31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79','Nissan 28556 3AP1B — сброс Crash (SRS)','Airbag/Nissan'],
+ ['a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf','Chevrolet 96 806 850 (5WY67070) — сброс Crash (SRS)','Airbag/Chevrolet']
+];
+await test('all active CAL are mapped once, without translated root folders',()=>{
+ assert.equal(uniqueCal.size,15057,'unique CAL SHA');
+ assert.equal(Object.keys(org.data.entries).length,15057,'one display entry per unique SHA');
+ for(const e of allCal)assert(org.get(e.sha),'unmapped '+e.path);
+ const display=new Set(),roots=new Set();
  for(const [sha,item] of Object.entries(org.data.entries)){
-  if(!airbagShas.has(sha))continue;
-  const base=item.name.replace(/ \((?:Airbag|SRS)\)$/,'').replace(/ · вариант \d+$/,'');
-  const key=item.folder+'/'+base;
-  if(!groups.has(key))groups.set(key,[]);groups.get(key).push({sha,item});
+  assert(item.name.trim()&&item.name.length<=140,sha);assert(item.folder.trim(),sha);
+  assert(!/(^|\/)(?:Подушки безопасности|Приборные панели|Иммобилайзеры и ключи|Магнитолы и навигация|Утилиты)(\/|$)/.test(item.folder),'translated root: '+item.folder);
+  assert(!/(^|\/)(?:Неуточнённые|Универсальные|Конвертеры ключей|Справочники|Инверсия)(\/|$)/.test(item.folder),'invented folder: '+item.folder);
+  if(item.reason)assert(item.reason.trim().length<=240,sha);
+  const key=(item.folder+'/'+item.name).toLowerCase();assert(!display.has(key),'duplicate display '+key);display.add(key);
+  roots.add(item.folder.split('/')[0]);
  }
- const pair=[...groups.values()].find(list=>list.length>1&&new Set(list.map(row=>row.item.name)).size===list.length);
- assert(pair,'a collision group with distinct names must exist');
- const paths=new Set();
- for(const {sha,item} of pair){
-  const e=entry(sha);assert(e,sha);run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
-  assert.equal(el('calcTitle').textContent,item.name,sha);
-  assert(!paths.has(org.displayPath(e)),'distinct display path '+sha);paths.add(org.displayPath(e));
-  assert.equal(run('selected.sha'),sha);assert(!el('exportCal').disabled);
- }
- assert(pair.length>1);
+ for(const root of ['Airbag','Dashboard','Immo','CarRadio','OTHER'])assert(roots.has(root),root);
+ assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Germany','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
+ assert.equal(org.folder(entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045')),'Airbag/Toyota');
 });
-
-await test('the tree shows each approved CAL once under its thematic section',()=>{
- const sections=el('tree').children.filter(c=>c.className==='sectionButton').map(c=>c.children[1].textContent);
- for(const s of ['Подушки безопасности','Приборные панели','Иммобилайзеры и ключи','Магнитолы и навигация','Утилиты'])assert(sections.includes(s),s);
- assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,0,'no CAL is displayed at the root any more');
- const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- const folders=[...new Set([...airbagShas].map(sha=>org.folder(entry(sha))))];
- run('expandedFolders.clear();catalogScope=\'Подушки безопасности\';'+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
- const airbag=walk(el('tree'),'fileItem');
- assert.equal(airbag.length,airbagShas.size,'all Airbag/SRS calculators are shown once');
- assert(airbag.some(f=>/89170-02810/.test(f.textContent)),'the approved Toyota stays visible');
- run("expandedFolders.clear();catalogScope='';renderCatalog()");
-});
-await test('selecting each CAL shows the new name and keeps the original path and bytes',async()=>{
- for(const [sha,oldPath,name,folder] of expected){
+await test('approved entries keep exact names, folders, original paths and bytes',async()=>{
+ for(const [sha,name,folder] of approvedExpected){
+  const e=entry(sha);assert(e,sha);assert.equal(org.title(e),name,sha);assert.equal(org.folder(e),folder,sha);
   run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
-  assert.equal(el('calcTitle').textContent,name,sha);
-  assert(el('calcPath').textContent.includes('Раздел: '+folder),'folder shown '+sha);
-  assert(el('calcPath').textContent.includes(oldPath),'original path visible '+sha);
-  assert.equal(run('selected.sha'),sha);assert.equal(run('selected.path'),oldPath);
-  assert(!el('exportCal').disabled);
-  doc.downloads.length=0;await el('exportCal').click();
-  const download=doc.downloads.at(-1);
-  assert.equal(download.name,oldPath.split('/').at(-1),'export keeps the original name '+sha);
-  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sha],'base64'),'export keeps the original bytes '+sha);
- }
- run('select(entries.find(e=>e.sha==='+JSON.stringify(expected[2][0])+'))');
- assert(el('calcPath').textContent.includes('Renault'),'the Renault hint stays visible');
- assert(el('calcPath').textContent.includes('не подтверждена'),'the hint is marked as unconfirmed');
-});
-await test('sample Airbag and SRS CAL export original names, bytes and show ambiguous reasons',async()=>{
- const sample=[...airbagShas].filter((_,index)=>index%211===0);
- for(const sha of sample){
-  const e=entry(sha);run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
-  assert.equal(el('calcTitle').textContent,org.title(e),sha);
-  assert(el('calcPath').textContent.includes(e.path),'original path visible '+sha);
-  doc.downloads.length=0;await el('exportCal').click();
-  const download=doc.downloads.at(-1);
+  assert.equal(run('selected.sha'),sha);assert.equal(run('selected.path'),e.path);
+  assert.equal(el('calcTitle').textContent,name);assert(el('calcPath').textContent.includes('Раздел: '+folder));assert(el('calcPath').textContent.includes(e.path));
+  doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
   assert.equal(download.name,e.path.split('/').at(-1),'export name '+sha);
   assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sha],'base64'),'export bytes '+sha);
  }
- const ambiguous=airbagEntries.find(e=>org.get(e.sha).reason);
- assert(ambiguous,'an ambiguous entry exists');run('select(entries.find(e=>e.sha==='+JSON.stringify(ambiguous.sha)+'))');
- assert(el('calcPath').textContent.includes('Причина:'),'the reason is shown');assert.equal(el('calcTitle').textContent,org.title(ambiguous));
 });
-await test('dashboard CALs keep original names, paths, bytes and section grouping',async()=>{
- const rows=db.entries.filter(e=>e.ext==='cal'&&e.path.startsWith('Calculators/Dashboard/'));
- const sample=rows.filter((_,index)=>index%317===0);
- for(const e of sample){
-  const item=org.get(e.sha);assert(item,'mapped dashboard '+e.path);
-  run('select(entries.find(e=>e.sha==='+JSON.stringify(e.sha)+'))');
-  assert.equal(el('calcTitle').textContent,item.name,e.path);
-  assert(el('calcPath').textContent.includes(e.path),'original path '+e.path);
-  assert(el('calcPath').textContent.includes('Раздел: '+item.folder),'folder '+e.path);
-  doc.downloads.length=0;await el('exportCal').click();
-  const download=doc.downloads.at(-1);
-  assert.equal(download.name,e.path.split('/').at(-1),'export name '+e.path);
-  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[e.sha],'base64'),'export bytes '+e.path);
+await test('Airbag, Dashboard, Immo and CarRadio cover their source paths once',()=>{
+ const airSource=allCal.filter(e=>/^Calculators\/(Airbag|SRS)\//i.test(e.path));
+ assert.equal(airSource.length,7664);assert.equal(new Set(airSource.map(e=>e.sha)).size,5383);
+ for(const e of airSource)assert(org.folder(e)==='Airbag'||org.folder(e).startsWith('Airbag/'),'airbag '+e.path);
+ assert.equal(Object.values(org.data.entries).filter(x=>x.folder==='Airbag'||x.folder.startsWith('Airbag/')).length,5386,'Airbag plus moved SRS utilities');
+ for(const e of allCal.filter(e=>e.path.startsWith('Calculators/Dashboard/')))assert(org.get(e.sha),'dashboard '+e.path);
+ for(const e of allCal.filter(e=>e.path.startsWith('Calculators/Immo/')))assert(org.get(e.sha),'immo '+e.path);
+ for(const e of allCal.filter(e=>e.path.startsWith('Calculators/CarRadio/')))assert(org.get(e.sha),'radio '+e.path);
+});
+await test('utility names contain only evidenced operations and confirmed SRS is in Airbag',()=>{
+ const utilitySource=[...Object.values(org.data.entries)].filter(x=>x.folder.startsWith('OTHER/'));
+ assert.equal(utilitySource.length,216,'216 utility subfolder entries');
+ for(const item of utilitySource){
+  assert(!/сервисные функции и коррекция пробега|ISN и коррекция пробега|сервисные функции/i.test(item.name),item.name);
+  assert(!/Конвертеры US-EU|Сервисные функции|PIN и IMMO|Синхронизация|Тахографы/i.test(item.folder),item.folder);
  }
- const ambiguous=rows.find(e=>org.get(e.sha)?.reason);assert(ambiguous,'dashboard ambiguity exists');
- run('select(entries.find(e=>e.sha==='+JSON.stringify(ambiguous.sha)+'))');
- assert(el('calcPath').textContent.includes('Причина:'),'dashboard reason is visible');
- const folders=[...new Set(Object.values(dashboard.entries).map(item=>item.folder))];
- const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Приборные панели/')).length;
- run("expandedFolders.clear();catalogScope='Приборные панели';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
- const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all dashboard calculators are shown once');
- el('search').value='приборные панели';run('searchPage=0;renderCatalog()');
- assert(el('searchPager').textContent.includes(sectionCount+' · 1/'),'dashboard folder search covers the section');
- el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
+ for(const path of ['Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal','Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal','Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal']){
+  const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),'Airbag/Mercedes-Benz');assert.match(org.title(e),/сброс Crash \(SRS\)/);
+ }
+ const help=allCal.find(e=>e.path==='Calculators/PIN/Mitsubishi/Help.cal');assert.equal(org.folder(help),'OTHER/PIN');assert.match(org.reason(help),/назначение/);assert(!/— коррекция пробега/.test(org.title(help)));
 });
-
-await test('a search row shows the new name plus the old path and opens the same entry',()=>{
- el('search').value='Skoda Fabia 2006 — декриптор EEPROM 93C86';run('searchPage=0;renderCatalog()');
- let rows=el('tree').children.filter(c=>c.className.startsWith('fileItem'));
- assert.equal(rows.length,1,'the new name finds exactly the approved entry');
- assert.match(rows[0].textContent,/Skoda Fabia 2006 — декриптор EEPROM 93C86/);
- assert(rows[0].textContent.includes('Calculators/Fabia 93C86 2006 decryptor.cal'),'the row keeps the old path as an alias');
- rows[0].click();assert.equal(el('calcTitle').textContent,'Skoda Fabia 2006 — декриптор EEPROM 93C86');
- el('search').value='Calculators/Fabia 93C86 2006 decryptor.cal';run('searchPage=0;renderCatalog()');
- assert.equal(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length,1,'the exact old path still finds it');
- el('search').value='89170-02810';run('searchPage=0;renderCatalog()');
- assert(el('tree').children.filter(c=>c.className.startsWith('fileItem')).length>=1,'old file name still finds the entry');
- el('search').value='подушки безопасности';run('searchPage=0;renderCatalog()');
- assert(el('searchPager').textContent.includes(airbagShas.size+' · 1/'),'thematic folder finds every Airbag/SRS calculator');
+await test('all 2,629 remainder SHA are distributed by original sections with reasons where needed',()=>{
+ const report=require('../reports/catalog-organization-remainder-2026-11-04.json');
+ assert.equal(report.before.unique_sha,2629);assert.equal(report.after.distributed_sha,2629);assert.equal(report.after.outside_map_sha,0);
+ assert.equal(report.decisions.length,2629);assert.equal(report.ambiguous_entries.length,report.ambiguous);
+ const seen=new Set();
+ for(const row of report.decisions){
+  assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
+  const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
+  const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
+  assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
+  for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
+  assert(org.matches(e,item.name),'remaining display name search '+row.sha);
+ }
+ assert.equal(seen.size,2629);
+});
+await test('tree roots and every nested folder are ordered by unique CAL SHA count with matching counters',()=>{
+ el('search').value='';run("catalogScope='';expandedFolders.clear();renderCatalog()");
+ const sections=sectionRows();assert(sections.length>=17);
+ for(let i=1;i<sections.length;i++){
+  assert(sections[i-1].count>=sections[i].count,'root count order '+sections[i-1].name+' vs '+sections[i].name);
+  if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
+ }
+ assert.equal(sections[0].name,'Airbag','largest section first');
+ assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4843);
+ const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
+ for(const section of ['Dashboard','Immo','CarRadio','OTHER','Asia']){
+  run("expandedFolders.clear();catalogScope='"+section+"';renderCatalog()");
+  const rows=folderRows();assert(rows.length>0,section);
+  for(let i=1;i<rows.length;i++){
+   assert(rows[i-1].count>=rows[i].count,'folder count order '+section+' '+rows[i-1].name+' vs '+rows[i].name);
+   if(rows[i-1].count===rows[i].count)assert(rows[i-1].name.localeCompare(rows[i].name,'ru')<=0,'folder tie name '+section);
+  }
+  for(const row of rows)assert.equal(row.count,expectedCount(section+'/'+row.name),'counter '+section+'/'+row.name);
+ }
+ run("expandedFolders.clear();catalogScope='';renderCatalog()");
+});
+await test('custom calculators stay visible and follow the same count order, not a pinned position',()=>{
+ const fake={path:'Мои калькуляторы/Проверка.tmp.cal',sha:'f'.repeat(64),size:1,ext:'cal',source:'test',user:true};
+ run('entries=entries.concat('+JSON.stringify(fake)+');userEntries.push('+JSON.stringify(fake)+');catalogScope=\'\';expandedFolders.clear();renderCatalog()');
+ const rows=sectionRows();const own=rows.find(x=>x.name==='Мои калькуляторы');assert(own,'custom section visible');assert.equal(own.count,1);
+ assert.notEqual(rows[0].name,'Мои калькуляторы','custom section is not pinned');
+ const idx=rows.findIndex(x=>x.name==='Мои калькуляторы');
+ for(let i=1;i<rows.length;i++)assert(rows[i-1].count>=rows[i].count,'custom order');
+ run("entries=entries.filter(e=>!e.user);userEntries=[];renderCatalog()");
+});
+await test('search finds new names, original paths, old file names and old section aliases',()=>{
+ const toyota=entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045');
+ for(const q of ['Toyota 89170-02810','89170-02810','Calculators/Airbag/89170-02810(93C56).cal','Airbag','SRS','Подушки безопасности'])assert(org.matches(toyota,q),q);
+ const philips=entry('d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877');
+ assert(org.matches(philips,'Renault'));assert(!/Renault/i.test(org.title(philips)));
+ const help=allCal.find(e=>e.path==='Calculators/PIN/Mitsubishi/Help.cal');
+ for(const q of ['Help','Calculators/PIN/Mitsubishi/Help.cal','PIN','Утилиты'])assert(org.matches(help,q),q);
+ const remainder=allCal.find(e=>e.path.startsWith('Calculators/Asia/Toyota/'));
+ assert(org.matches(remainder,remainder.path),'remainder original path');assert(org.matches(remainder,org.title(remainder)),'remainder display name');
+ assert(org.matches(remainder,'Asia'),'remainder original section');
+ el('search').value='Toyota 89170-02810';run('searchPage=0;renderCatalog()');
+ assert(el('searchPager').textContent.includes('1 · 1/1'));
  el('search').value='';run('searchPage=0;renderCatalog()');
 });
-await test('pictures resolve from the original CAL location, not from the display folder',()=>{
- const map=[['44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045','Toyota.bmp','Подушки безопасности/Toyota'],['31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79','Nissan.bmp','Подушки безопасности/Nissan'],['a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf','Chevrolet.bmp','Подушки безопасности/Chevrolet']];
- for(const [sha,name,folder] of map){
-  run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
-  const img=run('picture({type:"P",id:5,text:'+JSON.stringify(name)+'})');
-  assert(img,'picture must resolve for '+sha);assert.equal(img.alt,name);
-  assert.match(img.src,/^data:image\/bmp;base64,/);
-  assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/'+folder.toLowerCase()+'/'+name.toLowerCase()),'no duplicate image next to the display folder');
+await test('tree expanded sections show every unique CAL once, with original exports and pictures',async()=>{
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
+  const folders=[...new Set(Object.values(org.data.entries).filter(x=>x.folder===section||x.folder.startsWith(section+'/')).map(x=>x.folder))];
+  run("expandedFolders.clear();catalogScope='"+section+"';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
+  const expected=groups.filter(g=>{const p=org.displayPath(g.e);return p===section||p?.startsWith(section+'/');}).length;
+  assert.equal(walk(el('tree'),'fileItem').length,expected,'visible once in '+section);
  }
+ const toyota=entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045');
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(toyota.sha)+'))');
+ const img=run('picture({type:"P",id:5,text:"Toyota.bmp"})');assert(img);assert.match(img.src,/^data:image\/bmp;base64,/);
+ assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/airbag/toyota/toyota.bmp'),'no duplicate image');
 });
-await test('utilities map covers every source CAL once while preserving original paths and non-CAL dependencies',()=>{
- const report=require('../reports/catalog-organization-utilities-2026-11-04.json');
- const sources=new Set(['CRC','PIN','Service','Service calc','Synchronization','Tachograf off','US-Euro converter','USA-Euro converter','OTHER']);
- const selected=db.entries.filter(e=>e.ext==='cal'&&sources.has(e.path.split('/')[1]));
- assert.equal(selected.length,404);assert.equal(new Set(selected.map(e=>e.sha)).size,218);
- assert.equal(Object.keys(utilities.entries).length,217);assert.equal(report.decisions.length,217);
- assert.equal(report.totals.paths,404);assert.equal(report.totals.unique_sha,218);assert.equal(report.totals.ambiguous,1);
- const categories=new Set(['Утилиты/CRC','Утилиты/PIN и IMMO','Утилиты/Сервисные функции','Утилиты/Синхронизация','Утилиты/Тахографы','Утилиты/Конвертеры US-EU','Утилиты/Неуточнённые']);
- const display=new Map();
- for(const e of selected){
-  const item=org.get(e.sha);assert(item,'utility path is mapped: '+e.path);
-  assert(e.path.startsWith('Calculators/'),'original path retained');
-  if(report.approved_unchanged.some(row=>row.sha===e.sha))continue;
-  assert(categories.has(item.folder),'unexpected utility folder '+item.folder);
-  assert(!item.folder.split('/')[1].includes('Ford')&&!item.folder.split('/')[1].includes('Mercedes'),'no invented vehicle brand folder');
-  if(!db.entries.some(x=>x.path===e.path&&x.sha===e.sha))throw Error('catalog path changed: '+e.path);
-  if(item.folder==='Утилиты/Неуточнённые')assert(item.reason&&item.reason.length>0,'uncertain utility has a reason');
-  assert(org.matches(e,e.path),'old path search '+e.path);
-  assert(org.matches(e,item.name),'display name search '+e.path);
-  const key=(item.folder+'/'+item.name).toLowerCase(), owner=display.get(key);
-  assert(!owner||owner===e.sha,'utility display collision '+key);display.set(key,e.sha);
- }
- for(const row of report.decisions){
-  assert(utilities.entries[row.sha],row.sha);assert.equal(row.name,utilities.entries[row.sha].name);
-  assert(row.paths.length>=1&&row.paths.includes(row.canonical_path),'all original paths retained');
- }
- assert.equal(report.approved_unchanged.length,1,'the OTHER copy of the already approved dashboard service CAL stays untouched');
- assert.equal(report.approved_unchanged[0].sha,'4d299384cfd5cec8bed185135b1bd1acd84dfa0460211212561171ea1b0a2159');
- assert.equal(report.hardware_policy.new_cal_exclusions,0);assert.equal(report.hardware_policy.resource_rules,9);
- assert.equal(report.non_cal_resources.total,193);assert.deepEqual(report.non_cal_resources.by_ext,{bc:5,png:1,bmp:181,jpg:6});
- for(const item of report.non_cal_resources.items){
-  const row=db.entries.find(e=>e.path===item.path);
-  assert(row,'non-CAL resource retained: '+item.path);assert.equal(row.sha,item.sha);assert.equal(row.size,item.bytes);
-  assert.notEqual(row.ext,'cal');
- }
- const help=db.entries.find(e=>e.path==='Calculators/PIN/Mitsubishi/Help.cal');
- assert.equal(org.folder(help),'Утилиты/Неуточнённые');assert.match(org.reason(help),/назначение/);
-});
-await test('the utility tree shows each CAL once and keeps the uncertain Help entry visible',async()=>{
- const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Утилиты/')).length;
- const folders=[...new Set(Object.values(org.data.entries).filter(item=>item.folder.startsWith('Утилиты/')).map(item=>item.folder))];
- run("expandedFolders.clear();catalogScope='Утилиты';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
- const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
- assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all utility calculators are shown once');
- const sample=db.entries.find(e=>e.path==='Calculators/PIN/Audi/Audi A4 Dash RB4  24C08.cal');
- run('select(entries.find(e=>e.sha==='+JSON.stringify(sample.sha)+'))');
- assert.equal(el('calcTitle').textContent,org.title(sample));assert(el('calcPath').textContent.includes(sample.path));
- doc.downloads.length=0;await el('exportCal').click();
- assert.equal(doc.downloads.at(-1).name,sample.path.split('/').at(-1),'utility export keeps the original name');
- assert.deepEqual(Buffer.from(await doc.downloads.at(-1).blob.arrayBuffer()),Buffer.from(db.blobs[sample.sha],'base64'),'utility export keeps original bytes');
- const help=db.entries.find(e=>e.path==='Calculators/PIN/Mitsubishi/Help.cal');
- run('select(entries.find(e=>e.sha==='+JSON.stringify(help.sha)+'))');
- assert.equal(el('calcTitle').textContent,org.title(help));assert.match(el('calcTitle').textContent,/Help/);
- assert(el('calcPath').textContent.includes('Причина:'),'the uncertainty is visible');
- assert(el('calcPath').textContent.includes(help.path),'the original path is visible');
- el('search').value='Утилиты';run('searchPage=0;renderCatalog()');
- assert(el('searchPager').textContent.includes(sectionCount+' · 1/'),'utility folder search covers the section');
- el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
-});
-console.log(JSON.stringify({passed,scope:'Display map, catalogue identity, search, tree, selection, export and pictures via real app.js handlers; no browser rendering or vehicle test'}));
+console.log(JSON.stringify({passed,scope:'original section names, counted tree order, complete 15,057 SHA map, search, export and pictures via real app.js handlers'}));
 })().catch(e=>{console.error(e);process.exit(1)});
-

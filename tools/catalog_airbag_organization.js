@@ -315,11 +315,12 @@ if (covered.size !== airbagShas.size) throw new Error(`Coverage ${covered.size} 
 if ([...covered].some(sha => !airbagShas.has(sha))) throw new Error('Map contains a SHA outside Airbag/SRS');
 if (rows.length !== airbagShas.size - Object.keys(APPROVED).length) throw new Error('Duplicate generated entries');
 
-const allowedFolders = new Set(BRANDS.map(brand => `Подушки безопасности/${brand}`));
-allowedFolders.add('Подушки безопасности/Неуточнённые');
+const allowedFolders = new Set(BRANDS.map(brand => `Airbag/${brand}`));
+allowedFolders.add('Airbag');
 const display = new Set();
 for (const row of rows) {
-  if (!allowedFolders.has(`Подушки безопасности/${row.folder}`)) throw new Error(`Invalid folder: ${row.folder}`);
+  const displayFolder = row.folder === 'Неуточнённые' ? 'Airbag' : `Airbag/${row.folder}`;
+  if (!allowedFolders.has(displayFolder)) throw new Error(`Invalid folder: ${row.folder}`);
   if (!row.name.trim() || row.name.length > 140 || /[\\/]/.test(row.name) || /\.cal$/i.test(row.name)) {
     throw new Error(`Invalid name: ${row.name}`);
   }
@@ -351,7 +352,7 @@ for (const row of rows) {
 
 const sorted = [...rows].sort((a, b) => a.sha.localeCompare(b.sha));
 const lines = sorted.map(row => {
-  const item = { name: row.name, folder: `Подушки безопасности/${row.folder}` };
+  const item = { name: row.name, folder: row.folder === 'Неуточнённые' ? 'Airbag' : `Airbag/${row.folder}` };
   if (row.reason) item.reason = row.reason;
   return `  '${row.sha}':${JSON.stringify(item)},`;
 });

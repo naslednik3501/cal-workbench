@@ -31,6 +31,7 @@ ORGANIZATION_DASHBOARD = ROOT / "catalog-organization-dashboard.js"
 ORGANIZATION_IMMO = ROOT / "catalog-organization-immo.js"
 ORGANIZATION_RADIO = ROOT / "catalog-organization-radio.js"
 ORGANIZATION_UTILITIES = ROOT / "catalog-organization-utilities.js"
+ORGANIZATION_REMAINDER = ROOT / "catalog-organization-remainder.js"
 SCOPE = ROOT / "scope-registry.json"
 OUT_JSON = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.json"
 OUT_MD = ROOT / "reports" / "catalog-inventory-unclassified-2026-11-04.md"
@@ -54,6 +55,7 @@ def load_mapped():
         ORGANIZATION_IMMO,
         ORGANIZATION_RADIO,
         ORGANIZATION_UTILITIES,
+        ORGANIZATION_REMAINDER,
     ):
         text = source.read_text(encoding="utf-8")
         mapped.update(re.findall(r"['\"]([0-9a-f]{64})['\"]\s*:", text))
@@ -117,58 +119,58 @@ def sha_set(entries):
 
 SECTIONS = [
     {
-        "name": "Подушки безопасности",
+        "name": "Airbag",
         "purpose": "SRS: сброс Crash, чтение и ремонт блоков подушек.",
         "source_sections": ["Airbag", "SRS"],
     },
     {
-        "name": "Приборные панели",
+        "name": "Dashboard",
         "purpose": "Щитки, панели приборов, одометры и CRC панели.",
         "source_sections": ["Dashboard", "Car", "I", "I_ok"],
     },
     {
-        "name": "BSI и кузовные блоки",
+        "name": "Peugeot",
         "purpose": "BSI, BCM, CJB и другие кузовные блоки.",
         "source_sections": ["Peugeot"],
         "note": "Раздел пока не выделен в исходном каталоге; файлы лежат в CRYPTO, Car и Peugeot.",
     },
     {
-        "name": "Иммобилайзеры и ключи",
+        "name": "Immo",
         "purpose": "IMMO, UCH/BCM/EZS, транспондеры и конвертеры ключей.",
         "source_sections": ["Immo", "Immo off"],
     },
     {
-        "name": "Магнитолы и навигация",
+        "name": "CarRadio",
         "purpose": "Автомагнитолы, навигация и их коды.",
         "source_sections": ["CarRadio"],
     },
     {
-        "name": "Двигатель",
+        "name": "ECU",
         "purpose": "ЭБУ двигателя и связанные с ним блоки.",
         "source_sections": ["ECU"],
     },
     {
-        "name": "Мототехника",
+        "name": "MOTO - TRUCK - ATV",
         "purpose": "ATV, мотоциклы, снегоходы, гидроциклы.",
         "source_sections": ["ATV", "MOTO", "Bikes"],
     },
     {
-        "name": "Грузовые и спецтехника",
+        "name": "MOTO - TRUCK - ATV (Forklift truck)",
         "purpose": "Грузовики, автобусы, погрузчики, сельхозтехника.",
         "source_sections": ["MOTO - TRUCK - ATV", "Forklift truck"],
     },
     {
-        "name": "Китайские автомобили",
+        "name": "CHINA",
         "purpose": "Китайские марки, выделенные из CHINA и Asia/China.",
         "source_sections": ["CHINA", "Asia/China"],
     },
     {
-        "name": "Криптография дампов",
+        "name": "CRYPTO / CRYPTO+",
         "purpose": "Декрипторы и крипто-калькуляторы BSI/ECU; функциональный раздел до разнесения по устройствам.",
         "source_sections": ["CRYPTO", "CRYPTO+"],
     },
     {
-        "name": "Утилиты",
+        "name": "OTHER",
         "purpose": "PIN, сервисные функции, конвертеры, синхронизация, тахографы, CRC и справочники.",
         "source_sections": [
             "PIN", "Service calc", "Service", "Synchronization", "Tachograf off", "CRC",
@@ -1006,8 +1008,8 @@ def build_report():
     scope, scope_excluded = load_scope()
     all_cal = [e for e in catalog["entries"] if e["ext"] == "cal"]
     active = [e for e in all_cal if e["sha"] not in scope_excluded and e["sha"] not in mapped]
-    if len(mapped) != 12428:
-        raise SystemExit(f"Expected 12428 mapped CALs, got {len(mapped)}")
+    if len(mapped) != 15057:
+        raise SystemExit(f"Expected 15057 mapped CALs, got {len(mapped)}")
     if sha_set(active) & mapped:
         raise SystemExit("Approved CAL leaked into the inventory")
 
@@ -1137,8 +1139,8 @@ def render_markdown(report):
         "## Метод",
         "",
         "- Источники: `catalog.js`, `scope-registry.json`, `catalog-organization.js`, `catalog-organization-airbag.js`, `catalog-organization-{dashboard,immo,radio,utilities}.js`.",
-        "- 12 428 CAL с утверждённой картой отображения исключены по SHA, включая 217 утилит",
-        "  (CRC, PIN/IMMO, сервисные функции, синхронизация, тахографы, конвертеры US-EU).",
+        "- Все 15 057 уникальных CAL SHA распределены картой отображения; остаток — 0.",
+        "  Исходные разделы сохранены как OTHER/CRC, OTHER/PIN, OTHER/Service calc и т. п.",
         "- CAL читались только для неоднозначных записей; полезная нагрузка — hex-код без",
         "  читаемого заголовка, поэтому основание — путь, имя и совпадения SHA.",
         "- Большие группы в Markdown не дублируются: полные пути и статистика по папкам — в JSON.",
@@ -1161,8 +1163,8 @@ def render_markdown(report):
         lines.append(f"| {s['name']} | {s['purpose']} | {sources} |")
     lines += [
         "",
-        "Марка всегда уточняет раздел устройства: `Приборные панели/Renault`,",
-        "`Подушки безопасности/Hyundai`, `Утилиты/Тахографы`. Отдельный раздел создаётся",
+        "Марка всегда уточняет раздел устройства: `Dashboard/Renault`,",
+        "`Airbag/Hyundai`, `OTHER/Tachograf off`. Отдельный раздел создаётся",
         "только для устойчивой категории, а не для одного файла.",
         "",
         "## Словарь марок",
