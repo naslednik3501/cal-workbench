@@ -21,7 +21,7 @@ function tokenize(text){
 }
 const precedence={'||':1,'&&':2,'|':3,'^':4,'&':5,'=':6,'==':6,'!=':6,'<':7,'>':7,'<=':7,'>=':7,'<<':8,'>>':8,'+':9,'-':9,'*':10,'/':10,'%':10};
 class Parser{
- constructor(text,{extraClosings=0}={}){this.extraClosings=extraClosings;this.removedClosings=0;this.ts=tokenize(text);this.p=0;this.depth=0;this.controls=[];this.groups=[];this.objects=[];this.names=new Map();this.variables=new Set();this.procs=new Map();}
+ constructor(text,{extraClosings=0,closeOuterForm=false}={}){this.closeOuterForm=closeOuterForm;this.closedOuterForm=false;this.extraClosings=extraClosings;this.removedClosings=0;this.ts=tokenize(text);this.p=0;this.depth=0;this.controls=[];this.groups=[];this.objects=[];this.names=new Map();this.variables=new Set();this.procs=new Map();}
  peek(){return this.ts[this.p];} take(k){const t=this.peek();if(t.k===k||t.k==='id'&&t.v===k){this.p++;return t;}return null;}
  need(k){const t=this.take(k);if(!t)fail('ожидалось '+k+', найдено '+this.peek().v,this.peek());return t;}
  node(n){return n;}
@@ -38,7 +38,7 @@ class Parser{
  }
  args(){this.need('(');const args=[];if(!this.take(')')){do{const t=this.peek();if(t.k==='num'||t.k==='str'||t.k==='id'){this.p++;args.push(t);}else fail('неверное описание поля',t);}while(this.take(','));this.need(')');}return args;}
  form(parent=null,depth=0){if(depth>MAX_DEPTH)fail('слишком глубокая форма');this.need('{');
-  while(!this.take('}')){if(this.take(';'))continue;if(this.peek().k==='{'){this.form(parent,depth+1);continue;}
+  while(!this.take('}')){if(depth===0&&this.closeOuterForm&&this.peek().k==='eof'){this.closedOuterForm=true;break;}if(this.take(';'))continue;if(this.peek().k==='{'){this.form(parent,depth+1);continue;}
    if(parent===null&&this.peek().k==='id'&&['onshow','onapply','onchange'].includes(this.peek().v)){this.procedure();continue;}
    const t=this.need('id'),types={group:'G',label:'L',picture:'P',hexdigit:'H',digit:'D',combobox:'C',checkbox:'B'},type=types[t.v];if(!type)fail('неизвестное поле '+t.v,t);
    const a=this.args();const sig={G:'snnnn',L:'isnn',P:'isnnnn',H:'isnnnn',D:'isnnn',C:'isnnn',B:'isnn'}[type];
@@ -52,7 +52,7 @@ class Parser{
   }
  }
  block(depth=0){if(depth>MAX_DEPTH)fail('слишком глубокая вложенность');this.need('{');const body=[];while(!this.take('}'))body.push(this.statement(depth+1));return body;}
- procedure(){const t=this.need('id');if(this.procs.has(t.v))fail('повторная процедура '+t.v,t);this.procs.set(t.v,this.block());}
+ procedure(){const t=this.need('id');if(t.v==='else')fail('else без соответствующего if',t);if(this.procs.has(t.v))fail('повторная процедура '+t.v,t);this.procs.set(t.v,this.block());}
  statement(depth){if(depth>MAX_DEPTH)fail('слишком глубокая вложенность',this.peek());const t=this.peek();if(this.take(';'))return {kind:'empty'};
   if(t.k==='{')return {kind:'block',body:this.block(depth)};
   if(this.take('if')){this.need('(');const test=this.expr();this.need(')');const yes=this.statement(depth+1),no=this.take('else')?this.statement(depth+1):null;return {kind:'if',test,yes,no};}
@@ -67,6 +67,7 @@ class Parser{
   while(this.peek().k!=='eof'){if(this.take(';'))continue;
    if(this.extraClosings>this.removedClosings&&this.take('}')){this.removedClosings++;continue;}if(this.take('var')){do{this.variables.add(this.need('id').v);}while(this.take(','));this.need(';');continue;}
    this.procedure();}
+  if(this.closeOuterForm&&!this.closedOuterForm)fail('не найден незакрытый внешний Form');
   if(this.removedClosings!==this.extraClosings)fail('исходник не совпадает с числом лишних скобок');
   if(!['onshow','onapply','onchange'].some(k=>this.procs.has(k)))fail('не найдено обработчиков калькулятора');
   const validName=n=>this.names.has(n)||this.variables.has(n)||/^(var|str)\d+$/.test(n)&&Number(n.match(/\d+$/)[0])<256||['selstart','selend','bufsize','cursoradr','true','false'].includes(n);
@@ -104,6 +105,15 @@ const finalBraceRepairs=Object.freeze({
 // T-006: exact originals with redundant closing braces at top level only.
 // Length/CRC and an exact count guard against stale caller-provided SHA values.
 const topLevelBraceRepairs=Object.freeze({
+ 'd20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b':[3830, 7390, 1],
+ '21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d':[3824, 60152, 1],
+ '40fd400d053de6d366f947364d07daaeee51a6931bf704fd2ca52de690448ebf':[15044, 25316, 1],
+ '78ff5aa6157668fb144f6042cb2f3e2b5eefb818a83da6ad0b9c88d226a3becf':[15024, 34003, 1],
+ 'db469036905e3875444fa6e3d0f3fd4413c72dfb8a0171ce38147680aebd7434':[15010, 10224, 1],
+ '64e12bb4c92b08b1ea9975f6e081d8c3d8b46c34d167898e0ace488c3635ef25':[15012, 44995, 1],
+ '193209b8cc7a72196a8b84fb01a0dee20b06e875f68494596397d0b372394060':[15010, 9964, 1],
+ '9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07':[15015, 3830, 1],
+
  '2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00':[1669, 56323, 1],
  '7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f':[1680, 4555, 1],
  'a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68':[1672, 37814, 1],
@@ -115,7 +125,44 @@ const topLevelBraceRepairs=Object.freeze({
  '6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111':[4110, 12383, 1],
  'db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0':[2469, 17014, 1],
 });
+// T-006: structural container repairs; all original operations remain parsed.
+const formRepairs=Object.freeze({
+ 'de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e':[47555, 10674, "outer-form-eof"],
+ 'af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90':[47557, 17371, "outer-form-eof"],
+ '97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5':[47567, 29589, "outer-form-eof"],
+ '3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f':[47570, 64590, "outer-form-eof"],
+ 'e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c':[47315, 16537, "outer-form-eof"],
+ 'fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742':[47568, 41303, "outer-form-eof"],
+ 'e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6':[2892, 22694, "outer-form-eof"],
+ '558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c':[2245, 11451, "duplicate-form"],
+ 'e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c':[2255, 35292, "duplicate-form"],
+ '85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3':[2250, 18628, "duplicate-form"],
+ '95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160':[47559, 29007, "outer-form-eof"],
+ '405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314':[47567, 5741, "outer-form-eof"],
+});
+// T-006: five missing closing groups around explicit decimal BCD terms.
+const bcdGroupRepairs=Object.freeze({
+ 'e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537':[3138, 63524, 5],
+ '56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc':[3164, 58384, 5],
+ '3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04':[3609, 14572, 5],
+});
 const unverifiedWriters=Object.freeze({
+ 'd20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b':'Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.',
+ '21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d':'Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.',
+
+ 'de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ 'af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ 'e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ 'fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ 'e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ 'e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+ '405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314':'Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.',
+
  '5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be':'Запись заблокирована: в оригинальном CAL OnApply меняет 0x32–0x3F, но OnShow сравнивает логин с неизменёнными 0x42–0x43. После смены логина оригинал отвергает собственный результат. Нужен исправленный авторский CAL или эталон записи iProg; алгоритм не изменён.',
  '3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
  'ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
@@ -127,7 +174,20 @@ function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишко
  if(repair){if(raw.length!==repair[0]||E.crc16(raw)!==repair[1])fail('исходник не совпадает с профилем исправления');if(!/}\s*$/.test(text))fail('не найдено исправляемой скобки');text=text.replace(/}\s*$/,'');}
  const topRepair=Object.hasOwn(topLevelBraceRepairs,sha)?topLevelBraceRepairs[sha]:null;
  if(topRepair&&(raw.length!==topRepair[0]||E.crc16(raw)!==topRepair[1]))fail('исходник не совпадает с профилем исправления');
- const program=new Parser(text,{extraClosings:topRepair?topRepair[2]:0}).parse();
+ const formRepair=Object.hasOwn(formRepairs,sha)?formRepairs[sha]:null;
+ if(formRepair&&(raw.length!==formRepair[0]||E.crc16(raw)!==formRepair[1]))fail('исходник не совпадает с профилем исправления');
+ if(formRepair?.[2]==='duplicate-form'){if(!/\bForm\s*\{\s*Form\s*\{/i.test(text))fail('не найден дублированный внешний Form');text=text.replace(/\bForm\s*\{\s*Form\s*\{/i,'Form{');}
+ const bcdRepair=Object.hasOwn(bcdGroupRepairs,sha)?bcdGroupRepairs[sha]:null;
+ if(bcdRepair){
+  if(raw.length!==bcdRepair[0]||E.crc16(raw)!==bcdRepair[1])fail('исходник не совпадает с профилем исправления');
+  let count=0;for(const [shift,multiplier] of [[20,100000],[16,10000],[12,1000],[8,100],[4,10]]){
+   const pattern=new RegExp('(Var0\\s*=\\s*Var0\\s*\\+\\s*\\(\\(\\(Var1\\s*>>\\s*'+shift+'\\)\\s*&\\s*15\\)\\s*\\*\\s*'+multiplier+')\\s*;','gi');
+   let matches=0;text=text.replace(pattern,(_,term)=>{matches++;return term+');';});if(matches!==1)fail('не найден однозначный незакрытый BCD-терм');count+=matches;
+  }if(count!==bcdRepair[2])fail('число исправляемых BCD-групп не совпадает');
+ }
+ const program=new Parser(text,{extraClosings:topRepair?topRepair[2]:0,closeOuterForm:formRepair?.[2]==='outer-form-eof'}).parse();
+ if(bcdRepair)program.sourceRepairs=['Закрыты пять внешних групп BCD-термов перед точкой с запятой; все операнды и операции сохранены.'];
+ if(formRepair)program.sourceRepairs=[formRepair[2]==='outer-form-eof'?'Закрыт внешний контейнер Form после всех завершённых обработчиков; оригинал сохранён.':'Устранён дублированный внешний Form; обработчики и выражения сохранены.'];
  if(topRepair)program.sourceRepairs=['Пропущены лишние закрывающие скобки верхнего уровня: '+topRepair[2]+'. Обработчики и выражения сохранены.'];if(repair)program.sourceRepairs=['Удалена одна лишняя завершающая скобка из известной версии CAL; оригинал сохранён.'];
  if(Object.hasOwn(unverifiedWriters,sha)){program.partial=true;program.writerBlockReason=unverifiedWriters[sha];program.eventErrors={apply:unverifiedWriters[sha]};program.validEvents=['show'];program.unsupported=['apply: '+unverifiedWriters[sha]];}
  return program;

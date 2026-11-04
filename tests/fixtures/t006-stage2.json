@@ -1,0 +1,352 @@
+[
+  {
+    "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+    "bytes": 47555,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+      "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47555,
+      10674,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+    "bytes": 47557,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+      "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47557,
+      17371,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+    "bytes": 47567,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+      "Calculators/Car/V/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47567,
+      29589,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+    "bytes": 47570,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+      "Calculators/Car/V/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47570,
+      64590,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+    "bytes": 47315,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+      "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 263)",
+    "profile": [
+      47315,
+      16537,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+    "bytes": 47568,
+    "paths": [
+      "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+      "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47568,
+      41303,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+    "bytes": 2892,
+    "paths": [
+      "Calculators/Dashboard/Hyundai/Hyundai Accent new  2011 24c16.cal",
+      "Calculators/Car/H/Hyundai/A/Hyundai Accent new  2011 24c16.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 123)",
+    "profile": [
+      2892,
+      22694,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "accent"
+  },
+  {
+    "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+    "bytes": 2245,
+    "paths": [
+      "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto.cal",
+      "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto.cal"
+    ],
+    "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+    "profile": [
+      2245,
+      11451,
+      1
+    ],
+    "repair": "duplicate-form",
+    "family": "audi"
+  },
+  {
+    "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+    "bytes": 2255,
+    "paths": [
+      "Calculators/Dashboard/Audi/A3 VDO 93C86 Crypto.cal",
+      "Calculators/Car/A/Audi/A3 VDO 93C86 Crypto.cal"
+    ],
+    "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+    "profile": [
+      2255,
+      35292,
+      1
+    ],
+    "repair": "duplicate-form",
+    "family": "audi"
+  },
+  {
+    "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+    "bytes": 2250,
+    "paths": [
+      "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto 2.cal",
+      "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto 2.cal"
+    ],
+    "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+    "profile": [
+      2250,
+      18628,
+      1
+    ],
+    "repair": "duplicate-form",
+    "family": "audi"
+  },
+  {
+    "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+    "bytes": 47559,
+    "paths": [
+      "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+      "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47559,
+      29007,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+    "bytes": 47567,
+    "paths": [
+      "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+      "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+    "profile": [
+      47567,
+      5741,
+      1
+    ],
+    "repair": "outer-form-eof",
+    "family": "vag"
+  },
+  {
+    "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+    "bytes": 3830,
+    "paths": [
+      "Calculators/Dashboard/Honda/Ridgeline 9S12H256 miles.cal",
+      "Calculators/Car/H/Honda/Ridgeline 9S12H256 miles.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+    "profile": [
+      3830,
+      7390,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "honda"
+  },
+  {
+    "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+    "bytes": 3824,
+    "paths": [
+      "Calculators/Dashboard/Honda/Ridgeline 9S12H256 km.cal",
+      "Calculators/Car/H/Honda/Ridgeline 9S12H256 km.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+    "profile": [
+      3824,
+      60152,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "honda"
+  },
+  {
+    "sha": "40fd400d053de6d366f947364d07daaeee51a6931bf704fd2ca52de690448ebf",
+    "bytes": 15044,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Leganza v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 204)",
+    "profile": [
+      15044,
+      25316,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  },
+  {
+    "sha": "78ff5aa6157668fb144f6042cb2f3e2b5eefb818a83da6ad0b9c88d226a3becf",
+    "bytes": 15024,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Espero v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 203)",
+    "profile": [
+      15024,
+      34003,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  },
+  {
+    "sha": "db469036905e3875444fa6e3d0f3fd4413c72dfb8a0171ce38147680aebd7434",
+    "bytes": 15010,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Nexia v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+    "profile": [
+      15010,
+      10224,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  },
+  {
+    "sha": "64e12bb4c92b08b1ea9975f6e081d8c3d8b46c34d167898e0ace488c3635ef25",
+    "bytes": 15012,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Nubira v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+    "profile": [
+      15012,
+      44995,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  },
+  {
+    "sha": "193209b8cc7a72196a8b84fb01a0dee20b06e875f68494596397d0b372394060",
+    "bytes": 15010,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Matiz v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+    "profile": [
+      15010,
+      9964,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  },
+  {
+    "sha": "9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07",
+    "bytes": 15015,
+    "paths": [
+      "Calculators/Immo/Car/Daewoo/Lanos v1.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+    "profile": [
+      15015,
+      3830,
+      1
+    ],
+    "repair": "top-closing",
+    "family": "daewoo",
+    "keyStarts": [
+      2,
+      8,
+      14,
+      20
+    ]
+  }
+]
