@@ -3,12 +3,12 @@
   "source_store_commit": "ab589e2bad449d7a94275f8365c1d44e6f700cc6",
   "visual_review": "reports/image-visual-review-2026-11-02.csv",
   "summary": {
-    "reference_occurrences": 786,
-    "control_mappings": 405,
-    "calculator_contents": 351,
-    "unique_assets": 180,
-    "source_context_bindings": 633,
-    "remaining_unresolved_reference_occurrences": 1639
+    "reference_occurrences": 825,
+    "control_mappings": 430,
+    "calculator_contents": 371,
+    "unique_assets": 190,
+    "source_context_bindings": 672,
+    "remaining_unresolved_reference_occurrences": 1600
   },
   "assets": {
     "dbd33ea4c11f1814966d296f8da2cccd28f33094ca20e01914f0e264e6594dbd": {
@@ -2710,6 +2710,156 @@
       "category": "device_identification",
       "width": 286,
       "height": 234
+    },
+    "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b": {
+      "sha256": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+      "bytes": 12822,
+      "source": {
+        "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+        "member": 710,
+        "path": "Calculators/Images/man.bmp",
+        "sha256": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+        "bytes": 12822,
+        "crc32": "aac11af9"
+      },
+      "category": "logo",
+      "width": 75,
+      "height": 56
+    },
+    "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2": {
+      "sha256": "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2",
+      "bytes": 9348,
+      "source": {
+        "archive": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+        "member": 1838,
+        "path": "CAR/KEY/Key Trucks/MAN/Man1.jpg",
+        "sha256": "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2",
+        "bytes": 9348,
+        "crc32": "6c449e35"
+      },
+      "category": "device_identification",
+      "width": 213,
+      "height": 105
+    },
+    "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1": {
+      "sha256": "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1",
+      "bytes": 58897,
+      "source": {
+        "archive": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+        "member": 1405,
+        "path": "DASHBOARD/UAZ/╨ú╨É╨ù 3741 ╨æ╨ú╨Ñ╨É╨¥╨Ü╨É/uaz1.jpg",
+        "sha256": "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1",
+        "bytes": 58897,
+        "crc32": "a01a9229"
+      },
+      "category": "device_identification",
+      "width": 470,
+      "height": 318
+    },
+    "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b": {
+      "sha256": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b",
+      "bytes": 16554,
+      "source": {
+        "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+        "member": 812,
+        "path": "Calculators/Images/tagaz.bmp",
+        "sha256": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b",
+        "bytes": 16554,
+        "crc32": "04293b4b"
+      },
+      "category": "logo",
+      "width": 100,
+      "height": 55
+    },
+    "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3": {
+      "sha256": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "bytes": 3343,
+      "source": {
+        "archive": "b1b1123278454dc21e92f3cd1a4cb5c8a6a1debcf52a42e217d237ba3a101ec4",
+        "member": 557,
+        "path": "CAR/CARRADIO/Clarion/clarion.png",
+        "sha256": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+        "bytes": 3343,
+        "crc32": "349e8416"
+      },
+      "category": "logo",
+      "width": 87,
+      "height": 48
+    },
+    "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e": {
+      "sha256": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e",
+      "bytes": 5754,
+      "source": {
+        "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+        "member": 738,
+        "path": "Calculators/Images/XCMG.bmp",
+        "sha256": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e",
+        "bytes": 5754,
+        "crc32": "9c70305f"
+      },
+      "category": "logo",
+      "width": 100,
+      "height": 19
+    },
+    "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab": {
+      "sha256": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab",
+      "bytes": 11214,
+      "source": {
+        "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+        "member": 756,
+        "path": "Calculators/Images/belarus.bmp",
+        "sha256": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab",
+        "bytes": 11214,
+        "crc32": "068018da"
+      },
+      "category": "logo",
+      "width": 120,
+      "height": 31
+    },
+    "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f": {
+      "sha256": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "bytes": 170386,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 2430,
+        "path": "AIRBAG/KIA-HYUNDAI/Ceed/kiac.png",
+        "sha256": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+        "bytes": 170386,
+        "crc32": "3da45192"
+      },
+      "category": "board_chip_location",
+      "width": 280,
+      "height": 282
+    },
+    "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b": {
+      "sha256": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+      "bytes": 214068,
+      "source": {
+        "archive": "6fe8a0789cb94f9ce6062599c75542eef49a60f5cfa419707a5349536511a275",
+        "member": 1661,
+        "path": "AIRBAG/Infiniti/M 37/1mm1a.png",
+        "sha256": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+        "bytes": 214068,
+        "crc32": "35e89409"
+      },
+      "category": "board_chip_location",
+      "width": 284,
+      "height": 264
+    },
+    "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851": {
+      "sha256": "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851",
+      "bytes": 220291,
+      "source": {
+        "archive": "affb707e182f67bd2a49af53f0f7902802de4035775fb92c18732d177b46871e",
+        "member": 2814,
+        "path": "DASHBOARD/CHINA/Geely/EMGRAND/emgrand.png",
+        "sha256": "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851",
+        "bytes": 220291,
+        "crc32": "e8c0c102"
+      },
+      "category": "device_identification",
+      "width": 429,
+      "height": 454
     }
   },
   "bindings": [
@@ -7776,6 +7926,318 @@
       "reference": "Arcticcat1.png",
       "resource_sha": "02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc",
       "evidence": "unique matching name, reviewed device_identification image"
+    },
+    {
+      "cal": "Calculators/Dashboard/MAN/Tachograf 24C04.cal",
+      "cal_sha": "84be9be263fbe07fcb56018ae5c3dcf946c388b409fa1db1860e97991baca131",
+      "control": 8,
+      "reference": "Man.png",
+      "resource_sha": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+      "evidence": "MAN brand logo; unique content; matches MAN tachograph calculator brand"
+    },
+    {
+      "cal": "Calculators/Dashboard/MAN/Tachograf 93C66.cal",
+      "cal_sha": "c0aa34f89cf4726573e1d6ed31b8b8f0c3cbb53b9611bf16c890d6ba14d91ce3",
+      "control": 10,
+      "reference": "Man.png",
+      "resource_sha": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+      "evidence": "MAN brand logo; unique content; matches MAN tachograph calculator brand"
+    },
+    {
+      "cal": "Calculators/Car/M/MAN/Tachograf 24C04.cal",
+      "cal_sha": "84be9be263fbe07fcb56018ae5c3dcf946c388b409fa1db1860e97991baca131",
+      "control": 8,
+      "reference": "Man.png",
+      "resource_sha": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+      "evidence": "MAN brand logo; unique content; matches MAN tachograph calculator brand"
+    },
+    {
+      "cal": "Calculators/Car/M/MAN/Tachograf 93C66.cal",
+      "cal_sha": "c0aa34f89cf4726573e1d6ed31b8b8f0c3cbb53b9611bf16c890d6ba14d91ce3",
+      "control": 10,
+      "reference": "Man.png",
+      "resource_sha": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b",
+      "evidence": "MAN brand logo; unique content; matches MAN tachograph calculator brand"
+    },
+    {
+      "cal": "Calculators/Dashboard/MAN/Tachograf 93C66.cal",
+      "cal_sha": "c0aa34f89cf4726573e1d6ed31b8b8f0c3cbb53b9611bf16c890d6ba14d91ce3",
+      "control": 11,
+      "reference": "Man1.png",
+      "resource_sha": "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2",
+      "evidence": "MAN truck key/immobilizer image; unique content; source CAR/KEY/Key Trucks/MAN"
+    },
+    {
+      "cal": "Calculators/Car/M/MAN/Tachograf 93C66.cal",
+      "cal_sha": "c0aa34f89cf4726573e1d6ed31b8b8f0c3cbb53b9611bf16c890d6ba14d91ce3",
+      "control": 11,
+      "reference": "Man1.png",
+      "resource_sha": "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2",
+      "evidence": "MAN truck key/immobilizer image; unique content; source CAR/KEY/Key Trucks/MAN"
+    },
+    {
+      "cal": "Calculators/Dashboard/UAZ/UAZ RAR  24C08.cal",
+      "cal_sha": "353a99a07d12f5f86ef31af5d3e89aedb2a26dd339727522adc0aa28515dbede",
+      "control": 9,
+      "reference": "uaz1.png",
+      "resource_sha": "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1",
+      "evidence": "UAZ 3741 dashboard image; unique content; source DASHBOARD/UAZ"
+    },
+    {
+      "cal": "Calculators/Car/U/UAZ/UAZ RAR  24C08.cal",
+      "cal_sha": "353a99a07d12f5f86ef31af5d3e89aedb2a26dd339727522adc0aa28515dbede",
+      "control": 9,
+      "reference": "uaz1.png",
+      "resource_sha": "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1",
+      "evidence": "UAZ 3741 dashboard image; unique content; source DASHBOARD/UAZ"
+    },
+    {
+      "cal": "Calculators/Dashboard/TaGAZ/TaGAZ  C190  93C66.cal",
+      "cal_sha": "57b377a67d8f28b5f01b275e823688358dea2710c0b9d26a9ab1f876d8a2cd83",
+      "control": 8,
+      "reference": "tagaz.png",
+      "resource_sha": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b",
+      "evidence": "TaGAZ brand logo; unique content; matches TaGAZ C190 calculator"
+    },
+    {
+      "cal": "Calculators/Car/T/TaGAZ/TaGAZ  C190  93C66.cal",
+      "cal_sha": "57b377a67d8f28b5f01b275e823688358dea2710c0b9d26a9ab1f876d8a2cd83",
+      "control": 8,
+      "reference": "tagaz.png",
+      "resource_sha": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b",
+      "evidence": "TaGAZ brand logo; unique content; matches TaGAZ C190 calculator"
+    },
+    {
+      "cal": "Calculators/CarRadio/Peugeot/PU-2325A(C) .cal",
+      "cal_sha": "52943118d0b92ca1ed06ef1fdda2d80aedf17fad2ab8bc146f595c0eb2297b3f",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Peugeot/PU-2294A(C).cal",
+      "cal_sha": "51bf9e824816b013678cee92a1e259d0ba3ceb123b25c7c6f0cccdbc4a78ab9e",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/Clarion 4 final 4dig.cal",
+      "cal_sha": "ba7bf5b0c335e7cafaa0a741d0316f6f2b3d06d49d1f615753bfce18786f767d",
+      "control": 6,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/PU-2325A(C) .cal",
+      "cal_sha": "8464b478ff45078388d2c276ce374316521b48827b48bd78a85fd7791ec7cbf5",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/PU-2294B(D).cal",
+      "cal_sha": "25c83a350ae49fc08ef6b7cca6af0c6b7958f6627ef8890aeb8ba2adcd7e83c3",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/CRH81R PE-9439A.cal",
+      "cal_sha": "6f2ff20ff5a47cf9b66cb66297e211de89e7a4dff2be4fd6617fb38113c1af85",
+      "control": 13,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/CRH101R.cal",
+      "cal_sha": "3f330423628dc18c90fa49cb3707a6172da85010c0b45f30e0a82ca9e5569dbe",
+      "control": 13,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/PU-2294A(C).cal",
+      "cal_sha": "bd2bd19f65f0ee317c38fb8cc108c7c1e9d7c89b422b0fccd6036bdfaae1bf70",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Clarion/PU-2294A(C) .cal",
+      "cal_sha": "2d5e595d9bf3e655f28f636771f23c477347a47e2de6eec3f91a597e0e99175b",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/CITROEN/PU-2294A(C) .cal",
+      "cal_sha": "52a88e9326a16590e898a33db43b50401bfdad4ff6a0a060bbdd4bfc5e036abf",
+      "control": 12,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/CarRadio/Serial calculator/Clarion/Clarion 4 final 4dig.cal",
+      "cal_sha": "e79709f30b83d280faeb03c6dc452e5f8c621eaffc9f5cec54b9f9e161d21880",
+      "control": 6,
+      "reference": "clarion.bmp",
+      "resource_sha": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3",
+      "evidence": "Clarion brand logo; unique content; matches Clarion radio calculators"
+    },
+    {
+      "cal": "Calculators/Dashboard/Special vehicles/XCMG/XCMG500KN  24C64.cal",
+      "cal_sha": "9d8e0bfd077ad9c5c34edc21a1d2aa395049815f25785fae8c02f033e77c3883",
+      "control": 11,
+      "reference": "XCMG.png",
+      "resource_sha": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e",
+      "evidence": "XCMG brand wordmark; unique content; matches XCMG500KN calculator"
+    },
+    {
+      "cal": "Calculators/MOTO - TRUCK - ATV/Special vehicles/XCMG/XCMG500KN  24C64.cal",
+      "cal_sha": "9d8e0bfd077ad9c5c34edc21a1d2aa395049815f25785fae8c02f033e77c3883",
+      "control": 11,
+      "reference": "XCMG.png",
+      "resource_sha": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e",
+      "evidence": "XCMG brand wordmark; unique content; matches XCMG500KN calculator"
+    },
+    {
+      "cal": "Calculators/Dashboard/Special vehicles/Belarus/KD8083/PIC16F886.cal",
+      "cal_sha": "7de4ebc04133f11fee2364d18c8929ecd93415bac6649e2d07d1c578cb6254f6",
+      "control": 8,
+      "reference": "Belarus.png",
+      "resource_sha": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab",
+      "evidence": "Belarus brand wordmark; unique content; matches Belarus KD8083 calculator"
+    },
+    {
+      "cal": "Calculators/MOTO - TRUCK - ATV/Special vehicles/Belarus/KD8083/PIC16F886.cal",
+      "cal_sha": "7de4ebc04133f11fee2364d18c8929ecd93415bac6649e2d07d1c578cb6254f6",
+      "control": 8,
+      "reference": "Belarus.png",
+      "resource_sha": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab",
+      "evidence": "Belarus brand wordmark; unique content; matches Belarus KD8083 calculator"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-A2320.cal",
+      "cal_sha": "638d85a340aa33a2a31de5a9ef9a88721136e7d565a920a2cb72fe5d1990d163",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-A2350.cal",
+      "cal_sha": "fc8495486301ce1c890736dcd77151f5f6b8b465288ff4b85aec34bf2d06b9b0",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-A2310.cal",
+      "cal_sha": "f95f56343492d73920434d14d2e45001a2719036cdb827e02774ec79290c4c6f",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/Airbag/Kia/Ceed/Seed  95910-A2300.cal",
+      "cal_sha": "19bd0493ad81e8def338a8c7791a9d473b597ce07c7a6d6bed2821e99ff30635",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-A2320.cal",
+      "cal_sha": "638d85a340aa33a2a31de5a9ef9a88721136e7d565a920a2cb72fe5d1990d163",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-A2350.cal",
+      "cal_sha": "fc8495486301ce1c890736dcd77151f5f6b8b465288ff4b85aec34bf2d06b9b0",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-A2310.cal",
+      "cal_sha": "f95f56343492d73920434d14d2e45001a2719036cdb827e02774ec79290c4c6f",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/SRS/Kia/Ceed/Seed  95910-A2300.cal",
+      "cal_sha": "19bd0493ad81e8def338a8c7791a9d473b597ce07c7a6d6bed2821e99ff30635",
+      "control": 9,
+      "reference": "Kiac.png",
+      "resource_sha": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f",
+      "evidence": "Kia Ceed airbag board image; source folder AIRBAG/KIA-HYUNDAI/Ceed matches CAL model Kia Ceed (95910-A2xxx)"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/M 37  98820 1MM0A (95640).cal",
+      "cal_sha": "7618a53b86ae917186854c31ad6adb64d99f548349aa6e9f58896ed88a2acbb7",
+      "control": 9,
+      "reference": "1mm1a.png",
+      "resource_sha": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+      "evidence": "Infiniti M37 airbag board image; source folder AIRBAG/Infiniti/M 37 matches CAL model Infinity M 37 (part 98820 1MM1A)"
+    },
+    {
+      "cal": "Calculators/Airbag/Infinity/M 37  98820 1MM1A (95640).cal",
+      "cal_sha": "e26ea4a6cc17075a20113799368b09e188172818cc68830230448de9f0018623",
+      "control": 9,
+      "reference": "1mm1a.png",
+      "resource_sha": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+      "evidence": "Infiniti M37 airbag board image; source folder AIRBAG/Infiniti/M 37 matches CAL model Infinity M 37 (part 98820 1MM1A)"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/M 37  98820 1MM0A (95640).cal",
+      "cal_sha": "7618a53b86ae917186854c31ad6adb64d99f548349aa6e9f58896ed88a2acbb7",
+      "control": 9,
+      "reference": "1mm1a.png",
+      "resource_sha": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+      "evidence": "Infiniti M37 airbag board image; source folder AIRBAG/Infiniti/M 37 matches CAL model Infinity M 37 (part 98820 1MM1A)"
+    },
+    {
+      "cal": "Calculators/SRS/Infinity/M 37  98820 1MM1A (95640).cal",
+      "cal_sha": "e26ea4a6cc17075a20113799368b09e188172818cc68830230448de9f0018623",
+      "control": 9,
+      "reference": "1mm1a.png",
+      "resource_sha": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b",
+      "evidence": "Infiniti M37 airbag board image; source folder AIRBAG/Infiniti/M 37 matches CAL model Infinity M 37 (part 98820 1MM1A)"
+    },
+    {
+      "cal": "Calculators/Dashboard/Geely/Geely Emgrand 93C66.cal",
+      "cal_sha": "e1bc589a4eaedb04e005c1c4ea6ef5bf8edd100904e7cb147141a4872915c4ee",
+      "control": 12,
+      "reference": "emgrand.png",
+      "resource_sha": "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851",
+      "evidence": "Geely Emgrand device image; source folder DASHBOARD/CHINA/Geely/EMGRAND matches CAL model Geely Emgrand"
+    },
+    {
+      "cal": "Calculators/CHINA/Geely/Geely Emgrand 93C66.cal",
+      "cal_sha": "e1bc589a4eaedb04e005c1c4ea6ef5bf8edd100904e7cb147141a4872915c4ee",
+      "control": 12,
+      "reference": "emgrand.png",
+      "resource_sha": "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851",
+      "evidence": "Geely Emgrand device image; source folder DASHBOARD/CHINA/Geely/EMGRAND matches CAL model Geely Emgrand"
     }
   ]
 }
