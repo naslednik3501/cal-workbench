@@ -65,6 +65,7 @@ await test('the 12 approved SHAs keep their exact names, folders and display pat
  // The display path is virtual: it must never sit on a real catalogue file.
  for(const display of shown)assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/'+display),'collision '+display);
  assert.equal(new Set(db.entries.filter(e=>e.ext==='cal').map(e=>e.sha)).size,db.meta.uniqueCal);
+ for(const [sha,item] of Object.entries(org.data.entries))if(item.folder.endsWith('/Неуточнённые'))assert(item.reason,'uncertain entry needs a reason: '+sha);
 });
 await test('all Airbag and SRS SHA are covered by unique, reasoned display entries',()=>{
  assert.equal(airbagEntries.length,7664);assert.equal(airbagShas.size,5383);

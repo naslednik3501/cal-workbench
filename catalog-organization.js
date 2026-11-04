@@ -16,7 +16,7 @@ const airbag=root.CAL_ORGANIZATION_AIRBAG||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Приборные панели/Skoda'},
   '2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970':{name:'Skoda Superb — декриптор EEPROM 93C86',folder:'Приборные панели/Skoda'},
-  'd0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':{name:'Philips — заготовка калькулятора кода',folder:'Магнитолы и навигация/Неуточнённые'},
+  'd0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':{name:'Philips — заготовка калькулятора кода',folder:'Магнитолы и навигация/Неуточнённые',reason:'назначение кода не подтверждено формой; Renault — только поисковая подсказка'},
   'b3503228dbb6c6b5e45352dd753f61c4d1b472bf04f84f1ff15a0c3fe57a2224':{name:'Hitag2 — контрольная сумма CRC по выделению',folder:'Утилиты/CRC'},
   '4f38ff98c567bd82e80821515a7e948c214cdc2a30aa26e15de3fc27bc7da1f1':{name:'Mitsubishi Outlander — CRC и VIN в IMMO по выделению',folder:'Иммобилайзеры и ключи/Mitsubishi'},
   'b5d3f7c4be6434423a32c1a2f0c09a0bbf640cbddd0f16c9547022d5efe49621':{name:'CRC и VIN в дампе панели — правка по выделению',folder:'Утилиты/CRC'},

@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 93951,
-      "sha256": "5df0eb4df3c5d8c4990585947e494980c42f66c0911ff4865ad18d53085c691c"
+      "bytes": 96336,
+      "sha256": "fa18c09f6f3069d83f091e1cc4c561d3cce0d319f14d798c7d2d90d6efd64573"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -333,8 +333,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 6738,
-      "sha256": "336d2268a70570b5c2464c3d8c86afe35232b7a2f5ff03ad4d27da7ee680a255"
+      "bytes": 6884,
+      "sha256": "164857928053d0b8b39e1e2d9e3d9ad3af6ccd114de2a89489565408ce1125ae"
     },
     {
       "path": "catalog-parts.json",
@@ -1487,6 +1487,11 @@
       "sha256": "3a37ff692f19f59bd19411cb952eddd0f27458d56db7345e5e23d908149fddfc"
     },
     {
+      "path": "reports/T-016-final-verification-2026-11-04.md",
+      "bytes": 8609,
+      "sha256": "078fd9b465d09a186dc93c1ff9d2947f3bda5572afbfbfe16cd5b7f517140bd6"
+    },
+    {
       "path": "reports/binary-readers-2026-11-03.json",
       "bytes": 63723,
       "sha256": "126696d8b2000ce3c10bb1739a4704f0e1bbbf543ba9cc05173b31c5e4897a6c"
@@ -1628,8 +1633,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 23383,
-      "sha256": "b997ed7eb29aeb0817f41a92a121377ee66046fd5e3b9d75dd7e3406b8b25d03"
+      "bytes": 23644,
+      "sha256": "9646c32a9408b5e4a9130eaa0b52b4fa679c09619d975136c00f99f3a849cdbc"
     },
     {
       "path": "tests/README.md",
@@ -1903,8 +1908,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 36224,
-      "sha256": "bed6e28b84da196a3f85997754de5669c23d74f969d1910168d87ca22cb21e14"
+      "bytes": 36395,
+      "sha256": "849e53930f88f67c76f123f96859ea84e2a0d4802972b88b35bd7eca4e26bd0a"
     },
     {
       "path": "tests/test_text_variants.js",
