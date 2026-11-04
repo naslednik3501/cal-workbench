@@ -1,0 +1,2728 @@
+{
+  "schema": 1,
+  "date": "2026-11-04",
+  "scope": "Точный реестр текущих ограничений переноса; не очередь задач и не утверждение о неисправности всех исходников.",
+  "catalog": {
+    "entries": 23946,
+    "cal_paths": 23357,
+    "unique_cal": 15057,
+    "exact_duplicate_paths_collapsed_in_ui": 8300
+  },
+  "status_counts": {
+    "supported_handlers": 14767,
+    "reader_only_no_available_writer": 231,
+    "write_limited": 17,
+    "unavailable": 42,
+    "total_unique_cal": 15057,
+    "sum_of_parts": 15057,
+    "formula": "14767 + 231 + 17 + 42",
+    "sum_matches_catalog": true
+  },
+  "status_breakdown": {
+    "supported_handlers": {
+      "binary": 14011,
+      "text": 756,
+      "total": 14767
+    },
+    "reader_only": {
+      "binary_baseline_T005": 216,
+      "binary_T013_restored_readers": 15,
+      "total": 231
+    },
+    "write_limited": {
+      "T006_reader_writer_blocked": 14,
+      "T012_blocked_writer": 3,
+      "total": 17
+    },
+    "unavailable": {
+      "T006_text_structural": 27,
+      "T013_invert_invalid_show": 1,
+      "T005_empty_BP8272": 2,
+      "T007_other_formats": 12,
+      "total": 42
+    }
+  },
+  "reader_only": {
+    "count": 231,
+    "not_failed_writers": true,
+    "note": "Это исходные читатели с рабочим OnShow и без адресуемого OnApply; отсутствие писателя не приписывается им как дефект. Запись не предлагается.",
+    "available_actions": {
+      "read_form_values": true,
+      "apply_calculation": false,
+      "write_bin": false,
+      "download_cal_result": false,
+      "download_original_bin": "after BIN open",
+      "download_cal_source": true,
+      "manual_hex_edit": true
+    },
+    "evidence": {
+      "reports": [
+        "reports/binary-readers-2026-11-03.json",
+        "reports/T-013-reader-proof-2026-11-04.json",
+        "reports/T-013-results-2026-11-04.json",
+        "reports/T-005-binary-resolution-2026-11-04.md"
+      ],
+      "tests": [
+        "tests/test_binary_resolution.js",
+        "tests/test_t013_readers.js",
+        "tests/test_t013_app.js"
+      ],
+      "counts": {
+        "T005": 216,
+        "T013": 15
+      }
+    }
+  },
+  "limited_summary": {
+    "total": 59,
+    "write_limited": 17,
+    "unavailable": 42,
+    "cause_counts": {
+      "confirmed_source_defect": 31,
+      "port_limitation": 4,
+      "unestablished_cause": 24
+    },
+    "cause_definitions": {
+      "confirmed_source_defect": "Подтверждённый дефект/самопротиворечие точного исходника: не хватает объявленных полей, нарушены границы структур, либо писатель/читатель заведомо несовместимы.",
+      "port_limitation": "Ограничение нашего переноса: точный исходник требует внешней/нативной программы либо Execute, которые текущий runtime не исполняет.",
+      "unestablished_cause": "Неустановленная причина: имеющихся доказательств недостаточно, чтобы отнести ограничение к дефекту исходника или только к переносу."
+    }
+  },
+  "ui_policy": {
+    "write_limited": {
+      "badge": "Запись заблокирована",
+      "apply_disabled": true,
+      "calculated_result_download_disabled": true,
+      "manual_hex_edit_still_available": true
+    },
+    "unavailable": {
+      "badge": "Пока не поддерживается",
+      "apply_disabled": true,
+      "calculated_result_download_disabled": true,
+      "manual_hex_edit_still_available": true
+    },
+    "source_and_original_downloads_remain_available": true
+  },
+  "entries": [
+    {
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Honda/Ridgeline 9S12H256 km.cal",
+        "Calculators/Car/H/Honda/Ridgeline 9S12H256 km.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d"
+      },
+      "required_to_continue": "Нужен исправленный оригинал/эталон Honda для значений от 4096*Constant.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "source_group": "T-012",
+      "report_status": "blocked-missing-original-shift-semantics",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Grandeur 93C66.cal",
+        "Calculators/Car/H/Hyundai/G/Grandeur 93C66.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-012-writer-evidence-2026-11-04.json",
+          "reports/T-012-writers-2026-11-04.md",
+          "tests/test_t012_writers.js",
+          "tests/test_t012_app.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b"
+      },
+      "required_to_continue": "Authoritative source operator precedence or compiled version of this exact source; alternatively original-iProg BIN output for a defined input.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "source_group": "T-012",
+      "report_status": "blocked-original-self-inconsistency",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/ECU/Audi/ECU 95080.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Запись заблокирована: в оригинальном CAL OnApply меняет 0x32–0x3F, но OnShow сравнивает логин с неизменёнными 0x42–0x43. После смены логина оригинал отвергает собственный результат. Нужен исправленный авторский CAL или эталон записи iProg; алгоритм не изменён.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-012-writer-evidence-2026-11-04.json",
+          "reports/T-012-writers-2026-11-04.md",
+          "tests/test_t012_writers.js",
+          "tests/test_t012_app.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be"
+      },
+      "required_to_continue": "Corrected author source or exact original-iProg output/format reference establishing intended login copies.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto 2.cal",
+        "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto 2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Honda/Ridgeline 9S12H256 miles.cal",
+        "Calculators/Car/H/Honda/Ridgeline 9S12H256 miles.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b"
+      },
+      "required_to_continue": "Нужен исправленный оригинал/эталон Honda для значений от 4096*Constant.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/A3 VDO 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/A3 VDO 93C86 Crypto.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Hyundai Accent new  2011 24c16.cal",
+        "Calculators/Car/H/Hyundai/A/Hyundai Accent new  2011 24c16.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "source_group": "T-012",
+      "report_status": "blocked-missing-original-shift-semantics",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Hyundai/Grandier 93S66 Siemens-VDO.cal",
+        "Calculators/Car/H/Hyundai/G/Grandier 93S66 Siemens-VDO.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-012-writer-evidence-2026-11-04.json",
+          "reports/T-012-writers-2026-11-04.md",
+          "tests/test_t012_writers.js",
+          "tests/test_t012_app.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520"
+      },
+      "required_to_continue": "Authoritative source operator precedence or compiled version of this exact source; alternatively original-iProg BIN output for a defined input.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "source_group": "T-006",
+      "report_status": "reader-writer-blocked",
+      "format": "text",
+      "status": "partial",
+      "catalog_paths": [
+        "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": true,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742"
+      },
+      "required_to_continue": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно.",
+      "ui": {
+        "badge": "Запись заблокирована",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/Blauserial.cal",
+        "Calculators/CarRadio/Serial calculator/Blaupunkt/Blauserial.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "85 lines of 34 bytes, magic 6574736d617274c7; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "08143f0fa059905766fd1758109dddce5a0695187f61c82372033151096ab130",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 3251 RDS BP5500 v2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "08143f0fa059905766fd1758109dddce5a0695187f61c82372033151096ab130"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "09571dab29212bcea7a1494f5d93fe67f8127af1df7b62b9c70df76d2d4eabd1",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1XM1.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "09571dab29212bcea7a1494f5d93fe67f8127af1df7b62b9c70df76d2d4eabd1"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "147640b99c86bec7981c5d0ff2e7df29d02068545d16961fbab71264672317fe",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1TN0  6CD.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "147640b99c86bec7981c5d0ff2e7df29d02068545d16961fbab71264672317fe"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal",
+        "Calculators/Car/M/Mitsubishi/Pajero 93C66.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В OnShow используется @Var(5+1): Var не является объявленным регистром, переменной или известной функцией. Рядом есть отличающееся @(Var5+1).",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a"
+      },
+      "required_to_continue": "Нужен авторский вариант/байткод, подтверждающий адрес; не заменять Var на Var5 по догадке.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "17f2ee835b801ebd07e3286a685c2832041044692154864e0013bf8ee537ce1e",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 4251 BP5510 v2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "17f2ee835b801ebd07e3286a685c2832041044692154864e0013bf8ee537ce1e"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+        "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "native_pe",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal",
+        "Calculators/Car/A/Audi/Audi VDO crypto 2.6.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Native x86/Win32 GUI implementation, not embedded supported CAL bytecode.",
+      "cause": "port_limitation",
+      "cause_detail": "Исходник требует внешней или нативной программы/исполнения Execute, которое текущий перенос намеренно не реализует; это ограничение переноса, а не доказанный дефект CAL.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353"
+      },
+      "required_to_continue": "Verified source/algorithm specification and input/output vectors, or a separately scoped static recovery of these native routines. For protected variant first prove unpacked payload identity; version strings alone do not prove identity.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "A dedicated native algorithm port: map exact BIN format/sizes, Make_Decrypt + inverse/encrypt, crypto metadata, PIN/ImmoID/KM editing and file boundaries. No Win32 interpreter or guessed alias."
+    },
+    {
+      "sha": "1df2e9b3810a45b62ea2388aa6c3367e6746ae7c8be6d534a822b3ad736047e1",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Mersedes/BENZ SOUND 5 BE7076.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней скобки, выражение @0x0D=ff содержит неизвестное имя ff; это не числовой литерал 0xFF.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "1df2e9b3810a45b62ea2388aa6c3367e6746ae7c8be6d534a822b3ad736047e1"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL или подтверждённый байткод; не заменять идентификатор литералом автоматически.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "33 lines of 34 bytes, magic 205201ff82ed3f5c; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "3645acde20c0a92b465a7ebc47849908d1d7615706893aab674fcd1aafb393f8",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1SC0.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "3645acde20c0a92b465a7ebc47849908d1d7615706893aab674fcd1aafb393f8"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "46a4acbd2face8e57cc471fa4316adb2b43d03f2a7616337c1e2199b2733e6b5",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/BlauLubecCrypt.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "37 lines of 34 bytes, magic 6574736d61727494; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "46a4acbd2face8e57cc471fa4316adb2b43d03f2a7616337c1e2199b2733e6b5"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Opel/HONDA 39101-SND-A510-M1.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac"
+      },
+      "required_to_continue": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "57f9a9c0d0f48aa6325bee9eda1eaa92e6b318e8287f511f5cac5daa35ed7cb1",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Becker/MEXICO CD  BE0876.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "57f9a9c0d0f48aa6325bee9eda1eaa92e6b318e8287f511f5cac5daa35ed7cb1"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "5ed4c018a8fd1914ba7b2fb2640563028b824440572f43d665664b8834aebc22",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 4250 BP5511 v2.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "5ed4c018a8fd1914ba7b2fb2640563028b824440572f43d665664b8834aebc22"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "6644d71cab945296f8b6dac979081a6039b37373535abf36702e1e742a374a5d",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Pioneer/Pioneerke92zbm.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "35 lines of 34 bytes, magic 6574736d617274e0; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "6644d71cab945296f8b6dac979081a6039b37373535abf36702e1e742a374a5d"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "6e1ed379e3588b9ca4c37d99656d4c3049895aed74fa815adffad7157128a632",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1SA3.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "6e1ed379e3588b9ca4c37d99656d4c3049895aed74fa815adffad7157128a632"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "728ed75959a18737f982fa38918375cba19a74cf37dd83f0947f9c90bd3b1c2e",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/BENZ BOSE.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "728ed75959a18737f982fa38918375cba19a74cf37dd83f0947f9c90bd3b1c2e"
+      },
+      "required_to_continue": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2",
+      "source_group": "T-013",
+      "report_status": "blocked",
+      "format": "binary",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/invert.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "OnShow указывает на 1379 при длине декодированного образа 288 (codeStart=100); OnApply=194 валиден, но инициализация — нет.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-013-results-2026-11-04.json",
+          "reports/T-013-binary-recovery-2026-11-04.md",
+          "tests/test_t013_invert.js",
+          "tests/test_t013_app.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2"
+      },
+      "required_to_continue": "Correct original/header-format evidence or an iProg reference establishing initialization and actual event address. Do not guess OnShow.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "75e77b42f753f65289de6f0be1aaf989a9217c2de5394d4a469f941500dc4c13",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1TN0 6CD  CQ-EH8160AK.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "75e77b42f753f65289de6f0be1aaf989a9217c2de5394d4a469f941500dc4c13"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "7f26881c5f205f87ec9e6fdc25eb0769a30de677ae9e4c5eb38ba7567c90ef30",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/1XP1.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "7f26881c5f205f87ec9e6fdc25eb0769a30de677ae9e4c5eb38ba7567c90ef30"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "7fa97edc39c34a201da7efbd4ca735fd1958bc88b7550e81046c8fcf8cfc8996",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/CQ-EH8280A.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "7fa97edc39c34a201da7efbd4ca735fd1958bc88b7550e81046c8fcf8cfc8996"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Subaru/Tribeka 93c66.cal",
+        "Calculators/Car/S/Subaru/Tribeka 93c66.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней скобки, исходник использует Miles, но объявление Digit(Miles) закомментировано.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996"
+      },
+      "required_to_continue": "Нужен авторский вариант с полем Miles или точная семантика отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "8eff29d8cba9423e5e53935e97920ada9bcfe2f4847c61513dd7401b2b742805",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9926.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "8eff29d8cba9423e5e53935e97920ada9bcfe2f4847c61513dd7401b2b742805"
+      },
+      "required_to_continue": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "execute_launcher",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/audi A6 93C86 Crypto.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Only OnShow Execute(path,args); no form/reader/writer calculation to unwrap. Execute cannot safely be mapped to another similarly named CAL.",
+      "cause": "port_limitation",
+      "cause_detail": "Исходник требует внешней или нативной программы/исполнения Execute, которое текущий перенос намеренно не реализует; это ограничение переноса, а не доказанный дефект CAL.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257"
+      },
+      "required_to_continue": "Exact dependency mapping plus verified native source/algorithm port for the target. Existing same-name PE is a candidate, not an algorithm-equivalence proof.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "Port and verify the exact external dependency as bounded BIN operations, then add a provenance-checked link; never run the PE or implement arbitrary Execute."
+    },
+    {
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "OnShow имеет закрытый if, затем независимые присваивания, затем лишнюю } и несвязанный else. Выбор ветки и границ if неоднозначен.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea"
+      },
+      "required_to_continue": "Нужен корректный авторский OnShow/байткод, подтверждающий границы ветвления. Свободная процедура else теперь явно запрещена.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "96446c8b29740b927d08c27bb78e652428a267c4d3305bde0ef89a49e3237a4e",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Becker/MEXICO CD  BE0879.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "96446c8b29740b927d08c27bb78e652428a267c4d3305bde0ef89a49e3237a4e"
+      },
+      "required_to_continue": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "execute_launcher",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal",
+        "Calculators/Car/A/Audi/audi_a4_bosch_24C08.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Only OnShow Execute(path,args); no form/reader/writer calculation to unwrap. Execute cannot safely be mapped to another similarly named CAL.",
+      "cause": "port_limitation",
+      "cause_detail": "Исходник требует внешней или нативной программы/исполнения Execute, которое текущий перенос намеренно не реализует; это ограничение переноса, а не доказанный дефект CAL.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762"
+      },
+      "required_to_continue": "Exact dependency mapping plus verified native source/algorithm port for the target. Existing same-name PE is a candidate, not an algorithm-equivalence proof.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "Port and verify the exact external dependency as bounded BIN operations, then add a provenance-checked link; never run the PE or implement arbitrary Execute."
+    },
+    {
+      "sha": "a075634d3d0456fa57f691a511249ed7a1492f8447d840e644f81f1c304e0e5e",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/CQ-JH2810A.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "a075634d3d0456fa57f691a511249ed7a1492f8447d840e644f81f1c304e0e5e"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "33 lines of 34 bytes, magic 205201ff488d8562; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "d1458949593102a4e5398d433d4cfd2ec939c9e220a3fe757441f6b4757870e7",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/CQ-JH8161Z.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "d1458949593102a4e5398d433d4cfd2ec939c9e220a3fe757441f6b4757870e7"
+      },
+      "required_to_continue": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "d17efa0ff5e0fef14f30509a59ccd9dcb888908a2a4b2141f63a99ef513c06ef",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Becker/MEXICO 2000  BE1430.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "В OnApply внутри if размещён OnShow { ... } как вложенное объявление обработчика; требуется неизвестная семантика определения/вызова.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "d17efa0ff5e0fef14f30509a59ccd9dcb888908a2a4b2141f63a99ef513c06ef"
+      },
+      "required_to_continue": "Нужен исправленный исходник или точный скомпилированный аналог; не превращать определение в вызов.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4",
+      "source_group": "T-005",
+      "report_status": "remaining",
+      "format": "binary",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/BMW/BUSINESS CD CD43  BP8272 5dig.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "OnShow содержит только возврат; адрес OnApply недействителен.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-005-binary-resolution-2026-11-04.md",
+          "reports/binary-resolution-2026-11-03.json",
+          "tests/test_binary_resolution.js"
+        ],
+        "selector": "remaining[].sha == entry.sha",
+        "sha": "dfc2f328da0c07d0141e0f832fedf2c271785c7ec10be40ca595c9fafb7d0df4"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с валидным OnApply и содержательным OnShow либо эталон iProg; не подставлять другой BP8272.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "41 lines of 34 bytes, magic 205201ff28077f36; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "e2ea7cb94f91554d6ec5526772dd974bf0f0dc6a22a6fed16e0ea63e81d83a22",
+      "source_group": "T-006",
+      "report_status": "blocked",
+      "format": "text",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9715.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-006-results-2026-11-04.json",
+          "reports/T-006-text-recovery-2026-11-04.md",
+          "tests/test_t006_targets.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "e2ea7cb94f91554d6ec5526772dd974bf0f0dc6a22a6fed16e0ea63e81d83a22"
+      },
+      "required_to_continue": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602",
+      "source_group": "T-005",
+      "report_status": "remaining",
+      "format": "binary",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/BUSINESS CD CD43  BP8272 5dig.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "OnShow содержит только возврат; адрес OnApply недействителен.",
+      "cause": "confirmed_source_defect",
+      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "evidence": {
+        "reports": [
+          "reports/T-005-binary-resolution-2026-11-04.md",
+          "reports/binary-resolution-2026-11-03.json",
+          "tests/test_binary_resolution.js"
+        ],
+        "selector": "remaining[].sha == entry.sha",
+        "sha": "e8abebc4b6ba200bf62b4e1bcdc2f8bc9ee67d1a8b315e18f0a03ae6925cc602"
+      },
+      "required_to_continue": "Нужен исправленный оригинал с валидным OnApply и содержательным OnShow либо эталон iProg; не подставлять другой BP8272.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      }
+    },
+    {
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "33 lines of 34 bytes, magic 205201ff9d2693e9; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    },
+    {
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "native_pe",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/Dashboard/Audi/bosch.cal.cal",
+        "Calculators/Dashboard/Audi/bosch.cal",
+        "Calculators/Car/A/Audi/bosch.cal.cal",
+        "Calculators/Car/A/Audi/bosch.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "Protected native PE: CODE raw 125952 versus virtual 372736, entry loader, empty resource payloads; not an ordinary CAL wrapper.",
+      "cause": "port_limitation",
+      "cause_detail": "Исходник требует внешней или нативной программы/исполнения Execute, которое текущий перенос намеренно не реализует; это ограничение переноса, а не доказанный дефект CAL.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096"
+      },
+      "required_to_continue": "Verified source/algorithm specification and input/output vectors, or a separately scoped static recovery of these native routines. For protected variant first prove unpacked payload identity; version strings alone do not prove identity.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "A dedicated native algorithm port: map exact BIN format/sizes, Make_Decrypt + inverse/encrypt, crypto metadata, PIN/ImmoID/KM editing and file boundaries. No Win32 interpreter or guessed alias."
+    },
+    {
+      "sha": "ffee1fd8ee562587febc510eadac7a5ee7592b80362214602ea053bfec41f128",
+      "source_group": "T-007",
+      "report_status": "blocked",
+      "format": "framed_hex",
+      "status": "unavailable",
+      "catalog_paths": [
+        "Calculators/CarRadio/Blaupunkt/BlauWith25160.cal"
+      ],
+      "source_sha256_verified": true,
+      "available_actions": {
+        "read_form_values": false,
+        "apply_calculation": false,
+        "write_bin": false,
+        "download_cal_result": false,
+        "download_original_bin": "after BIN open",
+        "download_cal_source": true,
+        "manual_hex_edit": true
+      },
+      "limitation": "47 lines of 34 bytes, magic 6574736d6172748e; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
+      "evidence": {
+        "reports": [
+          "reports/T-007-format-register-2026-11-04.json",
+          "reports/T-007-other-formats-2026-11-04.md",
+          "tests/test_t007_formats.js"
+        ],
+        "selector": "files[].sha == entry.sha",
+        "sha": "ffee1fd8ee562587febc510eadac7a5ee7592b80362214602ea053bfec41f128"
+      },
+      "required_to_continue": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "ui": {
+        "badge": "Пока не поддерживается",
+        "apply_disabled": true,
+        "calculated_result_download_disabled": true,
+        "reason_visible": true
+      },
+      "required_change": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed."
+    }
+  ],
+  "resource_limitations": {
+    "images": {
+      "restored_assets": 190,
+      "explicit_bindings": 430,
+      "unique_cal_contents": 371,
+      "resolved_missing_reference_occurrences": 825,
+      "open_reference_occurrences": 1580,
+      "open_by_reason": {
+        "no_source_by_name_index": 1309,
+        "ambiguous_multiple_contents": 116,
+        "empty_or_whitespace_control": 155
+      },
+      "hardware_wiring_excluded_by_policy": 20,
+      "limitation": "Отсутствующие и неоднозначные исходные изображения не заменяются догадками; пустые/пробельные элементы формы сохраняются пустыми. Это счётчик ссылок на изображения, а не число неисправных CAL.",
+      "evidence": [
+        "IMAGE-RESTORATION.md",
+        "reports/T-010-remainder-2026-11-04.json",
+        "reports/T-010-image-restoration-2026-11-04.md",
+        "reports/T-015-nested-archives-2026-11-04.md"
+      ]
+    }
+  },
+  "name_limitations": {
+    "count": 18,
+    "not_broken_cal": true,
+    "note": "18 каталожных записей сохранены с нейтральными именами/исходными разделами; это ограничение названий и назначения, не входит в 59 ограниченных CAL.",
+    "unknown_model": 13,
+    "unspecified_assignment": 5,
+    "records": [
+      {
+        "sha": "68948a2ddb8e100b1e64ee20139b75c4c9c746c50fe20c7e92921ff9de89bac3",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 908AZ60A.cal"
+        ],
+        "display_name": "Bombardier 908AZ60A — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "4f261f4383eeab38d7c4940330856759fab72f0c4f2c0e2d9f5f9857d222924d",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ256.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ256 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "376faeb9f6b4252ce2117813ecb8a99fc95ee7022fd783d63d57d8ddadbc0eb7",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64 V1.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 V1 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "db8d8a6cf5b5526fdd90a891fa1437ec60f52edfe2e73783665e8a96c029e0b0",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64 V2.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 V2 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "7ad598258277b464922a19f36fbbe4330d3b5450ec2c8cebb6c8fae1100432e0",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64 V3.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 V3 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "6b3e3d358df64e903254849eb6980e336a357dcdaa9938c5a39dba34ce0efe0a",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64 V4.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 V4 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "a73d9388ecac791a23466ddaa707a4b019d834ca9ba22ccf8d3ebe18c287b25f",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64 V5.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 V5 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "d0d99db754bd7f6299597fd4808fb682e7ee3431873b5e1f7486719a192fdcda",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/Bombardier 9S12HZ64.cal"
+        ],
+        "display_name": "Bombardier 9S12HZ64 — коррекция пробега",
+        "display_folder": "Asia/ATV/Bombardier",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "1b2268be2259a077aea19b2fbf9445411a0e5402dc97e0c35d11144345969d1a",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/CFMOTO 24C02.cal"
+        ],
+        "display_name": "CFMOTO 24C02 — коррекция пробега",
+        "display_folder": "Asia/ATV/CFMOTO",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "8bb9b6ac7a567fad2a937f94f0f01e8d0c0909bcfc0d08774a74d7b57e9de822",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/CFMOTO 24C04.cal"
+        ],
+        "display_name": "CFMOTO 24C04 — коррекция пробега",
+        "display_folder": "Asia/ATV/CFMOTO",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "f77564b82d984d26366715a1f954118d499fd4351fa332422f3d864155841871",
+        "catalog_paths": [
+          "Calculators/Asia/ATV/CFMOTO 24C08.cal"
+        ],
+        "display_name": "CFMOTO 24C08 — коррекция пробега",
+        "display_folder": "Asia/ATV/CFMOTO",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "2abefdbef21e206e618cf280b67341304f50867aac4d95750232f6d156980cce",
+        "catalog_paths": [
+          "Calculators/CHINA/CHINA 24C08.cal"
+        ],
+        "display_name": "CHINA 24C08 — коррекция пробега",
+        "display_folder": "CHINA",
+        "issue": "assignment_unresolved",
+        "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+        "catalog_paths": [
+          "Calculators/ECU/EDC16.CAL"
+        ],
+        "display_name": "EDC16 — параметры",
+        "display_folder": "ECU",
+        "issue": "assignment_unresolved",
+        "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+        "catalog_paths": [
+          "Calculators/ECU/ECU 95080.cal"
+        ],
+        "display_name": "ECU Audi 95080",
+        "display_folder": "ECU/Audi",
+        "issue": "assignment_unresolved",
+        "reason": "марка подтверждена формой, операция не подтверждена",
+        "calculation_status": "read-only",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "a313e4da61746694a2b267c91489690671ae3f882a12da42de1544d4479d3e50",
+        "catalog_paths": [
+          "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal"
+        ],
+        "display_name": "MT 9 — коррекция пробега",
+        "display_folder": "MOTO - TRUCK - ATV/Motobikes",
+        "issue": "assignment_unresolved",
+        "reason": "марка и модель не подтверждены путём или формой; исходный раздел сохранён",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "0c43ae8521e5cf6020477243d6443c64b95c175b436719c708ed7d012e625ce6",
+        "catalog_paths": [
+          "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal"
+        ],
+        "display_name": "SLASH-93C56-SPSM-14H18-115",
+        "display_folder": "MOTO - TRUCK - ATV/Motobikes",
+        "issue": "assignment_unresolved",
+        "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
+        "catalog_paths": [
+          "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
+          "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal"
+        ],
+        "display_name": "BRP 24C04 Proba — коррекция пробега и моточасов",
+        "display_folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      },
+      {
+        "sha": "4774b3b211603a17b8e49c7bcbdc8e4f81297c0c2d9262ef1e228b9058b92ebe",
+        "catalog_paths": [
+          "Calculators/MOTO/Snowmobile/24C164 Proba.cal",
+          "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal"
+        ],
+        "display_name": "BRP 24C164 Proba — коррекция пробега и моточасов",
+        "display_folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+        "issue": "model_not_specified",
+        "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
+        "calculation_status": "supported",
+        "counts_toward_59_limited_cal": false
+      }
+    ],
+    "evidence": [
+      "reports/T-016-group-review-2026-11-04.json",
+      "reports/catalog-organization-remainder-2026-11-04.json",
+      "reports/T-016-group-review-2026-11-04.md"
+    ]
+  },
+  "sources": {
+    "audit": "tools/audit-calculators.js",
+    "catalog": "catalog.js + catalog-data/*.js",
+    "engine": "engine.js",
+    "current_counts_generated_from": "node tools/audit-calculators.js"
+  },
+  "validation": {
+    "sha_unique": true,
+    "sha_format_full_lowercase_hex": true,
+    "catalog_paths_checked": true,
+    "statuses_match_current_parser": true,
+    "sums_checked": true,
+    "ui_checked": true,
+    "ui_scope": "real app.js DOM adapter: 59 limited entries, 231 reader-only entries; Apply and calculated result download disabled; reason visible"
+  }
+}
