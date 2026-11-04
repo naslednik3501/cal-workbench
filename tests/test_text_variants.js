@@ -39,6 +39,6 @@ test('Unreviewed broken sources remain rejected',()=>{
  for(const sha of ['de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e','558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c'])assert.throws(()=>program(sha));
 });
 test('Known inconsistent source writers stay blocked while reader annotations remain available',()=>{
- for(const sha of ['5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be','3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b','ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520']){const p=E.parse(raw(sha),{sha}),input=new Uint8Array(1024),v=new E.VM(p,input).transaction('show').vm;assert.equal(p.partial,true);assert.throws(()=>v.transaction('apply'),/проверки оригинального алгоритма/);assert.deepEqual(v.buffer,input);}
+ for(const sha of ['5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be','3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b','ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520']){const p=E.parse(raw(sha),{sha}),input=new Uint8Array(1024),v=new E.VM(p,input).transaction('show').vm;assert.equal(p.partial,true);assert.throws(()=>v.transaction('apply'),/Запись заблокирована/);assert.deepEqual(v.buffer,input);}
 });
 console.log(JSON.stringify({passed,braceOriginals:profiles.length,syntheticEventRuns:profiles.length*6}));

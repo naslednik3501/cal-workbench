@@ -97,10 +97,12 @@ const finalBraceRepairs=Object.freeze({
  '6a2033bf21324fc1a524c6543e0deb3404857bfdd767451d9a332afb1d96180a':[4411,16036],
  'd89c622fcf2691be2f38953050182a29ca95ca8946102bcd874470a6bb0f4e3c':[4413,34816],
 });
+// T-012: exact-source evidence and required references are in reports/T-012-writers-2026-11-04.md.
+// Preserve the original operations; no guessed login-copy repair or shift precedence.
 const unverifiedWriters=Object.freeze({
- '5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be':'OnApply не обновляет копию логина, которую проверяет OnShow; запись требует проверки оригинального алгоритма.',
- '3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b':'Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма.',
- 'ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520':'Выражение сдвига в OnApply не прошло проверку повторных записей; запись требует проверки оригинального алгоритма.',
+ '5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be':'Запись заблокирована: в оригинальном CAL OnApply меняет 0x32–0x3F, но OnShow сравнивает логин с неизменёнными 0x42–0x43. После смены логина оригинал отвергает собственный результат. Нужен исправленный авторский CAL или эталон записи iProg; алгоритм не изменён.',
+ '3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
+ 'ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
 });
 function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишком большой');let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(raw);}catch{text=cp.decode(raw);}
  // CAL metadata precedes Size; only a section title, ! lines and comments are accepted there.
@@ -108,7 +110,7 @@ function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишко
  const repair=Object.hasOwn(finalBraceRepairs,sha)?finalBraceRepairs[sha]:null;
  if(repair){if(raw.length!==repair[0]||E.crc16(raw)!==repair[1])fail('исходник не совпадает с профилем исправления');if(!/}\s*$/.test(text))fail('не найдено исправляемой скобки');text=text.replace(/}\s*$/,'');}
  const program=new Parser(text).parse();if(repair)program.sourceRepairs=['Удалена одна лишняя завершающая скобка из известной версии CAL; оригинал сохранён.'];
- if(Object.hasOwn(unverifiedWriters,sha)){program.partial=true;program.eventErrors={apply:unverifiedWriters[sha]};program.validEvents=['show'];program.unsupported=['apply: '+unverifiedWriters[sha]];}
+ if(Object.hasOwn(unverifiedWriters,sha)){program.partial=true;program.writerBlockReason=unverifiedWriters[sha];program.eventErrors={apply:unverifiedWriters[sha]};program.validEvents=['show'];program.unsupported=['apply: '+unverifiedWriters[sha]];}
  return program;
 }
 class SourceVM extends E.VM{

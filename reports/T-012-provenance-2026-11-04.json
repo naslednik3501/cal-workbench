@@ -1,0 +1,53 @@
+{
+  "task": "T-012",
+  "repository": "naslednik3501/iprocal-sources",
+  "ref": "ee9a08fb",
+  "indexes": [
+    "indexes/by-name/4a.jsonl",
+    "indexes/by-name/6f.jsonl",
+    "indexes/by-name/fc.jsonl"
+  ],
+  "catalogByteComparison": "3/3 exact, zlib-decoded source objects SHA256 and sizes verified",
+  "rows": [
+    {
+      "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "member": 4750,
+      "path": "Calculators/ECU/Audi/ECU 95080.cal",
+      "sha256": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "bytes": 1432,
+      "crc32": "b05b1693"
+    },
+    {
+      "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "member": 8975,
+      "path": "Calculators/Dashboard/Hyundai/Grandeur 93C66.cal",
+      "sha256": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "bytes": 2329,
+      "crc32": "13677782"
+    },
+    {
+      "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "member": 26071,
+      "path": "Calculators/Car/H/Hyundai/G/Grandeur 93C66.cal",
+      "sha256": "3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b",
+      "bytes": 2329,
+      "crc32": "13677782"
+    },
+    {
+      "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "member": 9015,
+      "path": "Calculators/Dashboard/Hyundai/Grandier 93S66 Siemens-VDO.cal",
+      "sha256": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "bytes": 2352,
+      "crc32": "b193437d"
+    },
+    {
+      "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+      "member": 26075,
+      "path": "Calculators/Car/H/Hyundai/G/Grandier 93S66 Siemens-VDO.cal",
+      "sha256": "ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520",
+      "bytes": 2352,
+      "crc32": "b193437d"
+    }
+  ]
+}
