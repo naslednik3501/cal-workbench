@@ -1,0 +1,784 @@
+{
+  "date": "2026-11-04",
+  "section": "Приборные панели",
+  "source_report": "reports/catalog-organization-dashboard-2026-11-04.md",
+  "generated_file": "catalog-organization-dashboard.js",
+  "inputs": [
+    "catalog.js",
+    "catalog-data/*.js",
+    "engine.js"
+  ],
+  "purpose": "Щитки, панели приборов, одометры и коррекция пробега.",
+  "scope": [
+    "Calculators/Dashboard/**/*.cal",
+    "Calculators/I/**/*.cal",
+    "Calculators/I_ok/**/*.cal",
+    "Calculators/Peugeot/**/Dash*.cal",
+    "selected Calculators/Car/**/*.cal with dashboard evidence"
+  ],
+  "totals": {
+    "paths": 4870,
+    "unique_sha": 4843,
+    "generated_entries": 4843,
+    "ambiguous": 47,
+    "car_only_selected": 14,
+    "collision_groups": 1049,
+    "source_groups": 0,
+    "version_groups": 1049
+  },
+  "source_paths": {
+    "I_ok": 43,
+    "I": 43,
+    "Dashboard": 4767,
+    "Peugeot": 3,
+    "Car": 14
+  },
+  "car_only_selected_paths": [
+    "Calculators/Car/Citroen/Citroen/Berlingo/Dash Berlingo 25020.cal",
+    "Calculators/Car/F/Ford/F/Fiesta 9S12XEQ384.cal",
+    "Calculators/Car/F/Freightliner/Freightliner Columbia 9S12DG128.cal",
+    "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ128.cal",
+    "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ256.cal",
+    "Calculators/Car/G/GM/Daewoo/DEAWOO 9S12H128.cal",
+    "Calculators/Car/H/Honda/Ridgeline/Ridgeline 9S12H256 miles -v2.cal",
+    "Calculators/Car/H/Hyundai/E/EON 9S12XHY128 - NEW OK.cal",
+    "Calculators/Car/H/Hyundai/I/I10 24c16-NEW.cal",
+    "Calculators/Car/H/Hyundai/I/I10 24c16-V3 2018.cal",
+    "Calculators/Car/H/Hyundai/I/I10 24c16.cal",
+    "Calculators/Car/H/Hyundai/I/I10 9S12HY64 - NEW OK.cal",
+    "Calculators/Car/L/Lincoln/Lincoln Navigator 9S12H128.cal",
+    "Calculators/Car/M/Mitsubishi/F/MITSUBISHI FUSO 2015 24C16.cal"
+  ],
+  "by_brand": {
+    "Приборные панели/Универсальные": 102,
+    "Приборные панели/Неуточнённые": 47,
+    "Приборные панели/Volkswagen": 199,
+    "Приборные панели/Porsche": 17,
+    "Приборные панели/DongFeng": 12,
+    "Приборные панели/Hino": 5,
+    "Приборные панели/Golden Dragon": 1,
+    "Приборные панели/Yamaha": 15,
+    "Приборные панели/BRP": 55,
+    "Приборные панели/MAN": 3,
+    "Приборные панели/Lifan": 17,
+    "Приборные панели/Mitsubishi": 131,
+    "Приборные панели/Hummer": 12,
+    "Приборные панели/Renault": 195,
+    "Приборные панели/Mercury": 1,
+    "Приборные панели/GMC": 32,
+    "Приборные панели/Ferrari": 2,
+    "Приборные панели/GAZ": 4,
+    "Приборные панели/Ford": 266,
+    "Приборные панели/Vortex": 3,
+    "Приборные панели/MAZ": 2,
+    "Приборные панели/Yanmar": 2,
+    "Приборные панели/Lincoln": 22,
+    "Приборные панели/Pontiac": 16,
+    "Приборные панели/Luxgen": 1,
+    "Приборные панели/Changan": 2,
+    "Приборные панели/Samand": 4,
+    "Приборные панели/Isuzu": 26,
+    "Приборные панели/Scion": 5,
+    "Приборные панели/Daewoo": 33,
+    "Приборные панели/UAZ": 12,
+    "Приборные панели/Mini": 6,
+    "Приборные панели/Jeep": 25,
+    "Приборные панели/Mazda": 100,
+    "Приборные панели/MG": 2,
+    "Приборные панели/Bentley": 2,
+    "Приборные панели/Daihatsu": 12,
+    "Приборные панели/Shaanxi": 7,
+    "Приборные панели/Brilliance": 4,
+    "Приборные панели/Foton": 6,
+    "Приборные панели/TATA": 1,
+    "Приборные панели/Trend": 1,
+    "Приборные панели/Sinotruk": 7,
+    "Приборные панели/Polaris": 22,
+    "Приборные панели/Русская Механика": 5,
+    "Приборные панели/CFMOTO": 34,
+    "Приборные панели/Stels": 16,
+    "Приборные панели/Honda": 185,
+    "Приборные панели/Kawasaki": 5,
+    "Приборные панели/Kymco": 3,
+    "Приборные панели/Baltmotors": 4,
+    "Приборные панели/Suzuki": 97,
+    "Приборные панели/BAW": 1,
+    "Приборные панели/FAW": 10,
+    "Приборные панели/Buick": 12,
+    "Приборные панели/Daf": 1,
+    "Приборные панели/Ankai": 1,
+    "Приборные панели/Smart": 12,
+    "Приборные панели/Datsun": 3,
+    "Приборные панели/Land Rover": 93,
+    "Приборные панели/Saab": 9,
+    "Приборные панели/BYD": 6,
+    "Приборные панели/KAMAZ": 7,
+    "Приборные панели/Hyundai": 109,
+    "Приборные панели/Samsung": 2,
+    "Приборные панели/Kia": 93,
+    "Приборные панели/Mercedes-Benz": 215,
+    "Приборные панели/Opel": 64,
+    "Приборные панели/Chevrolet": 190,
+    "Приборные панели/SsangYong": 29,
+    "Приборные панели/Iveco": 9,
+    "Приборные панели/CAMC": 2,
+    "Приборные панели/Dacia": 7,
+    "Приборные панели/Infiniti": 65,
+    "Приборные панели/VAZ": 27,
+    "Приборные панели/Toyota": 459,
+    "Приборные панели/Shuanghuan Sceo": 1,
+    "Приборные панели/Higer": 1,
+    "Приборные панели/Cadillac": 24,
+    "Приборные панели/Nissan": 266,
+    "Приборные панели/Iran Khodro": 2,
+    "Приборные панели/Dodge": 36,
+    "Приборные панели/Acura": 21,
+    "Приборные панели/Lexus": 59,
+    "Приборные панели/Audi": 38,
+    "Приборные панели/Lada": 20,
+    "Приборные панели/Volvo": 34,
+    "Приборные панели/Haval": 1,
+    "Приборные панели/Peugeot": 294,
+    "Приборные панели/Subaru": 51,
+    "Приборные панели/Mahindra": 4,
+    "Приборные панели/TAGAZ": 4,
+    "Приборные панели/Alfa Romeo": 17,
+    "Приборные панели/Aston Martin": 2,
+    "Приборные панели/KATO": 2,
+    "Приборные панели/Bogdan": 3,
+    "Приборные панели/Skoda": 71,
+    "Приборные панели/Chery": 30,
+    "Приборные панели/LDV": 1,
+    "Приборные панели/Rolls Royce": 1,
+    "Приборные панели/Tager": 1,
+    "Приборные панели/Chrysler": 28,
+    "Приборные панели/Maserati": 2,
+    "Приборные панели/Jaguar": 14,
+    "Приборные панели/Aixam": 3,
+    "Приборные панели/Admiral": 1,
+    "Приборные панели/BMW": 86,
+    "Приборные панели/Fiat": 63,
+    "Приборные панели/Force": 1,
+    "Приборные панели/Hafei": 1,
+    "Приборные панели/Great Wall": 19,
+    "Приборные панели/JAC": 2,
+    "Приборные панели/Rover": 28,
+    "Приборные панели/Citroen": 245,
+    "Приборные панели/Freightliner": 3,
+    "Приборные панели/Hitachi": 6,
+    "Приборные панели/New Holland": 6,
+    "Приборные панели/Geely": 18,
+    "Приборные панели/ZAZ": 3,
+    "Приборные панели/International": 1,
+    "Приборные панели/Seat": 51,
+    "Приборные панели/Haima": 4,
+    "Приборные панели/Lancia": 3,
+    "Приборные панели/CAT": 6,
+    "Приборные панели/Hamm": 1,
+    "Приборные панели/JCB": 13,
+    "Приборные панели/Komatsu": 21,
+    "Приборные панели/McCormick": 2,
+    "Приборные панели/Kirovec": 1,
+    "Приборные панели/John Deere": 3,
+    "Приборные панели/XCMG": 2,
+    "Приборные панели/Bobcat": 1,
+    "Приборные панели/Case": 5,
+    "Приборные панели/Shantui": 1,
+    "Приборные панели/Belarus": 1
+  },
+  "by_operation": {
+    "коррекция пробега": 4718,
+    "(не подтверждена)": 33,
+    "коррекция моточасов": 71,
+    "декриптор панели": 21
+  },
+  "ambiguous": [
+    {
+      "sha": "7b6ebee0d0d81beaede7c399b707701c8a8df33c48fd1f9a8969e06dec233dbd",
+      "paths": [
+        "Calculators/I_ok/Isuzu Forward 93c56.cal"
+      ],
+      "title": "Isuzu Forward 93c56 · вариант 3",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "fcf58124a88e30557343158fd4ae025fe71214699166e6106913428086578453",
+      "paths": [
+        "Calculators/I/Isuzu Forward 93c56.cal"
+      ],
+      "title": "Isuzu Forward 93c56 · вариант 4",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "ebc9e7233fc3e1ac980e8f64fd8a75f8e0e765d4a90a5517d49f60f0d5b9d0d4",
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VWVentoTRW.cal"
+      ],
+      "title": "VWVentoTRW",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "e0277c4ecb7c2a546afbec1b167836122543c2019781cf0e93acc16027978b25",
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/Vento TRW.cal"
+      ],
+      "title": "Vento TRW",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "d9f3bc489f2a669d9f56282d7b78d6992aae73268b5ff4a4d5e1158e6adbd4ce",
+      "paths": [
+        "Calculators/Dashboard/Jet ski/Aquatrax 93c56.cal"
+      ],
+      "title": "Aquatrax 93c56",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "paths": [
+        "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal"
+      ],
+      "title": "Pajero 93C66",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "f26ae45fb3ed26529c16275f39d065f2026d6ecacd3f8984d18279f106197ca4",
+      "paths": [
+        "Calculators/Dashboard/Isuzu/Forward 93c56 v2.cal"
+      ],
+      "title": "Forward 93c56 v2",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "9c8c8581d1b9e1e0927fccbd191305db510542228bff31b4d745f5f630ba8a23",
+      "paths": [
+        "Calculators/Dashboard/Isuzu/Isuzu Forward 93c56.cal"
+      ],
+      "title": "Isuzu Forward 93c56 · вариант 2",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "be60c284cd53240cc4674b5c32417f7a7dd0ac6d3a4bddb356cf6c3645ad2a58",
+      "paths": [
+        "Calculators/Dashboard/Mercedes/B W169 EZS 9S12DT128.cal"
+      ],
+      "title": "B W169 EZS 9S12DT128",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "0d3206a5dc83d892daf39ed8304d2dfd6f86e7dc4d46816e742f3476e3246a54",
+      "paths": [
+        "Calculators/Dashboard/Mercedes/A W169 EZS 9S12DT128.cal"
+      ],
+      "title": "A W169 EZS 9S12DT128",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "b0bf476092e6be8083df0b3c813627148675be3c2b6e72c493f717932defddc3",
+      "paths": [
+        "Calculators/Dashboard/1/Isuzu Forward 93c56.cal"
+      ],
+      "title": "Isuzu Forward 93c56",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "467dca914c2e868a862dbfbbf50965d6ddb449712c663dd11a1c3818579e1b30",
+      "paths": [
+        "Calculators/Dashboard/1/NDM457C.cal"
+      ],
+      "title": "NDM457C",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "13344c6d1f6965dc723661386e69ee4d810eafdeaaf6c44483b2d1f214500797",
+      "paths": [
+        "Calculators/Dashboard/Toyota/NDM457C.cal"
+      ],
+      "title": "NDM457C · вариант 2",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "paths": [
+        "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal"
+      ],
+      "title": "audi a4 bosch 24C08",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "paths": [
+        "Calculators/Dashboard/Audi/bosch.cal.cal",
+        "Calculators/Dashboard/Audi/bosch.cal"
+      ],
+      "title": "bosch",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "paths": [
+        "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal"
+      ],
+      "title": "Audi VDO crypto 2.6",
+      "reason": "форма CAL недоступна для проверки операции"
+    },
+    {
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "paths": [
+        "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal"
+      ],
+      "title": "audi A6 93C86 Crypto",
+      "reason": "форма CAL недоступна для проверки операции"
+    },
+    {
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "paths": [
+        "Calculators/Dashboard/Subaru/Tribeka 93c66.cal"
+      ],
+      "title": "Tribeka 93c66",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "6a34a382901bdc2aabe8eeb1432b51dca8cfb84232328148f646715ad2a476ee",
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/Vento/Vento TRW.cal"
+      ],
+      "title": "Vento TRW · вариант 2",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
+      ],
+      "title": "Terex 860 SX 25010",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
+      ],
+      "title": "Terex 95010",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "cfcde57bcca8de8d1bde95c4368791f20b7ee7d6912e67e9c09f5b5b8483b20d",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/JCB/JCB JS330 ECU 93C86.cal"
+      ],
+      "title": "JCB JS330 ECU 93C86",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "a4b3df0aa5098bad7d71053909fa8cc5054f044b52fe4b268b78d6a4a0b1945d",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/JCB/JCB JC220 ECU 93C86.cal"
+      ],
+      "title": "JCB JC220 ECU 93C86",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "1a961305cda116f66834186c6f011614db4b9d645668d88aca22cbdc8773fedc",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/JCB/JCB PCF8582 (24C02).cal"
+      ],
+      "title": "JCB PCF8582 24C02",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
+      ],
+      "title": "HMK 102B PCF8582 24C02",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "bb3101c5a95fd68bc448457b87f454a21b7074bfa365d87d1e5322951b316683",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 93C56 Denso.cal"
+      ],
+      "title": "62-8FD 93C56 Denso",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "8281abe51b84682e0a0eeda7d458a8288dbe3ff25e2c3f84180c4187eccb271a",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 95040 Arnecom.cal"
+      ],
+      "title": "62-8FD 95040 Arnecom",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
+      ],
+      "title": "FHG15T3 PIC16F946 - 256",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
+      ],
+      "title": "FHG15T3 PIC16F946 - 512",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
+      ],
+      "title": "CPCD30N-RW13 x5045",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "50069916fc36c2db81067d4676813e24eed72e5c76a115364d21ba6e7dee07d0",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/UDM-2/UDM-2 Baltiec K-702MA 24C02.cal"
+      ],
+      "title": "UDM-2 Baltiec K-702MA 24C02",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "f0f65993d9c260771444f9f63c279f713cb2b58cfec7b1780858450421b9b562",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/XCMG/LW500KN 24C64.cal"
+      ],
+      "title": "LW500KN 24C64",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "fc9e5f43cc8c7207f650ff562fa88a47e08228d2575c8f9b9f904af09df5cb05",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/XCMG/LW500FN 24C64.cal"
+      ],
+      "title": "LW500FN 24C64",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
+      "paths": [
+        "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
+      ],
+      "title": "FG15CTJ PIC12F629 - 128",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
+      "paths": [
+        "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
+      ],
+      "title": "Joymax 300i 24C02",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
+      "paths": [
+        "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
+      ],
+      "title": "Triumph Dakota 93C46",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
+      "paths": [
+        "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
+      ],
+      "title": "Triumph Tiger 1050 PIC18F458 - 256",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "a2095bd67ee3d99f7ba9496951369c63ab35fe4025f0075e27e49121fb10d431",
+      "paths": [
+        "Calculators/Dashboard/Motobikes/Ducati/Ducati 696 24C16.cal"
+      ],
+      "title": "Ducati 696 24C16",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "2bc77fe1abb1706ae99618f698e8a9ee12de6fd7a5500220e6b482bcd564b58b",
+      "paths": [
+        "Calculators/Dashboard/Motobikes/Ducati/Ducati 749 24C16.cal"
+      ],
+      "title": "Ducati 749 24C16",
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "e72c6862886693902da672c7e37f3a5ada692c9978a7385643dc7304cb0a43c2",
+      "paths": [
+        "Calculators/Dashboard/Mercedes/B W169/B W169 EZS 9S12DT128.cal"
+      ],
+      "title": "B W169 EZS 9S12DT128 · вариант 2",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "785d6cea3d8affce29d1683389fb06ea10272fef2a8aa4f4c954db4aa3088dcc",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC16F886.cal"
+      ],
+      "title": "Belarus PIC16F886",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "506d051ac282182f323f015fdf5b3da32cdfd0c8b1fa555053dfa1ca7d1d86db",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC18F2520.cal"
+      ],
+      "title": "Belarus PIC18F2520",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "cd11efd9ab3e0cbfbebce0905c08aaa543129b8b5fd7a5977828c6d623407eec",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 93C56.cal"
+      ],
+      "title": "John Deere 93C56",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "33cd564a27fab5591332aa2629031e5ef370e274ff72050dad76523a95fb9da3",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325 93C66.cal"
+      ],
+      "title": "John Deere 325 93C66",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "ac64e55c4f2aa5be86b41a1f87fd2c6f8931184e3c2a2b2b5d2d30a5fef0b5b2",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325K 93C86.cal"
+      ],
+      "title": "John Deere 325K 93C86",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "028a56cefdccc6ad4e26f7efe153b61e410d1ef7a8aad17fd49306145b2a06d4",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/John Deere/John Deere ECU 93C86.cal"
+      ],
+      "title": "John Deere ECU 93C86",
+      "reason": "в форме нет подтверждения операции панели"
+    },
+    {
+      "sha": "ba34fa3b372ac63eefe924f8c1ffaec80afaa2519ef252ab7b4afdee631709e2",
+      "paths": [
+        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325J 93C66.cal"
+      ],
+      "title": "John Deere 325J 93C66",
+      "reason": "в форме нет подтверждения операции панели"
+    }
+  ],
+  "car_only_not_selected": [
+    {
+      "path": "Calculators/Car/Ford/Ka  Immo 7701 4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Ford/Probe v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Ford/Probe v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Ford/Mondeo ECU TMS 370 4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Ford/Tranzit v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Charade v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Terios v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v3.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia_Immo 93C66 4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Sirion v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Cuore v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/Lantra Immo 93C56 4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/H200 Immo 93C56 4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/Tucson 2007 Immo 93LC66_4D.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Shuma v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Rio_Immo 93LC46_4D.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Shuma v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Clarus v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Pride v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Kia_Immo 93LC46_4C.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Kia/Sportage v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/AUDI/A4 v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/AUDI/A6 v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v3.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Fiorino v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Fiorino v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Bravo v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Bravo v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Palio v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v3.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Marea v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Palio v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Siena v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Marea v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Xantia v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Xsara v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Jampy v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Jampy v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Evasion v1.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Evasion v2.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/Honda/Honda_Immo_0D28J_PCF7931.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    },
+    {
+      "path": "Calculators/Car/M/Mazda/MAZDA 2 93C86-2017.cal",
+      "reason": "путь и форма не подтверждают панель/пробег"
+    }
+  ]
+}

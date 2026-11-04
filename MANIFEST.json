@@ -88,8 +88,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2370,
-      "sha256": "e6ebdec1a1f8cd3ac41f6ac4b1c54268583174bf4b3b7c3683d6699f5154c839"
+      "bytes": 2407,
+      "sha256": "1c2a367d425ec16ce5442ff86718013bb014626e9fb7355907984f8c3093b93d"
     },
     {
       "path": "cal-source.js",
@@ -312,9 +312,14 @@
       "sha256": "6fb7ff17414305d114860a878d435f6e9bbc548c44292695db71171c11f5d934"
     },
     {
+      "path": "catalog-organization-dashboard.js",
+      "bytes": 1002488,
+      "sha256": "e58830048f903bdae0d9925cecff2e825b54ad45d80c282dfa49e724bde8ae60"
+    },
+    {
       "path": "catalog-organization.js",
-      "bytes": 5923,
-      "sha256": "ff23652fa37d4820825a055fc3dfcd551d8ad718615c2e64d456832a29f0e50e"
+      "bytes": 6138,
+      "sha256": "3ad51f7dcd08392b2f906df0c2b2b5df051b8a982e084d8718ad81ab462fc841"
     },
     {
       "path": "catalog-parts.json",
@@ -1323,8 +1328,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11669,
-      "sha256": "503b4d445457617aa532cbe4e376a32b9e60bd8a757938801a926e835c327576"
+      "bytes": 11727,
+      "sha256": "b5ad08744ef68b9937da731c208bed8de165f220a387ca6abfa961a67ae79942"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1510,6 +1515,16 @@
       "path": "reports/catalog-organization-airbag-srs-2026-11-04.md",
       "bytes": 12996,
       "sha256": "6206b71acec7cc4830a1ad830a23c031e7deba2ff76498fb0d73a0244d6b9423"
+    },
+    {
+      "path": "reports/catalog-organization-dashboard-2026-11-04.json",
+      "bytes": 32798,
+      "sha256": "54975d7da125c91f94918eb0e0d99d81defaeb997db9af4a4a532f1a9ae55de6"
+    },
+    {
+      "path": "reports/catalog-organization-dashboard-2026-11-04.md",
+      "bytes": 3065,
+      "sha256": "99f0df57b189f2a69217938e514d25dfa64c174661df99957bf0e631e0f97908"
     },
     {
       "path": "reports/catalog-organization-root-airbag.md",
@@ -1843,8 +1858,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 19275,
-      "sha256": "3ea21a0299b280b25afb0587a4121cf3d3ba16ff0e1c3805701f896d6fb87fcf"
+      "bytes": 23610,
+      "sha256": "9ccd5b58b3ed1544ac1538aebad0febffd90075e9ec69ba40e13d85f705a06c7"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -1930,6 +1945,11 @@
       "path": "tools/catalog_airbag_organization.js",
       "bytes": 17106,
       "sha256": "23f341da7c3f5bd1f3292268d1c8f44e1d53d49b38e79875a2093efc75ba28e5"
+    },
+    {
+      "path": "tools/catalog_device_organization.js",
+      "bytes": 21344,
+      "sha256": "90fed6d51642d5c52a69f4ced17df1599e825d645bcc2d18f05132f4588d24a3"
     },
     {
       "path": "tools/catalog_inventory.py",

@@ -2,7 +2,7 @@
 // This is not browser rendering or a vehicle compatibility check.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),vm=require('vm'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..');require('../catalog.js');for(const f of require('../catalog-parts.json'))require('../'+f);
-const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js');
+const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js'),dashboard=require('../catalog-organization-dashboard.js');
 const expected=[
  ['faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a','Calculators/Fabia 93C86 2006 decryptor.cal','Skoda Fabia 2006 — декриптор EEPROM 93C86','Приборные панели/Skoda'],
  ['2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970','Calculators/Super B 93C86 decryptor.cal','Skoda Superb — декриптор EEPROM 93C86','Приборные панели/Skoda'],
@@ -20,7 +20,7 @@ const expected=[
 const airbagEntries=db.entries.filter(e=>e.ext==='cal'&&/^Calculators\/(Airbag|SRS)\//i.test(e.path));
 const airbagShas=new Set(airbagEntries.map(e=>e.sha));
 const approvedShas=new Set(expected.map(item=>item[0]));
-const generatedEntries=new Map(Object.entries(org.data.entries).filter(([sha])=>!approvedShas.has(sha)));
+const generatedEntries=new Map(Object.entries(org.data.entries).filter(([sha])=>airbagShas.has(sha)&&!approvedShas.has(sha)));
 
 class Element{
  constructor(tag,doc){this.tagName=tag.toUpperCase();this.doc=doc;this.children=[];this.parentNode=null;this.dataset={};this.style={};this.attrs={};this.events={};this._text='';this.className='';this.value='';this.checked=false;this.disabled=false;this.hidden=false;this.open=false;this.files=[];this.classList={contains:n=>this.className.split(/\s/).includes(n),toggle:(n,on)=>{let s=new Set(this.className.split(/\s/).filter(Boolean));if(on??!s.has(n))s.add(n);else s.delete(n);this.className=[...s].join(' ');},remove:n=>{this.classList.toggle(n,false);}};}
@@ -50,7 +50,7 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 (async()=>{
 await run('catalogReady');
 await test('the 12 approved SHAs keep their exact names, folders and display paths',()=>{
- assert.equal(Object.keys(org.data.entries).length,5392);assert.equal(expected.length,12);
+ assert.equal(Object.keys(org.data.entries).length,5392+Object.keys(dashboard.entries).length);assert.equal(expected.length,12);
  const shown=new Set(),originals=new Set();
  for(const [sha,oldPath,name,folder] of expected){
   const rows=db.entries.filter(e=>e.sha===sha);
@@ -69,7 +69,7 @@ await test('all Airbag and SRS SHA are covered by unique, reasoned display entri
  assert.equal(generatedEntries.size,5380);
  for(const sha of airbagShas)assert(org.get(sha),'missing '+sha);
  const outside=[...Object.keys(org.data.entries)].filter(sha=>!airbagShas.has(sha));
- assert.equal(outside.length,9,'only the nine non-Airbag approved entries stay outside');
+ assert.equal(outside.length,9+Object.keys(dashboard.entries).length,'only the nine approved and dashboard entries stay outside Airbag');
  const display=new Map(),folders=new Set();
  for(const e of airbagEntries){
   const item=org.get(e.sha),name=e.path.split('/').at(-1).replace(/\.cal$/i,'');
@@ -91,7 +91,43 @@ await test('all Airbag and SRS SHA are covered by unique, reasoned display entri
  for(const brand of ['Hyundai','Infiniti','Chery','Pontiac'])assert(folders.has('Подушки безопасности/'+brand),brand);
  assert.equal(folders.size,51,'50 brands plus Неуточнённые');
  assert.equal(org.data.airbag_report,'reports/catalog-organization-airbag-srs-2026-11-04.md');
+ assert.equal(org.data.dashboard_report,'reports/catalog-organization-dashboard-2026-11-04.md');
 });
+await test('dashboard source paths are covered once, while Car ECU/Immo keep their own rules',()=>{
+ const report=require('../reports/catalog-organization-dashboard-2026-11-04.json');
+ assert.equal(Object.keys(dashboard.entries).length,report.totals.unique_sha);
+ const selected=db.entries.filter(e=>e.ext==='cal'&&(
+  e.path.startsWith('Calculators/Dashboard/')||
+  e.path.startsWith('Calculators/I/')||
+  e.path.startsWith('Calculators/I_ok/')||
+  /\/Dash\b/i.test(e.path)&&e.path.startsWith('Calculators/Peugeot/')
+ ));
+ const carOnly=new Set(report.car_only_selected_paths);
+ for(const e of selected)assert(org.get(e.sha),'dashboard path is mapped '+e.path);
+ for(const e of db.entries.filter(e=>e.ext==='cal'&&carOnly.has(e.path)))assert(org.get(e.sha),'confirmed Car dashboard is mapped '+e.path);
+ const display=new Set();
+ for(const [sha,item] of Object.entries(dashboard.entries)){
+  assert(item.folder.startsWith('Приборные панели/'),item.folder);
+  assert(org.get(sha),sha);
+  if(item.folder.endsWith('/Неуточнённые'))assert(item.reason&&item.reason.length<240,sha);
+  else assert(!item.reason&&/ — /.test(item.name),sha);
+  const key=(item.folder+'/'+item.name).toLowerCase();
+  assert(!display.has(key),'dashboard display collision '+key);display.add(key);
+ }
+ for(const path of [
+  'Calculators/Car/Ford/Mondeo ECU TMS 370 4C.cal',
+  'Calculators/Car/Daihatsu/Move v1.cal',
+  'Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal',
+  'Calculators/Car/Ford/Ka  Immo 7701 4C.cal'
+ ]){
+  const e=db.entries.find(item=>item.path===path);assert(e,path);
+  assert.equal(org.get(e.sha),null,'non-dashboard Car entry must not be mapped as a panel '+path);
+  assert(org.matches(e,'car'),'old path search still works '+path);
+ }
+ const sample=selected.find(e=>org.get(e.sha)&&!org.get(e.sha).reason);
+ assert(org.matches(sample,org.title(sample)),'new dashboard name is searchable');
+});
+
 await test('every approved SHA stays its own calculator; sibling versions are not merged',()=>{
  const groups=scope.calculatorGroups(db.entries),bySha=new Map(groups.map(g=>[g.e.sha,g]));
  for(const [sha] of expected){const g=bySha.get(sha);assert(g,sha);assert.equal(g.aliases.length,1,sha);}
@@ -181,6 +217,33 @@ await test('sample Airbag and SRS CAL export original names, bytes and show ambi
  assert(ambiguous,'an ambiguous entry exists');run('select(entries.find(e=>e.sha==='+JSON.stringify(ambiguous.sha)+'))');
  assert(el('calcPath').textContent.includes('Причина:'),'the reason is shown');assert.equal(el('calcTitle').textContent,org.title(ambiguous));
 });
+await test('dashboard CALs keep original names, paths, bytes and section grouping',async()=>{
+ const rows=db.entries.filter(e=>e.ext==='cal'&&e.path.startsWith('Calculators/Dashboard/'));
+ const sample=rows.filter((_,index)=>index%317===0);
+ for(const e of sample){
+  const item=org.get(e.sha);assert(item,'mapped dashboard '+e.path);
+  run('select(entries.find(e=>e.sha==='+JSON.stringify(e.sha)+'))');
+  assert.equal(el('calcTitle').textContent,item.name,e.path);
+  assert(el('calcPath').textContent.includes(e.path),'original path '+e.path);
+  assert(el('calcPath').textContent.includes('Раздел: '+item.folder),'folder '+e.path);
+  doc.downloads.length=0;await el('exportCal').click();
+  const download=doc.downloads.at(-1);
+  assert.equal(download.name,e.path.split('/').at(-1),'export name '+e.path);
+  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[e.sha],'base64'),'export bytes '+e.path);
+ }
+ const ambiguous=rows.find(e=>org.get(e.sha)?.reason);assert(ambiguous,'dashboard ambiguity exists');
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(ambiguous.sha)+'))');
+ assert(el('calcPath').textContent.includes('Причина:'),'dashboard reason is visible');
+ const folders=[...new Set(Object.values(dashboard.entries).map(item=>item.folder))];
+ const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Приборные панели/')).length;
+ run("expandedFolders.clear();catalogScope='Приборные панели';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
+ const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
+ assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all dashboard calculators are shown once');
+ el('search').value='приборные панели';run('searchPage=0;renderCatalog()');
+ assert(el('searchPager').textContent.includes(sectionCount+' · 1/'),'dashboard folder search covers the section');
+ el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
+});
+
 await test('a search row shows the new name plus the old path and opens the same entry',()=>{
  el('search').value='Skoda Fabia 2006 — декриптор EEPROM 93C86';run('searchPage=0;renderCatalog()');
  let rows=el('tree').children.filter(c=>c.className.startsWith('fileItem'));
