@@ -36,7 +36,7 @@ test('Byte mismatch flags are bounded, independent annotations and clone transac
 });
 test('Unreviewed broken sources remain rejected',()=>{
  for(const text of ['Size(1,1);Form{}OnApply{}}','Size(1,1);Form{}OnApply{@0=(1+2;}','Size(1,1);Form{}OnApply{missing=1;}','Size(1,1);Form{}OnApply{}Form{}OnApply{}'])assert.throws(()=>S.parse(Buffer.from(text)));
- for(const sha of ['de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e','558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c'])assert.throws(()=>program(sha));
+ for(const sha of ['17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a','4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac'])assert.throws(()=>program(sha));
 });
 test('Known inconsistent source writers stay blocked while reader annotations remain available',()=>{
  for(const sha of ['5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be','3a0a0f5ca9f9f754c995da64ab6675914e4e306137d0023d92ac5fc2b047d32b','ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520']){const p=E.parse(raw(sha),{sha}),input=new Uint8Array(1024),v=new E.VM(p,input).transaction('show').vm;assert.equal(p.partial,true);assert.throws(()=>v.transaction('apply'),/Запись заблокирована/);assert.deepEqual(v.buffer,input);}

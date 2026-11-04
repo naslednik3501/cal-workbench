@@ -1,0 +1,50 @@
+[
+  {
+    "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+    "bytes": 3138,
+    "paths": [
+      "Calculators/Dashboard/Isuzu/A092 93C46.cal",
+      "Calculators/Car/I/Isuzu/A092 93C46.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 51)",
+    "profile": [
+      3138,
+      63524,
+      5
+    ],
+    "base": 8,
+    "size": 128
+  },
+  {
+    "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+    "bytes": 3164,
+    "paths": [
+      "Calculators/Dashboard/Hyundai/Sonata VI 93C66.cal",
+      "Calculators/Car/H/Hyundai/S/Sonata VI 93C66.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 51)",
+    "profile": [
+      3164,
+      58384,
+      5
+    ],
+    "base": 98,
+    "size": 512
+  },
+  {
+    "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+    "bytes": 3609,
+    "paths": [
+      "Calculators/Dashboard/Honda/Accord denso 93C46.cal",
+      "Calculators/Car/H/Honda/A/Accord denso 93C46.cal"
+    ],
+    "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 59)",
+    "profile": [
+      3609,
+      14572,
+      5
+    ],
+    "base": 8,
+    "size": 128
+  }
+]

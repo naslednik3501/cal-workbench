@@ -1,0 +1,697 @@
+{
+  "scope": "Only the assigned 60 SHA; no re-audit of the working database",
+  "initial": 60,
+  "restored": 33,
+  "originalHandlers": 19,
+  "readerOnly": 14,
+  "blocked": 27,
+  "files": [
+    {
+      "sha": "18067ef1fb0393e355af0d0e9e0e81106ce18849f91916981bda772807331bb4",
+      "bytes": 3450,
+      "paths": [
+        "Calculators/Synchronization/Mazda/Mazda 3 Dash.cal",
+        "Calculators/OTHER/Synchronization/Mazda/Mazda 3 Dash.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 97)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 97)",
+      "reason": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "next": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке."
+    },
+    {
+      "sha": "de9adb817e522093fdac9f8a841cc1430461110abf2751d11ced40bb1b664d3e",
+      "bytes": 47555,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "af87798d2870aad676984920b492d72f8427ef304ff21014477e24217c390b90",
+      "bytes": 47557,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3272.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "97a93a56215f7d5bd60a4b86b25c1793bfb02a8dd3b01160a86a44593a0c9bb5",
+      "bytes": 47567,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "3fe02b9bb8a1d59c3cf562a33fc0deb44b7fb7e37b82e2cad075d761f6f7d23f",
+      "bytes": 47570,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta  24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "e5e921a649aa76fef1c8f055c713bebbcefbe056ed286242e0f8255a10dbda7c",
+      "bytes": 47315,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal",
+        "Calculators/Car/V/Volkswagen/VW Jetta 24C32 crypto Micronas 3297G.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 263)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "fabf6b54e364d707d6df4510f7950deea097059336e5c477f3365e5357e73742",
+      "bytes": 47568,
+      "paths": [
+        "Calculators/Dashboard/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/V/Volkswagen/VW Cady 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "bytes": 6524,
+      "paths": [
+        "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal",
+        "Calculators/Car/M/Mitsubishi/Pajero 93C66.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось ), найдено ( (строка 36)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось ), найдено ( (строка 36)",
+      "reason": "В OnShow используется @Var(5+1): Var не является объявленным регистром, переменной или известной функцией. Рядом есть отличающееся @(Var5+1).",
+      "next": "Нужен авторский вариант/байткод, подтверждающий адрес; не заменять Var на Var5 по догадке."
+    },
+    {
+      "sha": "e500b7532dd82cc429a177c26ed66ab2ab5cd32af52661de94a050c404ac5537",
+      "bytes": 3138,
+      "paths": [
+        "Calculators/Dashboard/Isuzu/A092 93C46.cal",
+        "Calculators/Car/I/Isuzu/A092 93C46.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 51)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "56fd7927eacabb99060112a83d30c31f70ed7798ed1664c62671a6d54c7f83cc",
+      "bytes": 3164,
+      "paths": [
+        "Calculators/Dashboard/Hyundai/Sonata VI 93C66.cal",
+        "Calculators/Car/H/Hyundai/S/Sonata VI 93C66.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 51)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "e7fd2460972d2741a612709424218851a097a2d236f371cc41605cc9ae219ca6",
+      "bytes": 2892,
+      "paths": [
+        "Calculators/Dashboard/Hyundai/Hyundai Accent new  2011 24c16.cal",
+        "Calculators/Car/H/Hyundai/A/Hyundai Accent new  2011 24c16.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 123)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "558b8b91314f9f5ee85113f291d3036db24aa43c022428dc3700e5d9a1aac88c",
+      "bytes": 2245,
+      "paths": [
+        "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "e4078a63ad3b0dc2c2bfd46f787632ebf518ed2ce4b88cc7a7631c0e660f3c4c",
+      "bytes": 2255,
+      "paths": [
+        "Calculators/Dashboard/Audi/A3 VDO 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/A3 VDO 93C86 Crypto.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3",
+      "bytes": 2250,
+      "paths": [
+        "Calculators/Dashboard/Audi/A8 VDO 93C86 Crypto 2.cal",
+        "Calculators/Car/A/Audi/A8 VDO 93C86 Crypto 2.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное поле form (строка 5)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+      "bytes": 2083,
+      "paths": [
+        "Calculators/Dashboard/Subaru/Tribeka 93c66.cal",
+        "Calculators/Car/S/Subaru/Tribeka 93c66.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 100)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 100)",
+      "reason": "Помимо лишней скобки, исходник использует Miles, но объявление Digit(Miles) закомментировано.",
+      "next": "Нужен авторский вариант с полем Miles или точная семантика отсутствующего поля."
+    },
+    {
+      "sha": "95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160",
+      "bytes": 47559,
+      "paths": [
+        "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272.cal",
+        "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314",
+      "bytes": 47567,
+      "paths": [
+        "Calculators/Dashboard/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal",
+        "Calculators/Car/S/Skoda/Skoda 24C32 crypto Micronas 3272 var2.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено eof (строка 267)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "reason": "Восстановлено чтение. Запись заблокирована: приоритет Var6 >> 16 + Var6 в оригинальном iProg не подтверждён; нужен точный скомпилированный аналог, правила языка или эталон результата. Исходные операции сохранены.",
+      "next": "Нужны правила приоритета iProg, точный скомпилированный аналог или эталон записи; T-012 не возобновлять самостоятельно."
+    },
+    {
+      "sha": "d20c466d1b53a7c8396c85c3f386a9b94382d0e32f2e1f5e13de96039f85a95b",
+      "bytes": 3830,
+      "paths": [
+        "Calculators/Dashboard/Honda/Ridgeline 9S12H256 miles.cal",
+        "Calculators/Car/H/Honda/Ridgeline 9S12H256 miles.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "reason": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "next": "Нужен исправленный оригинал/эталон Honda для значений от 4096*Constant."
+    },
+    {
+      "sha": "21192efbfa431fc5f303357ce13af1eb3c32de2e7ab70715f36d1a35b752652d",
+      "bytes": 3824,
+      "paths": [
+        "Calculators/Dashboard/Honda/Ridgeline 9S12H256 km.cal",
+        "Calculators/Car/H/Honda/Ridgeline 9S12H256 km.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+      "status": "reader-writer-blocked",
+      "currentError": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "reason": "Восстановлено чтение. Запись заблокирована: оригинальный CAL пишет только 12 бит значения Distance / Constant, хотя допускает больший пробег. При значении 4096 * Constant повторное чтение даёт ноль. Нужен исправленный оригинал или эталон; алгоритм не изменён.",
+      "next": "Нужен исправленный оригинал/эталон Honda для значений от 4096*Constant."
+    },
+    {
+      "sha": "3297c7f9c749580a2e1f1b6d0bbfeb68ef18029a92ca41996e297e7938b5cc04",
+      "bytes": 3609,
+      "paths": [
+        "Calculators/Dashboard/Honda/Accord denso 93C46.cal",
+        "Calculators/Car/H/Honda/A/Accord denso 93C46.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось ), найдено ; (строка 59)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "bytes": 5741,
+      "paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal",
+        "Calculators/OTHER/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 82)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: else без соответствующего if (строка 75)",
+      "reason": "OnShow имеет закрытый if, затем независимые присваивания, затем лишнюю } и несвязанный else. Выбор ветки и границ if неоднозначен.",
+      "next": "Нужен корректный авторский OnShow/байткод, подтверждающий границы ветвления. Свободная процедура else теперь явно запрещена."
+    },
+    {
+      "sha": "2fe29b54c997f905fa737b0690ec881253eb7c0a28ba8c7750e6c649227abf00",
+      "bytes": 1669,
+      "paths": [
+        "Calculators/CarRadio/Mitsubishi/CT-903 CD.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "7b980a37403c0f20f40bdf22a41c95f162d65bb257cd51d2ad7659a081d6f56f",
+      "bytes": 1680,
+      "paths": [
+        "Calculators/CarRadio/Mitsubishi/CR-902 RDS.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "a3fb4ac79b80993d6bdc9ca5a4014950dc4dd4407a21bcdb644e9db9a9447a68",
+      "bytes": 1672,
+      "paths": [
+        "Calculators/CarRadio/Mitsubishi/CR-906.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "268a83695dcbb8385b8524686da5835edb994a0e6566e521f3a6d49d68502e43",
+      "bytes": 1683,
+      "paths": [
+        "Calculators/CarRadio/Mitsubishi/SC-805.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "e0098cff725446d55d378be2be016f51a8684ddcce6b3d4ab57d625a12e174d0",
+      "bytes": 1679,
+      "paths": [
+        "Calculators/CarRadio/Mitsubishi/SC-802.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 56)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "2e9f8a7e81f06ff7063bd5aa641d80b2b12e9ffb61355a93a651dee6c1eb0ee6",
+      "bytes": 2599,
+      "paths": [
+        "Calculators/CarRadio/Alpine/BENZ AUDIO 10 CD  MF2910.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "22232dd142725b2fd8f774bbcbb7a838fbfb6bce6740363e89b25f45212ac3fe",
+      "bytes": 2321,
+      "paths": [
+        "Calculators/CarRadio/Renault/RENRDW330-15.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "ab663457a6c78d268ba7a80757ab334465abdae08fe8e73b09a3779ea66c0fe2",
+      "bytes": 2342,
+      "paths": [
+        "Calculators/CarRadio/Renault/RENRNC 471-16.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 69)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "1df2e9b3810a45b62ea2388aa6c3367e6746ae7c8be6d534a822b3ad736047e1",
+      "bytes": 2328,
+      "paths": [
+        "Calculators/CarRadio/Mersedes/BENZ SOUND 5 BE7076.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 92)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 92)",
+      "reason": "Помимо лишней скобки, выражение @0x0D=ff содержит неизвестное имя ff; это не числовой литерал 0xFF.",
+      "next": "Нужен исправленный авторский CAL или подтверждённый байткод; не заменять идентификатор литералом автоматически."
+    },
+    {
+      "sha": "4f7a042e23ab9ae4cd70f5e2daa26160bc6152d08786fa9e8b9a118814cd59ac",
+      "bytes": 2072,
+      "paths": [
+        "Calculators/CarRadio/Opel/HONDA 39101-SND-A510-M1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено { (строка 43)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено { (строка 43)",
+      "reason": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "next": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления."
+    },
+    {
+      "sha": "6422ccbc2c12235c38dd4dff37b5904f1e793753c9c3235dc847e94feba9b111",
+      "bytes": 4110,
+      "paths": [
+        "Calculators/CarRadio/Iveco/DAILY CD BP7005 no cancheck.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 107)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "d17efa0ff5e0fef14f30509a59ccd9dcb888908a2a4b2141f63a99ef513c06ef",
+      "bytes": 3118,
+      "paths": [
+        "Calculators/CarRadio/Becker/MEXICO 2000  BE1430.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено { (строка 78)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено { (строка 78)",
+      "reason": "В OnApply внутри if размещён OnShow { ... } как вложенное объявление обработчика; требуется неизвестная семантика определения/вызова.",
+      "next": "Нужен исправленный исходник или точный скомпилированный аналог; не превращать определение в вызов."
+    },
+    {
+      "sha": "57f9a9c0d0f48aa6325bee9eda1eaa92e6b318e8287f511f5cac5daa35ed7cb1",
+      "bytes": 2134,
+      "paths": [
+        "Calculators/CarRadio/Becker/MEXICO CD  BE0876.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное имя resetcounter",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: неизвестное имя resetcounter",
+      "reason": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "next": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля."
+    },
+    {
+      "sha": "96446c8b29740b927d08c27bb78e652428a267c4d3305bde0ef89a49e3237a4e",
+      "bytes": 2116,
+      "paths": [
+        "Calculators/CarRadio/Becker/MEXICO CD  BE0879.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное имя resetcounter",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: неизвестное имя resetcounter",
+      "reason": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "next": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля."
+    },
+    {
+      "sha": "db8b519ba516ef497cc138332ca2181b9665033982449b9bea5cd34d55417dd0",
+      "bytes": 2469,
+      "paths": [
+        "Calculators/CarRadio/Delco/LICEO  SEZ4Z1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 42)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "08143f0fa059905766fd1758109dddce5a0695187f61c82372033151096ab130",
+      "bytes": 1675,
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 3251 RDS BP5500 v2.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное имя resetcounter",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: неизвестное имя resetcounter",
+      "reason": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "next": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля."
+    },
+    {
+      "sha": "17f2ee835b801ebd07e3286a685c2832041044692154864e0013bf8ee537ce1e",
+      "bytes": 1664,
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 4251 BP5510 v2.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное имя resetcounter",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: неизвестное имя resetcounter",
+      "reason": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "next": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля."
+    },
+    {
+      "sha": "5ed4c018a8fd1914ba7b2fb2640563028b824440572f43d665664b8834aebc22",
+      "bytes": 1663,
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/ACR 4250 BP5511 v2.cal"
+      ],
+      "baselineError": "Текстовый CAL: неизвестное имя resetcounter",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: неизвестное имя resetcounter",
+      "reason": "В оригинале закомментирован CheckBox ResetCounter, но OnShow/OnApply обращаются к этому отсутствующему полю.",
+      "next": "Нужен исправленный авторский CAL либо описание типа/начального значения/поведения отсутствующего поля."
+    },
+    {
+      "sha": "a075634d3d0456fa57f691a511249ed7a1492f8447d840e644f81f1c304e0e5e",
+      "bytes": 3089,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/CQ-JH2810A.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "d1458949593102a4e5398d433d4cfd2ec939c9e220a3fe757441f6b4757870e7",
+      "bytes": 3076,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/CQ-JH8161Z.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "147640b99c86bec7981c5d0ff2e7df29d02068545d16961fbab71264672317fe",
+      "bytes": 3110,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1TN0  6CD.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "7fa97edc39c34a201da7efbd4ca735fd1958bc88b7550e81046c8fcf8cfc8996",
+      "bytes": 3072,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/CQ-EH8280A.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "6e1ed379e3588b9ca4c37d99656d4c3049895aed74fa815adffad7157128a632",
+      "bytes": 3099,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1SA3.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "7f26881c5f205f87ec9e6fdc25eb0769a30de677ae9e4c5eb38ba7567c90ef30",
+      "bytes": 3077,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1XP1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "728ed75959a18737f982fa38918375cba19a74cf37dd83f0947f9c90bd3b1c2e",
+      "bytes": 4182,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/BENZ BOSE.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "reason": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "next": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления."
+    },
+    {
+      "sha": "8eff29d8cba9423e5e53935e97920ada9bcfe2f4847c61513dd7401b2b742805",
+      "bytes": 4191,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9926.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "reason": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "next": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления."
+    },
+    {
+      "sha": "e2ea7cb94f91554d6ec5526772dd974bf0f0dc6a22a6fed16e0ea63e81d83a22",
+      "bytes": 4195,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/BENZ AUDIO 5  PA9715.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено { (строка 88)",
+      "reason": "Несвязанный else: между завершённым if и else стоят самостоятельные присваивания. Для восстановления пришлось бы выбирать область ветви.",
+      "next": "Нужен синтаксически корректный авторский вариант/байткод с подтверждёнными границами ветвления."
+    },
+    {
+      "sha": "09571dab29212bcea7a1494f5d93fe67f8127af1df7b62b9c70df76d2d4eabd1",
+      "bytes": 3082,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1XM1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "75e77b42f753f65289de6f0be1aaf989a9217c2de5394d4a469f941500dc4c13",
+      "bytes": 3098,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1TN0 6CD  CQ-EH8160AK.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "3645acde20c0a92b465a7ebc47849908d1d7615706893aab674fcd1aafb393f8",
+      "bytes": 3095,
+      "paths": [
+        "Calculators/CarRadio/Matsushita/1SC0.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось =, найдено ( (строка 79)",
+      "reason": "Склеены две самостоятельные Form/OnShow/OnApply с повторными полями и обработчиками. Выбор части изменил бы исходник.",
+      "next": "Нужен отдельный авторский CAL либо правило выбора версии; обе части сохраняются."
+    },
+    {
+      "sha": "85adda1d779e9f0c1b7ec32a092857992b505d3bd699ed4fa7cb843046a09d69",
+      "bytes": 3467,
+      "paths": [
+        "Calculators/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Fusion/Fusion TDCI Dash.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "reason": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "next": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке."
+    },
+    {
+      "sha": "2e4a084f9ea3f690c634ce4c847a26df1a645f2044b4d803e6d11fcd9d789583",
+      "bytes": 3465,
+      "paths": [
+        "Calculators/Synchronization/Ford/Focus/Focus TDCI Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Focus/Focus TDCI Dash.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "reason": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "next": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке."
+    },
+    {
+      "sha": "21f106642dbe670ea1be2929bd405cfb2b27e831ce8f62e4af8b8641c9fe7f4a",
+      "bytes": 3464,
+      "paths": [
+        "Calculators/Synchronization/Ford/Connect/Connect Dash.cal",
+        "Calculators/OTHER/Synchronization/Ford/Connect/Connect Dash.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "status": "blocked",
+      "currentError": "Текстовый CAL: ожидалось id, найдено } (строка 93)",
+      "reason": "Помимо лишней верхнеуровневой скобки, оригинал обращается к отсутствующему message1 (включая свойства Bold/Color).",
+      "next": "Нужен исправленный оригинал с определённым message1; не подменять существующие message/message2 по догадке."
+    },
+    {
+      "sha": "40fd400d053de6d366f947364d07daaeee51a6931bf704fd2ca52de690448ebf",
+      "bytes": 15044,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Leganza v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 204)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "78ff5aa6157668fb144f6042cb2f3e2b5eefb818a83da6ad0b9c88d226a3becf",
+      "bytes": 15024,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Espero v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 203)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "db469036905e3875444fa6e3d0f3fd4413c72dfb8a0171ce38147680aebd7434",
+      "bytes": 15010,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Nexia v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "64e12bb4c92b08b1ea9975f6e081d8c3d8b46c34d167898e0ace488c3635ef25",
+      "bytes": 15012,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Nubira v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "193209b8cc7a72196a8b84fb01a0dee20b06e875f68494596397d0b372394060",
+      "bytes": 15010,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Matiz v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+      "status": "original-handlers-restored"
+    },
+    {
+      "sha": "9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07",
+      "bytes": 15015,
+      "paths": [
+        "Calculators/Immo/Car/Daewoo/Lanos v1.cal"
+      ],
+      "baselineError": "Текстовый CAL: ожидалось id, найдено } (строка 202)",
+      "status": "original-handlers-restored"
+    }
+  ]
+}
