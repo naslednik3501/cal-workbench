@@ -15,8 +15,10 @@ at other catalog paths share the same exact control binding. Generic basename
 lookup is never used at runtime. Hardware wiring and unidentified pictures are
 not included in this restoration.
 
-The current reference inventory still contains 1,600 unresolved occurrences,
-including 70 empty picture controls and 85 whitespace-only controls. Missing and
+The original reference inventory contained 1,600 unresolved occurrences,
+including 70 empty picture controls and 85 whitespace-only controls. After the
+T-001 address rules, 20 records are hardware-only (18 wiring links and two path
+duplicates of one pinout element), leaving 1,580 open occurrences. Missing and
 ambiguous original images are not replaced by guessed photographs. This number is
 an image-reference count, not a count of broken calculation algorithms.
 Per-reference machine-readable remainder:

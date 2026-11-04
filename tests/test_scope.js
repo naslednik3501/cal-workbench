@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const P=require('../catalog-scope.js');
 const a='a'.repeat(64), b='b'.repeat(64), c='c'.repeat(64);
-const registry=()=>({schema:1,default_action:'keep',source_repository:'owner/private',source_ref:'1'.repeat(40),decisions:{},resource_rules:[]});
+const registry=()=>({schema:1,default_action:'keep',source_repository:'owner/private',source_ref:'1'.repeat(40),decisions:{},resource_rules:[],element_rules:[]});
 const decision=(hash,kind='standalone_program')=>({category:'hardware_only',kind,action:kind==='resource'?'keep':'exclude',date:'2026-11-03',reason:'synthetic reviewed evidence',evidence:{report:'synthetic'},original:{sha256_verified:true,object_path:`objects/${hash.slice(0,2)}/${hash}.json`}});
 const entry=(sha,path,ext='cal')=>({sha,path,ext,size:1});
 let count=0;function test(name,fn){fn();count++;console.log('PASS '+name);}
@@ -30,6 +30,18 @@ test('Resource suppression requires verified exact CAL/control/resource relation
  assert.equal(P.activeCatalog(db,r).entries.length,4);
  r.resource_rules[0].mapping_verified=false;assert.throws(()=>P.validate(r));
  r.resource_rules[0].mapping_verified=true;r.decisions[c].original.object_path='wrong';assert.throws(()=>P.validate(r));
+});
+test('Form element suppression requires exact CAL/type/id and never removes a CAL',()=>{
+ const r=registry();r.element_rules.push({cal_sha:a,element_type:'L',element_id:2,reference:'hardware note',action:'exclude',mapping_verified:true,evidence:{report:'synthetic'}});
+ P.validate(r);assert(P.elementExcluded(a,'L',2,r));assert(!P.elementExcluded(a,'L',3,r));assert(!P.elementExcluded(b,'L',2,r));assert.equal(P.activeCatalog(db,r).entries.length,4);
+ for(const mutate of [x=>x.element_type='B',x=>x.element_id=true,x=>x.mapping_verified=false,x=>x.reference=' ',x=>x.element_type='P']){
+  const bad=registry();bad.element_rules=[{...r.element_rules[0]}];mutate(bad.element_rules[0]);assert.throws(()=>P.validate(bad));
+ }
+ const duplicate=registry();duplicate.element_rules=[{...r.element_rules[0]},{...r.element_rules[0]}];assert.throws(()=>P.validate(duplicate));
+ const group=registry();group.element_rules=[{cal_sha:a,element_type:'G',element_id:1,reference:'warning',action:'exclude',mapping_verified:true,evidence:{report:'synthetic'}}];assert.throws(()=>P.validate(group));
+ group.element_rules[0].evidence.children=[{id:2,type:'L',text:'hardware'}];P.validate(group);assert(P.elementExcluded(a,'G',1,group));
+ const picture=registry();picture.element_rules=[{cal_sha:a,element_type:'P',element_id:1,reference:'24c16.png',action:'exclude',mapping_verified:true,evidence:{report:'synthetic'}}];assert.throws(()=>P.validate(picture));
+ picture.element_rules[0].evidence.candidate_images=[{sha256:c,category:'hardware_wiring',path:'EEPROM/24C16.png'}];P.validate(picture);assert(P.elementExcluded(a,'P',1,picture));
 });
 test('Checked-in registry and generated browser data agree',()=>{
  const context=vm.createContext({});vm.runInContext(fs.readFileSync(require.resolve('../scope-data.js'),'utf8'),context);
@@ -59,6 +71,20 @@ test('Real registry keeps every file and hides only verified hardware resources 
   assert.equal(P.resourceRule((rule.cal_sha[0]==='0'?'1':'0')+rule.cal_sha.slice(1),rule.control_id),null);
   assert(P.resourceExcluded(rule.cal_sha,rule.control_id,rule.resource_sha));
   assert(!P.resourceExcluded(rule.cal_sha,rule.control_id+1,rule.resource_sha));
+ }
+});
+test('Real form rules are address-only and cover the reviewed hardware elements',()=>{
+ assert.equal(P.registry.element_rules.length,145);
+ assert.equal(new Set(P.registry.element_rules.map(r=>r.cal_sha)).size,134);
+ for(const rule of P.registry.element_rules){
+  assert.equal(rule.action,'exclude');assert.equal(rule.mapping_verified,true);
+  assert(rule.evidence.report.endsWith('reports/T-001-hardware-wiring-2026-11-04.md'));
+  assert(P.elementRule(rule.cal_sha,rule.element_type,rule.element_id)===rule);
+  assert.equal(P.elementRule(rule.cal_sha,rule.element_type,999),null);
+  assert.equal(P.elementRule((rule.cal_sha[0]==='0'?'1':'0')+rule.cal_sha.slice(1),rule.element_type,rule.element_id),null);
+  assert.equal(P.isActive({sha:rule.cal_sha}),true);
+  if(rule.element_type==='G')assert(rule.evidence.children.length>0);
+  if(rule.element_type==='P')assert(rule.evidence.candidate_images.length>0);
  }
 });
 test('Registry preserves every current path for each reviewed CAL SHA',()=>{

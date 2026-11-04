@@ -109,6 +109,6 @@ test('Wiring image bytes are absent from the working catalog and CAL versions st
   assert.equal(CAL_CATALOG.entries.filter(e=>e.sha===rule.cal_sha&&e.ext==='cal').length,2);
   assert(policy.isActive({sha:rule.cal_sha}));
  }
- assert.match(fs.readFileSync(path.join(root,'app.js'),'utf8'),/function picture\(o\)\{if\(scope\.resourceRule\(selected\.sha,o\.id\)\)return null;/);
+ assert.match(fs.readFileSync(path.join(root,'app.js'),'utf8'),/function picture\(o\)\{if\(scope\.elementRule\(selected\.sha,'P',o\.id\)\|\|scope\.resourceRule\(selected\.sha,o\.id\)\)return null;/);
 });
 console.log(JSON.stringify({passed,failed:0,records:records.length,rules:rules.length}));

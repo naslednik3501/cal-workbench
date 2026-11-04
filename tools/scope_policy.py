@@ -10,6 +10,7 @@ def validate_registry(registry):
     if (registry.get('schema') != 1 or registry.get('default_action') != 'keep'
             or not isinstance(registry.get('decisions'), dict)
             or not isinstance(registry.get('resource_rules'), list)
+            or not isinstance(registry.get('element_rules'), list)
             or not registry.get('source_repository') or not is_sha(registry.get('source_ref'), 40)):
         raise ValueError('Invalid scope registry')
     for sha, d in registry['decisions'].items():
@@ -37,6 +38,22 @@ def validate_registry(registry):
                 or original.get('sha256_verified') is not True
                 or original.get('object_path') != f'objects/{resource[:2]}/{resource}.json'):
             raise ValueError('Unverified resource original')
+    seen_elements = set()
+    for rule in registry['element_rules']:
+        if (not is_sha(rule.get('cal_sha')) or rule.get('element_type') not in ('G', 'L', 'P')
+                or type(rule.get('element_id')) is not int or rule['element_id'] < 0
+                or rule.get('action') != 'exclude' or rule.get('mapping_verified') is not True
+                or not isinstance(rule.get('reference'), str) or not rule['reference'].strip()
+                or not rule.get('evidence', {}).get('report')):
+            raise ValueError('Unverified form element')
+        key = (rule['cal_sha'], rule['element_type'], rule['element_id'])
+        if key in seen_elements:
+            raise ValueError('Duplicate form element rule')
+        seen_elements.add(key)
+        if rule['element_type'] == 'G' and not rule['evidence'].get('children'):
+            raise ValueError('Group rule needs exact child evidence')
+        if rule['element_type'] == 'P' and not rule['evidence'].get('candidate_images'):
+            raise ValueError('Picture rule needs candidate evidence')
     return registry
 
 
