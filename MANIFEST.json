@@ -1607,6 +1607,11 @@
       "sha256": "e14dae13c684a6d098559c1f6f2d0c6c137584ec5d3247bda3d841dba0a7ffc3"
     },
     {
+      "path": "reports/final-app-validation-2026-11-04.md",
+      "bytes": 5765,
+      "sha256": "14b0a262ead4518c7d3236bfeec40bcfe5e5babea5e21aa96f3bdbaf1872f162"
+    },
+    {
       "path": "reports/image-reference-groups-2026-11-02.csv",
       "bytes": 54369,
       "sha256": "313019201e482cbcfbe4c36bcf17d7c1e56d9b4d62b73f5819538e185bf692a5"
