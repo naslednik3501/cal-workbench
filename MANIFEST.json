@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 4810,
-      "sha256": "46399a61f61497e0b7a59cbc83767a624fad6c32ca00e64fc4cdc2d5dc8a5ff9"
+      "bytes": 8878,
+      "sha256": "2f5870b98aac1d0e087dd6443665e380f0d03b072c8f10a3c5033ae960ac23fd"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -1625,6 +1625,11 @@
       "path": "reports/image-visual-review-2026-11-02.csv",
       "bytes": 76725,
       "sha256": "81d28cdbe361f77ab10edfbf04d6281512f0f86c3afaec7e408fb95f5f76d759"
+    },
+    {
+      "path": "reports/known-limitations.json",
+      "bytes": 139595,
+      "sha256": "3ca811dc4793f1681d0abfa225c67964adc414464d7e687b6f666722a04dc14c"
     },
     {
       "path": "reports/source-comparison-2026-11-02.json",
