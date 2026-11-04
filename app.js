@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id),E=CalEngine,db=CAL_CATALOG,scope=CatalogScope;
+const $=id=>document.getElementById(id),E=CalEngine,db=CAL_CATALOG,scope=CatalogScope,org=CatalogOrganization;
 scope.validate(scope.registry);
 let entries=[...db.entries],selected=null,program=null,original=null,candidate=null,session=null,name='',digest='',offset=0,resultKind='',generation=0,searchPage=0,dirtyInputs=false;
 let catalogScope='',activeByte=null,rangeAnchor=null,userEntries=[],storageReady=false,storageSaved=false,importBusy=false,binLoading=false;
@@ -21,24 +21,27 @@ let groupedEntries=null,groupedCatalog=[],calculatorByEntry=new Map();
 function calculatorCatalog(){if(groupedEntries!==entries){groupedEntries=entries;groupedCatalog=scope.calculatorGroups(entries);calculatorByEntry=new Map();for(const g of groupedCatalog)for(const e of g.aliases)calculatorByEntry.set(e,g);}return groupedCatalog;}
 function calculatorGroup(e){calculatorCatalog();return calculatorByEntry.get(e);}
 function fileButton(e,index,full=false){
- const active=scope.sameCalculator(e,selected),g=calculatorGroup(e),b=node('button',undefined,'fileItem'+(active?' active':'')),text=node('span',e.path.split('/').at(-1)+(g.version?' · вариант '+g.version:''),'fileText');
- if(full){const q=$('search').value.trim().toLowerCase(),match=g.aliases.find(a=>a.path.toLowerCase().includes(q))||e;text.append(node('small',match.path+' · '+match.source));}
+ const active=scope.sameCalculator(e,selected),g=calculatorGroup(e),b=node('button',undefined,'fileItem'+(active?' active':'')),text=node('span',org.title(e)+(g.version?' · вариант '+g.version:''),'fileText');
+ if(full){const q=$('search').value.trim().toLowerCase(),match=g.aliases.find(a=>org.matches(a,q))||e;text.append(node('small',match.path+' · '+match.source));}
  b.append(icon('file'),text);b.title=e.path+(g.aliases.length>1?' · Исходных копий: '+g.aliases.length:'');b.dataset.index=index;b.setAttribute('aria-pressed',String(active));b.onclick=()=>select(e);return b;
 }
 function showCalculatorPaths(entry){
- const target=$('calcPath'),group=calculatorGroup(entry),aliases=group?.aliases||[entry];target.replaceChildren(node('span',entry.path));
+ const target=$('calcPath'),group=calculatorGroup(entry),aliases=group?.aliases||[entry],item=org.get(entry.sha);target.replaceChildren(node('span',item?'Раздел: '+item.folder:entry.path));
+ // The thematic name is display-only: the original path stays the alias and the resource key.
+ if(item)target.append(node('br'),node('span','Исходный путь: '+entry.path),node('br'),node('span','Исходный файл не перемещён и не изменён.','muted small'));
+ const hints=org.hints(entry);if(hints.length)target.append(node('br'),node('span','Поисковые подсказки: '+hints.join(', ')+'. Марка формой CAL не подтверждена.','muted small'));
  if(group?.version)target.append(node('br'),node('span','Вариант '+group.version+' из '+group.versionCount+': отдельно сохранённые файлы с одинаковым именем.'));
  if(aliases.length>1){target.append(node('br'),node('span','Одинаковый CAL в источниках: '+aliases.length+'. Пути сохранены:'));
   for(const alias of aliases){const button=node('button',alias.path+' · '+alias.source,'smallButton');button.type='button';button.disabled=alias===entry;button.onclick=()=>select(alias);target.append(node('br'),button);}
  }
 }
-function displayPath(e){return normalizePath(e.path).replace(/^Calculators\//i,'');}
+function displayPath(e){return org.displayPath(e)||normalizePath(e.path).replace(/^Calculators\//i,'');}
 function rootName(e){return displayPath(e).split('/')[0];}
 function renderCatalog(){
  $('tree').replaceChildren();$('searchPager').replaceChildren();const q=$('search').value.trim().toLowerCase();
  const cals=calculatorCatalog();$('count').textContent=cals.length.toLocaleString('ru-RU');$('count').title='Уникальные CAL; одинаковые копии объединены, исходные пути сохранены';
  $('catalogBack').hidden=!catalogScope&&!q;$('catalogLocation').textContent=q?'Результаты поиска':catalogScope||'Все разделы';
- if(q){const found=cals.filter(({aliases})=>aliases.some(e=>e.path.toLowerCase().includes(q))),total=found.length,pages=Math.max(1,Math.ceil(total/150));searchPage=Math.min(searchPage,pages-1);found.slice(searchPage*150,(searchPage+1)*150).forEach(({e,i})=>$('tree').append(fileButton(e,i,true)));if(!total)$('tree').append(node('p','Ничего не найдено.','emptyHint'));const prev=node('button','←'),next=node('button','→');prev.disabled=!searchPage;next.disabled=searchPage===pages-1;prev.onclick=()=>{searchPage--;renderCatalog();};next.onclick=()=>{searchPage++;renderCatalog();};$('searchPager').append(prev,node('span',`${total} · ${searchPage+1}/${pages}`),next);return;}
+ if(q){const found=cals.filter(({aliases})=>aliases.some(e=>org.matches(e,q))),total=found.length,pages=Math.max(1,Math.ceil(total/150));searchPage=Math.min(searchPage,pages-1);found.slice(searchPage*150,(searchPage+1)*150).forEach(({e,i})=>$('tree').append(fileButton(e,i,true)));if(!total)$('tree').append(node('p','Ничего не найдено.','emptyHint'));const prev=node('button','←'),next=node('button','→');prev.disabled=!searchPage;next.disabled=searchPage===pages-1;prev.onclick=()=>{searchPage--;renderCatalog();};next.onclick=()=>{searchPage++;renderCatalog();};$('searchPager').append(prev,node('span',`${total} · ${searchPage+1}/${pages}`),next);return;}
  const root={dirs:new Map(),files:[]};for(const {e,i} of cals){const parts=displayPath(e).split('/');let n=root;for(const d of parts.slice(0,-1)){if(!n.dirs.has(d))n.dirs.set(d,{dirs:new Map(),files:[],count:0});n=n.dirs.get(d);n.count++;}n.files.push({e,i});}
  const sorted=part=>[...part.dirs].sort((a,b)=>a[0]==='Мои калькуляторы'?1:b[0]==='Мои калькуляторы'?-1:a[0].localeCompare(b[0],'ru'));
  function fill(parent,part,prefix){for(const [key,child] of sorted(part)){const path=prefix+'/'+key,d=node('details'),summary=node('summary');summary.append(icon('folder','folderIcon'),node('span',key),node('small',String(child.count),'folderCount'));d.append(summary);let made=false;function ensure(){if(!made){made=true;fill(d,child,path);}}d.addEventListener('toggle',()=>{if(d.open){expandedFolders.add(path);ensure();}else expandedFolders.delete(path);});if(expandedFolders.has(path)){ensure();d.open=true;}parent.append(d);}for(const {e,i} of part.files)parent.append(fileButton(e,i));}
@@ -96,7 +99,7 @@ function initializeSession(){
 }
 function select(entry){
  selected=entry;program=null;session=null;dirtyInputs=false;inputs.clear();formLabels.clear();readHints.clear();clearResult();
- $('calcTitle').textContent=entry.path.split('/').at(-1);showCalculatorPaths(entry);$('calcError').hidden=true;$('formArea').replaceChildren();$('calcDescription').replaceChildren();$('compatBadge').className='pill';
+ $('calcTitle').textContent=org.title(entry);showCalculatorPaths(entry);$('calcError').hidden=true;$('formArea').replaceChildren();$('calcDescription').replaceChildren();$('compatBadge').className='pill';
  try{if(!scope.isActive(entry))throw Error('Этот файл относится к аппаратным функциям и исключён из рабочего каталога.');if(entry.ext!=='cal')throw Error('Поддерживаются только калькуляторы .cal');program=E.parse(raw(entry),{sha:entry.sha});$('compatBadge').textContent=program.writerBlockReason?'Запись заблокирована':program.partial?'Частично распознан':program.readOnly?'Чтение поддерживается':program.executable?'Формат поддерживается':'Пока не поддерживается';$('compatBadge').className='pill '+(program.executable&&!program.partial?'compat-ok':'compat-unsupported');$('compat').textContent=program.writerBlockReason?'Чтение доступно. '+program.writerBlockReason:program.partial?'Чтение доступно; обработчик записи пока не распознан. '+program.unsupported.join('; '):program.readOnly?'Исходный CAL содержит рабочий обработчик чтения; доступного обработчика записи в оригинале нет.':program.executable?'Форма и команды распознаны. Исполнение этого файла ещё не сверено с оригинальным iProg.':program.unsupported.join('; ');if(program.sourceRepairs)$('compat').textContent+=' '+program.sourceRepairs.join(' ');renderForm();log('Выбран: '+entry.path);if(program.executable)initializeSession();else{$('calcError').textContent=program.unsupported.join('; ');$('calcError').hidden=false;}}
  catch(err){$('compatBadge').textContent='Пока не поддерживается';$('compatBadge').className='pill compat-unsupported';$('compat').textContent=err.message;$('calcError').textContent=err.message;$('calcError').hidden=false;log('Калькулятор недоступен: '+err.message);}sync();
  for(const el of document.querySelectorAll('.fileItem')){const active=scope.sameCalculator(entries[Number(el.dataset.index)],entry);el.classList.toggle('active',active);el.setAttribute('aria-pressed',String(active));}

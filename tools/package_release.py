@@ -22,7 +22,8 @@ def included(path):
 files = sorted(p for p in root.rglob('*') if included(p))
 for test in ['test_source.js', 'test_preparation.js', 'test_polo.js',
              'test_source_pairs.js', 'test_binary_events.js', 'test_binary_resolution.js',
-             'test_catalog_store.js', 'test_catalog.js']:
+             'test_catalog_store.js', 'test_catalog.js',
+             'test_t016_organization.js']:
     subprocess.run(['node', str(root / 'tests' / test)], cwd=root, check=True)
 html = (root / 'index.html').read_text()
 ids = re.findall(r'\bid="([^"]+)"', html)
