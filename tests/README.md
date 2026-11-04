@@ -32,3 +32,7 @@ checks all 32 restored writers on two synthetic buffer patterns and two inputs, 
 21 variants in ten equivalent groups, preserves all 16 previously unsupported binaries,
 and verifies that read-only profiles cannot execute `OnApply`. Chromium release coverage
 includes one restored writer, one original reader and one unavailable empty calculator.
+
+## T-008 pair analysis, 2026-11-04
+
+`node tests/test_t008_pairs.js` runs `tools/analyze_t008_pairs.js` and pins the file-derived findings about the nine differing text/binary pairs (see `reports/T-008-pair-differences-2026-11-04.md`). It uses only repository contents, synthetic dumps and our own engine; it is not an original-iProg comparison and does not pin engine behaviour that may change later.

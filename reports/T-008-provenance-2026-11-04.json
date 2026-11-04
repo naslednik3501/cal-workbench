@@ -1,0 +1,80 @@
+{
+ "task": "T-008",
+ "note": "All paths at which each SHA-256 occurs in the preserved source archive. Path spelling is copied from the private index; folder names such as '╨₧╨▒╨╜╨╛╨▓╤ï' are UTF-8 Cyrillic 'Обновы' ('updates') shown through a legacy code page, kept unchanged for exact matching.",
+ "generatedFrom": "naslednik3501/iprocal-sources indexes/by-archive/8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea.jsonl (shallow clone at ee9a08fb)",
+ "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
+ "updatesFolderStatistics": {
+  "calFilesInUpdatesFolders": 49,
+  "textForm": 28,
+  "binaryForm": 21,
+  "allCalPaths": 23355,
+  "allTextForm": 1470,
+  "allBinaryForm": 21885,
+  "updatesFilesIdenticalToSameNameSibling": 14,
+  "updatesFilesDifferentFromSibling": 31,
+  "updatesFilesWithoutSibling": 4,
+  "caveat": "A folder name is a weak hint of provenance, not proof of which version is newer or correct."
+ },
+ "bySha": {
+  "2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970": [
+   "Calculators/Super B 93C86 decryptor.cal"
+  ],
+  "44156680bf2e0ca156f4a9aad90fcf3403db59800130a967df8bceeda0e4b3a9": [
+   "Calculators/Airbag/Ford/603 95 10 00.cal",
+   "Calculators/SRS/Ford/603 95 10 00.cal"
+  ],
+  "546b8214be37173aae84b0ec7e1176491c085d6319d43ecb6d4a19fde0c0c149": [
+   "Calculators/Car/S/Skoda/Fabia/Fabia 93C86 2006 decryptor.cal",
+   "Calculators/Dashboard/Skoda/Fabia/Fabia 93C86 2006 decryptor.cal"
+  ],
+  "5c6b0d755437edaf5ba8859356a465c7925f0fa40dbabd4a679381255a1f86aa": [
+   "Calculators/Airbag/Nissan/Micra/0 285 001 420.cal",
+   "Calculators/SRS/Nissan/Micra/0 285 001 420.cal"
+  ],
+  "630c85768dda42c99c4177adc59bf057e3ac168c20dbebe1c299dcd6c1454dc1": [
+   "Calculators/Car/S/Skoda/Super B 93C86 decryptor.cal",
+   "Calculators/Dashboard/Skoda/Super B 93C86 decryptor.cal"
+  ],
+  "709f5e618e96b204a21e92a262307528d65beb85ca07f53e6524f8dd87190fbf": [
+   "Calculators/Airbag/Ford/2S6T 14B056 BN.cal",
+   "Calculators/SRS/Ford/2S6T 14B056 BN.cal"
+  ],
+  "77038d1df5d3b5861316ab438863b3112bae122a1c37d31e08a74475ade25bc9": [
+   "Calculators/Airbag/Honda/SEA-G820-M1.cal",
+   "Calculators/SRS/Honda/SEA-G820-M1.cal"
+  ],
+  "aa8213cea0bc0b6b3fe3f6d3ce61818f0a1e72e1cd7965aa9f99c945821bbc98": [
+   "Calculators/Car/S/Skoda/SuperB/Super B 93C86 decryptor.cal",
+   "Calculators/Dashboard/Skoda/SuperB/Super B 93C86 decryptor.cal"
+  ],
+  "b58d2bed0ae741ba87d8771b03db4df6242ff20733d8703f308fb79506961f4e": [
+   "Calculators/Car/S/Skoda/Fabia 93C86 2006 decryptor.cal",
+   "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal"
+  ],
+  "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba": [
+   "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+   "Calculators/SRS/Huyndai/95910-3╨Ü400.cal"
+  ],
+  "c1188383e16fc849ceb0f7533ca2735ead8e125026d9437930b7c8b33e3d623b": [
+   "Calculators/Airbag/Ford/Mondeo/603 95 10 00.cal",
+   "Calculators/SRS/Ford/Mondeo/603 95 10 00.cal"
+  ],
+  "e3102a11ba6514a26c57b1503038528a992fff93b65ca39fb27c87dcdae8cbc0": [
+   "Calculators/Airbag/Ford/Fusion/2S6T 14B056 BN.cal",
+   "Calculators/SRS/Ford/Fusion/2S6T 14B056 BN.cal"
+  ],
+  "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f": [
+   "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal"
+  ],
+  "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54": [
+   "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
+   "Calculators/SRS/Huyndai/Sonata/95910-3╨Ü400.cal"
+  ],
+  "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff": [
+   "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal"
+  ],
+  "faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a": [
+   "Calculators/Fabia 93C86 2006 decryptor.cal"
+  ]
+ }
+}
