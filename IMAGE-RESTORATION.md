@@ -1,24 +1,25 @@
-# Restored calculator illustrations — 2026-11-03
+# Restored calculator illustrations — 2026-11-03, continued 2026-11-04
 
-Restores 135 original images through 320 explicit CAL SHA/control/reference
-bindings covering 288 unique calculators. Across the current catalog aliases,
-these bindings resolve 623 previously missing picture references. The restored
-files total 19,944,573 bytes and retain their original SHA-256; there is no
+Restores 180 original images through 405 explicit CAL SHA/control/reference
+bindings covering 351 unique calculators. Across the current catalog aliases,
+these bindings resolve 786 previously missing picture references. The restored
+files retain their original SHA-256; there is no
 conversion, redrawing, cropping, or replacement of technical content.
 
 The prior visual review supplies image categories. Selection requires an exact
 calculator/source folder and one matching image content there, a unique matching
 part number, or a reviewed named brand logo with matching calculator context.
 `image-resource-provenance.json` records source archive/member, original hashes,
-470 source-context bindings, and the matching evidence. Equivalent CAL contents
+633 source-context bindings, and the matching evidence. Equivalent CAL contents
 at other catalog paths share the same exact control binding. Generic basename
 lookup is never used at runtime. Hardware wiring and unidentified pictures are
 not included in this restoration.
 
-The current reference inventory still contains 1,714 unresolved occurrences,
-including 154 empty picture controls. Missing and ambiguous original images are
-not replaced by guessed photographs. This number is an image-reference count,
-not a count of broken calculation algorithms.
+The current reference inventory still contains 1,639 unresolved occurrences,
+including 70 empty picture controls and 85 whitespace-only controls. Missing and
+ambiguous original images are not replaced by guessed photographs. This number is
+an image-reference count, not a count of broken calculation algorithms.
+See [T-010 continuation](reports/T-010-image-restoration-2026-11-04.md).
 
 ## Integration
 
