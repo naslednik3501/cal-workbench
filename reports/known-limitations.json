@@ -78,9 +78,9 @@
     "write_limited": 17,
     "unavailable": 42,
     "cause_counts": {
-      "confirmed_source_defect": 31,
+      "confirmed_source_defect": 30,
       "port_limitation": 4,
-      "unestablished_cause": 24
+      "unestablished_cause": 25
     },
     "cause_definitions": {
       "confirmed_source_defect": "Подтверждённый дефект/самопротиворечие точного исходника: не хватает объявленных полей, нарушены границы структур, либо писатель/читатель заведомо несовместимы.",
@@ -1598,8 +1598,8 @@
         "manual_hex_edit": true
       },
       "limitation": "OnShow указывает на 1379 при длине декодированного образа 288 (codeStart=100); OnApply=194 валиден, но инициализация — нет.",
-      "cause": "confirmed_source_defect",
-      "cause_detail": "Точный исходник структурно некорректен или самопротиворечив; это подтверждено разбором байтов/событий и профильным тестом.",
+      "cause": "unestablished_cause",
+      "cause_detail": "Доказательств недостаточно, чтобы отнести причину к дефекту исходника или только к ограничению переноса; сохранены исходные операции и точная блокировка.",
       "evidence": {
         "reports": [
           "reports/T-013-results-2026-11-04.json",
