@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 38324,
-      "sha256": "82bba43112c773b700f1207e2a292546d78457bd784b6152304617c71d416ced"
+      "bytes": 38781,
+      "sha256": "0c5727405c6d3adcd2e043d43afe60dbca5b70d715b136a772a6c8a8c50bab45"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1333,8 +1333,8 @@
     },
     {
       "path": "reports/T-013-binary-recovery-2026-11-04.md",
-      "bytes": 6420,
-      "sha256": "31f77404f8260e2349b726642bc149d7f2bdef63913907a6a308e4d3c8cb967b"
+      "bytes": 7271,
+      "sha256": "68aa8787e057e854cd2b5258ef8862800cceefce0aba066a9d04f72ca142e138"
     },
     {
       "path": "reports/T-013-progress-2026-11-04.md",
@@ -1832,7 +1832,11 @@
       "app_handler_scenarios": 31,
       "original_iprog": "not executed",
       "hardware": "not tested",
-      "browser_rendering": "not tested"
+      "browser_rendering": "not tested",
+      "pr": 14,
+      "merge": "21daef30550de30cee840089bfb26a81d89d8586",
+      "pages": "success; HTTP 200 and exact index/engine/profile bytes verified",
+      "pages_run": 41843264402
     }
   },
   "personal_bin_fixtures_included": false
