@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 16429,
-      "sha256": "80052ad756a8a3a100507050554255aff4e01e08709e3e7e564d15c685eb0225"
+      "bytes": 18077,
+      "sha256": "fd973ce66b469ac5d2d22f983bb06e811502930922a54125b22c8f1bd232d887"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1063,8 +1063,8 @@
     },
     {
       "path": "reports/T-014-skoda-2026-11-04.md",
-      "bytes": 6573,
-      "sha256": "527ca1d302f629b75884c6eb068ab7228844ea329f8e87aeb5a540b9f9f5e71e"
+      "bytes": 7380,
+      "sha256": "04bbcaedbbb522ca63384ed8c391cbcf7c5a251ebdb3f9fe7ded211ad3b38da1"
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
