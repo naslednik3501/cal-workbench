@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 25826,
-      "sha256": "98b7e4716a0a1f46071c0bd5419c147c38723380e4edf0fe0312797e986e72e6"
+      "bytes": 30714,
+      "sha256": "1d1a3739a8617ffbc472efbd7418b1f3c8b4da6c2df6f7143d9c53d234174c3c"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1068,8 +1068,8 @@
     },
     {
       "path": "reports/T-006-text-recovery-2026-11-04.md",
-      "bytes": 16083,
-      "sha256": "1004a66977b3458bbeb977c035019885e018e30aaa510985523e89562daa4aae"
+      "bytes": 17240,
+      "sha256": "0f014a8ed122506a05fb082670aac426ea02d6d7424e7c1c2666a034613f466a"
     },
     {
       "path": "reports/T-012-provenance-2026-11-04.json",
@@ -1505,6 +1505,20 @@
       "original_iprog": "not executed; shift precedence unresolved",
       "vehicle": "not tested",
       "browser_rendering": "not tested"
+    },
+    "T-006": {
+      "initial_unavailable": 60,
+      "restored_open": 33,
+      "original_handlers": 19,
+      "reader_only_writers_blocked": 14,
+      "remaining_unavailable": 27,
+      "sha_verified": 60,
+      "synthetic_vectors": 159,
+      "app_handler_scenarios": 49,
+      "original_iprog": "not executed",
+      "hardware": "not tested",
+      "browser_rendering": "not tested",
+      "pages": "verified source bytes for both stages"
     }
   },
   "personal_bin_fixtures_included": false
