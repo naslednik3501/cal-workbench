@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-04",
+  "section": "Иммобилайзеры и ключи",
+  "source_report": "reports/catalog-organization-immo-2026-11-04.md",
+  "generated_file": "catalog-organization-immo.js",
+  "inputs": [
+    "catalog.js",
+    "catalog-data/*.js",
+    "engine.js"
+  ],
+  "purpose": "IMMO, EZS, транспондеры, IDEN и конвертеры ключей.",
+  "scope": [
+    "Calculators/Immo/**/*.cal",
+    "Calculators/Immo off/**/*.cal",
+    "Calculators/MB/**/*.cal",
+    "selected Calculators/Car/**/*.cal with IMMO/key evidence"
+  ],
+  "totals": {
+    "paths": 422,
+    "unique_sha": 413,
+    "generated_entries": 413,
+    "approved_unchanged": 0,
+    "ambiguous": 0,
+    "car_only_selected": 47,
+    "collision_groups": 96,
+    "source_groups": 0,
+    "version_groups": 96
+  },
+  "source_paths": {
+    "Immo": 368,
+    "MB": 2,
+    "Immo off": 5,
+    "Car": 47
+  },
+  "car_only_selected_paths": [
+    "Calculators/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal",
+    "Calculators/Car/Citroen/Evasion v1.cal",
+    "Calculators/Car/Citroen/Evasion v2.cal",
+    "Calculators/Car/Citroen/Jampy v1.cal",
+    "Calculators/Car/Citroen/Jampy v2.cal",
+    "Calculators/Car/Citroen/Xantia v1.cal",
+    "Calculators/Car/Citroen/Xsara v1.cal",
+    "Calculators/Car/Daihatsu/Charade v1.cal",
+    "Calculators/Car/Daihatsu/Cuore v1.cal",
+    "Calculators/Car/Daihatsu/Move v1.cal",
+    "Calculators/Car/Daihatsu/Move v2.cal",
+    "Calculators/Car/Daihatsu/Move v3.cal",
+    "Calculators/Car/Daihatsu/Sirion v1.cal",
+    "Calculators/Car/Daihatsu/Storia v1.cal",
+    "Calculators/Car/Daihatsu/Storia v2.cal",
+    "Calculators/Car/Daihatsu/Storia_Immo 93C66 4C.cal",
+    "Calculators/Car/Daihatsu/Terios v1.cal",
+    "Calculators/Car/Fiat/Bravo v1.cal",
+    "Calculators/Car/Fiat/Bravo v2.cal",
+    "Calculators/Car/Fiat/Fiorino v1.cal",
+    "Calculators/Car/Fiat/Fiorino v2.cal",
+    "Calculators/Car/Fiat/Marea v1.cal",
+    "Calculators/Car/Fiat/Marea v2.cal",
+    "Calculators/Car/Fiat/Palio v1.cal",
+    "Calculators/Car/Fiat/Palio v2.cal",
+    "Calculators/Car/Fiat/Scudo v1.cal",
+    "Calculators/Car/Fiat/Scudo v2.cal",
+    "Calculators/Car/Fiat/Scudo v3.cal",
+    "Calculators/Car/Fiat/Siena v1.cal",
+    "Calculators/Car/Fiat/Ulysse v1.cal",
+    "Calculators/Car/Fiat/Ulysse v2.cal",
+    "Calculators/Car/Fiat/Ulysse v3.cal",
+    "Calculators/Car/Ford/Ka  Immo 7701 4C.cal",
+    "Calculators/Car/Ford/Probe v1.cal",
+    "Calculators/Car/Ford/Probe v2.cal",
+    "Calculators/Car/Ford/Tranzit v1.cal",
+    "Calculators/Car/Honda/Honda_Immo_0D28J_PCF7931.cal",
+    "Calculators/Car/Hyundai/H200 Immo 93C56 4C.cal",
+    "Calculators/Car/Hyundai/Lantra Immo 93C56 4C.cal",
+    "Calculators/Car/Hyundai/Tucson 2007 Immo 93LC66_4D.cal",
+    "Calculators/Car/Kia/Clarus v1.cal",
+    "Calculators/Car/Kia/Kia_Immo 93LC46_4C.cal",
+    "Calculators/Car/Kia/Pride v1.cal",
+    "Calculators/Car/Kia/Rio_Immo 93LC46_4D.cal",
+    "Calculators/Car/Kia/Shuma v1.cal",
+    "Calculators/Car/Kia/Shuma v2.cal",
+    "Calculators/Car/Kia/Sportage v1.cal"
+  ],
+  "approved_unchanged": [],
+  "by_brand": {
+    "Иммобилайзеры и ключи/Renault": 14,
+    "Иммобилайзеры и ключи/Mercedes-Benz": 17,
+    "Иммобилайзеры и ключи/SsangYong": 5,
+    "Иммобилайзеры и ключи/Ford": 18,
+    "Иммобилайзеры и ключи/Daihatsu": 21,
+    "Иммобилайзеры и ключи/Hyundai": 11,
+    "Иммобилайзеры и ключи/Kia": 14,
+    "Иммобилайзеры и ключи/Audi": 7,
+    "Иммобилайзеры и ключи/Fiat": 56,
+    "Иммобилайзеры и ключи/Citroen": 17,
+    "Иммобилайзеры и ключи/Honda": 17,
+    "Иммобилайзеры и ключи/Конвертеры ключей": 2,
+    "Иммобилайзеры и ключи/Chevrolet": 4,
+    "Иммобилайзеры и ключи/Mitsubishi": 16,
+    "Иммобилайзеры и ключи/Gilera": 3,
+    "Иммобилайзеры и ключи/Daewoo": 6,
+    "Иммобилайзеры и ключи/Mazda": 11,
+    "Иммобилайзеры и ключи/Opel": 23,
+    "Иммобилайзеры и ключи/Iveco": 1,
+    "Иммобилайзеры и ключи/Dacia": 3,
+    "Иммобилайзеры и ключи/Toyota": 24,
+    "Иммобилайзеры и ключи/Piaggio": 14,
+    "Иммобилайзеры и ключи/Nissan": 17,
+    "Иммобилайзеры и ключи/Lexus": 4,
+    "Иммобилайзеры и ключи/Volkswagen": 11,
+    "Иммобилайзеры и ключи/Peugeot": 28,
+    "Иммобилайзеры и ключи/Subaru": 2,
+    "Иммобилайзеры и ключи/Skoda": 1,
+    "Иммобилайзеры и ключи/Chery": 4,
+    "Иммобилайзеры и ключи/Chrysler": 1,
+    "Иммобилайзеры и ключи/BMW": 5,
+    "Иммобилайзеры и ключи/Rover": 4,
+    "Иммобилайзеры и ключи/Aprilia": 3,
+    "Иммобилайзеры и ключи/Suzuki": 8,
+    "Иммобилайзеры и ключи/Seat": 5,
+    "Иммобилайзеры и ключи/Lancia": 6,
+    "Иммобилайзеры и ключи/Yamaha": 3,
+    "Иммобилайзеры и ключи/Ducati": 1,
+    "Иммобилайзеры и ключи/Porsche": 1,
+    "Иммобилайзеры и ключи/Volvo": 2,
+    "Иммобилайзеры и ключи/Great Wall": 1,
+    "Иммобилайзеры и ключи/GM": 1,
+    "Иммобилайзеры и ключи/ZAZ": 1
+  },
+  "by_operation": {
+    "данные транспондера Hitag 2": 3,
+    "данные EZS": 2,
+    "отключение IMMO": 3,
+    "данные транспондера 4C": 18,
+    "данные транспондера Temic 12": 21,
+    "данные IMMO": 109,
+    "данные транспондера Texas 4D, 4D": 6,
+    "данные транспондера Texas 4C, 4C": 3,
+    "данные транспондера Philips 33": 96,
+    "данные транспондера Temic 11": 61,
+    "данные транспондера PCF7931": 2,
+    "конвертер данных ключа": 2,
+    "данные транспондера Hitag PCF7936, PCF7936": 12,
+    "данные транспондера Philips 33, 4D": 2,
+    "данные транспондера Megamos 13": 52,
+    "чтение PIN": 12,
+    "данные транспондера PCF793": 2,
+    "идентификация блока": 3,
+    "данные транспондера Megamos 48": 2,
+    "данные транспондера Hitag PCF7946, PCF7946": 2
+  },
+  "ambiguous": [],
+  "car_only_not_selected": [
+    {
+      "path": "Calculators/Car/F/Freightliner/Freightliner Columbia 9S12DG128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/M/Mazda/MAZDA 2 93C86-2017.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/L/Lincoln/Lincoln Navigator 9S12H128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Daewoo/DEAWOO 9S12H128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/F/Ford/F/Fiesta 9S12XEQ384.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16-NEW.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 9S12HY64 - NEW OK.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16-V3 2018.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/E/EON 9S12XHY128 - NEW OK.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline/Ridgeline 9S12H256 miles -v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/M/Mitsubishi/F/MITSUBISHI FUSO 2015 24C16.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Citroen/Berlingo/Dash Berlingo 25020.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ256.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    }
+  ]
+}

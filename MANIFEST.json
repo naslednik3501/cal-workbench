@@ -88,8 +88,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2407,
-      "sha256": "1c2a367d425ec16ce5442ff86718013bb014626e9fb7355907984f8c3093b93d"
+      "bytes": 2439,
+      "sha256": "f7062edc0eaacc8ad3140cf66f7baf8fa6f1fe0a61e835dd3a2210157eac6890"
     },
     {
       "path": "cal-source.js",
@@ -317,9 +317,14 @@
       "sha256": "e58830048f903bdae0d9925cecff2e825b54ad45d80c282dfa49e724bde8ae60"
     },
     {
+      "path": "catalog-organization-immo.js",
+      "bytes": 88656,
+      "sha256": "d0b916330979650657d4e376e8705109b06320a6ceb7cf7056fa4d52e168c356"
+    },
+    {
       "path": "catalog-organization.js",
-      "bytes": 6138,
-      "sha256": "3ad51f7dcd08392b2f906df0c2b2b5df051b8a982e084d8718ad81ab462fc841"
+      "bytes": 6324,
+      "sha256": "02385a0bd4b13912e280248be96ff4fbd757adee892c406e1a2aec106f400dd8"
     },
     {
       "path": "catalog-parts.json",
@@ -1328,8 +1333,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11727,
-      "sha256": "b5ad08744ef68b9937da731c208bed8de165f220a387ca6abfa961a67ae79942"
+      "bytes": 11780,
+      "sha256": "165b06ae367befd15dbccddda5adad67489cb468f6b41aa3fdf388889f9deb4f"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1525,6 +1530,16 @@
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
       "bytes": 3065,
       "sha256": "99f0df57b189f2a69217938e514d25dfa64c174661df99957bf0e631e0f97908"
+    },
+    {
+      "path": "reports/catalog-organization-immo-2026-11-04.json",
+      "bytes": 9331,
+      "sha256": "cea1b1730c10362238d21d8f9f5aaae2eb48377ea6c0093dc44fb404ddf56dfd"
+    },
+    {
+      "path": "reports/catalog-organization-immo-2026-11-04.md",
+      "bytes": 2501,
+      "sha256": "e951476f3eb269f4186beba82bc198e5774b331f65bdef9a049852d7a04ec76a"
     },
     {
       "path": "reports/catalog-organization-root-airbag.md",
@@ -1858,8 +1873,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 23610,
-      "sha256": "9ccd5b58b3ed1544ac1538aebad0febffd90075e9ec69ba40e13d85f705a06c7"
+      "bytes": 26885,
+      "sha256": "af7b2c526b4a081d794d65f22eaaded834c7096582c62869c98a9647d495728d"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -1948,8 +1963,8 @@
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 21344,
-      "sha256": "90fed6d51642d5c52a69f4ced17df1599e825d645bcc2d18f05132f4588d24a3"
+      "bytes": 26977,
+      "sha256": "f0886184531c480fab73fffe46b6a7628e5cfdbf30c06994528e6d557c302919"
     },
     {
       "path": "tools/catalog_inventory.py",
