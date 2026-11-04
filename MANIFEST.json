@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 71017,
-      "sha256": "3691d03d336777c8f40b39a2e4df07c13e9aa107b04d9036c43ac79ffeee0786"
+      "bytes": 73367,
+      "sha256": "fd2786278f9bd6cdb2fa32728a636f7853cef738163ede7747fb3c7b6c04050a"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1480,6 +1480,11 @@
       "path": "reports/calculator-coverage-binary-resolution-2026-11-03.json",
       "bytes": 50856,
       "sha256": "ba477450b7e896dafe802fbd20e7ccb60f71f4dff2a94f4b2abf03a3e628e31b"
+    },
+    {
+      "path": "reports/catalog-organization-root-airbag.md",
+      "bytes": 20870,
+      "sha256": "5ebfa98aeab0f9caef8869f7306e2e43c352bee47475a6ff0210baf7850c70a6"
     },
     {
       "path": "reports/image-reference-groups-2026-11-02.csv",
