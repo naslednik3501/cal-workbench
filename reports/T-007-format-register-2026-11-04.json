@@ -1,0 +1,248 @@
+{
+  "scope": "Only the exact 12 SHA from existing coverage; original bytes preserved",
+  "sourceAudit": "reports/calculator-coverage-binary-resolution-2026-11-03.json",
+  "counts": {
+    "targets": 12,
+    "fullyRestored": 0,
+    "partiallyRestored": 0,
+    "excluded": 0,
+    "blocked": 12
+  },
+  "evidence": [
+    "reports/T-007-byte-evidence-2026-11-04.json",
+    "reports/T-007-native-evidence-2026-11-04.json"
+  ],
+  "files": [
+    {
+      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+      "paths": [
+        "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal",
+        "Calculators/Car/A/Audi/audi_a4_bosch_24C08.cal"
+      ],
+      "bytes": 124,
+      "format": "Text OnShow/Execute launcher",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\Audi\\Audi A4 Bosch 24c08 crypt",
+      "containsBinCalculation": false,
+      "containsBinCalculationNote": "No own arithmetic; solely launches an external dependency. Not excluded: declared crypto dependency is in project scope.",
+      "execute": {
+        "path": "..\\Calculators\\Dashboard\\CRYPTO\\Audi\\bosch.cal",
+        "args": "1 2 3 4"
+      },
+      "reason": "Only OnShow Execute(path,args); no form/reader/writer calculation to unwrap. Execute cannot safely be mapped to another similarly named CAL.",
+      "requiredChange": "Port and verify the exact external dependency as bounded BIN operations, then add a provenance-checked link; never run the PE or implement arbitrary Execute.",
+      "nextMaterial": "Exact dependency mapping plus verified native source/algorithm port for the target. Existing same-name PE is a candidate, not an algorithm-equivalence proof."
+    },
+    {
+      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+      "paths": [
+        "Calculators/Dashboard/Audi/bosch.cal.cal",
+        "Calculators/Dashboard/Audi/bosch.cal",
+        "Calculators/Car/A/Audi/bosch.cal.cal",
+        "Calculators/Car/A/Audi/bosch.cal"
+      ],
+      "bytes": 136192,
+      "format": "Windows PE32 native executable",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Audi VDO Crypto calculator (embedded VERSIONINFO, MANEX, version 2.6.0.0)",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Version metadata declares crypto calculator; protected loader prevents establishing exact operations from this bounded inspection.",
+      "reason": "Protected native PE: CODE raw 125952 versus virtual 372736, entry loader, empty resource payloads; not an ordinary CAL wrapper.",
+      "requiredChange": "A dedicated native algorithm port: map exact BIN format/sizes, Make_Decrypt + inverse/encrypt, crypto metadata, PIN/ImmoID/KM editing and file boundaries. No Win32 interpreter or guessed alias.",
+      "nextMaterial": "Verified source/algorithm specification and input/output vectors, or a separately scoped static recovery of these native routines. For protected variant first prove unpacked payload identity; version strings alone do not prove identity."
+    },
+    {
+      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+      "paths": [
+        "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal",
+        "Calculators/Car/A/Audi/Audi VDO crypto 2.6.cal"
+      ],
+      "bytes": 450560,
+      "format": "Windows PE32 native executable",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Audi VDO Crypto calculator (embedded VERSIONINFO, MANEX, version 2.6.0.0)",
+      "containsBinCalculation": true,
+      "containsBinCalculationNote": "TFORM1 has open/save encrypted/decrypted and Set_KM; Make_Decrypt references buffers, XOR and lookup table.",
+      "reason": "Native x86/Win32 GUI implementation, not embedded supported CAL bytecode.",
+      "requiredChange": "A dedicated native algorithm port: map exact BIN format/sizes, Make_Decrypt + inverse/encrypt, crypto metadata, PIN/ImmoID/KM editing and file boundaries. No Win32 interpreter or guessed alias.",
+      "nextMaterial": "Verified source/algorithm specification and input/output vectors, or a separately scoped static recovery of these native routines. For protected variant first prove unpacked payload identity; version strings alone do not prove identity."
+    },
+    {
+      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+      "paths": [
+        "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal",
+        "Calculators/Car/A/Audi/audi A6 93C86 Crypto.cal"
+      ],
+      "bytes": 130,
+      "format": "Text OnShow/Execute launcher",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\Audi\\A6\\Audi A6 93c86 crypt",
+      "containsBinCalculation": false,
+      "containsBinCalculationNote": "No own arithmetic; solely launches an external dependency. Not excluded: declared crypto dependency is in project scope.",
+      "execute": {
+        "path": "..\\Calculators\\Dashboard\\CRYPTO\\Audi VDO crypto 2.6.cal",
+        "args": "1 2 3 4"
+      },
+      "reason": "Only OnShow Execute(path,args); no form/reader/writer calculation to unwrap. Execute cannot safely be mapped to another similarly named CAL.",
+      "requiredChange": "Port and verify the exact external dependency as bounded BIN operations, then add a provenance-checked link; never run the PE or implement arbitrary Execute.",
+      "nextMaterial": "Exact dependency mapping plus verified native source/algorithm port for the target. Existing same-name PE is a candidate, not an algorithm-equivalence proof."
+    },
+    {
+      "sha": "6644d71cab945296f8b6dac979081a6039b37373535abf36702e1e742a374a5d",
+      "paths": [
+        "Calculators/CarRadio/Pioneer/Pioneerke92zbm.cal"
+      ],
+      "bytes": 2486,
+      "format": "etsmart-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Carradio\\Pioneer\\Pioneer ke92zbm",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "35 lines of 34 bytes, magic 6574736d617274e0; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing."
+    },
+    {
+      "sha": "ffee1fd8ee562587febc510eadac7a5ee7592b80362214602ea053bfec41f128",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/BlauWith25160.cal"
+      ],
+      "bytes": 3334,
+      "format": "etsmart-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Carradio\\Blaupunkt\\Blaupunkt with 25C160",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "47 lines of 34 bytes, magic 6574736d6172748e; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing."
+    },
+    {
+      "sha": "46a4acbd2face8e57cc471fa4316adb2b43d03f2a7616337c1e2199b2733e6b5",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/BlauLubecCrypt.cal"
+      ],
+      "bytes": 2639,
+      "format": "etsmart-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Carradio\\Blaupunkt\\Lubeck\\Lubeck CC20 (Crypted)",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "37 lines of 34 bytes, magic 6574736d61727494; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing."
+    },
+    {
+      "sha": "01213a0b29500ea31cd2ec61e2892e3b80b67e1f335c135156d2b55f2b030a85",
+      "paths": [
+        "Calculators/CarRadio/Blaupunkt/Blauserial.cal",
+        "Calculators/CarRadio/Serial calculator/Blaupunkt/Blauserial.cal"
+      ],
+      "bytes": 6049,
+      "format": "etsmart-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Serial-number radio calculator (explicit plaintext comment; BIN use not established)",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "85 lines of 34 bytes, magic 6574736d617274c7; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing."
+    },
+    {
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal"
+      ],
+      "bytes": 2376,
+      "format": "205201ff-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\ATV\\Bombardier\\Bombardier Outlander MAX650 24C08",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "33 lines of 34 bytes, magic 205201ff488d8562; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "sameNameSupportedCandidateSha": "9e3357078e242ecefe81f2fb7509e863478395a7fad967ccff2458e6a03c5511",
+      "candidateCaution": "Existing supported namesake has different bytes/format. Equivalence not established; do not alias or count it as recovery."
+    },
+    {
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal"
+      ],
+      "bytes": 2936,
+      "format": "205201ff-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\ATV\\Bombardier\\Bombardier Outlander 800 908AZ60A",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "41 lines of 34 bytes, magic 205201ff28077f36; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "sameNameSupportedCandidateSha": "ebc0842b158fcbbbce13c0d35be0ebd0391cd640df96ef4ff2e190720d2756e6",
+      "candidateCaution": "Existing supported namesake has different bytes/format. Equivalence not established; do not alias or count it as recovery."
+    },
+    {
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal"
+      ],
+      "bytes": 2376,
+      "format": "205201ff-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\ATV\\Bombardier\\Bombardier Outlander MAX400 24C08",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "33 lines of 34 bytes, magic 205201ff82ed3f5c; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "sameNameSupportedCandidateSha": "5b8955bf015527cb818eee67d70e520a7f18311171f798892f7bc78bfd4de921",
+      "candidateCaution": "Existing supported namesake has different bytes/format. Equivalence not established; do not alias or count it as recovery."
+    },
+    {
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "paths": [
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal"
+      ],
+      "bytes": 2376,
+      "format": "205201ff-marked framed hex",
+      "status": "blocked",
+      "restoredOperations": [],
+      "outOfScope": false,
+      "declaredPurpose": "Dashboard\\ATV\\Bombardier\\Bombardier Outlander MAX800 24C08",
+      "containsBinCalculation": null,
+      "containsBinCalculationNote": "Encrypted/framed body: actual operations are not yet proved; plaintext title identifies intended role only.",
+      "reason": "33 lines of 34 bytes, magic 205201ff9d2693e9; header removal and 32-byte reduction do not produce a valid existing CAL image/CRC.",
+      "requiredChange": "First prove framing/checksum and decryption for this exact format, then establish form/event/instruction compatibility with existing runtime. If opcodes differ, a separate bounded format implementation is needed.",
+      "nextMaterial": "Original host decoder or authoritative format specification, or a provenance-verified decrypted counterpart with expected BIN/results; no dropping unknown bytes/checksums to force parsing.",
+      "sameNameSupportedCandidateSha": "20b8aba780b5a80a37dffaad88836583f33b2b97a591b3c0c6194140d26afc6f",
+      "candidateCaution": "Existing supported namesake has different bytes/format. Equivalence not established; do not alias or count it as recovery."
+    }
+  ]
+}

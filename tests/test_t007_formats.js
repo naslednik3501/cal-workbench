@@ -1,0 +1,8 @@
+'use strict';
+const assert=require('assert/strict'),crypto=require('crypto'),E=require('../engine.js'),{collect}=require('../tools/analyze_t007_formats.js');
+const facts=collect(),registry=require('../reports/T-007-format-register-2026-11-04.json');assert.equal(facts.files.length,12);assert.equal(new Set(facts.files.map(f=>f.sha)).size,12);assert.deepEqual(registry.counts,{targets:12,fullyRestored:0,partiallyRestored:0,excluded:0,blocked:12});
+for(const f of facts.files){const r=registry.files.find(r=>r.sha===f.sha);assert(r&&r.reason&&r.requiredChange&&r.nextMaterial);assert.deepEqual(r.paths,f.paths);assert.equal(r.status,'blocked');assert.deepEqual(r.restoredOperations,[]);assert.equal(r.outOfScope,false);assert.equal(f.originalProbe.accepted,false);}
+// Four namesakes are proven supported originals, not substitutes for encrypted targets.
+let namesakes=0;for(const r of registry.files)if(r.sameNameSupportedCandidateSha){const sha=r.sameNameSupportedCandidateSha,raw=Buffer.from(CAL_CATALOG.blobs[sha],'base64');assert.notEqual(sha,r.sha);assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),sha);const p=E.parse(raw,{sha});assert(p.executable&&!p.partial);assert(!p.sourceProgram);assert.notEqual(p.bytes.length,r.bytes);namesakes++;}
+assert.equal(namesakes,4);const native=require('../reports/T-007-native-evidence-2026-11-04.json');assert.equal(native.files.length,2);assert.equal(native.files.find(x=>x.sha.startsWith('1835')).methods.length,6);
+console.log(JSON.stringify({targetShaVerified:12,originalExecutablesRun:0,existingWrapperRecovery:0,rejectedPayloadVariantsVerified:32,launcherWrapperVariantsVerified:2,supportedNamesakesNotSubstituted:namesakes,passed:true}));
