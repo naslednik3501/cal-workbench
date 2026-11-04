@@ -118,5 +118,12 @@ change`/`Reinitialize ASSYST`; Mercedes ESP/TPM — поля `warning`/`reactiva
 ## Публикация
 
 Исходные пути, SHA-256, байты, экспорт и изображения не изменялись; реестр
-является контрольной точкой продолжения. Commit и SHA файлов на живом сайте
-фиксируются после push и завершения Pages deploy.
+является контрольной точкой продолжения.
+
+- Commit в `main`: `29444b62ac3fc13820c15eab94514ee876ea59ff`.
+- Pages run [41894121049](https://github.com/naslednik3501/cal-workbench/actions/runs/41894121049) — **success**.
+- На живом сайте побайтно совпали локальные и опубликованные
+  `catalog-organization.js` (`71fbac788098df29bf84f79a91e9b00dc9ec14251e100c7d46cda36d351819db`),
+  `catalog-organization-utilities.js` (`5786c2b81f9e8c973930fbd9921578796a891caeb88a9b05a14879261bcaa747`),
+  `catalog-organization-remainder.js` (`0664f2ba6c077e4957064d74370e3f7481a54c8e985f02cf2ca7836f795174c2`)
+  и реестр `T-016-group-review-2026-11-04.json` (`7700d8a7d06da95e05c4ec9c9142787bbe5e44a592dd6e960801e459e5d56e88`).

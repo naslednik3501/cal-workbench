@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 102682,
-      "sha256": "2f1bb217c0ad6362db4e0d6a10575a00b46515d5c1038aebb892f26a37855eb7"
+      "bytes": 103842,
+      "sha256": "a3c8b91d37774e5c54631e78791305a375b652576a40c50dafc64abeca4cf719"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -1503,8 +1503,8 @@
     },
     {
       "path": "reports/T-016-group-review-2026-11-04.md",
-      "bytes": 9384,
-      "sha256": "b32f5fb085d1389c24d17ad7685e48e64bfd12a6106fd64fa9cbf7072ae6ca1c"
+      "bytes": 9984,
+      "sha256": "f2b33e11dcb1368a20d89dcd452f444945f67fc1b0d043268c32a99ad2d98064"
     },
     {
       "path": "reports/T-016-name-audit-2026-11-04.json",
