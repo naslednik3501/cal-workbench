@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SECTION = String(process.argv[2] || process.env.SECTION || '').toLowerCase();
 const DATE = '2026-11-04';
-const ALLOWED = new Set(['dashboard', 'immo']);
+const ALLOWED = new Set(['dashboard', 'immo', 'radio']);
 
 require(path.join(ROOT, 'catalog.js'));
 for (const file of require(path.join(ROOT, 'catalog-parts.json'))) require(path.join(ROOT, file));
@@ -30,11 +30,19 @@ const CONFIG = {
     sourceReport: 'reports/catalog-organization-immo-2026-11-04.md',
     sources: ['Immo', 'Immo off', 'MB'],
     purpose: 'IMMO, EZS, транспондеры, IDEN и конвертеры ключей.'
+  },
+  radio: {
+    display: 'Магнитолы и навигация',
+    output: 'catalog-organization-radio.js',
+    report: 'reports/catalog-organization-radio-2026-11-04.json',
+    sourceReport: 'reports/catalog-organization-radio-2026-11-04.md',
+    sources: ['CarRadio'],
+    purpose: 'Автомагнитолы, навигация, коды, IMMO, карты и серийные калькуляторы.'
   }
 };
 
 if (!ALLOWED.has(SECTION)) {
-  console.error('Usage: node tools/catalog_device_organization.js <dashboard|immo>');
+  console.error('Usage: node tools/catalog_device_organization.js <dashboard|immo|radio>');
   process.exit(2);
 }
 const cfg = CONFIG[SECTION];
@@ -180,6 +188,18 @@ function pathBrand(file) {
   if ((source === 'I' || source === 'I_ok') && parts.length === 3) return '';
   if (source === 'Peugeot') return 'Peugeot';
   if (source === 'MB') return 'Mercedes-Benz';
+  if (source === 'CarRadio') {
+    const top = parts[2] || '';
+    if (/\.cal$/i.test(top)) return '';
+    if (['INFO', 'EASY'].includes(top)) return canonBrand(top);
+    if (['Immo', 'Diodes', 'Smartcard', 'Keycard', 'Serial calculator', 'Navigation'].includes(top)) {
+      const nested = parts.length > 3 && !/\.cal$/i.test(parts[3]) ? canonBrand(parts[3]) : '';
+      if (nested && isKnownBrand(nested)) return nested;
+      const found = brandsIn(parts.slice(2).join(' '));
+      return found[0] || '';
+    }
+    return canonBrand(top);
+  }
   if (source === 'Immo' || source === 'Immo off') {
     const dirs = parts.slice(2, -1).filter(part => part && !isLetterDir(part) && !CATEGORY_DIRS.has(part));
     for (let index = dirs.length - 1; index >= 0; index--) {
@@ -218,6 +238,7 @@ function pathScore(file) {
   let score = 0;
   if (source === 'Dashboard') score -= 100;
   else if (source === 'Immo') score -= 100;
+  else if (source === 'CarRadio') score -= 100;
   else if (source === 'Peugeot') score -= 60;
   else if (source === 'Immo off') score -= 60;
   else if (source === 'MB') score -= 50;
@@ -267,6 +288,44 @@ function immoOperation(labels, file) {
   if (type) return `данные транспондера ${type}`;
   if (/иммобилайзер|transponder|ключ|\bkey\b|\bIMMO\b/i.test(text)) return 'данные IMMO';
   return 'данные IMMO';
+}
+
+function radioOperation(labels, file) {
+  const text = [...(labels || []), file].join(' | ');
+  if (/Any model by dump/i.test(file)) return 'код магнитолы по дампу';
+  if (/\/Navigation\//i.test(file) || /NAVIGATION/i.test(text)) return 'код навигации';
+  if (/\/Serial calculator\//i.test(file)) return 'код по серийному номеру';
+  if (/\/Diodes\//i.test(file) || /diodes?/i.test(file.split('/').at(-1))) return 'код по диодной матрице';
+  if (/\/Smartcard\//i.test(file) || /\/Keycard\//i.test(file) || /SMARTCARD|KEYCARD/i.test(text)) return 'код карты';
+  if (/\/Immo\//i.test(file) || /\bIMMO\b/i.test(text)) return 'код IMMO';
+  return 'код магнитолы';
+}
+
+function radioUnit(file, brand, labels) {
+  const parts = file.split('/');
+  const base = clean(parts.at(-1).replace(/\.cal$/i, ''));
+  const model = (labels || [])
+    .map(label => /Model\s*:\s*(.*)$/i.exec(label))
+    .map(match => match && clean(match[1]))
+    .find(value => value && !/^any$/i.test(value)) || '';
+  let unit = base.replace(/╤[üс]/g, 'C').replace(/╨[íС]/g, 'C');
+  unit = unit
+    .replace(MEMORY_CHIP, ' ')
+    .replace(PROCESSOR_CHIP, ' ')
+    .replace(VERSION_WORD, ' ')
+    .replace(/\b(?:EEPROM|Eeprom|CODE|IMMO|IMMOBILIZER|NAVIGATION|SMARTCARD|KEYCARD|SERIAL|SN|MCU|SPI|FINAL|OLD|NEW|ANY|BY|DIG|DIGITS?|SEC\.?|TYPE|MANUFACTUREN|MANUFACTURER|MODEL)\b/gi, ' ')
+    .replace(/[.,;:_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const aliases = Object.entries(ALIASES)
+    .filter(([, value]) => value === brand)
+    .map(([alias]) => alias.replace(/\b\w/g, letter => letter.toUpperCase()));
+  unit = removeWords(unit, [brand, ...(brand || '').split(' '), ...aliases, ...VENDORS]);
+  unit = unit.replace(/\b(?:code|calculator|calc)\b/gi, ' ').replace(/\s+/g, ' ').trim();
+  if (!unit) unit = model || pathModelFolder(file) || '';
+  unit = unit.replace(/\bno\s*$/i, '').replace(/\s+/g, ' ').trim();
+  if (unit.length > 70) unit = unit.slice(0, 70).replace(/\s+\S*$/, '').trim();
+  return unit;
 }
 
 function removeWords(value, words) {
@@ -416,7 +475,8 @@ for (const [sha, entries] of groups) {
   const parsed = parseEntry(entries);
   const labels = parsed.labels;
   const text = [...labels, canonical].join(' | ');
-  const universal = SECTION === 'dashboard' && (source === 'I' || source === 'I_ok' || parts[2] === '1');
+  const universal = (SECTION === 'dashboard' && (source === 'I' || source === 'I_ok' || parts[2] === '1'))
+    || (SECTION === 'radio' && /Any model by dump/i.test(canonical));
   const convertor = SECTION === 'immo' && /\/Convertor\//i.test(canonical);
   let brand = universal ? '' : pathBrand(canonical);
   if (!brand && !universal && parsed.images.length) brand = imageBrand(parsed.images);
@@ -426,19 +486,24 @@ for (const [sha, entries] of groups) {
   }
   brand = canonBrand(brand);
 
-  const operation = SECTION === 'dashboard' ? dashboardOperation(labels, canonical) : immoOperation(labels, canonical);
+  const operation = SECTION === 'dashboard'
+    ? dashboardOperation(labels, canonical)
+    : SECTION === 'immo' ? immoOperation(labels, canonical) : radioOperation(labels, canonical);
   let reason = '';
   if (!universal && !convertor && !brand) reason = 'марка не подтверждена путём или формой CAL';
   if (SECTION === 'dashboard' && !reason && !operation) reason = 'в форме нет подтверждения операции панели';
   if (SECTION === 'dashboard' && !reason && !parsed.parsed && !universal) reason = 'форма CAL недоступна для проверки операции';
   if (SECTION === 'immo' && !reason && !operation && !convertor) reason = 'в форме нет подтверждения операции IMMO';
+  if (SECTION === 'radio' && !reason && !operation) reason = 'в форме нет подтверждения операции магнитолы';
 
   const folder = reason ? 'Неуточнённые' : universal ? 'Универсальные' : convertor ? 'Конвертеры ключей' : brand;
   let name = '';
   if (reason) {
     name = clean(canonical.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
+  } else if (universal && SECTION === 'radio') {
+    name = 'Универсальный калькулятор кода магнитолы по дампу';
   } else {
-    const unit = unitFromPath(canonical, brand);
+    const unit = SECTION === 'radio' ? radioUnit(canonical, brand, labels) : unitFromPath(canonical, brand);
     name = [brand, unit].filter(Boolean).join(' ');
     if (!name) name = clean(canonical.split('/').at(-1).replace(/\.cal$/i, ''));
     if (convertor) name = unit.replace(/\s+to\s+/i, ' → ');
@@ -506,7 +571,12 @@ const allowedFolders = new Set([
 const display = new Set();
 for (const row of rows) {
   row.folder = `${cfg.display}/${row.folder}`;
-  row.name = String(row.name || '').replace(/\s+/g, ' ').trim().replace(/(?:\.cal)+$/i, '').trim();
+  row.name = String(row.name || '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*\/\s*/g, '⁄')
+    .trim()
+    .replace(/(?:\.cal)+$/i, '')
+    .trim();
   allowedFolders.add(row.folder);
   if (!row.name || row.name.length > 140 || /[\\/]/.test(row.name) || /\.cal$/i.test(row.name)) {
     throw new Error(`Invalid name: ${row.name}`);
@@ -532,7 +602,9 @@ const lines = sorted.map(row => {
   if (row.reason) item.reason = row.reason;
   return `  '${row.sha}':${JSON.stringify(item)},`;
 });
-const globalName = SECTION === 'dashboard' ? 'CAL_ORGANIZATION_DASHBOARD' : 'CAL_ORGANIZATION_IMMO';
+const globalName = SECTION === 'dashboard'
+  ? 'CAL_ORGANIZATION_DASHBOARD'
+  : SECTION === 'immo' ? 'CAL_ORGANIZATION_IMMO' : 'CAL_ORGANIZATION_RADIO';
 const output = `/* Generated by tools/catalog_device_organization.js ${SECTION} on ${DATE}. Do not edit by hand. */\n`
   + `/* Display-only map for ${cfg.display}; original paths, bytes and SHA stay unchanged. */\n`
   + `(function(root){\n'use strict';\nconst data={\n schema:1,\n source_report:${JSON.stringify(cfg.sourceReport)},\n generated_from:['catalog.js','catalog-data/*.js','engine.js'],\n entries:{\n${lines.join('\n')}\n },\n search_aliases:{}\n};\n`
@@ -558,12 +630,12 @@ const report = {
     'Calculators/I_ok/**/*.cal',
     'Calculators/Peugeot/**/Dash*.cal',
     'selected Calculators/Car/**/*.cal with dashboard evidence'
-  ] : [
+  ] : SECTION === 'immo' ? [
     'Calculators/Immo/**/*.cal',
     'Calculators/Immo off/**/*.cal',
     'Calculators/MB/**/*.cal',
     'selected Calculators/Car/**/*.cal with IMMO/key evidence'
-  ],
+  ] : ['Calculators/CarRadio/**/*.cal'],
   totals: {
     paths: selected.length,
     unique_sha: groups.size,
@@ -586,7 +658,7 @@ const report = {
     title: row.name,
     reason: row.reason
   })),
-  car_only_not_selected: db.entries
+  car_only_not_selected: SECTION === 'radio' ? [] : db.entries
     .filter(entry => entry.ext === 'cal'
       && entry.path.startsWith('Calculators/Car/')
       && !selected.some(chosen => chosen.path === entry.path)

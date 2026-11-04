@@ -2,8 +2,9 @@
 // This is not browser rendering or a vehicle compatibility check.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),vm=require('vm'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..');require('../catalog.js');for(const f of require('../catalog-parts.json'))require('../'+f);
-const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js'),dashboard=require('../catalog-organization-dashboard.js'),immo=require('../catalog-organization-immo.js');
+const db=globalThis.CAL_CATALOG,scope=require('../catalog-scope.js'),org=require('../catalog-organization.js'),dashboard=require('../catalog-organization-dashboard.js'),immo=require('../catalog-organization-immo.js'),radio=require('../catalog-organization-radio.js');
 const mapOverlap=[...Object.keys(dashboard.entries)].filter(sha=>immo.entries[sha]).length;
+const radioOverlap=[...Object.keys(radio.entries)].filter(sha=>dashboard.entries[sha]||immo.entries[sha]).length;
 const expected=[
  ['faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a','Calculators/Fabia 93C86 2006 decryptor.cal','Skoda Fabia 2006 — декриптор EEPROM 93C86','Приборные панели/Skoda'],
  ['2ebd61f105e5ce3fcaae4d2ffad46aca471ff22cdf3616e50582dc30a42d4970','Calculators/Super B 93C86 decryptor.cal','Skoda Superb — декриптор EEPROM 93C86','Приборные панели/Skoda'],
@@ -51,7 +52,7 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 (async()=>{
 await run('catalogReady');
 await test('the 12 approved SHAs keep their exact names, folders and display paths',()=>{
- assert.equal(Object.keys(org.data.entries).length,5392+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length-mapOverlap);assert.equal(expected.length,12);
+ assert.equal(Object.keys(org.data.entries).length,5392+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length+Object.keys(radio.entries).length-mapOverlap-radioOverlap);assert.equal(expected.length,12);
  const shown=new Set(),originals=new Set();
  for(const [sha,oldPath,name,folder] of expected){
   const rows=db.entries.filter(e=>e.sha===sha);
@@ -70,7 +71,7 @@ await test('all Airbag and SRS SHA are covered by unique, reasoned display entri
  assert.equal(generatedEntries.size,5380);
  for(const sha of airbagShas)assert(org.get(sha),'missing '+sha);
  const outside=[...Object.keys(org.data.entries)].filter(sha=>!airbagShas.has(sha));
- assert.equal(outside.length,9+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length-mapOverlap,'only approved, dashboard and immo entries stay outside Airbag');
+ assert.equal(outside.length,9+Object.keys(dashboard.entries).length+Object.keys(immo.entries).length+Object.keys(radio.entries).length-mapOverlap-radioOverlap,'only approved, dashboard, immo and radio entries stay outside Airbag');
  const display=new Map(),folders=new Set();
  for(const e of airbagEntries){
   const item=org.get(e.sha),name=e.path.split('/').at(-1).replace(/\.cal$/i,'');
@@ -170,6 +171,49 @@ await test('immo source paths are covered once and dashboard/ECU entries are not
  el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
 });
 
+await test('radio and navigation paths keep operations, brands and original exports',async()=>{
+ const report=require('../reports/catalog-organization-radio-2026-11-04.json');
+ assert.equal(Object.keys(radio.entries).length,report.totals.unique_sha);
+ assert.equal(report.totals.ambiguous,0);
+ const source=db.entries.filter(e=>e.ext==='cal'&&e.path.startsWith('Calculators/CarRadio/'));
+ for(const e of source)assert(org.get(e.sha),'radio source is mapped '+e.path);
+ const display=new Set();
+ for(const [sha,item] of Object.entries(radio.entries)){
+  assert(item.folder.startsWith('Магнитолы и навигация/'),item.folder);
+  assert(org.get(sha),sha);
+  if(item.folder.endsWith('/Универсальные'))assert(/код[а]? магнитолы/.test(item.name),item.name);
+  else assert(/ — код(?: |$)/.test(item.name),item.name);
+  if(item.folder.endsWith('/Неуточнённые'))assert(item.reason,sha);
+  const key=(item.folder+'/'+item.name).toLowerCase();
+  assert(!display.has(key),'radio display collision '+key);display.add(key);
+ }
+ const check=(path,operation)=>{
+  const e=db.entries.find(item=>item.path===path);assert(e,path);
+  const item=org.get(e.sha);assert(item,path);assert(item.name.includes(operation),path+' -> '+item.name);
+ };
+ check('Calculators/CarRadio/Diodes/Daewoo/AKL-1626JS.cal','код по диодной матрице');
+ check('Calculators/CarRadio/Serial calculator/BECKER SN.cal','код по серийному номеру');
+ check('Calculators/CarRadio/Navigation/AUDI/FIS AUDI coder.cal','код навигации');
+ const any=db.entries.find(e=>e.path==='Calculators/CarRadio/Any model by dump.cal');
+ assert(any&&org.folder(any)==='Магнитолы и навигация/Универсальные');
+ const sample=db.entries.find(e=>e.path==='Calculators/CarRadio/Philips/22DC679.cal');
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(sample.sha)+'))');
+ assert.equal(el('calcTitle').textContent,org.title(sample));
+ assert(el('calcPath').textContent.includes(sample.path));
+ doc.downloads.length=0;await el('exportCal').click();
+ const download=doc.downloads.at(-1);
+ assert.equal(download.name,sample.path.split('/').at(-1));
+ assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sample.sha],'base64'));
+ const sectionCount=Object.values(org.data.entries).filter(item=>item.folder.startsWith('Магнитолы и навигация/')).length;
+ const folders=[...new Set(Object.values(org.data.entries).filter(item=>item.folder.startsWith('Магнитолы и навигация/')).map(item=>item.folder))];
+ run("expandedFolders.clear();catalogScope='Магнитолы и навигация';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
+ const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
+ assert.equal(walk(el('tree'),'fileItem').length,sectionCount,'all radio calculators are shown once');
+ el('search').value='магнитолы и навигация';run('searchPage=0;renderCatalog()');
+ assert(el('searchPager').textContent.includes(sectionCount+' · 1/'));
+ el('search').value='';run('expandedFolders.clear();catalogScope=\'\';searchPage=0;renderCatalog()');
+});
+
 await test('every approved SHA stays its own calculator; sibling versions are not merged',()=>{
  const groups=scope.calculatorGroups(db.entries),bySha=new Map(groups.map(g=>[g.e.sha,g]));
  for(const [sha] of expected){const g=bySha.get(sha);assert(g,sha);assert.equal(g.aliases.length,1,sha);}
@@ -191,8 +235,9 @@ await test('search matches new names, folders, old file names and old paths',()=
  assert(org.matches(philips,'renault'),'Renault stays a search hint');
  assert(!/Renault/i.test(org.title(philips)),'Renault is not presented as a confirmed brand');
  const radio=db.entries.find(e=>e.path==='Calculators/CarRadio/Philips/22DC679.cal');
- assert.equal(org.displayPath(radio),null);assert.equal(org.title(radio),'22DC679.cal');
- assert(org.matches(radio,'carradio'),'unclassified CAL keeps the original path rule');
+ assert(org.displayPath(radio).startsWith('Магнитолы и навигация/'),'radio is mapped to its section');
+ assert(org.title(radio).includes('22DC679'),'radio keeps its model');
+ assert(org.matches(radio,'22DC679')&&org.matches(radio,'carradio'),'old radio search still works');
 });
 
 await test('different SHA with the same display base stay distinct versions',()=>{
