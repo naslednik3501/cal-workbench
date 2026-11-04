@@ -33,8 +33,8 @@
     },
     {
       "path": "IMAGE-RESTORATION.md",
-      "bytes": 3112,
-      "sha256": "cb9bd46722c242b3663913a14721f0615b953c1418134c1bc74a17568ebe4a8f"
+      "bytes": 3333,
+      "sha256": "2da83f5a454c7573206227989f4dd7ece73a48bb5994ee9925533444317d1cee"
     },
     {
       "path": "IMPLEMENTATION-2026-11-02.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "TASKS.md",
-      "bytes": 35192,
-      "sha256": "c2fe3b62db13a1bf1030027d9ffed2bbba3fa5f87434a04f0545c5ed35703845"
+      "bytes": 38181,
+      "sha256": "f8dbe999010e3ecc71ede632213a9a1da659967c9ef70a38b8d7aa0bc2d3ae7e"
     },
     {
       "path": "TECHNICAL-REVIEW-0.5.1.md",
@@ -432,6 +432,11 @@
       "sha256": "140a2687f61faeea9cde7e9ece354455da51f1dc87b0429b65c00f5c91200966"
     },
     {
+      "path": "image-assets/14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1.jpg",
+      "bytes": 58897,
+      "sha256": "14ed137bb07fa6708ec0d03336dce0cf56e68a77525dba4d7fe840c55e9bcec1"
+    },
+    {
       "path": "image-assets/167fb03154221e4d296ca2f9bb22d7aa0e9ee38e78d776cf3fe048475762d5b4.jpg",
       "bytes": 2027,
       "sha256": "167fb03154221e4d296ca2f9bb22d7aa0e9ee38e78d776cf3fe048475762d5b4"
@@ -612,6 +617,11 @@
       "sha256": "57e052c6122101f0b34cf44b1956992b03fa0c48d55766cb79129723f90a55f9"
     },
     {
+      "path": "image-assets/58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e.bmp",
+      "bytes": 5754,
+      "sha256": "58618728fe6e5a8a9d7f609a0641c312625f220a07bb157f4a5dbeb94a7f117e"
+    },
+    {
       "path": "image-assets/59d8a5b45341f9fe8dd40c639f071e5c262f6f6ced5ad7bca3db5927c72a59da.png",
       "bytes": 228310,
       "sha256": "59d8a5b45341f9fe8dd40c639f071e5c262f6f6ced5ad7bca3db5927c72a59da"
@@ -625,6 +635,11 @@
       "path": "image-assets/5d68dd573685df5e6398461c1cb89ba6d34137874c6c117fe2fffb02aae1af29.png",
       "bytes": 4314,
       "sha256": "5d68dd573685df5e6398461c1cb89ba6d34137874c6c117fe2fffb02aae1af29"
+    },
+    {
+      "path": "image-assets/641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b.png",
+      "bytes": 214068,
+      "sha256": "641819ca09304879745ec2398bb97bb50f8bd6511b6922d67fd2c25423e9f33b"
     },
     {
       "path": "image-assets/65dda3e86ed52a5e2a5c00109e27f1db9c943dda25b84dd621004a600d082c5c.png",
@@ -805,6 +820,11 @@
       "path": "image-assets/9464e5b65206eccf29324628e5a0af12322a108b3a4a9c3fe95b449f3713feef.png",
       "bytes": 224494,
       "sha256": "9464e5b65206eccf29324628e5a0af12322a108b3a4a9c3fe95b449f3713feef"
+    },
+    {
+      "path": "image-assets/9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab.bmp",
+      "bytes": 11214,
+      "sha256": "9541d76ae23e2b0ea39860ae0cda85c92631adcacb15d23068f48e6fb2fcedab"
     },
     {
       "path": "image-assets/9592f820465d161cc04cae6be458e51ff80f8cc917ecbb68d13e6d06eaf60bc7.png",
@@ -1092,9 +1112,19 @@
       "sha256": "da48432739f68069a9fa94264d2b4da0fd986ff031b38eac04ca73bf685d3b92"
     },
     {
+      "path": "image-assets/db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b.bmp",
+      "bytes": 12822,
+      "sha256": "db52414ffdfd5fdd14c972c5d5a4538605f973032a05da2f4c0b1c5b3184fd8b"
+    },
+    {
       "path": "image-assets/dbd33ea4c11f1814966d296f8da2cccd28f33094ca20e01914f0e264e6594dbd.png",
       "bytes": 9385,
       "sha256": "dbd33ea4c11f1814966d296f8da2cccd28f33094ca20e01914f0e264e6594dbd"
+    },
+    {
+      "path": "image-assets/dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851.png",
+      "bytes": 220291,
+      "sha256": "dcae61cefcd1e3fc99df6f6000b99addfb67d7cbd63555daf4812852dcad3851"
     },
     {
       "path": "image-assets/dcc2083a1013287bac15fc3331bd7241cb5c8372c56b9eb935aff0cefdbc583a.png",
@@ -1105,6 +1135,16 @@
       "path": "image-assets/def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8.png",
       "bytes": 185332,
       "sha256": "def68dcea78bfb5dceed157b379920b2a57d2341aa776fe73f68bae8d4b56fd8"
+    },
+    {
+      "path": "image-assets/e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b.bmp",
+      "bytes": 16554,
+      "sha256": "e0f01040091ed4b8fd8d9a5a85cc0887299bb290bce5783451a105443ba1327b"
+    },
+    {
+      "path": "image-assets/e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2.jpg",
+      "bytes": 9348,
+      "sha256": "e21e3bc35c1f70e275599617bb32ede0b8683d958f1170171586b6441adc45b2"
     },
     {
       "path": "image-assets/e4b1df8c42fb6f938ab1703f3743fce08aac44baa4bde708a08cdf6ae3d47b10.png",
@@ -1177,6 +1217,11 @@
       "sha256": "eb14c4a66f13fd95c670c76e03c6c5145c54c28d54145a7d38a18e62bce738ec"
     },
     {
+      "path": "image-assets/ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3.png",
+      "bytes": 3343,
+      "sha256": "ec20425465748ecd82240f17ade48a259fb5c1b58ba7e144860ef997e2462ac3"
+    },
+    {
       "path": "image-assets/ec6e1f077b03203828383e051df83bdf7b4b69b963fb38ca3833cee6dfba7910.png",
       "bytes": 186639,
       "sha256": "ec6e1f077b03203828383e051df83bdf7b4b69b963fb38ca3833cee6dfba7910"
@@ -1227,6 +1272,11 @@
       "sha256": "fd4c7344da8813000757f86cf6ae0d4e16e6386fffe6d6a5eed6e83caf3ca7e3"
     },
     {
+      "path": "image-assets/fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f.png",
+      "bytes": 170386,
+      "sha256": "fdba6832a773f9915ed1a72f2bb2309a763458459107cf6e9147ce0819f1f10f"
+    },
+    {
       "path": "image-assets/fe2bc0d6f5bcd0ed18896556f2c7207d1ea7c022900d7c7262f8ba757695273d.png",
       "bytes": 199241,
       "sha256": "fe2bc0d6f5bcd0ed18896556f2c7207d1ea7c022900d7c7262f8ba757695273d"
@@ -1243,18 +1293,18 @@
     },
     {
       "path": "image-assets.json",
-      "bytes": 15663,
-      "sha256": "7e74f32905e444fb30f8e655dfca1bd143fbc55bfe359373a487b9a7bc6650e5"
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-resource-data.js",
-      "bytes": 107124,
-      "sha256": "8866972375d0fc3f7f7cbbdbe9c6709d617253aec6bdff5f2a948bc66bab8888"
+      "bytes": 113446,
+      "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
     },
     {
       "path": "image-resource-provenance.json",
-      "bytes": 362028,
-      "sha256": "763700ee8f1d68f8a8d9d60d5ab2d4b2d0a2fd0a445f5d59762840ed6a07bba1"
+      "bytes": 384011,
+      "sha256": "a55009e671867eb3909ffbf88e89a2f3a2187b14877f1c912b9d98f180971167"
     },
     {
       "path": "image-resources.js",
@@ -1313,8 +1363,13 @@
     },
     {
       "path": "reports/T-010-image-restoration-2026-11-04.md",
-      "bytes": 6288,
-      "sha256": "e104d214fbb48ee64a7c44f95fae1771ab5d3117040b4f7101b1e191290b5b78"
+      "bytes": 9006,
+      "sha256": "b3426f7ef46d1f320bf71efb22838f67d6b32767d2dd4a5c4fe3ccab6db53287"
+    },
+    {
+      "path": "reports/T-010-remainder-2026-11-04.json",
+      "bytes": 699090,
+      "sha256": "1de4b2227c508f45cd6046d9ed6b687638bc8cc704454f216d55a7cfc17800b0"
     },
     {
       "path": "reports/T-012-provenance-2026-11-04.json",
@@ -1736,48 +1791,7 @@
     "original_iprog_execution": "not compared",
     "chromium_release_scenarios": "passed on Linux",
     "real_browser_storage": "tested in Chromium",
-    "windows": "not tested",
-    "T-014": {
-      "variants": 6,
-      "synthetic_vectors": 36,
-      "app_handler_scenarios": 12,
-      "polo_checks": 8,
-      "original_iprog": "not executed",
-      "vehicle": "not tested",
-      "browser_rendering": "not tested"
-    },
-    "T-012": {
-      "originals": 3,
-      "restored": 0,
-      "blocked": 3,
-      "synthetic_values": 29,
-      "app_handler_scenarios": 3,
-      "original_iprog": "not executed; shift precedence unresolved",
-      "vehicle": "not tested",
-      "browser_rendering": "not tested"
-    },
-    "T-006": {
-      "initial_unavailable": 60,
-      "restored_open": 33,
-      "original_handlers": 19,
-      "reader_only_writers_blocked": 14,
-      "remaining_unavailable": 27,
-      "sha_verified": 60,
-      "synthetic_vectors": 159,
-      "app_handler_scenarios": 49,
-      "original_iprog": "not executed",
-      "hardware": "not tested",
-      "browser_rendering": "not tested",
-      "pages": "verified source bytes for both stages"
-    },
-    "T-010": {
-      "new_assets": 45,
-      "new_control_mappings": 85,
-      "new_reference_occurrences": 163,
-      "remaining_unresolved_reference_occurrences": 1639,
-      "blank_fields": 70,
-      "whitespace_only_fields": 85
-    }
+    "windows": "not tested"
   },
   "personal_bin_fixtures_included": false
 }
