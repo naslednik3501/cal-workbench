@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 8880,
-      "sha256": "35798a52b2d023c63c72e42cd08eb42218b74bd96feefa473d0a47db6e0b17c8"
+      "bytes": 9195,
+      "sha256": "6c2e7c9aebc6b73ec56154bd9f0b203fac3d58eb65452560e90c95b1712ad9d0"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -43,18 +43,18 @@
     },
     {
       "path": "PROJECT_SCOPE.md",
-      "bytes": 2661,
-      "sha256": "4f0aae1c416f607cd25c959755cc281c04f24c695b52a2dfb664d41ae44daf7e"
+      "bytes": 3090,
+      "sha256": "2a3b153bd1a813e034a0b010925591d085c5b74c7006bf5fb8c3fbc4ec108c23"
     },
     {
       "path": "README.html",
-      "bytes": 13960,
-      "sha256": "829499703becea172fe3186f983010295506dc77f8072c6fa8cd943da0a73296"
+      "bytes": 14610,
+      "sha256": "ce07ffc1198f9d89595cd84036cbeb0b8fd8c3f4dc8e7bcfa7f2b87fec3c7854"
     },
     {
       "path": "README.md",
-      "bytes": 5731,
-      "sha256": "5cb6d0b0d5d23e177449b6bf841bcfe957c4ec7a2b8d4f72e02a9b460b30eeac"
+      "bytes": 7605,
+      "sha256": "d776d04cc2df01a9c9966628661411ad322deb9a94542cbfb3f886608877166b"
     },
     {
       "path": "SOURCE_STORAGE.md",
@@ -1344,7 +1344,7 @@
     {
       "path": "index.html",
       "bytes": 11950,
-      "sha256": "332935cb83a229df7ec4ad3c6be8a6c8bcf06d803c9d2148df8fcf4817725195"
+      "sha256": "ed567d22edac1a6d08b0ff5652588e2b6c4174d3e7f7b9fd07d07f2ff2e23555"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -2058,8 +2058,8 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 2963,
-      "sha256": "8c7129e80da548461a3c4f0849284d06bf982b43778ef5cca530066458f40115"
+      "bytes": 3388,
+      "sha256": "b05d03c9cc6fadb132ddc92e6a07e9fe13f0e283dd93446f34715a837c22e5f4"
     },
     {
       "path": "tools/publish_source_store.py",
@@ -2093,24 +2093,35 @@
     }
   ],
   "validation": {
-    "source_tests": 13,
-    "preparation_tests": 14,
-    "polo_checks": 8,
-    "store_tests": 8,
-    "source_binary_pairs": 465,
-    "exactly_matching_pairs": 456,
-    "catalog_hashes": "passed",
-    "private_bin_fixture_tests": "not rerun; fixtures not in shared repository",
+    "scope": "Only checks run by tools/package_release.py are asserted here.",
+    "executed_node_tests": [
+      "test_source.js",
+      "test_preparation.js",
+      "test_polo.js",
+      "test_source_pairs.js",
+      "test_binary_events.js",
+      "test_binary_resolution.js",
+      "test_catalog_store.js",
+      "test_catalog.js",
+      "test_t016_organization.js",
+      "test_t016_group_review.js",
+      "test_t001_hardware_elements.js"
+    ],
+    "executed_node_test_count": 11,
+    "executed_node_tests_status": "passed",
+    "html_checks": "passed: unique IDs, referenced resources and app.js element IDs",
     "binary_resolution": {
       "target": 254,
       "read_only": 216,
-      "full_writers": 32,
-      "partial_fis": 4,
-      "unsupported": 2
+      "full_writers": 36,
+      "partial": 0,
+      "unsupported": 2,
+      "asserted_by": "tests/test_binary_resolution.js"
     },
+    "private_bin_fixture_tests": "not run; fixtures not in shared repository",
     "original_iprog_execution": "not compared",
-    "chromium_release_scenarios": "passed on Linux",
-    "real_browser_storage": "tested in Chromium",
+    "browser_rendering": "not run by this packaging step",
+    "historical_final_app_validation": "reports/final-app-validation-2026-11-04.md (dated; not rerun here)",
     "windows": "not tested"
   },
   "personal_bin_fixtures_included": false
