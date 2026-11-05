@@ -22,9 +22,9 @@
     "approved_unchanged": 0,
     "ambiguous": 0,
     "car_only_selected": 47,
-    "collision_groups": 96,
+    "collision_groups": 94,
     "source_groups": 0,
-    "version_groups": 96
+    "version_groups": 94
   },
   "source_paths": {
     "Immo": 368,
@@ -254,8 +254,8 @@
     },
     {
       "sha": "0896888d34e7434afdeec7e1702ed7ef2783b00c18b2f1100db0a4dc6aa0efb5",
-      "name": "Opel Immobox Vectra A 05 — чтение PIN",
-      "folder": "Immo/Opel",
+      "name": "Opel Vectra A Immobox 05 — чтение PIN",
+      "folder": "Immo/Opel/Vectra A",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -263,7 +263,8 @@
       "canonical_path": "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal",
       "paths": [
         "Calculators/Immo/Car/Opel/Vectra A/Immobox Vectra A 05.cal"
-      ]
+      ],
+      "old_name": "Opel Immobox Vectra A 05 — чтение PIN"
     },
     {
       "sha": "09d06b01ab32c0b43552fbba2f54fb271e8518dadbd6123ccd6d33be1d902abd",
@@ -333,7 +334,7 @@
     {
       "sha": "0cc57c0c3a66629d3e5b9087fe3b00bf498a3fee5b6e9a22b8076f2ec3773c54",
       "name": "Ford Ranger — чтение PIN (EEPROM 95320)",
-      "folder": "Immo/Ford",
+      "folder": "Immo/Ford/Ranger",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -341,7 +342,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/Rangar/IMMO ECU Ford Ranger 95320.cal"
-      ]
+      ],
+      "old_name": "Ford Rangar Ranger — чтение PIN (EEPROM 95320)"
     },
     {
       "sha": "0d58346c9e0fce8cebd9a194e668c809a2e7b700eda5ea6c6af1ed17f49ca8a3",
@@ -688,7 +690,7 @@
     {
       "sha": "1bc2cda9de51d26f31cb398dc1b4f196b0d9f30184672d12a2723de95d56ad71",
       "name": "Hyundai Accent — данные IMMO (EEPROM 95040)",
-      "folder": "Immo/Hyundai",
+      "folder": "Immo/Hyundai/Accent",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -714,7 +716,7 @@
     {
       "sha": "1c6b4084806147e12879b9565fffb8bcc856ee76d68f11f66e3ee8e201b7d814",
       "name": "Mazda 626 8C — данные IMMO",
-      "folder": "Immo/Mazda",
+      "folder": "Immo/Mazda/626",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -986,8 +988,8 @@
     },
     {
       "sha": "254dc0ddc37062e9c792b492826c38a10273c0ce601dbb9720cd660c3f82888a",
-      "name": "Mazda CX 7 — данные транспондера Texas 4D, 4D (EEPROM 93C66)",
-      "folder": "Immo/Mazda",
+      "name": "Mazda CX-7 — данные транспондера Texas 4D, 4D (EEPROM 93C66)",
+      "folder": "Immo/Mazda/CX-7",
       "operation": "данные транспондера Texas 4D, 4D",
       "sources": [
         "Immo"
@@ -995,7 +997,8 @@
       "canonical_path": "Calculators/Immo/Car/Mazda/CX-7/Mazda CX-7 93c66 4D.cal",
       "paths": [
         "Calculators/Immo/Car/Mazda/CX-7/Mazda CX-7 93c66 4D.cal"
-      ]
+      ],
+      "old_name": "Mazda CX 7 — данные транспондера Texas 4D, 4D (EEPROM 93C66)"
     },
     {
       "sha": "2575f9c794f0dbb69c0a698b00f03b71633cf4a910370cd15a93ad1ee134727c",
@@ -1025,7 +1028,7 @@
     },
     {
       "sha": "277d473db525e2f776fe03afd3b5ad22ca6930c45e3de5373ba964d76f4abb70",
-      "name": "Ford Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040) · вариант 2",
+      "name": "Ford Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040)",
       "folder": "Immo/Ford",
       "operation": "данные IMMO",
       "sources": [
@@ -1034,7 +1037,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/IMMO ECU Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/IMMO ECU Focus 9S12XHZ512 (mask 1M80F) 4KB.cal"
-      ]
+      ],
+      "old_name": "Ford Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040) · вариант 2"
     },
     {
       "sha": "2794ce348d299399a29eaa2530646b81da89afcac0a7de4358d84418a3e5db2a",
@@ -1208,7 +1212,7 @@
     {
       "sha": "328afc1ca766900eac492bcee323e2b5ff5bb1c8be77c8f3dcb56057b37eb12d",
       "name": "Chevrolet Aveo — данные транспондера Megamos 48 (EEPROM 93C56) · вариант 2",
-      "folder": "Immo/Chevrolet",
+      "folder": "Immo/Chevrolet/Aveo",
       "operation": "данные транспондера Megamos 48",
       "sources": [
         "Immo"
@@ -1598,7 +1602,7 @@
     {
       "sha": "45e290cf37bebe6fa9975fd6cc7369efc0b8680012ae6caf5f9f3539835feb63",
       "name": "Mazda 3 2010 — данные IMMO (EEPROM 93C86)",
-      "folder": "Immo/Mazda",
+      "folder": "Immo/Mazda/3 2010",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1606,7 +1610,8 @@
       "canonical_path": "Calculators/Immo/Car/Mazda/Mazda 3 2010/IMMO ECU Mazda 3 2010 93C86.cal",
       "paths": [
         "Calculators/Immo/Car/Mazda/Mazda 3 2010/IMMO ECU Mazda 3 2010 93C86.cal"
-      ]
+      ],
+      "old_name": "Mazda 3 2010 3 2010 — данные IMMO (EEPROM 93C86)"
     },
     {
       "sha": "46050339de186992c035c79c071550eff7eeab06b3fcdd0855a09087e427e892",
@@ -1688,8 +1693,8 @@
     },
     {
       "sha": "49c50489dc9ad4518b9ef4cab2b7518aec4a8a295e88ec24f88ffef97705f36c",
-      "name": "Volvo C 30 — данные IMMO (EEPROM 93C86)",
-      "folder": "Immo/Volvo",
+      "name": "Volvo C-30 — данные IMMO (EEPROM 93C86)",
+      "folder": "Immo/Volvo/C-30",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1697,7 +1702,8 @@
       "canonical_path": "Calculators/Immo/Car/Volvo/C-30/C-30  ECU 93c86.cal",
       "paths": [
         "Calculators/Immo/Car/Volvo/C-30/C-30  ECU 93c86.cal"
-      ]
+      ],
+      "old_name": "Volvo C 30 — данные IMMO (EEPROM 93C86)"
     },
     {
       "sha": "4a2a17cf5e673a8c83eec335b21d3959a0f312ec4da29c337dab5b7a57bb708b",
@@ -1715,7 +1721,7 @@
     {
       "sha": "4abdbdda173043bd4b9347138d23fe7da27de3060f9c9d70ea7e87f09653b934",
       "name": "Renault Sandero BCU — данные транспондера Hitag 2 (EEPROM 93C66)",
-      "folder": "Immo/Renault",
+      "folder": "Immo/Renault/Sandero",
       "operation": "данные транспондера Hitag 2",
       "sources": [
         "Immo"
@@ -1728,7 +1734,7 @@
     {
       "sha": "4b3eee1c699cd88f9ffeee85515a837d5c66efb414d4345a323e46b0534666df",
       "name": "Porsche Cayenne KESSY — данные IMMO (EEPROM 93C86)",
-      "folder": "Immo/Porsche",
+      "folder": "Immo/Porsche/Cayenne",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1740,8 +1746,8 @@
     },
     {
       "sha": "4c87d3fea12b2a49daae141d038b4cf44a4fe5dcdeffdc1db68fd753e8e46ebc",
-      "name": "Ford Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040)",
-      "folder": "Immo/Ford",
+      "name": "Ford FF2+ Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040)",
+      "folder": "Immo/Ford/FF2+",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1749,7 +1755,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/FF2+/IMMO ECU Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/FF2+/IMMO ECU Focus 9S12XHZ512 (mask 1M80F) 4KB.cal"
-      ]
+      ],
+      "old_name": "Ford Focus mask 1M80F 4KB — данные IMMO (EEPROM 95040)"
     },
     {
       "sha": "4d2b6de76f2951c385b5e719f782c279d458d0fa2c16d8643e39ebabbc06af54",
@@ -1767,7 +1774,7 @@
     {
       "sha": "4d3741d95d896a0899fb72e8b9353a7875d0f9c6041e5a3ee935584b3210fd2e",
       "name": "Peugeot Boxer BSI — данные IMMO (EEPROM 95160)",
-      "folder": "Immo/Peugeot",
+      "folder": "Immo/Peugeot/Boxer",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1780,7 +1787,7 @@
     {
       "sha": "4d4934727a7f00dbfc996dbf0f3bb613cd250a7deb254bbb1bc089cbc0a17316",
       "name": "Mazda 3 2010 — данные IMMO (EEPROM 93C66)",
-      "folder": "Immo/Mazda",
+      "folder": "Immo/Mazda/3 2010",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -1788,7 +1795,8 @@
       "canonical_path": "Calculators/Immo/Car/Mazda/Mazda 3 2010/IMMO DASH Mazda 3 2010 93C66.cal",
       "paths": [
         "Calculators/Immo/Car/Mazda/Mazda 3 2010/IMMO DASH Mazda 3 2010 93C66.cal"
-      ]
+      ],
+      "old_name": "Mazda 3 2010 3 2010 — данные IMMO (EEPROM 93C66)"
     },
     {
       "sha": "4dd302004158b84ab5c7869b2e0d5aea355ec58cc2f85550282c985f058f33f2",
@@ -2174,7 +2182,7 @@
     {
       "sha": "6075329fdbabc23f5d991ec8c391120fd62c0bf2e483edfee985274bf586ee25",
       "name": "Mitsubishi Lancer X — данные транспондера Hitag PCF7936, PCF7936 (EEPROM 24C16)",
-      "folder": "Immo/Mitsubishi",
+      "folder": "Immo/Mitsubishi/Lancer X",
       "operation": "данные транспондера Hitag PCF7936, PCF7936",
       "sources": [
         "Immo"
@@ -2382,7 +2390,7 @@
     {
       "sha": "6a2033bf21324fc1a524c6543e0deb3404857bfdd767451d9a332afb1d96180a",
       "name": "Nissan Note — данные транспондера Hitag PCF7946, PCF7946 (EEPROM 95080)",
-      "folder": "Immo/Nissan",
+      "folder": "Immo/Nissan/Note",
       "operation": "данные транспондера Hitag PCF7946, PCF7946",
       "sources": [
         "Immo"
@@ -2810,8 +2818,8 @@
     },
     {
       "sha": "809e54f837c1e4e2de50aacb790a7767ea233bfce66383a9256b9403b0db45d3",
-      "name": "GM MT 80 — идентификация блока",
-      "folder": "Immo/GM",
+      "name": "GM MT-80 — идентификация блока",
+      "folder": "Immo/GM/MT-80",
       "operation": "идентификация блока",
       "sources": [
         "Immo"
@@ -2819,7 +2827,8 @@
       "canonical_path": "Calculators/Immo/IDEN/GM/MT-80/MT-80 IDEN .cal",
       "paths": [
         "Calculators/Immo/IDEN/GM/MT-80/MT-80 IDEN .cal"
-      ]
+      ],
+      "old_name": "GM MT 80 — идентификация блока"
     },
     {
       "sha": "8131bcad02a96783ddf20643be62c6b01fc0d301d36337ea832d06a9de768b67",
@@ -2837,7 +2846,7 @@
     {
       "sha": "8179e0c8d11000a0de30e806218d64195fbed5673eaf2b23ea0ebfd099597b1e",
       "name": "Mitsubishi Lancer IX — данные транспондера Hitag PCF7936, PCF7936 (EEPROM 24C01)",
-      "folder": "Immo/Mitsubishi",
+      "folder": "Immo/Mitsubishi/Lancer IX",
       "operation": "данные транспондера Hitag PCF7936, PCF7936",
       "sources": [
         "Immo"
@@ -3006,7 +3015,7 @@
     {
       "sha": "89f39824bc1e1511d3ded3ab091df8abbba245b74e68b7eb003ae4b3a8c85d4e",
       "name": "Nissan Teana 2004 BCU PIN 24C56 66 — чтение PIN (EEPROM 93C56)",
-      "folder": "Immo/Nissan",
+      "folder": "Immo/Nissan/Teana",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -3382,8 +3391,8 @@
     },
     {
       "sha": "9b3b99d2e23b599f945150d9b3ed9e923b1a67464fba3f61697b88d4191bac58",
-      "name": "Ford Connect — данные IMMO (EEPROM 95320)",
-      "folder": "Immo/Ford",
+      "name": "Ford Transit Connect Connect — данные IMMO (EEPROM 95320)",
+      "folder": "Immo/Ford/Transit Connect",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -3391,7 +3400,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/Transit Connect/Connect  ECU 95320.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/Transit Connect/Connect  ECU 95320.cal"
-      ]
+      ],
+      "old_name": "Ford Connect — данные IMMO (EEPROM 95320)"
     },
     {
       "sha": "9b917bb49257287c892b39ebf029eecb0f8904a3ca710c86cd52b021d4ce1c07",
@@ -3489,7 +3499,7 @@
     {
       "sha": "a18f70996dbda7dfb0dc874fef94fb8c9691d674fb63fe54e9a75b01b6e8e799",
       "name": "Great Wall Hover H3 — чтение PIN",
-      "folder": "Immo/Great Wall",
+      "folder": "Immo/Great Wall/Hover",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -3697,7 +3707,7 @@
     {
       "sha": "adcb72eff6e99e8a88c1dfb3dcdb57d3bb47c4006d8b7e348ae6fda660c88d6b",
       "name": "Opel Astra H Display PIN 25080 — чтение PIN",
-      "folder": "Immo/Opel",
+      "folder": "Immo/Opel/Astra H",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -3709,8 +3719,8 @@
     },
     {
       "sha": "add7a3f79a1b73ed2f0432e7bf613063b4e3c0480b1ddb435e56a4fd406c37b4",
-      "name": "Ford Connect — данные IMMO",
-      "folder": "Immo/Ford",
+      "name": "Ford Transit Connect Connect — данные IMMO",
+      "folder": "Immo/Ford/Transit Connect",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -3718,7 +3728,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/Transit Connect/Connect Dash immo  9S12H256.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/Transit Connect/Connect Dash immo  9S12H256.cal"
-      ]
+      ],
+      "old_name": "Ford Connect — данные IMMO"
     },
     {
       "sha": "ade2bbf5c51610c9be02eef4b63da284161531537cde03c66c235841875d9e26",
@@ -3801,8 +3812,8 @@
     },
     {
       "sha": "b1d43cee0424f37b2de40fd0f1db9a2934d1f98fd4181184e5c27731799c47cd",
-      "name": "Ford Focus mask 1M80F 4KB — данные IMMO",
-      "folder": "Immo/Ford",
+      "name": "Ford FF2+ Focus mask 1M80F 4KB — данные IMMO",
+      "folder": "Immo/Ford/FF2+",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -3810,7 +3821,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/FF2+/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal"
-      ]
+      ],
+      "old_name": "Ford Focus mask 1M80F 4KB — данные IMMO"
     },
     {
       "sha": "b330f63df99554d2866d831689910302748a1a15e0b3fc3615a5b9f5d17565f8",
@@ -4062,7 +4074,7 @@
     {
       "sha": "c20bda761916261f533ad5c0aaa0f9c8906d672e8eaddbd3e0e7906fd966cb74",
       "name": "Opel Astra H PIN 35080 — чтение PIN",
-      "folder": "Immo/Opel",
+      "folder": "Immo/Opel/Astra H",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -4205,7 +4217,7 @@
     {
       "sha": "c6c1dea698ced96eaec8a27e6579a65b08d43e2bca461020a37b193215a62f5f",
       "name": "Toyota Corolla — данные транспондера 4C (EEPROM 95080)",
-      "folder": "Immo/Toyota",
+      "folder": "Immo/Toyota/Corolla",
       "operation": "данные транспондера 4C",
       "sources": [
         "Immo"
@@ -4647,7 +4659,7 @@
     {
       "sha": "d89c622fcf2691be2f38953050182a29ca95ca8946102bcd874470a6bb0f4e3c",
       "name": "Nissan Micra — данные транспондера Hitag PCF7946, PCF7946 (EEPROM 95080)",
-      "folder": "Immo/Nissan",
+      "folder": "Immo/Nissan/Micra",
       "operation": "данные транспондера Hitag PCF7946, PCF7946",
       "sources": [
         "Immo"
@@ -4672,7 +4684,7 @@
     },
     {
       "sha": "db85b0b10e06dacdaa0d9f5040dde51325ec6b248da8dbd50146429bc3b8d3b1",
-      "name": "Ford Focus mask 1M80F 4KB — данные IMMO · вариант 2",
+      "name": "Ford Focus mask 1M80F 4KB — данные IMMO",
       "folder": "Immo/Ford",
       "operation": "данные IMMO",
       "sources": [
@@ -4681,7 +4693,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/IMMO DASH Focus 9S12XHZ512 (mask 1M80F) 4KB.cal"
-      ]
+      ],
+      "old_name": "Ford Focus mask 1M80F 4KB — данные IMMO · вариант 2"
     },
     {
       "sha": "db9a63bf56634482fd3ff77cb71ee62a0fe7a24b27706c2815cedb91f50dcb10",
@@ -4802,8 +4815,8 @@
     },
     {
       "sha": "e1846d80e51a92509a1464208e0f7a15676227d9c24cbd353021758f18559d50",
-      "name": "Ford Focus — данные IMMO (EEPROM 95040)",
-      "folder": "Immo/Ford",
+      "name": "Ford FF2+ Focus — данные IMMO (EEPROM 95040)",
+      "folder": "Immo/Ford/FF2+",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -4811,7 +4824,8 @@
       "canonical_path": "Calculators/Immo/Car/Ford/FF2+/IMMO ECU Focus 95040.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/FF2+/IMMO ECU Focus 95040.cal"
-      ]
+      ],
+      "old_name": "Ford Focus — данные IMMO (EEPROM 95040)"
     },
     {
       "sha": "e1848f1f9240a1ac8a725424e0f394251aa337add68d6970042fa4cea823823c",
@@ -4829,7 +4843,7 @@
     {
       "sha": "e1964dbb3b2db42db1452925f94c7085db79bcb8ea81496a3c6e5821ba928031",
       "name": "Ford Ranger — чтение PIN (EEPROM 95320) · вариант 2",
-      "folder": "Immo/Ford",
+      "folder": "Immo/Ford/Ranger",
       "operation": "чтение PIN",
       "sources": [
         "Immo"
@@ -4837,12 +4851,13 @@
       "canonical_path": "Calculators/Immo/Car/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal",
       "paths": [
         "Calculators/Immo/Car/Ford/Ranger/IMMO ECU Ford Ranger 95320.cal"
-      ]
+      ],
+      "old_name": "Ford Ranger — чтение PIN (EEPROM 95320)"
     },
     {
       "sha": "e1a3c72185b680455c419a45a93aa875c7c7e61d841dc8dd953a9381c57733e2",
       "name": "Chevrolet Aveo — данные транспондера Megamos 48 (EEPROM 93C56)",
-      "folder": "Immo/Chevrolet",
+      "folder": "Immo/Chevrolet/Aveo",
       "operation": "данные транспондера Megamos 48",
       "sources": [
         "Immo"
@@ -4868,7 +4883,7 @@
     {
       "sha": "e41d60e652bcb81c92d248a5b84a15021bdf0d64f3864a4972d1da14a031d73b",
       "name": "ZAZ Sens 1 3 Micas 10 3 — идентификация блока (EEPROM 95160)",
-      "folder": "Immo/ZAZ",
+      "folder": "Immo/ZAZ/Sens",
       "operation": "идентификация блока",
       "sources": [
         "Immo"
@@ -4998,8 +5013,8 @@
     },
     {
       "sha": "ec22ca202bc1383c9f986d62caa5b893e3a6078dac85cf0e6fc274aa7d21f491",
-      "name": "Volvo C 30 CEM — данные IMMO",
-      "folder": "Immo/Volvo",
+      "name": "Volvo C-30 CEM — данные IMMO",
+      "folder": "Immo/Volvo/C-30",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -5007,7 +5022,8 @@
       "canonical_path": "Calculators/Immo/Car/Volvo/C-30/C-30  CEM 9S12XDT256.cal",
       "paths": [
         "Calculators/Immo/Car/Volvo/C-30/C-30  CEM 9S12XDT256.cal"
-      ]
+      ],
+      "old_name": "Volvo C 30 CEM — данные IMMO"
     },
     {
       "sha": "ecddb5807ec51061872f10f034372117478997280244a4b69421aaccc54958d6",
@@ -5350,7 +5366,7 @@
     {
       "sha": "fc8b7ae31cad042a7bce7d0704d65ecb70ee6f7db932405d8b55d3c1f798ce37",
       "name": "Mazda MVP 8C — данные IMMO",
-      "folder": "Immo/Mazda",
+      "folder": "Immo/Mazda/MVP",
       "operation": "данные IMMO",
       "sources": [
         "Immo"
@@ -5466,49 +5482,75 @@
     }
   ],
   "by_brand": {
-    "Immo/Renault": 14,
-    "Immo/Mercedes-Benz": 17,
-    "Immo/SsangYong": 5,
-    "Immo/Ford": 18,
-    "Immo/Daihatsu": 21,
-    "Immo/Hyundai": 11,
-    "Immo/Kia": 14,
-    "Immo/Audi": 7,
-    "Immo/Fiat": 56,
-    "Immo/Citroen": 17,
-    "Immo/Honda": 17,
-    "Immo/Convertor": 2,
-    "Immo/Chevrolet": 4,
-    "Immo/Mitsubishi": 16,
-    "Immo/Gilera": 3,
-    "Immo/Daewoo": 6,
-    "Immo/Mazda": 11,
-    "Immo/Opel": 23,
-    "Immo/Iveco": 1,
-    "Immo/Dacia": 3,
-    "Immo/Toyota": 24,
-    "Immo/Piaggio": 14,
-    "Immo/Nissan": 17,
-    "Immo/Lexus": 4,
-    "Immo/Volkswagen": 11,
-    "Immo/Peugeot": 28,
-    "Immo/Subaru": 2,
-    "Immo/Skoda": 1,
-    "Immo/Chery": 4,
-    "Immo/Chrysler": 1,
-    "Immo/BMW": 5,
-    "Immo/Rover": 4,
-    "Immo/Aprilia": 3,
-    "Immo/Suzuki": 8,
-    "Immo/Seat": 5,
-    "Immo/Lancia": 6,
-    "Immo/Yamaha": 3,
-    "Immo/Ducati": 1,
-    "Immo/Porsche": 1,
-    "Immo/Volvo": 2,
-    "Immo/Great Wall": 1,
-    "Immo/GM": 1,
-    "Immo/ZAZ": 1
+    "Renault": 14,
+    "Mercedes-Benz": 17,
+    "SsangYong": 5,
+    "Ford": 18,
+    "Daihatsu": 21,
+    "Hyundai": 11,
+    "Kia": 14,
+    "Audi": 7,
+    "Fiat": 56,
+    "Citroen": 17,
+    "Honda": 17,
+    "Convertor": 2,
+    "Chevrolet": 4,
+    "Mitsubishi": 16,
+    "Gilera": 3,
+    "Daewoo": 6,
+    "Mazda": 11,
+    "Opel": 23,
+    "Iveco": 1,
+    "Dacia": 3,
+    "Toyota": 24,
+    "Piaggio": 14,
+    "Nissan": 17,
+    "Lexus": 4,
+    "Volkswagen": 11,
+    "Peugeot": 28,
+    "Subaru": 2,
+    "Skoda": 1,
+    "Chery": 4,
+    "Chrysler": 1,
+    "BMW": 5,
+    "Rover": 4,
+    "Aprilia": 3,
+    "Suzuki": 8,
+    "Seat": 5,
+    "Lancia": 6,
+    "Yamaha": 3,
+    "Ducati": 1,
+    "Porsche": 1,
+    "Volvo": 2,
+    "Great Wall": 1,
+    "GM": 1,
+    "ZAZ": 1
+  },
+  "by_model": {
+    "Porsche/Cayenne": 1,
+    "Mitsubishi/Lancer X": 1,
+    "Mitsubishi/Lancer IX": 1,
+    "Renault/Sandero": 1,
+    "Ford/Ranger": 2,
+    "Ford/Transit Connect": 2,
+    "Ford/FF2+": 3,
+    "Mazda/3 2010": 2,
+    "Mazda/CX-7": 1,
+    "Mazda/MVP": 1,
+    "Mazda/626": 1,
+    "Hyundai/Accent": 1,
+    "Opel/Vectra A": 1,
+    "Opel/Astra H": 2,
+    "Chevrolet/Aveo": 2,
+    "Toyota/Corolla": 1,
+    "Nissan/Note": 1,
+    "Nissan/Micra": 1,
+    "Nissan/Teana": 1,
+    "Volvo/C-30": 2,
+    "Peugeot/Boxer": 1,
+    "Great Wall/Hover": 1,
+    "GM/MT-80": 1,
+    "ZAZ/Sens": 1
   },
   "by_operation": {
     "данные транспондера Hitag 2": 3,

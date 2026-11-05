@@ -42,6 +42,7 @@ const BRAND_FIX = {
   'mercedes-benz': 'Mercedes'
 };
 const GENERIC = new Set(['1 universal', 'china']);
+const NON_MODEL_DIRS = new Set(['1 universal','china','обновы','╨₧╨▒╨╜╨╛╨▓╤ï','service','lcm','ews-4','bsi','cas','smart key','dash','dashboard','pin','immo','navigation','diodes','smartcard','keycard','serial calculator','convertor','firmware','dump','dumps','backup','old','new','final','mcu','eeprom','processor','can','obd','tools','read','write','data','files','file','info','easy']);
 const BRAND_SET = new Set(BRANDS.map(brand => brand.toLowerCase()));
 const VENDORS = [
   'Mitsubishi Electric', 'Johnson Controls', 'Delphi', 'Continental', 'Visteon',
@@ -59,6 +60,7 @@ const canonBrand = value => {
   if (BRAND_FIX[key]) return BRAND_FIX[key];
   return BRANDS.find(brand => brand.toLowerCase() === key) || value.trim();
 };
+const knownBrand = value => !!value && BRAND_SET.has(canonBrand(value).toLowerCase());
 const clean = value => String(value)
   .replace(/[()\[\]]/g, ' ')
   .replace(/_+/g, ' ')
@@ -144,9 +146,55 @@ function modelName(model, brand) {
   const fixes = {
     'grant vitara': 'Grand Vitara',
     otlander: 'Outlander',
-    'grand vitara': 'Grand Vitara'
+    'grand vitara': 'Grand Vitara',
+    rav4: 'RAV4',
+    'rav-4': 'RAV4',
+    'rav 4': 'RAV4',
+    'a-class': 'A-Class',
+    'b-class': 'B-Class',
+    'c-class': 'C-Class',
+    'e-class': 'E-Class',
+    's-class': 'S-Class'
   };
-  return fixes[value.toLowerCase()] || value;
+  return fixes[value.toLowerCase().replace(/\s+/g, ' ')] || value;
+}
+function isModelDir(value, brand) {
+  const text = clean(value);
+  if (!text || /\.cal$/i.test(text)) return false;
+  const lower = text.toLowerCase();
+  if (NON_MODEL_DIRS.has(lower) || GENERIC.has(lower) || /[╨╤]/.test(text)) return false;
+  if (VENDORS.some(vendor => vendor.toLowerCase() === lower)) return false;
+  return !knownBrand(text) && canonBrand(text) !== brand;
+}
+function modelFolderName(value, brand) {
+  const name = clean(modelName(value, brand)).replace(/[\\/]/g, ' ').replace(/\s+/g, ' ').trim();
+  return name.length > 60 ? name.slice(0, 60).trim() : name;
+}
+function pathModel(parts, brand) {
+  for (const dir of parts.slice(3, -1)) {
+    if (!isModelDir(dir, brand)) continue;
+    const name = modelFolderName(dir, brand);
+    if (name) return name;
+  }
+  return '';
+}
+const MODEL_BY_BRAND = new Map();
+for (const entry of db.entries) {
+  if (entry.ext !== 'cal' || !/^Calculators\/(Airbag|SRS)\//i.test(entry.path)) continue;
+  const parts = entry.path.split('/');
+  const rawFolder = parts[2] || '';
+  const nested = parts.slice(3, -1).map(canonBrand).find(knownBrand);
+  const brand = nested || (rawFolder && !GENERIC.has(rawFolder.toLowerCase()) ? canonBrand(rawFolder) : '');
+  if (!brand) continue;
+  const model = pathModel(parts, brand);
+  if (!model) continue;
+  if (!MODEL_BY_BRAND.has(brand)) MODEL_BY_BRAND.set(brand, new Set());
+  MODEL_BY_BRAND.get(brand).add(model);
+}
+function modelFromFileName(file, brand) {
+  const text = clean(file.replace(/\.cal$/i, '')).toLowerCase();
+  const models = [...(MODEL_BY_BRAND.get(brand) || [])].filter(model => /^[A-Za-z]/.test(model)).sort((a, b) => b.length - a.length);
+  return models.find(model => text === model.toLowerCase() || text.startsWith(model.toLowerCase() + ' ')) || '';
 }
 
 const groups = new Map();
@@ -163,7 +211,8 @@ for (const [sha, entries] of groups) {
   const canonical = paths[0];
   const parts = canonical.split('/');
   const rawFolder = parts[2] || '';
-  const rawModel = parts[3] && !/\.cal$/i.test(parts[3]) ? parts[3] : '';
+  const pathDirs = parts.slice(3, -1).filter(Boolean);
+  const rawModel = pathDirs[0] || '';
 
   let program;
   try {
@@ -185,13 +234,12 @@ for (const [sha, entries] of groups) {
   const folder = canonBrand(rawFolder);
   const generic = GENERIC.has(rawFolder.toLowerCase());
   let brand = '';
-  let model = rawModel && canonBrand(rawModel) !== folder && !GENERIC.has(rawModel.toLowerCase()) ? rawModel : '';
+  let model = '';
   let reason = '';
 
-  if (rawModel && BRAND_SET.has(rawModel.toLowerCase().replace(/\s+/g, ' '))) {
+  if (knownBrand(rawModel)) {
     const nested = canonBrand(rawModel);
     brand = nested === folder ? '' : nested;
-    model = '';
   }
 
   if (!brand) {
@@ -211,7 +259,6 @@ for (const [sha, entries] of groups) {
           reason = 'папка и модель Qashqai указывают Nissan, а форма и логотип — Infiniti; марка не подтверждена однозначно';
         } else if (folder === 'Rover' && found[0] === 'Land Rover') {
           brand = 'Land Rover';
-          model = rawModel === 'Evoque' ? 'Evoque' : model;
         } else {
           reason = `марка в папке ${folder} не совпадает с описанием формы: ${found[0]}`;
         }
@@ -229,6 +276,8 @@ for (const [sha, entries] of groups) {
   }
 
   const labelBrands = [...new Set(labels.flatMap(label => brandsIn(label)))];
+  const imageBrandNames = [...new Set(images.flatMap(file => brandsIn(file.replace(/\.(bmp|png|jpe?g)$/i, ''))))];
+  const rowBrands = [...new Set([...descriptionBrands, ...labelBrands, ...imageBrandNames, ...(brand ? [brand] : [])])];
   if (!reason && labelBrands.length > 1 && (generic || !folder)) {
     reason = `в форме и имени несколько марок: ${labelBrands.join(', ')}`;
   }
@@ -245,12 +294,8 @@ for (const [sha, entries] of groups) {
   }
   if (reason) brand = '';
 
-  if (!reason && brand && rawModel && BRAND_SET.has(rawModel.toLowerCase()) && canonBrand(rawModel) === brand) {
-    model = '';
-  }
-  if (model && ['Обновы', '211_motohour'].includes(model)) model = '';
-  if (model && BRAND_SET.has(model.toLowerCase())) model = '';
-  model = model ? modelName(model, brand) : '';
+  if (!reason && brand) model = pathModel(parts, brand) || modelFromFileName(parts.at(-1), brand);
+  else model = '';
 
   const memory = memoryType(labels);
   const rawUnit = clean(parts.at(-1).replace(/\.cal$/i, ''));
@@ -293,8 +338,9 @@ for (const [sha, entries] of groups) {
     sha,
     paths,
     canonical,
-    folder: reason ? 'Неуточнённые' : (brand || 'Неуточнённые'),
+    folder: reason ? 'Неуточнённые' : [brand, ...(model ? [model] : [])].filter(Boolean).join('/'),
     name,
+    ...(rowBrands.length > 1 ? { brands: rowBrands } : {}),
     ...(operationUnconfirmed && oldName !== name ? { old_name: oldName } : {}),
     reason,
     memory,
@@ -336,12 +382,15 @@ if (covered.size !== airbagShas.size) throw new Error(`Coverage ${covered.size} 
 if ([...covered].some(sha => !airbagShas.has(sha))) throw new Error('Map contains a SHA outside Airbag/SRS');
 if (rows.length !== airbagShas.size - Object.keys(APPROVED).length) throw new Error('Duplicate generated entries');
 
-const allowedFolders = new Set(BRANDS.map(brand => `Airbag/${brand}`));
-allowedFolders.add('Airbag');
+const validFolder = folder => {
+  if (folder === 'Airbag') return true;
+  const parts = folder.replace(/^Airbag\//, '').split('/');
+  return parts.length >= 1 && parts.length <= 2 && BRANDS.includes(parts[0]) && parts.slice(1).every(Boolean);
+};
 const display = new Set();
 for (const row of rows) {
   const displayFolder = row.folder === 'Неуточнённые' ? 'Airbag' : `Airbag/${row.folder}`;
-  if (!allowedFolders.has(displayFolder)) throw new Error(`Invalid folder: ${row.folder}`);
+  if (!validFolder(displayFolder)) throw new Error(`Invalid folder: ${row.folder}`);
   if (!row.name.trim() || row.name.length > 140 || /[\\/]/.test(row.name) || /\.cal$/i.test(row.name)) {
     throw new Error(`Invalid name: ${row.name}`);
   }
@@ -368,9 +417,12 @@ const totals = {
   version_groups: versionGroups
 };
 const byBrand = {};
+const byModel = {};
 const byAction = {};
 for (const row of rows) {
-  byBrand[row.folder] = (byBrand[row.folder] || 0) + 1;
+  const brandFolder = row.folder.split('/')[0];
+  byBrand[brandFolder] = (byBrand[brandFolder] || 0) + 1;
+  if (row.folder.includes('/')) byModel[row.folder] = (byModel[row.folder] || 0) + 1;
   byAction[row.action || '(не подтверждена)'] = (byAction[row.action || '(не подтверждена)'] || 0) + 1;
 }
 
@@ -378,6 +430,7 @@ const sorted = [...rows].sort((a, b) => a.sha.localeCompare(b.sha));
 const lines = sorted.map(row => {
   const item = { name: row.name, folder: row.folder === 'Неуточнённые' ? 'Airbag' : `Airbag/${row.folder}` };
   if (row.reason) item.reason = row.reason;
+  if (row.brands) item.brands = row.brands;
   if (row.old_name) item.old_name = row.old_name;
   return `  '${row.sha}':${JSON.stringify(item)},`;
 });
@@ -395,6 +448,7 @@ const report = {
   scope: ['Calculators/Airbag/**/*.cal', 'Calculators/SRS/**/*.cal'],
   totals,
   by_brand: byBrand,
+  by_model: byModel,
   by_operation: byAction,
   approved_unchanged: Object.entries(APPROVED).map(([sha, label]) => ({ sha, label })),
   normalization: {

@@ -19,8 +19,9 @@ bytes, SHA-256 identities, source paths and exact-CAL exports.
 Make the smallest complete change needed for the assigned task. Preserve separate
 original BIN and working/result buffers. Unknown commands and unsupported writers
 must fail explicitly rather than be skipped. Do not guess original algorithms.
-Folder names remain the original section names; folders sort by descending unique
-CAL count. Display names can improve clarity without changing original files.
+Folder names remain the original section names. Sections sort by descending unique
+CAL count; folders inside a section sort alphabetically. Display names can improve
+clarity without changing original files.
 
 Distinguish handler recognition, synthetic test coverage and real reference results.
 Do not describe every recognized CAL as proven correct on all vehicle dumps.

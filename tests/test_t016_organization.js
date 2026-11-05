@@ -36,7 +36,7 @@ const uniqueCal=new Set(allCal.map(e=>e.sha));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
-const folderRows=()=>el('tree').children.filter(c=>c.tagName==='DETAILS').map(c=>({name:c.children[0].children[1].textContent,count:Number(c.children[0].children[2].textContent)}));
+const folderRows=(parent=el('tree'))=>parent.children.filter(c=>c.tagName==='DETAILS').map(c=>({name:c.children[0].children[1].textContent,count:Number(c.children[0].children[2].textContent),node:c}));
 const sectionRows=()=>el('tree').children.filter(c=>c.className==='sectionButton').map(c=>({name:c.children[1].textContent,count:Number(c.children[2].textContent.replace(/\s/g,''))}));
 const approvedExpected=[
  ['faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a','Skoda Fabia 2006 — декриптор EEPROM 93C86','Dashboard/Skoda'],
@@ -68,48 +68,45 @@ await test('all active CAL are mapped once, without translated root folders',()=
  }
  for(const root of ['Airbag','Dashboard','Immo','CarRadio','OTHER'])assert(roots.has(root),root);
  assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Germany','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
- assert.deepEqual(rootCounts,{Dashboard:14,Airbag:9,CHINA:1,ECU:1,CarRadio:1,OTHER:2},'exact direct-root remainder by section');
+ assert.deepEqual(rootCounts,{Airbag:9,CHINA:1,ECU:1,CarRadio:1,OTHER:2},'exact direct-root remainder by section');
  for(const [sha,item] of Object.entries(org.data.entries)){
-  if(['Dashboard','Airbag','CHINA','ECU','CarRadio'].includes(item.folder))assert(item.reason&&item.reason.trim(),'root reason '+sha);
+  if(!item.folder.includes('/'))assert(item.reason&&item.reason.trim(),'root reason '+sha);
  }
  assert.equal(org.folder(entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045')),'Airbag/Toyota');
 });
-await test('Dashboard roots are routed into existing or newly created brand folders, with reasons for the rest',()=>{
+await test('Dashboard roots are routed into brand or confirmed panel-manufacturer folders, without unresolved roots',()=>{
  const report=require('../reports/catalog-organization-dashboard-2026-11-04.json'),rr=report.root_routing;
  assert.equal(report.totals.unique_sha,4843,'Dashboard unique SHA unchanged');
- assert.equal(rr.initial_root,84);assert.equal(rr.moved,70);assert.equal(rr.remaining,14);
+ assert.equal(rr.initial_root,84);assert.equal(rr.moved,84);assert.equal(rr.remaining,0);
  assert.equal(rr.initial_root,rr.moved+rr.remaining,'every root entry is accounted for');
  assert.equal(rr.moved_entries.length,rr.moved);assert.equal(rr.remaining_entries.length,rr.remaining);
  const existing=new Set(rr.existing_folders),created=new Set(rr.created_folders);
- assert.deepEqual([...created].sort(),['Feeler','Hidromek','SYM','TCM','TFN','Terex','Triumph']);
+ assert.deepEqual([...created].sort(),['Curtis','Denso','Feeler','Hidromek','Kansey','SYM','TCM','TFN','Terex','Triumph','Visteon','Yazaki']);
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
  for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand),'unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
- assert.equal(rootShas.size,rr.remaining,'only the recorded entries remain in Dashboard root');
- for(const row of rr.remaining_entries){
-  const item=org.get(row.sha);assert(item);assert(rootShas.has(row.sha),'remaining entry absent from root '+row.sha);
-  assert.equal(item.folder,'Dashboard',row.sha);assert.equal(item.reason,row.reason,row.sha);assert(item.reason.trim(),row.sha);
- }
+ assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
  const movedShas=new Set();
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
-  assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length===2,row.sha);
+  assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
+  if(row.manufacturer){assert.equal(item.manufacturer,row.manufacturer,row.sha);assert.equal(item.folder,'Dashboard/'+row.manufacturer,row.sha);}
  }
- assert.equal(movedShas.size,70,'all moved SHAs stay distinct');
+ assert.equal(movedShas.size,84,'all moved SHAs stay distinct');
  const yazaki=rr.moved_entries.find(row=>row.sha==='00de8bec6523cd8030439afa9418882d248341dd13014373a49b2a1242f089dd');
  assert(yazaki,'moved Yazaki entry');assert(yazaki.old_name);assert.equal(org.folder(entry(yazaki.sha)),'Dashboard/Mitsubishi');
  assert(org.matches(entry(yazaki.sha),yazaki.old_name),'old Yazaki name remains searchable');
  const createdRows=rr.moved_entries.filter(row=>created.has(row.folder.split('/')[1]));
- assert.equal(createdRows.length,10,'entries routed into newly created folders');
+ assert.equal(createdRows.length,24,'entries routed into newly created folders');
  const createdCounts={};for(const row of createdRows)createdCounts[row.folder.split('/')[1]]=(createdCounts[row.folder.split('/')[1]]||0)+1;
- assert.deepEqual(createdCounts,{Feeler:1,Hidromek:1,SYM:1,TCM:2,TFN:1,Terex:2,Triumph:2});
- for(const row of createdRows){assert(row.old_name,'old name '+row.sha);assert(org.matches(entry(row.sha),row.old_name),'old name search '+row.sha);}
+ assert.deepEqual(createdCounts,{Curtis:1,Denso:5,Feeler:1,Hidromek:1,Kansey:1,SYM:1,TCM:2,TFN:1,Terex:2,Triumph:2,Visteon:1,Yazaki:6});
+ for(const row of createdRows)if(row.old_name)assert(org.matches(entry(row.sha),row.old_name),'old name search '+row.sha);
 });
 await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
  const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
@@ -117,13 +114,64 @@ await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with i
  assert.equal(report.totals.ambiguous,9);assert.equal(report.totals.operation_unconfirmed,1);
  const cx5=entry('3233be92811e89914a7a85ae0e99bcfb7dde48c41745173b64514d8800bcde01');
  assert(cx5,'CX-5 source path');
- assert.equal(org.folder(cx5),'Airbag/Mazda');
+ assert.equal(org.folder(cx5),'Airbag/Mazda/CX-5');
  assert.equal(org.title(cx5),'Mazda CX-5 2018 K123 57K30B — операция не подтверждена');
  const item=org.get(cx5.sha);assert(item.old_name);assert(org.matches(cx5,item.old_name),'old CX-5 name remains searchable');
  assert.equal(item.reason,undefined,'brand is confirmed, operation state is in the display name');
  const airbagRoot=Object.values(org.data.entries).filter(x=>x.folder==='Airbag');
  assert.equal(airbagRoot.length,9);
  for(const row of airbagRoot)assert(row.reason&&row.reason.trim(),'root reason');
+});
+await test('Airbag model folders are restored from source paths, including Toyota RAV4',()=>{
+ const rav4=allCal.filter(e=>/^Calculators\/(Airbag|SRS)\/Toyota\/RAV-?4\//i.test(e.path));
+ assert(rav4.length>0,'RAV4 source paths');
+ const rav4Shas=new Set(rav4.map(e=>e.sha));
+ for(const e of rav4)assert.equal(org.folder(e),'Airbag/Toyota/RAV4',e.path);
+ for(const [sha,item] of Object.entries(org.data.entries))if(rav4Shas.has(sha))assert.equal(item.folder,'Airbag/Toyota/RAV4',sha);
+ const airbagModels=[...new Set(Object.values(org.data.entries).filter(item=>item.folder.startsWith('Airbag/')&&item.folder.split('/').length===3).map(item=>item.folder.split('/')[1]))];
+ assert(airbagModels.length>20,'Airbag model folders restored');
+ assert(airbagModels.includes('Toyota'));
+ const cx5=Object.values(org.data.entries).find(item=>item.folder==='Airbag/Mazda/CX-5');
+ assert(cx5,'CX-5 model folder');
+ const focus=Object.values(org.data.entries).filter(item=>item.folder==='Airbag/Ford/Focus');
+ assert(focus.length>0,'Ford Focus model folder');
+ for(const item of Object.values(org.data.entries)){
+  if(!item.folder.startsWith('Airbag/'))continue;
+  const parts=item.folder.split('/');
+  assert(!parts.slice(1).some(part=>/^(?:Обновы|╨₧╨▒╨╜╨╛╨▓╤ï|Service|LCM|EWS-4)$/i.test(part)),'service folder '+item.folder);
+ }
+});
+await test('confirmed model folders are restored in Dashboard, Immo and CarRadio without service directories',()=>{
+ const modelFolders=prefix=>new Set(Object.values(org.data.entries).filter(item=>item.folder.startsWith(prefix+'/')&&item.folder.split('/').length===3).map(item=>item.folder.slice(prefix.length+1)));
+ const dashboard=modelFolders('Dashboard'),immo=modelFolders('Immo'),radio=modelFolders('CarRadio');
+ assert(dashboard.size>200,'Dashboard model folders');assert(dashboard.has('Toyota/RAV4'));assert(dashboard.has('Peugeot/308'));
+ assert(immo.has('Opel/Astra H'));assert(immo.has('Ford/Transit Connect'));
+ assert(radio.has('Acura/MDX'));assert(radio.has('Renault/Duster'));
+ for(const [section,folders] of [['Dashboard',dashboard],['Immo',immo],['CarRadio',radio]]){
+  for(const folder of folders)assert(!/(^|\/)(?:Service|LCM|EWS-4|Smart Key|Обновы|╨₧╨▒╨╜╨╛╨▓╤ï)$/i.test(folder),'service model folder '+section+'/'+folder);
+ }
+});
+await test('Denso and Yazaki screenshot roots use confirmed panel-manufacturer folders and keep Toyota/Lexus search',()=>{
+ const report=require('../reports/catalog-organization-dashboard-2026-11-04.json'),rr=report.root_routing;
+ const manufactured=rr.moved_entries.filter(row=>row.routing==='manufacturer');
+ assert.equal(manufactured.length,14,'all Dashboard roots have a confirmed manufacturer folder');
+ const screenshot=manufactured.filter(row=>['Denso','Yazaki'].includes(row.manufacturer));
+ assert.equal(screenshot.length,11,'Denso/Yazaki screenshot group');
+ for(const row of manufactured){
+  const item=org.get(row.sha);assert(item,row.sha);
+  assert.equal(item.folder,'Dashboard/'+row.manufacturer,row.sha);
+  assert.equal(item.manufacturer,row.manufacturer,row.sha);
+  assert.equal(item.reason,undefined,row.sha);
+  assert(org.matches(entry(row.sha),row.manufacturer),'manufacturer search '+row.sha);
+ }
+ for(const row of screenshot){
+  assert(row.brands.includes('Toyota')&&row.brands.includes('Lexus'),'both car brands retained '+row.sha);
+  assert(org.matches(entry(row.sha),'Toyota'),'Toyota search '+row.sha);
+  assert(org.matches(entry(row.sha),'Lexus'),'Lexus search '+row.sha);
+ }
+ const denso=manufactured.filter(row=>row.manufacturer==='Denso');const yazaki=manufactured.filter(row=>row.manufacturer==='Yazaki');
+ assert.equal(denso.length,5);assert.equal(yazaki.length,6);
+ assert.deepEqual([...new Set(manufactured.map(row=>row.manufacturer))].sort(),['Curtis','Denso','Kansey','Visteon','Yazaki']);
 });
 await test('approved entries keep exact names, folders, original paths and bytes',async()=>{
  for(const [sha,name,folder] of approvedExpected){
@@ -172,7 +220,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  }
  assert.equal(seen.size,2629);
 });
-await test('tree roots and every nested folder are ordered by unique CAL SHA count with matching counters',()=>{
+await test('main sections sort by unique CAL count; folders inside sections sort alphabetically with counters',()=>{
  el('search').value='';run("catalogScope='';expandedFolders.clear();renderCatalog()");
  const sections=sectionRows();assert(sections.length>=17);
  for(let i=1;i<sections.length;i++){
@@ -182,14 +230,16 @@ await test('tree roots and every nested folder are ordered by unique CAL SHA cou
  assert.equal(sections[0].name,'Airbag','largest section first');
  assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4843);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
- for(const section of ['Dashboard','Immo','CarRadio','OTHER','Asia']){
-  run("expandedFolders.clear();catalogScope='"+section+"';renderCatalog()");
-  const rows=folderRows();assert(rows.length>0,section);
-  for(let i=1;i<rows.length;i++){
-   assert(rows[i-1].count>=rows[i].count,'folder count order '+section+' '+rows[i-1].name+' vs '+rows[i].name);
-   if(rows[i-1].count===rows[i].count)assert(rows[i-1].name.localeCompare(rows[i].name,'ru')<=0,'folder tie name '+section);
-  }
-  for(const row of rows)assert.equal(row.count,expectedCount(section+'/'+row.name),'counter '+section+'/'+row.name);
+ const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
+ const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
+ const checkAlphabetical=(parent,prefix,section)=>{
+  const rows=folderRows(parent);if(!rows.length)return;
+  for(let i=1;i<rows.length;i++)assert(rows[i-1].name.localeCompare(rows[i].name,'ru')<=0,'folder alphabetical order '+section+' '+prefix+' '+rows[i-1].name+' vs '+rows[i].name);
+  for(const row of rows){const path=prefix+'/'+row.name;assert.equal(row.count,expectedCount(path),'counter '+path);checkAlphabetical(row.node,path,section);}
+ };
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
+  run("expandedFolders.clear();"+expand+";catalogScope='"+section+"';renderCatalog()");
+  checkAlphabetical(el('tree'),section,section);
  }
  run("expandedFolders.clear();catalogScope='';renderCatalog()");
 });
@@ -218,7 +268,7 @@ await test('search finds new names, original paths, old file names and old secti
 });
 await test('tree expanded sections show every unique CAL once, with original exports and pictures',async()=>{
  for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
-  const folders=[...new Set(Object.values(org.data.entries).filter(x=>x.folder===section||x.folder.startsWith(section+'/')).map(x=>x.folder))];
+  const folders=[...new Set(Object.values(org.data.entries).filter(x=>x.folder===section||x.folder.startsWith(section+'/')).flatMap(x=>{const parts=x.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
   run("expandedFolders.clear();catalogScope='"+section+"';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
   const expected=groups.filter(g=>{const p=org.displayPath(g.e);return p===section||p?.startsWith(section+'/');}).length;
   assert.equal(walk(el('tree'),'fileItem').length,expected,'visible once in '+section);
@@ -228,5 +278,5 @@ await test('tree expanded sections show every unique CAL once, with original exp
  const img=run('picture({type:"P",id:5,text:"Toyota.bmp"})');assert(img);assert.match(img.src,/^data:image\/bmp;base64,/);
  assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/airbag/toyota/toyota.bmp'),'no duplicate image');
 });
-console.log(JSON.stringify({passed,scope:'original section names, counted tree order, complete 15,057 SHA map, search, export and pictures via real app.js handlers'}));
+console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, search, export and pictures via real app.js handlers'}));
 })().catch(e=>{console.error(e);process.exit(1)});

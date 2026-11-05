@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2261,
-      "sha256": "3acb1609f97c73a6d102f67f6a8d25e89c160481053180103dda0d70d4de6753"
+      "bytes": 2308,
+      "sha256": "da183304c2513388cb27af74fd915a3525faec2f18772a9af6e85a6dfebd9c62"
     },
     {
       "path": "AUDIT-2026-11-01.md",
@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 42028,
-      "sha256": "0e8ebe9047ada6dea5f3f6a9b558a5a58e70f006bc9253d2ccd75d4d270719e4"
+      "bytes": 42387,
+      "sha256": "8845aff295b849fd0a84c70aae63cd6ff04e935fc0589c07031b0c4669009f8d"
     },
     {
       "path": "archive-verification.json",
@@ -303,23 +303,23 @@
     },
     {
       "path": "catalog-organization-airbag.js",
-      "bytes": 909819,
-      "sha256": "a092dd7e377a335f386f9d5198801fdd49236badc6395e26dbe07a820fd353a2"
+      "bytes": 935336,
+      "sha256": "7affbea02026c079e68ae98f340d6da4f42dfa77b24faae2269aa92f8af93745"
     },
     {
       "path": "catalog-organization-dashboard.js",
-      "bytes": 894339,
-      "sha256": "bcf381c19477ce8c87eae7dd13248ae6c59a9832ac9744d9174879bb61b7a68e"
+      "bytes": 974417,
+      "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
     },
     {
       "path": "catalog-organization-immo.js",
-      "bytes": 73704,
-      "sha256": "787bf57699a9af8b1db114dff505826011063ffeb2a357d09dfe91a4706641c7"
+      "bytes": 75017,
+      "sha256": "5ee648092bea0910065d35d9f549a6eba332bafb86ce0d20e40663a5d612226c"
     },
     {
       "path": "catalog-organization-radio.js",
-      "bytes": 273796,
-      "sha256": "be2159b593d587573a3638ad8563250cce1d891e8b1ba4841c605dcd58519f55"
+      "bytes": 274076,
+      "sha256": "41ce0443a9f33d8a630f3ac0fed16194b67b1aba012795534cecccdb4077c5c5"
     },
     {
       "path": "catalog-organization-remainder.js",
@@ -333,8 +333,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 8076,
-      "sha256": "71fbac788098df29bf84f79a91e9b00dc9ec14251e100c7d46cda36d351819db"
+      "bytes": 8757,
+      "sha256": "921da26be052b62bfa09ce348ba400db306e2b9d17c108dc95d2da24116f7828"
     },
     {
       "path": "catalog-parts.json",
@@ -1533,8 +1533,8 @@
     },
     {
       "path": "reports/catalog-airbag-organization-2026-11-04.json",
-      "bytes": 6645,
-      "sha256": "777033f54d985a810b975705d447e04738feb9ad165530e6bcd88b76cb64b3ba"
+      "bytes": 15655,
+      "sha256": "19fc8b628327762d5227514af7aabda081e6ea79d95f32e31fb49eab434daa31"
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.json",
@@ -1553,8 +1553,8 @@
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.json",
-      "bytes": 2465991,
-      "sha256": "f97de2b5b4baa0245b130244dccc98d63cf4f2ebd9b6d55be6bdc9ab04cdb027"
+      "bytes": 2556645,
+      "sha256": "0fa693ef7a32267c5c70331147432865339517e05f30510bfd113213559aa700"
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
@@ -1563,8 +1563,8 @@
     },
     {
       "path": "reports/catalog-organization-immo-2026-11-04.json",
-      "bytes": 203679,
-      "sha256": "fcdc858c16992a3eecbb58d10b1c12cfd5be879bf9c935c49757bca209d2766a"
+      "bytes": 205495,
+      "sha256": "90f34a333becef8445c47f5c4b0156fb6a554f0d694bcb2e15e7495b9518fc9b"
     },
     {
       "path": "reports/catalog-organization-immo-2026-11-04.md",
@@ -1573,8 +1573,8 @@
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.json",
-      "bytes": 745629,
-      "sha256": "2af631b425fac8e40d99c4af212f936dcb1e3a36fa1b8c782d2fa9ca71de5113"
+      "bytes": 745519,
+      "sha256": "4e06c33f641b111017e8d54cbc31512fe9963388f192e8e093ced02ba2a3178e"
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.md",
@@ -1948,8 +1948,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 22296,
-      "sha256": "4698ec2c03a9a6fef497e2dfd5f64761916b91e05ad910ec4969887cd497b7ac"
+      "bytes": 26494,
+      "sha256": "1f73909676a5d7095239ca84d268427178b3afab974335b9fbd67df87c81a03f"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -2038,13 +2038,13 @@
     },
     {
       "path": "tools/catalog_airbag_organization.js",
-      "bytes": 18575,
-      "sha256": "5ea4b30a7618cce76efbdd18a3b37709638242280583abb95426c1ceaae9a615"
+      "bytes": 21329,
+      "sha256": "3d1ca1f0e8016afc6856a505cef537b69b256ccc4569a5bfcf0c53aca875fac1"
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 47545,
-      "sha256": "57cb61a3312e4592d1d0cea69e439fbd53263185fe711b9bd4b8fed431582814"
+      "bytes": 52368,
+      "sha256": "90b7f1c5e8a09908dfe5ea661151ffe09c069d98cbbe312aff311e1bc9ca074b"
     },
     {
       "path": "tools/catalog_inventory.py",
