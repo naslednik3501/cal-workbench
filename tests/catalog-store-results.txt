@@ -1,9 +1,0 @@
-PASS Empty catalog initializes; committed files survive new Store instance
-PASS Duplicate filenames remain separate entries and retain bytes
-PASS Failed transaction retains previous catalog without partial records
-PASS CAL package round trip retains paths, duplicate names, hashes and bytes
-PASS Changed payload is rejected by SHA-256
-PASS Unsupported formats, traversal paths, duplicate IDs, BIN and invalid base64 rejected
-PASS Unavailable storage rejects honestly, allowing application export fallback
-PASS Existing entries are not erased by another import transaction
-{"passed":8,"failed":0,"scope":"Catalog serialization and transaction handling via Node adapter; not browser quota testing."}

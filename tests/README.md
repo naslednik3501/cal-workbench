@@ -25,7 +25,7 @@ Version 0.5: 29 app checks, 52 total with engine/store. Covers full session rese
 
 These require only Node and repository contents: `test_source.js` (13), `test_preparation.js` (14), `test_polo.js` (8 groups), `test_catalog_store.js` (8), `test_catalog.js`, and `test_source_pairs.js` (465 pairs × three synthetic vectors). The last suite preserves nine explicitly recorded source-version differences, rather than asserting all same-name files are equivalent. Polo uses a separate direct permutation formulation and four write/readback values. No hardware or original-iProg claim follows from these tests.
 
-`test_source.js` also loads engine and source interpreter as classic browser scripts without CommonJS. The app harness is still a Node adapter, not a rendering test. Private-fixture suites and their old result logs remain historical until the BINs are provided again.
+`test_source.js` also loads engine and source interpreter as classic browser scripts without CommonJS. The app harness is still a Node adapter, not a rendering test. Private-fixture suites require their BINs to be provided again; pre-v0.5.3 result logs were removed because they described superseded test runs.
 
 Version 0.5.3 adds `test_binary_resolution.js`. It locks the exact 254-version split,
 checks all 32 restored writers on two synthetic buffer patterns and two inputs, compares
