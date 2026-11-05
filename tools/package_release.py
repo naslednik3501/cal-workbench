@@ -1,4 +1,8 @@
-"""Package the standalone application without personal BIN test fixtures."""
+"""Package the standalone application without personal BIN test fixtures.
+
+The validation block in MANIFEST.json records only checks executed by this command.
+Dated browser and private-fixture results are evidence, not silently repeated claims.
+"""
 from pathlib import Path
 import hashlib
 import json
@@ -20,11 +24,12 @@ def included(path):
             and not (rel.parts[0] == 'tests' and path.suffix.lower() in {'.bin', '.png'}))
 
 files = sorted(p for p in root.rglob('*') if included(p))
-for test in ['test_source.js', 'test_preparation.js', 'test_polo.js',
-             'test_source_pairs.js', 'test_binary_events.js', 'test_binary_resolution.js',
-             'test_catalog_store.js', 'test_catalog.js',
-             'test_t016_organization.js', 'test_t016_group_review.js',
-             'test_t001_hardware_elements.js']:
+tests = ['test_source.js', 'test_preparation.js', 'test_polo.js',
+         'test_source_pairs.js', 'test_binary_events.js', 'test_binary_resolution.js',
+         'test_catalog_store.js', 'test_catalog.js',
+         'test_t016_organization.js', 'test_t016_group_review.js',
+         'test_t001_hardware_elements.js']
+for test in tests:
     subprocess.run(['node', str(root / 'tests' / test)], cwd=root, check=True)
 html = (root / 'index.html').read_text()
 ids = re.findall(r'\bid="([^"]+)"', html)
@@ -35,12 +40,17 @@ for ref in re.findall(r"\$\('([^']+)'\)", (root / 'app.js').read_text()):
     assert ref in ids, f'Missing app element: {ref}'
 manifest = dict(version=version, files=[dict(path=str(p.relative_to(root)), bytes=p.stat().st_size,
     sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in files],
-    validation=dict(source_tests=13, preparation_tests=14, polo_checks=8, store_tests=8,
-        source_binary_pairs=465, exactly_matching_pairs=456, catalog_hashes='passed',
-        private_bin_fixture_tests='not rerun; fixtures not in shared repository',
-        binary_resolution=dict(target=254, read_only=216, full_writers=32, partial_fis=4, unsupported=2),
-        original_iprog_execution='not compared', chromium_release_scenarios='passed on Linux',
-        real_browser_storage='tested in Chromium', windows='not tested'),
+    validation=dict(scope='Only checks run by tools/package_release.py are asserted here.',
+        executed_node_tests=tests, executed_node_test_count=len(tests),
+        executed_node_tests_status='passed',
+        html_checks='passed: unique IDs, referenced resources and app.js element IDs',
+        binary_resolution=dict(target=254, read_only=216, full_writers=36, partial=0,
+            unsupported=2, asserted_by='tests/test_binary_resolution.js'),
+        private_bin_fixture_tests='not run; fixtures not in shared repository',
+        original_iprog_execution='not compared',
+        browser_rendering='not run by this packaging step',
+        historical_final_app_validation='reports/final-app-validation-2026-11-04.md (dated; not rerun here)',
+        windows='not tested'),
     personal_bin_fixtures_included=False)
 (root / 'MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
 destination.parent.mkdir(parents=True, exist_ok=True)
