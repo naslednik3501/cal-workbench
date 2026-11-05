@@ -56,7 +56,7 @@ await test('all active CAL are mapped once, without translated root folders',()=
  assert.equal(uniqueCal.size,15057,'unique CAL SHA');
  assert.equal(Object.keys(org.data.entries).length,15057,'one display entry per unique SHA');
  for(const e of allCal)assert(org.get(e.sha),'unmapped '+e.path);
- const display=new Set(),roots=new Set();
+ const display=new Set(),roots=new Set(),rootCounts={};
  for(const [sha,item] of Object.entries(org.data.entries)){
   assert(item.name.trim()&&item.name.length<=140,sha);assert(item.folder.trim(),sha);
   assert(!/(^|\/)(?:Подушки безопасности|Приборные панели|Иммобилайзеры и ключи|Магнитолы и навигация|Утилиты)(\/|$)/.test(item.folder),'translated root: '+item.folder);
@@ -64,21 +64,29 @@ await test('all active CAL are mapped once, without translated root folders',()=
   if(item.reason)assert(item.reason.trim().length<=240,sha);
   const key=(item.folder+'/'+item.name).toLowerCase();assert(!display.has(key),'duplicate display '+key);display.add(key);
   roots.add(item.folder.split('/')[0]);
+  if(!item.folder.includes('/'))rootCounts[item.folder]=(rootCounts[item.folder]||0)+1;
  }
  for(const root of ['Airbag','Dashboard','Immo','CarRadio','OTHER'])assert(roots.has(root),root);
  assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Germany','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
+ assert.deepEqual(rootCounts,{Dashboard:14,Airbag:9,CHINA:1,ECU:1,CarRadio:1,OTHER:2},'exact direct-root remainder by section');
+ for(const [sha,item] of Object.entries(org.data.entries)){
+  if(['Dashboard','Airbag','CHINA','ECU','CarRadio'].includes(item.folder))assert(item.reason&&item.reason.trim(),'root reason '+sha);
+ }
  assert.equal(org.folder(entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045')),'Airbag/Toyota');
 });
-await test('Dashboard roots are routed only into existing brand folders, with reasons for the rest',()=>{
+await test('Dashboard roots are routed into existing or newly created brand folders, with reasons for the rest',()=>{
  const report=require('../reports/catalog-organization-dashboard-2026-11-04.json'),rr=report.root_routing;
  assert.equal(report.totals.unique_sha,4843,'Dashboard unique SHA unchanged');
- assert.equal(rr.initial_root,84);assert.equal(rr.moved,60);assert.equal(rr.remaining,24);
+ assert.equal(rr.initial_root,84);assert.equal(rr.moved,70);assert.equal(rr.remaining,14);
  assert.equal(rr.initial_root,rr.moved+rr.remaining,'every root entry is accounted for');
  assert.equal(rr.moved_entries.length,rr.moved);assert.equal(rr.remaining_entries.length,rr.remaining);
- const existing=new Set(rr.existing_folders);
+ const existing=new Set(rr.existing_folders),created=new Set(rr.created_folders);
+ assert.deepEqual([...created].sort(),['Feeler','Hidromek','SYM','TCM','TFN','Terex','Triumph']);
+ assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand),'new Dashboard folder was not present before routing: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand),'unknown Dashboard folder: '+brand);
+ for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,rr.remaining,'only the recorded entries remain in Dashboard root');
  for(const row of rr.remaining_entries){
@@ -93,11 +101,29 @@ await test('Dashboard roots are routed only into existing brand folders, with re
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length===2,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
  }
- assert.equal(movedShas.size,60,'all moved SHAs stay distinct');
+ assert.equal(movedShas.size,70,'all moved SHAs stay distinct');
  const yazaki=rr.moved_entries.find(row=>row.sha==='00de8bec6523cd8030439afa9418882d248341dd13014373a49b2a1242f089dd');
  assert(yazaki,'moved Yazaki entry');assert(yazaki.old_name);assert.equal(org.folder(entry(yazaki.sha)),'Dashboard/Mitsubishi');
  assert(org.matches(entry(yazaki.sha),yazaki.old_name),'old Yazaki name remains searchable');
- for(const brand of ['Terex','Triumph','TCM','SYM','TFN','Feeler','Hidromek'])assert(!usedBrands.has(brand),'missing brand folder was not created: '+brand);
+ const createdRows=rr.moved_entries.filter(row=>created.has(row.folder.split('/')[1]));
+ assert.equal(createdRows.length,10,'entries routed into newly created folders');
+ const createdCounts={};for(const row of createdRows)createdCounts[row.folder.split('/')[1]]=(createdCounts[row.folder.split('/')[1]]||0)+1;
+ assert.deepEqual(createdCounts,{Feeler:1,Hidromek:1,SYM:1,TCM:2,TFN:1,Terex:2,Triumph:2});
+ for(const row of createdRows){assert(row.old_name,'old name '+row.sha);assert(org.matches(entry(row.sha),row.old_name),'old name search '+row.sha);}
+});
+await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
+ const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
+ assert.equal(report.totals.unique_sha,5383,'Airbag/SRS unique SHA unchanged');
+ assert.equal(report.totals.ambiguous,9);assert.equal(report.totals.operation_unconfirmed,1);
+ const cx5=entry('3233be92811e89914a7a85ae0e99bcfb7dde48c41745173b64514d8800bcde01');
+ assert(cx5,'CX-5 source path');
+ assert.equal(org.folder(cx5),'Airbag/Mazda');
+ assert.equal(org.title(cx5),'Mazda CX-5 2018 K123 57K30B — операция не подтверждена');
+ const item=org.get(cx5.sha);assert(item.old_name);assert(org.matches(cx5,item.old_name),'old CX-5 name remains searchable');
+ assert.equal(item.reason,undefined,'brand is confirmed, operation state is in the display name');
+ const airbagRoot=Object.values(org.data.entries).filter(x=>x.folder==='Airbag');
+ assert.equal(airbagRoot.length,9);
+ for(const row of airbagRoot)assert(row.reason&&row.reason.trim(),'root reason');
 });
 await test('approved entries keep exact names, folders, original paths and bytes',async()=>{
  for(const [sha,name,folder] of approvedExpected){

@@ -16,7 +16,8 @@
     "unique_sha": 5383,
     "generated_entries": 5380,
     "approved_entries": 3,
-    "ambiguous": 10,
+    "ambiguous": 9,
+    "operation_unconfirmed": 1,
     "memory_confirmed": 3320,
     "collision_groups": 1630,
     "source_groups": 1014,
@@ -29,10 +30,10 @@
     "Renault": 482,
     "Ford": 351,
     "Daewoo": 17,
-    "Неуточнённые": 10,
+    "Неуточнённые": 9,
     "Mini": 7,
     "Jeep": 6,
-    "Mazda": 221,
+    "Mazda": 222,
     "Datsun": 1,
     "Land Rover": 36,
     "Saab": 12,
@@ -110,7 +111,7 @@
         "Calculators/SRS/Daewoo/96-430 715.cal"
       ],
       "title": "96-430 715",
-      "reason": "папка и логотип формы указывают Daewoo, а описание — Chevrolet Aveo; марка не подтверждена однозначно"
+      "reason": "путь указывает Daewoo, описание и логотип формы — Chevrolet Aveo; марка не подтверждена однозначно"
     },
     {
       "sha": "89dfa151e5c5f24ff36d1c9d655bc8a7ab3dc0ac38ceb03a1d87d79a1c9a018d",
@@ -119,7 +120,7 @@
         "Calculators/SRS/Daewoo/96 430 715.cal"
       ],
       "title": "96 430 715",
-      "reason": "папка и логотип формы указывают Daewoo, а описание — Chevrolet Aveo; марка не подтверждена однозначно"
+      "reason": "путь и логотип формы указывают Daewoo, описание — Chevrolet Aveo; марка не подтверждена однозначно"
     },
     {
       "sha": "b3b863ec6c2a1f1fe37ab2b8da765cb414fc0ad84fc99eb830e8a6244ddcf76b",
@@ -127,7 +128,7 @@
         "Calculators/Airbag/1 Universal/KIA_HYUNDAI_XC2361A.cal",
         "Calculators/SRS/1 Universal/KIA_HYUNDAI_XC2361A.cal"
       ],
-      "title": "KIA_HYUNDAI_XC2361A",
+      "title": "KIA HYUNDAI XC2361A",
       "reason": "в форме и имени несколько марок: Kia, Hyundai"
     },
     {
@@ -136,7 +137,7 @@
         "Calculators/Airbag/1 Universal/FORD_R.Rover_Jaguar_XC2361A.cal",
         "Calculators/SRS/1 Universal/FORD_R.Rover_Jaguar_XC2361A.cal"
       ],
-      "title": "FORD_R.Rover_Jaguar_XC2361A",
+      "title": "FORD R.Rover Jaguar XC2361A",
       "reason": "в форме и имени несколько марок: Ford, Land Rover, Rover, Jaguar"
     },
     {
@@ -144,16 +145,8 @@
       "paths": [
         "Calculators/Airbag/Daewoo/LanosII/96 430 715   95080.cal"
       ],
-      "title": "96 430 715   95080 (Airbag)",
-      "reason": "папка и логотип формы указывают Daewoo, а описание — Chevrolet Aveo; марка не подтверждена однозначно"
-    },
-    {
-      "sha": "3233be92811e89914a7a85ae0e99bcfb7dde48c41745173b64514d8800bcde01",
-      "paths": [
-        "Calculators/Airbag/Mazda/CX-5/CX5 2018 K123 57K30B  (95128).cal"
-      ],
-      "title": "CX5 2018 K123 57K30B  (95128)",
-      "reason": "в форме нет подтверждения операции стирания/сброса"
+      "title": "96 430 715 95080 (Airbag)",
+      "reason": "путь и логотип формы указывают Daewoo, описание — Chevrolet Aveo; марка не подтверждена однозначно"
     },
     {
       "sha": "bd3498cc0cc7cd96c1f2b1f8c7dac6d6c787dfcd45637c1bb6a70a3b2effe464",
@@ -161,7 +154,7 @@
         "Calculators/Airbag/Huyndai/Sonata/Sonata  95910-3Q010.cal",
         "Calculators/SRS/Huyndai/Sonata/Sonata  95910-3Q010.cal"
       ],
-      "title": "Sonata  95910-3Q010",
+      "title": "Sonata 95910-3Q010",
       "reason": "марка в папке Hyundai не совпадает с описанием формы: Kia"
     },
     {
@@ -179,7 +172,7 @@
         "Calculators/Airbag/Nissan/Qashqai/Qashqai  98820JD20A.cal",
         "Calculators/SRS/Nissan/Qashqai/Qashqai  98820JD20A.cal"
       ],
-      "title": "Qashqai  98820JD20A",
+      "title": "Qashqai 98820JD20A",
       "reason": "папка и модель Qashqai указывают Nissan, а форма и логотип — Infiniti; марка не подтверждена однозначно"
     },
     {
@@ -187,8 +180,19 @@
       "paths": [
         "Calculators/SRS/Daewoo/LanosII/96 430 715   95080.cal"
       ],
-      "title": "96 430 715   95080 (SRS)",
-      "reason": "папка и логотип формы указывают Daewoo, а описание — Chevrolet Aveo; марка не подтверждена однозначно"
+      "title": "96 430 715 95080 (SRS)",
+      "reason": "путь и логотип формы указывают Daewoo, описание — Chevrolet Aveo; марка не подтверждена однозначно"
+    }
+  ],
+  "operation_unconfirmed": [
+    {
+      "sha": "3233be92811e89914a7a85ae0e99bcfb7dde48c41745173b64514d8800bcde01",
+      "paths": [
+        "Calculators/Airbag/Mazda/CX-5/CX5 2018 K123 57K30B  (95128).cal"
+      ],
+      "title": "Mazda CX-5 2018 K123 57K30B — операция не подтверждена",
+      "folder": "Airbag/Mazda",
+      "old_name": "CX5 2018 K123 57K30B 95128"
     }
   ]
 }

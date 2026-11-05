@@ -21,14 +21,14 @@
     "unique_sha": 4843,
     "generated_entries": 4841,
     "approved_unchanged": 2,
-    "ambiguous": 26,
+    "ambiguous": 16,
     "car_only_selected": 14,
     "collision_groups": 1019,
     "source_groups": 0,
     "version_groups": 1019,
     "root_initial": 84,
-    "root_moved": 60,
-    "root_remaining": 24
+    "root_moved": 70,
+    "root_remaining": 14
   },
   "source_paths": {
     "I_ok": 43,
@@ -69,20 +69,13 @@
   ],
   "root_routing": {
     "initial_root": 84,
-    "moved": 60,
-    "remaining": 24,
+    "moved": 70,
+    "remaining": 14,
     "by_reason": {
       "подписи указывают Nissan, изображение — Ford; марка не подтверждена однозначно": 1,
       "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно": 11,
       "форма указывает несколько марок: Infiniti, Nissan; марка не подтверждена однозначно": 1,
-      "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет": 2,
-      "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет": 1,
-      "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет": 2,
-      "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет": 1,
-      "марка не подтверждена путём или формой CAL": 1,
-      "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет": 1,
-      "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет": 1,
-      "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет": 2
+      "марка не подтверждена путём или формой CAL": 1
     },
     "existing_folders": [
       "Acura",
@@ -222,6 +215,16 @@
       "ZAZ",
       "Русская Механика"
     ],
+    "created_folders": [
+      "Feeler",
+      "Hidromek",
+      "SYM",
+      "TCM",
+      "Terex",
+      "TFN",
+      "Triumph"
+    ],
+    "folders_after": 143,
     "moved_entries": [
       {
         "sha": "5a3da563846f3171bc19fa57141c1308ea22039c123b8f2cf752a53512e404bc",
@@ -630,6 +633,24 @@
         "old_name": "Vento TRW · вариант 2"
       },
       {
+        "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
+        "name": "Terex 860 SX 25010 — коррекция моточасов",
+        "folder": "Dashboard/Terex",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
+        ],
+        "old_name": "Terex 860 SX 25010"
+      },
+      {
+        "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
+        "name": "Terex — коррекция моточасов (EEPROM 95010)",
+        "folder": "Dashboard/Terex",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
+        ],
+        "old_name": "Terex 95010"
+      },
+      {
         "sha": "cfcde57bcca8de8d1bde95c4368791f20b7ee7d6912e67e9c09f5b5b8483b20d",
         "name": "JCB JS330 ECU 93C86 — операция не подтверждена",
         "folder": "Dashboard/JCB",
@@ -657,6 +678,15 @@
         "old_name": "JCB PCF8582 24C02"
       },
       {
+        "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
+        "name": "Hidromek HMK 102B PCF8582 24C02 — операция не подтверждена",
+        "folder": "Dashboard/Hidromek",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
+        ],
+        "old_name": "HMK 102B PCF8582 24C02"
+      },
+      {
         "sha": "bb3101c5a95fd68bc448457b87f454a21b7074bfa365d87d1e5322951b316683",
         "name": "Toyota 62-8FD 93C56 Denso — операция не подтверждена",
         "folder": "Dashboard/Toyota",
@@ -675,6 +705,33 @@
         "old_name": "62-8FD 95040 Arnecom"
       },
       {
+        "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
+        "name": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
+        "folder": "Dashboard/TCM",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
+        ],
+        "old_name": "FHG15T3 PIC16F946 - 256"
+      },
+      {
+        "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
+        "name": "TCM FHG15T3 PIC16F946 — коррекция пробега",
+        "folder": "Dashboard/TCM",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
+        ],
+        "old_name": "FHG15T3 PIC16F946 - 512"
+      },
+      {
+        "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
+        "name": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
+        "folder": "Dashboard/TFN",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
+        ],
+        "old_name": "CPCD30N-RW13 x5045"
+      },
+      {
         "sha": "f0f65993d9c260771444f9f63c279f713cb2b58cfec7b1780858450421b9b562",
         "name": "XCMG LW500KN 24C64 — операция не подтверждена",
         "folder": "Dashboard/XCMG",
@@ -691,6 +748,42 @@
           "Calculators/Dashboard/Forklift truck/XCMG/LW500FN 24C64.cal"
         ],
         "old_name": "LW500FN 24C64"
+      },
+      {
+        "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
+        "name": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
+        "folder": "Dashboard/Feeler",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
+        ],
+        "old_name": "FG15CTJ PIC12F629 - 128"
+      },
+      {
+        "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
+        "name": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
+        "folder": "Dashboard/SYM",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
+        ],
+        "old_name": "Joymax 300i 24C02"
+      },
+      {
+        "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
+        "name": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Triumph",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
+        ],
+        "old_name": "Triumph Dakota 93C46"
+      },
+      {
+        "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
+        "name": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
+        "folder": "Dashboard/Triumph",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
+        ],
+        "old_name": "Triumph Tiger 1050 PIC18F458 - 256"
       },
       {
         "sha": "e72c6862886693902da672c7e37f3a5ada692c9978a7385643dc7304cb0a43c2",
@@ -873,92 +966,12 @@
         "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
       },
       {
-        "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
-        "name": "Terex 860 SX 25010 — коррекция моточасов",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
-        ],
-        "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
-      },
-      {
-        "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
-        "name": "Terex — коррекция моточасов (EEPROM 95010)",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
-        ],
-        "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
-      },
-      {
-        "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
-        "name": "HMK 102B PCF8582 24C02",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
-        ],
-        "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
-      },
-      {
-        "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
-        "name": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
-        ],
-        "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
-      },
-      {
-        "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
-        "name": "TCM FHG15T3 PIC16F946 — коррекция пробега",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
-        ],
-        "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
-      },
-      {
-        "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
-        "name": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
-        ],
-        "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
-      },
-      {
         "sha": "50069916fc36c2db81067d4676813e24eed72e5c76a115364d21ba6e7dee07d0",
         "name": "UDM-2 Baltiec K-702MA 24C02",
         "paths": [
           "Calculators/Dashboard/Forklift truck/UDM-2/UDM-2 Baltiec K-702MA 24C02.cal"
         ],
         "reason": "марка не подтверждена путём или формой CAL"
-      },
-      {
-        "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
-        "name": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
-        "paths": [
-          "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
-        ],
-        "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
-      },
-      {
-        "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
-        "name": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
-        "paths": [
-          "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
-        ],
-        "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
-      },
-      {
-        "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
-        "name": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
-        "paths": [
-          "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
-        ],
-        "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
-      },
-      {
-        "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
-        "name": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
-        "paths": [
-          "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
-        ],
-        "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
       }
     ]
   },
@@ -3854,7 +3867,7 @@
     {
       "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
       "name": "Terex 860 SX 25010 — коррекция моточасов",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Terex",
       "operation": "коррекция моточасов",
       "sources": [
         "Dashboard"
@@ -3863,8 +3876,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
       ],
-      "old_name": "Terex 860 SX 25010",
-      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
+      "old_name": "Terex 860 SX 25010"
     },
     {
       "sha": "0b9560755d3aed0c3907ba812b31e924161a131183d1ca7abf288a6f67af97a9",
@@ -12252,7 +12264,7 @@
     {
       "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
       "name": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Triumph",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -12261,8 +12273,7 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
       ],
-      "old_name": "Triumph Dakota 93C46",
-      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
+      "old_name": "Triumph Dakota 93C46"
     },
     {
       "sha": "2ce57dc970a8bd437b79931e09c96f2202f5a0c5f62f42d7bf544d8c561d45ca",
@@ -12540,7 +12551,7 @@
     {
       "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
       "name": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Triumph",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -12549,8 +12560,7 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
       ],
-      "old_name": "Triumph Tiger 1050 PIC18F458 - 256",
-      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
+      "old_name": "Triumph Tiger 1050 PIC18F458 - 256"
     },
     {
       "sha": "2e4da8a00e4a548d3a3f16cd29603b4181845b9f00cc2f123bd98abf7106c808",
@@ -13688,7 +13698,7 @@
     {
       "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
       "name": "Terex — коррекция моточасов (EEPROM 95010)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Terex",
       "operation": "коррекция моточасов",
       "sources": [
         "Dashboard"
@@ -13697,8 +13707,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
       ],
-      "old_name": "Terex 95010",
-      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
+      "old_name": "Terex 95010"
     },
     {
       "sha": "3329597e1d1c4e764ddb6026d34efba4a64f5a9687264a07fc11ddb3a43bd7c1",
@@ -20082,7 +20091,7 @@
     {
       "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
       "name": "TCM FHG15T3 PIC16F946 — коррекция пробега",
-      "folder": "Dashboard",
+      "folder": "Dashboard/TCM",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -20091,8 +20100,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
       ],
-      "old_name": "FHG15T3 PIC16F946 - 512",
-      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
+      "old_name": "FHG15T3 PIC16F946 - 512"
     },
     {
       "sha": "4bff6c0fd6b15f17a29f11f4078e7d2c668bafa909c9aceff51e51e283ddd159",
@@ -23682,7 +23690,7 @@
     {
       "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
       "name": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/SYM",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -23691,8 +23699,7 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
       ],
-      "old_name": "Joymax 300i 24C02",
-      "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
+      "old_name": "Joymax 300i 24C02"
     },
     {
       "sha": "5944d006f91d2f3f2b05817c25dd383a86cd3b1e504be8c12b929995992adf2e",
@@ -24311,7 +24318,7 @@
     {
       "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
       "name": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
-      "folder": "Dashboard",
+      "folder": "Dashboard/TFN",
       "operation": "коррекция моточасов",
       "sources": [
         "Dashboard"
@@ -24320,8 +24327,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
       ],
-      "old_name": "CPCD30N-RW13 x5045",
-      "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
+      "old_name": "CPCD30N-RW13 x5045"
     },
     {
       "sha": "5bacb77a2d49c8f27b4fdfbfedef2b753a19bd217d56644efe86b3644893680b",
@@ -35015,7 +35021,7 @@
     {
       "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
       "name": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Feeler",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -35024,8 +35030,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
       ],
-      "old_name": "FG15CTJ PIC12F629 - 128",
-      "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
+      "old_name": "FG15CTJ PIC12F629 - 128"
     },
     {
       "sha": "87f264f0a31ab26f62f7d22883698fab4592ba210c65737c46f8142e6139f20b",
@@ -42839,8 +42844,8 @@
     },
     {
       "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
-      "name": "HMK 102B PCF8582 24C02",
-      "folder": "Dashboard",
+      "name": "Hidromek HMK 102B PCF8582 24C02 — операция не подтверждена",
+      "folder": "Dashboard/Hidromek",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -42849,7 +42854,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
       ],
-      "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
+      "old_name": "HMK 102B PCF8582 24C02"
     },
     {
       "sha": "a751e08ecaad3daa56b76e67e8529bd1894fd3d08e9e4b4a4c30badead7ca104",
@@ -52480,7 +52485,7 @@
     {
       "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
       "name": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
-      "folder": "Dashboard",
+      "folder": "Dashboard/TCM",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -52489,8 +52494,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
       ],
-      "old_name": "FHG15T3 PIC16F946 - 256",
-      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
+      "old_name": "FHG15T3 PIC16F946 - 256"
     },
     {
       "sha": "cfac99eb677613185285ddb7cb35f7c78080f8051a74e0aea68cef83d10c8d68",
@@ -64039,7 +64043,7 @@
     "Dashboard/I": 20,
     "Dashboard/Honda": 198,
     "Dashboard/Subaru": 54,
-    "Dashboard": 24,
+    "Dashboard": 14,
     "Dashboard/Mazda": 101,
     "Dashboard/Mitsubishi": 135,
     "Dashboard/Volkswagen": 202,
@@ -64159,9 +64163,16 @@
     "Dashboard/Lancia": 3,
     "Dashboard/CAT": 6,
     "Dashboard/Hamm": 1,
+    "Dashboard/Terex": 2,
     "Dashboard/JCB": 16,
+    "Dashboard/Hidromek": 1,
+    "Dashboard/TCM": 2,
+    "Dashboard/TFN": 1,
     "Dashboard/XCMG": 4,
+    "Dashboard/Feeler": 1,
     "Dashboard/Komatsu": 21,
+    "Dashboard/SYM": 1,
+    "Dashboard/Triumph": 2,
     "Dashboard/Ducati": 2,
     "Dashboard/McCormick": 2,
     "Dashboard/Belarus": 3,
@@ -64301,92 +64312,12 @@
       "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
-      ],
-      "title": "Terex 860 SX 25010 — коррекция моточасов",
-      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
-    },
-    {
-      "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
-      ],
-      "title": "Terex — коррекция моточасов (EEPROM 95010)",
-      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
-    },
-    {
-      "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
-      ],
-      "title": "HMK 102B PCF8582 24C02",
-      "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
-    },
-    {
-      "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
-      ],
-      "title": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
-      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
-    },
-    {
-      "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
-      ],
-      "title": "TCM FHG15T3 PIC16F946 — коррекция пробега",
-      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
-    },
-    {
-      "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
-      ],
-      "title": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
-      "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
-    },
-    {
       "sha": "50069916fc36c2db81067d4676813e24eed72e5c76a115364d21ba6e7dee07d0",
       "paths": [
         "Calculators/Dashboard/Forklift truck/UDM-2/UDM-2 Baltiec K-702MA 24C02.cal"
       ],
       "title": "UDM-2 Baltiec K-702MA 24C02",
       "reason": "марка не подтверждена путём или формой CAL"
-    },
-    {
-      "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
-      ],
-      "title": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
-      "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
-    },
-    {
-      "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
-      "paths": [
-        "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
-      ],
-      "title": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
-      "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
-    },
-    {
-      "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
-      "paths": [
-        "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
-      ],
-      "title": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
-      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
-    },
-    {
-      "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
-      "paths": [
-        "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
-      ],
-      "title": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
-      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
     }
   ],
   "car_only_not_selected": [
