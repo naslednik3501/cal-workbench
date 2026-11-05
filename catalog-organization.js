@@ -23,8 +23,8 @@ const approved={
   '4f38ff98c567bd82e80821515a7e948c214cdc2a30aa26e15de3fc27bc7da1f1':{name:'Mitsubishi Outlander — CRC и VIN в IMMO по выделению',folder:'Immo/Mitsubishi'},
   'b5d3f7c4be6434423a32c1a2f0c09a0bbf640cbddd0f16c9547022d5efe49621':{name:'CRC и VIN в дампе панели — правка по выделению',folder:'OTHER/CRC'},
   '21b6963bdadeb104e7fe4b807542c56b79931aac78a5d388ac67e14729c01f9b':{name:'MasterKey → Kmrw — конвертер данных транспондера (8 или 16 байт)',folder:'Immo/Convertor'},
-  '89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f':{name:'Etsmart — справочник цветовых кодов',folder:'OTHER'},
-  '7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2':{name:'Инверсия первых 128 КиБ дампа',folder:'OTHER'},
+  '89db59ed2be0d1cdd84c78d59a31cc15775a6712833b03de406f2e531e185d9f':{name:'Etsmart — справочник цветовых кодов',folder:'OTHER',reason:'общая утилита: марка и модель автомобиля не применимы'},
+  '7498ed09f8cdcfed8b151c496de2c73e13e4baa3dfcb7a7b32d01806bd5689d2':{name:'Инверсия первых 128 КиБ дампа',folder:'OTHER',reason:'общая обработка дампа: марка и модель автомобиля не подтверждены'},
   '44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045':{name:'Toyota 89170-02810 — сброс Crash (SRS)',folder:'Airbag/Toyota'},
   '31ef5b19a0c4c02c73ca84c2aafcc7230679c94758b75a4441b9dc6bc0ac2d79':{name:'Nissan 28556 3AP1B — сброс Crash (SRS)',folder:'Airbag/Nissan'},
   'a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf':{name:'Chevrolet 96 806 850 (5WY67070) — сброс Crash (SRS)',folder:'Airbag/Chevrolet'}
@@ -66,7 +66,7 @@ function validate(d){
   const parts=item.folder.split('/');
   if(!parts.length||parts.some(part=>!part||part==='.'||part==='..'||/[\\/]/.test(part)))throw Error('Invalid folder: '+item.folder);
   if(!item.name.trim()||item.name.length>140||/[\\/\\\\]/.test(item.name)||/\\.cal$/i.test(item.name))throw Error('Invalid name: '+item.name);
-  if(item.reason!==undefined&&(typeof item.reason!=='string'||!item.reason.trim()||item.reason.length>240))throw Error('Invalid reason: '+hash);
+  if(item.reason!==undefined&&(typeof item.reason!=='string'||!item.reason.trim()||item.reason.length>240))throw Error('Invalid reason: '+hash); if(item.manufacturer!==undefined&&(typeof item.manufacturer!=='string'||!item.manufacturer.trim()||item.manufacturer.length>80))throw Error('Invalid panel manufacturer: '+hash); if(item.brands!==undefined&&(!Array.isArray(item.brands)||!item.brands.length||item.brands.some(brand=>typeof brand!=='string'||!brand.trim()||brand.length>80)))throw Error('Invalid brands: '+hash);
   const key=(item.folder+'/'+item.name).toLowerCase();
   if(seen.has(key))throw Error('Duplicate display path: '+key);seen.add(key);
  }
@@ -91,7 +91,7 @@ function legacyParts(item){
  const [root,...rest]=item.folder.split('/'),tail=rest.join('/');
  return (legacyRoots[root]||[]).flatMap(alias=>[alias,...(tail?[alias+'/'+tail]:[])]);
 }
-function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...(item.old_name?[item.old_name]:[]),...(item.previous_name?[item.previous_name]:[]),...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
+function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...(item.old_name?[item.old_name]:[]),...(item.previous_name?[item.previous_name]:[]),...(item.brands||[]),...(item.manufacturer?[item.manufacturer]:[]),...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
 function searchText(entry){return searchParts(entry).join(' ');}
 function matches(entry,query){const q=String(query||'').toLowerCase();return !!q&&searchParts(entry).some(x=>x.includes(q));}
 const api=Object.freeze({data,get,title,folder,displayPath,reason,hints,searchText,matches});

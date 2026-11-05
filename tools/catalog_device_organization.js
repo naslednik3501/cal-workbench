@@ -12,7 +12,8 @@ const ALLOWED = new Set(['dashboard', 'immo', 'radio', 'utilities']);
 // Keeping them explicit makes repeated generation idempotent: they stay "new"
 // in the root audit instead of turning into pre-existing folders on run two.
 const DASHBOARD_CREATED_ROOT_FOLDERS = new Set([
-  'Feeler', 'Hidromek', 'SYM', 'TCM', 'TFN', 'Terex', 'Triumph'
+  'Feeler', 'Hidromek', 'SYM', 'TCM', 'TFN', 'Terex', 'Triumph',
+  'Curtis', 'Denso', 'Kansey', 'Visteon', 'Yazaki'
 ]);
 
 require(path.join(ROOT, 'catalog.js'));
@@ -135,6 +136,8 @@ const CATEGORY_DIRS = new Set([
   'Navigation', 'INFO', '1'
 ]);
 const GENERIC = new Set(['1', 'universal', 'универсальные']);
+const NON_MODEL_DIRS = new Set(['service','lcm','ews-4','bsi','cas','smart key','dash','dashboard','pin','immo','navigation','diodes','smartcard','keycard','serial calculator','convertor','1 universal','china','universal','универсальные','обновы','╨₧╨▒╨╜╨╛╨▓╤ï','firmware','dump','dumps','backup','old','new','final','mcu','eeprom','processor','can','obd','tools','read','write','data','files','file','info','easy','general']);
+const MODEL_FIXES = {rav4:'RAV4','rav-4':'RAV4','rav 4':'RAV4','grant vitara':'Grand Vitara','grand vitara':'Grand Vitara',otlander:'Outlander','land rover lr2':'Land Rover LR2',cady:'Caddy',crv:'CR-V','a-class':'A-Class','b-class':'B-Class','c-class':'C-Class','e-class':'E-Class','s-class':'S-Class',rangar:'Ranger'};
 const VENDORS = [
   'Mitsubishi Electric', 'Johnson Controls', 'Delphi', 'Continental', 'Visteon',
   'Autoliv', 'Bosch', 'Siemens', 'Temic', 'TRW', 'Denso', 'Sagem', 'Valeo',
@@ -229,7 +232,26 @@ function addBrandToName(value, brand) {
   const prefix = new RegExp(`^${escapeRegex(brand)}(?=\\s|$)`, 'i');
   return prefix.test(text) ? text.replace(prefix, brand) : `${brand} ${text}`;
 }
+function addPanelToName(value, panel) {
+  let text = String(value || '').replace(/\s+/g, ' ').trim();
+  if (!text) return panel;
+  const prefix = new RegExp(`^${escapeRegex(panel)}(?=\\s|$)`, 'i');
+  return prefix.test(text) ? text.replace(prefix, panel) : `${panel} ${text}`;
+}
 
+const PANEL_NAMES = ['Nippondenso','Denso','Yazaki','Kansey','Curtis','Visteon','Delphi','Continental','Bosch','Siemens','VDO','Magneti Marelli','Johnson Controls','Mitsubishi Electric'];
+function panelManufacturer(labels) {
+  const text = (labels || []).join(' | ');
+  const found = [...text.matchAll(/(?:панель|panel|dash(?:board)?)\s*[:,-]?\s*([A-Za-z][A-Za-z .-]{1,30})/gi)];
+  for (const match of found) {
+    const value = clean(match[1]).replace(/[.,;:]+$/, '').trim().toLowerCase();
+    if (!value) continue;
+    if (value.includes('nippondenso') || value.includes('denso')) return 'Denso';
+    const panel = PANEL_NAMES.find(name => value.startsWith(name.toLowerCase()));
+    if (panel) return panel;
+  }
+  return '';
+}
 // A display root is not automatically universal. These rules only inspect
 // entries that the earlier classifier left at Dashboard/. They deliberately
 // require one unambiguous brand; a missing brand folder is created by routing.
@@ -239,8 +261,11 @@ function dashboardRootEvidence(file, labels, images) {
   const nameBrands = [...new Set(vehicleBrandsIn(base))];
   const labelBrands = [...new Set(vehicleBrandsIn((labels || []).join(' | ')))];
   const imageBrandsFound = imageBrands(images);
+  const manufacturer = panelManufacturer(labels);
+  const allBrands = [...new Set([...(pathBrandValue ? [pathBrandValue] : []), ...nameBrands, ...labelBrands, ...imageBrandsFound])];
   const several = list => `форма указывает несколько марок: ${list.join(', ')}; марка не подтверждена однозначно`;
-  const conflict = reason => ({ brand: '', reason });
+  const result = (brand = '', reason = '') => ({ brand, reason, brands: allBrands, manufacturer });
+  const conflict = reason => result('', reason);
 
   if (pathBrandValue) {
     if (nameBrands.length && !nameBrands.includes(pathBrandValue)) {
@@ -253,7 +278,7 @@ function dashboardRootEvidence(file, labels, images) {
     if (imageBrandsFound.length && !imageBrandsFound.includes(pathBrandValue)) {
       return conflict(`путь указывает ${pathBrandValue}, изображение — ${imageBrandsFound.join(', ')}; марка не подтверждена однозначно`);
     }
-    return { brand: pathBrandValue, reason: '' };
+    return result(pathBrandValue);
   }
 
   if (nameBrands.length > 1) return conflict(`имя указывает несколько марок: ${nameBrands.join(', ')}; марка не подтверждена однозначно`);
@@ -266,12 +291,12 @@ function dashboardRootEvidence(file, labels, images) {
     if (imageBrandsFound.length && !imageBrandsFound.includes(brand)) {
       return conflict(`имя указывает ${brand}, изображение — ${imageBrandsFound.join(', ')}; марка не подтверждена однозначно`);
     }
-    return { brand, reason: '' };
+    return result(brand);
   }
 
   const found = [...new Set([...labelBrands, ...imageBrandsFound])];
-  if (!found.length) return { brand: '', reason: '' };
-  if (found.length === 1) return { brand: found[0], reason: '' };
+  if (!found.length) return result();
+  if (found.length === 1) return result(found[0]);
   if (labelBrands.length && imageBrandsFound.length
     && !labelBrands.some(brand => imageBrandsFound.includes(brand))) {
     return conflict(`подписи указывают ${labelBrands.join(', ')}, изображение — ${imageBrandsFound.join(', ')}; марка не подтверждена однозначно`);
@@ -338,13 +363,28 @@ function pathBrand(file) {
 }
 
 function pathModelFolder(file) {
+  const brand = pathBrand(file);
+  if (!brand) return '';
   const parts = file.split('/');
-  const source = parts[1] || '';
-  const parent = parts.length > 3 ? parts.at(-2) : '';
-  if (!parent || CATEGORY_DIRS.has(parent) || isLetterDir(parent)) return '';
-  if (canonBrand(parent) === pathBrand(file)) return '';
-  if (source === 'I' || source === 'I_ok' || SECTION === 'immo') return '';
-  return clean(parent);
+  let brandIndex = -1;
+  for (let index = 1; index < parts.length - 1; index++) {
+    if (canonBrand(parts[index]) === brand) { brandIndex = index; break; }
+  }
+  if (brandIndex < 0) return '';
+  for (const dir of parts.slice(brandIndex + 1, -1)) {
+    const text = clean(dir);
+    if (!text || /\.cal$/i.test(text) || CATEGORY_DIRS.has(text) || isLetterDir(text)) continue;
+    const lower = text.toLowerCase();
+    if (NON_MODEL_DIRS.has(lower) || BRAND_CANON.has(lower) || /[╨╤]/.test(text)) continue;
+    if (VENDORS.some(vendor => vendor.toLowerCase() === lower)) continue;
+    let name = text;
+    const prefix = new RegExp(`^${escapeRegex(brand)}\\s+`, 'i');
+    if (prefix.test(name) && name.replace(prefix, '').trim()) name = name.replace(prefix, '').trim();
+    name = MODEL_FIXES[name.toLowerCase().replace(/\s+/g, ' ')] || name;
+    if (!name || NON_MODEL_DIRS.has(name.toLowerCase())) continue;
+    return clean(name);
+  }
+  return '';
 }
 
 function pathScore(file) {
@@ -707,12 +747,13 @@ for (const [sha, entries] of groups) {
   }
 
   const sourceFolder = canonical.split('/')[1] || '';
+  const modelFolder = !reason && !universal && !convertor && brand ? pathModelFolder(canonical) : '';
   let folder = SECTION === 'utilities'
     ? utilityFolder
     : reason ? (SECTION === 'dashboard' ? (sourceFolder === 'Dashboard' ? '' : sourceFolder) : SECTION === 'immo' ? sourceFolder : SECTION === 'radio' ? 'CarRadio' : '')
       : universal ? (sourceFolder === 'CarRadio' ? 'Any model by dump' : sourceFolder === 'Dashboard' ? '' : sourceFolder)
         : convertor ? 'Convertor'
-          : brand && (SECTION !== 'dashboard' || existingFolders.has(brand)) ? brand : '';
+          : brand && (SECTION !== 'dashboard' || existingFolders.has(brand)) ? [brand, modelFolder].filter(Boolean).join('/') : '';
   let name = '';
   if (reason) {
     name = SECTION === 'utilities'
@@ -736,16 +777,19 @@ for (const [sha, entries] of groups) {
   const legacyName = name;
   const legacyReason = reason;
   let rootRouting = '';
+  let routeBrands = [];
+  let routeManufacturer = '';
   if (SECTION === 'dashboard' && legacyFolder === '') {
     // Dashboard/1, I and I_ok are source folders, not proof of a universal
     // calculator. Keep the old root only when the brand is not one clear value.
     // A confirmed brand is routed to its folder and the folder is created when
     // the previous display map did not contain it yet.
     const evidence = dashboardRootEvidence(canonical, labels, parsed.images);
+    routeBrands = evidence.brands || [];
     if (evidence.brand) {
       const rootBrand = canonBrand(evidence.brand);
       if (!existingFolders.has(rootBrand)) createdFolders.add(rootBrand);
-      folder = rootBrand;
+      folder = [rootBrand, pathModelFolder(canonical)].filter(Boolean).join('/');
       if (legacyReason || !operation) {
         const base = clean(canonical.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
         name = addBrandToName(base, rootBrand) + ' — операция не подтверждена';
@@ -759,6 +803,22 @@ for (const [sha, entries] of groups) {
       }
       reason = '';
       rootRouting = 'moved';
+    } else if (evidence.manufacturer) {
+      routeManufacturer = evidence.manufacturer;
+      if (!existingFolders.has(routeManufacturer)) createdFolders.add(routeManufacturer);
+      folder = routeManufacturer;
+      name = addPanelToName(legacyName, routeManufacturer);
+      if (!/ — /.test(name)) {
+        if (operation) {
+          name += ' — ' + operation;
+          const memory = memoryType(labels, canonical);
+          if (memory) name += ` (EEPROM ${memory})`;
+        } else {
+          name += ' — операция не подтверждена';
+        }
+      }
+      reason = '';
+      rootRouting = 'manufacturer';
     } else {
       reason = evidence.reason || legacyReason || 'марка не подтверждена путём или формой CAL';
       rootRouting = 'remaining';
@@ -778,6 +838,8 @@ for (const [sha, entries] of groups) {
     legacyName,
     legacyReason,
     rootRouting,
+    ...(routeBrands.length > 1 ? { brands: routeBrands } : {}),
+    ...(routeManufacturer ? { manufacturer: routeManufacturer } : {}),
     sources: [...new Set(paths.map(item => item.split('/')[1]))],
     parsed: parsed.parsed
   });
@@ -835,7 +897,8 @@ for (const row of rows) {
   const previous = previousEntries[row.sha];
   if (previous && previous.name && previous.name !== row.name) row.old_name = previous.name;
   else if (previous && previous.old_name) row.old_name = previous.old_name;
-  if (relativeFolder && (/[\\/]/.test(relativeFolder) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeFolder))) {
+  const relativeParts = relativeFolder ? relativeFolder.split('/') : [];
+  if (relativeParts.length > 2 || relativeParts.some(part => !part || part === '.' || part === '..' || /[\\/]/.test(part)) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeParts[0] || '')) {
     throw new Error(`Unexpected folder: ${row.folder}`);
   }
   if (SECTION === 'utilities' && !UTILITY_FOLDERS.has(relativeFolder)) {
@@ -855,13 +918,16 @@ for (const row of rows) {
 if (rows.length + skippedApproved.length !== groups.size) throw new Error(`Coverage ${rows.length} != ${groups.size}`);
 
 const byBrand = {};
+const byModel = {};
 const byOperation = {};
 for (const row of rows) {
-  byBrand[row.folder] = (byBrand[row.folder] || 0) + 1;
+  const parts = row.folder.split('/');
+  byBrand[parts[1] || parts[0]] = (byBrand[parts[1] || parts[0]] || 0) + 1;
+  if (parts.length > 2) byModel[parts.slice(1).join('/')] = (byModel[parts.slice(1).join('/')] || 0) + 1;
   byOperation[row.operation || '(не подтверждена)'] = (byOperation[row.operation || '(не подтверждена)'] || 0) + 1;
 }
 const initialRootEntries = SECTION === 'dashboard' ? rows.filter(row => row.legacyFolder === '').length : 0;
-const movedRootEntries = rows.filter(row => row.rootRouting === 'moved').length;
+const movedRootEntries = rows.filter(row => row.rootRouting === 'moved' || row.rootRouting === 'manufacturer').length;
 const remainingRootRows = SECTION === 'dashboard' ? rows.filter(row => row.folder === cfg.display) : [];
 const rootReasons = {};
 for (const row of remainingRootRows) rootReasons[row.reason] = (rootReasons[row.reason] || 0) + 1;
@@ -871,6 +937,8 @@ const lines = sorted.map(row => {
   const item = { name: row.name, folder: row.folder };
   if (row.reason) item.reason = row.reason;
   if (row.old_name) item.old_name = row.old_name;
+  if (row.manufacturer) item.manufacturer = row.manufacturer;
+  if (row.brands) item.brands = row.brands;
   return `  '${row.sha}':${JSON.stringify(item)},`;
 });
 const globalName = SECTION === 'dashboard'
@@ -905,6 +973,8 @@ const decisions = sorted.map(row => ({
   canonical_path: row.canonical,
   paths: row.paths,
   ...(row.old_name ? { old_name: row.old_name } : {}),
+  ...(row.manufacturer ? { manufacturer: row.manufacturer } : {}),
+  ...(row.brands ? { brands: row.brands } : {}),
   ...(row.reason ? { reason: row.reason } : {})
 }));
 const report = {
@@ -959,17 +1029,22 @@ const report = {
     root_routing: {
       initial_root: initialRootEntries,
       moved: movedRootEntries,
+      moved_to_brand: rows.filter(row => row.rootRouting === 'moved').length,
+      moved_to_manufacturer: rows.filter(row => row.rootRouting === 'manufacturer').length,
       remaining: remainingRootRows.length,
       by_reason: rootReasons,
       existing_folders: [...existingFolders].sort((a, b) => a.localeCompare(b)),
       created_folders: [...createdFolders].sort((a, b) => a.localeCompare(b)),
       folders_after: existingFolders.size + createdFolders.size,
-      moved_entries: rows.filter(row => row.rootRouting === 'moved').map(row => ({
+      moved_entries: rows.filter(row => row.rootRouting === 'moved' || row.rootRouting === 'manufacturer').map(row => ({
         sha: row.sha,
         name: row.name,
         folder: row.folder,
         paths: row.paths,
-        ...(row.old_name ? { old_name: row.old_name } : {})
+        routing: row.rootRouting,
+        ...(row.old_name ? { old_name: row.old_name } : {}),
+        ...(row.manufacturer ? { manufacturer: row.manufacturer } : {}),
+        ...(row.brands ? { brands: row.brands } : {})
       })),
       remaining_entries: remainingRootRows.map(row => ({
         sha: row.sha,
@@ -995,6 +1070,7 @@ const report = {
     }
   } : {}),
   by_brand: byBrand,
+  by_model: byModel,
   by_operation: byOperation,
   ambiguous: rows.filter(row => row.reason).map(row => ({
     sha: row.sha,

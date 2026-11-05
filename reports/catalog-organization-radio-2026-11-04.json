@@ -19,9 +19,9 @@
     "approved_unchanged": 0,
     "ambiguous": 0,
     "car_only_selected": 0,
-    "collision_groups": 52,
+    "collision_groups": 51,
     "source_groups": 0,
-    "version_groups": 52
+    "version_groups": 51
   },
   "source_paths": {
     "CarRadio": 1579
@@ -1060,7 +1060,7 @@
     {
       "sha": "09b75841a86eed11841bf1d48dbac5f78166458d470aedaa3b055725c314be2a",
       "name": "Lada AGC 1220RF A 24V01 — код магнитолы",
-      "folder": "CarRadio/Lada",
+      "folder": "CarRadio/Lada/Largus",
       "operation": "код магнитолы",
       "sources": [
         "CarRadio"
@@ -4388,7 +4388,7 @@
     {
       "sha": "3346e45efd9ef10cda0f089dfa56228ae7893bdddd93c6f09cd35764f83d08f3",
       "name": "Renault AGC 0060RF DAEWOO — код магнитолы",
-      "folder": "CarRadio/Renault",
+      "folder": "CarRadio/Renault/Duster",
       "operation": "код магнитолы",
       "sources": [
         "CarRadio"
@@ -6261,8 +6261,8 @@
     },
     {
       "sha": "4e4a4f502c7e33d05eb49cf7f879f88b22d88ea2f5540893bb0677d1f39e7e2a",
-      "name": "Renault RENRNC640 10 NAVI TV — код магнитолы (EEPROM 24C64) · вариант 2",
-      "folder": "CarRadio/Renault",
+      "name": "Renault RENRNC640 10 NAVI TV — код магнитолы (EEPROM 24C64)",
+      "folder": "CarRadio/Renault/RENRNC640-10 NAVI TV",
       "operation": "код магнитолы",
       "sources": [
         "CarRadio"
@@ -6270,7 +6270,8 @@
       "canonical_path": "Calculators/CarRadio/Renault/RENRNC640-10  NAVI_TV/RENRNC640-10  NAVI_TV(24c64).cal",
       "paths": [
         "Calculators/CarRadio/Renault/RENRNC640-10  NAVI_TV/RENRNC640-10  NAVI_TV(24c64).cal"
-      ]
+      ],
+      "old_name": "Renault RENRNC640 10 NAVI TV — код магнитолы (EEPROM 24C64) · вариант 2"
     },
     {
       "sha": "4e58b76a5069cbb6a8e069638596091b0faa2a2db98853760056fee51d318389",
@@ -6443,7 +6444,7 @@
     },
     {
       "sha": "511ea78e5ea93f0d53d55b05e0eda6941d657a8ce980b00618a16653e278069a",
-      "name": "Renault Renault final — код магнитолы",
+      "name": "Renault — код магнитолы · вариант 2",
       "folder": "CarRadio/Renault",
       "operation": "код магнитолы",
       "sources": [
@@ -6452,7 +6453,8 @@
       "canonical_path": "Calculators/CarRadio/Renault/Renault final/Renault final.cal",
       "paths": [
         "Calculators/CarRadio/Renault/Renault final/Renault final.cal"
-      ]
+      ],
+      "old_name": "Renault Renault final — код магнитолы"
     },
     {
       "sha": "51407f5fa4cf7b1f51bd612befef1b96577df9644f4dc36ced6b7b8dddcb1345",
@@ -10851,8 +10853,8 @@
     },
     {
       "sha": "87ea4550b7e69bb8dbbd1d46e43650f9fddbc249ed3f57022ec2b4f5f110d9af",
-      "name": "Acura 39100 S3V C610 — код магнитолы (EEPROM 24C04) · вариант 2",
-      "folder": "CarRadio/Acura",
+      "name": "Acura 39100 S3V C610 — код магнитолы (EEPROM 24C04)",
+      "folder": "CarRadio/Acura/MDX",
       "operation": "код магнитолы",
       "sources": [
         "CarRadio"
@@ -10860,7 +10862,8 @@
       "canonical_path": "Calculators/CarRadio/Acura/MDX/Acura 39100-S3V-C610.cal",
       "paths": [
         "Calculators/CarRadio/Acura/MDX/Acura 39100-S3V-C610.cal"
-      ]
+      ],
+      "old_name": "Acura 39100 S3V C610 — код магнитолы (EEPROM 24C04) · вариант 2"
     },
     {
       "sha": "87fc2752e3cfbe2c611367225b29872a0391846f2821e5c42f2ff44d395491d0",
@@ -15406,7 +15409,7 @@
     {
       "sha": "be8cd89bda95e40b93b6883da4dbcd1a5a1736d91e2a0ef3edf89cdfaaa43aa5",
       "name": "Acura 39101 S3V A020 M1 — код магнитолы (EEPROM 24C04)",
-      "folder": "CarRadio/Acura",
+      "folder": "CarRadio/Acura/MDX",
       "operation": "код магнитолы",
       "sources": [
         "CarRadio"
@@ -20390,66 +20393,72 @@
     }
   ],
   "by_brand": {
-    "CarRadio/Any model by dump": 2,
-    "CarRadio/Porsche": 2,
-    "CarRadio/EASY": 3,
-    "CarRadio/Mitsubishi": 18,
-    "CarRadio/Alpine": 72,
-    "CarRadio/Renault": 89,
-    "CarRadio/Ford": 18,
-    "CarRadio/Daewoo": 24,
-    "CarRadio/Mazda": 2,
-    "CarRadio/Bentley": 1,
-    "CarRadio/Daihatsu": 3,
-    "CarRadio/Mercedes-Benz": 62,
-    "CarRadio/Grundig": 136,
-    "CarRadio/Land Rover": 1,
-    "CarRadio/Saab": 1,
-    "CarRadio/JVC": 8,
-    "CarRadio/KNUTSSON": 1,
-    "CarRadio/Kia": 7,
-    "CarRadio/KENWOOD": 30,
-    "CarRadio/Opel": 9,
-    "CarRadio/BILTEMA": 1,
-    "CarRadio/Iveco": 3,
-    "CarRadio/YUGO": 1,
-    "CarRadio/INFO": 5,
-    "CarRadio/Nissan": 41,
-    "CarRadio/Acura": 9,
-    "CarRadio/Audi": 64,
-    "CarRadio/Volkswagen": 67,
-    "CarRadio/Volvo": 20,
-    "CarRadio/Peugeot": 12,
-    "CarRadio/Subaru": 5,
-    "CarRadio/Becker": 109,
-    "CarRadio/Alfa Romeo": 11,
-    "CarRadio/Chrysler": 16,
-    "CarRadio/Autosound": 71,
-    "CarRadio/Delco": 13,
-    "CarRadio/Skoda": 19,
-    "CarRadio/Clarion": 23,
-    "CarRadio/Pioneer": 13,
-    "CarRadio/Jaguar": 4,
-    "CarRadio/Blaupunkt": 215,
-    "CarRadio/Matsushita": 44,
-    "CarRadio/Technisat": 10,
-    "CarRadio/BMW": 22,
-    "CarRadio/Fiat": 36,
-    "CarRadio/Philips": 98,
-    "CarRadio/GAMASOUND": 1,
-    "CarRadio/Visteon": 2,
-    "CarRadio/Rover": 2,
-    "CarRadio/Chevrolet": 1,
-    "CarRadio/Citroen": 4,
-    "CarRadio/Honda": 51,
-    "CarRadio/Suzuki": 7,
-    "CarRadio/VDO": 35,
-    "CarRadio/Panasonic": 4,
-    "CarRadio/Siemens VDO": 4,
-    "CarRadio/Sony": 5,
-    "CarRadio/Seat": 26,
-    "CarRadio/Jamper": 1,
-    "CarRadio/Lada": 1
+    "Any model by dump": 2,
+    "Porsche": 2,
+    "EASY": 3,
+    "Mitsubishi": 18,
+    "Alpine": 72,
+    "Renault": 89,
+    "Ford": 18,
+    "Daewoo": 24,
+    "Mazda": 2,
+    "Bentley": 1,
+    "Daihatsu": 3,
+    "Mercedes-Benz": 62,
+    "Grundig": 136,
+    "Land Rover": 1,
+    "Saab": 1,
+    "JVC": 8,
+    "KNUTSSON": 1,
+    "Kia": 7,
+    "KENWOOD": 30,
+    "Opel": 9,
+    "BILTEMA": 1,
+    "Iveco": 3,
+    "YUGO": 1,
+    "INFO": 5,
+    "Nissan": 41,
+    "Acura": 9,
+    "Audi": 64,
+    "Volkswagen": 67,
+    "Volvo": 20,
+    "Peugeot": 12,
+    "Subaru": 5,
+    "Becker": 109,
+    "Alfa Romeo": 11,
+    "Chrysler": 16,
+    "Autosound": 71,
+    "Delco": 13,
+    "Skoda": 19,
+    "Clarion": 23,
+    "Pioneer": 13,
+    "Jaguar": 4,
+    "Blaupunkt": 215,
+    "Matsushita": 44,
+    "Technisat": 10,
+    "BMW": 22,
+    "Fiat": 36,
+    "Philips": 98,
+    "GAMASOUND": 1,
+    "Visteon": 2,
+    "Rover": 2,
+    "Chevrolet": 1,
+    "Citroen": 4,
+    "Honda": 51,
+    "Suzuki": 7,
+    "VDO": 35,
+    "Panasonic": 4,
+    "Siemens VDO": 4,
+    "Sony": 5,
+    "Seat": 26,
+    "Jamper": 1,
+    "Lada": 1
+  },
+  "by_model": {
+    "Renault/Duster": 1,
+    "Renault/RENRNC640-10 NAVI TV": 1,
+    "Acura/MDX": 2,
+    "Lada/Largus": 1
   },
   "by_operation": {
     "код магнитолы по дампу": 2,
