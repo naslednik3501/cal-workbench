@@ -8,6 +8,12 @@ const ROOT = path.resolve(__dirname, '..');
 const SECTION = String(process.argv[2] || process.env.SECTION || '').toLowerCase();
 const DATE = '2026-11-04';
 const ALLOWED = new Set(['dashboard', 'immo', 'radio', 'utilities']);
+// These Dashboard brand folders were created by the 2026-11-05 root routing.
+// Keeping them explicit makes repeated generation idempotent: they stay "new"
+// in the root audit instead of turning into pre-existing folders on run two.
+const DASHBOARD_CREATED_ROOT_FOLDERS = new Set([
+  'Feeler', 'Hidromek', 'SYM', 'TCM', 'TFN', 'Terex', 'Triumph'
+]);
 
 require(path.join(ROOT, 'catalog.js'));
 for (const file of require(path.join(ROOT, 'catalog-parts.json'))) require(path.join(ROOT, file));
@@ -69,6 +75,10 @@ for (const item of Object.values(previousEntries)) {
     existingFolders.add(item.folder.slice(prefix.length).split('/')[0]);
   }
 }
+if (SECTION === 'dashboard') {
+  for (const brand of DASHBOARD_CREATED_ROOT_FOLDERS) existingFolders.delete(brand);
+}
+const createdFolders = new Set();
 
 const BRANDS = [
   'Acura', 'Alfa Romeo', 'Aston Martin', 'Audi', 'Bentley', 'BMW', 'Brilliance',
@@ -222,7 +232,7 @@ function addBrandToName(value, brand) {
 
 // A display root is not automatically universal. These rules only inspect
 // entries that the earlier classifier left at Dashboard/. They deliberately
-// require one unambiguous brand and an already existing brand folder.
+// require one unambiguous brand; a missing brand folder is created by routing.
 function dashboardRootEvidence(file, labels, images) {
   const pathBrandValue = pathBrand(file);
   const base = clean(file.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
@@ -728,30 +738,27 @@ for (const [sha, entries] of groups) {
   let rootRouting = '';
   if (SECTION === 'dashboard' && legacyFolder === '') {
     // Dashboard/1, I and I_ok are source folders, not proof of a universal
-    // calculator. Keep the old root only when the brand is not one clear value
-    // or when the corresponding display folder does not exist yet.
+    // calculator. Keep the old root only when the brand is not one clear value.
+    // A confirmed brand is routed to its folder and the folder is created when
+    // the previous display map did not contain it yet.
     const evidence = dashboardRootEvidence(canonical, labels, parsed.images);
     if (evidence.brand) {
       const rootBrand = canonBrand(evidence.brand);
-      if (existingFolders.has(rootBrand)) {
-        folder = rootBrand;
-        if (legacyReason || !operation) {
-          const base = clean(canonical.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
-          name = addBrandToName(base, rootBrand) + ' — операция не подтверждена';
-        } else {
-          const unit = unitFromPath(canonical, rootBrand);
-          name = [rootBrand, unit].filter(Boolean).join(' ');
-          if (!name) name = clean(canonical.split('/').at(-1).replace(/\.cal$/i, ''));
-          name += ' — ' + operation;
-          const memory = memoryType(labels, canonical);
-          if (memory) name += ` (EEPROM ${memory})`;
-        }
-        reason = '';
-        rootRouting = 'moved';
+      if (!existingFolders.has(rootBrand)) createdFolders.add(rootBrand);
+      folder = rootBrand;
+      if (legacyReason || !operation) {
+        const base = clean(canonical.split('/').at(-1).replace(/(?:\.cal)+$/i, ''));
+        name = addBrandToName(base, rootBrand) + ' — операция не подтверждена';
       } else {
-        reason = `марка ${rootBrand} подтверждена, но папки ${cfg.display}/${rootBrand} в отображении нет`;
-        rootRouting = 'remaining';
+        const unit = unitFromPath(canonical, rootBrand);
+        name = [rootBrand, unit].filter(Boolean).join(' ');
+        if (!name) name = clean(canonical.split('/').at(-1).replace(/\.cal$/i, ''));
+        name += ' — ' + operation;
+        const memory = memoryType(labels, canonical);
+        if (memory) name += ` (EEPROM ${memory})`;
       }
+      reason = '';
+      rootRouting = 'moved';
     } else {
       reason = evidence.reason || legacyReason || 'марка не подтверждена путём или формой CAL';
       rootRouting = 'remaining';
@@ -955,6 +962,8 @@ const report = {
       remaining: remainingRootRows.length,
       by_reason: rootReasons,
       existing_folders: [...existingFolders].sort((a, b) => a.localeCompare(b)),
+      created_folders: [...createdFolders].sort((a, b) => a.localeCompare(b)),
+      folders_after: existingFolders.size + createdFolders.size,
       moved_entries: rows.filter(row => row.rootRouting === 'moved').map(row => ({
         sha: row.sha,
         name: row.name,
