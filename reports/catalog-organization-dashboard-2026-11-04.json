@@ -21,11 +21,14 @@
     "unique_sha": 4843,
     "generated_entries": 4841,
     "approved_unchanged": 2,
-    "ambiguous": 45,
+    "ambiguous": 26,
     "car_only_selected": 14,
-    "collision_groups": 1015,
+    "collision_groups": 1019,
     "source_groups": 0,
-    "version_groups": 1015
+    "version_groups": 1019,
+    "root_initial": 84,
+    "root_moved": 60,
+    "root_remaining": 24
   },
   "source_paths": {
     "I_ok": 43,
@@ -64,6 +67,901 @@
       ]
     }
   ],
+  "root_routing": {
+    "initial_root": 84,
+    "moved": 60,
+    "remaining": 24,
+    "by_reason": {
+      "подписи указывают Nissan, изображение — Ford; марка не подтверждена однозначно": 1,
+      "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно": 11,
+      "форма указывает несколько марок: Infiniti, Nissan; марка не подтверждена однозначно": 1,
+      "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет": 2,
+      "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет": 1,
+      "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет": 2,
+      "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет": 1,
+      "марка не подтверждена путём или формой CAL": 1,
+      "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет": 1,
+      "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет": 1,
+      "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет": 2
+    },
+    "existing_folders": [
+      "Acura",
+      "Admiral",
+      "Aixam",
+      "Alfa Romeo",
+      "Ankai",
+      "Aston Martin",
+      "Audi",
+      "Baltmotors",
+      "BAW",
+      "Belarus",
+      "Bentley",
+      "BMW",
+      "Bobcat",
+      "Bogdan",
+      "Brilliance",
+      "BRP",
+      "Buick",
+      "BYD",
+      "Cadillac",
+      "CAMC",
+      "Case",
+      "CAT",
+      "CFMOTO",
+      "Changan",
+      "Chery",
+      "Chevrolet",
+      "Chrysler",
+      "Citroen",
+      "Dacia",
+      "Daewoo",
+      "Daf",
+      "Daihatsu",
+      "Datsun",
+      "Dodge",
+      "DongFeng",
+      "Ducati",
+      "FAW",
+      "Ferrari",
+      "Fiat",
+      "Force",
+      "Ford",
+      "Foton",
+      "Freightliner",
+      "GAZ",
+      "Geely",
+      "GMC",
+      "Golden Dragon",
+      "Great Wall",
+      "Hafei",
+      "Haima",
+      "Hamm",
+      "Haval",
+      "Higer",
+      "Hino",
+      "Hitachi",
+      "Honda",
+      "Hummer",
+      "Hyundai",
+      "I",
+      "I_ok",
+      "Infiniti",
+      "International",
+      "Iran Khodro",
+      "Isuzu",
+      "Iveco",
+      "JAC",
+      "Jaguar",
+      "JCB",
+      "Jeep",
+      "John Deere",
+      "KAMAZ",
+      "KATO",
+      "Kawasaki",
+      "Kia",
+      "Kirovec",
+      "Komatsu",
+      "Kymco",
+      "Lada",
+      "Lancia",
+      "Land Rover",
+      "LDV",
+      "Lexus",
+      "Lifan",
+      "Lincoln",
+      "Luxgen",
+      "Mahindra",
+      "MAN",
+      "Maserati",
+      "MAZ",
+      "Mazda",
+      "McCormick",
+      "Mercedes-Benz",
+      "Mercury",
+      "MG",
+      "Mini",
+      "Mitsubishi",
+      "New Holland",
+      "Nissan",
+      "Opel",
+      "Peugeot",
+      "Polaris",
+      "Pontiac",
+      "Porsche",
+      "Renault",
+      "Rolls Royce",
+      "Rover",
+      "Saab",
+      "Samand",
+      "Samsung",
+      "Scion",
+      "Seat",
+      "Shaanxi",
+      "Shantui",
+      "Shuanghuan Sceo",
+      "Sinotruk",
+      "Skoda",
+      "Smart",
+      "SsangYong",
+      "Stels",
+      "Subaru",
+      "Suzuki",
+      "TAGAZ",
+      "Tager",
+      "TATA",
+      "Toyota",
+      "Trend",
+      "UAZ",
+      "VAZ",
+      "Volkswagen",
+      "Volvo",
+      "Vortex",
+      "XCMG",
+      "Yamaha",
+      "Yanmar",
+      "ZAZ",
+      "Русская Механика"
+    ],
+    "moved_entries": [
+      {
+        "sha": "5a3da563846f3171bc19fa57141c1308ea22039c123b8f2cf752a53512e404bc",
+        "name": "Ford Fusion F04 F83 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Fusion MC9S12H256 F04-F83.cal",
+          "Calculators/I/Fusion MC9S12H256 F04-F83.cal"
+        ],
+        "old_name": "Fusion F04 F83 — коррекция пробега"
+      },
+      {
+        "sha": "5bef75db6333ff8f0d086ad5fa5aa3d07721a76257c9a2d4c387fe89283e3b0c",
+        "name": "Suzuki Liana YNS — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Suzuki",
+        "paths": [
+          "Calculators/Dashboard/1/Suzuki Liana 93c56 YNS.cal",
+          "Calculators/I/Suzuki Liana 93c56 YNS.cal"
+        ]
+      },
+      {
+        "sha": "21bc6c7634d79cf70187494483a0814d0c59ba6d0685379f91543ba3670f497e",
+        "name": "Honda 80 9F — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c56 80-9F.cal",
+          "Calculators/I/Honda 93c56 80-9F.cal"
+        ]
+      },
+      {
+        "sha": "2156c5ffdbf67f36bdc5c0918169dff9b1b1ff57fcb9e68b18e0fcc698966df6",
+        "name": "Subaru Impreza YNS — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Subaru",
+        "paths": [
+          "Calculators/Dashboard/1/Subaru Impreza YNS 93C46.cal",
+          "Calculators/I/Subaru Impreza YNS 93C46.cal"
+        ]
+      },
+      {
+        "sha": "ed591785c2a01a2b86bbb713c58ffa877857d8ef56530da5877bc9c70261cc11",
+        "name": "Honda 60 7F — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c56 60-7F.cal",
+          "Calculators/I/Honda 93c56 60-7F.cal"
+        ]
+      },
+      {
+        "sha": "c3c57ff82d67e67595562a435d198fe6ee1524d63a28f2d341e9761e46e0df0c",
+        "name": "Ford Mondeo EE6 F64 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Mondeo MC9S12DP512 EE6-F64.cal",
+          "Calculators/I/Mondeo MC9S12DP512 EE6-F64.cal"
+        ],
+        "old_name": "Mondeo EE6 F64 — коррекция пробега"
+      },
+      {
+        "sha": "9012daee318525003374265e718a9adac0dc93557d76ff0ae731b684fc2fe5fd",
+        "name": "Honda E0 FF — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c56 E0-FF.cal",
+          "Calculators/I/Honda 93c56 E0-FF.cal"
+        ]
+      },
+      {
+        "sha": "902ef0715686d70254e070966973263215762b5bc7a42910c74caeb97da84eb4",
+        "name": "Mazda YNS 93Cx6 — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Mazda",
+        "paths": [
+          "Calculators/Dashboard/1/Mazda YNS 93Cx6.cal",
+          "Calculators/I/Mazda YNS 93Cx6.cal"
+        ]
+      },
+      {
+        "sha": "5cd5184d46ffe55af6999e49b5c1fec7c2046f6d815ace0d7162c0fa79d08d31",
+        "name": "Honda 40 7F — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c46 40-7F.cal",
+          "Calculators/I/Honda 93c46 40-7F.cal"
+        ]
+      },
+      {
+        "sha": "f20e7b9bd66e590f53dc3be55994a6e89907190f2ace1b3048d8c33d100a5999",
+        "name": "Honda 180 1BF — коррекция пробега (EEPROM 93C76)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c76 180-1BF.cal",
+          "Calculators/I/Honda 93c76 180-1BF.cal"
+        ]
+      },
+      {
+        "sha": "90d349a85621ac7771a0b0707ff84b68ca7dcc74b501480bcca5a9a42b62ed79",
+        "name": "Honda 1A0 1DF — коррекция пробега (EEPROM 93C76)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c76 1A0-1DF.cal",
+          "Calculators/I/Honda 93c76 1A0-1DF.cal"
+        ]
+      },
+      {
+        "sha": "3f16c5e09303724d00e90e5ccbc0acedbfc94003fe6b7188d983b7eda2990eb6",
+        "name": "Subaru Forester YNS — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Subaru",
+        "paths": [
+          "Calculators/Dashboard/1/Subaru Forester YNS 93C46.cal",
+          "Calculators/I/Subaru Forester YNS 93C46.cal"
+        ]
+      },
+      {
+        "sha": "8d803d64f13b2921d2026237afa4276170cd34a622ec1fb6f529658554026e35",
+        "name": "Honda E0 FF — коррекция пробега (EEPROM 93C66)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c66 E0-FF.cal",
+          "Calculators/I/Honda 93c66 E0-FF.cal"
+        ]
+      },
+      {
+        "sha": "557a719ea330722b2a5ede21b18c306977474b6e49ba75b013a2a79fbf34bb7c",
+        "name": "Honda 1A0 1BF — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c66 1A0-1BF.cal",
+          "Calculators/I/Honda 93c66 1A0-1BF.cal"
+        ]
+      },
+      {
+        "sha": "c19a70429044e889e508319f552770e1ee8864c2b6bfacb31bf4d0a4b21738c7",
+        "name": "Mitsubishi Delica YNS — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Mitsubishi",
+        "paths": [
+          "Calculators/Dashboard/1/Mitsubishi Delica YNS 93C46.cal",
+          "Calculators/I/Mitsubishi Delica YNS 93C46.cal"
+        ]
+      },
+      {
+        "sha": "df5722920b408b565e20d2f1171ee3ae0a1a15e0d4f1cc315afb07efe753703f",
+        "name": "Honda 60 7F — коррекция пробега (EEPROM 93C46)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c46 60-7F.cal",
+          "Calculators/I/Honda 93c46 60-7F.cal"
+        ]
+      },
+      {
+        "sha": "5705452657a3c3d123e979251a60a0c1575b9eca933f1be00948f902b8a37efe",
+        "name": "Honda C0 FF — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c56 C0-FF.cal",
+          "Calculators/I/Honda 93c56 C0-FF.cal"
+        ]
+      },
+      {
+        "sha": "2f0a1d90282038f3c73f26eed41dde083ca3a794cb296eec1454b814474d6eeb",
+        "name": "Honda 1A0 1BF — коррекция пробега (EEPROM 93C76)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c76 1A0-1BF.cal",
+          "Calculators/I/Honda 93c76 1A0-1BF.cal"
+        ]
+      },
+      {
+        "sha": "3dca59742be690c554b7e1c5aaa8b17da907221fce6c43a5ca6c3663894c3f2c",
+        "name": "Ford Connect F18 F97 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Connect MC9S12H256 F18-F97.cal",
+          "Calculators/I/Connect MC9S12H256 F18-F97.cal"
+        ],
+        "old_name": "Connect F18 F97 — коррекция пробега"
+      },
+      {
+        "sha": "cb4b441b80b0e61daf45684efa66fbd8260583360870a778edca05facf569385",
+        "name": "Honda 1C0 1FF — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/1/Honda 93c66 1C0-1FF.cal",
+          "Calculators/I/Honda 93c66 1C0-1FF.cal"
+        ]
+      },
+      {
+        "sha": "ebc9e7233fc3e1ac980e8f64fd8a75f8e0e765d4a90a5517d49f60f0d5b9d0d4",
+        "name": "Volkswagen VentoTRW — операция не подтверждена",
+        "folder": "Dashboard/Volkswagen",
+        "paths": [
+          "Calculators/Dashboard/Volkswagen/VWVentoTRW.cal"
+        ],
+        "old_name": "VWVentoTRW"
+      },
+      {
+        "sha": "e0277c4ecb7c2a546afbec1b167836122543c2019781cf0e93acc16027978b25",
+        "name": "Volkswagen Vento TRW — операция не подтверждена",
+        "folder": "Dashboard/Volkswagen",
+        "paths": [
+          "Calculators/Dashboard/Volkswagen/Vento TRW.cal"
+        ],
+        "old_name": "Vento TRW"
+      },
+      {
+        "sha": "d9f3bc489f2a669d9f56282d7b78d6992aae73268b5ff4a4d5e1158e6adbd4ce",
+        "name": "Honda Aquatrax 93c56 — операция не подтверждена",
+        "folder": "Dashboard/Honda",
+        "paths": [
+          "Calculators/Dashboard/Jet ski/Aquatrax 93c56.cal"
+        ],
+        "old_name": "Aquatrax 93c56"
+      },
+      {
+        "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+        "name": "Mitsubishi Pajero 93C66 — операция не подтверждена",
+        "folder": "Dashboard/Mitsubishi",
+        "paths": [
+          "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal"
+        ],
+        "old_name": "Pajero 93C66"
+      },
+      {
+        "sha": "f26ae45fb3ed26529c16275f39d065f2026d6ecacd3f8984d18279f106197ca4",
+        "name": "Isuzu Forward 93c56 v2 — операция не подтверждена",
+        "folder": "Dashboard/Isuzu",
+        "paths": [
+          "Calculators/Dashboard/Isuzu/Forward 93c56 v2.cal"
+        ],
+        "old_name": "Forward 93c56 v2"
+      },
+      {
+        "sha": "9c8c8581d1b9e1e0927fccbd191305db510542228bff31b4d745f5f630ba8a23",
+        "name": "Isuzu Forward 93c56 — операция не подтверждена · вариант 2",
+        "folder": "Dashboard/Isuzu",
+        "paths": [
+          "Calculators/Dashboard/Isuzu/Isuzu Forward 93c56.cal"
+        ],
+        "old_name": "Isuzu Forward 93c56 · вариант 2"
+      },
+      {
+        "sha": "be60c284cd53240cc4674b5c32417f7a7dd0ac6d3a4bddb356cf6c3645ad2a58",
+        "name": "Mercedes-Benz B W169 EZS 9S12DT128 — операция не подтверждена",
+        "folder": "Dashboard/Mercedes-Benz",
+        "paths": [
+          "Calculators/Dashboard/Mercedes/B W169 EZS 9S12DT128.cal"
+        ],
+        "old_name": "B W169 EZS 9S12DT128"
+      },
+      {
+        "sha": "0d3206a5dc83d892daf39ed8304d2dfd6f86e7dc4d46816e742f3476e3246a54",
+        "name": "Mercedes-Benz A W169 EZS 9S12DT128 — операция не подтверждена",
+        "folder": "Dashboard/Mercedes-Benz",
+        "paths": [
+          "Calculators/Dashboard/Mercedes/A W169 EZS 9S12DT128.cal"
+        ],
+        "old_name": "A W169 EZS 9S12DT128"
+      },
+      {
+        "sha": "972a0dcdd0381285fa5352488dbc7f200bb57c2a4bb406ab7f9f559ccb5a048a",
+        "name": "Toyota Chaser — коррекция пробега",
+        "folder": "Dashboard/Toyota",
+        "paths": [
+          "Calculators/Dashboard/1/Toyota Chaser var 2.cal"
+        ]
+      },
+      {
+        "sha": "53cb0b3a09f4e5501b5dcb5eef6f97008bece0ad6aec35e2d36850a5f82dd3c6",
+        "name": "Ford Mondeo EE6 F65 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Mondeo MC9S12H256 EE6-F65.cal"
+        ],
+        "old_name": "Mondeo EE6 F65 — коррекция пробега"
+      },
+      {
+        "sha": "bed02c310da0e24a233edf15def0f269f4bfc6f7fba410c8c604e75c0767bafd",
+        "name": "Ford Focus3 DB0 E2F — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Focus3 MC9S12XHZ512 DB0-E2F.cal"
+        ],
+        "old_name": "Focus3 DB0 E2F — коррекция пробега"
+      },
+      {
+        "sha": "c92a51b378920c32bf868bd2956749cd11cb77798ec26afe38c526271e69af60",
+        "name": "Toyota Chaser — коррекция пробега · вариант 2",
+        "folder": "Dashboard/Toyota",
+        "paths": [
+          "Calculators/Dashboard/1/Toyota Chaser.cal"
+        ]
+      },
+      {
+        "sha": "eed76d56884b7c7ecd33de5131bee89ad869ee72cb27a615dee3ef9bacb694c0",
+        "name": "Mitsubishi Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)",
+        "folder": "Dashboard/Mitsubishi",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 31 C66.cal"
+        ],
+        "old_name": "Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)"
+      },
+      {
+        "sha": "8c714c58b48293a9d8529dca0acf99b19faccaf154d5f5bed12ae9302a1e91eb",
+        "name": "Ford Focus 256 EE8 F67 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Focus 9S12H128(256) EE8-F67.cal"
+        ],
+        "old_name": "Focus 256 EE8 F67 — коррекция пробега"
+      },
+      {
+        "sha": "0105df79e44b89c63b5d2ba5ae83095d275c579f739f72920fb815e518f76943",
+        "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56)",
+        "folder": "Dashboard/Toyota",
+        "paths": [
+          "Calculators/Dashboard/1/Toyota Avensis VDO 93c56.cal"
+        ]
+      },
+      {
+        "sha": "00de8bec6523cd8030439afa9418882d248341dd13014373a49b2a1242f089dd",
+        "name": "Mitsubishi Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)",
+        "folder": "Dashboard/Mitsubishi",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 31 C86.cal"
+        ],
+        "old_name": "Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)"
+      },
+      {
+        "sha": "5913f8d96684c5cdd9a547bd47b4b5258b4f95e989b8671d08f849ebc0d842e2",
+        "name": "Ford Escape 256 F4C F9B — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Escape 9S12H128(256) F4C-F9B.cal"
+        ],
+        "old_name": "Escape 256 F4C F9B — коррекция пробега"
+      },
+      {
+        "sha": "c680d57991912b5afcf05d728e705536dff21e6e5fc95e8925e3918d059b0331",
+        "name": "Ford Focus2 EE8 F67 — коррекция пробега",
+        "folder": "Dashboard/Ford",
+        "paths": [
+          "Calculators/Dashboard/1/Focus2 MC9S12H256 EE8-F67.cal"
+        ],
+        "old_name": "Focus2 EE8 F67 — коррекция пробега"
+      },
+      {
+        "sha": "b0bf476092e6be8083df0b3c813627148675be3c2b6e72c493f717932defddc3",
+        "name": "Isuzu Forward 93c56 — операция не подтверждена",
+        "folder": "Dashboard/Isuzu",
+        "paths": [
+          "Calculators/Dashboard/1/Isuzu Forward 93c56.cal"
+        ],
+        "old_name": "Isuzu Forward 93c56"
+      },
+      {
+        "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
+        "name": "Audi a4 bosch 24C08 — операция не подтверждена",
+        "folder": "Dashboard/Audi",
+        "paths": [
+          "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal"
+        ],
+        "old_name": "audi a4 bosch 24C08"
+      },
+      {
+        "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
+        "name": "Audi bosch — операция не подтверждена",
+        "folder": "Dashboard/Audi",
+        "paths": [
+          "Calculators/Dashboard/Audi/bosch.cal.cal",
+          "Calculators/Dashboard/Audi/bosch.cal"
+        ],
+        "old_name": "bosch"
+      },
+      {
+        "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
+        "name": "Audi VDO crypto 2.6 — операция не подтверждена",
+        "folder": "Dashboard/Audi",
+        "paths": [
+          "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal"
+        ],
+        "old_name": "Audi VDO crypto 2.6"
+      },
+      {
+        "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
+        "name": "Audi A6 93C86 Crypto — операция не подтверждена",
+        "folder": "Dashboard/Audi",
+        "paths": [
+          "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal"
+        ],
+        "old_name": "audi A6 93C86 Crypto"
+      },
+      {
+        "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
+        "name": "Subaru Tribeka 93c66 — операция не подтверждена",
+        "folder": "Dashboard/Subaru",
+        "paths": [
+          "Calculators/Dashboard/Subaru/Tribeka 93c66.cal"
+        ],
+        "old_name": "Tribeka 93c66"
+      },
+      {
+        "sha": "6a34a382901bdc2aabe8eeb1432b51dca8cfb84232328148f646715ad2a476ee",
+        "name": "Volkswagen Vento TRW — операция не подтверждена · вариант 2",
+        "folder": "Dashboard/Volkswagen",
+        "paths": [
+          "Calculators/Dashboard/Volkswagen/Vento/Vento TRW.cal"
+        ],
+        "old_name": "Vento TRW · вариант 2"
+      },
+      {
+        "sha": "cfcde57bcca8de8d1bde95c4368791f20b7ee7d6912e67e9c09f5b5b8483b20d",
+        "name": "JCB JS330 ECU 93C86 — операция не подтверждена",
+        "folder": "Dashboard/JCB",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/JCB/JCB JS330 ECU 93C86.cal"
+        ],
+        "old_name": "JCB JS330 ECU 93C86"
+      },
+      {
+        "sha": "a4b3df0aa5098bad7d71053909fa8cc5054f044b52fe4b268b78d6a4a0b1945d",
+        "name": "JCB JC220 ECU 93C86 — операция не подтверждена",
+        "folder": "Dashboard/JCB",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/JCB/JCB JC220 ECU 93C86.cal"
+        ],
+        "old_name": "JCB JC220 ECU 93C86"
+      },
+      {
+        "sha": "1a961305cda116f66834186c6f011614db4b9d645668d88aca22cbdc8773fedc",
+        "name": "JCB PCF8582 24C02 — операция не подтверждена",
+        "folder": "Dashboard/JCB",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/JCB/JCB PCF8582 (24C02).cal"
+        ],
+        "old_name": "JCB PCF8582 24C02"
+      },
+      {
+        "sha": "bb3101c5a95fd68bc448457b87f454a21b7074bfa365d87d1e5322951b316683",
+        "name": "Toyota 62-8FD 93C56 Denso — операция не подтверждена",
+        "folder": "Dashboard/Toyota",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 93C56 Denso.cal"
+        ],
+        "old_name": "62-8FD 93C56 Denso"
+      },
+      {
+        "sha": "8281abe51b84682e0a0eeda7d458a8288dbe3ff25e2c3f84180c4187eccb271a",
+        "name": "Toyota 62-8FD 95040 Arnecom — операция не подтверждена",
+        "folder": "Dashboard/Toyota",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 95040 Arnecom.cal"
+        ],
+        "old_name": "62-8FD 95040 Arnecom"
+      },
+      {
+        "sha": "f0f65993d9c260771444f9f63c279f713cb2b58cfec7b1780858450421b9b562",
+        "name": "XCMG LW500KN 24C64 — операция не подтверждена",
+        "folder": "Dashboard/XCMG",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/XCMG/LW500KN 24C64.cal"
+        ],
+        "old_name": "LW500KN 24C64"
+      },
+      {
+        "sha": "fc9e5f43cc8c7207f650ff562fa88a47e08228d2575c8f9b9f904af09df5cb05",
+        "name": "XCMG LW500FN 24C64 — операция не подтверждена",
+        "folder": "Dashboard/XCMG",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/XCMG/LW500FN 24C64.cal"
+        ],
+        "old_name": "LW500FN 24C64"
+      },
+      {
+        "sha": "e72c6862886693902da672c7e37f3a5ada692c9978a7385643dc7304cb0a43c2",
+        "name": "Mercedes-Benz B W169 EZS 9S12DT128 — операция не подтверждена · вариант 2",
+        "folder": "Dashboard/Mercedes-Benz",
+        "paths": [
+          "Calculators/Dashboard/Mercedes/B W169/B W169 EZS 9S12DT128.cal"
+        ],
+        "old_name": "B W169 EZS 9S12DT128 · вариант 2"
+      },
+      {
+        "sha": "785d6cea3d8affce29d1683389fb06ea10272fef2a8aa4f4c954db4aa3088dcc",
+        "name": "Belarus PIC16F886 — операция не подтверждена",
+        "folder": "Dashboard/Belarus",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC16F886.cal"
+        ],
+        "old_name": "Belarus PIC16F886"
+      },
+      {
+        "sha": "506d051ac282182f323f015fdf5b3da32cdfd0c8b1fa555053dfa1ca7d1d86db",
+        "name": "Belarus PIC18F2520 — операция не подтверждена",
+        "folder": "Dashboard/Belarus",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC18F2520.cal"
+        ],
+        "old_name": "Belarus PIC18F2520"
+      },
+      {
+        "sha": "cd11efd9ab3e0cbfbebce0905c08aaa543129b8b5fd7a5977828c6d623407eec",
+        "name": "John Deere 93C56 — операция не подтверждена",
+        "folder": "Dashboard/John Deere",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/John Deere/John Deere 93C56.cal"
+        ],
+        "old_name": "John Deere 93C56"
+      },
+      {
+        "sha": "33cd564a27fab5591332aa2629031e5ef370e274ff72050dad76523a95fb9da3",
+        "name": "John Deere 325 93C66 — операция не подтверждена",
+        "folder": "Dashboard/John Deere",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325 93C66.cal"
+        ],
+        "old_name": "John Deere 325 93C66"
+      },
+      {
+        "sha": "ac64e55c4f2aa5be86b41a1f87fd2c6f8931184e3c2a2b2b5d2d30a5fef0b5b2",
+        "name": "John Deere 325K 93C86 — операция не подтверждена",
+        "folder": "Dashboard/John Deere",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325K 93C86.cal"
+        ],
+        "old_name": "John Deere 325K 93C86"
+      },
+      {
+        "sha": "028a56cefdccc6ad4e26f7efe153b61e410d1ef7a8aad17fd49306145b2a06d4",
+        "name": "John Deere ECU 93C86 — операция не подтверждена",
+        "folder": "Dashboard/John Deere",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/John Deere/John Deere ECU 93C86.cal"
+        ],
+        "old_name": "John Deere ECU 93C86"
+      },
+      {
+        "sha": "ba34fa3b372ac63eefe924f8c1ffaec80afaa2519ef252ab7b4afdee631709e2",
+        "name": "John Deere 325J 93C66 — операция не подтверждена",
+        "folder": "Dashboard/John Deere",
+        "paths": [
+          "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325J 93C66.cal"
+        ],
+        "old_name": "John Deere 325J 93C66"
+      }
+    ],
+    "remaining_entries": [
+      {
+        "sha": "a72f0243622f18999b2146359e25a1cb734af3efcee9719414cdbd454bbe19e5",
+        "name": "Parthfinder F1C FA8 — коррекция пробега",
+        "paths": [
+          "Calculators/Dashboard/1/Parthfinder MC9S12H256 F1C-FA8.cal",
+          "Calculators/I/Parthfinder MC9S12H256 F1C-FA8.cal"
+        ],
+        "reason": "подписи указывают Nissan, изображение — Ford; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "64f6dc814aaf7bc582121822821e9a13e6830c417cf2ba5ff1ab76b064a4227e",
+        "name": "Denso 93c86 — коррекция пробега (EEPROM 93C86)",
+        "paths": [
+          "Calculators/Dashboard/1/Denso 93c86.cal",
+          "Calculators/I/Denso 93c86.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "3df179103fe02b6eaeca54a043a92e4e20cfc186bc701d951dfe32b1c26af47d",
+        "name": "Kansey — коррекция пробега (EEPROM 93C66)",
+        "paths": [
+          "Calculators/Dashboard/1/Kansey 93C66.cal"
+        ],
+        "reason": "форма указывает несколько марок: Infiniti, Nissan; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "93faee749b99d011e8363c98bba27dc3ce6a9c916376987ed5019f60ca9b27ed",
+        "name": "Yazaki 17 C66 — коррекция пробега (EEPROM 93C66)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 17 C66.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "3aea47519d82d542bbb33a178c65a3b1e7fd19956fce231be28d8e6cf3621a9c",
+        "name": "Denso 93c46 — коррекция пробега (EEPROM 93C46)",
+        "paths": [
+          "Calculators/Dashboard/1/Denso 93c46.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "8f3343df2a296520a210e78069771cdf66b9938a041765f50381a133724d9f54",
+        "name": "Denso 93c56 — коррекция пробега (EEPROM 93C56)",
+        "paths": [
+          "Calculators/Dashboard/1/Denso 93c56.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "85192de4bddec3bd1ff2a4ffdf6e83f163ac68344a39426ea0b90a430bacad8e",
+        "name": "Yazaki 17 C46 — коррекция пробега (EEPROM 93C46)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 17 C46.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "c27c3bba1ba82eed7aa80bcdefec2893cae7b7253a9edc50abdee6dfc2954864",
+        "name": "Yazaki 17 C86 — коррекция пробега (EEPROM 93C86)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 17 C86.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "1d7d948e98c1070d4d10cdce3affbbf53ec714f44b62d0cab63706ca38143753",
+        "name": "Yazaki 17 C56 — коррекция пробега (EEPROM 93C56)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 17 C56.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "54ea4c2e4fc6d5fea899f133594a19edbb4e91d079e3cbcf10a2e5d78d519a70",
+        "name": "Yazaki 48 C56 — коррекция пробега (EEPROM 93C56)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 48 C56.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "60a0938c613800b11b93be24e0bab3411de45623fe13ad1af8f0ded1be7bfbc0",
+        "name": "Yazaki 48 C46 — коррекция пробега (EEPROM 93C46)",
+        "paths": [
+          "Calculators/Dashboard/1/Yazaki 48 C46.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "467dca914c2e868a862dbfbbf50965d6ddb449712c663dd11a1c3818579e1b30",
+        "name": "NDM457C",
+        "paths": [
+          "Calculators/Dashboard/1/NDM457C.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "13344c6d1f6965dc723661386e69ee4d810eafdeaaf6c44483b2d1f214500797",
+        "name": "NDM457C · вариант 2",
+        "paths": [
+          "Calculators/Dashboard/Toyota/NDM457C.cal"
+        ],
+        "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+      },
+      {
+        "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
+        "name": "Terex 860 SX 25010 — коррекция моточасов",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
+        ],
+        "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
+      },
+      {
+        "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
+        "name": "Terex — коррекция моточасов (EEPROM 95010)",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
+        ],
+        "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
+      },
+      {
+        "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
+        "name": "HMK 102B PCF8582 24C02",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
+        ],
+        "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
+      },
+      {
+        "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
+        "name": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
+        ],
+        "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
+      },
+      {
+        "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
+        "name": "TCM FHG15T3 PIC16F946 — коррекция пробега",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
+        ],
+        "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
+      },
+      {
+        "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
+        "name": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
+        ],
+        "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
+      },
+      {
+        "sha": "50069916fc36c2db81067d4676813e24eed72e5c76a115364d21ba6e7dee07d0",
+        "name": "UDM-2 Baltiec K-702MA 24C02",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/UDM-2/UDM-2 Baltiec K-702MA 24C02.cal"
+        ],
+        "reason": "марка не подтверждена путём или формой CAL"
+      },
+      {
+        "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
+        "name": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
+        "paths": [
+          "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
+        ],
+        "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
+      },
+      {
+        "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
+        "name": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
+        ],
+        "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
+      },
+      {
+        "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
+        "name": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
+        ],
+        "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
+      },
+      {
+        "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
+        "name": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
+        "paths": [
+          "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
+        ],
+        "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
+      }
+    ]
+  },
   "decisions": [
     {
       "sha": "0006d8770c7dafed7acb75548611b95b2c39fed2f743c43d25871cd58b7eb67f",
@@ -249,8 +1147,8 @@
     },
     {
       "sha": "00de8bec6523cd8030439afa9418882d248341dd13014373a49b2a1242f089dd",
-      "name": "Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)",
-      "folder": "Dashboard",
+      "name": "Mitsubishi Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)",
+      "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -258,7 +1156,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 31 C86.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 31 C86.cal"
-      ]
+      ],
+      "old_name": "Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)"
     },
     {
       "sha": "00e48d94168001bc27c3fa039600246039e8a6e1382472e2ead449cb154502f2",
@@ -289,7 +1188,7 @@
     {
       "sha": "0105df79e44b89c63b5d2ba5ae83095d275c579f739f72920fb815e518f76943",
       "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -782,8 +1681,8 @@
     },
     {
       "sha": "028a56cefdccc6ad4e26f7efe153b61e410d1ef7a8aad17fd49306145b2a06d4",
-      "name": "John Deere ECU 93C86",
-      "folder": "Dashboard",
+      "name": "John Deere ECU 93C86 — операция не подтверждена",
+      "folder": "Dashboard/John Deere",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -792,7 +1691,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/John Deere/John Deere ECU 93C86.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "John Deere ECU 93C86"
     },
     {
       "sha": "02a37a1c428f8a5071c263b1de7bb25dbfa201aef81d03b8e1bb987f29b1472b",
@@ -2954,7 +3853,7 @@
     },
     {
       "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
-      "name": "Terex 860 SX 25010",
+      "name": "Terex 860 SX 25010 — коррекция моточасов",
       "folder": "Dashboard",
       "operation": "коррекция моточасов",
       "sources": [
@@ -2964,7 +3863,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "Terex 860 SX 25010",
+      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
     },
     {
       "sha": "0b9560755d3aed0c3907ba812b31e924161a131183d1ca7abf288a6f67af97a9",
@@ -3423,8 +4323,8 @@
     },
     {
       "sha": "0d3206a5dc83d892daf39ed8304d2dfd6f86e7dc4d46816e742f3476e3246a54",
-      "name": "A W169 EZS 9S12DT128",
-      "folder": "Dashboard",
+      "name": "Mercedes-Benz A W169 EZS 9S12DT128 — операция не подтверждена",
+      "folder": "Dashboard/Mercedes-Benz",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -3433,7 +4333,7 @@
       "paths": [
         "Calculators/Dashboard/Mercedes/A W169 EZS 9S12DT128.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "A W169 EZS 9S12DT128"
     },
     {
       "sha": "0d34965f623cda9935a67dac7d556456ae45f9e89629eb717b978907ea77c0a6",
@@ -5137,7 +6037,7 @@
       "paths": [
         "Calculators/Dashboard/Toyota/NDM457C.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "1346f1429adcd484656b2705275fb1cbb656de0bd7d6a9484220f400d9d7388d",
@@ -6259,8 +7159,8 @@
     },
     {
       "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
-      "name": "Pajero 93C66",
-      "folder": "Dashboard",
+      "name": "Mitsubishi Pajero 93C66 — операция не подтверждена",
+      "folder": "Dashboard/Mitsubishi",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -6269,7 +7169,7 @@
       "paths": [
         "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Pajero 93C66"
     },
     {
       "sha": "17e630d3fb589d187e54ad006cc72605e05857d62ec35ec705e7dfb884dbd852",
@@ -6351,8 +7251,8 @@
     },
     {
       "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
-      "name": "Audi VDO crypto 2.6",
-      "folder": "Dashboard",
+      "name": "Audi VDO crypto 2.6 — операция не подтверждена",
+      "folder": "Dashboard/Audi",
       "operation": "декриптор панели",
       "sources": [
         "Dashboard"
@@ -6361,7 +7261,7 @@
       "paths": [
         "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal"
       ],
-      "reason": "форма CAL недоступна для проверки операции"
+      "old_name": "Audi VDO crypto 2.6"
     },
     {
       "sha": "18449ff63697e7bf933e167525902b40cfd2362531d7b14089495b3cf0337fc3",
@@ -6911,8 +7811,8 @@
     },
     {
       "sha": "1a961305cda116f66834186c6f011614db4b9d645668d88aca22cbdc8773fedc",
-      "name": "JCB PCF8582 24C02",
-      "folder": "Dashboard",
+      "name": "JCB PCF8582 24C02 — операция не подтверждена",
+      "folder": "Dashboard/JCB",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -6921,7 +7821,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/JCB/JCB PCF8582 (24C02).cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "JCB PCF8582 24C02"
     },
     {
       "sha": "1a973ef3530585cc17330d52ebebe9b3873454138e89042835681d8690d37ab7",
@@ -7675,7 +8575,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 17 C56.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 17 C56.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "1d82ad91ea8bcaf146444e97a7ef4d3fdb78dd12b285ad7ef147a2de4988e902",
@@ -8095,7 +8996,7 @@
     },
     {
       "sha": "1f3d18cd0d7bff7740daddcceaf43cfeaf11c38e64bb2b59b07f9089aceb2bdd",
-      "name": "Mitsubishi Delica YNS — коррекция пробега (EEPROM 93C46)",
+      "name": "Mitsubishi Delica YNS — коррекция пробега (EEPROM 93C46) · вариант 2",
       "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
@@ -8104,7 +9005,8 @@
       "canonical_path": "Calculators/Dashboard/Mitsubishi/Delica YNS 93C46.cal",
       "paths": [
         "Calculators/Dashboard/Mitsubishi/Delica YNS 93C46.cal"
-      ]
+      ],
+      "old_name": "Mitsubishi Delica YNS — коррекция пробега (EEPROM 93C46)"
     },
     {
       "sha": "1f3e20a237c11277b6781991ee6c3a405c6ac1f2c87eca7d10cf31154a006128",
@@ -8616,7 +9518,7 @@
     {
       "sha": "2156c5ffdbf67f36bdc5c0918169dff9b1b1ff57fcb9e68b18e0fcc698966df6",
       "name": "Subaru Impreza YNS — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Subaru",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -8709,7 +9611,7 @@
     {
       "sha": "21bc6c7634d79cf70187494483a0814d0c59ba6d0685379f91543ba3670f497e",
       "name": "Honda 80 9F — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -11349,7 +12251,7 @@
     },
     {
       "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
-      "name": "Triumph Dakota 93C46",
+      "name": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -11359,7 +12261,8 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "Triumph Dakota 93C46",
+      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
     },
     {
       "sha": "2ce57dc970a8bd437b79931e09c96f2202f5a0c5f62f42d7bf544d8c561d45ca",
@@ -11636,7 +12539,7 @@
     },
     {
       "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
-      "name": "Triumph Tiger 1050 PIC18F458 - 256",
+      "name": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -11646,7 +12549,8 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "Triumph Tiger 1050 PIC18F458 - 256",
+      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
     },
     {
       "sha": "2e4da8a00e4a548d3a3f16cd29603b4181845b9f00cc2f123bd98abf7106c808",
@@ -11755,7 +12659,7 @@
     {
       "sha": "2f0a1d90282038f3c73f26eed41dde083ca3a794cb296eec1454b814474d6eeb",
       "name": "Honda 1A0 1BF — коррекция пробега (EEPROM 93C76)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -12783,7 +13687,7 @@
     },
     {
       "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
-      "name": "Terex 95010",
+      "name": "Terex — коррекция моточасов (EEPROM 95010)",
       "folder": "Dashboard",
       "operation": "коррекция моточасов",
       "sources": [
@@ -12793,7 +13697,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "Terex 95010",
+      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
     },
     {
       "sha": "3329597e1d1c4e764ddb6026d34efba4a64f5a9687264a07fc11ddb3a43bd7c1",
@@ -13031,8 +13936,8 @@
     },
     {
       "sha": "33cd564a27fab5591332aa2629031e5ef370e274ff72050dad76523a95fb9da3",
-      "name": "John Deere 325 93C66",
-      "folder": "Dashboard",
+      "name": "John Deere 325 93C66 — операция не подтверждена",
+      "folder": "Dashboard/John Deere",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -13041,7 +13946,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325 93C66.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "John Deere 325 93C66"
     },
     {
       "sha": "33d47179266144f266609e406be01e64782a1dc5cc505023d9d7cccfa984af56",
@@ -14913,7 +15818,8 @@
       "canonical_path": "Calculators/Dashboard/1/Denso 93c46.cal",
       "paths": [
         "Calculators/Dashboard/1/Denso 93c46.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "3aea8eb4e758aeab1277f9d1705fa067447b0c2ab0ea50392bdc19315daf1b29",
@@ -15528,8 +16434,8 @@
     },
     {
       "sha": "3dca59742be690c554b7e1c5aaa8b17da907221fce6c43a5ca6c3663894c3f2c",
-      "name": "Connect F18 F97 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Connect F18 F97 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -15539,7 +16445,8 @@
       "paths": [
         "Calculators/Dashboard/1/Connect MC9S12H256 F18-F97.cal",
         "Calculators/I/Connect MC9S12H256 F18-F97.cal"
-      ]
+      ],
+      "old_name": "Connect F18 F97 — коррекция пробега"
     },
     {
       "sha": "3dceba6ce3dbfc4b103eba0a79ea00826857a14071a9ee1d530aa773d7af451f",
@@ -15604,7 +16511,8 @@
       "canonical_path": "Calculators/Dashboard/1/Kansey 93C66.cal",
       "paths": [
         "Calculators/Dashboard/1/Kansey 93C66.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Infiniti, Nissan; марка не подтверждена однозначно"
     },
     {
       "sha": "3df27e63beff2014ec0474dc111a13cd0764708ce0d204d9d5b312316fc04e43",
@@ -15986,7 +16894,7 @@
     {
       "sha": "3f16c5e09303724d00e90e5ccbc0acedbfc94003fe6b7188d983b7eda2990eb6",
       "name": "Subaru Forester YNS — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Subaru",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -17999,7 +18907,7 @@
       "paths": [
         "Calculators/Dashboard/1/NDM457C.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "4691e1c0475c3c8cbc0b83c3891322c956ffa595582c731fc0ddc35194461d05",
@@ -19173,7 +20081,7 @@
     },
     {
       "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
-      "name": "FHG15T3 PIC16F946 - 512",
+      "name": "TCM FHG15T3 PIC16F946 — коррекция пробега",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -19183,7 +20091,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "FHG15T3 PIC16F946 - 512",
+      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
     },
     {
       "sha": "4bff6c0fd6b15f17a29f11f4078e7d2c668bafa909c9aceff51e51e283ddd159",
@@ -20384,8 +21293,8 @@
     },
     {
       "sha": "506d051ac282182f323f015fdf5b3da32cdfd0c8b1fa555053dfa1ca7d1d86db",
-      "name": "Belarus PIC18F2520",
-      "folder": "Dashboard",
+      "name": "Belarus PIC18F2520 — операция не подтверждена",
+      "folder": "Dashboard/Belarus",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -20394,7 +21303,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC18F2520.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Belarus PIC18F2520"
     },
     {
       "sha": "506d780e1cd0745c1425fca7e2c31d0d458cd2c737b053c990bb4f24411753d7",
@@ -20424,7 +21333,7 @@
     },
     {
       "sha": "507db1a3b28145a50ef09c2e23963628b682218bb274f535109df660ea552834",
-      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56)",
+      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 2",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
@@ -20433,7 +21342,8 @@
       "canonical_path": "Calculators/Dashboard/Toyota/Avensis 93C56 VDO.cal",
       "paths": [
         "Calculators/Dashboard/Toyota/Avensis 93C56 VDO.cal"
-      ]
+      ],
+      "old_name": "Toyota Avensis — коррекция пробега (EEPROM 93C56)"
     },
     {
       "sha": "50834d643868330c8666e2ef2a95d29bb4487b8242907da5ea7eb65e78ef2adf",
@@ -21334,8 +22244,8 @@
     },
     {
       "sha": "53cb0b3a09f4e5501b5dcb5eef6f97008bece0ad6aec35e2d36850a5f82dd3c6",
-      "name": "Mondeo EE6 F65 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Mondeo EE6 F65 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -21343,7 +22253,8 @@
       "canonical_path": "Calculators/Dashboard/1/Mondeo MC9S12H256 EE6-F65.cal",
       "paths": [
         "Calculators/Dashboard/1/Mondeo MC9S12H256 EE6-F65.cal"
-      ]
+      ],
+      "old_name": "Mondeo EE6 F65 — коррекция пробега"
     },
     {
       "sha": "53cce057e7a12e72fa6d97c907aacdd56127a9b2aed8f4c6bebab7e9740bd997",
@@ -21629,7 +22540,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 48 C56.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 48 C56.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "54eb985b63d4053668f228220ed29cd2321fcb3a496ae748210545403cc1a4d8",
@@ -21764,7 +22676,7 @@
     {
       "sha": "557a719ea330722b2a5ede21b18c306977474b6e49ba75b013a2a79fbf34bb7c",
       "name": "Honda 1A0 1BF — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -22208,7 +23120,7 @@
     {
       "sha": "5705452657a3c3d123e979251a60a0c1575b9eca933f1be00948f902b8a37efe",
       "name": "Honda C0 FF — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -22742,8 +23654,8 @@
     },
     {
       "sha": "5913f8d96684c5cdd9a547bd47b4b5258b4f95e989b8671d08f849ebc0d842e2",
-      "name": "Escape 256 F4C F9B — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Escape 256 F4C F9B — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -22751,7 +23663,8 @@
       "canonical_path": "Calculators/Dashboard/1/Escape 9S12H128(256) F4C-F9B.cal",
       "paths": [
         "Calculators/Dashboard/1/Escape 9S12H128(256) F4C-F9B.cal"
-      ]
+      ],
+      "old_name": "Escape 256 F4C F9B — коррекция пробега"
     },
     {
       "sha": "592896df7e9ce8798e4405eeeedbe2621452594eaa88a05e8b920a4113e88ed7",
@@ -22768,7 +23681,7 @@
     },
     {
       "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
-      "name": "Joymax 300i 24C02",
+      "name": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -22778,7 +23691,8 @@
       "paths": [
         "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "Joymax 300i 24C02",
+      "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
     },
     {
       "sha": "5944d006f91d2f3f2b05817c25dd383a86cd3b1e504be8c12b929995992adf2e",
@@ -23068,8 +23982,8 @@
     },
     {
       "sha": "5a3da563846f3171bc19fa57141c1308ea22039c123b8f2cf752a53512e404bc",
-      "name": "Fusion F04 F83 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Fusion F04 F83 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -23079,7 +23993,8 @@
       "paths": [
         "Calculators/Dashboard/1/Fusion MC9S12H256 F04-F83.cal",
         "Calculators/I/Fusion MC9S12H256 F04-F83.cal"
-      ]
+      ],
+      "old_name": "Fusion F04 F83 — коррекция пробега"
     },
     {
       "sha": "5a47497df41415c72e5457b34f5cd7ab2f6c0cdd954358f12f2d37a7d0a75206",
@@ -23395,7 +24310,7 @@
     },
     {
       "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
-      "name": "CPCD30N-RW13 x5045",
+      "name": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
       "folder": "Dashboard",
       "operation": "коррекция моточасов",
       "sources": [
@@ -23405,7 +24320,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "CPCD30N-RW13 x5045",
+      "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
     },
     {
       "sha": "5bacb77a2d49c8f27b4fdfbfedef2b753a19bd217d56644efe86b3644893680b",
@@ -23423,7 +24339,7 @@
     {
       "sha": "5bef75db6333ff8f0d086ad5fa5aa3d07721a76257c9a2d4c387fe89283e3b0c",
       "name": "Suzuki Liana YNS — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Suzuki",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -23685,7 +24601,7 @@
     {
       "sha": "5cd5184d46ffe55af6999e49b5c1fec7c2046f6d815ace0d7162c0fa79d08d31",
       "name": "Honda 40 7F — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -24540,7 +25456,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 48 C46.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 48 C46.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "60b060bcf9e4028b925561c704232bfb6b7a075052739022aeace5a643cd102c",
@@ -25582,7 +26499,8 @@
       "paths": [
         "Calculators/Dashboard/1/Denso 93c86.cal",
         "Calculators/I/Denso 93c86.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "650c7cb512ea9796841215b3f9973957a46763f952aaffab7775cf6634a6d79d",
@@ -26730,8 +27648,8 @@
     },
     {
       "sha": "6a34a382901bdc2aabe8eeb1432b51dca8cfb84232328148f646715ad2a476ee",
-      "name": "Vento TRW · вариант 2",
-      "folder": "Dashboard",
+      "name": "Volkswagen Vento TRW — операция не подтверждена · вариант 2",
+      "folder": "Dashboard/Volkswagen",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -26740,7 +27658,7 @@
       "paths": [
         "Calculators/Dashboard/Volkswagen/Vento/Vento TRW.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Vento TRW · вариант 2"
     },
     {
       "sha": "6a3d47bf74921760f41d8f72c7ac9bb40eb7e8deebfb37774ddef76be1d78712",
@@ -27238,7 +28156,7 @@
     },
     {
       "sha": "6c6494327538dd44000a210b1c0bed4f0f5f0ff77cb6f5855be7edd497313535",
-      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 2",
+      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 3",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
@@ -27247,7 +28165,8 @@
       "canonical_path": "Calculators/Dashboard/Toyota/Avensis/Toyota Avensis 93C56 VDO.cal",
       "paths": [
         "Calculators/Dashboard/Toyota/Avensis/Toyota Avensis 93C56 VDO.cal"
-      ]
+      ],
+      "old_name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 2"
     },
     {
       "sha": "6c6a1cd5e52f275571f6d3b5b92f0d5f34f69f7bb678bf3330fe54286563ae71",
@@ -30163,8 +31082,8 @@
     },
     {
       "sha": "785d6cea3d8affce29d1683389fb06ea10272fef2a8aa4f4c954db4aa3088dcc",
-      "name": "Belarus PIC16F886",
-      "folder": "Dashboard",
+      "name": "Belarus PIC16F886 — операция не подтверждена",
+      "folder": "Dashboard/Belarus",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -30173,7 +31092,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC16F886.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Belarus PIC16F886"
     },
     {
       "sha": "7872200a23e4c78f825e4eb81279102e604edff8e62a47c621f37f97705cbb1b",
@@ -30424,7 +31343,7 @@
     },
     {
       "sha": "7970dcf7da204ac68132a3d11abf9b087992a524649ff24b261866dd69e5780c",
-      "name": "Ford Escape 256 F4C F9B — коррекция пробега",
+      "name": "Ford Escape 256 F4C F9B — коррекция пробега · вариант 2",
       "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
@@ -30433,7 +31352,8 @@
       "canonical_path": "Calculators/Dashboard/Ford/Escape/Escape 9S12H128(256) F4C-F9B.cal",
       "paths": [
         "Calculators/Dashboard/Ford/Escape/Escape 9S12H128(256) F4C-F9B.cal"
-      ]
+      ],
+      "old_name": "Ford Escape 256 F4C F9B — коррекция пробега"
     },
     {
       "sha": "799850c6fa87f32ae4f3578c22a42935b0b6a6027d483f6c1b11fcc69257b60b",
@@ -32804,8 +33724,8 @@
     },
     {
       "sha": "8281abe51b84682e0a0eeda7d458a8288dbe3ff25e2c3f84180c4187eccb271a",
-      "name": "62-8FD 95040 Arnecom",
-      "folder": "Dashboard",
+      "name": "Toyota 62-8FD 95040 Arnecom — операция не подтверждена",
+      "folder": "Dashboard/Toyota",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -32814,7 +33734,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 95040 Arnecom.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "62-8FD 95040 Arnecom"
     },
     {
       "sha": "828806e3eb548ff281a2dbc81e856340f50293d80d856884bad25ff6c2abcb09",
@@ -33260,8 +34180,8 @@
     },
     {
       "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
-      "name": "Tribeka 93c66",
-      "folder": "Dashboard",
+      "name": "Subaru Tribeka 93c66 — операция не подтверждена",
+      "folder": "Dashboard/Subaru",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -33270,7 +34190,7 @@
       "paths": [
         "Calculators/Dashboard/Subaru/Tribeka 93c66.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Tribeka 93c66"
     },
     {
       "sha": "846a86ccea67b2845b39803c62b6ce3cf3cedc08a063a277489d84d0795b9bb4",
@@ -33413,7 +34333,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 17 C46.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 17 C46.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "851b8dc19f48b75a6b7489a1eb4b36971b1cdf60d9d39e91c0f31ae97aca78fa",
@@ -34093,7 +35014,7 @@
     },
     {
       "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
-      "name": "FG15CTJ PIC12F629 - 128",
+      "name": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -34103,7 +35024,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "FG15CTJ PIC12F629 - 128",
+      "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
     },
     {
       "sha": "87f264f0a31ab26f62f7d22883698fab4592ba210c65737c46f8142e6139f20b",
@@ -34679,7 +35601,7 @@
     },
     {
       "sha": "8aac1917fc6ea548d8bfbbf049cee4d78ef7430fff5a39c846d809deffb98fd5",
-      "name": "Toyota Chaser — коррекция пробега",
+      "name": "Toyota Chaser — коррекция пробега · вариант 3",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
@@ -34688,7 +35610,8 @@
       "canonical_path": "Calculators/Dashboard/Toyota/Chaser/Toyota Chaser var 2.cal",
       "paths": [
         "Calculators/Dashboard/Toyota/Chaser/Toyota Chaser var 2.cal"
-      ]
+      ],
+      "old_name": "Toyota Chaser — коррекция пробега"
     },
     {
       "sha": "8ab4a76aa5bd174fd6803509fe8f4de4fe7865c7bdc11d734e85ab18d378c767",
@@ -35004,8 +35927,8 @@
     },
     {
       "sha": "8c714c58b48293a9d8529dca0acf99b19faccaf154d5f5bed12ae9302a1e91eb",
-      "name": "Focus 256 EE8 F67 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Focus 256 EE8 F67 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -35013,7 +35936,8 @@
       "canonical_path": "Calculators/Dashboard/1/Focus 9S12H128(256) EE8-F67.cal",
       "paths": [
         "Calculators/Dashboard/1/Focus 9S12H128(256) EE8-F67.cal"
-      ]
+      ],
+      "old_name": "Focus 256 EE8 F67 — коррекция пробега"
     },
     {
       "sha": "8c7fd2924b17a61791572f3e83f971ae7390f6fbd25f5bafc8d0dbcf1538baab",
@@ -35304,7 +36228,7 @@
     {
       "sha": "8d803d64f13b2921d2026237afa4276170cd34a622ec1fb6f529658554026e35",
       "name": "Honda E0 FF — коррекция пробега (EEPROM 93C66)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -35704,7 +36628,8 @@
       "canonical_path": "Calculators/Dashboard/1/Denso 93c56.cal",
       "paths": [
         "Calculators/Dashboard/1/Denso 93c56.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "8f55cf135069373d0839d8f4a2ddbe57fb9c998290a0d13b5e6068250d5049c1",
@@ -35930,7 +36855,7 @@
     {
       "sha": "9012daee318525003374265e718a9adac0dc93557d76ff0ae731b684fc2fe5fd",
       "name": "Honda E0 FF — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -36023,7 +36948,7 @@
     {
       "sha": "902ef0715686d70254e070966973263215762b5bc7a42910c74caeb97da84eb4",
       "name": "Mazda YNS 93Cx6 — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Mazda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -36168,7 +37093,7 @@
     {
       "sha": "90d349a85621ac7771a0b0707ff84b68ca7dcc74b501480bcca5a9a42b62ed79",
       "name": "Honda 1A0 1DF — коррекция пробега (EEPROM 93C76)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -36585,8 +37510,8 @@
     },
     {
       "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
-      "name": "audi A6 93C86 Crypto",
-      "folder": "Dashboard",
+      "name": "Audi A6 93C86 Crypto — операция не подтверждена",
+      "folder": "Dashboard/Audi",
       "operation": "декриптор панели",
       "sources": [
         "Dashboard"
@@ -36595,7 +37520,7 @@
       "paths": [
         "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal"
       ],
-      "reason": "форма CAL недоступна для проверки операции"
+      "old_name": "audi A6 93C86 Crypto"
     },
     {
       "sha": "9226a466348c21226a60565f322d2232da0967ce2d8cf5e5c6ec29a86ee4d0b6",
@@ -36716,7 +37641,7 @@
     },
     {
       "sha": "92f4c806187ae308a725d7b32adbf84c846bf886bd30f3086e5502b9da21fea5",
-      "name": "Mitsubishi Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)",
+      "name": "Mitsubishi Yazaki 31 C86 — коррекция пробега (EEPROM 93C86) · вариант 2",
       "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
@@ -36725,7 +37650,8 @@
       "canonical_path": "Calculators/Dashboard/Mitsubishi/Yazaki 31 C86.cal",
       "paths": [
         "Calculators/Dashboard/Mitsubishi/Yazaki 31 C86.cal"
-      ]
+      ],
+      "old_name": "Mitsubishi Yazaki 31 C86 — коррекция пробега (EEPROM 93C86)"
     },
     {
       "sha": "9316a0e0cad69416422b1d6911c78fda94b4ebc85108c88da2c5e6460cdbc0b3",
@@ -37089,7 +38015,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 17 C66.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 17 C66.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "93ffd732f26353a5faef44c42361a0a1b173aceeafd25b63e300f0dfbdd4e4a0",
@@ -37952,7 +38879,7 @@
     {
       "sha": "972a0dcdd0381285fa5352488dbc7f200bb57c2a4bb406ab7f9f559ccb5a048a",
       "name": "Toyota Chaser — коррекция пробега",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -38588,8 +39515,8 @@
     },
     {
       "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
-      "name": "audi a4 bosch 24C08",
-      "folder": "Dashboard",
+      "name": "Audi a4 bosch 24C08 — операция не подтверждена",
+      "folder": "Dashboard/Audi",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -38598,7 +39525,7 @@
       "paths": [
         "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "audi a4 bosch 24C08"
     },
     {
       "sha": "99d912082ed655083485c48727d757cc393543b61b009d842637b5eb676b0bc5",
@@ -39318,8 +40245,8 @@
     },
     {
       "sha": "9c8c8581d1b9e1e0927fccbd191305db510542228bff31b4d745f5f630ba8a23",
-      "name": "Isuzu Forward 93c56 · вариант 2",
-      "folder": "Dashboard",
+      "name": "Isuzu Forward 93c56 — операция не подтверждена · вариант 2",
+      "folder": "Dashboard/Isuzu",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -39328,7 +40255,7 @@
       "paths": [
         "Calculators/Dashboard/Isuzu/Isuzu Forward 93c56.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Isuzu Forward 93c56 · вариант 2"
     },
     {
       "sha": "9caceae5422921f1b003426cc0b7b4b1e0f7701c64e7bc3dbecaaf48f7a3aad8",
@@ -40164,7 +41091,7 @@
     },
     {
       "sha": "a08e689c391a2a237040a34277c474ba6aad9ff4865980b16f9ec4fc322c0a42",
-      "name": "Ford Mondeo EE6 F65 — коррекция пробега",
+      "name": "Ford Mondeo EE6 F65 — коррекция пробега · вариант 2",
       "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
@@ -40173,7 +41100,8 @@
       "canonical_path": "Calculators/Dashboard/Ford/Mondeo/Mondeo MC9S12H256 EE6-F65.cal",
       "paths": [
         "Calculators/Dashboard/Ford/Mondeo/Mondeo MC9S12H256 EE6-F65.cal"
-      ]
+      ],
+      "old_name": "Ford Mondeo EE6 F65 — коррекция пробега"
     },
     {
       "sha": "a090c5f30a2cc91612cddc83e9860ab345dfa08e72d67b514ae0765dcf300877",
@@ -40489,7 +41417,7 @@
     },
     {
       "sha": "a1e6d12dc9e1364150baca0c37fd4660829d3f0e0d0f28110a6be976560aa046",
-      "name": "Mitsubishi Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)",
+      "name": "Mitsubishi Yazaki 31 C66 — коррекция пробега (EEPROM 93C66) · вариант 2",
       "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
@@ -40498,7 +41426,8 @@
       "canonical_path": "Calculators/Dashboard/Mitsubishi/Yazaki 31 C66.cal",
       "paths": [
         "Calculators/Dashboard/Mitsubishi/Yazaki 31 C66.cal"
-      ]
+      ],
+      "old_name": "Mitsubishi Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)"
     },
     {
       "sha": "a1fe1c25722c95181dc8c5998fec91454838b22b55dd2a97ad9121bfa0147abe",
@@ -41191,8 +42120,8 @@
     },
     {
       "sha": "a4b3df0aa5098bad7d71053909fa8cc5054f044b52fe4b268b78d6a4a0b1945d",
-      "name": "JCB JC220 ECU 93C86",
-      "folder": "Dashboard",
+      "name": "JCB JC220 ECU 93C86 — операция не подтверждена",
+      "folder": "Dashboard/JCB",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -41201,7 +42130,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/JCB/JCB JC220 ECU 93C86.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "JCB JC220 ECU 93C86"
     },
     {
       "sha": "a4c410a6e368bb616b2f8e36a8d515a5c864c82f1655a8937e375c5e2b878795",
@@ -41892,7 +42821,8 @@
       "paths": [
         "Calculators/Dashboard/1/Parthfinder MC9S12H256 F1C-FA8.cal",
         "Calculators/I/Parthfinder MC9S12H256 F1C-FA8.cal"
-      ]
+      ],
+      "reason": "подписи указывают Nissan, изображение — Ford; марка не подтверждена однозначно"
     },
     {
       "sha": "a74685a1cfb7674ad5ee0c792e82f6ad4faf9b6678a965226c6eefa07515b98f",
@@ -41919,7 +42849,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
     },
     {
       "sha": "a751e08ecaad3daa56b76e67e8529bd1894fd3d08e9e4b4a4c30badead7ca104",
@@ -43028,8 +43958,8 @@
     },
     {
       "sha": "ac64e55c4f2aa5be86b41a1f87fd2c6f8931184e3c2a2b2b5d2d30a5fef0b5b2",
-      "name": "John Deere 325K 93C86",
-      "folder": "Dashboard",
+      "name": "John Deere 325K 93C86 — операция не подтверждена",
+      "folder": "Dashboard/John Deere",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -43038,7 +43968,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325K 93C86.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "John Deere 325K 93C86"
     },
     {
       "sha": "ac72f418811d1c26280311c631543ce2599a9214f99f591584a0635f487bca7f",
@@ -44355,8 +45285,8 @@
     },
     {
       "sha": "b0bf476092e6be8083df0b3c813627148675be3c2b6e72c493f717932defddc3",
-      "name": "Isuzu Forward 93c56",
-      "folder": "Dashboard",
+      "name": "Isuzu Forward 93c56 — операция не подтверждена",
+      "folder": "Dashboard/Isuzu",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -44365,7 +45295,7 @@
       "paths": [
         "Calculators/Dashboard/1/Isuzu Forward 93c56.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Isuzu Forward 93c56"
     },
     {
       "sha": "b0c95a3b47b2cf57899e652f961ba240c3fc720f4561fba12d8d5092b8542fea",
@@ -46607,8 +47537,8 @@
     },
     {
       "sha": "ba34fa3b372ac63eefe924f8c1ffaec80afaa2519ef252ab7b4afdee631709e2",
-      "name": "John Deere 325J 93C66",
-      "folder": "Dashboard",
+      "name": "John Deere 325J 93C66 — операция не подтверждена",
+      "folder": "Dashboard/John Deere",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -46617,7 +47547,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325J 93C66.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "John Deere 325J 93C66"
     },
     {
       "sha": "ba4a9f80cf0f29450436372687bec11f9d1be579d31599a13cc19b130945c84a",
@@ -46764,8 +47694,8 @@
     },
     {
       "sha": "bb3101c5a95fd68bc448457b87f454a21b7074bfa365d87d1e5322951b316683",
-      "name": "62-8FD 93C56 Denso",
-      "folder": "Dashboard",
+      "name": "Toyota 62-8FD 93C56 Denso — операция не подтверждена",
+      "folder": "Dashboard/Toyota",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -46774,7 +47704,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 93C56 Denso.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "62-8FD 93C56 Denso"
     },
     {
       "sha": "bb3e788e49c4c36102d051b92bd928bde74e4ea77f3724d0487ff56c6ed981f5",
@@ -47585,8 +48515,8 @@
     },
     {
       "sha": "be60c284cd53240cc4674b5c32417f7a7dd0ac6d3a4bddb356cf6c3645ad2a58",
-      "name": "B W169 EZS 9S12DT128",
-      "folder": "Dashboard",
+      "name": "Mercedes-Benz B W169 EZS 9S12DT128 — операция не подтверждена",
+      "folder": "Dashboard/Mercedes-Benz",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -47595,7 +48525,7 @@
       "paths": [
         "Calculators/Dashboard/Mercedes/B W169 EZS 9S12DT128.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "B W169 EZS 9S12DT128"
     },
     {
       "sha": "be6da19baaa25ab167241d23fdcb70f1c3af4e8c9d03ea30e2b973839e643f2e",
@@ -47703,8 +48633,8 @@
     },
     {
       "sha": "bed02c310da0e24a233edf15def0f269f4bfc6f7fba410c8c604e75c0767bafd",
-      "name": "Focus3 DB0 E2F — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Focus3 DB0 E2F — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -47712,7 +48642,8 @@
       "canonical_path": "Calculators/Dashboard/1/Focus3 MC9S12XHZ512 DB0-E2F.cal",
       "paths": [
         "Calculators/Dashboard/1/Focus3 MC9S12XHZ512 DB0-E2F.cal"
-      ]
+      ],
+      "old_name": "Focus3 DB0 E2F — коррекция пробега"
     },
     {
       "sha": "bed44d37b39dc1ce28fcc18779cb341b839939c5c8339a5d2e6eb8e2f5bdc80c",
@@ -48367,7 +49298,7 @@
     {
       "sha": "c19a70429044e889e508319f552770e1ee8864c2b6bfacb31bf4d0a4b21738c7",
       "name": "Mitsubishi Delica YNS — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -48572,7 +49503,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 17 C86.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 17 C86.cal"
-      ]
+      ],
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "c28a42ca194ecd599570bcca184555fa92972798c85b28f3d7a51404132e9afb",
@@ -48732,8 +49664,8 @@
     },
     {
       "sha": "c3c57ff82d67e67595562a435d198fe6ee1524d63a28f2d341e9761e46e0df0c",
-      "name": "Mondeo EE6 F64 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Mondeo EE6 F64 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -48743,7 +49675,8 @@
       "paths": [
         "Calculators/Dashboard/1/Mondeo MC9S12DP512 EE6-F64.cal",
         "Calculators/I/Mondeo MC9S12DP512 EE6-F64.cal"
-      ]
+      ],
+      "old_name": "Mondeo EE6 F64 — коррекция пробега"
     },
     {
       "sha": "c3c815e0f53991c1bd96e938a7914f35e605285ba9812100fbc511c85c102451",
@@ -49410,8 +50343,8 @@
     },
     {
       "sha": "c680d57991912b5afcf05d728e705536dff21e6e5fc95e8925e3918d059b0331",
-      "name": "Focus2 EE8 F67 — коррекция пробега",
-      "folder": "Dashboard",
+      "name": "Ford Focus2 EE8 F67 — коррекция пробега",
+      "folder": "Dashboard/Ford",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -49419,7 +50352,8 @@
       "canonical_path": "Calculators/Dashboard/1/Focus2 MC9S12H256 EE8-F67.cal",
       "paths": [
         "Calculators/Dashboard/1/Focus2 MC9S12H256 EE8-F67.cal"
-      ]
+      ],
+      "old_name": "Focus2 EE8 F67 — коррекция пробега"
     },
     {
       "sha": "c6abaa62d3949fa20f2f9b9aa3ebaa51ee94ce1421a7ccfc9c254e90438b76fb",
@@ -49879,7 +50813,7 @@
     {
       "sha": "c92a51b378920c32bf868bd2956749cd11cb77798ec26afe38c526271e69af60",
       "name": "Toyota Chaser — коррекция пробега · вариант 2",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -50490,7 +51424,7 @@
     {
       "sha": "cb4b441b80b0e61daf45684efa66fbd8260583360870a778edca05facf569385",
       "name": "Honda 1C0 1FF — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -50894,8 +51828,8 @@
     },
     {
       "sha": "cd11efd9ab3e0cbfbebce0905c08aaa543129b8b5fd7a5977828c6d623407eec",
-      "name": "John Deere 93C56",
-      "folder": "Dashboard",
+      "name": "John Deere 93C56 — операция не подтверждена",
+      "folder": "Dashboard/John Deere",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -50904,7 +51838,7 @@
       "paths": [
         "Calculators/Dashboard/Special vehicles/John Deere/John Deere 93C56.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "John Deere 93C56"
     },
     {
       "sha": "cd3c4a6a18348de6bb2809318bb98d23df460f4781db2aa25da3fee3f9956178",
@@ -51545,7 +52479,7 @@
     },
     {
       "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
-      "name": "FHG15T3 PIC16F946 - 256",
+      "name": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
       "folder": "Dashboard",
       "operation": "коррекция пробега",
       "sources": [
@@ -51555,7 +52489,8 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
       ],
-      "reason": "марка не подтверждена путём или формой CAL"
+      "old_name": "FHG15T3 PIC16F946 - 256",
+      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
     },
     {
       "sha": "cfac99eb677613185285ddb7cb35f7c78080f8051a74e0aea68cef83d10c8d68",
@@ -51572,8 +52507,8 @@
     },
     {
       "sha": "cfcde57bcca8de8d1bde95c4368791f20b7ee7d6912e67e9c09f5b5b8483b20d",
-      "name": "JCB JS330 ECU 93C86",
-      "folder": "Dashboard",
+      "name": "JCB JS330 ECU 93C86 — операция не подтверждена",
+      "folder": "Dashboard/JCB",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -51582,7 +52517,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/JCB/JCB JS330 ECU 93C86.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "JCB JS330 ECU 93C86"
     },
     {
       "sha": "cfd548ca56f08bdc71bf0c765706242a50625fe84f3eff64f3b96218ba3b9ee5",
@@ -53185,7 +54120,7 @@
     },
     {
       "sha": "d65a191ddec66984c3b93a1b9c4755b7ee89afcd2b586195eb5998c363839373",
-      "name": "Toyota Chaser — коррекция пробега · вариант 2",
+      "name": "Toyota Chaser — коррекция пробега · вариант 4",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
@@ -53194,7 +54129,8 @@
       "canonical_path": "Calculators/Dashboard/Toyota/Chaser/Toyota Chaser.cal",
       "paths": [
         "Calculators/Dashboard/Toyota/Chaser/Toyota Chaser.cal"
-      ]
+      ],
+      "old_name": "Toyota Chaser — коррекция пробега · вариант 2"
     },
     {
       "sha": "d66af260393960fb7c3618aa58bf3cf03c195267edd0773993f7343018e38f69",
@@ -53965,8 +54901,8 @@
     },
     {
       "sha": "d9f3bc489f2a669d9f56282d7b78d6992aae73268b5ff4a4d5e1158e6adbd4ce",
-      "name": "Aquatrax 93c56",
-      "folder": "Dashboard",
+      "name": "Honda Aquatrax 93c56 — операция не подтверждена",
+      "folder": "Dashboard/Honda",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -53975,7 +54911,7 @@
       "paths": [
         "Calculators/Dashboard/Jet ski/Aquatrax 93c56.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Aquatrax 93c56"
     },
     {
       "sha": "da012048381f28b328f8b8c8ee1c7f134a10740e5b90f63ec36376d2ed9a427f",
@@ -55099,7 +56035,7 @@
     {
       "sha": "df5722920b408b565e20d2f1171ee3ae0a1a15e0d4f1cc315afb07efe753703f",
       "name": "Honda 60 7F — коррекция пробега (EEPROM 93C46)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -55308,8 +56244,8 @@
     },
     {
       "sha": "e0277c4ecb7c2a546afbec1b167836122543c2019781cf0e93acc16027978b25",
-      "name": "Vento TRW",
-      "folder": "Dashboard",
+      "name": "Volkswagen Vento TRW — операция не подтверждена",
+      "folder": "Dashboard/Volkswagen",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -55318,7 +56254,7 @@
       "paths": [
         "Calculators/Dashboard/Volkswagen/Vento TRW.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Vento TRW"
     },
     {
       "sha": "e02db12f66b24bcc97957e3741f84a495612403c9019fb2c6cc01c307687c878",
@@ -56778,8 +57714,8 @@
     },
     {
       "sha": "e72c6862886693902da672c7e37f3a5ada692c9978a7385643dc7304cb0a43c2",
-      "name": "B W169 EZS 9S12DT128 · вариант 2",
-      "folder": "Dashboard",
+      "name": "Mercedes-Benz B W169 EZS 9S12DT128 — операция не подтверждена · вариант 2",
+      "folder": "Dashboard/Mercedes-Benz",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -56788,7 +57724,7 @@
       "paths": [
         "Calculators/Dashboard/Mercedes/B W169/B W169 EZS 9S12DT128.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "B W169 EZS 9S12DT128 · вариант 2"
     },
     {
       "sha": "e73493873e626efa4db2056a4448d2333f2052c16cb9b80fa197c4d48e1f5f38",
@@ -57806,8 +58742,8 @@
     },
     {
       "sha": "ebc9e7233fc3e1ac980e8f64fd8a75f8e0e765d4a90a5517d49f60f0d5b9d0d4",
-      "name": "VWVentoTRW",
-      "folder": "Dashboard",
+      "name": "Volkswagen VentoTRW — операция не подтверждена",
+      "folder": "Dashboard/Volkswagen",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -57816,7 +58752,7 @@
       "paths": [
         "Calculators/Dashboard/Volkswagen/VWVentoTRW.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "VWVentoTRW"
     },
     {
       "sha": "ebdc00b6975fcbc3fb8d1e9f0d11bbab8cfd0ffbcf7a8621fbf9ac944f51bf0b",
@@ -58263,7 +59199,7 @@
     {
       "sha": "ed591785c2a01a2b86bbb713c58ffa877857d8ef56530da5877bc9c70261cc11",
       "name": "Honda 60 7F — коррекция пробега (EEPROM 93C56)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -58615,8 +59551,8 @@
     },
     {
       "sha": "eed76d56884b7c7ecd33de5131bee89ad869ee72cb27a615dee3ef9bacb694c0",
-      "name": "Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)",
-      "folder": "Dashboard",
+      "name": "Mitsubishi Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)",
+      "folder": "Dashboard/Mitsubishi",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
@@ -58624,7 +59560,8 @@
       "canonical_path": "Calculators/Dashboard/1/Yazaki 31 C66.cal",
       "paths": [
         "Calculators/Dashboard/1/Yazaki 31 C66.cal"
-      ]
+      ],
+      "old_name": "Yazaki 31 C66 — коррекция пробега (EEPROM 93C66)"
     },
     {
       "sha": "eedd6c7fbe1aaad9c655ec1a4501f53a0f610e8024b3ccc74a0e74a77d01ef61",
@@ -59278,8 +60215,8 @@
     },
     {
       "sha": "f0f65993d9c260771444f9f63c279f713cb2b58cfec7b1780858450421b9b562",
-      "name": "LW500KN 24C64",
-      "folder": "Dashboard",
+      "name": "XCMG LW500KN 24C64 — операция не подтверждена",
+      "folder": "Dashboard/XCMG",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -59288,7 +60225,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/XCMG/LW500KN 24C64.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "LW500KN 24C64"
     },
     {
       "sha": "f11b72cb144d0195075539947e5dc8fecdd3d80970b8a64dd1e2aa61dc5e5921",
@@ -59553,7 +60490,7 @@
     {
       "sha": "f20e7b9bd66e590f53dc3be55994a6e89907190f2ace1b3048d8c33d100a5999",
       "name": "Honda 180 1BF — коррекция пробега (EEPROM 93C76)",
-      "folder": "Dashboard",
+      "folder": "Dashboard/Honda",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard",
@@ -59606,8 +60543,8 @@
     },
     {
       "sha": "f26ae45fb3ed26529c16275f39d065f2026d6ecacd3f8984d18279f106197ca4",
-      "name": "Forward 93c56 v2",
-      "folder": "Dashboard",
+      "name": "Isuzu Forward 93c56 v2 — операция не подтверждена",
+      "folder": "Dashboard/Isuzu",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -59616,7 +60553,7 @@
       "paths": [
         "Calculators/Dashboard/Isuzu/Forward 93c56 v2.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "Forward 93c56 v2"
     },
     {
       "sha": "f26bc14db6541d54f22216733c7906df53a2a6a7fafcf0180f4b6e5b523d913e",
@@ -61011,7 +61948,7 @@
     },
     {
       "sha": "f7a25a8f0361119b99e1eb359a19c1a0045dfa68e294451c72dd6ed91bce6cb4",
-      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 3",
+      "name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 4",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
@@ -61020,7 +61957,8 @@
       "canonical_path": "Calculators/Dashboard/Toyota/Avensis/Toyota Avensis VDO 93c56.cal",
       "paths": [
         "Calculators/Dashboard/Toyota/Avensis/Toyota Avensis VDO 93c56.cal"
-      ]
+      ],
+      "old_name": "Toyota Avensis — коррекция пробега (EEPROM 93C56) · вариант 3"
     },
     {
       "sha": "f7a32ded9e33e0b99e1a3bc848c588610d834a955d58d4b8e5758c142f3bdb3f",
@@ -61206,8 +62144,8 @@
     },
     {
       "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
-      "name": "bosch",
-      "folder": "Dashboard",
+      "name": "Audi bosch — операция не подтверждена",
+      "folder": "Dashboard/Audi",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -61217,7 +62155,7 @@
         "Calculators/Dashboard/Audi/bosch.cal.cal",
         "Calculators/Dashboard/Audi/bosch.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "bosch"
     },
     {
       "sha": "f865655fd65aaefb84f5f2da1bb276832d3ac8295b547968e05f4a10fddc313f",
@@ -62274,8 +63212,8 @@
     },
     {
       "sha": "fc9e5f43cc8c7207f650ff562fa88a47e08228d2575c8f9b9f904af09df5cb05",
-      "name": "LW500FN 24C64",
-      "folder": "Dashboard",
+      "name": "XCMG LW500FN 24C64 — операция не подтверждена",
+      "folder": "Dashboard/XCMG",
       "operation": "",
       "sources": [
         "Dashboard"
@@ -62284,7 +63222,7 @@
       "paths": [
         "Calculators/Dashboard/Forklift truck/XCMG/LW500FN 24C64.cal"
       ],
-      "reason": "в форме нет подтверждения операции панели"
+      "old_name": "LW500FN 24C64"
     },
     {
       "sha": "fcbe8774b0e8416373810f323e3a81256b5ac0d8fff05ceae339aeb4d4b51db8",
@@ -63096,9 +64034,15 @@
   ],
   "by_brand": {
     "Dashboard/I_ok": 43,
-    "Dashboard": 84,
+    "Dashboard/Ford": 274,
+    "Dashboard/Suzuki": 98,
     "Dashboard/I": 20,
-    "Dashboard/Volkswagen": 199,
+    "Dashboard/Honda": 198,
+    "Dashboard/Subaru": 54,
+    "Dashboard": 24,
+    "Dashboard/Mazda": 101,
+    "Dashboard/Mitsubishi": 135,
+    "Dashboard/Volkswagen": 202,
     "Dashboard/Porsche": 17,
     "Dashboard/DongFeng": 12,
     "Dashboard/Hino": 5,
@@ -63107,14 +64051,12 @@
     "Dashboard/BRP": 55,
     "Dashboard/MAN": 3,
     "Dashboard/Lifan": 17,
-    "Dashboard/Mitsubishi": 131,
     "Dashboard/Hummer": 12,
     "Dashboard/Renault": 195,
     "Dashboard/Mercury": 1,
     "Dashboard/GMC": 32,
     "Dashboard/Ferrari": 2,
     "Dashboard/GAZ": 4,
-    "Dashboard/Ford": 266,
     "Dashboard/Vortex": 3,
     "Dashboard/MAZ": 2,
     "Dashboard/Yanmar": 2,
@@ -63123,13 +64065,12 @@
     "Dashboard/Luxgen": 1,
     "Dashboard/Changan": 2,
     "Dashboard/Samand": 4,
-    "Dashboard/Isuzu": 26,
+    "Dashboard/Isuzu": 29,
     "Dashboard/Scion": 5,
     "Dashboard/Daewoo": 33,
     "Dashboard/UAZ": 12,
     "Dashboard/Mini": 6,
     "Dashboard/Jeep": 25,
-    "Dashboard/Mazda": 100,
     "Dashboard/MG": 2,
     "Dashboard/Bentley": 2,
     "Dashboard/Daihatsu": 12,
@@ -63143,11 +64084,9 @@
     "Dashboard/Русская Механика": 5,
     "Dashboard/CFMOTO": 34,
     "Dashboard/Stels": 16,
-    "Dashboard/Honda": 185,
     "Dashboard/Kawasaki": 5,
     "Dashboard/Kymco": 3,
     "Dashboard/Baltmotors": 4,
-    "Dashboard/Suzuki": 97,
     "Dashboard/BAW": 1,
     "Dashboard/FAW": 10,
     "Dashboard/Buick": 12,
@@ -63162,16 +64101,16 @@
     "Dashboard/Hyundai": 109,
     "Dashboard/Samsung": 2,
     "Dashboard/Kia": 93,
-    "Dashboard/Mercedes-Benz": 213,
+    "Dashboard/Mercedes-Benz": 216,
     "Dashboard/Opel": 64,
     "Dashboard/Chevrolet": 190,
     "Dashboard/SsangYong": 29,
+    "Dashboard/Toyota": 464,
     "Dashboard/Iveco": 9,
     "Dashboard/CAMC": 2,
     "Dashboard/Dacia": 7,
     "Dashboard/Infiniti": 65,
     "Dashboard/VAZ": 27,
-    "Dashboard/Toyota": 459,
     "Dashboard/Shuanghuan Sceo": 1,
     "Dashboard/Higer": 1,
     "Dashboard/Cadillac": 24,
@@ -63180,12 +64119,11 @@
     "Dashboard/Dodge": 36,
     "Dashboard/Acura": 21,
     "Dashboard/Lexus": 59,
-    "Dashboard/Audi": 38,
+    "Dashboard/Audi": 42,
     "Dashboard/Lada": 20,
     "Dashboard/Volvo": 34,
     "Dashboard/Haval": 1,
     "Dashboard/Peugeot": 294,
-    "Dashboard/Subaru": 51,
     "Dashboard/Mahindra": 4,
     "Dashboard/TAGAZ": 4,
     "Dashboard/Alfa Romeo": 17,
@@ -63221,17 +64159,17 @@
     "Dashboard/Lancia": 3,
     "Dashboard/CAT": 6,
     "Dashboard/Hamm": 1,
-    "Dashboard/JCB": 13,
+    "Dashboard/JCB": 16,
+    "Dashboard/XCMG": 4,
     "Dashboard/Komatsu": 21,
     "Dashboard/Ducati": 2,
     "Dashboard/McCormick": 2,
+    "Dashboard/Belarus": 3,
     "Dashboard/Kirovec": 1,
-    "Dashboard/John Deere": 3,
-    "Dashboard/XCMG": 2,
+    "Dashboard/John Deere": 8,
     "Dashboard/Bobcat": 1,
     "Dashboard/Case": 5,
-    "Dashboard/Shantui": 1,
-    "Dashboard/Belarus": 1
+    "Dashboard/Shantui": 1
   },
   "by_operation": {
     "коррекция пробега": 4716,
@@ -63249,6 +64187,24 @@
       "reason": "в форме нет подтверждения операции панели"
     },
     {
+      "sha": "a72f0243622f18999b2146359e25a1cb734af3efcee9719414cdbd454bbe19e5",
+      "paths": [
+        "Calculators/Dashboard/1/Parthfinder MC9S12H256 F1C-FA8.cal",
+        "Calculators/I/Parthfinder MC9S12H256 F1C-FA8.cal"
+      ],
+      "title": "Parthfinder F1C FA8 — коррекция пробега",
+      "reason": "подписи указывают Nissan, изображение — Ford; марка не подтверждена однозначно"
+    },
+    {
+      "sha": "64f6dc814aaf7bc582121822821e9a13e6830c417cf2ba5ff1ab76b064a4227e",
+      "paths": [
+        "Calculators/Dashboard/1/Denso 93c86.cal",
+        "Calculators/I/Denso 93c86.cal"
+      ],
+      "title": "Denso 93c86 — коррекция пробега (EEPROM 93C86)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
+    },
+    {
       "sha": "fcf58124a88e30557343158fd4ae025fe71214699166e6106913428086578453",
       "paths": [
         "Calculators/I/Isuzu Forward 93c56.cal"
@@ -63257,76 +64213,76 @@
       "reason": "в форме нет подтверждения операции панели"
     },
     {
-      "sha": "ebc9e7233fc3e1ac980e8f64fd8a75f8e0e765d4a90a5517d49f60f0d5b9d0d4",
+      "sha": "3df179103fe02b6eaeca54a043a92e4e20cfc186bc701d951dfe32b1c26af47d",
       "paths": [
-        "Calculators/Dashboard/Volkswagen/VWVentoTRW.cal"
+        "Calculators/Dashboard/1/Kansey 93C66.cal"
       ],
-      "title": "VWVentoTRW",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Kansey — коррекция пробега (EEPROM 93C66)",
+      "reason": "форма указывает несколько марок: Infiniti, Nissan; марка не подтверждена однозначно"
     },
     {
-      "sha": "e0277c4ecb7c2a546afbec1b167836122543c2019781cf0e93acc16027978b25",
+      "sha": "93faee749b99d011e8363c98bba27dc3ce6a9c916376987ed5019f60ca9b27ed",
       "paths": [
-        "Calculators/Dashboard/Volkswagen/Vento TRW.cal"
+        "Calculators/Dashboard/1/Yazaki 17 C66.cal"
       ],
-      "title": "Vento TRW",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 17 C66 — коррекция пробега (EEPROM 93C66)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "d9f3bc489f2a669d9f56282d7b78d6992aae73268b5ff4a4d5e1158e6adbd4ce",
+      "sha": "3aea47519d82d542bbb33a178c65a3b1e7fd19956fce231be28d8e6cf3621a9c",
       "paths": [
-        "Calculators/Dashboard/Jet ski/Aquatrax 93c56.cal"
+        "Calculators/Dashboard/1/Denso 93c46.cal"
       ],
-      "title": "Aquatrax 93c56",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Denso 93c46 — коррекция пробега (EEPROM 93C46)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "17cb8dcf8fe119d6ee93ad996d1874deeb1956acc7af68ead53d83ea7e0e190a",
+      "sha": "8f3343df2a296520a210e78069771cdf66b9938a041765f50381a133724d9f54",
       "paths": [
-        "Calculators/Dashboard/Mitsubishi/Pajero 93C66.cal"
+        "Calculators/Dashboard/1/Denso 93c56.cal"
       ],
-      "title": "Pajero 93C66",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Denso 93c56 — коррекция пробега (EEPROM 93C56)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "f26ae45fb3ed26529c16275f39d065f2026d6ecacd3f8984d18279f106197ca4",
+      "sha": "85192de4bddec3bd1ff2a4ffdf6e83f163ac68344a39426ea0b90a430bacad8e",
       "paths": [
-        "Calculators/Dashboard/Isuzu/Forward 93c56 v2.cal"
+        "Calculators/Dashboard/1/Yazaki 17 C46.cal"
       ],
-      "title": "Forward 93c56 v2",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 17 C46 — коррекция пробега (EEPROM 93C46)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "9c8c8581d1b9e1e0927fccbd191305db510542228bff31b4d745f5f630ba8a23",
+      "sha": "c27c3bba1ba82eed7aa80bcdefec2893cae7b7253a9edc50abdee6dfc2954864",
       "paths": [
-        "Calculators/Dashboard/Isuzu/Isuzu Forward 93c56.cal"
+        "Calculators/Dashboard/1/Yazaki 17 C86.cal"
       ],
-      "title": "Isuzu Forward 93c56 · вариант 2",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 17 C86 — коррекция пробега (EEPROM 93C86)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "be60c284cd53240cc4674b5c32417f7a7dd0ac6d3a4bddb356cf6c3645ad2a58",
+      "sha": "1d7d948e98c1070d4d10cdce3affbbf53ec714f44b62d0cab63706ca38143753",
       "paths": [
-        "Calculators/Dashboard/Mercedes/B W169 EZS 9S12DT128.cal"
+        "Calculators/Dashboard/1/Yazaki 17 C56.cal"
       ],
-      "title": "B W169 EZS 9S12DT128",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 17 C56 — коррекция пробега (EEPROM 93C56)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "0d3206a5dc83d892daf39ed8304d2dfd6f86e7dc4d46816e742f3476e3246a54",
+      "sha": "54ea4c2e4fc6d5fea899f133594a19edbb4e91d079e3cbcf10a2e5d78d519a70",
       "paths": [
-        "Calculators/Dashboard/Mercedes/A W169 EZS 9S12DT128.cal"
+        "Calculators/Dashboard/1/Yazaki 48 C56.cal"
       ],
-      "title": "A W169 EZS 9S12DT128",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 48 C56 — коррекция пробега (EEPROM 93C56)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
-      "sha": "b0bf476092e6be8083df0b3c813627148675be3c2b6e72c493f717932defddc3",
+      "sha": "60a0938c613800b11b93be24e0bab3411de45623fe13ad1af8f0ded1be7bfbc0",
       "paths": [
-        "Calculators/Dashboard/1/Isuzu Forward 93c56.cal"
+        "Calculators/Dashboard/1/Yazaki 48 C46.cal"
       ],
-      "title": "Isuzu Forward 93c56",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Yazaki 48 C46 — коррекция пробега (EEPROM 93C46)",
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "467dca914c2e868a862dbfbbf50965d6ddb449712c663dd11a1c3818579e1b30",
@@ -63334,7 +64290,7 @@
         "Calculators/Dashboard/1/NDM457C.cal"
       ],
       "title": "NDM457C",
-      "reason": "в форме нет подтверждения операции панели"
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "13344c6d1f6965dc723661386e69ee4d810eafdeaaf6c44483b2d1f214500797",
@@ -63342,96 +64298,23 @@
         "Calculators/Dashboard/Toyota/NDM457C.cal"
       ],
       "title": "NDM457C · вариант 2",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "99d17ef5b8a583c2d06f887f3aaa49538511d54500a1b63b22a5cb663bb13762",
-      "paths": [
-        "Calculators/Dashboard/Audi/audi_a4_bosch_24C08.cal"
-      ],
-      "title": "audi a4 bosch 24C08",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "f8607236f8dcf2d50e3cd6658bbb1967a0d255e6bfdfaf488f6be30bc0e39096",
-      "paths": [
-        "Calculators/Dashboard/Audi/bosch.cal.cal",
-        "Calculators/Dashboard/Audi/bosch.cal"
-      ],
-      "title": "bosch",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "1835b7bd0c920dd79c169af7dc2744fb0e478fee79d2b687a2bba4c9f5f1a353",
-      "paths": [
-        "Calculators/Dashboard/Audi/Audi VDO crypto 2.6.cal"
-      ],
-      "title": "Audi VDO crypto 2.6",
-      "reason": "форма CAL недоступна для проверки операции"
-    },
-    {
-      "sha": "922040763f69e9155e2c51dcec085f05d1d02bf697c159c169e0d554178f3257",
-      "paths": [
-        "Calculators/Dashboard/Audi/audi A6 93C86 Crypto.cal"
-      ],
-      "title": "audi A6 93C86 Crypto",
-      "reason": "форма CAL недоступна для проверки операции"
-    },
-    {
-      "sha": "845e2f24f6e82d6c8f843ffa78da9f60527d7a96dffdf6539da2866c82605996",
-      "paths": [
-        "Calculators/Dashboard/Subaru/Tribeka 93c66.cal"
-      ],
-      "title": "Tribeka 93c66",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "6a34a382901bdc2aabe8eeb1432b51dca8cfb84232328148f646715ad2a476ee",
-      "paths": [
-        "Calculators/Dashboard/Volkswagen/Vento/Vento TRW.cal"
-      ],
-      "title": "Vento TRW · вариант 2",
-      "reason": "в форме нет подтверждения операции панели"
+      "reason": "форма указывает несколько марок: Toyota, Lexus; марка не подтверждена однозначно"
     },
     {
       "sha": "0b6e0455ed244eeb8b8e9ed0282668f7ca5967bd5cca3a35cd82e5d556d2b2d3",
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 860 SX 25010.cal"
       ],
-      "title": "Terex 860 SX 25010",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "Terex 860 SX 25010 — коррекция моточасов",
+      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
     },
     {
       "sha": "33216a39343c2066bce4c16166dabe4022109d1edee43b816007a9d286ffd8c8",
       "paths": [
         "Calculators/Dashboard/Forklift truck/Terex/Terex 95010.cal"
       ],
-      "title": "Terex 95010",
-      "reason": "марка не подтверждена путём или формой CAL"
-    },
-    {
-      "sha": "cfcde57bcca8de8d1bde95c4368791f20b7ee7d6912e67e9c09f5b5b8483b20d",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/JCB/JCB JS330 ECU 93C86.cal"
-      ],
-      "title": "JCB JS330 ECU 93C86",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "a4b3df0aa5098bad7d71053909fa8cc5054f044b52fe4b268b78d6a4a0b1945d",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/JCB/JCB JC220 ECU 93C86.cal"
-      ],
-      "title": "JCB JC220 ECU 93C86",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "1a961305cda116f66834186c6f011614db4b9d645668d88aca22cbdc8773fedc",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/JCB/JCB PCF8582 (24C02).cal"
-      ],
-      "title": "JCB PCF8582 24C02",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Terex — коррекция моточасов (EEPROM 95010)",
+      "reason": "марка Terex подтверждена, но папки Dashboard/Terex в отображении нет"
     },
     {
       "sha": "a7501adaf4f7be727f8146c362c49d972900674ff4634a7a0733ba5285c67c9d",
@@ -63439,47 +64322,31 @@
         "Calculators/Dashboard/Forklift truck/Hidromek/HMK 102B PCF8582 (24C02).cal"
       ],
       "title": "HMK 102B PCF8582 24C02",
-      "reason": "марка не подтверждена путём или формой CAL"
-    },
-    {
-      "sha": "bb3101c5a95fd68bc448457b87f454a21b7074bfa365d87d1e5322951b316683",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 93C56 Denso.cal"
-      ],
-      "title": "62-8FD 93C56 Denso",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "8281abe51b84682e0a0eeda7d458a8288dbe3ff25e2c3f84180c4187eccb271a",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/Toyota/62-8FD 95040 Arnecom.cal"
-      ],
-      "title": "62-8FD 95040 Arnecom",
-      "reason": "в форме нет подтверждения операции панели"
+      "reason": "марка Hidromek подтверждена, но папки Dashboard/Hidromek в отображении нет"
     },
     {
       "sha": "cfa8a9b6c1ae29cec8439f61d40e2908179b3db47a9acb67bab67ba8c3bc46ac",
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 256.cal"
       ],
-      "title": "FHG15T3 PIC16F946 - 256",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "TCM FHG15T3 PIC16F946 256 — коррекция пробега",
+      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
     },
     {
       "sha": "4be80d622bf0791f6bed18b546619b658cdc078f95a9277cb474d394fd6d087d",
       "paths": [
         "Calculators/Dashboard/Forklift truck/TCM/FHG15T3 PIC16F946 - 512.cal"
       ],
-      "title": "FHG15T3 PIC16F946 - 512",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "TCM FHG15T3 PIC16F946 — коррекция пробега",
+      "reason": "марка TCM подтверждена, но папки Dashboard/TCM в отображении нет"
     },
     {
       "sha": "5b9ff6f11ca01559514643456fc841318e4ed0143c8105384c854e705f0931fc",
       "paths": [
         "Calculators/Dashboard/Forklift truck/TFN/CPCD30N-RW13 x5045.cal"
       ],
-      "title": "CPCD30N-RW13 x5045",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "TFN CPCD30N RW13 x5045 — коррекция моточасов",
+      "reason": "марка TFN подтверждена, но папки Dashboard/TFN в отображении нет"
     },
     {
       "sha": "50069916fc36c2db81067d4676813e24eed72e5c76a115364d21ba6e7dee07d0",
@@ -63490,116 +64357,36 @@
       "reason": "марка не подтверждена путём или формой CAL"
     },
     {
-      "sha": "f0f65993d9c260771444f9f63c279f713cb2b58cfec7b1780858450421b9b562",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/XCMG/LW500KN 24C64.cal"
-      ],
-      "title": "LW500KN 24C64",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "fc9e5f43cc8c7207f650ff562fa88a47e08228d2575c8f9b9f904af09df5cb05",
-      "paths": [
-        "Calculators/Dashboard/Forklift truck/XCMG/LW500FN 24C64.cal"
-      ],
-      "title": "LW500FN 24C64",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
       "sha": "87ec56ed08a90346e34c307427206bd9b93c90f6f68420d12f53f4fa4afb7b57",
       "paths": [
         "Calculators/Dashboard/Forklift truck/Feeler/FG15CTJ PIC12F629 - 128.cal"
       ],
-      "title": "FG15CTJ PIC12F629 - 128",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "Feeler FG15CTJ PIC12F629 128 — коррекция пробега",
+      "reason": "марка Feeler подтверждена, но папки Dashboard/Feeler в отображении нет"
     },
     {
       "sha": "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
       "paths": [
         "Calculators/Dashboard/Motobikes/SYM/Joymax 300i 24C02.cal"
       ],
-      "title": "Joymax 300i 24C02",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "SYM Joymax 300i — коррекция пробега (EEPROM 24C02)",
+      "reason": "марка SYM подтверждена, но папки Dashboard/SYM в отображении нет"
     },
     {
       "sha": "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Dakota 93C46.cal"
       ],
-      "title": "Triumph Dakota 93C46",
-      "reason": "марка не подтверждена путём или формой CAL"
+      "title": "Triumph Dakota — коррекция пробега (EEPROM 93C46)",
+      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
     },
     {
       "sha": "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
       "paths": [
         "Calculators/Dashboard/Motobikes/Triumph/Triumph Tiger 1050 PIC18F458 - 256.cal"
       ],
-      "title": "Triumph Tiger 1050 PIC18F458 - 256",
-      "reason": "марка не подтверждена путём или формой CAL"
-    },
-    {
-      "sha": "e72c6862886693902da672c7e37f3a5ada692c9978a7385643dc7304cb0a43c2",
-      "paths": [
-        "Calculators/Dashboard/Mercedes/B W169/B W169 EZS 9S12DT128.cal"
-      ],
-      "title": "B W169 EZS 9S12DT128 · вариант 2",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "785d6cea3d8affce29d1683389fb06ea10272fef2a8aa4f4c954db4aa3088dcc",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC16F886.cal"
-      ],
-      "title": "Belarus PIC16F886",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "506d051ac282182f323f015fdf5b3da32cdfd0c8b1fa555053dfa1ca7d1d86db",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/Belarus/Belarus PIC18F2520.cal"
-      ],
-      "title": "Belarus PIC18F2520",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "cd11efd9ab3e0cbfbebce0905c08aaa543129b8b5fd7a5977828c6d623407eec",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 93C56.cal"
-      ],
-      "title": "John Deere 93C56",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "33cd564a27fab5591332aa2629031e5ef370e274ff72050dad76523a95fb9da3",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325 93C66.cal"
-      ],
-      "title": "John Deere 325 93C66",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "ac64e55c4f2aa5be86b41a1f87fd2c6f8931184e3c2a2b2b5d2d30a5fef0b5b2",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325K 93C86.cal"
-      ],
-      "title": "John Deere 325K 93C86",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "028a56cefdccc6ad4e26f7efe153b61e410d1ef7a8aad17fd49306145b2a06d4",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/John Deere/John Deere ECU 93C86.cal"
-      ],
-      "title": "John Deere ECU 93C86",
-      "reason": "в форме нет подтверждения операции панели"
-    },
-    {
-      "sha": "ba34fa3b372ac63eefe924f8c1ffaec80afaa2519ef252ab7b4afdee631709e2",
-      "paths": [
-        "Calculators/Dashboard/Special vehicles/John Deere/John Deere 325J 93C66.cal"
-      ],
-      "title": "John Deere 325J 93C66",
-      "reason": "в форме нет подтверждения операции панели"
+      "title": "Triumph Tiger 1050 PIC18F458 256 — коррекция пробега",
+      "reason": "марка Triumph подтверждена, но папки Dashboard/Triumph в отображении нет"
     }
   ],
   "car_only_not_selected": [

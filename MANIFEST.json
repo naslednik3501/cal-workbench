@@ -308,8 +308,8 @@
     },
     {
       "path": "catalog-organization-dashboard.js",
-      "bytes": 890433,
-      "sha256": "46b6d54341b8d806316d4e274e773a2626c6157f24dd05a7527376112405cf8e"
+      "bytes": 895373,
+      "sha256": "bf29a6db5ce6a63b0e2e3b49a10afe757e0c44f3c1b5d2ce8968ad702ad4136c"
     },
     {
       "path": "catalog-organization-immo.js",
@@ -1553,13 +1553,13 @@
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.json",
-      "bytes": 2434531,
-      "sha256": "c6d8c9b2c5bca2680129574ccf5fd7673e91b9a368275da15df75881011d14bc"
+      "bytes": 2472031,
+      "sha256": "7f73fb1a736831b7f640049ec64802dcc27113e3667c8255fda715038f35bc28"
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
-      "bytes": 3065,
-      "sha256": "99f0df57b189f2a69217938e514d25dfa64c174661df99957bf0e631e0f97908"
+      "bytes": 4215,
+      "sha256": "4befacba84a2efaeb2ecb27eb7555ba5c4aa961c6efc0574bacf4a170c75ac07"
     },
     {
       "path": "reports/catalog-organization-immo-2026-11-04.json",
@@ -1948,8 +1948,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 17360,
-      "sha256": "ba249b321b3cc234be19973502b8986ddfffa4e111c20206fc24585ace6aea38"
+      "bytes": 20064,
+      "sha256": "5772fd24332d952c5d1ae640004e537c83897257dba1449e4a317993cd1b0e68"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -2043,8 +2043,8 @@
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 38245,
-      "sha256": "b79ad7f2293aa12a40916264c1a4c5daa404b0a5e69e0751210c01c1d43598ad"
+      "bytes": 47022,
+      "sha256": "a32631932bf17f2f65599e48ef160eb49f57010aa540e175ba164fa117c58ea8"
     },
     {
       "path": "tools/catalog_inventory.py",

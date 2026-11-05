@@ -69,6 +69,36 @@ await test('all active CAL are mapped once, without translated root folders',()=
  assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Germany','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
  assert.equal(org.folder(entry('44bcc22cdd9de8ae5e7ecdff4e34e3b6373110b10ba7cb0ccbfc0b2598cc1045')),'Airbag/Toyota');
 });
+await test('Dashboard roots are routed only into existing brand folders, with reasons for the rest',()=>{
+ const report=require('../reports/catalog-organization-dashboard-2026-11-04.json'),rr=report.root_routing;
+ assert.equal(report.totals.unique_sha,4843,'Dashboard unique SHA unchanged');
+ assert.equal(rr.initial_root,84);assert.equal(rr.moved,60);assert.equal(rr.remaining,24);
+ assert.equal(rr.initial_root,rr.moved+rr.remaining,'every root entry is accounted for');
+ assert.equal(rr.moved_entries.length,rr.moved);assert.equal(rr.remaining_entries.length,rr.remaining);
+ const existing=new Set(rr.existing_folders);
+ const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
+ const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
+ for(const brand of usedBrands)assert(existing.has(brand),'new Dashboard folder was not present before routing: '+brand);
+ const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
+ assert.equal(rootShas.size,rr.remaining,'only the recorded entries remain in Dashboard root');
+ for(const row of rr.remaining_entries){
+  const item=org.get(row.sha);assert(item);assert(rootShas.has(row.sha),'remaining entry absent from root '+row.sha);
+  assert.equal(item.folder,'Dashboard',row.sha);assert.equal(item.reason,row.reason,row.sha);assert(item.reason.trim(),row.sha);
+ }
+ const movedShas=new Set();
+ for(const row of rr.moved_entries){
+  assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
+  assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
+  const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
+  assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length===2,row.sha);
+  if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
+ }
+ assert.equal(movedShas.size,60,'all moved SHAs stay distinct');
+ const yazaki=rr.moved_entries.find(row=>row.sha==='00de8bec6523cd8030439afa9418882d248341dd13014373a49b2a1242f089dd');
+ assert(yazaki,'moved Yazaki entry');assert(yazaki.old_name);assert.equal(org.folder(entry(yazaki.sha)),'Dashboard/Mitsubishi');
+ assert(org.matches(entry(yazaki.sha),yazaki.old_name),'old Yazaki name remains searchable');
+ for(const brand of ['Terex','Triumph','TCM','SYM','TFN','Feeler','Hidromek'])assert(!usedBrands.has(brand),'missing brand folder was not created: '+brand);
+});
 await test('approved entries keep exact names, folders, original paths and bytes',async()=>{
  for(const [sha,name,folder] of approvedExpected){
   const e=entry(sha);assert(e,sha);assert.equal(org.title(e),name,sha);assert.equal(org.folder(e),folder,sha);
