@@ -1,1 +1,0 @@
-PASS All 23,944 entries reference intact SHA-256-verified bytes; 8,300 repeated CAL entries preserved. All HTML references exist.

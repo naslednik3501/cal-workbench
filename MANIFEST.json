@@ -28,8 +28,8 @@
     },
     {
       "path": "IMAGE-RESOURCE-AUDIT.md",
-      "bytes": 21757,
-      "sha256": "f377b1fdd6ddcf6bba4133a76709febfb6dbe04e3804e9fca4cb7f148809e002"
+      "bytes": 19901,
+      "sha256": "7b06e53c08f22e2d1d6b2442e50c28c5cf2d843a6461ed02e8227244b1517818"
     },
     {
       "path": "IMAGE-RESTORATION.md",
@@ -38,8 +38,8 @@
     },
     {
       "path": "IMPLEMENTATION-2026-11-02.md",
-      "bytes": 13646,
-      "sha256": "c9df9673feaa9bf03e7e721eed6cb2b71b7d3723f8bb9e367422c46dea30a9a3"
+      "bytes": 13666,
+      "sha256": "fe04571336169bce363e3b4026886fe54e6befa5ace0b1674e6339474f39d0a4"
     },
     {
       "path": "PROJECT_SCOPE.md",
@@ -1482,11 +1482,6 @@
       "sha256": "3a37ff692f19f59bd19411cb952eddd0f27458d56db7345e5e23d908149fddfc"
     },
     {
-      "path": "reports/T-016-final-verification-2026-11-04.md",
-      "bytes": 9338,
-      "sha256": "60516bc3e5f11507979d41a72df7e8518d2ecb08833c0d6962a2bbdd076e31e8"
-    },
-    {
       "path": "reports/T-016-group-review-2026-11-04.json",
       "bytes": 237239,
       "sha256": "7700d8a7d06da95e05c4ec9c9142787bbe5e44a592dd6e960801e459e5d56e88"
@@ -1652,39 +1647,14 @@
       "sha256": "17d9b1c3436a1745b4cb53f9c8901a243f62dbe4d2764066492bdeb784be6136"
     },
     {
-      "path": "static-audit-summary.json",
-      "bytes": 648,
-      "sha256": "b342d7ce45ab9e987795873752e3bba493b7b5ce3626d487a375e86995296f9f"
-    },
-    {
-      "path": "static-audit.json",
-      "bytes": 4951188,
-      "sha256": "8e0964ba9da55ad125c67d861bcc9aa2de47fdc2f27f2903ead867e0a584cfaa"
-    },
-    {
       "path": "style.css",
       "bytes": 23644,
       "sha256": "9646c32a9408b5e4a9130eaa0b52b4fa679c09619d975136c00f99f3a849cdbc"
     },
     {
       "path": "tests/README.md",
-      "bytes": 3945,
-      "sha256": "2c701a9692d3ed16b601ca71eac131e3df6651cf54874474c2c39083aa154d2d"
-    },
-    {
-      "path": "tests/catalog-results.txt",
-      "bytes": 130,
-      "sha256": "6859c69e3f5392fbd55bbbaa001c801682015067fd2b824afb2f3b8a48a50059"
-    },
-    {
-      "path": "tests/catalog-store-results.txt",
-      "bytes": 698,
-      "sha256": "c1f982675a1f203407bf720e919cd789764216fb510ff4f8f90c8a2bb0a35f05"
-    },
-    {
-      "path": "tests/engine-results.txt",
-      "bytes": 910,
-      "sha256": "29c0fc7b732ca2a6099bb9a6c993dfc5167afdcaf95f8d201838d719bd3c2896"
+      "bytes": 3988,
+      "sha256": "a366624393929083a072cad40449936e47576bcb3c5de91f5d1715dbf423e1a6"
     },
     {
       "path": "tests/fixtures/ceed-2011.cal",
@@ -1960,11 +1930,6 @@
       "path": "tests/test_ui_state.js",
       "bytes": 19045,
       "sha256": "9485eaa7c7985659eb7eb8d4a4ef3e6469c16f91a03e4035def4f81f8a8fdd3f"
-    },
-    {
-      "path": "tests/ui-state-results.txt",
-      "bytes": 2209,
-      "sha256": "420e96a12b59bf5199d349b3f523a27cc8c78573589b4fe183e745f061530b6f"
     },
     {
       "path": "tools/analyze_t003_fis.js",
