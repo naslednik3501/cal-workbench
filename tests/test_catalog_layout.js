@@ -67,7 +67,11 @@ test('Mototechnics keeps the four original categories',()=>{
 test('Engine contains only the catalog ECU calculators',()=>{
  const engine=groups.filter(g=>partsOf(g)[0]==='Engine');
  assert.equal(engine.length,20);
- for(const g of engine)assert(/^Calculators\/ECU\//i.test(g.e.path),g.e.path);
+ for(const g of engine){
+  assert(/^Calculators\/ECU\//i.test(g.e.path),g.e.path);
+  assert(!folderOf(g).startsWith('Engine/Engine'),'duplicate Engine level '+folderOf(g));
+  assert(!folderOf(g).split('/').includes('Bmw'),'canonical BMW case '+folderOf(g));
+ }
 });
 
 test('display paths are unique across all calculator groups',()=>{
