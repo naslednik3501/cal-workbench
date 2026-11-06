@@ -22,6 +22,12 @@ const db = globalThis.CAL_CATALOG;
 const engine = require(path.join(ROOT, 'engine.js'));
 const scopeRegistry = JSON.parse(fs.readFileSync(path.join(ROOT, 'scope-registry.json'), 'utf8'));
 
+// Reference-confirmed Immo nesting from iProgGuard Immo.txt dated 2026-08-01.
+// Only display folders move; names, original paths, bytes, SHA and versions
+// stay unchanged. Exceptions keep the generated folder.
+const IMMO_ROUTE_DATA = require('./catalog-immo-routes.json');
+const IMMO_ROUTE_OVERRIDES = IMMO_ROUTE_DATA.routes;
+
 const CONFIG = {
   dashboard: {
     display: 'Dashboard',
@@ -776,6 +782,11 @@ for (const [sha, entries] of groups) {
   const legacyFolder = folder;
   const legacyName = name;
   const legacyReason = reason;
+  const immoRouteFolder = SECTION === 'immo' ? IMMO_ROUTE_OVERRIDES[sha] || '' : '';
+  if (immoRouteFolder) {
+    if (reason) throw new Error(`Immo route override on ambiguous entry: ${sha}`);
+    folder = immoRouteFolder;
+  }
   let rootRouting = '';
   let routeBrands = [];
   let routeManufacturer = '';
@@ -837,6 +848,7 @@ for (const [sha, entries] of groups) {
     legacyFolder,
     legacyName,
     legacyReason,
+    immoRouteFolder,
     rootRouting,
     ...(routeBrands.length > 1 ? { brands: routeBrands } : {}),
     ...(routeManufacturer ? { manufacturer: routeManufacturer } : {}),
@@ -884,6 +896,19 @@ for (const list of byDisplay.values()) {
   }
 }
 
+// Moving Bikes away from the flat brand folder changes which generated names
+// collide. Keep every previously published Immo name exactly.
+const IMMO_NAME_OVERRIDES = IMMO_ROUTE_DATA.name_overrides || {};
+if (SECTION === 'immo') {
+  for (const row of rows) {
+    const preserved = IMMO_NAME_OVERRIDES[row.sha];
+    if (preserved) row.name = preserved;
+  }
+  for (const sha of Object.keys(IMMO_NAME_OVERRIDES)) {
+    if (!groups.has(sha)) throw new Error(`Immo name override outside the Immo volume: ${sha}`);
+  }
+}
+
 const display = new Set();
 for (const row of rows) {
   const relativeFolder = row.folder || '';
@@ -898,8 +923,17 @@ for (const row of rows) {
   if (previous && previous.name && previous.name !== row.name) row.old_name = previous.name;
   else if (previous && previous.old_name) row.old_name = previous.old_name;
   const relativeParts = relativeFolder ? relativeFolder.split('/') : [];
-  if (relativeParts.length > 2 || relativeParts.some(part => !part || part === '.' || part === '..' || /[\\/]/.test(part)) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeParts[0] || '')) {
+  const immoCategory = SECTION === 'immo'
+    && ['Car', 'Bikes', 'Convertor'].includes(relativeParts[0]);
+  const maxImmoParts = immoCategory && relativeParts[0] !== 'Convertor' ? 3 : 2;
+  if (relativeParts.length > maxImmoParts || relativeParts.some(part => !part || part === '.' || part === '..' || /[\\/]/.test(part)) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeParts[0] || '')) {
     throw new Error(`Unexpected folder: ${row.folder}`);
+  }
+  if (immoCategory && relativeParts[0] === 'Convertor' && relativeParts.length !== 1) {
+    throw new Error(`Unexpected Convertor folder: ${row.folder}`);
+  }
+  if (immoCategory && relativeParts[0] !== 'Convertor' && relativeParts.length < 2) {
+    throw new Error(`Missing Immo brand: ${row.folder}`);
   }
   if (SECTION === 'utilities' && !UTILITY_FOLDERS.has(relativeFolder)) {
     throw new Error(`Unexpected utility folder: ${row.folder}`);
@@ -916,6 +950,26 @@ for (const row of rows) {
   display.add(key);
 }
 if (rows.length + skippedApproved.length !== groups.size) throw new Error(`Coverage ${rows.length} != ${groups.size}`);
+if (SECTION === 'immo') {
+  const routed = rows.filter(row => row.immoRouteFolder).length;
+  if (routed !== Object.keys(IMMO_ROUTE_OVERRIDES).length) {
+    throw new Error(`Immo routes applied ${routed} != ${Object.keys(IMMO_ROUTE_OVERRIDES).length}`);
+  }
+  for (const sha of Object.keys(IMMO_ROUTE_OVERRIDES)) {
+    if (!groups.has(sha)) throw new Error(`Immo route outside the Immo volume: ${sha}`);
+  }
+  const expected = IMMO_ROUTE_DATA.counts || {};
+  if (expected.generated_entries !== groups.size || rows.length !== expected.generated_entries) {
+    throw new Error(`Immo generated volume ${rows.length}/${groups.size} != ${expected.generated_entries}`);
+  }
+  if (expected.approved_entries + expected.generated_entries !== expected.unique_sha) {
+    throw new Error('Immo approved + generated volume does not match the unique SHA volume');
+  }
+  if (expected.moved !== routed || expected.exceptions !== rows.length - routed + expected.approved_entries
+    || expected.already + expected.moved + expected.exceptions !== expected.unique_sha) {
+    throw new Error('Immo reconciliation counts do not match the generated volume');
+  }
+}
 
 const byBrand = {};
 const byModel = {};
@@ -968,6 +1022,7 @@ const decisions = sorted.map(row => ({
   sha: row.sha,
   name: row.name,
   folder: row.folder,
+  ...(row.immoRouteFolder ? { legacy_folder: row.legacyFolder } : {}),
   operation: row.operation,
   sources: row.sources,
   canonical_path: row.canonical,
@@ -1025,6 +1080,18 @@ const report = {
   source_paths: sourceCounts,
   car_only_selected_paths: [...new Set(carOnly)].sort(),
   approved_unchanged: skippedApproved,
+  ...(SECTION === 'immo' ? {
+    route_source: IMMO_ROUTE_DATA.source,
+    route_source_sha256: IMMO_ROUTE_DATA.source_sha256,
+    reconciliation_report: 'reports/catalog-immo-reconciliation-2026-11-06.json',
+    reconciliation_counts: IMMO_ROUTE_DATA.counts,
+    route_overrides: Object.entries(IMMO_ROUTE_OVERRIDES).map(([sha, folder]) => ({
+      sha,
+      folder,
+      basis: IMMO_ROUTE_DATA.source
+    })),
+    name_overrides: Object.entries(IMMO_ROUTE_DATA.name_overrides || {}).map(([sha, name]) => ({ sha, name }))
+  } : {}),
   ...(SECTION === 'dashboard' ? {
     root_routing: {
       initial_root: initialRootEntries,
