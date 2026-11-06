@@ -79,9 +79,9 @@
   "by_model": {
     "Daewoo/Lanos": 6,
     "Land Rover/Discovery 3": 3,
-    "Toyota/RAV4": 39,
-    "Toyota/Corolla": 76,
-    "Toyota/Camry": 44,
+    "Toyota/RAV4": 42,
+    "Toyota/Camry": 48,
+    "Toyota/Corolla": 80,
     "Nissan/Almera": 35,
     "Nissan/Primera": 29,
     "Nissan/Micra": 31,
@@ -503,6 +503,61 @@
     },
     {
       "sha": "67b14d4bec4ba7b1f722339781d1fc752e115767ef2d6387f68e636ed5b20465",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "de7ec3d62891c1f03c3ecbe2e5c2fe254fad147111c67b26c16c09427cd9af37",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "86d49846eb4b4c7ae03d8c38fb14b72400b5d76c199af14d65e3407d192f2451",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "ffc8e8997b195a51001f1c9166ef9a5e5f72052dec952f10828f853a31c97ca3",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "5000a34521a502c616ba17ade5d4143a187d8b86d4b1bc28a885c2ca5f2a36f8",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "a73da688c3ba5cad618ffaef312f85f72d2b8be813286d2f48e6a40fbb4efa32",
+      "folder": "Toyota/RAV4",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "b727c6d9e90d836a5448e521b86c8834dcc217604e7acf63e725d7e39f7b654d",
+      "folder": "Toyota/RAV4",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "8459e81d1fd6eb9c6bc892a2778444c502f6b1967e518f42e6af053e3c50473d",
+      "folder": "Toyota/RAV4",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "7cb15c47f77bb10f06e6f2c54dba2d1074430f7ee6d02756169c4a15728266e0",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "93e326cb6cce0841941e10da0e7e5067666ae703d046b8defe79ec8d74cb1590",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "e719590088ac0eb99c554424b11184abc8687a3b6a7382245f023f53c44ec7fc",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "d3580f57d2a89e2ddba9a05b4ac3f882e2c2d0609808fadb6c7f7e255d0a8bd4",
       "folder": "Toyota/Corolla",
       "basis": "iProgGuard Airbag.txt 2026-08-01"
     }

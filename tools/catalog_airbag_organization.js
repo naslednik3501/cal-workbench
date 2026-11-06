@@ -34,7 +34,18 @@ const ROUTE_OVERRIDES = {
   '10fec76b17897d609c36d6a1ffd1a9e1b008af605e2dd32c2fdc42f2a88713ed': 'Toyota/RAV4',
   '85ee2166866137707cafba480381f88e7bad1f462c6aa717d28236fc120c5e50': 'Toyota/RAV4',
   '10d416a0bbadf2eadef2590d9897da4f150c21cf7175ffda55e5a2437e3f330b': 'Toyota/Corolla',
-  '67b14d4bec4ba7b1f722339781d1fc752e115767ef2d6387f68e636ed5b20465': 'Toyota/Corolla'
+  '67b14d4bec4ba7b1f722339781d1fc752e115767ef2d6387f68e636ed5b20465': 'Toyota/Corolla',
+  'de7ec3d62891c1f03c3ecbe2e5c2fe254fad147111c67b26c16c09427cd9af37': 'Toyota/Camry',
+  '86d49846eb4b4c7ae03d8c38fb14b72400b5d76c199af14d65e3407d192f2451': 'Toyota/Camry',
+  'ffc8e8997b195a51001f1c9166ef9a5e5f72052dec952f10828f853a31c97ca3': 'Toyota/Camry',
+  '5000a34521a502c616ba17ade5d4143a187d8b86d4b1bc28a885c2ca5f2a36f8': 'Toyota/Camry',
+  'a73da688c3ba5cad618ffaef312f85f72d2b8be813286d2f48e6a40fbb4efa32': 'Toyota/RAV4',
+  'b727c6d9e90d836a5448e521b86c8834dcc217604e7acf63e725d7e39f7b654d': 'Toyota/RAV4',
+  '8459e81d1fd6eb9c6bc892a2778444c502f6b1967e518f42e6af053e3c50473d': 'Toyota/RAV4',
+  '7cb15c47f77bb10f06e6f2c54dba2d1074430f7ee6d02756169c4a15728266e0': 'Toyota/Corolla',
+  '93e326cb6cce0841941e10da0e7e5067666ae703d046b8defe79ec8d74cb1590': 'Toyota/Corolla',
+  'e719590088ac0eb99c554424b11184abc8687a3b6a7382245f023f53c44ec7fc': 'Toyota/Corolla',
+  'd3580f57d2a89e2ddba9a05b4ac3f882e2c2d0609808fadb6c7f7e255d0a8bd4': 'Toyota/Corolla'
 };
 
 const BRANDS = [
