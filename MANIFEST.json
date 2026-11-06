@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2974,
-      "sha256": "83d3535ba57c2fcdd09461e3d114a6dfc35cdcabd58fa7cdd014ff46f41d7459"
+      "bytes": 3008,
+      "sha256": "bc72a1926c69792b13e47aa39cd8a95e82b85f05a11d19407a70404096be0f10"
     },
     {
       "path": "cal-source.js",
@@ -347,6 +347,11 @@
       "sha256": "e560048178b628ea7596036bf50ecdd5ad24bde80a70395caaaba113d404eeef"
     },
     {
+      "path": "catalog-organization-crypto.js",
+      "bytes": 8327,
+      "sha256": "4dbc7c41017b10972cc7927d6e51c6ee25843f902341775b6893e1a9f670194e"
+    },
+    {
       "path": "catalog-organization-dashboard.js",
       "bytes": 974417,
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
@@ -388,8 +393,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 21470,
-      "sha256": "648823ed33b3bf50ab52737d22d44e33c64b708c1465b02439f776b0044c0f81"
+      "bytes": 21847,
+      "sha256": "18813ccdcc37c41f96dcadc02c007243a2a894b4c8e2eb3574971d3f3d73a6a6"
     },
     {
       "path": "catalog-parts.json",
@@ -1398,8 +1403,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12609,
-      "sha256": "63eb673bea7dc4611186ba9ac6570916180dac45f14eaa349df9026dae634624"
+      "bytes": 12664,
+      "sha256": "234b0bac3fccb88a34d7299846d396eb9e75c86cb26f3035c76c00abb6a2d7b6"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1630,6 +1635,11 @@
       "path": "reports/catalog-organization-asia-exceptions-2026-11-06.json",
       "bytes": 241725,
       "sha256": "ee4e49dabae62a61e1f7d2c345c61868c1a87d67aeece64bee4909d2690601d1"
+    },
+    {
+      "path": "reports/catalog-organization-crypto-exceptions-2026-11-06.json",
+      "bytes": 6919,
+      "sha256": "fd6d28c4a103277fd54117d992d4febe93806b3a55d3713ea1e059b9f258b9a6"
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.json",
@@ -2003,13 +2013,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4616,
-      "sha256": "791c2f1dc475205d25998b403ad86d2b0a4d029db942461bb1260e5a5bec1df5"
+      "bytes": 4664,
+      "sha256": "50b69b03557d37407c22926d56d78758be6e262fd2c673f81173d3006ca78d19"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 59394,
-      "sha256": "8305ba90f7eab82e8b68908c0b796f197a042c6d5482713e4aec0f369a58ebe3"
+      "bytes": 60835,
+      "sha256": "011986fa317942b8554b91206ee052efd56875ca3ea554057105fc6a28b68c06"
     },
     {
       "path": "tests/test_text_variants.js",
