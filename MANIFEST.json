@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 42387,
-      "sha256": "8845aff295b849fd0a84c70aae63cd6ff04e935fc0589c07031b0c4669009f8d"
+      "bytes": 42978,
+      "sha256": "f6009411e17ff64c89d9662a09bd919f1abfe31f8782c512f93496ccd27a620b"
     },
     {
       "path": "archive-verification.json",
@@ -1773,8 +1773,8 @@
     },
     {
       "path": "tests/test_preparation.js",
-      "bytes": 10971,
-      "sha256": "bf25101aac37cf21489fe7a360799e2bd41a4140f39c0e178a0101b96b070d77"
+      "bytes": 14394,
+      "sha256": "a11bacbe691dfca222bff9d90595d9dda73f5dadcb5cac010d7ce0b4245b856b"
     },
     {
       "path": "tests/test_release_browser.js",
@@ -1888,8 +1888,8 @@
     },
     {
       "path": "tests/test_t013_app.js",
-      "bytes": 6828,
-      "sha256": "2975a5f10adc1030b65d6734b1b19d2057f2466bfcd75105707ecc638ebc63ce"
+      "bytes": 6852,
+      "sha256": "edfbfa92b78eb7dc239a6e99275cf7e18fd5cc0291c38dc7cbf6ebdff6d3513e"
     },
     {
       "path": "tests/test_t013_invert.js",
