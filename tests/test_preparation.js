@@ -21,7 +21,7 @@ const doc={events:{},addEventListener(k,fn){(this.events[k]??=[]).push(fn);},ids
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const match of html.matchAll(/<(\w+)[^>]*\bid="([^"]+)"[^>]*>/g)){let el=doc.createElement(match[1]);el.id=match[2];el.value=/\bvalue="([^"]*)"/.exec(match[0])?.[1]||'';doc.body.append(el);}
 doc.ids.hex.tBodies=[doc.createElement('tbody')];doc.ids.hex.append(doc.ids.hex.tBodies[0]);
-let urlId=0;const context=vm.createContext({document:doc,CAL_IMAGES:require('../image-resources.js'),CatalogOrganization:require('../catalog-organization.js'),CatalogScope:require('../catalog-scope.js'),CalEngine:require('../engine.js'),CAL_CATALOG,CatalogStore:{...require('../catalog-store.js'),Store:class{async load(){return [];}async save(e){this.saved=e;}}},console,Uint8Array,Blob,TextDecoder,crypto:crypto.webcrypto,atob,btoa,URL:{createObjectURL(blob){let u='blob:test-'+(++urlId);doc.urls.set(u,blob);return u;},revokeObjectURL(){}},setTimeout(){},Date});
+let urlId=0,confirmAnswer=false,confirmMessages=[];const context=vm.createContext({document:doc,CAL_IMAGES:require('../image-resources.js'),CatalogOrganization:require('../catalog-organization.js'),CatalogScope:require('../catalog-scope.js'),CalEngine:require('../engine.js'),CAL_CATALOG,CatalogStore:{...require('../catalog-store.js'),Store:class{async load(){return [];}async save(e){this.saved=e;}}},console,Uint8Array,Blob,TextDecoder,crypto:crypto.webcrypto,atob,btoa,URL:{createObjectURL(blob){let u='blob:test-'+(++urlId);doc.urls.set(u,blob);return u;},revokeObjectURL(){}},setTimeout(){},Date,confirm(message){confirmMessages.push(message);return confirmAnswer;}});
 vm.runInContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),context);
 const run=s=>vm.runInContext(s,context),el=id=>doc.ids[id];let passed=0;
 async function test(name,fn){await fn();passed++;console.log('PASS '+name);}
@@ -41,6 +41,50 @@ await test('Downloads keep original and prepared result separate',async()=>{
 });
 await test('Apply uses prepared bytes and does not accumulate repeated calculations',async()=>{
  await el('apply').click();const first=Buffer.from(run('candidate'));assert.deepEqual([...first.slice(0,3)],[17,2,1]);await el('apply').click();assert.deepEqual(Buffer.from(run('candidate')),first);assert.equal(run('session.buffer[2]'),0);
+ assert.equal(confirmMessages.length,0,'ordinary Apply must not ask for confirmation');
+});
+await test('Cancelling repeated Apply preserves manually edited result',async()=>{
+ el('editAddress').value='02';el('editByte').value='7F';await el('edit').click();
+ const edited=Buffer.from(run('candidate'));assert.equal(run('manualCandidate'),true);confirmAnswer=false;
+ await el('apply').click();
+ assert.equal(confirmMessages.length,1);assert.match(confirmMessages.at(-1),/Ручные изменения/);assert.match(confirmMessages.at(-1),/сброшены/);
+ assert.deepEqual(Buffer.from(run('candidate')),edited);assert.equal(run('manualCandidate'),true);assert.equal(run('resultKind'),'CAL + ручное редактирование');
+ assert.match(el('resultStatus').textContent,/Пересчёт отменён/);assert(!el('save').disabled);
+ await el('save').click();assert.deepEqual(Buffer.from(await doc.downloads.at(-1).blob.arrayBuffer()),edited);
+});
+await test('Confirming repeated Apply recalculates from current CAL inputs',async()=>{
+ confirmAnswer=true;await el('apply').click();
+ assert.equal(confirmMessages.length,2);assert.deepEqual([...run('candidate').slice(0,3)],[17,2,1]);
+ assert.equal(run('manualCandidate'),false);assert.equal(run('resultKind'),'CAL OnApply');assert(el('calcError').hidden);
+});
+await test('Calculation error clears manual edits and their confirmation state',async()=>{
+ el('editAddress').value='04';el('editByte').value='5A';await el('edit').click();assert.equal(run('manualCandidate'),true);
+ run("const applyCloneForError=session.clone;session.clone=()=>{throw Error('forced calculation error')}");
+ confirmAnswer=true;await el('apply').click();
+ assert(!el('calcError').hidden);assert.match(el('calcError').textContent,/forced calculation error/);
+ assert.equal(run('candidate'),null);assert.equal(run('manualCandidate'),false);assert.equal(run('resultKind'),'');assert(el('save').disabled);
+ run('session.clone=applyCloneForError');
+ const confirmations=confirmMessages.length;await el('apply').click();
+ assert.equal(confirmMessages.length,confirmations);assert.equal(run('manualCandidate'),false);assert.deepEqual([...run('candidate').slice(0,3)],[17,2,1]);
+});
+await test('New BIN read failure preserves the open session and manual result',async()=>{
+ el('editAddress').value='03';el('editByte').value='A5';await el('edit').click();
+ const before={original:Buffer.from(run('original')),candidate:Buffer.from(run('candidate')),name:run('name'),digest:run('digest'),selected:run('selected')};
+ await run('loadBin')({name:'broken.bin',size:16,arrayBuffer:async()=>{throw Error('simulated read failure')}});
+ assert.equal(run('name'),before.name);assert.equal(run('digest'),before.digest);assert.equal(run('selected'),before.selected);
+ assert.deepEqual(Buffer.from(run('original')),before.original);assert.deepEqual(Buffer.from(run('candidate')),before.candidate);
+ assert.equal(run('manualCandidate'),true);assert(!el('save').disabled);assert(!el('saveOriginal').disabled);
+ assert(!el('binError').hidden);assert.match(el('binError').textContent,/Текущий BIN и результат сохранены/);
+ await run('loadBin')({name:'wrong-size.bin',size:15,arrayBuffer:async()=>Uint8Array.from(before.original).buffer});
+ assert.equal(run('name'),before.name);assert.deepEqual(Buffer.from(run('original')),before.original);assert.deepEqual(Buffer.from(run('candidate')),before.candidate);
+ assert.match(el('binError').textContent,/Не удалось прочитать файл целиком/);assert(!el('save').disabled);
+ await el('save').click();assert.deepEqual(Buffer.from(await doc.downloads.at(-1).blob.arrayBuffer()),before.candidate);
+});
+await test('Successful BIN replacement starts a fresh session',async()=>{
+ const replacement=Buffer.alloc(16);await run('loadBin')(upload(replacement,'replacement.bin'));
+ assert.equal(run('name'),'replacement.bin');assert.deepEqual(Buffer.from(run('original')),replacement);
+ assert.equal(run('manualCandidate'),false);assert.equal(run('candidate[0]'),17);assert.equal(run('candidate[1]'),0);
+ assert(el('binError').hidden);assert(!el('apply').disabled);assert(!el('saveOriginal').disabled);
 });
 await test('Changed input drops old calculation but preserves explicitly labelled preparation',async()=>{
  el('cal-input-0').value='7';await el('cal-input-0').trigger('input');assert.equal(run('candidate[1]'),0);assert.equal(run('candidate[2]'),0);assert.equal(run('candidate[0]'),17);assert.equal(run('resultKind'),'CAL подготовка');assert.match(el('resultStatus').textContent,/Применить/);assert.equal(run('original[0]'),0);
