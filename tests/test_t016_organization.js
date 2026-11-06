@@ -600,7 +600,7 @@ await test('approved entries keep exact names, folders, original paths and bytes
   const e=entry(sha);assert(e,sha);assert.equal(org.title(e),name,sha);assert.equal(org.folder(e),folder,sha);
   run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
   assert.equal(run('selected.sha'),sha);assert.equal(run('selected.path'),e.path);
-  assert.equal(el('calcTitle').textContent,name);assert(el('calcPath').textContent.includes('Раздел: '+folder));assert(el('calcPath').textContent.includes(e.path));
+  assert.equal(el('calcTitle').textContent,name);assert(el('calcPath').textContent.includes('Раздел: '+org.displayFolder(e)));assert(el('calcPath').textContent.includes(e.path));
   doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
   assert.equal(download.name,e.path.split('/').at(-1),'export name '+sha);
   assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sha],'base64'),'export bytes '+sha);
@@ -645,22 +645,22 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
 });
 await test('main sections sort by unique CAL count; folders inside sections sort alphabetically with counters',()=>{
  el('search').value='';run("catalogScope='';expandedFolders.clear();renderCatalog()");
- const sections=sectionRows();assert(sections.length>=15);
+ const sections=sectionRows();assert.deepEqual(sections.map(x=>x.name),['Dashboard','Airbag','CarRadio','Immo','OTHER','Engine'],'original iProg top sections');
  for(let i=1;i<sections.length;i++){
   assert(sections[i-1].count>=sections[i].count,'root count order '+sections[i-1].name+' vs '+sections[i].name);
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Dashboard','largest section first');
- assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,6744);
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,7482);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
- const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
+ const folderPaths=[...new Set(groups.flatMap(g=>{const parts=org.displayFolder(g.e).split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
  const checkAlphabetical=(parent,prefix,section)=>{
   const rows=folderRows(parent);if(!rows.length)return;
   for(let i=1;i<rows.length;i++)assert(rows[i-1].name.localeCompare(rows[i].name,'ru')<=0,'folder alphabetical order '+section+' '+prefix+' '+rows[i-1].name+' vs '+rows[i].name);
   for(const row of rows){const path=prefix+'/'+row.name;assert.equal(row.count,expectedCount(path),'counter '+path);checkAlphabetical(row.node,path,section);}
  };
- for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER','Engine']){
   run("expandedFolders.clear();"+expand+";catalogScope='"+section+"';renderCatalog()");
   checkAlphabetical(el('tree'),section,section);
  }
@@ -690,8 +690,8 @@ await test('search finds new names, original paths, old file names and old secti
  el('search').value='';run('searchPage=0;renderCatalog()');
 });
 await test('tree expanded sections show every unique CAL once, with original exports and pictures',async()=>{
- for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
-  const folders=[...new Set(Object.values(org.data.entries).filter(x=>x.folder===section||x.folder.startsWith(section+'/')).flatMap(x=>{const parts=x.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER','Engine']){
+  const folders=[...new Set(groups.map(g=>org.displayFolder(g.e)).filter(x=>x===section||x.startsWith(section+'/')).flatMap(x=>{const parts=x.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
   run("expandedFolders.clear();catalogScope='"+section+"';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
   const expected=groups.filter(g=>{const p=org.displayPath(g.e);return p===section||p?.startsWith(section+'/');}).length;
   assert.equal(walk(el('tree'),'fileItem').length,expected,'visible once in '+section);
