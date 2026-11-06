@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 43000,
-      "sha256": "ee2ebc54ed22fec9d36711f76cbc989937cf04ebe5178f9ee57b4ad9fd979208"
+      "bytes": 43033,
+      "sha256": "292be4f3369150c78b0f28687a54321f8c1f0dd72f1e9b239e75c4f35a323066"
     },
     {
       "path": "archive-verification.json",
@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3079,
-      "sha256": "770ecefcad0a1c4626c57730de54b77c09962cf34677659634c45bc3d4a0e9e7"
+      "bytes": 3184,
+      "sha256": "aff65f0368c2d304b7cbdfc2a533163098b3f482f11013f7908e6c76b11722a5"
     },
     {
       "path": "cal-source.js",
@@ -302,6 +302,11 @@
       "sha256": "c144522d4665ce16430ea785370d5be4266ad15c0a195ded4116b16c7ad54490"
     },
     {
+      "path": "catalog-layout.js",
+      "bytes": 8701,
+      "sha256": "c3e0c0dabb536310736e70bc505e481cb2b8aab947687f457304451fe3db91cd"
+    },
+    {
       "path": "catalog-organization-airbag.js",
       "bytes": 942683,
       "sha256": "d0ac60103d4af8c253b9d96306f01e73906b99aac2f738bb7dc8db5b9ebb39f1"
@@ -382,6 +387,11 @@
       "sha256": "f99d523f86d89bb3526ede8b87b94542b3f642dc684703f3b468a1398762951f"
     },
     {
+      "path": "catalog-organization-mototechnics.js",
+      "bytes": 27186,
+      "sha256": "e46d3636cb696831072dc602f4c467a16b5f424cf80c4cf7297f8ef7b16d57c9"
+    },
+    {
       "path": "catalog-organization-radio.js",
       "bytes": 284410,
       "sha256": "1fd2f7342b9a0bffeed687b9e8141d7cc767bccfcbf63ca13beddf0b506eacef"
@@ -397,14 +407,19 @@
       "sha256": "2203cb65bbe1d809813a517901f4bb6fb7e625121f51e272c9739b6385f02775"
     },
     {
+      "path": "catalog-organization-special-technics.js",
+      "bytes": 2565,
+      "sha256": "7cffa69aef8c7b5257f4967f26636ca58e215bff940dd66029458f3f31444618"
+    },
+    {
       "path": "catalog-organization-utilities.js",
       "bytes": 53246,
       "sha256": "5786c2b81f9e8c973930fbd9921578796a891caeb88a9b05a14879261bcaa747"
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 22437,
-      "sha256": "dbb82c40937b8b9d44170cb4ec356d7e846ae2db323c1d14be7ec6e32745bb18"
+      "bytes": 25013,
+      "sha256": "bae61342ed2b167acc721bd53e50ef7d30eaa355b9d8494a1c79d352f00bdf57"
     },
     {
       "path": "catalog-parts.json",
@@ -440,11 +455,6 @@
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
-    },
-    {
-      "path": "image-assets.json",
-      "bytes": 16533,
-      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1397,6 +1407,11 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
+      "path": "image-assets.json",
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
+    },
+    {
       "path": "image-resource-data.js",
       "bytes": 113446,
       "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
@@ -1413,8 +1428,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12777,
-      "sha256": "879fb42d863bba5e1b364d9f813e5d7e3067fe925d2f386253aaa99dd0be59bc"
+      "bytes": 12945,
+      "sha256": "5b3f0bf1dc4d41da71bcdc045ae0f743a40fae8dfde8b64a76f25d063f834757"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1692,6 +1707,11 @@
       "sha256": "e951476f3eb269f4186beba82bc198e5774b331f65bdef9a049852d7a04ec76a"
     },
     {
+      "path": "reports/catalog-organization-moto-special-exceptions-2026-11-06.json",
+      "bytes": 120534,
+      "sha256": "237c882c74291bb32f07ea683d68f775fbfa8ede01585ca7f200a728ac34e621"
+    },
+    {
       "path": "reports/catalog-organization-radio-2026-11-04.json",
       "bytes": 1047846,
       "sha256": "6f29f0647bae4b79b65f53cdf234bb32f0816f3084d7b120b99920fe6720f996"
@@ -1887,6 +1907,11 @@
       "sha256": "19e1f08ca0832969a3fd7a053fe09cfe3bf2a478b8b063fc710ea11c8a5d8a7e"
     },
     {
+      "path": "tests/test_catalog_layout.js",
+      "bytes": 5393,
+      "sha256": "e751e012ab8f1d06fb35f97ff597e9846efb28433834bdd9f3bb3a1b31ec67bb"
+    },
+    {
       "path": "tests/test_catalog_store.js",
       "bytes": 3840,
       "sha256": "ad0082469fd98870b90434576dd45b933336374db8e8130e63647365431c5923"
@@ -2043,13 +2068,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4718,
-      "sha256": "5889bcbd924d619fe6fecc76905573dd58aef46533aac6afaa68c89276193cee"
+      "bytes": 4916,
+      "sha256": "d0838b9890fbd63f23a89754ff8a92f901b2341ef0fee3f3110458f8dfd652c1"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 66534,
-      "sha256": "657f3088095d94ae32c33dca234c438b6b1335a51fb5966126fe01b1ca8e9af6"
+      "bytes": 70938,
+      "sha256": "8f6f96d9d28c9a82ebe7543d7ff7e42676e4f681555dc8b1e50b5c6e7c253407"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -2173,8 +2198,8 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 3388,
-      "sha256": "b05d03c9cc6fadb132ddc92e6a07e9fe13f0e283dd93446f34715a837c22e5f4"
+      "bytes": 3423,
+      "sha256": "1a964f40aeb103863558cfec0246ba130de1245f438c6909aefddb5a90d2bd34"
     },
     {
       "path": "tools/publish_source_store.py",
@@ -2220,9 +2245,10 @@
       "test_catalog.js",
       "test_t016_organization.js",
       "test_t016_group_review.js",
+      "test_catalog_layout.js",
       "test_t001_hardware_elements.js"
     ],
-    "executed_node_test_count": 11,
+    "executed_node_test_count": 12,
     "executed_node_tests_status": "passed",
     "html_checks": "passed: unique IDs, referenced resources and app.js element IDs",
     "binary_resolution": {

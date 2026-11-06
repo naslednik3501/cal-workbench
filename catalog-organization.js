@@ -23,6 +23,9 @@ if(node&&!root.CAL_ORGANIZATION_ASIA_REMAINDER)require('./catalog-organization-a
 if(node&&!root.CAL_ORGANIZATION_EU_US_RU)require('./catalog-organization-eu-us-ru.js');
 if(node&&!root.CAL_ORGANIZATION_CRYPTO)require('./catalog-organization-crypto.js');
 if(node&&!root.CAL_ORGANIZATION_SERVICE_CALC)require('./catalog-organization-service-calc.js');
+if(node&&!root.CAL_ORGANIZATION_MOTOTECHNICS)require('./catalog-organization-mototechnics.js');
+if(node&&!root.CAL_ORGANIZATION_SPECIAL_TECHNICS)require('./catalog-organization-special-technics.js');
+if(node&&!root.CatalogLayout)require('./catalog-layout.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const ecu=root.CAL_ORGANIZATION_ECU||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
@@ -42,6 +45,8 @@ const asiaRemainder=root.CAL_ORGANIZATION_ASIA_REMAINDER||{entries:{}};
 const euUsRu=root.CAL_ORGANIZATION_EU_US_RU||{entries:{}};
 const crypto=root.CAL_ORGANIZATION_CRYPTO||{entries:{}};
 const serviceCalc=root.CAL_ORGANIZATION_SERVICE_CALC||{entries:{}};
+const mototechnics=root.CAL_ORGANIZATION_MOTOTECHNICS||{entries:{}};
+const specialTechnics=root.CAL_ORGANIZATION_SPECIAL_TECHNICS||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -198,6 +203,16 @@ for(const [hash,folder] of Object.entries(serviceCalc.entries||{})){
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Service calc display entry: '+hash);
  data.entries[hash]={...item,folder};
 }
+for(const [hash,folder] of Object.entries(mototechnics.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Mototechnics display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(specialTechnics.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Special technics display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
 const legacyRoots={
  Airbag:['Подушки безопасности','SRS'],
  Dashboard:['Приборные панели','Dashboard'],
@@ -224,11 +239,40 @@ function validate(d){
  return d;
 }
 validate(data);
+// The navigation layout is display-only: stored folders and names keep the
+// verified values, while the tree renders the original iProg section shape.
+const layout=root.CatalogLayout||null;
+const displayFolders=new Map(),displayTitles=new Map();
+if(layout){
+ const buckets=new Map(),folders=new Map();
+ for(const [hash,item] of Object.entries(data.entries)){
+  let moved=folders.get(item.folder);
+  if(moved===undefined){moved=layout.folder(item.folder)||item.folder;folders.set(item.folder,moved);}
+  displayFolders.set(hash,moved);
+  const key=(moved+'/'+item.name).toLowerCase();
+  if(!buckets.has(key))buckets.set(key,[]);
+  buckets.get(key).push(hash);
+ }
+ const used=new Set();
+ for(const [,list] of [...buckets].sort(([a],[b])=>a.localeCompare(b,'ru'))){
+  list.sort();
+  if(list.length===1){displayTitles.set(list[0],data.entries[list[0]].name);continue;}
+  for(let index=0;index<list.length;index++){
+   const hash=list[index],base=data.entries[hash].name;
+   let name=base+' · '+(index+1),n=index+1;
+   while(used.has((displayFolders.get(hash)+'/'+name).toLowerCase()))name=base+' · '+(++n);
+   used.add((displayFolders.get(hash)+'/'+name).toLowerCase());
+   displayTitles.set(hash,name);
+  }
+ }
+}
 function resolved(entry){return entry&&sha(entry.sha)?data.entries[entry.sha]||null:null;}
 function get(hash){return sha(hash)?data.entries[hash]||null:null;}
 function title(entry){const item=resolved(entry);return item?item.name:entry?entry.path.split('/').at(-1):'';}
 function folder(entry){const item=resolved(entry);return item?item.folder:null;}
-function displayPath(entry){const item=resolved(entry);return item?item.folder+'/'+item.name+'.cal':null;}
+function displayFolder(entry){const item=resolved(entry);return item?displayFolders.get(entry.sha)||item.folder:null;}
+function displayTitle(entry){const item=resolved(entry);if(!item)return entry?entry.path.split('/').at(-1):'';return displayTitles.get(entry.sha)||item.name;}
+function displayPath(entry){const item=resolved(entry);return item?displayFolder(entry)+'/'+displayTitle(entry)+'.cal':null;}
 function reason(entry){const item=resolved(entry);return item&&item.reason||'';}
 // Search covers the original path, the new name/folder and the former section
 // names. Aliases are hints, not confirmed brands.
@@ -238,10 +282,10 @@ function legacyParts(item){
  const [root,...rest]=item.folder.split('/'),tail=rest.join('/');
  return (legacyRoots[root]||[]).flatMap(alias=>[alias,...(tail?[alias+'/'+tail]:[])]);
 }
-function searchParts(entry){if(!entry)return [];const item=resolved(entry),own=item?[item.folder+'/'+item.name+'.cal',...(item.old_name?[item.old_name]:[]),...(item.previous_name?[item.previous_name]:[]),...(item.brands||[]),...(item.manufacturer?[item.manufacturer]:[]),...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
+function searchParts(entry){if(!entry)return [];const item=resolved(entry),shown=item?displayFolder(entry)+'/'+displayTitle(entry)+'.cal':null,own=item?[item.folder+'/'+item.name+'.cal',...(shown?[shown,displayFolder(entry),displayTitle(entry)]:[]),...(item.old_name?[item.old_name]:[]),...(item.previous_name?[item.previous_name]:[]),...(item.brands||[]),...(item.manufacturer?[item.manufacturer]:[]),...legacyParts(item),...(data.search_aliases[entry.sha]||[])]:[];return [entry.path,...own].map(x=>x.toLowerCase());}
 function searchText(entry){return searchParts(entry).join(' ');}
 function matches(entry,query){const q=String(query||'').toLowerCase();return !!q&&searchParts(entry).some(x=>x.includes(q));}
-const api=Object.freeze({data,get,title,folder,displayPath,reason,hints,searchText,matches});
+const api=Object.freeze({data,get,title,folder,displayFolder,displayTitle,displayPath,reason,hints,searchText,matches});
 root.CatalogOrganization=api;
 if(typeof module==='object'&&module.exports)module.exports=api;
 })(globalThis);

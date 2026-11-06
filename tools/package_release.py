@@ -28,6 +28,7 @@ tests = ['test_source.js', 'test_preparation.js', 'test_polo.js',
          'test_source_pairs.js', 'test_binary_events.js', 'test_binary_resolution.js',
          'test_catalog_store.js', 'test_catalog.js',
          'test_t016_organization.js', 'test_t016_group_review.js',
+         'test_catalog_layout.js',
          'test_t001_hardware_elements.js']
 for test in tests:
     subprocess.run(['node', str(root / 'tests' / test)], cwd=root, check=True)

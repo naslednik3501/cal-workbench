@@ -21,12 +21,12 @@ let groupedEntries=null,groupedCatalog=[],calculatorByEntry=new Map();
 function calculatorCatalog(){if(groupedEntries!==entries){groupedEntries=entries;groupedCatalog=scope.calculatorGroups(entries);calculatorByEntry=new Map();for(const g of groupedCatalog)for(const e of g.aliases)calculatorByEntry.set(e,g);}return groupedCatalog;}
 function calculatorGroup(e){calculatorCatalog();return calculatorByEntry.get(e);}
 function fileButton(e,index,full=false){
- const active=scope.sameCalculator(e,selected),g=calculatorGroup(e),b=node('button',undefined,'fileItem'+(active?' active':'')),text=node('span',org.title(e)+(g.version?' · вариант '+g.version:''),'fileText');
+ const active=scope.sameCalculator(e,selected),g=calculatorGroup(e),b=node('button',undefined,'fileItem'+(active?' active':'')),text=node('span',org.displayTitle(e)+(g.version?' · вариант '+g.version:''),'fileText');
  if(full){const q=$('search').value.trim().toLowerCase(),match=g.aliases.find(a=>org.matches(a,q))||e;text.append(node('small',match.path+' · '+match.source));}
  b.append(icon('file'),text);b.title=e.path+(g.aliases.length>1?' · Исходных копий: '+g.aliases.length:'');b.dataset.index=index;b.setAttribute('aria-pressed',String(active));b.onclick=()=>select(e);return b;
 }
 function showCalculatorPaths(entry){
- const target=$('calcPath'),group=calculatorGroup(entry),aliases=group?.aliases||[entry],item=org.get(entry.sha);target.replaceChildren(node('span',item?'Раздел: '+item.folder:entry.path));
+ const target=$('calcPath'),group=calculatorGroup(entry),aliases=group?.aliases||[entry],item=org.get(entry.sha),shown=item?org.displayFolder(entry):null;target.replaceChildren(node('span',item?'Раздел: '+shown:entry.path));
  // The thematic name is display-only: the original path stays the alias and the resource key.
  if(item)target.append(node('br'),node('span','Исходный путь: '+entry.path),node('br'),node('span','Исходный файл не перемещён и не изменён.','muted small'));
  if(item?.reason)target.append(node('br'),node('span','Причина: '+item.reason,'muted small'));
@@ -105,7 +105,7 @@ function initializeSession(){
 }
 function select(entry){
  selected=entry;program=null;session=null;dirtyInputs=false;inputs.clear();formLabels.clear();readHints.clear();clearResult();
- $('calcTitle').textContent=org.title(entry);showCalculatorPaths(entry);$('calcError').hidden=true;$('formArea').replaceChildren();$('calcDescription').replaceChildren();$('compatBadge').className='pill';
+ $('calcTitle').textContent=org.displayTitle(entry);showCalculatorPaths(entry);$('calcError').hidden=true;$('formArea').replaceChildren();$('calcDescription').replaceChildren();$('compatBadge').className='pill';
  try{if(!scope.isActive(entry))throw Error('Этот файл относится к аппаратным функциям и исключён из рабочего каталога.');if(entry.ext!=='cal')throw Error('Поддерживаются только калькуляторы .cal');program=E.parse(raw(entry),{sha:entry.sha});$('compatBadge').textContent=program.writerBlockReason?'Запись заблокирована':program.partial?'Частично распознан':program.readOnly?'Чтение поддерживается':program.executable?'Формат поддерживается':'Пока не поддерживается';$('compatBadge').className='pill '+(program.executable&&!program.partial?'compat-ok':'compat-unsupported');$('compat').textContent=program.writerBlockReason?'Чтение доступно. '+program.writerBlockReason:program.partial?'Чтение доступно; обработчик записи пока не распознан. '+program.unsupported.join('; '):program.readOnly?'Исходный CAL содержит рабочий обработчик чтения; доступного обработчика записи в оригинале нет.':program.executable?'Форма и команды распознаны. Исполнение этого файла ещё не сверено с оригинальным iProg.':program.unsupported.join('; ');if(program.sourceRepairs)$('compat').textContent+=' '+program.sourceRepairs.join(' ');renderForm();log('Выбран: '+entry.path);if(program.executable)initializeSession();else{$('calcError').textContent=program.unsupported.join('; ');$('calcError').hidden=false;}}
  catch(err){$('compatBadge').textContent='Пока не поддерживается';$('compatBadge').className='pill compat-unsupported';$('compat').textContent=err.message;$('calcError').textContent=err.message;$('calcError').hidden=false;log('Калькулятор недоступен: '+err.message);}sync();
  for(const el of document.querySelectorAll('.fileItem')){const active=scope.sameCalculator(entries[Number(el.dataset.index)],entry);el.classList.toggle('active',active);el.setAttribute('aria-pressed',String(active));}
@@ -181,7 +181,7 @@ $('closeBin').onclick=()=>{
  $('calcTitle').textContent='Выберите калькулятор справа';$('calcPath').textContent='Выберите файл из каталога или добавьте свой CAL.';$('compatBadge').textContent='Не выбран';$('compatBadge').className='pill';$('compat').textContent='Поддержка определяется при открытии файла.';$('calcDetails').open=false;$('fileDetails').open=false;
  $('calcDescription').replaceChildren();renderEmptyForm();logLines=[];$('log').textContent='';resultStatus('Результат ещё не рассчитан','После расчёта изменения появятся в HEX ниже.');sync();renderHex();renderCatalog();
 };
-$('search').oninput=()=>{searchPage=0;renderCatalog();};$('collapseAll').onclick=()=>{expandedFolders.clear();catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('catalogBack').onclick=()=>{catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('clearLog').onclick=()=>{logLines=[];$('log').textContent='';sync();};
+$('search').oninput=()=>{searchPage=0;renderCatalog();};$('collapseAll').onclick=()=>{expandedFolders.clear();$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('catalogBack').onclick=()=>{catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('clearLog').onclick=()=>{logLines=[];$('log').textContent='';sync();};
 for(const el of document.querySelectorAll('[data-icon]'))el.replaceChildren(...icon(el.dataset.icon).childNodes);
 renderCatalog();logLines=[];log(`Каталог готов: ${calculatorCatalog().length.toLocaleString('ru-RU')} уникальных калькуляторов.`);sync();renderHex();updateImportTargets();syncStorage();const catalogReady=loadUserCatalog();
 

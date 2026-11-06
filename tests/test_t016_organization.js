@@ -73,6 +73,10 @@ const cryptoAudit=require('../reports/catalog-organization-crypto-exceptions-202
 const serviceCalcSource=allCal.filter(e=>e.path.startsWith('Calculators/Service calc/'));
 const serviceCalcShas=new Set(serviceCalcSource.map(e=>e.sha));
 const serviceCalcAudit=require('../reports/catalog-organization-service-calc-exceptions-2026-11-06.json');
+const motoSourceRoots=['Calculators/MOTO/','Calculators/MOTO - TRUCK - ATV/','Calculators/ATV/','Calculators/Bikes/'];
+const motoSource=allCal.filter(e=>motoSourceRoots.some(prefix=>e.path.startsWith(prefix)));
+const motoShas=new Set(motoSource.map(e=>e.sha));
+const motoAudit=require('../reports/catalog-organization-moto-special-exceptions-2026-11-06.json');
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -125,15 +129,19 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia'||brand==='EU_US_RU'||brand==='CRYPTO'||brand==='Service calc','unknown Dashboard folder: '+brand);
- for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia'||brand==='EU_US_RU'||brand==='CRYPTO'||brand==='Service calc'||brand==='Mototechnics'||brand==='Special technics','unknown Dashboard folder: '+brand);
+ for(const brand of created){
+  if(usedBrands.has(brand))continue;
+  const routed=rr.moved_entries.filter(row=>row.folder==='Dashboard/'+brand);
+  assert(routed.length&&routed.every(row=>motoShas.has(row.sha)),'created empty Dashboard folder: '+brand);
+ }
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
  const movedShas=new Set();
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -238,6 +246,7 @@ await test('complete Asia inventory accounts for every unique SHA exactly once',
  for(const sha of asiaAudit.already_sha)assert(org.folder(allCal.find(e=>e.sha===sha))?.startsWith('Dashboard/Asia/'),'already '+sha);
  for(const sha of asiaAudit.moved_sha)assert(org.folder(allCal.find(e=>e.sha===sha))?.startsWith('Dashboard/Asia/'),'moved '+sha);
  for(const row of asiaAudit.exceptions){
+  if(motoShas.has(row.sha))continue;
   assert(row.reason?.trim(),'exception reason '+row.sha);
   const entry=allCal.find(e=>e.sha===row.sha);assert(entry,row.sha);
   assert.equal(org.folder(entry),row.currentFolder,'exception folder '+row.sha);
@@ -259,6 +268,7 @@ await test('complete EU_US_RU inventory accounts for every unique SHA exactly on
   assert(org.matches(source,source.path),'moved original path search '+source.path);
  }
  for(const row of euUsRuAudit.exceptions){
+  if(motoShas.has(row.sha))continue;
   assert(row.reason?.trim(),'exception reason '+row.sha);
   const source=allCal.find(e=>e.sha===row.sha);assert(source,row.sha);
   assert.equal(org.folder(source),row.currentFolder,'exception folder '+row.sha);
@@ -293,11 +303,43 @@ await test('complete Service calc inventory accounts for every unique SHA exactl
   assert(org.matches(source,source.path),'moved original path search '+source.path);
  }
  for(const row of serviceCalcAudit.exceptions){
+  if(motoShas.has(row.sha))continue;
   assert(row.reason?.trim(),'exception reason '+row.sha);
   const source=allCal.find(e=>e.sha===row.sha);assert(source,row.sha);
   assert.equal(org.folder(source),row.currentFolder,'exception folder '+row.sha);
   assert.equal(org.title(source),row.currentName,'exception name '+row.sha);
   assert(!org.folder(source).startsWith('Dashboard/Service calc/'),'exception moved '+row.sha);
+  for(const sourcePath of row.paths){const pathEntry=allCal.find(e=>e.path===sourcePath);assert(pathEntry,sourcePath);assert(org.matches(pathEntry,sourcePath),'exception old path '+sourcePath);}
+ }
+});
+await test('complete Mototechnics and Special technics inventory accounts for every unique SHA exactly once',()=>{
+ assert.equal(motoSource.length,707,'all moto and special source paths');
+ assert.equal(motoShas.size,447,'distinct moto and special CAL contents');
+ assert.deepEqual(motoAudit.summary,{unique_sha:447,already_on_place:0,moved:251,exceptions:196,reconciled:447});
+ assert.deepEqual(motoAudit.groups.Mototechnics,{unique_sha:399,already_on_place:0,moved:232,exceptions:167,reconciled:399});
+ assert.deepEqual(motoAudit.groups['Special technics'],{unique_sha:48,already_on_place:0,moved:19,exceptions:29,reconciled:48});
+ assert.equal(motoAudit.groups.Mototechnics.unique_sha+motoAudit.groups['Special technics'].unique_sha,447,'moto group partition');
+ assert.equal(motoAudit.groups.Mototechnics.moved+motoAudit.groups['Special technics'].moved,251,'moto moved total');
+ assert.equal(motoAudit.groups.Mototechnics.exceptions+motoAudit.groups['Special technics'].exceptions,196,'moto exception total');
+ for(const sourceRoot of ['MOTO','MOTO - TRUCK - ATV','ATV','Bikes']){
+  const check=motoAudit.full_list[sourceRoot];assert(check,sourceRoot);
+  assert.equal(check.catalog_paths,check.full_list_paths,sourceRoot+' path count');
+  assert.equal(check.exact+check.reconciled.length,check.catalog_paths,sourceRoot+' full list reconciliation');
+ }
+ assert.equal(motoAudit.moved_sha.length,251);assert.equal(motoAudit.exceptions.length,196);
+ const all=[...motoAudit.already_sha,...motoAudit.moved_sha,...motoAudit.exceptions.map(row=>row.sha)];
+ assert.equal(new Set(all).size,447,'moto SHA union');assert.equal(all.length,447,'moto categories are mutually exclusive');assert.deepEqual(new Set(all),motoShas,'moto inventory equals source');
+ for(const sha of motoAudit.moved_sha){
+  const source=allCal.find(e=>e.sha===sha);assert(source,sha);
+  assert(/^Dashboard\/(?:Mototechnics|Special technics)\//.test(org.folder(source)),'moved '+sha);
+  assert(org.matches(source,source.path),'moved original path search '+source.path);
+ }
+ for(const row of motoAudit.exceptions){
+  assert(row.reason?.trim(),'exception reason '+row.sha);
+  const source=allCal.find(e=>e.sha===row.sha);assert(source,row.sha);
+  assert.equal(org.folder(source),row.currentFolder,'exception folder '+row.sha);
+  assert.equal(org.title(source),row.currentName,'exception name '+row.sha);
+  assert(!/^Dashboard\/(?:Mototechnics|Special technics)\//.test(org.folder(source)),'exception moved '+row.sha);
   for(const sourcePath of row.paths){const pathEntry=allCal.find(e=>e.path===sourcePath);assert(pathEntry,sourcePath);assert(org.matches(pathEntry,sourcePath),'exception old path '+sourcePath);}
  }
 });
@@ -469,7 +511,9 @@ await test('France panels follow confirmed brands and preserve disputed entries'
   'Calculators/France/Peugeot/Satelis 24C04.cal':'Dashboard/Peugeot'
  };
  for(const [path,folder] of Object.entries(disputed)){
-  const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);
+  const e=allCal.find(x=>x.path===path);assert(e,path);
+  if(motoShas.has(e.sha))assert.equal(org.folder(e),'Dashboard/Special technics/Case',path);
+  else assert.equal(org.folder(e),folder,path);
  }
  const latitudeVariants=allCal.filter(e=>e.path.startsWith('Calculators/France/Renault/Latitude')&&/24C16/i.test(e.path));
  assert.equal(latitudeVariants.length,2);assert.notEqual(org.title(latitudeVariants[0]),org.title(latitudeVariants[1]));
@@ -558,7 +602,7 @@ await test('approved entries keep exact names, folders, original paths and bytes
   const e=entry(sha);assert(e,sha);assert.equal(org.title(e),name,sha);assert.equal(org.folder(e),folder,sha);
   run('select(entries.find(e=>e.sha==='+JSON.stringify(sha)+'))');
   assert.equal(run('selected.sha'),sha);assert.equal(run('selected.path'),e.path);
-  assert.equal(el('calcTitle').textContent,name);assert(el('calcPath').textContent.includes('Раздел: '+folder));assert(el('calcPath').textContent.includes(e.path));
+  assert.equal(el('calcTitle').textContent,name);assert(el('calcPath').textContent.includes('Раздел: '+org.displayFolder(e)));assert(el('calcPath').textContent.includes(e.path));
   doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
   assert.equal(download.name,e.path.split('/').at(-1),'export name '+sha);
   assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[sha],'base64'),'export bytes '+sha);
@@ -593,7 +637,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -603,26 +647,37 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
 });
 await test('main sections sort by unique CAL count; folders inside sections sort alphabetically with counters',()=>{
  el('search').value='';run("catalogScope='';expandedFolders.clear();renderCatalog()");
- const sections=sectionRows();assert(sections.length>=15);
+ const sections=sectionRows();assert.deepEqual(sections.map(x=>x.name),['Dashboard','Airbag','CarRadio','Immo','OTHER','Engine'],'original iProg top sections');
  for(let i=1;i<sections.length;i++){
   assert(sections[i-1].count>=sections[i].count,'root count order '+sections[i-1].name+' vs '+sections[i].name);
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Dashboard','largest section first');
- assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,6657);
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,7482);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
- const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
+ const folderPaths=[...new Set(groups.flatMap(g=>{const parts=org.displayFolder(g.e).split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
  const checkAlphabetical=(parent,prefix,section)=>{
   const rows=folderRows(parent);if(!rows.length)return;
   for(let i=1;i<rows.length;i++)assert(rows[i-1].name.localeCompare(rows[i].name,'ru')<=0,'folder alphabetical order '+section+' '+prefix+' '+rows[i-1].name+' vs '+rows[i].name);
   for(const row of rows){const path=prefix+'/'+row.name;assert.equal(row.count,expectedCount(path),'counter '+path);checkAlphabetical(row.node,path,section);}
  };
- for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER','Engine']){
   run("expandedFolders.clear();"+expand+";catalogScope='"+section+"';renderCatalog()");
   checkAlphabetical(el('tree'),section,section);
  }
  run("expandedFolders.clear();catalogScope='';renderCatalog()");
+});
+await test('collapse all closes open folders without leaving the current section',()=>{
+ run("catalogScope='Dashboard';expandedFolders.clear();expandedFolders.add('Dashboard/Asia');expandedFolders.add('Dashboard/Asia/Toyota');renderCatalog()");
+ assert.equal(run('catalogScope'),'Dashboard');
+ assert(el('tree').querySelectorAll('details').some(d=>d.open),'folder open before collapse');
+ el('collapseAll').click();
+ assert.equal(run('catalogScope'),'Dashboard','section kept');
+ assert.equal(el('catalogLocation').textContent,'Dashboard','section title kept');
+ assert.equal(run('expandedFolders.size'),0,'expanded state cleared');
+ assert(el('tree').querySelectorAll('details').every(d=>!d.open),'all folders closed');
+ run("catalogScope='';expandedFolders.clear();renderCatalog()");
 });
 await test('custom calculators stay visible and follow the same count order, not a pinned position',()=>{
  const fake={path:'Мои калькуляторы/Проверка.tmp.cal',sha:'f'.repeat(64),size:1,ext:'cal',source:'test',user:true};
@@ -648,8 +703,8 @@ await test('search finds new names, original paths, old file names and old secti
  el('search').value='';run('searchPage=0;renderCatalog()');
 });
 await test('tree expanded sections show every unique CAL once, with original exports and pictures',async()=>{
- for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER']){
-  const folders=[...new Set(Object.values(org.data.entries).filter(x=>x.folder===section||x.folder.startsWith(section+'/')).flatMap(x=>{const parts=x.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
+ for(const section of ['Airbag','Dashboard','Immo','CarRadio','OTHER','Engine']){
+  const folders=[...new Set(groups.map(g=>org.displayFolder(g.e)).filter(x=>x===section||x.startsWith(section+'/')).flatMap(x=>{const parts=x.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
   run("expandedFolders.clear();catalogScope='"+section+"';"+folders.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';')+';renderCatalog()');
   const expected=groups.filter(g=>{const p=org.displayPath(g.e);return p===section||p?.startsWith(section+'/');}).length;
   assert.equal(walk(el('tree'),'fileItem').length,expected,'visible once in '+section);
