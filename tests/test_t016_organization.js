@@ -62,6 +62,9 @@ const asiaSuzukiShas=new Set(asiaSuzukiSource.map(e=>e.sha));
 const asiaAllSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/'));
 const asiaAllShas=new Set(asiaAllSource.map(e=>e.sha));
 const asiaAudit=require('../reports/catalog-organization-asia-exceptions-2026-11-06.json');
+const euUsRuSource=allCal.filter(e=>e.path.startsWith('Calculators/EU_US_RU/'));
+const euUsRuShas=new Set(euUsRuSource.map(e=>e.sha));
+const euUsRuAudit=require('../reports/catalog-organization-eu-us-ru-exceptions-2026-11-06.json');
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -114,7 +117,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia','unknown Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia'||brand==='EU_US_RU','unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
@@ -122,7 +125,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -233,6 +236,27 @@ await test('complete Asia inventory accounts for every unique SHA exactly once',
   assert.equal(org.title(entry),row.currentName,'exception name '+row.sha);
   assert(!org.folder(entry).startsWith('Dashboard/Asia/'),'exception moved '+row.sha);
   for(const sourcePath of row.paths){const source=allCal.find(x=>x.path===sourcePath);assert(source,sourcePath);assert(org.matches(source,sourcePath),'exception old path '+sourcePath);}
+ }
+});
+await test('complete EU_US_RU inventory accounts for every unique SHA exactly once',()=>{
+ assert.equal(euUsRuSource.length,762,'all EU_US_RU source paths');
+ assert.equal(euUsRuShas.size,762,'distinct EU_US_RU CAL contents');
+ assert.deepEqual(euUsRuAudit.summary,{unique_sha:762,already_on_place:0,moved:604,exceptions:158,reconciled:762,full_list_paths:762,full_list_verified:true,full_list_exact_paths:752,full_list_reconciled_paths:10});
+ assert.equal(euUsRuAudit.already_sha.length,0);assert.equal(euUsRuAudit.moved_sha.length,604);assert.equal(euUsRuAudit.exceptions.length,158);
+ const all=[...euUsRuAudit.already_sha,...euUsRuAudit.moved_sha,...euUsRuAudit.exceptions.map(row=>row.sha)];
+ assert.equal(new Set(all).size,762,'EU_US_RU SHA union');assert.equal(all.length,762,'EU_US_RU categories are mutually exclusive');assert.deepEqual(new Set(all),euUsRuShas,'EU_US_RU inventory equals source');
+ for(const sha of euUsRuAudit.moved_sha){
+  const source=allCal.find(e=>e.sha===sha);assert(source,sha);
+  assert(org.folder(source)?.startsWith('Dashboard/EU_US_RU/'),'moved '+sha);
+  assert(org.matches(source,source.path),'moved original path search '+source.path);
+ }
+ for(const row of euUsRuAudit.exceptions){
+  assert(row.reason?.trim(),'exception reason '+row.sha);
+  const source=allCal.find(e=>e.sha===row.sha);assert(source,row.sha);
+  assert.equal(org.folder(source),row.currentFolder,'exception folder '+row.sha);
+  assert.equal(org.title(source),row.currentName,'exception name '+row.sha);
+  assert(!org.folder(source).startsWith('Dashboard/EU_US_RU/'),'exception moved '+row.sha);
+  for(const sourcePath of row.paths){const pathEntry=allCal.find(e=>e.path===sourcePath);assert(pathEntry,sourcePath);assert(org.matches(pathEntry,sourcePath),'exception old path '+sourcePath);}
  }
 });
 await test('Asia Toyota accounts for every unique source CAL',()=>{
@@ -527,7 +551,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -543,7 +567,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Dashboard','largest section first');
- assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,5964);
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,6550);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
