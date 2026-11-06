@@ -1,0 +1,2418 @@
+{
+  "schema": 1,
+  "source_date": "2026-08-01",
+  "source_sha256": {
+    "Mototechnics": "2d1cbc50d226d32386aa1e4adeba53899744615d34d73f05fb17bc2aabecedbe",
+    "Special technics": "671d222b57e816f188b86614d4d123e9df394395ead109951125ecb751ef8f84"
+  },
+  "source_roots": [
+    "MOTO",
+    "MOTO - TRUCK - ATV",
+    "ATV",
+    "Bikes"
+  ],
+  "summary": {
+    "unique_sha": 447,
+    "already_on_place": 0,
+    "moved": 251,
+    "exceptions": 196,
+    "reconciled": 447
+  },
+  "groups": {
+    "Mototechnics": {
+      "unique_sha": 399,
+      "already_on_place": 0,
+      "moved": 232,
+      "exceptions": 167,
+      "reconciled": 399
+    },
+    "Special technics": {
+      "unique_sha": 48,
+      "already_on_place": 0,
+      "moved": 19,
+      "exceptions": 29,
+      "reconciled": 48
+    }
+  },
+  "full_list": {
+    "MOTO": {
+      "catalog_paths": 182,
+      "full_list_paths": 182,
+      "exact": 179,
+      "reconciled": [
+        {
+          "source_path": "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
+          "full_list_path": "Calculators/MOTO/Snowmobile/BRP/24ё04 Proba.cal"
+        },
+        {
+          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+          "full_list_path": "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╤56.cal"
+        },
+        {
+          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+          "full_list_path": "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╤46.cal"
+        }
+      ]
+    },
+    "MOTO - TRUCK - ATV": {
+      "catalog_paths": 432,
+      "full_list_paths": 432,
+      "exact": 429,
+      "reconciled": [
+        {
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
+          "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24ё04 Proba.cal"
+        },
+        {
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+          "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╤56.cal"
+        },
+        {
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+          "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╤46.cal"
+        }
+      ]
+    },
+    "ATV": {
+      "catalog_paths": 80,
+      "full_list_paths": 80,
+      "exact": 80,
+      "reconciled": []
+    },
+    "Bikes": {
+      "catalog_paths": 13,
+      "full_list_paths": 13,
+      "exact": 13,
+      "reconciled": []
+    }
+  },
+  "already_sha": [],
+  "moved_sha": [
+    "04699ccc5fd57dade6fbec33397dbf57cefa31fb666c193467ca8985e55ddd34",
+    "04ed5efd2c0c0f4fa5142341af4d192a51b4903eebb70b36b49668a0aa1ce3d2",
+    "050023533a0d5db4bec9bf37815a33e06f160664212316a915d6da2354bf0845",
+    "064b6f17c7396881544465fb7643769f4df6132fdea62b07a75867e7d018be12",
+    "066379b5656829069eedf333ed0ffc8aeb8c4a82d9030b1a4f04fbd2a04d081f",
+    "092adabd93f51efde43d939cdead7d32c4988ac2f4a04c4f09798e2a43be1d96",
+    "0cd8439d89d689fea01569b1f7412e4e876cd3e6d222d965afa690cfc09a72ab",
+    "0d2f0ad234264bad8e5152fec75af2c531a46440faee0f349e1bf562999fc026",
+    "0d312d6ec9af66c5edeb9d30d099a6c0aa8f9b6f795002fe967bec8c349d6dba",
+    "0d66f13f6c0d824d3d29bb11bb152a5b94bf0708a46ef1e2babf4fc6a90eacc9",
+    "0e0f8146e414b237acfd57bb807d265832e6e7c1de19451d80ce0f9fa88645e1",
+    "0f7230c96669925430d19ad41df5de7be817d001794f4a0620f0c1aebd4b9f1a",
+    "10cc46d1dbd4b739809c090d157b299022cd163f7732c88b7236e7015a902d84",
+    "11162ae41cbb71a00ab8f49893ce5943b7d73845ab102f8508d51675bf55c4d0",
+    "130a6f12bcf67bb2bc1ea4e28b3a31b3fa00d55fdd1c9194d3622dd8798fd7cf",
+    "1346f1429adcd484656b2705275fb1cbb656de0bd7d6a9484220f400d9d7388d",
+    "13ce9b2f72d89720940ddd03c481c95913cadf261a3173ba374bd041ef02b1c8",
+    "140c3994aaa12963ba0cfa966fd4ffb9a97f131c8eb795fa34e6c32e36f74da9",
+    "14a545a3cebcab7a14db65290cf835675f5791867a18d0fb3dd8d6c0f5369385",
+    "1611dbc90d72f495fff00ffd8c36ab299f3b1e17f63a985861f677caaeb23f14",
+    "16c7528d1f0b6c1d6f39be3c351ba7c3828520770cb99f3dcc40b3a8bce92648",
+    "16d2a6298459af767d53f8f8f4bd2ef1bc46b7df6b8c6e71b3360147381156d4",
+    "16d78400672ebb4a6b221e7d8952a151f2cca7aaa6a3fd9373969c3b75d9bcb7",
+    "180c21b4ef2ca69a2254e1e6870f499457bf5d7cd0b370c6707cd3fcc4499c4c",
+    "18b76408f7f6ea579ad57d76e9d78bd23402472233214de9794fa0527b30f54c",
+    "196e617782d9c9f02d638a6bca1312297a38a45601687ca9f6dc50f433206105",
+    "198e6255ec61e03bbee8313989b5a55a0492b1370b6127f6aa083da75a7863d9",
+    "1a4d9f150bde485fd077bcb77395efa234815beeadabbfefd6c9783e3eab3351",
+    "1c454021136c7c508a1b61263b4718a011d0f813bc31249101a02612aaa68b40",
+    "1c661a499011f8759e8f820e01587a50b7f5d63e1b83719d7c437b9367fba804",
+    "1f7773e2049bf2f8ddb6507737eb87954a34b2a51b3a80b177571ca422383eba",
+    "20b8aba780b5a80a37dffaad88836583f33b2b97a591b3c0c6194140d26afc6f",
+    "20b9a43184148bc4692b0b9c6e8ee02cf118990647af132eeabfc6a887ff1351",
+    "2164193792a06dfccc88e753e6aba9f8206fe4fb666bc75dc0a1f327e143ca40",
+    "21dad096fac3f18c5c1472b0ad5ee2b74d1a24a4ccc99d74bd42bfae9490182e",
+    "2307dac41c0938d1b2ae7dc8fe13b6f9631475a017aedb132ffb12100f7a1641",
+    "2313ed34e2aca507ddd78e869af1cab5ee4b5fb499d1abbb390e35c191628cef",
+    "23f267b432dffeb4e22fe524373bb597e276bf7de0b013e047d893731a444f61",
+    "259edbfcec41edabe5a3f4f78ede0e7eb9b9d1af547f6e580979f80685f74ffa",
+    "279b2a18c4bf17c35bf3a25e2a03b1c90c9536000279c530975f3c074ae8f1f6",
+    "288fd221d65b6f212f3a18b16a73336f1fc94661f1763513837424afa1763a54",
+    "2bc77fe1abb1706ae99618f698e8a9ee12de6fd7a5500220e6b482bcd564b58b",
+    "2c27edbfd29fe3b71b9215bb0de3a6673e64ef77396a2560b8fa083ed649de00",
+    "2cc8bf8435a6c172fcd05e2898745c5b9873ebfbe357d8c461d48384d7e82814",
+    "2d98fc2720c66b93f7833795c53ca70fb675af2cb522c00b4cfd2d64eabab48e",
+    "2e46f1ab63ebe5c8ad2426810d43baf4692f9d5785d85f23264453fce216c508",
+    "2fa4efe803b3b15c73ead37dbe9b2f8d57c47fc9ec69fb29b25a12bec1bc5766",
+    "3093887dbc7231d9e20757b13e16585c6420ff868182245ae64e2b3ac88d642d",
+    "30d0f0279f063b051b54f3784427ec8cbb038ff41696b62b781ed924226f9ba5",
+    "3131248a34c4779e7b2a17b2c1cf857d7a57a36341cdf03013c00d2e9cc700dc",
+    "3144dd94bc191a62efdd3a28a1bcec103ed56f902034031b70efb3079e588f9d",
+    "31f44c376ab5f1a048483f7e3a21b99dd7f769b7d1d106644929c5f851813a9a",
+    "34262f5fc12e7d17c2a673470d6a016bc6763fcff2056932e5126ad5e6cc8e02",
+    "3551d48714ab57cb0573763e4afb2c236d01a809697916af7ec720ec555f3381",
+    "35f48af54b8a8de852cdf4f49175c200086b5478ac6a8d7cb0d995d222c81bbc",
+    "363117a5fcd58595b98ac7057dd30a5c9052adc897b59eebae8fd4cb1ab3f3a3",
+    "372deb77f78dd2b19671de4c9a3f0f14aa58b170f18b062a00a6b002997a1dfd",
+    "397157a582bdd6f073e27d4ee7b5eac747c0c49d7c2a221e7418c70768e9b157",
+    "3c2f0944927c5adaf8f8e8e28b139587092f3ae9299d7459f6f6062955d4ace7",
+    "3c499875f8d3876582ab09a8e62ac71025d75b2dd9858c38a28cfa8940d23186",
+    "3d5e71a8780687a52d81f7d14564e2e26ca9bf5f108876a173266d106ffa3d20",
+    "3e96ae58c676ac22338321352b3a734e8a4faf24ab485daecd25e89a56d6f771",
+    "4065ad1f6efcc871135e9a0dac8fc6af347f6173c2f07444465cd9165a906095",
+    "40eb5bc0c42d256d4165f12b04cd5cf9cea7ebbbc8ad0ca07e044852352a0feb",
+    "4112c23db117617b8d273e5144416a258182b2c77604e4cc5e4565c3d3fc51b6",
+    "4124053db2686d3e0d34b0845fd947f587c90334fd9403edf61b6e675c4a78a7",
+    "41bb26afbb288ae0e6d090eaddd2acd74646a70ed36d9927d9cb98711a315c2f",
+    "42c3c2ad97ead9019a86b3705604f7626250c561b09c51603f2ece352ca3852b",
+    "439da74750f760065b73861fb4f82e91bd973d8c459977f00b8889c5e7babd23",
+    "44e7a7633656c4f2a48eb93d6727f6bb4d1c72f1016db7af8e3d64c02ed7fc50",
+    "45e3101fbada593f59d07260c4651847fcb8b6a68495e47cee25c181941add0e",
+    "4b72a877e5fd1443a7a83032866d501469ecb1da60405377506591a975007daa",
+    "4c92e83343de84c613511beaf18ae869ed2cc077ddc7a543ad653a92badfe414",
+    "4d4459f48119250176813885e5b2d21e387f71970c801a1044b3843f3fcdf57c",
+    "4e96ad2792c55907a7db3bfe643d1e1aa859119212af7df4e00dba2602122810",
+    "4fbb910316e4a12dfdcdd3fe6d9a83223d166b7431ab2e642bbb33c8ecd55762",
+    "506d051ac282182f323f015fdf5b3da32cdfd0c8b1fa555053dfa1ca7d1d86db",
+    "51b8f2184dcfba5e53a870ea34a1eccc851e2ed15f2d2d0b74e25b6b5752e7db",
+    "52114aaf021a22d84dc87373cd0582dcbb63259dbe658a2489c1a3dbfbace78e",
+    "5284e953563d72edd95c50d92ded9a12059be8bc35398463603d22e42d7a24df",
+    "52c3ff33a9d51da315537f948dd5a55b87c923bbc545173be2208424e7f116a0",
+    "53c53181df8c1d3bbde5725ea7eecef0c00c03712566ba1ff363ceaf5c6a06d9",
+    "5439789e063adfa263bd79ab7f464fa6bb81101e27fbaeac2d1decb32145666c",
+    "5525c0021308470cdb2b23fed706da4a6613fe04dbddfb89cef6aa00d1cff62a",
+    "5704e3a288829fddeec1e72420778251c86f63be4be73048794700ea1f27d704",
+    "575702092ea1d05123ef30858e37c08cca7f3bffb00ca56dd30d9a4cef858044",
+    "5762b56caca30413dacc78edce16d8e072f6956ec7ded40e8f8f36cbec7a6dca",
+    "57b715210cb57311730409569f639c19aa4f115d6a71ba22319dd2c1fbad4be7",
+    "57fed31177a8593c2db87f25a48249ed1da22b9ac5a10be4425e16f5cda95424",
+    "5824e6b55bc4a9d3a5c6edf61dea86a63ed92e69b75a908aa4bdcdcbd30a6a06",
+    "587950de6567ea2b0f608355b44afe3fbdfea2e38f0f074eebb59ba8e7699013",
+    "594449b904592faea9dbc2378a7520bee489f0f5fb6b250df79319f2e1f78539",
+    "5a07b3accbd09f7713ca5e31e46ffd3c76a368e52a8bfb4bbc332b7debba1910",
+    "5af89c9216c42cd75dc1b7253e6810698730ad762f37b1e73b7f3ccd51dca75e",
+    "5b8955bf015527cb818eee67d70e520a7f18311171f798892f7bc78bfd4de921",
+    "5c553402fb4e9c84ee86a4f176f0518f2d82d9e456f0d124ad88cb1c4ce22695",
+    "5db657da9d900fa7f5222bb82febe117a305a78481d04ecdbaee0dc1e8b4ce84",
+    "5e61f65b905a432a4a741741b3c854ed3b3b4134ef1916dc6048ac03e99da022",
+    "5f72668f8c767e6ae5a7287df5669efca91b6d64e0ef17dff4e39f89c37e7854",
+    "6194e8eeed9e35f0f0becaaef7e730249c5d81449f90fc779064bdf47f331501",
+    "626d5c39e1f6a83a8467cf158b6fabefb3e08c44762aa720f7e0837a50b7808e",
+    "631171278f12a61ba0b32e4e1d2db343b320ef81a1bd57dd0e967b878beea3b5",
+    "64ef0c312a38ed01f776572fe085dc03218fcd20ce56d750f116fb84aa65a4b7",
+    "65da7881ee0b46480100635f52750a148a9d75bf867d41800bda7fda28d499a5",
+    "6631e0dc3f65ecd211f822e6d79cb802fad3637b69326cbaf3cd292f7ff9ee8d",
+    "6867698db3024eb4f1849e88d584e586e30a62b3b980e8d8d8f8f82c37dcfc0e",
+    "686bc58b0579fc28a6d9c665e63d347d426c70a323e50a839af1d834d567d9ed",
+    "6a580261c8afcf669f20c60385936a2548e96ec125e3dbc8eb0f5bfc19f636ff",
+    "6aacf6308e2059940ede3aa0e4f244beff761390840a24e77bf82ce32cfe3664",
+    "6b428b3cccdefc6bb815a986fce8bb0336adbdb24c2915bcb06e40a1b02c8d41",
+    "6bf0b2ae2288fda1094b58c82d505b5c6b725dbfbf34c977152270409cb30c80",
+    "6c5eaf39d4c0fdcc33a3ce2584d2a5401d928287a1b6e8c85d6e9d89b147de42",
+    "6d5603bd4d25f8d89decabdf1eb733da6f17c117eedfd84f03b22f5677e64017",
+    "6e81c21748300de92906c050a462d7d1808b9ef3a6bb95be44158283bad59c9e",
+    "6f1631908b05b81b73a7b246742c3253b5f99534bd1a5888eaee65f5f6cda4c1",
+    "6fe39a24c14e27a382bf1a7bd0622d407e8e8a965bbf43f109bf4edaae5d15da",
+    "7165f7a032accee1bc9c9c127a980558f6e5cf13165f31a92b3e68f2d426f2ef",
+    "71c2ad7d76e9b271321abab0552babfcaccfa324e47931d47f8a524b8ac41cde",
+    "72f21ce7453ba77267340bebe8c00838ad1112fb88452b2a344de380159cba34",
+    "73c1744e6a38ee980ffbbfad771ed37a8b4eee65fe2633f4767aac0920183bae",
+    "75168441ac0c899080c197c3acc792176566b3833fbbde4cfc65d396a21ca8aa",
+    "7706f49de5aba81a5f74d947b88a5fb7cc89d711b57944f4f4c63caa803ab87e",
+    "773f1138c55cbc8a704a39c7f3af89569717a99dfd6d666ad3535c3380665f99",
+    "77a94108f917700c6c92abbdce6e1a3e97781e0040c15d8145f811175621d87c",
+    "78a323462905d4af4d4d527941d6cec0e3eec1c9b133f74dd70e0530f5478e11",
+    "78d74844db3dba0093d5efa5028e26c0905a7f0fb948e10773e233ca95e2a744",
+    "7943f683d9d1a340f0d5bcf70cfac0c9960d45584177ebcc2a31a9d22860a265",
+    "7b0638bcf4d5604c8fe1aad408045e5970606c22eede400c43260e642910067e",
+    "7c309e0e7fceedbf9e214c32abb4f6c5b9d0c9632c43c426f01e9a208373ecb2",
+    "7c64d39d15aff50af1dbf1ff16728c955261b3a51b85339353ff7a62a9cad564",
+    "7d1fb532aeb33747529749e43d9977d30ecd296ab3b84a974d5b59771ca7eb47",
+    "7ddd969d92dc967e999af7a762a6bedb363f4b4fa594fd7ba7a5eb6215900f6a",
+    "7e1edce448fa08e7e6c2b27da9cdd8879fce7548149e101bb6863834b954296c",
+    "8009459c7a6ceeaa9ffd0e1ea579d2d6694d14fd66185e6158cef06e62229bd3",
+    "808ef20df966cbee70368962d26cc304621b732e6a0089ac858a602d36857577",
+    "814ef1df6fd231028ec65e2da2806956c9b025bc13b00ad11e75a5bc487a5450",
+    "824e6ab0a3bc0d877c99d496db6ef58b87ce17f0937d31054f5a548cc605be5d",
+    "85e15471ca9ebb7575c89e7025a79d87c0303f7cb4385247bcd73ab1f2bf1371",
+    "87e8320bcb1b8ea8d7da681e519e3c7e93bee39175d3cbc0e5eab0a2a9ee32f6",
+    "89bea2c4afffe40cea25a3c1166a85a04e2fb083a1e56236bdcb7c27f43073e8",
+    "8b48e25b49baad4be6a03be2a83596945856905743ce183b1973b8b4fc969b45",
+    "8b532080a6bd1bfe0951ca744462b1cfbb3270f7147b910238c7ecddaa6dcdae",
+    "8cd3acefaf23a857936b437168671de8474910cd81e6d13d7063a620f9666921",
+    "8d691786ff9e55ca998e46f84344047c2e10c2737c071a884bf07d53a5c977f2",
+    "8e11f4290e0b696bba1bb48f759def999851eec1a3db869e1a9609886a724d0c",
+    "90b233c710e5da48a8aae4e104a3dbb8333e31bbd73c54f8e074411dbf444e93",
+    "9148170660accb056995a1b1bdc487b93d602b7b8810e6e9533ab5b34ee9d3d4",
+    "9324bcbd91999334147fe60144b89fb0b18399689b0431fefb0e3a8afde4ca84",
+    "940e614e198e8eb670e34c7ba4a75762729a33525a75a7171da9ee99a6a08a8c",
+    "94523b0ea1a1de9cefa956966e88169d10d14ac8491ba0754078a21d0b8a0f99",
+    "94d59da9cdf467b5a5d6628b8aeabfa7d2955b0cdff01b0cf9091fa4c5613e66",
+    "951d06c08358a0d2a8a4a8925700608c0f623be5ae4e9fa167392dbd4f274991",
+    "953e2555f1b1fa7c37027bae2bb18c1a747a844178a1d6a768db02a16540b61b",
+    "96f6a241336ad650902ff478049a90b75bfdf03c926230eab0b1b153ab4e6910",
+    "973e4f582cb267740b1e24b7f3982a7e89fa09f5f3b133c62b6dd36da371475e",
+    "97c7ed40433a489ff46be9b750417afc837f77224b79ea7096985f16dbd3479c",
+    "98784e8b0057a31d0e19b9b0f0afa8e58c9c9f698ae5ecd4b2f507191db24643",
+    "992cb98115d4746a31dd468a163d0de4b423c836d75a6c326ef42f60366058e7",
+    "99323fbd11fbc83c5ea94d0b419f14259e51900098f0a35a7e00f7804eba9736",
+    "99685d01f17efffcb861dc1159b2077b1182e2720742b4385ddc77d3c1a6aafe",
+    "9a35b704d58c4151d71a2bccbf05bf2f3be4a664b048e7e317ccb7cb230e9dd5",
+    "9b4b33791a5386c1d02ea73e611fa1129981339dddd9cbb6ccf60d8353256031",
+    "9bcc73cc683d7cd19442874acb2af4d9b54715cbc1e1c8103f87a0cb55dcb317",
+    "9da3effd4511ac86489779ce6061ec909969d80f028358145ce74a769908c865",
+    "a0c709f9a5487676188bfe65341bd6c30ca0b689a30c911e1dd9e3e868619e2e",
+    "a0f743c11743b9423809d709c33a7db8cce4a21478d3e9ef312d0e8f641c9209",
+    "a2095bd67ee3d99f7ba9496951369c63ab35fe4025f0075e27e49121fb10d431",
+    "abc8e7f9f41e75150375c51859005a9a88aac2f7a7373a28210accd59beb1043",
+    "ac64e55c4f2aa5be86b41a1f87fd2c6f8931184e3c2a2b2b5d2d30a5fef0b5b2",
+    "acf410a15c32b6fe20abb976fbba36aff45417ee2061f6ea4e24f55e3b3afe8c",
+    "adc751064b10f646a491017c42236c23fd05d303ce10f72ca6bf0194f235a6d2",
+    "ae7dba7e88ce1efdb2598abf94d6aaa9bbdb27067e2312b6feae26f82824c214",
+    "afd3d2d98436e2a4c8e6fd05a82a2d0682da523f881a54bef400beedcce7ddb0",
+    "b12bdeb29d6f7cea3797204329664595afdf3e634015751affc80ff5e3c96c7a",
+    "b429c1f0d372bd00003b21d592156fa227a83a7bd069529a3c111bf22e6ad787",
+    "b502c64773153ccb319854e84a49496694da4dea73bc671b08a0abce1232db6f",
+    "b568c379ab22cb6b83bb1379bbc102c0157ff869ee700f82349b4422c12e5f8e",
+    "b570ca21405fb3f839891e361d72fc8cc638f8917b03d803b8eefd19ea9f45f2",
+    "b57f783d30933f2411ab86d022878989c9b37f4be914da8213754abd69a10a34",
+    "b59a7cbbc8b7e771330fa3f4bb5ccc6fc7e323b717a821f41ab313096e4dda0a",
+    "b59bc162c4714cc3786a966085ca67285592f0baafa05be36e68e0a2f9cbc6ca",
+    "b5c5a2f2627c85423cd1144543136980fffe3cb84f2e4065d5b82c27ecbd2eca",
+    "b5cfe4725e33bf26840fce386f54110f468aa8280efa691e36d651a88aa24832",
+    "b5e794c936fd0a90cb75f3d494a56074515f723e503c569e1a4a753423e7dad2",
+    "b6ce53a1c02146772b7e93eeb3af4943f0d86e6e6a241448cecf5b86d220b13e",
+    "b72194e7e0cbd4459989eaa7a4b0f9a22f13407e01c09a1a16b78c0e314b6356",
+    "b7c48c599d45da1557d60ce8ae7fc223fad44ab6e73b96e2933798e4b8a053ce",
+    "b83673916c24fc1b640d0e2d839e75ee4bfae39b39690445e175217c5b78819e",
+    "b8cfa0158239af81f07ce9919fa125c61a401ce1f88dc1eff89b3ab27fac82ff",
+    "b90b1d0ef136a41867fb905b2d667664ebf5c08da8adaa8c65995f5b61ed60b6",
+    "ba34fa3b372ac63eefe924f8c1ffaec80afaa2519ef252ab7b4afdee631709e2",
+    "bdbf02ff85ebf54d975ebeea663463ba6821c54fc26dec8678c69e585e6f8581",
+    "be022524d4df743312dee3ceb729c7ea2c89bc83088c42aa188029ea47b65e9d",
+    "bfc99fc0eba683d9bf576c0d377f34f46084a0d8b9265e896b628640d15de4f4",
+    "c3b7e71caac5ffcbce874acb57a1d7f68429f18e7f78e4734c3122fbef80c217",
+    "c629db765dc02e390ab9ef4738826787bef0471bf0a25ceadb7517457764410c",
+    "c83b1fe25a06d5bb7d5dd68f96a97db5c5639a43af5f37d552451c79a19d37d4",
+    "ca0e80f984825f2509a85c6f6094cd59c0979ce5844f87f4d2dd0e99aad28d0c",
+    "ca7050a66ddba90787abcfe905989b729e01ae937985a770bc7b9bce33df5f91",
+    "cac121e4bae7e1a4a50b6fd6ae20ab9c5ad31a5d7550791adf7240b5c053c2a6",
+    "cb1a32febde5edd556a1f82fc69257c62c29bee4bf1f76a76fc3d182d94892ef",
+    "cc6ec1a7d9f78f92bfebb92208c71129f68ac0a5ce64c047f8afdf20879e4663",
+    "cd11efd9ab3e0cbfbebce0905c08aaa543129b8b5fd7a5977828c6d623407eec",
+    "cdd45eef6625c3e808c03fe31367899363945f199541a28a19bbc7ec0f1dbcd4",
+    "ce9a3d11bf1874bda73f8489d5a3a5d755c8eafb66f6679c1fc7486f432cd0df",
+    "cf78874d8cc7baa624a89f10aa3c77cea944bb5a48f7efd095c47b757e69f078",
+    "d0b24238150fbf96646f7e01c7b79c77ab73c7e96db58fb2b63bb8a36272b6cd",
+    "d0e41e1dbf697bc8840e375702ebecb22151653dc05c9a2f3352c63273d5757b",
+    "d16cff77a867b6036c14879da9780e4b93c6353fde40cd8612e49b336dc142c8",
+    "d25c60c26005c73b93597924b81c15158c49f1dea1378b8faf4645aef8d57b28",
+    "d4edd9c022d6a9fb87320bc58c823c9122192d32f2592650e24ca1edb96a83a1",
+    "d54b23d2fd9d7f61fc3c60bc6a75477fecc57bbe47592f1d61ff64ad5890eacd",
+    "d778c2b6ca4721bbe6f130c6ca507f7236a1361d60c443a0aa32398a0c779959",
+    "d89adcec2251b65c542a9b58bb9cefbf31b4a0fa15639c1992c400f5152ca732",
+    "d8df0bf4114be78bc0a99a747b3c478aff9bf4909ebb58f5c2e315e9fc9942d7",
+    "db91530cab442cbbbe86dfa1dd8f3e78135fe375951606316603b6b7960efc92",
+    "dca04ef2c365b6f274231c9869692272d11c3c1fe3b2088ebae0d0afffbe8645",
+    "dcf8ad875d9758b43ae9ea75799bb592e96ae7187bc8a7379d5bee7ac9ee14dc",
+    "de3636b7904379519dca1515a62f96ef6d13ab59d5a0f0d123fb18b5598a103b",
+    "e09609077e738db75509d894ee8e07af18541d213542f30d79ea12025fe57c70",
+    "e1ea2812156a8acfa44451b84d195b64125779c2eb14a3270221efde19dea22f",
+    "e252b67c43fb0250f40e2afc5b82803c6bd3b8e51221109368bb1b54e58a791b",
+    "e282ee9369deb595cb35f04ad9a1315d5dd9b5aa799df016b4ad8d56cf4248fb",
+    "e3c7e55a75e7cd288ee75bd658e1697a20710a486ce066e2bd995b9e4ce021ef",
+    "e58dc6282bc972b2bf213ebcc7068c23ab9fcaed8dd543a91dc53fc0bc9b0e3a",
+    "e6be7c0f8c208bc2127d19a2d9decfd95bc66ced4e4e728af8e058a130dc8592",
+    "e8267135747f4ea5a79c2e89787b6a81effb450d2c6224e8e2165b328c5e0b11",
+    "eafdeb251ba20dec614f3c1a4faafc67ad739e9160ab14ccf283a581ae6edfa5",
+    "eb505e1cbe9aa08c6187258158db52dad5cf94776d0ff5392e772f61e1c7d40d",
+    "ebc0842b158fcbbbce13c0d35be0ebd0391cd640df96ef4ff2e190720d2756e6",
+    "ecbd076371e99bdae162ee088cbf86d5774d7997329206672d38469cd1d0bd3b",
+    "ed67bd6d3f79ef948672f7069d5433a491349c10bf82326fa178b7eadd02a8e8",
+    "ee0f05eef4204d207355bbd08d3eb16ff52765e7160e299fd42cc3deb3e97959",
+    "ee729bba0610344507f7fd2b8eb4f194a3c23111ef6f2a998b1e7f19f3959084",
+    "ef3f5b380366b374a6f8f8dd87b5cac070657919c02f5570b63395d6e2a6ab13",
+    "efdf318d3026d783d7eba6813c4d63848f73f89cb21168e1a0a7a288eda34ba5",
+    "f02857e5db56244a0004e8936697fa794bb42cb453b5d5fb759ef926b1e35f14",
+    "f0d80d5d3b91f17d01f27c5a2a9304cb858e8e8084f60b10666d26b0abf13704",
+    "f1fc99746ace34c3647901b873a6b8923bd72a0fbf911d96b8fd976893504f88",
+    "f4533a4cde7df5c31da0adf9fcce8f1d3a93e68e0486599f4144183da28df88e",
+    "f56635481342fe357145d4a6cabe1d3e8d869fa3a0627bb5deede6611b1d5513",
+    "f7f8eda58830668a124365ac66705d0ba025100cf6af7c92e8122d382b08589f",
+    "fa94f2674d95158d96c2e563f4cc45fe6b7448d6685193de309b0a9aaec1cf67",
+    "fc38f95db41d223d3098e83ea43942f06b81fed13a69eea4472fdec59c3be8e3",
+    "fcd691ba86647609f965cb2ee0e628f7a86fafb5742798cb01dacc3f416b9270",
+    "fd17e94c28b7459aa7798553b8c85dfe00d4e42311b8c3e41045dfecbb639de7",
+    "fd8e16c5f9836f84a81f25223f7fe30fd8e9ec68f1662e7a388a05c2353319b7",
+    "fdd170f882816dbbe3c717cdad7cec121025c6d5b8b92d04c87dc5cd336c8edd",
+    "fdfb300744dc571480689c600ac17bcf019abfce3062a477971da4fd71007293",
+    "ff19600515736a65859cb156bce41e64cb7fb2b5b81681c13e8765bca21bc09c",
+    "ff7021c692cff69a8f0b6b661af6a9b74b85e72fb696a7f2b110040954c073ce"
+  ],
+  "exceptions": [
+    {
+      "sha": "ebf96d97196847d03bc3d68c80459a454d04693ed58faf7f3d7e9a48c174c13d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/ATV BRP Outlander  v1.cal"
+      ],
+      "currentFolder": "ATV/BRP",
+      "currentName": "BRP Outlander v1 (24C02) — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "1cb1aa2747f3c3d5477e5661c75ca768cba20d44000e2289896f5d59bf0a761c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/ATV BRP Outlander v2.cal"
+      ],
+      "currentFolder": "ATV/BRP",
+      "currentName": "BRP Outlander v2 (24C02) — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "198e9cdd16ddf9f5fd3aa9a0a1d80ee846212cddedc95ef8798115d996318013",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/ATV Kymco China.cal"
+      ],
+      "currentFolder": "ATV/Kymco",
+      "currentName": "Kymco ATV China (93C46) — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4f613fc28285c5067f463a56ef38dd4d588b39540e6c94a3d571023b48f0ef68",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Baltmotors Jumbo 700 MAX 93C46.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Baltmotors Jumbo 700 MAX 93C46.cal"
+      ],
+      "currentFolder": "Dashboard/Baltmotors",
+      "currentName": "Baltmotors Jumbo 700 MAX — коррекция пробега (EEPROM 93C46) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "aa141195a49710ddf111a06144adf81b77527ec3e7b873ac000e64ff7746c7ae",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Bombardier 24C01.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Bombardier 24C01.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier — коррекция пробега (EEPROM 24C01)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "33a7e75175c9bde4100ceb31ae516d45080d6cdd26029597da3cdc47c26dc25f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Bombardier GTX550F 24C01.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Bombardier GTX550F 24C01.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier GTX550F — коррекция пробега (EEPROM 24C01)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "22cb7869c5fe70cfb17131fa3bfb175cb96771931b0e01394c8476b4d3a65a30",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Bombardier Outlander 800R X-MR 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Bombardier Outlander 800R X-MR 24C08.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander 800R X MR — коррекция пробега (EEPROM 24AA08) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "21184fc827a3d3c46eea55b1878dfc2f70c5fa8fbe5bc09717a7068d2a0b19a6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Bombardier Outlander MAX400 24C01.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Bombardier Outlander MAX400 24C01.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander MAX400 — коррекция пробега (EEPROM 24C02) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "9e3357078e242ecefe81f2fb7509e863478395a7fad967ccff2458e6a03c5511",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Bombardier Outlander MAX650 24C08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Bombardier Outlander MAX650 24C08.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander MAX650 — коррекция пробега (EEPROM 24C08) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7198ce2068f74743f2e4004ab66a77aac391fd94ea74baf9ba5045bb964d1d03",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/BRP MXZ 600 24C01.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/BRP MXZ 600 24C01.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP MXZ 600 — коррекция пробега (EEPROM 24C01)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "1dc4f5c689aed964a310c5b87abb2a012fca49940d43747a3db4fd6b1d66e336",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto 24c02.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "188a0fe3a8cd61e93b43f122e49dccc4e260f0d6bb257c4b172262379d6aa795",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto 24c04.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto 24c04.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto — коррекция пробега (EEPROM 24C04)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e4f43898c109cb7d22d94e445978ba01b66835f0032a010e43dfd8cc7057c9b5",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto 24c08.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto 24c08.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto — коррекция пробега (EEPROM 24C08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "aa2827c03c6e102a45cd9bb7823aff3e18af4155301e916578c44aadbc2cf155",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto 500 A Basic 93C46-8 bit.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto 500 A Basic 93C46-8 bit.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto 500 A Basic 8 bit — коррекция пробега (EEPROM 93C46)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "845ca3a819533defcc2f6d5c267d16c16af7df00eaa6fcdb38fecf76d7657c92",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto X8 24C08 var1.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto X8 24C08 var1.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto X8 — коррекция пробега (EEPROM 24C08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "cffe09121c9a13963a244b6481d632fc069c0fab7407428e69f99c137707129d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CF moto X8 24C08 var2.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CF moto X8 24C08 var2.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO CF moto X8 — коррекция пробега (EEPROM 24C08) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6281c387ae381e2875efb97ee1c4cd55dd687cc68e2ba6decfdcda14d8e5611f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/CFMOTO 24C04.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/CFMOTO 24C04.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO — коррекция пробега (EEPROM 24C04) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "0f660e14c729e5bfbabfba86c3c27338f77ccc58bd5f963ed4a84b4029a0cdf7",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Polaris RZR 24C32.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Polaris RZR 24C32.cal"
+      ],
+      "currentFolder": "Dashboard/Polaris",
+      "currentName": "Polaris RZR — коррекция пробега (EEPROM 24C32) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4350b7d499b98f71554ac28fb27b084d1691482646852df25f68c2934f270777",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Russkaya Mehanika RM500 93C66.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Russkaya Mehanika RM500 93C66.cal"
+      ],
+      "currentFolder": "Dashboard/Русская Механика",
+      "currentName": "Русская Механика RM500 — коррекция пробега (EEPROM 93C66) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "915fd38e9e54f01a634065f2353b8db94477e3e929a815b9acd55d9783ec60d7",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Stels 450H 24c02.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Stels 450H 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/Stels",
+      "currentName": "Stels 450H — коррекция пробега (EEPROM 24C02) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "c8806e3f059d53d4df5ec000f03b67cfd83abaafdfb5b417599ffd5951b6324e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Stels 500H 24c02.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Stels 500H 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/Stels",
+      "currentName": "Stels 500H — коррекция пробега (EEPROM 24C02) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e7b3f9a2951bfe8979017b65866201cd5b6109088c064505dd46a84b0caad053",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/ATV/Stels 600 Leopard 24c02.cal",
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/Stels 600 Leopard 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/Stels",
+      "currentName": "Stels 600 Leopard — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2fd08d9c9e2e7c01e4b2f09b61f10e1f964060f120c1e1ba7446a109e6e3edc6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Aprilia/Aprilia v1.cal"
+      ],
+      "currentFolder": "Bikes/Aprilia",
+      "currentName": "Aprilia v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b0fe59b021b8f1c2986cf92e126e7322e3bebce1c3449d7bf7ceaf83a6d6f811",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Gilera/Runner 50 v1.cal"
+      ],
+      "currentFolder": "Immo/Bikes/Gilera",
+      "currentName": "Gilera Runner 50 — данные транспондера Temic 11",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "17688fafe376e4f03595fec36be4b88f7af09ebda5d3075913763debdaf4e603",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Pegeot/Alise v1.cal"
+      ],
+      "currentFolder": "Bikes/Pegeot",
+      "currentName": "Alise v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "23aac1ec2356d0b40ce799f2ae0d3195d8db7d12c95681fc7dad4d6a05f5d2af",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Pegeot/Eliseo v1.cal"
+      ],
+      "currentFolder": "Bikes/Pegeot",
+      "currentName": "Eliseo v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5fe35cddf2d4abff0c8a8a79b499953fb69fc45d82e652a2810f8c2955a4cfcf",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Pegeot/Elystar v1.cal"
+      ],
+      "currentFolder": "Bikes/Pegeot",
+      "currentName": "Elystar v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "be79ef97ad2cfaca968d54daab25bcad8342ca81ab32ecde2a864aa2a27e574a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Pegeot/Speedfight v1.cal"
+      ],
+      "currentFolder": "Bikes/Pegeot",
+      "currentName": "Speedfight v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e243041eb34ad2f80378f60261bc675daee648764f1568f3c6df5f274b423b91",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Pegeot/Squab v1.cal"
+      ],
+      "currentFolder": "Bikes/Pegeot",
+      "currentName": "Squab v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "dd56c9f2de476004704f4c66e73e02642f3d6f65ec0902ea35603c76a76faf23",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Beverly 200 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Beverly 200 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "199198b387743470792bc43a98750660c6ca92e9a21e35cf84a62cb8057e512f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Beverly 250 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Beverly 250 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4b2102fa1e84e1800d501130cfcac68b0b0f30f57c8e8c78968cb6216b36b4a4",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Beverly 500 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Beverly 500 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8905cfe4c86db745e5e2a55b0e91ae2c70a74b4849355ad353a979211177d5a0",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Liberty 125 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Liberty 125 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5e54e5d09215e9602fb1022cc2e075304d25b79594be1dba23a55d927a6fe395",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Vespa 125 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Vespa 125 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "31210cca99edc7dc43052b2dbe3504836a8d14eadb2054b94620202b719a65be",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/Bikes/Piaggio/Vespa 150 v1.cal"
+      ],
+      "currentFolder": "Bikes/Piaggio",
+      "currentName": "Vespa 150 v1",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "88bed523915d22d39549abe5ec3c080d536b7aaae1fd799aaad25777fa0e0f8d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Baltmotors Jumbo 700 MAX 93C46.cal"
+      ],
+      "currentFolder": "Dashboard/Baltmotors",
+      "currentName": "Baltmotors Jumbo 700 MAX — коррекция пробега (EEPROM 93C46)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4cd545ece07098f4fc905d8fa91041195d2d117cf4e89e20875feefc7b3354fb",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Bombardier Outlander 800R X-MR 24C08.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander 800R X MR — коррекция пробега (EEPROM 24AA08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b5517dceeffe71828727aeb34eb015f21c2bdaf74c7b0de8f2757b14a12cfaee",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Bombardier Outlander MAX400 24C01.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander MAX400 — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "59e2c6a868c89a4c12ba43f5934e218f3599dff0b3b6ee6f39f8b236200e2b19",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Bombardier Outlander MAX650 24C08.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP Bombardier Outlander MAX650 — коррекция пробега (EEPROM 24C08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "81f0d564fb2f519e274db4355c1164514819732d5c4ca2637247eb8e8f0399e0",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO 24C04.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO — коррекция пробега (EEPROM 24C04)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8474ed3873251b38cb909209f4ee57ac1fa47a72da6639bd8fd17165a717a1ec",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 256.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO X5 PIC16F1933 256 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "af4b86898990324f46d846d49fc3ab5efaab4161b5eb5307dea36bafc69e6c9c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X5 PIC16F1933 - 512.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO X5 PIC16F1933 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "c0d1f6a2fbbf2911863a6af9d074920d20e363297991160e93d48fc836d29c73",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 256.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO X6 PIC16F1933 256 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "74121f68e6eedf8a5e691c475a8bd37c4cad9ba52e6398c611a5bc612e1e7e67",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO X6 PIC16F1933 - 512.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO X6 PIC16F1933 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a8895ef0476c30de934a02b5a792dc98cc5a691b065f91efc6c849470780527e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 256.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO Z8 PIC16F1933 256 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2569f04b1b2ceceba3472a48ab268b818772458fc72ba19847cbba691829a6a8",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/CFMOTO Z8 PIC16F1933 - 512.cal"
+      ],
+      "currentFolder": "Dashboard/CFMOTO",
+      "currentName": "CFMOTO Z8 PIC16F1933 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6cc1a89482a45bb563f443386db460587f5becc607820065499b221431de8a2e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Polaris RZR 24C32.cal"
+      ],
+      "currentFolder": "Dashboard/Polaris",
+      "currentName": "Polaris RZR — коррекция пробега (EEPROM 24C32)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "fd0d4d71c058930e4572219c9a7cc84cd5a8a997c8bf86460941de4cd587ac34",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Russkaya Mehanika RM500 93C66.cal"
+      ],
+      "currentFolder": "Dashboard/Русская Механика",
+      "currentName": "Русская Механика RM500 — коррекция пробега (EEPROM 93C66)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7ef3552188569b4d774fcd1f53d500250d86bbb0f307554902e26711fa408410",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Stels 450H 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/Stels",
+      "currentName": "Stels 450H — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2326605bc7a2795deaf3c20cd99179296886156ec6da1ecca5392a5fc91b16b1",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/ATV/Stels 500H 24c02.cal"
+      ],
+      "currentFolder": "Dashboard/Stels",
+      "currentName": "Stels 500H — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "68540f19483f1f867911782ec660860eb9914dd4006f57e8280425b805bbbe97",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/KOBUTA/Harley 95040.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/KOBUTA",
+      "currentName": "Harley 95040",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6cdcdce8a694b974c9648b1c44a8871d4f697edd8fef0d9de3665c1c485df5b8",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/KOBUTA/KUBOTA 93c46 V2.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/KOBUTA",
+      "currentName": "KUBOTA 93c46 V2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "cdc4db5bb160b6aed5b7b7eeaca6f2b3a8a278e9db430a740c60d1f00ee0e3fb",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/KOBUTA/KUBOTA 93c46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/KOBUTA",
+      "currentName": "KUBOTA 93c46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "62d8e7baef725696211e5a7101dc6e9b8a516f4cb2e3111c5ba67be427d260df",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/KOBUTA/Kubota 93C66.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/KOBUTA",
+      "currentName": "Kubota 93C66",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "813f80e49eb8ba8e8f93e7b944ba1d04c9d463b6a99086ed06e3dec242f7fa05",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/KOBUTA/KUBOTA S220.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/KOBUTA",
+      "currentName": "KUBOTA S220",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "65750a08fe473694cffd14760018938c2a88621fc08b61c09b60bac3688738cb",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Arktic Cat/Arctic Cat 24c08.cal",
+        "Calculators/MOTO/Motobikes/Arktic Cat/Arctic Cat 24c08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Arktic Cat",
+      "currentName": "Arctic Cat 24c08",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "162c2d3396762d84afbf35b4095861c506cf11d4fedd827c3032e704f7ec2785",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Bombardir 650  MC908AZ60A.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Bombardir 650 MC908AZ60A",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "d4c9ab6786cb8de5114a5d74b8a22f0d55d608d2ed26e0339cbdb0fb1d5e419b",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Max-XTp   MC9S12HY64.cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Max-XTp   MC9S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Max-XTp MC9S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b477db58ddfe55a28e058b71e49219588e538506dadcebfcd08de2551f6e92f1",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander 400.cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander 400.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Outlander 400",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "786dca7228d3ea4d4283db05ab88d6c4438cab871d56c5b484c34da45731c7e9",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander 800  (24AA08).cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander 800  (24AA08).cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Outlander 800 (24AA08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "126848e9fc1d0d4acfd91d7d9f6d4ec70aa4e4d740a9cabc0c8c7ac43e6dd908",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander MAX 800  (24AA08).cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander MAX 800  (24AA08).cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Outlander MAX 800 (24AA08)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "893f4ce61020ecb1846c838a1f91afcf0c05306bc80801093fffc09a391cbeca",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander MAX1000 XT-P  S12HZ64.cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander MAX1000 XT-P  S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Outlander MAX1000 XT-P S12HZ64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4271ce0ca7d401f61fdb57d10ea2789746c873bb454d877560c46864bfb5f80d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP Outlander MXZ 800  (9S12HZ64).cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP Outlander MXZ 800  (9S12HZ64).cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP Outlander MXZ 800 (9S12HZ64)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "c1469bfc18cfefd10e7b9f5ff2a8cca46e2b8939a18cdbe4fafe3742112fe521",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/BRP/BRP renegate MXZ 800  (9S12HZ64).cal",
+        "Calculators/MOTO/Motobikes/BRP/BRP renegate MXZ 800  (9S12HZ64).cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/BRP",
+      "currentName": "BRP renegate MXZ 800 (9S12HZ64)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5c49304add29778712293b1748ccb7c15dc621fbd6477dfc3adbbd74b7be8199",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto  93C46.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto  93C46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 93C46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "59912fc8925b02ca3253627b4018cf06c99ddc3bbfdc2d58cd3de781f257a779",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 24C02.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 24C02.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 24C02",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/CFMOTO/CFMOTO 24C02.cal"
+    },
+    {
+      "sha": "39c2012501038e72cbcb93b34b5a46f273bd8b8a7746e4d202e32024a9800b8f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 24C08 V2.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 24C08 V2.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 24C08 V2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3375f185c2eaa44024eaf6918b43dba7f2f9f7ff0fe3710c0caba5aaabc384de",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 24C08 V23.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 24C08 V23.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 24C08 V23",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "93864aaf7c32c830177098a5bf9992dfac519f3c38d1bd6e609484eb3d49a9c3",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 24C08.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 24C08",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/CFMOTO/CFMOTO 24C08.cal"
+    },
+    {
+      "sha": "d0fa815edf48211548d326c3deff3a7c5388372e1be296ec4e309748b2b56353",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/CFmoto/CFmoto 500A  24C02.cal",
+        "Calculators/MOTO/Motobikes/CFmoto/CFmoto 500A  24C02.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/CFmoto",
+      "currentName": "CFmoto 500A 24C02",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "f696fff317b544d95b90a6c3ee4579f9fbebbd5586243db9290eab28606f0a36",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR 1000RR 93C66 kansey.cal",
+        "Calculators/MOTO/Motobikes/Honda/CBR 1000RR 93C66 kansey.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR 1000RR 93C66 kansey",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "9d3db80c2558191f12e69c17c3a11d624369355c6e3bcbeeb1401a6ede86b16e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR 2016.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR 2016",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5f91fd9c17ed8d327751de69e4d73a16c6d806208f9a7b1fa298f23fd15c94b8",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR 600RR 93C56.cal",
+        "Calculators/MOTO/Motobikes/Honda/CBR 600RR 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR 600RR 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "c624b1b109e71b17eae0a94395025381459c7be70f017bbc2fbca3c081eda018",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR-600-RR  93C56.cal",
+        "Calculators/MOTO/Motobikes/Honda/CBR-600-RR  93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR-600-RR 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5fb60d723832622bfd48c21e4732e8030bf4815f03b7f6044f1ba1c79155e7e3",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "22eb493781deb431d8044d0d8c8c4b856bd6d6ea81db3e8abb5817da6c9c545c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CBR929RR 93C56 kansey.cal",
+        "Calculators/MOTO/Motobikes/Honda/CBR929RR 93C56 kansey.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CBR929RR 93C56 kansey",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2668d8b57fb436393bbd7dff38d0ac45bf4cdb2d0981549ec777037e989c2e71",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/Click 125 24C04.cal",
+        "Calculators/MOTO/Motobikes/Honda/Click 125 24C04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "Click 125 24C04",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "044be95a6b4046bdb36968204cfa6a81441c3bd35ea843848a6d0af2673fd3f1",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CLICK 2015.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CLICK 2015",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a1b7c3dee2f4485ac154bfebc20e43843989a2fc8ed1c3768a23196cc3b97315",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CLICK.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CLICK",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "dadb1ff98d72f68ead38d7201607cc752cef1fb688403d8b1bfd137c76ed2a36",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CRB 1000 RR  93C86.cal",
+        "Calculators/MOTO/Motobikes/Honda/CRB 1000 RR  93C86.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CRB 1000 RR 93C86",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b843610659610703990f66cbb0d28bc469ebbcc6dec13ea2ffbbfab12f661519",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CRB 1000RR  93c66 .cal",
+        "Calculators/MOTO/Motobikes/Honda/CRB 1000RR  93c66 .cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CRB 1000RR 93c66",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "36a44837277297818b8f7d2910bda8052977bdc2d4edb915699be990c105c841",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/CRF 250L  24c04.cal",
+        "Calculators/MOTO/Motobikes/Honda/CRF 250L  24c04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "CRF 250L 24c04",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4b5a101360b357a85a603872fa5cc453996850eea4271976d10d1f9e56f2121d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/NC700X  24C04.cal",
+        "Calculators/MOTO/Motobikes/Honda/NC700X  24C04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "NC700X 24C04",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3b881346d2fd8bba93e1d2703427aebe1b0de737788bdc7d55c8d5fe7ecbbeac",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/PCX 150 24C04.cal"
+      ],
+      "currentFolder": "Dashboard/Honda",
+      "currentName": "Honda PCX 150 — коррекция пробега (EEPROM 24C04)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8c214d8ed185120c422b50dd61d4de26e21574a25dfb44a6abeb42c1d162929c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/PCX 2012.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "PCX 2012",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "9c385c5964baeb4fb48e07b2a39defcc5a29e46a177811a50d266e4979b100db",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/PCX 2015.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "PCX 2015",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "90992d0a012c03543c0a29a8b0850924508377787218f774d3571d468ebb0ad4",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/PCX 2018.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "PCX 2018",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "73295869ee1467b6c3a412c157a7927cec13ac4a920fd71f95272dd336749209",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/VARIO 2015.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "VARIO 2015",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4bf2f60c3cc0482faf4ff6e824094de8c7abdb97c1f0b91f595e88215d48865f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/VARIO 2018.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "VARIO 2018",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "0f30c50dc5cad288f3feab228c8907e39fffdde71533e30f646929f2fe21e3c6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/VARIO-CLICK 2018.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "VARIO-CLICK 2018",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3f1614b9feb64026d5fcf7ea75714bf4d1d55572b98aab6b24f9a57da511f441",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/VFR 800 93C56.cal",
+        "Calculators/MOTO/Motobikes/Honda/VFR 800 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "VFR 800 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "ea69ab1ecf028e7d8ab3b83de5e2653035435a171ef8f49d0e64a13921cf90ff",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Honda/VRF800 VTEC 93C56.cal",
+        "Calculators/MOTO/Motobikes/Honda/VRF800 VTEC 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Honda",
+      "currentName": "VRF800 VTEC 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b2efae87e930d92200dfe2bfe7f9f53d51445eace1e5925848166e6210fec72c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Kawasaki/Kawasaki Ninja 300  2013  93c46.cal",
+        "Calculators/MOTO/Motobikes/Kawasaki/Kawasaki Ninja 300  2013  93c46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Kawasaki",
+      "currentName": "Kawasaki Ninja 300 2013 93c46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6c8c7da93c6b480777cf22dd5dff5adda1be2a4ed81ac5da376a6b4eb867ec88",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Kawasaki/Kawasaki vn900 93C46.cal",
+        "Calculators/MOTO/Motobikes/Kawasaki/Kawasaki vn900 93C46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Kawasaki",
+      "currentName": "Kawasaki vn900 93C46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2b79a84fcc81c16aca8c0aaba863529894ac09d0dbb53cbcd382ea8180f28d2a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/KTM/Super Duke 93C56.cal",
+        "Calculators/MOTO/Motobikes/KTM/Super Duke 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/KTM",
+      "currentName": "Super Duke 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a313e4da61746694a2b267c91489690671ae3f882a12da42de1544d4479d3e50",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/MT 9.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes",
+      "currentName": "MT 9 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "480a55750654f86119cb38d1bc70d967513181803d0d59d4392386f4147f20b9",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/MV Agusta/MV Agusta Brutale 800 RR 93c46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/MV Agusta",
+      "currentName": "MV Agusta Brutale 800 RR 93c46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "9b1961e5941a7f39ffaff51988046be7730cb2c9cbdb774ec109c95783d396d0",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/PIAGGIO/Liberty R5F10DLD.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/PIAGGIO",
+      "currentName": "Liberty R5F10DLD",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e5f6e63f0afed66a620d7d84761feaceba15d7bb029d8e6d25f34b489d3d2d1b",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/PIAGGIO/vespa R5F10DLD.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/PIAGGIO",
+      "currentName": "vespa R5F10DLD",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "34e8539d0dff739a2dbe2ba81d91bd476a40004ad7d774f2ac6e07c4c319360f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Polaris/Polaris Ranger RZR.cal",
+        "Calculators/MOTO/Motobikes/Polaris/Polaris Ranger RZR.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Polaris",
+      "currentName": "Polaris Ranger RZR",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "333fce19be0a39ffbf8d6c18a21dfbb6857771906e0c851cc59a095fffd701e1",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Polaris/Polaris Sportsman 800.cal",
+        "Calculators/MOTO/Motobikes/Polaris/Polaris Sportsman 800.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Polaris",
+      "currentName": "Polaris Sportsman 800",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "0c43ae8521e5cf6020477243d6443c64b95c175b436719c708ed7d012e625ce6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/SLASH-93C56-SPSM-14H18-115.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes",
+      "currentName": "SLASH-93C56-SPSM-14H18-115",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "30ac8c3d01ce6881faa49bc012722344d89c47f523853d509f97d63b2aac7a7b",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Bolivard 93C56.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Bolivard 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Bolivard 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8c51befc7b8ecf67597ce3e9e08cd43b2b27833a032cc380ae998026d983eb9a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Boulevand C90T  93c46.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Boulevand C90T  93c46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Boulevand C90T 93c46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "bf6afaa0c81cd554da3b53bfaf19e4f5fbdf7d1137b41e327d943e82a8b46d17",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/DJEBEL.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/DJEBEL.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "DJEBEL",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "867aa76f17a3b8d69b9d515c4476e33082863813b4b2a8808e5d978b44b07122",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/GSX1300R 93C56.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/GSX1300R 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "GSX1300R 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "cdb8946e518ac00f1164d79540da77b8c5ff20f0951bcc0e4b7eb365edfdb01e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/GSX1400 93C56.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/GSX1400 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "GSX1400 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b2745d50345176f256ffb29ab1ac6d98c0a4d840c98e996e607c0af4e80e12f6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/GSXR600 93C56.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/GSXR600 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "GSXR600 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "95714ea68bb7ed788a6c8f50e2a12ee79c4cb85e6b8fdbda4afc01f6723fc29f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Suzuki Djebel 125-250  93c46  Denso.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Suzuki Djebel 125-250  93c46  Denso.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Suzuki Djebel 125-250 93c46 Denso",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "33d7d10454df5a5cabd472172155349fdf5ce1e6a62df4edbb4b8ca17bcad8b5",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Suzuki DMX.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Suzuki DMX.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Suzuki DMX",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "f0bdcd46e321d9b0eb386140426bf92bb68018b6cdbda4b7f8fcb7b48c4d5eb5",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Suzuki DRZ400.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Suzuki DRZ400.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Suzuki DRZ400",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2c9ae13428cca8c13e4a96ba9b5f9bf3633e59fdce437c9990bc4dd788cc65c5",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Suzuki/Suzuki_Hayabusa 93C56.cal",
+        "Calculators/MOTO/Motobikes/Suzuki/Suzuki_Hayabusa 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Suzuki",
+      "currentName": "Suzuki_Hayabusa 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2c3922d759f735d373ffbdb0de2a2dc629491941dec13e57ef872c329c54e459",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Triumf/Triumf Rocket III 93C66.cal",
+        "Calculators/MOTO/Motobikes/Triumf/Triumf Rocket III 93C66.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Triumf",
+      "currentName": "Triumf Rocket III 93C66",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b904403785586c1a1ea885d745ee7ea140a490243788f258110ac91ebb3e228a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Triumph/TRIUMPH 24c32.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Triumph",
+      "currentName": "TRIUMPH 24c32",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "66e054ebabc68edf432426fcfe25aca07608a91b50c9656877b1828224add049",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Triumph/TRIUMPH PIC18F458.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Triumph",
+      "currentName": "TRIUMPH PIC18F458",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "31736e5f337cdb8e200cf24b8872613ba658f129b7e248c7f70ce7011480d9a0",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/FZR 400 93C46.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/FZR 400 93C46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "FZR 400 93C46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "219618d44d514652f4b572df49a3b1bac4b620e66ae3e73de65258a5bbee9364",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Griz 24C02.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Griz 24C02.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Griz 24C02",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "12190cf498758d3501cccd9e80a73b2733f1f398489d68a221582c319853b30a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Jog 93C46.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Jog 93C46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Jog 93C46",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "fd2f3074cb09c20323bf5e5a8411caf5336e9c3b2b689a2e51b4e5c063e77c99",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/NVX - JANUS.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "NVX - JANUS",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "49cd2aae9aa1ab1bcb39042e6be0d3a9abde559b61e0884c70f109d5e68c0ca3",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/R1 93C56.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/R1 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "R1 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5450d97623602a45f89c5fd55c1f88741469fd3df206ae99168993839c6f7725",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/WR-125x 93C56.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/WR-125x 93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "WR-125x 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8c976bfeacef885c7322302727b6236008d0d45485c0d5a5d9ad416cf563cf9e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha Phazer 93c66.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha Phazer 93c66.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha Phazer 93c66",
+      "reason": "точное имя найдено только в несовместимой ветке: Snowmobiles/Yamaha/Yamaha Phazer 93C66.cal"
+    },
+    {
+      "sha": "1f245cf2231aceb54081e105ab0330d6fc4b2a94f3cb0d1f162f16f1e1c4fac8",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha R1  93C66.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha R1  93C66.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha R1 93C66",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e0e5780e14768dabf841e077626daddbfbfc0315fadeeb1177f8735a020e9de5",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha VX110  93C56.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha VX110  93C56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha VX110 93C56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a53810c1b0c32ac0ae300aed7fddaa032411ece040e2726b5029eec4cda04161",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha Warrior 93c56.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha Warrior 93c56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha Warrior 93c56",
+      "reason": "точное имя найдено только в несовместимой ветке: Snowmobiles/Yamaha/Yamaha Warrior 93C56.cal"
+    },
+    {
+      "sha": "0b889c400c2984e223a61a0ceba5e17928a8777068b0f2cce8e6fd38dede044a",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha WR 250 - 24C02.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha WR 250 - 24C02",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "266a93c139943d3136401930a03694e510e8791015a0c5739606df93bc54f660",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha WR-125x 93c56.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha WR-125x 93c56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha WR-125x 93c56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "d43bf2bcc52374bb7c7f50765d3029679053e2db9fe8588e054683cce1e95831",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Motobikes/Yamaha/Yamaha XT660R 24c02.cal",
+        "Calculators/MOTO/Motobikes/Yamaha/Yamaha XT660R 24c02.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Motobikes/Yamaha",
+      "currentName": "Yamaha XT660R 24c02",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4774b3b211603a17b8e49c7bcbdc8e4f81297c0c2d9262ef1e228b9058b92ebe",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/24C164 Proba.cal",
+        "Calculators/MOTO/Snowmobile/24C164 Proba.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP 24C164 Proba — коррекция пробега и моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3a87ff75d64f39f19a1b277ab59341988ca2c7173dff56eb3beeedcffbbdc289",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Arctic Cat/Arctic Cat 660 VT  (ST62T40B).cal",
+        "Calculators/MOTO/Snowmobile/Arctic Cat/Arctic Cat 660 VT  (ST62T40B).cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Arctic Cat",
+      "currentName": "Arctic Cat 660 VT (ST62T40B)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6b11e5bf799f43c6162bfd30dd5d1c5526da60492431702fb2135f8ef1e9c573",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Arctic Cat/BEAR CAT 570XT 24C08.cal",
+        "Calculators/MOTO/Snowmobile/Arctic Cat/BEAR CAT 570XT 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Arctic Cat",
+      "currentName": "BEAR CAT 570XT 24C08",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b1a113d52d013246732514aee279e7a24e1841c93d6e59765a0e1e08227a0b5f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Bombardier 24C01.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Bombardier 24C01.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Bombardier 24C01",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b4f6b1ac5e7f797b408884da3d0de321ee003756bb736a4e47f79abd7fc89022",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Bombardier LYNX YETI 69 9S12HZ256.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Bombardier LYNX YETI 69 9S12HZ256.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Bombardier LYNX YETI 69 9S12HZ256",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "f447b6fc7e743a75e4f9611adeb50a8949a019efda896792d5f7e8466f1601f4",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Commander V800 9S12HZ64.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Commander V800 9S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Commander V800 9S12HZ64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7b483fd25b3e5c6aa8d4020f6e3de9467c206a13013346acf8f4a6630a9ce42e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Freeride 9S12HY64.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Freeride 9S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Freeride 9S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6f087ad0551c0ec237a75f729fba73d9087841b23007f56ed12890458792571b",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Lynx Yeti 69 9S12HZ256.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Lynx Yeti 69 9S12HZ256.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Lynx Yeti 69 9S12HZ256",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "50504acbb343a8ae1065b878855a0745fdb863747dfe952ee4b7d7c88a868d96",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Renegade 800R 9S12HZ64.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Renegade 800R 9S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Renegade 800R 9S12HZ64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e695bdb283071ac168e0681ad1b33a64bde6a7f740ac104275bf0d44b9eead2b",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo/Summit X154 9S12HY64.cal",
+        "Calculators/MOTO/Snowmobile/BRP Ski-Doo/Summit X154 9S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP Ski-Doo",
+      "currentName": "Summit X154 9S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
+        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP 24C04 Proba — коррекция пробега и моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2ed5d77d147fec1e0df8b1e5574dcc503858fecfdb96d23e27518749afaaec1c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Commander  S12HZ64.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Commander  S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Commander S12HZ64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "dc3e64b43f3e499b08f0ff336dc8d625c4c27e686f6da3fca1055b1d47be3eeb",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Commander Limited 600  9S12HZ256.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Commander Limited 600 9S12HZ256",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "335052e2b49d852c759e4a7e60b3751ac1f49290a0e8d239a1ad26c6fcc5d9df",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Expedition LE900  9S12HY64.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Expedition LE900  9S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Expedition LE900 9S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "c784a7df00fc821d09e63d510f25b041f6de8d9a046c87cbe5522cc18eb488cf",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Freeride 146 800R  S12HY64.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Freeride 146 800R  S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Freeride 146 800R S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a9356685102d267562a65801c663ab8ca4e1bf5f2e99a95e6aaf9039c63a785f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Tundra  S12HZ64.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Tundra  S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Tundra S12HZ64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3e5a6f82b2919767638e4b2a2318a287dc64fa9eb181e84d89dd069a4f737a3c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/BRP Vitec 600   MC9S12HY64.cal",
+        "Calculators/MOTO/Snowmobile/BRP/BRP Vitec 600   MC9S12HY64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
+      "currentName": "BRP Vitec 600 MC9S12HY64",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "6c5875d3a9b01a73a7b35e82a0cc261026aa346183ce9bbbff2ed4e0ed7aed90",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Aquatrax 93c56.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/Aquatrax 93c56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Honda",
+      "currentName": "Honda Aquatrax 93c56 — коррекция моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2287a466d1828a33de172955bdb8518047b313604f7d7a37e1410c5bf9685683",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/BRP",
+      "currentName": "Sea-Doo GS 93C56 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "f90cbd6a323f7cc90d5c2cd5653979d75d56d081f008ccc206f4daa88c257e0f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha",
+      "currentName": "Yamaha WaveRunner 93C46 — коррекция моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "904e52dcc5d5afd191e20b77b45d8a53759a2b71683fb7ee23fa429648e793d2",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Polaris/Polaris Sportsman 850 XP 24C04.cal",
+        "Calculators/MOTO/Snowmobile/Polaris/Polaris Sportsman 850 XP 24C04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Polaris",
+      "currentName": "Polaris Sportsman 850 XP 24C04",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "23cc418f63f7ff685f89bfe393da34e6ce74b0d249e66b938e05398c6f55002f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Polaris/Polaris Sportsman WV850 24C04.cal",
+        "Calculators/MOTO/Snowmobile/Polaris/Polaris Sportsman WV850 24C04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Polaris",
+      "currentName": "Polaris Sportsman WV850 24C04",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/Polaris/Sportsman/Polaris Sportsman WV850 24C04.cal"
+    },
+    {
+      "sha": "d81b84fd517620bb4c799e27fb10a348ed76fa8e3edcc663ddedc3387ebc386e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Polaris/Polaris Switchback Assault 24C04.cal",
+        "Calculators/MOTO/Snowmobile/Polaris/Polaris Switchback Assault 24C04.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Polaris",
+      "currentName": "Polaris Switchback Assault 24C04",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "3a4023de49af3016ff0cbf55ecbd00b4af2cffe0cde06a810499405eaa0cd85d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Polaris/Sportsman 93C46 Miles.cal",
+        "Calculators/MOTO/Snowmobile/Polaris/Sportsman 93C46 Miles.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Polaris",
+      "currentName": "Sportsman 93C46 Miles",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "103fbf78b3850a52935aa62bef884223bd401c02f7b1e17e5fff5b13684676f6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 24C01.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 24C01.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 24C01",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "804c1f73f211517bd216a5199de959317e6875940827070629e93b97193242c7",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V1.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V1.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 9S12HZ64 V1",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Bombardier no name/Bombardier 9S12HZ64 V1.cal"
+    },
+    {
+      "sha": "abd8b9a23130f12501190d833522d6599cefdb91e58b808996031bbd1cb92d0f",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V2.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V2.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 9S12HZ64 V2",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Bombardier no name/Bombardier 9S12HZ64 V2.cal"
+    },
+    {
+      "sha": "f6c8ce8e9757ac485d3924ddf1f4cee4b9842fe97955bc78280ccc55b401e084",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V3.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V3.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 9S12HZ64 V3",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Bombardier no name/Bombardier 9S12HZ64 V3.cal"
+    },
+    {
+      "sha": "cf0c2e68e366d913d2613e6753dadf23ad2d04849122576e116adb78974e97a6",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V4.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 9S12HZ64 V4.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 9S12HZ64 V4",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Bombardier no name/Bombardier 9S12HZ64 V4.cal"
+    },
+    {
+      "sha": "99eb98ff11a5474f60716588aaa6340f7932eb7addb2f0d031602ad580f6606c",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier 9S12HZ64.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier 9S12HZ64.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier 9S12HZ64",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Bombardier no name/Bombardier 9S12HZ64.cal"
+    },
+    {
+      "sha": "bbd8bc17e17eda9d02dce3bd31274cfaba12898236627e25b1e906025e637e42",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier GTX550F 24C01.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier GTX550F 24C01.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier GTX550F 24C01",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e2bd8847b256f478ddb323c0d4ace20db1e7ca0dd404cd4f1572e2c6e6624a8e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander 800 908AZ60A.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier Outlander 800 908AZ60A",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Outlander/Bombardier Outlander 800 908AZ60A.cal"
+    },
+    {
+      "sha": "2c2a237c378c4d2f007eced1df8491b9c4b339da775ee74b7968917f0dd2a12e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX400 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier Outlander MAX400 24C08",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Outlander MAX/Bombardier Outlander MAX400 24C08.cal"
+    },
+    {
+      "sha": "bcdeb4f51ea8e5f35e7d905ca5e998c362e0179f4aab0c003f268a138d10b2ce",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX650 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier Outlander MAX650 24C08",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "efcb5d7ac34983ba714383d393291080579101411e91dd9fe5ca72edc688ada8",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Bombardier Outlander MAX800 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Bombardier Outlander MAX800 24C08",
+      "reason": "точное имя найдено только в несовместимой ветке: ATV/BRP/Outlander MAX/Bombardier Outlander MAX800 24C08.cal"
+    },
+    {
+      "sha": "5cbfd70bc87199596d49d7dbff299737ec9b7d67c9806ddc19f1ca5f9dbabd98",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Ski-Doo/Scandic 9S12HZ256.cal",
+        "Calculators/MOTO/Snowmobile/Ski-Doo/Scandic 9S12HZ256.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Ski-Doo",
+      "currentName": "Scandic 9S12HZ256",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "0c654e93db0c03fe60145ca75411839547ac95bf2ac11bbf3d6676f86f7b198d",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Taiga/24C16  Proba.cal",
+        "Calculators/MOTO/Snowmobile/Taiga/24C16  Proba.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Taiga",
+      "currentName": "24C16 Proba",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7a68a6bef3319f336c818f5407b5bd53993d9ebaabcf6cf69d12b1b96efc07af",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Taiga/Taiga patrol 550 SWT 24C08.cal",
+        "Calculators/MOTO/Snowmobile/Taiga/Taiga patrol 550 SWT 24C08.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Taiga",
+      "currentName": "Taiga patrol 550 SWT 24C08",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "b9cde17863cb8769b2d942be102e0c7370f601c55dc1abe6e994b5fe8b240383",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Yamaha/Yamaha  Professional ( VK 10 D )  93c56.cal",
+        "Calculators/MOTO/Snowmobile/Yamaha/Yamaha  Professional ( VK 10 D )  93c56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Yamaha",
+      "currentName": "Yamaha Professional ( VK 10 D ) 93c56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "4ff8e99e7ec3893b2a289214e8eaf9a5a17486681564fdc872fbb2cbf0ed5fad",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Yamaha/Yamaha  Venture 700  93c56.cal",
+        "Calculators/MOTO/Snowmobile/Yamaha/Yamaha  Venture 700  93c56.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Yamaha",
+      "currentName": "Yamaha Venture 700 93c56",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "53414b7684f9f9d9ce9f0ca9e1d192932da1dfff918d7acf6d391a485af82eb1",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Yamaha/Yamaha RS Venture TF  93c66.cal",
+        "Calculators/MOTO/Snowmobile/Yamaha/Yamaha RS Venture TF  93c66.cal"
+      ],
+      "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Yamaha",
+      "currentName": "Yamaha RS Venture TF 93c66",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "fed6a62ac14ab25de87dde75d56622c12fb90a9556bf3cade5566270124c5983",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/ATV BRP Outlander  v1.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP ATV Outlander — коррекция пробега (EEPROM 24C02)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "05d43d30196b394cfdcc15ae3dfec2fa517d8d1c8c63904b955a8883df0a675e",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/ATV BRP Outlander v2.cal"
+      ],
+      "currentFolder": "Dashboard/BRP",
+      "currentName": "BRP ATV Outlander — коррекция пробега (EEPROM 24C02) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "8bf316e43bdc05990eba14037cf8fa7a010c4bb481b93b5b8e3dcfc69303bf16",
+      "group": "Mototechnics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/ATV/ATV Kymco China.cal"
+      ],
+      "currentFolder": "Dashboard/Kymco",
+      "currentName": "Kymco ATV China — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "785d6cea3d8affce29d1683389fb06ea10272fef2a8aa4f4c954db4aa3088dcc",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Belarus/Belarus PIC16F886.cal"
+      ],
+      "currentFolder": "Dashboard/Belarus",
+      "currentName": "Belarus PIC16F886 — операция не подтверждена",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7de4ebc04133f11fee2364d18c8929ecd93415bac6649e2d07d1c578cb6254f6",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Belarus/KD8083/PIC16F886.cal"
+      ],
+      "currentFolder": "Dashboard/Belarus/KD8083",
+      "currentName": "Belarus KD8083 PIC16F886 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "5cccf9d6b18a668dce56ece5c4245b84687e628b585c8e31a435a71ac95508fe",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Case/Case 695 Super R.cal"
+      ],
+      "currentFolder": "Dashboard/Case",
+      "currentName": "Case 695 Super R — коррекция моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a4e6ac47862e7e3f60aa3803296a462d2aaa12682f7ff45badb7c2d5b5b376c6",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/DONG FENG/DFA 1145 93c66.cal"
+      ],
+      "currentFolder": "Dashboard/DongFeng",
+      "currentName": "DongFeng DFA 1145 — коррекция пробега (EEPROM 93C66) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "0f7207ab869078873d26ce67772e87cb2746c61f5fc41ff7eced03808ece161c",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/DONG FENG/DFL 3251A 93C66.cal"
+      ],
+      "currentFolder": "Dashboard/DongFeng",
+      "currentName": "DongFeng DFL 3251A — коррекция пробега (EEPROM 93C66) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7bca87a9d9ed2d82cf3131172174b105f93baeca5fce737658a3ea4a5b6e9d59",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/DONG FENG/DFM EQ5021 24C02.cal"
+      ],
+      "currentFolder": "Dashboard/DongFeng",
+      "currentName": "DongFeng DFM EQ5021 — коррекция пробега (EEPROM 24C02) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "d4e864f7418d2f03b42731b1436b81fabdfa2dac4e04a4a1e78696d2d4adff89",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/DONG FENG/DFM S30 93C66.cal"
+      ],
+      "currentFolder": "Dashboard/DongFeng",
+      "currentName": "DongFeng DFM S30 — коррекция пробега (EEPROM 93C66) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "74b783ee021898b15baa828d325934c03145c4d57af062b5cff9ff75db483761",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/DONG FENG/DONG FENG S30  93C66.cal"
+      ],
+      "currentFolder": "Dashboard/DongFeng",
+      "currentName": "DongFeng S30 — коррекция пробега (EEPROM 93C66)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2a93db62a08c3c699493103b4a5e2e195e2b1f43b0ce0eedce09bce1ba865e78",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Hitachi/Hitachi 93C56.cal"
+      ],
+      "currentFolder": "Dashboard/Hitachi",
+      "currentName": "Hitachi — коррекция моточасов (EEPROM 93C56) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a2a9ec13401d6888cba6fdca503e7956f6b14505ddb45e80dc18be8037c8e16c",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/JCB/JCB 320 DASH 93C66 .cal"
+      ],
+      "currentFolder": "Dashboard/JCB",
+      "currentName": "JCB 320 — коррекция моточасов (EEPROM 93C66)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e5754503ff1abaf92b23e66222df0348e2d2ea182475e2a4e35e0839c13c21e7",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/JCB/JCB 320 ECU 93C86 .cal"
+      ],
+      "currentFolder": "Dashboard/JCB",
+      "currentName": "JCB 320 — коррекция моточасов (EEPROM 93C86)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e1e1cb853a2228046f815a70378c2743ddfae58261db9cdb05d0c0e39166100f",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/JCB/JCB 3CX  PCF8582 .cal"
+      ],
+      "currentFolder": "Dashboard/JCB",
+      "currentName": "JCB 3CX — коррекция моточасов (EEPROM 93C66)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "bf3556c17fbc11a3482c597444b75d3bc0f730e6ff5785e016d765ca9393d3a1",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/JCB/JCB GX3 24C16 .cal"
+      ],
+      "currentFolder": "Dashboard/JCB",
+      "currentName": "JCB GX3 — коррекция моточасов (EEPROM 24C16)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "2a48e52c5c20f08274bf1293614790fc23211eb446eb15b9942e15a1aca3069d",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/JCB/JCB GX3 24C16 var2 .cal"
+      ],
+      "currentFolder": "Dashboard/JCB",
+      "currentName": "JCB GX3 — коррекция моточасов (EEPROM 24C16) · вариант 2",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "d6053fe6909a42393c8aeb4b2b18b7a79dd24bf554ae14a28d18933a81fe4718",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/John Deere/John Deere .cal"
+      ],
+      "currentFolder": "Dashboard/John Deere",
+      "currentName": "John Deere — коррекция моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "33cd564a27fab5591332aa2629031e5ef370e274ff72050dad76523a95fb9da3",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/John Deere/John Deere 325 93C66.cal"
+      ],
+      "currentFolder": "Dashboard/John Deere",
+      "currentName": "John Deere 325 93C66 — операция не подтверждена",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "028a56cefdccc6ad4e26f7efe153b61e410d1ef7a8aad17fd49306145b2a06d4",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/John Deere/John Deere ECU 93C86.cal"
+      ],
+      "currentFolder": "Dashboard/John Deere",
+      "currentName": "John Deere ECU 93C86 — операция не подтверждена",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "f775d8ba9c9c674aab6ba8eaefc05afd9c5d5d2ec286a4a6746d3a63e39e921e",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/KAMATSU/Kamatsu  24C32.cal"
+      ],
+      "currentFolder": "Dashboard/Komatsu",
+      "currentName": "Komatsu — коррекция пробега (EEPROM 24C16)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7a1ed2313f4e0a9bf09707bf5c1bae3f99e84c2fd4247b30d624f7a0f73da4df",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/KAMATSU/Kamatsu  93C86.cal"
+      ],
+      "currentFolder": "Dashboard/Komatsu",
+      "currentName": "Komatsu — коррекция пробега (EEPROM 93C86)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "e7b216d50fba2463939866f9b71306bf4ced1f198ecaa5ecec8df096fb416cdd",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/KAMATSU/Kamatsu WB975  24C16.cal"
+      ],
+      "currentFolder": "Dashboard/Komatsu",
+      "currentName": "Komatsu WB975 — коррекция пробега (EEPROM 24C16)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "a39ff25c10186c56725ed7eedb289f478f4ffe243f5291ac19256773b1eda110",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Kirovec/Kirovec K 3180 ATM 25160.cal"
+      ],
+      "currentFolder": "Dashboard/Kirovec",
+      "currentName": "Kirovec K 3180 ATM 25160 — коррекция моточасов",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "44efb3b056ba688aba87dcf7ed53ff1f9abd0b0dfa80c1303d59e0fefdfc7d5f",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/Shantui/Shantui  PIC12F675.cal"
+      ],
+      "currentFolder": "Dashboard/Shantui",
+      "currentName": "Shantui PIC12F675 — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "7688793ebf7cea673e0d02141811ae6f25a3ff73f7c86f7faa7261bff9cdc64f",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/XCMG/24C02 Proba.cal"
+      ],
+      "currentFolder": "Dashboard/XCMG",
+      "currentName": "XCMG Proba — коррекция пробега (EEPROM 24C16)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    },
+    {
+      "sha": "9d8e0bfd077ad9c5c34edc21a1d2aa395049815f25785fae8c02f033e77c3883",
+      "group": "Special technics",
+      "paths": [
+        "Calculators/MOTO - TRUCK - ATV/Special vehicles/XCMG/XCMG500KN  24C64.cal"
+      ],
+      "currentFolder": "Dashboard/XCMG",
+      "currentName": "XCMG XCMG500KN — коррекция пробега (EEPROM 24C64)",
+      "reason": "точного полного имени нет в совместимой ветке эталона"
+    }
+  ]
+}
