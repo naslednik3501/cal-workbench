@@ -13,7 +13,7 @@ if(!base||!['127.0.0.1','localhost','[::1]'].includes(new URL(base).hostname))th
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base,{waitUntil:'load'});
   await page.waitForFunction(()=>!document.getElementById('openCal').disabled);
-  assert.equal(await page.evaluate(()=>CAL_CATALOG.meta.calculators),24919);
+  assert.equal(await page.evaluate(()=>CAL_CATALOG.meta.calculators),25455);
   assert(await page.evaluate(()=>Boolean(globalThis.CatalogScope)));
   const source='Size(200,120);Form{Digit(km,"Value",0,0,100);Label(msg,"",0,30);} OnShow{@0=17;km=2;} OnApply{@1=km;@2=@2+1;}';
   await page.locator('#openCal').setInputFiles({name:'coordinator-synthetic.cal',mimeType:'application/octet-stream',buffer:Buffer.from(source)});
