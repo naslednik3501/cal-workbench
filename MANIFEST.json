@@ -303,8 +303,8 @@
     },
     {
       "path": "catalog-organization-airbag.js",
-      "bytes": 935336,
-      "sha256": "7affbea02026c079e68ae98f340d6da4f42dfa77b24faae2269aa92f8af93745"
+      "bytes": 935374,
+      "sha256": "51601ded8ce14b1177998dbeaf5a670796195398603af0021fa1fd28e4af39ca"
     },
     {
       "path": "catalog-organization-asia-acura.js",
@@ -1563,8 +1563,8 @@
     },
     {
       "path": "reports/catalog-airbag-organization-2026-11-04.json",
-      "bytes": 15655,
-      "sha256": "19fc8b628327762d5227514af7aabda081e6ea79d95f32e31fb49eab434daa31"
+      "bytes": 16740,
+      "sha256": "91278be8634847b68900b981d1af2ef732f9a8c849cc79086f06c1fd537da758"
     },
     {
       "path": "reports/catalog-inventory-unclassified-2026-11-04.json",
@@ -2038,8 +2038,8 @@
     },
     {
       "path": "tools/catalog_airbag_organization.js",
-      "bytes": 21329,
-      "sha256": "3d1ca1f0e8016afc6856a505cef537b69b256ccc4569a5bfcf0c53aca875fac1"
+      "bytes": 22683,
+      "sha256": "12e1bea193549489937ce74020b2f2295d4ff1f9692b7f2d9ce028b0c9f783da"
     },
     {
       "path": "tools/catalog_device_organization.js",
