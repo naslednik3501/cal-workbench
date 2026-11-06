@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2896,
-      "sha256": "7ebd3a5de39ec9cc7eccf40f90908ef2a1bae37ec81a61328cb4ffe762324f08"
+      "bytes": 2938,
+      "sha256": "73a51cc633b7a69ea2f3043df1b3afd137786cb00522ae73ec2ad2648f49ed55"
     },
     {
       "path": "cal-source.js",
@@ -332,6 +332,11 @@
       "sha256": "ed0ef63e183b42262a7a6b78c7c9bde9ab57539117ae766d781fb7a4c6d4ded9"
     },
     {
+      "path": "catalog-organization-asia-remainder.js",
+      "bytes": 35604,
+      "sha256": "c72c3320e7f5d8422043842b00ad20dd385dc3646e4d47f8464fc1e4ce941613"
+    },
+    {
       "path": "catalog-organization-asia-subaru-suzuki.js",
       "bytes": 7917,
       "sha256": "12f13a980094366f256e297673a961ce7c8b02ce2987933c8ae0898a5004e676"
@@ -378,8 +383,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 20662,
-      "sha256": "5ece2646d7f365583cc4eb76c66ffb697756e56d4601a8749bd49ba45faa9e1b"
+      "bytes": 21085,
+      "sha256": "d05a576f058123e08e428b587dc9d5c6133180b4df032c6680549dd33b3d2b3c"
     },
     {
       "path": "catalog-parts.json",
@@ -1388,8 +1393,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12489,
-      "sha256": "bb55331768c4aa20120110aceb50a28bde25f753faa08183a076a5425704df3f"
+      "bytes": 12552,
+      "sha256": "43a4eb420316efcc75654bca84fa2eeb2b0b602db5be19351332f60dfa1db0ac"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1595,6 +1600,11 @@
       "path": "reports/catalog-organization-airbag-srs-2026-11-04.md",
       "bytes": 13662,
       "sha256": "0d730be557b329d0f8268329957037c42aad15660c8ee8188cb802d56aebadce"
+    },
+    {
+      "path": "reports/catalog-organization-asia-exceptions-2026-11-06.json",
+      "bytes": 241725,
+      "sha256": "ee4e49dabae62a61e1f7d2c345c61868c1a87d67aeece64bee4909d2690601d1"
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.json",
@@ -1963,13 +1973,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4805,
-      "sha256": "dcf16cfe1dfed7fe3c67af338a39430adcc1806d4bf1cf161bf3f0758fe33d12"
+      "bytes": 4566,
+      "sha256": "ce75c8abc060c8e6af7133a8cd44510d81e24712b0ad90b32fb3f74518060cda"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 49598,
-      "sha256": "83670e944b4c00425b00f5605bd52120c44a1e060fdfa29e690966516c8864a9"
+      "bytes": 51019,
+      "sha256": "3669388a88f5ff314b8665e68e66f3f78f65cc66fd6954b29ab1429c79d8e8b5"
     },
     {
       "path": "tests/test_text_variants.js",
