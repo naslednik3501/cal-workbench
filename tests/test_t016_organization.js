@@ -593,5 +593,40 @@ await test('tree expanded sections show every unique CAL once, with original exp
  const img=run('picture({type:"P",id:5,text:"Toyota.bmp"})');assert(img);assert.match(img.src,/^data:image\/bmp;base64,/);
  assert(!db.entries.some(e=>e.path.toLowerCase()==='calculators/airbag/toyota/toyota.bmp'),'no duplicate image');
 });
+await test('Airbag/SRS reconciliation accounts for every unique SHA and preserves names',async()=>{
+ const rec=require('../reports/catalog-airbag-reconciliation-2026-11-06.json');
+ const routes=require('../tools/catalog-airbag-routes.json');
+ assert.equal(rec.totals.unique_sha,5383,'Airbag/SRS unique SHA');
+ assert.equal(rec.totals.already+rec.totals.moved+rec.totals.disputed,5383,'three groups cover all SHA');
+ assert.equal(rec.reconciliation_sum,5383,'recorded reconciliation sum');
+ assert.equal(rec.already.length,rec.totals.already,'already count');
+ assert.equal(rec.moved.length,rec.totals.moved,'moved count');
+ assert.equal(rec.disputed.length,rec.totals.disputed,'disputed count');
+ assert.equal(Object.values(rec.disputed_by_reason).reduce((sum,n)=>sum+n,0),rec.totals.disputed,'reason count');
+ assert.equal(Object.keys(routes.routes).length,rec.totals.already+rec.totals.moved,'confirmed routes');
+ const seen=new Set();
+ for(const group of ['already','moved','disputed'])for(const row of rec[group]){
+  assert(!seen.has(row.sha),'duplicate '+row.sha);seen.add(row.sha);
+  const item=org.get(row.sha);assert(item,row.sha);
+  const folder=group==='moved'?row.to:row.folder;
+  assert.equal(item.folder,folder,row.sha);
+  assert.equal(item.name,row.name,'name preserved '+row.sha);
+  if(group==='moved'){
+   assert(row.to.startsWith('Airbag/')&&row.to.split('/').length===3,'moved target '+row.sha);
+   assert.equal(routes.routes[row.sha],row.to.replace(/^Airbag\//,''),'route '+row.sha);
+  }else if(group==='disputed')assert(row.reason&&row.reason.trim(),'reason '+row.sha);
+ }
+ assert.equal(seen.size,5383,'every SHA appears once');
+ for(const [sha,name] of Object.entries(routes.name_overrides))assert.equal(org.get(sha).name,name,'name override '+sha);
+ const moved=rec.moved.find(row=>row.to==='Airbag/Volkswagen/Touareg');
+ assert(moved,'moved Volkswagen entry');
+ const e=entry(moved.sha);assert(e,moved.sha);
+ assert(org.matches(e,moved.path),'old path search '+moved.path);
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(moved.sha)+'))');
+ assert.equal(el('calcTitle').textContent,org.title(e),'moved title');
+ doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
+ assert.equal(download.name,e.path.split('/').at(-1),'moved export name');
+ assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[moved.sha],'base64'),'moved export bytes');
+});
 console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, search, export and pictures via real app.js handlers'}));
 })().catch(e=>{console.error(e);process.exit(1)});
