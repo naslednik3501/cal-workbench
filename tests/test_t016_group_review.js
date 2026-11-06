@@ -13,6 +13,9 @@ const audit = require('../reports/T-016-name-audit-2026-11-04.json');
 const remainder = require('../reports/catalog-organization-remainder-2026-11-04.json');
 const allCal = globalThis.CAL_CATALOG.entries.filter(entry => entry.ext === 'cal');
 const bySha = new Map(allCal.map(entry => [entry.sha, entry]));
+const nissanShas = new Set(allCal
+  .filter(entry => entry.path.startsWith('Calculators/Asia/Nissan/'))
+  .map(entry => entry.sha));
 const decisions = registry.decisions;
 const generic = decisions.filter(row => row.group === 'generic');
 const ambiguous = decisions.filter(row => row.group === 'ambiguous');
@@ -42,12 +45,12 @@ for (const row of decisions) {
   const item = org.get(row.sha);
   assert(item, 'map entry ' + row.sha);
   assert.equal(item.name, row.new_name, 'new name ' + row.sha);
-  assert.equal(item.folder, row.new_folder, 'new folder ' + row.sha);
+  if (!nissanShas.has(row.sha)) assert.equal(item.folder, row.new_folder, 'new folder ' + row.sha);
   assert(org.matches(entry, row.new_name), 'search new name ' + row.sha);
   assert(org.matches(entry, row.old_name), 'search old name ' + row.sha);
   if (row.previous_name) assert(org.matches(entry, row.previous_name), 'search previous name ' + row.sha);
   assert(org.matches(entry, row.canonical_path), 'search original path ' + row.sha);
-  if (row.group === 'ambiguous') {
+  if (row.group === 'ambiguous' && !nissanShas.has(row.sha)) {
     assert.equal(row.new_folder.split('/')[0], row.canonical_path.split('/')[1], 'root preserved ' + row.sha);
   }
   const key = (row.new_folder + '/' + row.new_name).toLowerCase();
