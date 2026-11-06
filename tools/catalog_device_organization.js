@@ -27,6 +27,8 @@ const scopeRegistry = JSON.parse(fs.readFileSync(path.join(ROOT, 'scope-registry
 // stay unchanged. Exceptions keep the generated folder.
 const IMMO_ROUTE_DATA = require('./catalog-immo-routes.json');
 const IMMO_ROUTE_OVERRIDES = IMMO_ROUTE_DATA.routes;
+const RADIO_ROUTE_DATA = require('./catalog-carradio-routes.json');
+const RADIO_ROUTE_OVERRIDES = RADIO_ROUTE_DATA.routes;
 
 const CONFIG = {
   dashboard: {
@@ -787,6 +789,11 @@ for (const [sha, entries] of groups) {
     if (reason) throw new Error(`Immo route override on ambiguous entry: ${sha}`);
     folder = immoRouteFolder;
   }
+  const radioRouteFolder = SECTION === 'radio' ? RADIO_ROUTE_OVERRIDES[sha] || '' : '';
+  if (radioRouteFolder) {
+    if (reason) throw new Error(`Radio route override on ambiguous entry: ${sha}`);
+    folder = radioRouteFolder;
+  }
   let rootRouting = '';
   let routeBrands = [];
   let routeManufacturer = '';
@@ -849,6 +856,7 @@ for (const [sha, entries] of groups) {
     legacyName,
     legacyReason,
     immoRouteFolder,
+    radioRouteFolder,
     rootRouting,
     ...(routeBrands.length > 1 ? { brands: routeBrands } : {}),
     ...(routeManufacturer ? { manufacturer: routeManufacturer } : {}),
@@ -906,6 +914,19 @@ if (SECTION === 'immo') {
   }
   for (const sha of Object.keys(IMMO_NAME_OVERRIDES)) {
     if (!groups.has(sha)) throw new Error(`Immo name override outside the Immo volume: ${sha}`);
+  }
+}
+
+// Moving radio entries into the reference categories changes collision groups.
+// Keep every previously published CarRadio name exactly.
+const RADIO_NAME_OVERRIDES = RADIO_ROUTE_DATA.name_overrides || {};
+if (SECTION === 'radio') {
+  for (const row of rows) {
+    const preserved = RADIO_NAME_OVERRIDES[row.sha];
+    if (preserved) row.name = preserved;
+  }
+  for (const sha of Object.keys(RADIO_NAME_OVERRIDES)) {
+    if (!groups.has(sha)) throw new Error(`Radio name override outside the CarRadio volume: ${sha}`);
   }
 }
 
@@ -970,6 +991,26 @@ if (SECTION === 'immo') {
     throw new Error('Immo reconciliation counts do not match the generated volume');
   }
 }
+if (SECTION === 'radio') {
+  const routed = rows.filter(row => row.radioRouteFolder).length;
+  if (routed !== Object.keys(RADIO_ROUTE_OVERRIDES).length) {
+    throw new Error(`Radio routes applied ${routed} != ${Object.keys(RADIO_ROUTE_OVERRIDES).length}`);
+  }
+  for (const sha of Object.keys(RADIO_ROUTE_OVERRIDES)) {
+    if (!groups.has(sha)) throw new Error(`Radio route outside the CarRadio volume: ${sha}`);
+  }
+  const expected = RADIO_ROUTE_DATA.counts || {};
+  if (expected.generated_entries !== groups.size || rows.length !== expected.generated_entries) {
+    throw new Error(`Radio generated volume ${rows.length}/${groups.size} != ${expected.generated_entries}`);
+  }
+  if (expected.approved_entries + expected.generated_entries !== expected.unique_sha) {
+    throw new Error('Radio approved + generated volume does not match the unique SHA volume');
+  }
+  if (expected.moved !== routed || expected.exceptions !== rows.length - routed + expected.approved_entries
+    || expected.already + expected.moved + expected.exceptions !== expected.unique_sha) {
+    throw new Error('Radio reconciliation counts do not match the generated volume');
+  }
+}
 
 const byBrand = {};
 const byModel = {};
@@ -1022,7 +1063,7 @@ const decisions = sorted.map(row => ({
   sha: row.sha,
   name: row.name,
   folder: row.folder,
-  ...(row.immoRouteFolder ? { legacy_folder: row.legacyFolder } : {}),
+  ...(row.immoRouteFolder || row.radioRouteFolder ? { legacy_folder: row.legacyFolder } : {}),
   operation: row.operation,
   sources: row.sources,
   canonical_path: row.canonical,
@@ -1091,6 +1132,18 @@ const report = {
       basis: IMMO_ROUTE_DATA.source
     })),
     name_overrides: Object.entries(IMMO_ROUTE_DATA.name_overrides || {}).map(([sha, name]) => ({ sha, name }))
+  } : {}),
+  ...(SECTION === 'radio' ? {
+    route_source: RADIO_ROUTE_DATA.source,
+    route_source_sha256: RADIO_ROUTE_DATA.source_sha256,
+    reconciliation_report: 'reports/catalog-carradio-reconciliation-2026-11-06.json',
+    reconciliation_counts: RADIO_ROUTE_DATA.counts,
+    route_overrides: Object.entries(RADIO_ROUTE_OVERRIDES).map(([sha, folder]) => ({
+      sha,
+      folder,
+      basis: RADIO_ROUTE_DATA.source
+    })),
+    name_overrides: Object.entries(RADIO_ROUTE_DATA.name_overrides || {}).map(([sha, name]) => ({ sha, name }))
   } : {}),
   ...(SECTION === 'dashboard' ? {
     root_routing: {
