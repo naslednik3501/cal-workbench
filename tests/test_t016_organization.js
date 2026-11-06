@@ -33,6 +33,8 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 await run('catalogReady');
 const allCal=db.entries.filter(e=>e.ext==='cal');
 const uniqueCal=new Set(allCal.map(e=>e.sha));
+const germanBmwSource=allCal.filter(e=>e.path.startsWith('Calculators/Germany/BMW/'));
+const germanBmwShas=new Set(germanBmwSource.map(e=>e.sha));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -85,7 +87,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand),'unknown Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany','unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
@@ -107,6 +109,21 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  const createdCounts={};for(const row of createdRows)createdCounts[row.folder.split('/')[1]]=(createdCounts[row.folder.split('/')[1]]||0)+1;
  assert.deepEqual(createdCounts,{Curtis:1,Denso:5,Feeler:1,Hidromek:1,Kansey:1,SYM:1,TCM:2,TFN:1,Terex:2,Triumph:2,Visteon:1,Yazaki:6});
  for(const row of createdRows)if(row.old_name)assert(org.matches(entry(row.sha),row.old_name),'old name search '+row.sha);
+});
+await test('Germany BMW panels follow the dated dashboard layout',()=>{
+ assert.equal(germanBmwSource.length,49,'all Germany/BMW source paths');
+ assert.equal(germanBmwShas.size,49,'distinct Germany/BMW CAL contents');
+ const expectedCounts={'Dashboard/Germany/BMW':17,'Dashboard/Germany/BMW/CAS2':3,'Dashboard/Germany/BMW/CAS3':2,'Dashboard/Germany/BMW/CAS4':1,'Dashboard/Germany/BMW/E34':3,'Dashboard/Germany/BMW/E36':5,'Dashboard/Germany/BMW/E38, E39':4,'Dashboard/Germany/BMW/E46':2,'Dashboard/Germany/BMW/E84':2,'Dashboard/Germany/BMW/EWS3':2,'Dashboard/Germany/BMW/EWS4':3,'Dashboard/Germany/BMW/LCM':5};
+ const actualCounts={};
+ const modelFolders=[['CAS2',/^CAS2/],['CAS3',/^CAS3/],['CAS4',/^CAS4/],['E34',/^E34 /],['E36',/^E36 /],['E38, E39',/^(?:E38, E39|E39_)/],['E46',/^E46_/],['E84',/^E84_/],['EWS3',/^EWS3/],['EWS4',/^EWS4/],['LCM',/^LCM/]];
+ for(const e of germanBmwSource){
+  const base=e.path.split('/').at(-1),model=modelFolders.find(([,pattern])=>pattern.test(base))?.[0];
+  const folder='Dashboard/Germany/BMW'+(model?'/'+model:'');
+  assert.equal(org.folder(e),folder,e.path);
+  assert(org.matches(e,e.path),'original path search '+e.path);
+  actualCounts[folder]=(actualCounts[folder]||0)+1;
+ }
+ assert.deepEqual(Object.fromEntries(Object.entries(actualCounts).sort()),Object.fromEntries(Object.entries(expectedCounts).sort()));
 });
 await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
  const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
@@ -213,6 +230,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
+  if(germanBmwShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -228,7 +246,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Airbag','largest section first');
- assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4843);
+ assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4867);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
