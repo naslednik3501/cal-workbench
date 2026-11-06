@@ -25,6 +25,7 @@ if(node&&!root.CAL_ORGANIZATION_CRYPTO)require('./catalog-organization-crypto.js
 if(node&&!root.CAL_ORGANIZATION_SERVICE_CALC)require('./catalog-organization-service-calc.js');
 if(node&&!root.CAL_ORGANIZATION_MOTOTECHNICS)require('./catalog-organization-mototechnics.js');
 if(node&&!root.CAL_ORGANIZATION_SPECIAL_TECHNICS)require('./catalog-organization-special-technics.js');
+if(node&&!root.CAL_ORGANIZATION_IMPORT)require('./catalog-organization-import.js');
 if(node&&!root.CatalogLayout)require('./catalog-layout.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const ecu=root.CAL_ORGANIZATION_ECU||{entries:{}};
@@ -47,6 +48,13 @@ const crypto=root.CAL_ORGANIZATION_CRYPTO||{entries:{}};
 const serviceCalc=root.CAL_ORGANIZATION_SERVICE_CALC||{entries:{}};
 const mototechnics=root.CAL_ORGANIZATION_MOTOTECHNICS||{entries:{}};
 const specialTechnics=root.CAL_ORGANIZATION_SPECIAL_TECHNICS||{entries:{}};
+// The optional ETSmart overlay is merged only when catalog-import.js has
+// appended it, so base-catalog tests keep the verified 15,057-entry scope.
+const imported=root.CAL_ORGANIZATION_IMPORT||{entries:{}};
+const importedEntries={};
+const importCount=Number(root.CAL_CATALOG?.meta?.imported?.count)||0;
+const loadedBlobs=root.CAL_CATALOG?.blobs||{};
+if(importCount)for(const [hash,item] of Object.entries(imported.entries||{}))if(loadedBlobs[hash])importedEntries[hash]=item;
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -133,7 +141,7 @@ const data={
  radio_report:radio.source_report||'',
  utilities_report:utilities.source_report||'',
  remainder_report:remainder.source_report||'',
- entries:{...remainder.entries,...dashboard.entries,...immo.entries,...radio.entries,...utilities.entries,...airbag.entries,...germanBmw,...approved,...relocated,...ecu.entries},
+ entries:{...importedEntries,...remainder.entries,...dashboard.entries,...immo.entries,...radio.entries,...utilities.entries,...airbag.entries,...germanBmw,...approved,...relocated,...ecu.entries},
  relocated,
  search_aliases:{'d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':['Renault']}
 };

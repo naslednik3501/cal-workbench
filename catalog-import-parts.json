@@ -1,0 +1,18 @@
+{
+ "entries": [
+  "catalog-import-data/part-000.js",
+  "catalog-import-data/part-001.js",
+  "catalog-import-data/part-002.js",
+  "catalog-import-data/part-003.js",
+  "catalog-import-data/part-004.js",
+  "catalog-import-data/part-005.js"
+ ],
+ "blobs": [
+  "catalog-import-data/blobs-000.js",
+  "catalog-import-data/blobs-001.js",
+  "catalog-import-data/blobs-002.js",
+  "catalog-import-data/blobs-003.js",
+  "catalog-import-data/blobs-004.js",
+  "catalog-import-data/blobs-005.js"
+ ]
+}
