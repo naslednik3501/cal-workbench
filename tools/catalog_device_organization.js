@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SECTION = String(process.argv[2] || process.env.SECTION || '').toLowerCase();
 const DATE = '2026-11-04';
-const ALLOWED = new Set(['dashboard', 'immo', 'radio', 'utilities']);
+const ALLOWED = new Set(['dashboard', 'ecu', 'immo', 'radio', 'utilities']);
 // These Dashboard brand folders were created by the 2026-11-05 root routing.
 // Keeping them explicit makes repeated generation idempotent: they stay "new"
 // in the root audit instead of turning into pre-existing folders on run two.
@@ -29,6 +29,12 @@ const IMMO_ROUTE_DATA = require('./catalog-immo-routes.json');
 const IMMO_ROUTE_OVERRIDES = IMMO_ROUTE_DATA.routes;
 const RADIO_ROUTE_DATA = require('./catalog-carradio-routes.json');
 const RADIO_ROUTE_OVERRIDES = RADIO_ROUTE_DATA.routes;
+// Reference-confirmed ECU nesting from iProgGuard Engine lists dated 2026-08-01.
+// Only display folders move; names, original paths, bytes, SHA and versions
+// stay unchanged. Exceptions keep the current ECU folder and its reason.
+const ECU_ROUTE_DATA = require('./catalog-ecu-routes.json');
+const ECU_ROUTE_OVERRIDES = ECU_ROUTE_DATA.routes;
+const ECU_KEEP_FOLDERS = ECU_ROUTE_DATA.keep_folders || {};
 
 const CONFIG = {
   dashboard: {
@@ -38,6 +44,14 @@ const CONFIG = {
     sourceReport: 'reports/catalog-organization-dashboard-2026-11-04.md',
     sources: ['Dashboard', 'I', 'I_ok'],
     purpose: 'Щитки, панели приборов, одометры и коррекция пробега.'
+  },
+  ecu: {
+    display: 'ECU',
+    output: 'catalog-organization-ecu.js',
+    report: 'reports/catalog-organization-ecu-2026-11-04.json',
+    sourceReport: 'reports/catalog-organization-ecu-2026-11-04.md',
+    sources: ['ECU'],
+    purpose: 'Калькуляторы блоков управления двигателем: семейство, марка, модель или блок.'
   },
   immo: {
     display: 'Immo',
@@ -67,7 +81,7 @@ const CONFIG = {
 };
 
 if (!ALLOWED.has(SECTION)) {
-  console.error('Usage: node tools/catalog_device_organization.js <dashboard|immo|radio|utilities>');
+  console.error('Usage: node tools/catalog_device_organization.js <dashboard|ecu|immo|radio|utilities>');
   process.exit(2);
 }
 const cfg = CONFIG[SECTION];
@@ -794,6 +808,14 @@ for (const [sha, entries] of groups) {
     if (reason) throw new Error(`Radio route override on ambiguous entry: ${sha}`);
     folder = radioRouteFolder;
   }
+  const ecuRouteFolder = SECTION === 'ecu' && Object.prototype.hasOwnProperty.call(ECU_ROUTE_OVERRIDES, sha)
+    ? ECU_ROUTE_OVERRIDES[sha] : null;
+  if (ecuRouteFolder !== null) {
+    if (reason) throw new Error(`ECU route override on ambiguous entry: ${sha}`);
+    folder = ecuRouteFolder;
+  } else if (SECTION === 'ecu' && Object.prototype.hasOwnProperty.call(ECU_KEEP_FOLDERS, sha)) {
+    folder = ECU_KEEP_FOLDERS[sha];
+  }
   let rootRouting = '';
   let routeBrands = [];
   let routeManufacturer = '';
@@ -857,6 +879,8 @@ for (const [sha, entries] of groups) {
     legacyReason,
     immoRouteFolder,
     radioRouteFolder,
+    ecuRouteFolder,
+    ecuKeepFolder: SECTION === 'ecu' && Object.prototype.hasOwnProperty.call(ECU_KEEP_FOLDERS, sha),
     rootRouting,
     ...(routeBrands.length > 1 ? { brands: routeBrands } : {}),
     ...(routeManufacturer ? { manufacturer: routeManufacturer } : {}),
@@ -930,6 +954,23 @@ if (SECTION === 'radio') {
   }
 }
 
+// ECU names and the two existing reasons are published metadata; keep them
+// exactly while the generated map takes over the 20 ECU entries.
+const ECU_NAME_OVERRIDES = ECU_ROUTE_DATA.name_overrides || {};
+const ECU_OLD_NAME_OVERRIDES = ECU_ROUTE_DATA.old_name_overrides || {};
+const ECU_REASON_OVERRIDES = ECU_ROUTE_DATA.reason_overrides || {};
+if (SECTION === 'ecu') {
+  for (const row of rows) {
+    if (ECU_NAME_OVERRIDES[row.sha]) row.name = ECU_NAME_OVERRIDES[row.sha];
+    if (ECU_OLD_NAME_OVERRIDES[row.sha]) row.old_name = ECU_OLD_NAME_OVERRIDES[row.sha];
+    if (ECU_REASON_OVERRIDES[row.sha]) row.reason = ECU_REASON_OVERRIDES[row.sha];
+  }
+  for (const sha of new Set([...Object.keys(ECU_NAME_OVERRIDES),
+    ...Object.keys(ECU_OLD_NAME_OVERRIDES), ...Object.keys(ECU_REASON_OVERRIDES)])) {
+    if (!groups.has(sha)) throw new Error(`ECU override outside the ECU volume: ${sha}`);
+  }
+}
+
 const display = new Set();
 for (const row of rows) {
   const relativeFolder = row.folder || '';
@@ -947,7 +988,8 @@ for (const row of rows) {
   const immoCategory = SECTION === 'immo'
     && ['Car', 'Bikes', 'Convertor'].includes(relativeParts[0]);
   const maxImmoParts = immoCategory && relativeParts[0] !== 'Convertor' ? 3 : 2;
-  if (relativeParts.length > maxImmoParts || relativeParts.some(part => !part || part === '.' || part === '..' || /[\\/]/.test(part)) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeParts[0] || '')) {
+  const maxParts = SECTION === 'ecu' ? 3 : maxImmoParts;
+  if (relativeParts.length > maxParts || relativeParts.some(part => !part || part === '.' || part === '..' || /[\\/]/.test(part)) || /^(?:\.|Неуточнённые|Универсальные|Конвертеры ключей)$/.test(relativeParts[0] || '')) {
     throw new Error(`Unexpected folder: ${row.folder}`);
   }
   if (immoCategory && relativeParts[0] === 'Convertor' && relativeParts.length !== 1) {
@@ -1011,6 +1053,32 @@ if (SECTION === 'radio') {
     throw new Error('Radio reconciliation counts do not match the generated volume');
   }
 }
+if (SECTION === 'ecu') {
+  const routed = rows.filter(row => row.ecuRouteFolder !== null).length;
+  if (routed !== Object.keys(ECU_ROUTE_OVERRIDES).length) {
+    throw new Error(`ECU routes applied ${routed} != ${Object.keys(ECU_ROUTE_OVERRIDES).length}`);
+  }
+  if (!rows.every(row => row.ecuRouteFolder !== null || row.ecuKeepFolder)) {
+    throw new Error('ECU entry without an explicit route or keep folder');
+  }
+  for (const sha of Object.keys(ECU_ROUTE_OVERRIDES)) {
+    if (!groups.has(sha)) throw new Error(`ECU route outside the ECU volume: ${sha}`);
+  }
+  for (const sha of Object.keys(ECU_KEEP_FOLDERS)) {
+    if (!groups.has(sha)) throw new Error(`ECU keep folder outside the ECU volume: ${sha}`);
+  }
+  const expected = ECU_ROUTE_DATA.counts || {};
+  if (expected.generated_entries !== groups.size || rows.length !== expected.generated_entries) {
+    throw new Error(`ECU generated volume ${rows.length}/${groups.size} != ${expected.generated_entries}`);
+  }
+  if (expected.approved_entries + expected.generated_entries !== expected.unique_sha) {
+    throw new Error('ECU approved + generated volume does not match the unique SHA volume');
+  }
+  if (expected.moved !== routed || expected.exceptions !== rows.length - routed + expected.approved_entries
+    || expected.already + expected.moved + expected.exceptions !== expected.unique_sha) {
+    throw new Error('ECU reconciliation counts do not match the generated volume');
+  }
+}
 
 const byBrand = {};
 const byModel = {};
@@ -1038,8 +1106,9 @@ const lines = sorted.map(row => {
 });
 const globalName = SECTION === 'dashboard'
   ? 'CAL_ORGANIZATION_DASHBOARD'
-  : SECTION === 'immo' ? 'CAL_ORGANIZATION_IMMO'
-    : SECTION === 'radio' ? 'CAL_ORGANIZATION_RADIO' : 'CAL_ORGANIZATION_UTILITIES';
+  : SECTION === 'ecu' ? 'CAL_ORGANIZATION_ECU'
+    : SECTION === 'immo' ? 'CAL_ORGANIZATION_IMMO'
+      : SECTION === 'radio' ? 'CAL_ORGANIZATION_RADIO' : 'CAL_ORGANIZATION_UTILITIES';
 const output = `/* Generated by tools/catalog_device_organization.js ${SECTION} on ${DATE}. Do not edit by hand. */\n`
   + `/* Display-only map for ${cfg.display}; original paths, bytes and SHA stay unchanged. */\n`
   + `(function(root){\n'use strict';\nconst data={\n schema:1,\n source_report:${JSON.stringify(cfg.sourceReport)},\n generated_from:['catalog.js','catalog-data/*.js','engine.js'],\n entries:{\n${lines.join('\n')}\n },\n search_aliases:{}\n};\n`
@@ -1063,7 +1132,7 @@ const decisions = sorted.map(row => ({
   sha: row.sha,
   name: row.name,
   folder: row.folder,
-  ...(row.immoRouteFolder || row.radioRouteFolder ? { legacy_folder: row.legacyFolder } : {}),
+  ...(row.immoRouteFolder || row.radioRouteFolder || row.ecuRouteFolder !== null ? { legacy_folder: row.legacyFolder } : {}),
   operation: row.operation,
   sources: row.sources,
   canonical_path: row.canonical,
@@ -1091,7 +1160,8 @@ const report = {
     'Calculators/Immo off/**/*.cal',
     'Calculators/MB/**/*.cal',
     'selected Calculators/Car/**/*.cal with IMMO/key evidence'
-  ] : SECTION === 'radio' ? ['Calculators/CarRadio/**/*.cal'] : [
+  ] : SECTION === 'ecu' ? ['Calculators/ECU/**/*.cal']
+    : SECTION === 'radio' ? ['Calculators/CarRadio/**/*.cal'] : [
     'Calculators/CRC/**/*.cal',
     'Calculators/PIN/**/*.cal',
     'Calculators/Service/**/*.cal',
@@ -1144,6 +1214,19 @@ const report = {
       basis: RADIO_ROUTE_DATA.source
     })),
     name_overrides: Object.entries(RADIO_ROUTE_DATA.name_overrides || {}).map(([sha, name]) => ({ sha, name }))
+  } : {}),
+  ...(SECTION === 'ecu' ? {
+    route_source: ECU_ROUTE_DATA.source,
+    route_source_sha256: ECU_ROUTE_DATA.source_files,
+    reconciliation_report: 'reports/catalog-ecu-reconciliation-2026-11-06.json',
+    reconciliation_counts: ECU_ROUTE_DATA.counts,
+    route_overrides: Object.entries(ECU_ROUTE_OVERRIDES).map(([sha, folder]) => ({
+      sha,
+      folder,
+      basis: ECU_ROUTE_DATA.source
+    })),
+    keep_folders: Object.entries(ECU_KEEP_FOLDERS).map(([sha, folder]) => ({ sha, folder })),
+    name_overrides: Object.entries(ECU_ROUTE_DATA.name_overrides || {}).map(([sha, name]) => ({ sha, name }))
   } : {}),
   ...(SECTION === 'dashboard' ? {
     root_routing: {

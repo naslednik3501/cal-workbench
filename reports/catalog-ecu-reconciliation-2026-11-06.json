@@ -1,0 +1,340 @@
+{
+  "date": "2026-11-06",
+  "section": "ECU",
+  "source": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01",
+  "source_files": {
+    "Engine.txt": "ada36619bc921cf56091b6ccd2d16cd9334cdc6dfc8e59c23d621b2c167da2e2",
+    "Engine Bosch 17.txt": "cc48dfa957360011438bdd970a90016cc0381a36d29f0dfe6c37dd56f3ab2702",
+    "Engine Bosch MD1.txt": "2c0e7f40155bed9046c2a4a1f99ff49eb83e91909b5d16073f6e8b347efe6ad3",
+    "Engine Continental.txt": "62f2a1b9ea8caebfa02463c4fbabafac6f3d408b6faa7cf0d02c526c3a6f2e8d",
+    "Engine Delphi.txt": "538e2fc1e25511ca3163648bc444a17333ad445b14c97b3a5f9e60c8aa670784",
+    "Engine Denso.txt": "7d041270b4636dca223257cf1ccbe29e7c9cf98f8f900d78c9732643379d5955"
+  },
+  "source_list": {
+    "path": "Full_Calculators_List.txt",
+    "sha256": "3b5721c900cb15a15aac06918cf6159499390ddf8c0ef23c7226d9f5482ee7f1",
+    "source_paths_checked": 20,
+    "source_paths_found": 20
+  },
+  "volume": {
+    "unique_sha": 20,
+    "source_entries": 20,
+    "generated_entries": 20,
+    "approved_entries": 0
+  },
+  "counts": {
+    "already": 0,
+    "moved": 10,
+    "exceptions": 10
+  },
+  "totals_check": {
+    "already": 0,
+    "moved": 10,
+    "exceptions": 10,
+    "sum": 20,
+    "unique_sha": 20,
+    "ok": true
+  },
+  "family_counts": {
+    "Engine": 10
+  },
+  "already": [],
+  "moves": [
+    {
+      "sha": "0f7eac3125155cf9ba774f5f71f414b145386b24064a375127411c1390876efa",
+      "name": "EDC16 95320",
+      "old_folder": "ECU/VW",
+      "new_folder": "ECU/Engine/VW/EDC16",
+      "source_paths": [
+        "Calculators/ECU/VW/EDC16 95320.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "VW",
+        "group": "EDC16",
+        "file": "EDC16 95320.cal",
+        "line": "|       |---EDC16 95320.cal",
+        "line_number": 255
+      }
+    },
+    {
+      "sha": "d7631dc24db0d77189ef367b03384e116a1baf23dcf67590c1c53c7787cec9f1",
+      "name": "EDC15 24C04",
+      "old_folder": "ECU/VW",
+      "new_folder": "ECU/Engine/VW",
+      "source_paths": [
+        "Calculators/ECU/VW/EDC15 24C04.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "VW",
+        "group": "",
+        "file": "EDC15 24C04.cal",
+        "line": "|   |---EDC15 24C04.cal",
+        "line_number": 253
+      }
+    },
+    {
+      "sha": "305f31a3766afbe030677db1aef37799c656d127c8ffd415cc33ea3688b6fea4",
+      "name": "Subaru ECU 93CXX",
+      "old_folder": "ECU/Subaru",
+      "new_folder": "ECU/Engine/Subaru",
+      "source_paths": [
+        "Calculators/ECU/Subaru/Subaru ECU 93CXX.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "Subaru",
+        "group": "",
+        "file": "Subaru ECU 93CXX.cal",
+        "line": "|   |---Subaru ECU 93CXX.cal",
+        "line_number": 231
+      }
+    },
+    {
+      "sha": "527da9fe3bb6ef68f0f637d4b67cc34d69d68dbdcf7fa1b81ac01a04c2779f2c",
+      "name": "EDC15",
+      "old_folder": "ECU/Skoda",
+      "new_folder": "ECU/Engine/Skoda",
+      "source_paths": [
+        "Calculators/ECU/Skoda/EDC15.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "Skoda",
+        "group": "",
+        "file": "EDC15.cal",
+        "line": "|   `---EDC15.cal",
+        "line_number": 229
+      }
+    },
+    {
+      "sha": "cdae1c464038d9e981058b64d2366b8dcc8a0fefc6979748ba9a37c3d0ac9510",
+      "name": "E65 DDE M57 95640",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW/E65",
+      "source_paths": [
+        "Calculators/ECU/Bmw/E65 DDE M57 95640.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "E65",
+        "file": "E65 DDE M57 95640.cal",
+        "line": "|   |   |---E65 DDE M57 95640.cal",
+        "line_number": 15
+      }
+    },
+    {
+      "sha": "6b55e93262b6c6d8d784047a9439aa6e74724d2557954cdf66fbfbbfa04a9989",
+      "name": "DME 95640",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW",
+      "source_paths": [
+        "Calculators/ECU/Bmw/DME 95640.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "",
+        "file": "DME 95640.cal",
+        "line": "|   |---DME 95640.cal",
+        "line_number": 9
+      }
+    },
+    {
+      "sha": "4377b3a0ad96f36e5b723e037ebf65921a25cfd0230c313ffa5d2a17d42dcf4a",
+      "name": "DME 95320",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW",
+      "source_paths": [
+        "Calculators/ECU/Bmw/DME 95320.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "",
+        "file": "DME 95320.cal",
+        "line": "|   |---DME 95320.cal",
+        "line_number": 8
+      }
+    },
+    {
+      "sha": "c3cd2465d2401c0a31e6e8cb055f5bbbf103663065dcc06ab2bd60529e0593ec",
+      "name": "DME 95128",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW",
+      "source_paths": [
+        "Calculators/ECU/Bmw/DME 95128.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "",
+        "file": "DME 95128.cal",
+        "line": "|   |---DME 95128.cal",
+        "line_number": 7
+      }
+    },
+    {
+      "sha": "5124def7237b0b907c7be20c9be7e7eabbf0f895de6904b8231a0d2130c4fa01",
+      "name": "E65 DME 95320",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW/E65",
+      "source_paths": [
+        "Calculators/ECU/Bmw/E65 DME 95320.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "E65",
+        "file": "E65 DME 95320.cal",
+        "line": "|   |   `---E65 DME 95320.cal",
+        "line_number": 16
+      }
+    },
+    {
+      "sha": "ebd84d105164bb33e0eb195f6677cba3319f9fb6aabf334b09414ddd0142e1a6",
+      "name": "E70 DDE M57 95640",
+      "old_folder": "ECU/Bmw",
+      "new_folder": "ECU/Engine/BMW/E70",
+      "source_paths": [
+        "Calculators/ECU/Bmw/E70 DDE M57 95640.cal"
+      ],
+      "basis": "точное имя файла в эталоне (Engine.txt)",
+      "reference": {
+        "family": "Engine",
+        "brand": "BMW",
+        "group": "E70",
+        "file": "E70 DDE M57 95640.cal",
+        "line": "|       |---E70 DDE M57 95640.cal",
+        "line_number": 18
+      }
+    }
+  ],
+  "exceptions": [
+    {
+      "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+      "name": "EDC16 — параметры",
+      "folder": "ECU",
+      "paths": [
+        "Calculators/ECU/EDC16.CAL"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "name": "ECU Audi 95080",
+      "folder": "ECU/Audi",
+      "paths": [
+        "Calculators/ECU/ECU 95080.cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
+      "name": "Citroen-Peugeot IAW 6LPB (ST10F280) — коррекция пробега",
+      "folder": "ECU/Citroen-Peugeot",
+      "paths": [
+        "Calculators/ECU/CITROEN PEUGEOUT   .cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "45b617e5a88aaff5f34d2829ba2eab35d76bc703cbbc83ddc8bf9d3552428bea",
+      "name": "Corsa D Bosch7.6.2",
+      "folder": "ECU/Opel",
+      "paths": [
+        "Calculators/ECU/Opel/Corsa D Bosch7.6.2.cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "name": "ECU 95080",
+      "folder": "ECU/Audi",
+      "paths": [
+        "Calculators/ECU/Audi/ECU 95080.cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "cedc5cf41a07aaee23deff7a02121eb1c6fc7908910187a9daf655d62431df9a",
+      "name": "EDC16",
+      "folder": "ECU/VW",
+      "paths": [
+        "Calculators/ECU/VW/EDC16.CAL"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "fed8e76df56c680aec887cb61268746fc5e30b98b63776f6459fe137781fcf31",
+      "name": "Sprinter Start Error",
+      "folder": "ECU/MB",
+      "paths": [
+        "Calculators/ECU/MB/Sprinter Start Error.cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    },
+    {
+      "sha": "7a815bfe90ce4c190485a3f8f6dd6e5ada60a550e564231417789c8c5eb28d21",
+      "name": "E70 DME MSV80 95640",
+      "folder": "ECU/Bmw",
+      "paths": [
+        "Calculators/ECU/Bmw/E70 DME MSV80 95640.cal"
+      ],
+      "reason": "неоднозначная версия в эталоне: Engine/BMW/E70/E70 DME MSV80 95640 var1.cal, Engine/BMW/E70/E70 DME MSV80 95640 var2.cal",
+      "candidates": [
+        {
+          "family": "Engine",
+          "path": "BMW/E70/E70 DME MSV80 95640 var1.cal",
+          "line_number": 19
+        },
+        {
+          "family": "Engine",
+          "path": "BMW/E70/E70 DME MSV80 95640 var2.cal",
+          "line_number": 20
+        }
+      ]
+    },
+    {
+      "sha": "89188f9d29d8f0c617a0b193fd4f69bad2d7f281003246db6c75e7f0cc7ba15f",
+      "name": "DME 95080",
+      "folder": "ECU/Bmw",
+      "paths": [
+        "Calculators/ECU/Bmw/DME 95080.cal"
+      ],
+      "reason": "неоднозначная версия в эталоне: Engine/BMW/DME 95080 var1.cal, Engine/BMW/DME 95080 var2.cal",
+      "candidates": [
+        {
+          "family": "Engine",
+          "path": "BMW/DME 95080 var1.cal",
+          "line_number": 5
+        },
+        {
+          "family": "Engine",
+          "path": "BMW/DME 95080 var2.cal",
+          "line_number": 6
+        }
+      ]
+    },
+    {
+      "sha": "462dd9f103e2f033728f01e5a6bf87c8a1e7f88a5d894687a288f972b6ad430e",
+      "name": "Albea Mag. Marelli St10F280 Flash",
+      "folder": "ECU/Fiat/Albea",
+      "paths": [
+        "Calculators/ECU/Fiat/Albea/Albea Mag. Marelli St10F280 Flash.cal"
+      ],
+      "reason": "в эталоне нет файла с тем же именем (модель/версия не подтверждена)"
+    }
+  ]
+}

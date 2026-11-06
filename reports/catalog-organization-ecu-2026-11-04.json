@@ -1,0 +1,820 @@
+{
+  "date": "2026-11-04",
+  "section": "ECU",
+  "source_report": "reports/catalog-organization-ecu-2026-11-04.md",
+  "generated_file": "catalog-organization-ecu.js",
+  "inputs": [
+    "catalog.js",
+    "catalog-data/*.js",
+    "engine.js"
+  ],
+  "purpose": "Калькуляторы блоков управления двигателем: семейство, марка, модель или блок.",
+  "scope": [
+    "Calculators/ECU/**/*.cal"
+  ],
+  "totals": {
+    "paths": 20,
+    "unique_sha": 20,
+    "generated_entries": 20,
+    "approved_unchanged": 0,
+    "ambiguous": 3,
+    "car_only_selected": 0,
+    "collision_groups": 1,
+    "source_groups": 0,
+    "version_groups": 1
+  },
+  "source_paths": {
+    "ECU": 20
+  },
+  "car_only_selected_paths": [],
+  "approved_unchanged": [],
+  "route_source": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01",
+  "route_source_sha256": {
+    "Engine.txt": "ada36619bc921cf56091b6ccd2d16cd9334cdc6dfc8e59c23d621b2c167da2e2",
+    "Engine Bosch 17.txt": "cc48dfa957360011438bdd970a90016cc0381a36d29f0dfe6c37dd56f3ab2702",
+    "Engine Bosch MD1.txt": "2c0e7f40155bed9046c2a4a1f99ff49eb83e91909b5d16073f6e8b347efe6ad3",
+    "Engine Continental.txt": "62f2a1b9ea8caebfa02463c4fbabafac6f3d408b6faa7cf0d02c526c3a6f2e8d",
+    "Engine Delphi.txt": "538e2fc1e25511ca3163648bc444a17333ad445b14c97b3a5f9e60c8aa670784",
+    "Engine Denso.txt": "7d041270b4636dca223257cf1ccbe29e7c9cf98f8f900d78c9732643379d5955"
+  },
+  "reconciliation_report": "reports/catalog-ecu-reconciliation-2026-11-06.json",
+  "reconciliation_counts": {
+    "unique_sha": 20,
+    "generated_entries": 20,
+    "approved_entries": 0,
+    "already": 0,
+    "moved": 10,
+    "exceptions": 10
+  },
+  "route_overrides": [
+    {
+      "sha": "0f7eac3125155cf9ba774f5f71f414b145386b24064a375127411c1390876efa",
+      "folder": "Engine/VW/EDC16",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "d7631dc24db0d77189ef367b03384e116a1baf23dcf67590c1c53c7787cec9f1",
+      "folder": "Engine/VW",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "305f31a3766afbe030677db1aef37799c656d127c8ffd415cc33ea3688b6fea4",
+      "folder": "Engine/Subaru",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "527da9fe3bb6ef68f0f637d4b67cc34d69d68dbdcf7fa1b81ac01a04c2779f2c",
+      "folder": "Engine/Skoda",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "cdae1c464038d9e981058b64d2366b8dcc8a0fefc6979748ba9a37c3d0ac9510",
+      "folder": "Engine/BMW/E65",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "6b55e93262b6c6d8d784047a9439aa6e74724d2557954cdf66fbfbbfa04a9989",
+      "folder": "Engine/BMW",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "4377b3a0ad96f36e5b723e037ebf65921a25cfd0230c313ffa5d2a17d42dcf4a",
+      "folder": "Engine/BMW",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "c3cd2465d2401c0a31e6e8cb055f5bbbf103663065dcc06ab2bd60529e0593ec",
+      "folder": "Engine/BMW",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "5124def7237b0b907c7be20c9be7e7eabbf0f895de6904b8231a0d2130c4fa01",
+      "folder": "Engine/BMW/E65",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    },
+    {
+      "sha": "ebd84d105164bb33e0eb195f6677cba3319f9fb6aabf334b09414ddd0142e1a6",
+      "folder": "Engine/BMW/E70",
+      "basis": "iProgGuard Engine.txt and Engine Bosch 17 / Bosch MD1 / Continental / Delphi / Denso 2026-08-01"
+    }
+  ],
+  "keep_folders": [
+    {
+      "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+      "folder": ""
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "folder": "Audi"
+    },
+    {
+      "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
+      "folder": "Citroen-Peugeot"
+    },
+    {
+      "sha": "45b617e5a88aaff5f34d2829ba2eab35d76bc703cbbc83ddc8bf9d3552428bea",
+      "folder": "Opel"
+    },
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "folder": "Audi"
+    },
+    {
+      "sha": "cedc5cf41a07aaee23deff7a02121eb1c6fc7908910187a9daf655d62431df9a",
+      "folder": "VW"
+    },
+    {
+      "sha": "fed8e76df56c680aec887cb61268746fc5e30b98b63776f6459fe137781fcf31",
+      "folder": "MB"
+    },
+    {
+      "sha": "7a815bfe90ce4c190485a3f8f6dd6e5ada60a550e564231417789c8c5eb28d21",
+      "folder": "Bmw"
+    },
+    {
+      "sha": "89188f9d29d8f0c617a0b193fd4f69bad2d7f281003246db6c75e7f0cc7ba15f",
+      "folder": "Bmw"
+    },
+    {
+      "sha": "462dd9f103e2f033728f01e5a6bf87c8a1e7f88a5d894687a288f972b6ad430e",
+      "folder": "Fiat/Albea"
+    }
+  ],
+  "name_overrides": [
+    {
+      "sha": "0f7eac3125155cf9ba774f5f71f414b145386b24064a375127411c1390876efa",
+      "name": "EDC16 95320"
+    },
+    {
+      "sha": "d7631dc24db0d77189ef367b03384e116a1baf23dcf67590c1c53c7787cec9f1",
+      "name": "EDC15 24C04"
+    },
+    {
+      "sha": "305f31a3766afbe030677db1aef37799c656d127c8ffd415cc33ea3688b6fea4",
+      "name": "Subaru ECU 93CXX"
+    },
+    {
+      "sha": "527da9fe3bb6ef68f0f637d4b67cc34d69d68dbdcf7fa1b81ac01a04c2779f2c",
+      "name": "EDC15"
+    },
+    {
+      "sha": "cdae1c464038d9e981058b64d2366b8dcc8a0fefc6979748ba9a37c3d0ac9510",
+      "name": "E65 DDE M57 95640"
+    },
+    {
+      "sha": "6b55e93262b6c6d8d784047a9439aa6e74724d2557954cdf66fbfbbfa04a9989",
+      "name": "DME 95640"
+    },
+    {
+      "sha": "4377b3a0ad96f36e5b723e037ebf65921a25cfd0230c313ffa5d2a17d42dcf4a",
+      "name": "DME 95320"
+    },
+    {
+      "sha": "c3cd2465d2401c0a31e6e8cb055f5bbbf103663065dcc06ab2bd60529e0593ec",
+      "name": "DME 95128"
+    },
+    {
+      "sha": "5124def7237b0b907c7be20c9be7e7eabbf0f895de6904b8231a0d2130c4fa01",
+      "name": "E65 DME 95320"
+    },
+    {
+      "sha": "ebd84d105164bb33e0eb195f6677cba3319f9fb6aabf334b09414ddd0142e1a6",
+      "name": "E70 DDE M57 95640"
+    },
+    {
+      "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+      "name": "EDC16 — параметры"
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "name": "ECU Audi 95080"
+    },
+    {
+      "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
+      "name": "Citroen-Peugeot IAW 6LPB (ST10F280) — коррекция пробега"
+    },
+    {
+      "sha": "45b617e5a88aaff5f34d2829ba2eab35d76bc703cbbc83ddc8bf9d3552428bea",
+      "name": "Corsa D Bosch7.6.2"
+    },
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "name": "ECU 95080"
+    },
+    {
+      "sha": "cedc5cf41a07aaee23deff7a02121eb1c6fc7908910187a9daf655d62431df9a",
+      "name": "EDC16"
+    },
+    {
+      "sha": "fed8e76df56c680aec887cb61268746fc5e30b98b63776f6459fe137781fcf31",
+      "name": "Sprinter Start Error"
+    },
+    {
+      "sha": "7a815bfe90ce4c190485a3f8f6dd6e5ada60a550e564231417789c8c5eb28d21",
+      "name": "E70 DME MSV80 95640"
+    },
+    {
+      "sha": "89188f9d29d8f0c617a0b193fd4f69bad2d7f281003246db6c75e7f0cc7ba15f",
+      "name": "DME 95080"
+    },
+    {
+      "sha": "462dd9f103e2f033728f01e5a6bf87c8a1e7f88a5d894687a288f972b6ad430e",
+      "name": "Albea Mag. Marelli St10F280 Flash"
+    }
+  ],
+  "decisions": [
+    {
+      "sha": "0f7eac3125155cf9ba774f5f71f414b145386b24064a375127411c1390876efa",
+      "name": "EDC16 95320",
+      "folder": "ECU/Engine/VW/EDC16",
+      "legacy_folder": "Volkswagen",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/VW/EDC16 95320.cal",
+      "paths": [
+        "Calculators/ECU/VW/EDC16 95320.cal"
+      ]
+    },
+    {
+      "sha": "305f31a3766afbe030677db1aef37799c656d127c8ffd415cc33ea3688b6fea4",
+      "name": "Subaru ECU 93CXX",
+      "folder": "ECU/Engine/Subaru",
+      "legacy_folder": "Subaru",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Subaru/Subaru ECU 93CXX.cal",
+      "paths": [
+        "Calculators/ECU/Subaru/Subaru ECU 93CXX.cal"
+      ]
+    },
+    {
+      "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+      "name": "EDC16 — параметры",
+      "folder": "ECU",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/EDC16.CAL",
+      "paths": [
+        "Calculators/ECU/EDC16.CAL"
+      ],
+      "old_name": "EDC16",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным"
+    },
+    {
+      "sha": "4377b3a0ad96f36e5b723e037ebf65921a25cfd0230c313ffa5d2a17d42dcf4a",
+      "name": "DME 95320",
+      "folder": "ECU/Engine/BMW",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/DME 95320.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/DME 95320.cal"
+      ]
+    },
+    {
+      "sha": "45b617e5a88aaff5f34d2829ba2eab35d76bc703cbbc83ddc8bf9d3552428bea",
+      "name": "Corsa D Bosch7.6.2",
+      "folder": "ECU/Opel",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Opel/Corsa D Bosch7.6.2.cal",
+      "paths": [
+        "Calculators/ECU/Opel/Corsa D Bosch7.6.2.cal"
+      ]
+    },
+    {
+      "sha": "462dd9f103e2f033728f01e5a6bf87c8a1e7f88a5d894687a288f972b6ad430e",
+      "name": "Albea Mag. Marelli St10F280 Flash",
+      "folder": "ECU/Fiat/Albea",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Fiat/Albea/Albea Mag. Marelli St10F280 Flash.cal",
+      "paths": [
+        "Calculators/ECU/Fiat/Albea/Albea Mag. Marelli St10F280 Flash.cal"
+      ]
+    },
+    {
+      "sha": "5124def7237b0b907c7be20c9be7e7eabbf0f895de6904b8231a0d2130c4fa01",
+      "name": "E65 DME 95320",
+      "folder": "ECU/Engine/BMW/E65",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/E65 DME 95320.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/E65 DME 95320.cal"
+      ]
+    },
+    {
+      "sha": "527da9fe3bb6ef68f0f637d4b67cc34d69d68dbdcf7fa1b81ac01a04c2779f2c",
+      "name": "EDC15",
+      "folder": "ECU/Engine/Skoda",
+      "legacy_folder": "Skoda",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Skoda/EDC15.cal",
+      "paths": [
+        "Calculators/ECU/Skoda/EDC15.cal"
+      ]
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "name": "ECU Audi 95080",
+      "folder": "ECU/Audi",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/ECU 95080.cal",
+      "paths": [
+        "Calculators/ECU/ECU 95080.cal"
+      ],
+      "old_name": "ECU 95080",
+      "reason": "марка подтверждена формой, операция не подтверждена"
+    },
+    {
+      "sha": "5f74901d009f3bca42a60ae00125bc3278892358b61b35907bc8ae8648e6a7be",
+      "name": "ECU 95080",
+      "folder": "ECU/Audi",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Audi/ECU 95080.cal",
+      "paths": [
+        "Calculators/ECU/Audi/ECU 95080.cal"
+      ]
+    },
+    {
+      "sha": "6b55e93262b6c6d8d784047a9439aa6e74724d2557954cdf66fbfbbfa04a9989",
+      "name": "DME 95640",
+      "folder": "ECU/Engine/BMW",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/DME 95640.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/DME 95640.cal"
+      ]
+    },
+    {
+      "sha": "7a815bfe90ce4c190485a3f8f6dd6e5ada60a550e564231417789c8c5eb28d21",
+      "name": "E70 DME MSV80 95640",
+      "folder": "ECU/Bmw",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/E70 DME MSV80 95640.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/E70 DME MSV80 95640.cal"
+      ]
+    },
+    {
+      "sha": "89188f9d29d8f0c617a0b193fd4f69bad2d7f281003246db6c75e7f0cc7ba15f",
+      "name": "DME 95080",
+      "folder": "ECU/Bmw",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/DME 95080.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/DME 95080.cal"
+      ]
+    },
+    {
+      "sha": "c3cd2465d2401c0a31e6e8cb055f5bbbf103663065dcc06ab2bd60529e0593ec",
+      "name": "DME 95128",
+      "folder": "ECU/Engine/BMW",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/DME 95128.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/DME 95128.cal"
+      ]
+    },
+    {
+      "sha": "cdae1c464038d9e981058b64d2366b8dcc8a0fefc6979748ba9a37c3d0ac9510",
+      "name": "E65 DDE M57 95640",
+      "folder": "ECU/Engine/BMW/E65",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/E65 DDE M57 95640.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/E65 DDE M57 95640.cal"
+      ]
+    },
+    {
+      "sha": "cedc5cf41a07aaee23deff7a02121eb1c6fc7908910187a9daf655d62431df9a",
+      "name": "EDC16",
+      "folder": "ECU/VW",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/VW/EDC16.CAL",
+      "paths": [
+        "Calculators/ECU/VW/EDC16.CAL"
+      ],
+      "reason": "марка не подтверждена путём или формой CAL"
+    },
+    {
+      "sha": "d7631dc24db0d77189ef367b03384e116a1baf23dcf67590c1c53c7787cec9f1",
+      "name": "EDC15 24C04",
+      "folder": "ECU/Engine/VW",
+      "legacy_folder": "Volkswagen",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/VW/EDC15 24C04.cal",
+      "paths": [
+        "Calculators/ECU/VW/EDC15 24C04.cal"
+      ]
+    },
+    {
+      "sha": "ebd84d105164bb33e0eb195f6677cba3319f9fb6aabf334b09414ddd0142e1a6",
+      "name": "E70 DDE M57 95640",
+      "folder": "ECU/Engine/BMW/E70",
+      "legacy_folder": "BMW",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/Bmw/E70 DDE M57 95640.cal",
+      "paths": [
+        "Calculators/ECU/Bmw/E70 DDE M57 95640.cal"
+      ]
+    },
+    {
+      "sha": "effc8dd5d0331619c7fc6c35120f66e37ce110e6662bd577efca5079485fa777",
+      "name": "Citroen-Peugeot IAW 6LPB (ST10F280) — коррекция пробега",
+      "folder": "ECU/Citroen-Peugeot",
+      "operation": "коррекция пробега",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/CITROEN PEUGEOUT   .cal",
+      "paths": [
+        "Calculators/ECU/CITROEN PEUGEOUT   .cal"
+      ],
+      "old_name": "CITROEN PEUGEOUT"
+    },
+    {
+      "sha": "fed8e76df56c680aec887cb61268746fc5e30b98b63776f6459fe137781fcf31",
+      "name": "Sprinter Start Error",
+      "folder": "ECU/MB",
+      "operation": "",
+      "sources": [
+        "ECU"
+      ],
+      "canonical_path": "Calculators/ECU/MB/Sprinter Start Error.cal",
+      "paths": [
+        "Calculators/ECU/MB/Sprinter Start Error.cal"
+      ]
+    }
+  ],
+  "by_brand": {
+    "ECU": 1,
+    "Audi": 2,
+    "Citroen-Peugeot": 1,
+    "Opel": 1,
+    "VW": 1,
+    "Engine": 10,
+    "MB": 1,
+    "Bmw": 2,
+    "Fiat": 1
+  },
+  "by_model": {
+    "Engine/VW/EDC16": 1,
+    "Engine/VW": 1,
+    "Engine/Subaru": 1,
+    "Engine/Skoda": 1,
+    "Engine/BMW/E65": 2,
+    "Engine/BMW": 3,
+    "Engine/BMW/E70": 1,
+    "Fiat/Albea": 1
+  },
+  "by_operation": {
+    "(не подтверждена)": 7,
+    "коррекция пробега": 13
+  },
+  "ambiguous": [
+    {
+      "sha": "327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac",
+      "paths": [
+        "Calculators/ECU/EDC16.CAL"
+      ],
+      "title": "EDC16 — параметры",
+      "reason": "марка, модель и операция не подтверждены формой; имя сохранено нейтральным"
+    },
+    {
+      "sha": "545d98cd88f60f924bf05bcd00e9eff8df1412d10ef700cc315787bd42accd2a",
+      "paths": [
+        "Calculators/ECU/ECU 95080.cal"
+      ],
+      "title": "ECU Audi 95080",
+      "reason": "марка подтверждена формой, операция не подтверждена"
+    },
+    {
+      "sha": "cedc5cf41a07aaee23deff7a02121eb1c6fc7908910187a9daf655d62431df9a",
+      "paths": [
+        "Calculators/ECU/VW/EDC16.CAL"
+      ],
+      "title": "EDC16",
+      "reason": "марка не подтверждена путём или формой CAL"
+    }
+  ],
+  "car_only_not_selected": [
+    {
+      "path": "Calculators/Car/Ford/Ka  Immo 7701 4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Ford/Probe v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Ford/Probe v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Ford/Mondeo ECU TMS 370 4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Ford/Tranzit v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Charade v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Terios v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Move v3.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia_Immo 93C66 4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Storia v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Sirion v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Daihatsu/Cuore v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/Lantra Immo 93C56 4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/H200 Immo 93C56 4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Hyundai/Tucson 2007 Immo 93LC66_4D.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Shuma v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Rio_Immo 93LC46_4D.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Shuma v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Clarus v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Pride v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Kia_Immo 93LC46_4C.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Kia/Sportage v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/AUDI/A4 v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/AUDI/A6 v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/AUDI/AUDI A6   ECU EDC16 95P080 2002.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Chrysler/PT Cruiser 2003 Immo login.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Scudo v3.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Fiorino v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Fiorino v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Bravo v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Bravo v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Palio v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v3.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Marea v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Palio v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Siena v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Marea v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Fiat/Ulysse v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Xantia v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Xsara v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Jampy v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Jampy v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Evasion v1.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Evasion v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Honda/Honda_Immo_0D28J_PCF7931.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/F/Freightliner/Freightliner Columbia 9S12DG128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/M/Mazda/MAZDA 2 93C86-2017.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/L/Lincoln/Lincoln Navigator 9S12H128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Daewoo/DEAWOO 9S12H128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/F/Ford/F/Fiesta 9S12XEQ384.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16-NEW.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 9S12HY64 - NEW OK.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/I/I10 24c16-V3 2018.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Hyundai/E/EON 9S12XHY128 - NEW OK.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/H/Honda/Ridgeline/Ridgeline 9S12H256 miles -v2.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/M/Mitsubishi/F/MITSUBISHI FUSO 2015 24C16.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/Citroen/Citroen/Berlingo/Dash Berlingo 25020.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ128.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    },
+    {
+      "path": "Calculators/Car/G/GM/Chevrolet/C/Captiva 9S12HZ256.cal",
+      "reason": "путь и форма не подтверждают IMMO/ключ"
+    }
+  ]
+}

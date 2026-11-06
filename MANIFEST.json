@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3153,
-      "sha256": "20e2d1f1ff46fade6cad2c47bea2eace430346ec145c6407c9b612fa3c39472c"
+      "bytes": 3184,
+      "sha256": "aff65f0368c2d304b7cbdfc2a533163098b3f482f11013f7908e6c76b11722a5"
     },
     {
       "path": "cal-source.js",
@@ -362,6 +362,11 @@
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
     },
     {
+      "path": "catalog-organization-ecu.js",
+      "bytes": 3396,
+      "sha256": "148c60cf87c042f75a64f2fe2a61c5e23e1d2d72e94e212a431e7d2e487bf764"
+    },
+    {
       "path": "catalog-organization-eu-us-ru.js",
       "bytes": 62924,
       "sha256": "6d499513e6177b21bc74c976f8ceba024a1e3fabff7c361814be6a10305dc190"
@@ -413,8 +418,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 24834,
-      "sha256": "99a9721f4c2e7dfb2789d4da54155019a7e4c17fa9320688191ade17f583a185"
+      "bytes": 25013,
+      "sha256": "bae61342ed2b167acc721bd53e50ef7d30eaa355b9d8494a1c79d352f00bdf57"
     },
     {
       "path": "catalog-parts.json",
@@ -1423,8 +1428,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12893,
-      "sha256": "faf70889ae2e426068df15ef10eaef8fb144bae39182e514eb2767aa14bf63b7"
+      "bytes": 12945,
+      "sha256": "5b3f0bf1dc4d41da71bcdc045ae0f743a40fae8dfde8b64a76f25d063f834757"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1627,6 +1632,16 @@
       "sha256": "0c88d02b8239ef852bfb80017c360329e53320da220de355efd67048321d3215"
     },
     {
+      "path": "reports/catalog-ecu-exceptions-2026-11-06.md",
+      "bytes": 3190,
+      "sha256": "f17091998a402c56c8a079698efb59d443dbb967697cc552fbcf3f8f25de2a6b"
+    },
+    {
+      "path": "reports/catalog-ecu-reconciliation-2026-11-06.json",
+      "bytes": 11426,
+      "sha256": "a0799a239fecb277b5d51916349ee31bc53c00c8789de1d1bee916de2ce10ff1"
+    },
+    {
       "path": "reports/catalog-immo-exceptions-2026-11-06.md",
       "bytes": 39722,
       "sha256": "bd10e37a9aa3001325cfbe3cd8e712b3c285722ed032b9b6bdca75c25fdc66b3"
@@ -1670,6 +1685,11 @@
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
       "bytes": 4434,
       "sha256": "e09d323a7a2a3169a594e61f66f246656d082dca3ef2488f5c4c07fae8ebc943"
+    },
+    {
+      "path": "reports/catalog-organization-ecu-2026-11-04.json",
+      "bytes": 28335,
+      "sha256": "9a30103b42cdccd1f8668ee042a91d5a7677d23b178c9f29c64f9151e5c90425"
     },
     {
       "path": "reports/catalog-organization-eu-us-ru-exceptions-2026-11-06.json",
@@ -2053,8 +2073,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 67464,
-      "sha256": "9455387da5e116ffba48d446f2bab7a7b5dbeb95243799dff49a360128669286"
+      "bytes": 70938,
+      "sha256": "8f6f96d9d28c9a82ebe7543d7ff7e42676e4f681555dc8b1e50b5c6e7c253407"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -2147,6 +2167,11 @@
       "sha256": "9f14f302ee858fbcc3be7273386640370195f49801c01cf912f22928d9c62e8b"
     },
     {
+      "path": "tools/catalog-ecu-routes.json",
+      "bytes": 5347,
+      "sha256": "3242ee6b0682f2bf6d5c05ea86f5f36b699192aaa02819e4bda56492e1f9c392"
+    },
+    {
       "path": "tools/catalog-immo-routes.json",
       "bytes": 26085,
       "sha256": "117d9a94d8343dcff641974e0852c696aa0b5c548918523a7e044b458cb22390"
@@ -2158,8 +2183,8 @@
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 58350,
-      "sha256": "7bcb179578a28be316dbe57a10a800de8f17475d9284be02c62f62720f9bc2a5"
+      "bytes": 62862,
+      "sha256": "608f9e967c7d26d58aabbe0894a8a06885253424c4557828795b7f1bcfa0cdb7"
     },
     {
       "path": "tools/catalog_inventory.py",

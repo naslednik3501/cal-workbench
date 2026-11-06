@@ -67,6 +67,8 @@ const euUsRuShas=new Set(euUsRuSource.map(e=>e.sha));
 const euUsRuAudit=require('../reports/catalog-organization-eu-us-ru-exceptions-2026-11-06.json');
 const cryptoSource=allCal.filter(e=>e.path.startsWith('Calculators/CRYPTO/'));
 const cryptoShas=new Set(cryptoSource.map(e=>e.sha));
+const ecuSource=allCal.filter(e=>e.path.startsWith('Calculators/ECU/'));
+const ecuShas=new Set(ecuSource.map(e=>e.sha));
 const cryptoAudit=require('../reports/catalog-organization-crypto-exceptions-2026-11-06.json');
 const serviceCalcSource=allCal.filter(e=>e.path.startsWith('Calculators/Service calc/'));
 const serviceCalcShas=new Set(serviceCalcSource.map(e=>e.sha));
@@ -139,7 +141,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -635,7 +637,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha)||motoShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -833,5 +835,50 @@ await test('CarRadio reconciliation accounts for every unique SHA and preserves 
  assert.equal(download.name,e.path.split('/').at(-1),'moved export name');
  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[moved.sha],'base64'),'moved export bytes');
 });
-console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, Immo and CarRadio reference nesting, search, export and pictures via real app.js handlers'}));
+await test('ECU reconciliation accounts for every unique SHA and preserves names, paths and exports',async()=>{
+ const rec=require('../reports/catalog-ecu-reconciliation-2026-11-06.json');
+ const routes=require('../tools/catalog-ecu-routes.json');
+ assert.equal(rec.volume.unique_sha,20,'ECU unique SHA');
+ assert.equal(rec.volume.generated_entries+rec.volume.approved_entries,20,'generated plus approved');
+ assert.equal(rec.counts.already+rec.counts.moved+rec.counts.exceptions,20,'three groups cover all SHA');
+ assert.equal(rec.totals_check.sum,20);assert.equal(rec.totals_check.ok,true);
+ assert.equal(rec.already.length,rec.counts.already,'already count');
+ assert.equal(rec.moves.length,rec.counts.moved,'moved count');
+ assert.equal(rec.exceptions.length,rec.counts.exceptions,'exception count');
+ assert.equal(Object.keys(routes.routes).length,rec.counts.moved,'confirmed routes');
+ assert.equal(Object.keys(routes.keep_folders).length,rec.counts.exceptions,'kept folders');
+ assert.equal(Object.keys(routes.name_overrides).length,20,'preserved ECU names');
+ assert.deepEqual(rec.family_counts,{Engine:10},'moves by reference family');
+ const seen=new Set();
+ for(const group of ['already','moves','exceptions'])for(const row of rec[group]){
+  assert(!seen.has(row.sha),'duplicate '+row.sha);seen.add(row.sha);
+  const item=org.get(row.sha);assert(item,row.sha);
+  assert.equal(item.name,row.name,'name preserved '+row.sha);
+  if(group==='moves'){
+   assert.equal(item.folder,row.new_folder,row.sha);
+   assert.equal(routes.routes[row.sha],row.new_folder.replace(/^ECU\//,''),'route '+row.sha);
+   assert.match(row.new_folder,/^ECU\/[^/]+\/[^/]+(?:\/[^/]+)?$/,'reference nesting '+row.sha);
+   assert.equal(row.reference.family,row.new_folder.split('/')[1],'family '+row.sha);
+   assert.equal(row.reference.brand,row.new_folder.split('/')[2],'brand '+row.sha);
+   assert(row.reference.line&&row.reference.file,'reference line '+row.sha);
+  }else if(group==='exceptions'){
+   assert.equal(item.folder,row.folder,row.sha);
+   assert.equal(routes.keep_folders[row.sha],row.folder==='ECU'?'':row.folder.replace(/^ECU\//,''),'kept folder '+row.sha);
+   assert(row.reason&&row.reason.trim(),'exception reason '+row.sha);
+  }
+ }
+ assert.equal(seen.size,20,'every SHA appears once');
+ for(const [sha,name] of Object.entries(routes.name_overrides))assert.equal(org.get(sha).name,name,'name override '+sha);
+ assert.equal(routes.reason_overrides['327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac'],org.get('327d7115f4c6b0ebd77d19dc882f62c9ef5ed5a3adc3c1115d8b7413377ffeac').reason,'root reason');
+ const moved=rec.moves.find(row=>row.new_folder==='ECU/Engine/BMW/E65');
+ assert(moved,'moved BMW E65 entry');
+ const e=entry(moved.sha);assert(e,moved.sha);
+ for(const path of moved.source_paths)assert(org.matches(e,path),'old path search '+path);
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(moved.sha)+'))');
+ assert.equal(el('calcTitle').textContent,org.title(e),'moved title');
+ doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
+ assert.equal(download.name,e.path.split('/').at(-1),'moved export name');
+ assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[moved.sha],'base64'),'moved export bytes');
+});
+console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, Immo, CarRadio and ECU reference nesting, search, export and pictures via real app.js handlers'}));
 })().catch(e=>{console.error(e);process.exit(1)});

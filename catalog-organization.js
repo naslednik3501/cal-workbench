@@ -4,6 +4,7 @@
 const node=typeof module==='object'&&module.exports;
 // Device maps are generated separately; Node tests can load this file alone.
 if(node&&!root.CAL_ORGANIZATION_DASHBOARD)require('./catalog-organization-dashboard.js');
+if(node&&!root.CAL_ORGANIZATION_ECU)require('./catalog-organization-ecu.js');
 if(node&&!root.CAL_ORGANIZATION_IMMO)require('./catalog-organization-immo.js');
 if(node&&!root.CAL_ORGANIZATION_RADIO)require('./catalog-organization-radio.js');
 if(node&&!root.CAL_ORGANIZATION_UTILITIES)require('./catalog-organization-utilities.js');
@@ -26,6 +27,7 @@ if(node&&!root.CAL_ORGANIZATION_MOTOTECHNICS)require('./catalog-organization-mot
 if(node&&!root.CAL_ORGANIZATION_SPECIAL_TECHNICS)require('./catalog-organization-special-technics.js');
 if(node&&!root.CatalogLayout)require('./catalog-layout.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
+const ecu=root.CAL_ORGANIZATION_ECU||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
 const utilities=root.CAL_ORGANIZATION_UTILITIES||{entries:{}};
@@ -126,11 +128,12 @@ const data={
  source_report:'reports/catalog-organization-root-airbag.md',
  airbag_report:airbag.source_report||'',
  dashboard_report:dashboard.source_report||'',
+ ecu_report:ecu.source_report||'',
  immo_report:immo.source_report||'',
  radio_report:radio.source_report||'',
  utilities_report:utilities.source_report||'',
  remainder_report:remainder.source_report||'',
- entries:{...remainder.entries,...dashboard.entries,...immo.entries,...radio.entries,...utilities.entries,...airbag.entries,...germanBmw,...approved,...relocated},
+ entries:{...remainder.entries,...dashboard.entries,...immo.entries,...radio.entries,...utilities.entries,...airbag.entries,...germanBmw,...approved,...relocated,...ecu.entries},
  relocated,
  search_aliases:{'d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':['Renault']}
 };
