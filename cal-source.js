@@ -139,6 +139,57 @@ const formRepairs=Object.freeze({
  '85c29f98a4029a9ee892f205f12190e95a8e59d5d2e34fc53c26eae2797b97a3':[2250, 18628, "duplicate-form"],
  '95abc3363193b5b470179159dac0d54a0b9ec5e0d522dbf2f2e74a303e13d160':[47559, 29007, "outer-form-eof"],
  '405bb8c731b7160952f95969e52fa865f3c4517d1288a3056fb7fffa9cccb314':[47567, 5741, "outer-form-eof"],
+"5d3836f45b7773fe71a4005ea3cd51e09b4af80ee6ce07e0bcd9729112b589de":[4916,10557,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/Asia/Suzuki/Jimny 68HC908AZ60A.cal
+"d1721c0a84af22c0e6695f3755a3fc78b29207c2c014aba0c91dd86d2b5a134b":[1749,63150,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/Audi/A6VDO9366.cal
+"a89665f36245a01e37a6ecbc75815c514823d3bfc83df239ab606590b565f31e":[2234,2431,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/CRYPTO/Audi/A8 VDO 93C86 V1.cal
+"789de0fbd4ee35caba54e952a51c81c3a909a0b1c9a12957dcf0969624805371":[4286,27552,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/146 68HC05B16.cal
+"9d6c5ebee7ff18133016859cc35d7a7f942f3b59841cbadee0a3286b71850af8":[5455,49061,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/156 68HC11KG4.cal
+"b8751d9ee9f02fe2be52bd4ee19fc754ad2db4a5ddcacb5fe7e9bc46248d909b":[4428,2811,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/164 68HC05B16.cal
+"4dd2a7d62d974e2e917776aabdcae75cd96ab0108c84faf89c3d2d9baa2e29ce":[5443,10799,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/166 68HC11KG4.cal
+"379d36a7aefe6302737779f34b53b01625aedea47d0f9ecf8d6f4148bc87d4eb":[2548,46279,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/166 93C56.cal
+"2f3128573a19db130f6b90987b05eff9d8bab67973a7decabbf8039bc13a08ca":[4412,50848,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Alfa Romeo/GTV 68HC05B16.cal
+"823b89aa873177b7e8b116ab9d74511307591c9e3c0e12c86b95c9bde215a6cc":[2203,23721,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A3 UKNSI 93C56.cal
+"7bb1d1fed4d97c37da280221c9653f025ac809c05ab3cdc7c6fecb39894a6be8":[2148,21482,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A3 VDO 93C66.cal
+"e34c79f4ee8c9f4547af9af94ed1d3b8a12df41e1cfd8e9b2cd9f76b7f78056a":[2141,46963,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A4 BOSCH 24C08 no crypt.cal
+"79c867ef9e4e5d738b2f688c1ed95a9fb3e17b5629ecb05a200ae5e2249ab9e8":[13226,57617,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A4 MM73 912dg128.cal
+"aa635efc46f6e62d06c59551f897913b8d011082a006c94edb2110a426eaadf5":[2148,38926,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A4 VDO 93C66.cal
+"66835f93d518a55f9311f6419bd13e8ccabf7ba0cbf6f8197206e30eaa902a64":[13226,9587,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A6 MM73 912dg128.cal
+"62afa2dd0c7acf41ca1f7ac13c8c930d4902d2fd0c234feb07efa8d1cea7f155":[2881,14653,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type1.cal
+"7c6980956dd33b290363e685e2459837845457cb9193e4a0ae851f41f3261e36":[3032,18523,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type2.cal
+"9447bdb271185fe9fc8bc0ec39f2054b05c585404de6dbd2be440163601ceca3":[2148,41941,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C86 no crypt.cal
+"d654caa5de20c6b577370dcdcada9b21786c122285326d0ababdb0bff00f85a6":[2197,4938,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/A8 VDO 93C66.cal
+"2d3587033f4e6d09bad07131013d94bec1bec4cd67d7b4110acb77f5d27f87e8":[13142,37366,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/TT MM73 912D60.cal
+"13dcf9da9aafd4088d1d6aecbf223fbbe32ee561ea4394bbe37c227fea288f79":[13237,37635,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Audi/TT MM73 912dg128.cal
+"0eda2fb3a2ce2502116f8133765b9977f5376594227829d62e10146f696b1958":[2369,58875,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Cadillac/CTS 93C66 v2.cal
+"bcc9c2725033b12ddadc91367dfe2e9299d5efde7118b442b3d5a154b608dbdb":[2656,56215,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Cadillac/SRX 93C66.cal
+"9b6c4cc3d2a41b35c2a6874920b2d5a1c8125405ab6c234e856e507245b3813a":[4866,63159,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Citroen/Jumpy 68HC908AZ32.cal
+"8f44091bb97c3a5be12dca7de5bfc71bb0dda239e10afacfca5f4f5eb823add2":[4476,9873,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC05B16.cal
+"9e2378f106831e97b27a5ba399d7c678012512179fe52c25f2902f48d2a133c1":[5447,33107,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC711KG4.cal
+"cd5033a6c60a111edac7724e96661a5cfefbb9bf73d1dfe5cf8fbd00894c8871":[4833,55555,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC908AZ32.cal
+"11649ed12c8c043c7e4e9487aa7a0ac194043aba7e080852b610beb15a3fc0f5":[4420,10974,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC05E6.cal
+"03e3d2092f2280a1889e6489974a812480580860c14f6eb211978bc7cc9b89e5":[5447,11039,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC711KG4.cal
+"aa87d10a3acd8471b9ea0f9bea770113b5b752c7ae7433ee77402588c800aa8f":[4833,30673,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC908AZ32.cal
+"60b3106eaff9778e1cb0924cc123975dd731dac39ee5075f1cb3c3f7191360ee":[4872,10742,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Fiat/Scudo 68HC908AZ32.cal
+"e1a491f0345052b44e29ea7c739ea977618056df8dcbf8c4015de3f8f7380ec8":[1501,6712,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Opel/Frontera DELCO 93C46.cal
+"a6226d8ed54b753a93a9a362b71742269bfefa3ac017069debf6db671e9ec77c":[1557,12330,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Opel/Monterey 93C46.cal
+"78f3a5bec30e319be9e11f3efbcd6191564033aeae03aa598aac9110bee1d7ba":[1555,33169,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Opel/Montery 93C46.cal
+"2ef7c0f59dbaf6a5a117bb0672cc30c9b890831e0eaa5bc76a1f5edfbf28c60c":[1753,13413,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Opel/Omega 93C46.cal
+"a3e9e84d9d0292c8ac3cf8c84f15b41b16d20073b20b28820f7d83c754c90e91":[1757,38884,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Opel/Senator 93C46.cal
+"dc84942b6a37c1cd8ce059ca3f4783573018e037c9f19cde7ed5f8c10523a418":[4869,6711,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Peugeot/Expert 68HC908AZ32.cal
+"ef5d731405061a366395eb0658731dd9def746811c19ff14b9b0fb625b1a0eaa":[1466,57284,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Skoda/Oktavia A5.cal
+"78f7b3fe0ca311836a286c97b9da0c36125eca9c2dd4c4bfbf36068ed0495261":[1377,3546,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Skoda/Oktavia VDO 93C66.cal
+"226250a2062891e49f883e14e676989d01a54524d60ccf0222afb34bdabd5e0b":[1379,20505,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Skoda/Oktavia VDO 93LC86.cal
+"90d0eab7ba40614f9cf89eb2d74ee90603bb19c80bb8a4961b1fa37b5035a841":[1349,3066,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Skoda/Super B 93C86.cal
+"6755ea9a711998aa4091ae63bd2e8e99f3ad90d0298e243e6610870ad242d625":[1458,40640,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/VW/Touareg/VWTouareg2004.cal
+"ca77fb66a63be7162c9cc48e13526ed8e075253ec88a603a071ee7881ebe84fb":[3055,19714,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type1 93C66.cal
+"298484bc70d2545c0e233b9283b63b6a1e9f6febc31ffd02bc4a5c45a848f6d5":[3051,59203,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type2 93C66.cal
+"2c0b024c0800390a155b970aecf308aa105cc1e41b7d15f6bc672993d9fb857f":[2890,6411,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5 vdo 93c86.cal
+"9ac77072d2b88fd860ab2a82c4ad99eaada49d82c742977dc93ae89bbc02f9a6":[2182,5977,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2001 vdo 93c86.cal
+"56d84ca2c75cef0ac2cdcb3763f2fbdadd5e3f661597a0341507deaa4a559472":[2187,28627,"duplicate-form"], // ETSmartUSB/iProg+/Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2004 vdo 93c86.cal
+"13dee4e9443bf3683a624ebfa037c102a95f5a2534d3d176ee8bd5158f390746":[1471,38271,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Volkswagen/VWTouareg2004.cal
+"dfa760d9343cf5711a3e7fbf56b07b5b5ae10d89508c38fbffa93063197ac691":[2883,57492,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5 vdo 93c86.cal
+"a9d2c88bf6a9a9b6d970626792b3c39a50ae98ed485f97e36ddd96956f805e5c":[2175,11419,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2001 vdo 93c86.cal
+"9dd12fabc9b8bf87e5caa8fe4d8ebcbbe97af9afcc29eed7b451abe9bb6886e8":[2180,53518,"duplicate-form"], // ETSmartUSB/Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2004 vdo 93c86.cal
 });
 // T-006: five missing closing groups around explicit decimal BCD terms.
 const bcdGroupRepairs=Object.freeze({
@@ -168,8 +219,22 @@ const unverifiedWriters=Object.freeze({
  'ecde8e1579b3adee67eba279d1bbdcd2355104a634fb03d69edb3c1eeb23d520':'Запись заблокирована: при текущем разборе Var6 >> 16 + Var6 оригинал формирует разные копии 0x00 и 0x20 и отвергает результат. Приоритет сдвига в iProg не подтверждён. Нужны правила языка, точная скомпилированная версия или эталон записи; алгоритм не изменён.',
 });
 function parse(raw,{sha}={}){if(raw.length>3*1048576)fail('файл слишком большой');let text;try{text=new TextDecoder('utf-8',{fatal:true}).decode(raw);}catch{text=cp.decode(raw);}
- // CAL metadata precedes Size; only a section title, ! lines and comments are accepted there.
- text=text.replace(/^\uFEFF/,'').replace(/^\s*\[[^\r\n\]]*\]\s*/,'').replace(/^\s*![^\r\n]*$/gm,'');
+ // CAL metadata precedes Size: section title, !/@/# reference lines, comments and a
+ // bare image/document filename. Code is not accepted before Size.
+ text=text.replace(/^\uFEFF/,'');
+ const sizeAt=text.search(/\bSize\s*\(/i);
+ if(sizeAt>0){
+  const preamble=text.slice(0,sizeAt);
+  const leftover=preamble
+   .replace(/^\s*\[[^\r\n\]]*\]\s*$/gm,'')
+   .replace(/^\s*[!@#][^\r\n]*$/gm,'')
+   .replace(/^\s*\/\/[^\r\n]*$/gm,'')
+   .replace(/^\s*[^\s{};=]+\.(?:htm|html|doc|docx|jpg|jpeg|png|bmp|gif|txt)\s*$/gmi,'')
+   .replace(/^\s*$/gm,'');
+  if(leftover)fail('\u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439 \u0442\u0435\u043A\u0441\u0442 \u043F\u0435\u0440\u0435\u0434 Size');
+  text=preamble.replace(/[^\r\n]/g,'')+text.slice(sizeAt);
+ }
+ text=text.replace(/^\s*![^\r\n]*$/gm,'');
  const repair=Object.hasOwn(finalBraceRepairs,sha)?finalBraceRepairs[sha]:null;
  if(repair){if(raw.length!==repair[0]||E.crc16(raw)!==repair[1])fail('исходник не совпадает с профилем исправления');if(!/}\s*$/.test(text))fail('не найдено исправляемой скобки');text=text.replace(/}\s*$/,'');}
  const topRepair=Object.hasOwn(topLevelBraceRepairs,sha)?topLevelBraceRepairs[sha]:null;

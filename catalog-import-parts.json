@@ -7,7 +7,9 @@
   "catalog-import-data/part-004.js",
   "catalog-import-data/part-005.js",
   "catalog-import-data/part-006.js",
-  "catalog-import-data/part-007.js"
+  "catalog-import-data/part-007.js",
+  "catalog-import-data/part-008.js",
+  "catalog-import-data/part-009.js"
  ],
  "blobs": [
   "catalog-import-data/blobs-000.js",
@@ -17,6 +19,8 @@
   "catalog-import-data/blobs-004.js",
   "catalog-import-data/blobs-005.js",
   "catalog-import-data/blobs-006.js",
-  "catalog-import-data/blobs-007.js"
+  "catalog-import-data/blobs-007.js",
+  "catalog-import-data/blobs-008.js",
+  "catalog-import-data/blobs-009.js"
  ]
 }
