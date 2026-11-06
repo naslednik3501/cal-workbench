@@ -38,6 +38,9 @@ const germanyShas=new Set(germanyAllSource.map(e=>e.sha));
 const germanBmwSource=allCal.filter(e=>e.path.startsWith('Calculators/Germany/BMW/'));
 const germanBmwShas=new Set(germanBmwSource.map(e=>e.sha));
 const germanOtherSource=germanyAllSource.filter(e=>!e.path.startsWith('Calculators/Germany/BMW/'));
+const franceAllSource=allCal.filter(e=>e.path.startsWith('Calculators/France/'));
+const franceShas=new Set(franceAllSource.map(e=>e.sha));
+const franceMovedSource=franceAllSource.filter(e=>org.folder(e)?.startsWith('Dashboard/France/'));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -72,7 +75,7 @@ await test('all active CAL are mapped once, without translated root folders',()=
   if(!item.folder.includes('/'))rootCounts[item.folder]=(rootCounts[item.folder]||0)+1;
  }
  for(const root of ['Airbag','Dashboard','Immo','CarRadio','OTHER'])assert(roots.has(root),root);
- assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
+ assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
  assert.deepEqual(rootCounts,{Airbag:9,CHINA:1,ECU:1,CarRadio:1,OTHER:2},'exact direct-root remainder by section');
  for(const [sha,item] of Object.entries(org.data.entries)){
   if(!item.folder.includes('/'))assert(item.reason&&item.reason.trim(),'root reason '+sha);
@@ -90,7 +93,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany','unknown Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France','unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
@@ -98,7 +101,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -180,6 +183,40 @@ await test('other Germany panels follow brand and model nesting from the dated l
   ['Calculators/Germany/Volkswagen/Caddy 24c32.cal','Dashboard/Germany/Volkswagen/Caddy']
  ];
  for(const [path,folder] of inferred){const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);}
+});
+await test('France panels follow confirmed brands and preserve disputed entries',()=>{
+ assert.equal(franceAllSource.length,392,'all France source paths');
+ assert.equal(franceShas.size,392,'distinct France CAL contents');
+ assert.equal(franceMovedSource.length,386,'confirmed France dashboard entries');
+ for(const e of franceAllSource)assert(org.matches(e,e.path),'original path search '+e.path);
+ const brandCounts={},folders=new Set();
+ let direct=0;
+ for(const e of franceMovedSource){
+  const brand=e.path.split('/')[2],folder=org.folder(e);
+  assert.equal(folder.split('/').slice(0,3).join('/'),'Dashboard/France/'+brand,e.path);
+  assert(folder.split('/').length===3||folder.split('/').length===4,'brand or model/block depth '+folder);
+  assert(org.matches(e,e.path),'original path search '+e.path);
+  brandCounts[brand]=(brandCounts[brand]||0)+1;folders.add(folder);
+  if(folder.split('/').length===3)direct++;
+ }
+ assert.deepEqual(brandCounts,{Aixam:3,Citroen:122,Dacia:6,Peugeot:147,Renault:108});
+ assert.equal(folders.size,55,'France brand/model display folders');
+ assert.equal(direct,27,'records kept directly under their brand');
+ const disputed={
+  'Calculators/France/Case/CX90 93C46.cal':'Dashboard/Case',
+  'Calculators/France/Case/MX120 93C46.cal':'Dashboard/Case',
+  'Calculators/France/Case/MX150 93C46.cal':'Dashboard/Case',
+  'Calculators/France/Case/MX170 93C46.cal':'Dashboard/Case',
+  'Calculators/France/Citroen/Dash RS5 93C86 V1.cal':'Dashboard/Citroen',
+  'Calculators/France/Peugeot/Satelis 24C04.cal':'Dashboard/Peugeot'
+ };
+ for(const [path,folder] of Object.entries(disputed)){
+  const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);
+ }
+ const latitudeVariants=allCal.filter(e=>e.path.startsWith('Calculators/France/Renault/Latitude')&&/24C16/i.test(e.path));
+ assert.equal(latitudeVariants.length,2);assert.notEqual(org.title(latitudeVariants[0]),org.title(latitudeVariants[1]));
+ const renamed=latitudeVariants.find(e=>org.get(e.sha).old_name);
+ assert(renamed);assert(org.matches(renamed,org.get(renamed.sha).old_name));
 });
 await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
  const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
@@ -286,7 +323,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -296,13 +333,13 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
 });
 await test('main sections sort by unique CAL count; folders inside sections sort alphabetically with counters',()=>{
  el('search').value='';run("catalogScope='';expandedFolders.clear();renderCatalog()");
- const sections=sectionRows();assert(sections.length>=17);
+ const sections=sectionRows();assert(sections.length>=16);
  for(let i=1;i<sections.length;i++){
   assert(sections[i-1].count>=sections[i].count,'root count order '+sections[i-1].name+' vs '+sections[i].name);
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Airbag','largest section first');
- assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4920);
+ assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4935);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');

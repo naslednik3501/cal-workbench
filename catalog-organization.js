@@ -10,12 +10,14 @@ if(node&&!root.CAL_ORGANIZATION_UTILITIES)require('./catalog-organization-utilit
 if(node&&!root.CAL_ORGANIZATION_REMAINDER)require('./catalog-organization-remainder.js');
 if(node&&!root.CAL_ORGANIZATION_AIRBAG)require('./catalog-organization-airbag.js');
 if(node&&!root.CAL_ORGANIZATION_GERMANY)require('./catalog-organization-germany.js');
+if(node&&!root.CAL_ORGANIZATION_FRANCE)require('./catalog-organization-france.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
 const utilities=root.CAL_ORGANIZATION_UTILITIES||{entries:{}};
 const airbag=root.CAL_ORGANIZATION_AIRBAG||{entries:{}};
 const germany=root.CAL_ORGANIZATION_GERMANY||{entries:{}};
+const france=root.CAL_ORGANIZATION_FRANCE||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -110,6 +112,11 @@ for(const [hash,folder] of Object.entries(germany.entries||{})){
  const item=data.entries[hash];
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Germany display entry: '+hash);
  data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(france.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid France display entry: '+hash);
+ data.entries[hash]={...item,folder,...(france.name_exceptions?.[hash]||{})};
 }
 const legacyRoots={
  Airbag:['Подушки безопасности','SRS'],
