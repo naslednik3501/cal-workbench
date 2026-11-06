@@ -233,7 +233,6 @@
     "Alfa Romeo/GTV": 8,
     "Alfa Romeo/156": 24,
     "Skoda/Fabia": 2,
-    "Jaguar/X-Type": 3,
     "Fiat/Panda": 10,
     "Fiat/Bravo": 14,
     "Fiat/Seicento": 14,
@@ -6123,11 +6122,6 @@
       "basis": "iProgGuard Airbag.txt 2026-08-01"
     },
     {
-      "sha": "4c84a9daaa8152ffe7708866110259179486ff0a6bd55605be4b3d328fefa069",
-      "folder": "Jaguar/X-Type",
-      "basis": "iProgGuard Airbag.txt 2026-08-01"
-    },
-    {
       "sha": "4c8a5871fd22765eb1a49a1c05b94ddc733d330e5625cf2226bea94d84dea884",
       "folder": "Honda/77960-SCA",
       "basis": "iProgGuard Airbag.txt 2026-08-01"
@@ -6370,11 +6364,6 @@
     {
       "sha": "4ff03e765dcb2c6e20fd2fc6ce5b61226bd6036820737d38a7edb545ffd6f3d4",
       "folder": "Nissan/Almera",
-      "basis": "iProgGuard Airbag.txt 2026-08-01"
-    },
-    {
-      "sha": "4ff3e2aeec40272635b4a511a835667637db884b7416ed1feb9a91d20b74e1b7",
-      "folder": "Jaguar/X-Type",
       "basis": "iProgGuard Airbag.txt 2026-08-01"
     },
     {
@@ -13245,11 +13234,6 @@
     {
       "sha": "ab9519fa9f1fc33e1c0ba631dac466407fe31c64bed589fc742716a4a815ecb1",
       "folder": "Fiat/Grande Punto",
-      "basis": "iProgGuard Airbag.txt 2026-08-01"
-    },
-    {
-      "sha": "ab99fe894b0b53b3fc2dfb86fdb3445445c74e8332ef662ac83cedcbbdac5b13",
-      "folder": "Jaguar/X-Type",
       "basis": "iProgGuard Airbag.txt 2026-08-01"
     },
     {
