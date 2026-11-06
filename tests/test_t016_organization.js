@@ -709,5 +709,50 @@ await test('Immo reconciliation accounts for every unique SHA and preserves name
  assert.equal(download.name,e.path.split('/').at(-1),'moved export name');
  assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[moved.sha],'base64'),'moved export bytes');
 });
-console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, Immo reference nesting, search, export and pictures via real app.js handlers'}));
+await test('CarRadio reconciliation accounts for every unique SHA and preserves names, paths and exports',async()=>{
+ const rec=require('../reports/catalog-carradio-reconciliation-2026-11-06.json');
+ const routes=require('../tools/catalog-carradio-routes.json');
+ assert.equal(rec.volume.unique_sha,1566,'CarRadio unique SHA');
+ assert.equal(rec.volume.generated_entries+rec.volume.approved_entries,1566,'generated plus approved');
+ assert.equal(rec.counts.already+rec.counts.moved+rec.counts.exceptions,1566,'three groups cover all SHA');
+ assert.equal(rec.totals_check.sum,1566);assert.equal(rec.totals_check.ok,true);
+ assert.equal(rec.already.length,rec.counts.already,'already count');
+ assert.equal(rec.moves.length,rec.counts.moved,'moved count');
+ assert.equal(rec.exceptions.length,rec.counts.exceptions,'exception count');
+ assert.equal(Object.keys(routes.routes).length,rec.counts.moved,'confirmed routes');
+ assert.equal(Object.keys(routes.name_overrides).length,23,'preserved CarRadio names');
+ const byCategory={};for(const row of rec.moves){const category=row.new_folder.split('/')[1];byCategory[category]=(byCategory[category]||0)+1;}
+ const expectedCategories={Damps:1211,Diodes:20,Immo:78,'Serial calculator':19,Smartcard:8,Navigation:2,Keycard:1,Jamper:1};
+ assert.deepEqual(byCategory,expectedCategories,'moves by reference category');
+ const seen=new Set();
+ for(const group of ['already','moves','exceptions'])for(const row of rec[group]){
+  assert(!seen.has(row.sha),'duplicate '+row.sha);seen.add(row.sha);
+  const item=org.get(row.sha);assert(item,row.sha);
+  assert.equal(item.name,row.name,'name preserved '+row.sha);
+  if(group==='moves'){
+   assert.equal(item.folder,row.new_folder,row.sha);
+   assert.equal(routes.routes[row.sha],row.new_folder.replace(/^CarRadio\//,''),'route '+row.sha);
+   assert.match(row.new_folder,/^CarRadio\/[^/]+\/[^/]+$/,'reference nesting '+row.sha);
+   assert(row.reference.line&&row.reference.file,'reference line '+row.sha);
+   assert.equal(row.reference.category,row.new_folder.split('/')[1],'category '+row.sha);
+   assert.equal(row.reference.brand,row.new_folder.split('/')[2],'brand '+row.sha);
+  }else if(group==='exceptions'){
+   assert.equal(item.folder,row.folder,row.sha);
+   assert(row.reason&&row.reason.trim(),'exception reason '+row.sha);
+  }
+ }
+ assert.equal(seen.size,1566,'every SHA appears once');
+ for(const [sha,name] of Object.entries(routes.name_overrides))assert.equal(org.get(sha).name,name,'name override '+sha);
+ assert(rec.exceptions.some(row=>row.sha==='d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877'&&/утверждённая/.test(row.reason)),'approved root entry is an exception');
+ const moved=rec.moves.find(row=>row.new_folder==='CarRadio/Keycard/Blaupunkt');
+ assert(moved,'moved Keycard entry');
+ const e=entry(moved.sha);assert(e,moved.sha);
+ for(const path of moved.source_paths)assert(org.matches(e,path),'old path search '+path);
+ run('select(entries.find(e=>e.sha==='+JSON.stringify(moved.sha)+'))');
+ assert.equal(el('calcTitle').textContent,org.title(e),'moved title');
+ doc.downloads.length=0;await el('exportCal').click();const download=doc.downloads.at(-1);
+ assert.equal(download.name,e.path.split('/').at(-1),'moved export name');
+ assert.deepEqual(Buffer.from(await download.blob.arrayBuffer()),Buffer.from(db.blobs[moved.sha],'base64'),'moved export bytes');
+});
+console.log(JSON.stringify({passed,scope:'original section names, counted section order, alphabetical inner folders, complete 15,057 SHA map, Immo and CarRadio reference nesting, search, export and pictures via real app.js handlers'}));
 })().catch(e=>{console.error(e);process.exit(1)});

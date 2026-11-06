@@ -378,8 +378,8 @@
     },
     {
       "path": "catalog-organization-radio.js",
-      "bytes": 274076,
-      "sha256": "41ce0443a9f33d8a630f3ac0fed16194b67b1aba012795534cecccdb4077c5c5"
+      "bytes": 284410,
+      "sha256": "1fd2f7342b9a0bffeed687b9e8141d7cc767bccfcbf63ca13beddf0b506eacef"
     },
     {
       "path": "catalog-organization-remainder.js",
@@ -430,6 +430,11 @@
       "path": "favicon.svg",
       "bytes": 475,
       "sha256": "1da0742610ce018c9da0f59863a863a30ff956e37f935e4be8527fc208bcdc86"
+    },
+    {
+      "path": "image-assets.json",
+      "bytes": 16533,
+      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
     },
     {
       "path": "image-assets/02a9a13eb8b4c1110cefc067c925fddb8dd9758f0abfb556bfdbb9be0dfe7abc.png",
@@ -1382,11 +1387,6 @@
       "sha256": "ffe1a3b163641274abdd194b14c6caf8507f9ccd69d9c6a37d959f1416d82790"
     },
     {
-      "path": "image-assets.json",
-      "bytes": 16533,
-      "sha256": "e8f88d94c590d76f6892b39173e8211d43e18a2c61ab249fe8bb96c58990828d"
-    },
-    {
       "path": "image-resource-data.js",
       "bytes": 113446,
       "sha256": "57e645381d82e377a79c09fecfa2694e627449480ff680af6d4195b84730a52f"
@@ -1597,6 +1597,16 @@
       "sha256": "65f32e9c3cc137568056d63d8503a77593b540fd1905224b0f40b1382f8a63c7"
     },
     {
+      "path": "reports/catalog-carradio-exceptions-2026-11-06.md",
+      "bytes": 61204,
+      "sha256": "3f733a07b2c633f10e4e1442e64e6ceba2b946bb4d38ca294b9f994e08dcb06a"
+    },
+    {
+      "path": "reports/catalog-carradio-reconciliation-2026-11-06.json",
+      "bytes": 962116,
+      "sha256": "0c88d02b8239ef852bfb80017c360329e53320da220de355efd67048321d3215"
+    },
+    {
       "path": "reports/catalog-immo-exceptions-2026-11-06.md",
       "bytes": 39722,
       "sha256": "bd10e37a9aa3001325cfbe3cd8e712b3c285722ed032b9b6bdca75c25fdc66b3"
@@ -1658,8 +1668,8 @@
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.json",
-      "bytes": 745519,
-      "sha256": "4e06c33f641b111017e8d54cbc31512fe9963388f192e8e093ced02ba2a3178e"
+      "bytes": 1047846,
+      "sha256": "6f29f0647bae4b79b65f53cdf234bb32f0816f3084d7b120b99920fe6720f996"
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.md",
@@ -2008,8 +2018,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 57428,
-      "sha256": "724a1ec20c334151b17404646cae32867935bd1b46f3a4868a74af2d846b9fe5"
+      "bytes": 60835,
+      "sha256": "011986fa317942b8554b91206ee052efd56875ca3ea554057105fc6a28b68c06"
     },
     {
       "path": "tests/test_text_variants.js",
@@ -2097,6 +2107,11 @@
       "sha256": "d7f2d57f0a4ed9cac5b767189def153eac915f9f7a5329d9c59ae1decafb4c8f"
     },
     {
+      "path": "tools/catalog-carradio-routes.json",
+      "bytes": 124025,
+      "sha256": "9f14f302ee858fbcc3be7273386640370195f49801c01cf912f22928d9c62e8b"
+    },
+    {
       "path": "tools/catalog-immo-routes.json",
       "bytes": 26085,
       "sha256": "117d9a94d8343dcff641974e0852c696aa0b5c548918523a7e044b458cb22390"
@@ -2108,8 +2123,8 @@
     },
     {
       "path": "tools/catalog_device_organization.js",
-      "bytes": 55719,
-      "sha256": "99e2516d8afa80d0cc6919cb33a13935548d6e505cf92c006267bebbd7542b39"
+      "bytes": 58350,
+      "sha256": "7bcb179578a28be316dbe57a10a800de8f17475d9284be02c62f62720f9bc2a5"
     },
     {
       "path": "tools/catalog_inventory.py",
