@@ -59,6 +59,9 @@ const asiaSubaruSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/Suba
 const asiaSubaruShas=new Set(asiaSubaruSource.map(e=>e.sha));
 const asiaSuzukiSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/Suzuki/'));
 const asiaSuzukiShas=new Set(asiaSuzukiSource.map(e=>e.sha));
+const asiaAllSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/'));
+const asiaAllShas=new Set(asiaAllSource.map(e=>e.sha));
+const asiaAudit=require('../reports/catalog-organization-asia-exceptions-2026-11-06.json');
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -119,7 +122,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha)||asiaToyotaShas.has(row.sha)||asiaSubaruShas.has(row.sha)||asiaSuzukiShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -212,6 +215,25 @@ await test('Asia Suzuki accounts for every unique source CAL',()=>{
   'Calculators/Asia/Suzuki/Liana 93C56 New Denco.cal':'Dashboard/Asia/Suzuki/Liana'
  };
  for(const [path,folder] of Object.entries(inferred)){const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);}
+});
+await test('complete Asia inventory accounts for every unique SHA exactly once',()=>{
+ assert.equal(asiaAllShas.size,1458,'all unique Asia SHA');
+ assert.deepEqual(asiaAudit.summary,{unique_sha:1458,already_on_place:702,moved:359,exceptions:397,reconciled:1458,previously_processed:704});
+ assert.equal(asiaAudit.already_sha.length,702);assert.equal(asiaAudit.moved_sha.length,359);assert.equal(asiaAudit.exceptions.length,397);
+ const all=[...asiaAudit.already_sha,...asiaAudit.moved_sha,...asiaAudit.exceptions.map(row=>row.sha)];
+ assert.equal(new Set(all).size,1458,'Asia SHA union');
+ assert.equal(all.length,1458,'Asia categories are mutually exclusive');
+ assert.deepEqual(new Set(all),asiaAllShas,'Asia inventory equals source');
+ for(const sha of asiaAudit.already_sha)assert(org.folder(allCal.find(e=>e.sha===sha))?.startsWith('Dashboard/Asia/'),'already '+sha);
+ for(const sha of asiaAudit.moved_sha)assert(org.folder(allCal.find(e=>e.sha===sha))?.startsWith('Dashboard/Asia/'),'moved '+sha);
+ for(const row of asiaAudit.exceptions){
+  assert(row.reason?.trim(),'exception reason '+row.sha);
+  const entry=allCal.find(e=>e.sha===row.sha);assert(entry,row.sha);
+  assert.equal(org.folder(entry),row.currentFolder,'exception folder '+row.sha);
+  assert.equal(org.title(entry),row.currentName,'exception name '+row.sha);
+  assert(!org.folder(entry).startsWith('Dashboard/Asia/'),'exception moved '+row.sha);
+  for(const sourcePath of row.paths){const source=allCal.find(x=>x.path===sourcePath);assert(source,sourcePath);assert(org.matches(source,sourcePath),'exception old path '+sourcePath);}
+ }
 });
 await test('Asia Toyota accounts for every unique source CAL',()=>{
  assert.equal(asiaToyotaSource.length,236,'all Asia/Toyota source paths');
@@ -505,7 +527,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha)||asiaToyotaShas.has(row.sha)||asiaSubaruShas.has(row.sha)||asiaSuzukiShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -521,7 +543,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Dashboard','largest section first');
- assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,5630);
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,5964);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');

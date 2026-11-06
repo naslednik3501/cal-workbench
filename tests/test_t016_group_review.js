@@ -14,11 +14,7 @@ const remainder = require('../reports/catalog-organization-remainder-2026-11-04.
 const allCal = globalThis.CAL_CATALOG.entries.filter(entry => entry.ext === 'cal');
 const bySha = new Map(allCal.map(entry => [entry.sha, entry]));
 const overriddenShas = new Set(allCal
-  .filter(entry => entry.path.startsWith('Calculators/Asia/Nissan/')
-    || entry.path.startsWith('Calculators/Asia/Mitsubishi/')
-    || entry.path.startsWith('Calculators/Asia/Toyota/')
-    || entry.path.startsWith('Calculators/Asia/Subaru/')
-    || entry.path.startsWith('Calculators/Asia/Suzuki/'))
+  .filter(entry => entry.path.startsWith('Calculators/Asia/'))
   .map(entry => entry.sha));
 const decisions = registry.decisions;
 const generic = decisions.filter(row => row.group === 'generic');
