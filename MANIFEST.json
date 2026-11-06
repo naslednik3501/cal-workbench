@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3373,
-      "sha256": "a32baae5736402f8212c8ba5785024e41715ca6420d1834f25d9509ff1101bf0"
+      "bytes": 3416,
+      "sha256": "05f6e46e3b7804810b62f98d74c835bad5f7685a27a89eab2ac76ae21d6cc283"
     },
     {
       "path": "cal-source.js",
@@ -1543,8 +1543,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 14172,
-      "sha256": "c8d0fd33fc4810ca96e59522ac0e19fb3e0d82da1b67c22205d052025a125328"
+      "bytes": 14179,
+      "sha256": "14c3b88f4483b995728649e5bbbfc2b527ae1d08e8006ca14d5b48f8202c9e2f"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -2018,8 +2018,8 @@
     },
     {
       "path": "tests/test_catalog.js",
-      "bytes": 1053,
-      "sha256": "a32824c3c35153691fcedfe1f1b090bfa789b96a0d4be630bb63560aaa9edc97"
+      "bytes": 1069,
+      "sha256": "24ba403c15acb651d016f4f0ddf0fb72f92b9f080b39633a613594e07aac4543"
     },
     {
       "path": "tests/test_catalog_dedup.js",
@@ -2328,8 +2328,8 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 3449,
-      "sha256": "5d6d05040fd975ef23963099e097c0114ff6bbb8c9e0d5c68a83831b05952302"
+      "bytes": 3466,
+      "sha256": "c0d213d5059b277ac6e602a042c070aa3b37e52499b925909eaa1d66556d175d"
     },
     {
       "path": "tools/publish_source_store.py",

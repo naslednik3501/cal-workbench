@@ -34,7 +34,8 @@ class References(HTMLParser):
     def handle_starttag(self, tag, attrs):
         for key, value in attrs:
             if key in ("src", "href") and value and not value.startswith("#"):
-                if value not in assets:
+                ref = value.split("?", 1)[0]
+                if ref not in assets:
                     raise SystemExit("Unpackaged reference: " + value)
 References().feed((ROOT / "index.html").read_text())
 
