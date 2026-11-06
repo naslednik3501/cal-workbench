@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2850,
-      "sha256": "7a9fd96771de157073b8a238ab2be1b8b761f66279b54372793267a26e447b6b"
+      "bytes": 2896,
+      "sha256": "7ebd3a5de39ec9cc7eccf40f90908ef2a1bae37ec81a61328cb4ffe762324f08"
     },
     {
       "path": "cal-source.js",
@@ -332,6 +332,11 @@
       "sha256": "ed0ef63e183b42262a7a6b78c7c9bde9ab57539117ae766d781fb7a4c6d4ded9"
     },
     {
+      "path": "catalog-organization-asia-subaru-suzuki.js",
+      "bytes": 7917,
+      "sha256": "12f13a980094366f256e297673a961ce7c8b02ce2987933c8ae0898a5004e676"
+    },
+    {
       "path": "catalog-organization-asia-toyota.js",
       "bytes": 23951,
       "sha256": "e560048178b628ea7596036bf50ecdd5ad24bde80a70395caaaba113d404eeef"
@@ -373,8 +378,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 20217,
-      "sha256": "e238d862df875b12c75210d6a663855d9e887713cde40cc521ea8d73b8b83d57"
+      "bytes": 20662,
+      "sha256": "5ece2646d7f365583cc4eb76c66ffb697756e56d4601a8749bd49ba45faa9e1b"
     },
     {
       "path": "catalog-parts.json",
@@ -1383,8 +1388,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12422,
-      "sha256": "87334acb895cdc004d434ea277dec598c7d81f115f62237732eee32a672540b7"
+      "bytes": 12489,
+      "sha256": "bb55331768c4aa20120110aceb50a28bde25f753faa08183a076a5425704df3f"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1953,13 +1958,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4691,
-      "sha256": "503c76cd827542415e748b7f7ebc29d0fd6caa761736bb7e6bb8aec74dccbcdb"
+      "bytes": 4805,
+      "sha256": "dcf16cfe1dfed7fe3c67af338a39430adcc1806d4bf1cf161bf3f0758fe33d12"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 44889,
-      "sha256": "a1a2bad90698bac284398667c844405952d3a32e287ae19cfc94077531d75be3"
+      "bytes": 47158,
+      "sha256": "a02e632c19f35ceb9cbf6c45043af8a3a5868beff990666ffa890f950dea8004"
     },
     {
       "path": "tests/test_text_variants.js",

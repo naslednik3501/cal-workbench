@@ -16,7 +16,9 @@ const bySha = new Map(allCal.map(entry => [entry.sha, entry]));
 const overriddenShas = new Set(allCal
   .filter(entry => entry.path.startsWith('Calculators/Asia/Nissan/')
     || entry.path.startsWith('Calculators/Asia/Mitsubishi/')
-    || entry.path.startsWith('Calculators/Asia/Toyota/'))
+    || entry.path.startsWith('Calculators/Asia/Toyota/')
+    || entry.path.startsWith('Calculators/Asia/Subaru/')
+    || entry.path.startsWith('Calculators/Asia/Suzuki/'))
   .map(entry => entry.sha));
 const decisions = registry.decisions;
 const generic = decisions.filter(row => row.group === 'generic');
