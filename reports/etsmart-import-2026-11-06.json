@@ -8,15 +8,14 @@
   "uniqueCal": 15057
  },
  "imported": {
-  "calPaths": 2098,
-  "uniqueCal": 2098,
-  "bytes": 5862988
+  "calPaths": 2329,
+  "uniqueCal": 2329,
+  "bytes": 7426113
  },
  "remaining": {
-  "parseFailures": 933,
-  "executionFailures": 120,
-  "samePathVersions": 64,
-  "newPaths": 989
+  "parseFailures": 822,
+  "samePathVersions": 46,
+  "newPaths": 776
  },
  "rows": [
   {
@@ -354,6 +353,14 @@
    "folder": "Airbag/Honda",
    "name": "77960-sdn-c211-m1 — ETSmart",
    "display": "Airbag/Honda/77960-sdn-c211-m1 — ETSmart.cal"
+  },
+  {
+   "sha": "17abb4f65cdab40c93131fd037a69677b2ed73e2847d20b0c83bb956b8df5952",
+   "path": "Calculators/Airbag/Honda/77960-SMG-G021-M1.cal",
+   "size": 2319,
+   "folder": "Airbag/Honda",
+   "name": "77960-SMG-G021-M1 — ETSmart",
+   "display": "Airbag/Honda/77960-SMG-G021-M1 — ETSmart.cal"
   },
   {
    "sha": "01f1fba2c0168a39f74da4c8a3aab5f55385b2237b8963ee3635d21e9be928e0",
@@ -7012,6 +7019,14 @@
    "display": "Dashboard/Прочие панели/I/Yazaki 48 C56.cal"
   },
   {
+   "sha": "6755ea9a711998aa4091ae63bd2e8e99f3ad90d0298e243e6610870ad242d625",
+   "path": "Calculators/Dashboard/VW/Touareg/VWTouareg2004.cal",
+   "size": 1458,
+   "folder": "Dashboard/VW/Touareg",
+   "name": "VWTouareg2004",
+   "display": "Dashboard/Прочие панели/VW/Touareg/VWTouareg2004.cal"
+  },
+  {
    "sha": "b8494f006786bf10d9501181709c9f8d4f10e49c8517c7ffbf8077e06362619d",
    "path": "Calculators/Dashboard/VW/Vento/VWVentoTRW.cal",
    "size": 1514,
@@ -7900,6 +7915,14 @@
    "display": "Dashboard/Asia/Hyundai/Sonata dash NEC.cal"
   },
   {
+   "sha": "9830b0c4769d2ad8d9d5a0e32048e90214b8c4148106170969e8a1adca65f3d6",
+   "path": "Calculators/Dashboard/Asia/Hyundai/Starex GRX 93c56.cal",
+   "size": 2119,
+   "folder": "Dashboard/Asia/Hyundai",
+   "name": "Starex GRX 93c56",
+   "display": "Dashboard/Asia/Hyundai/Starex GRX 93c56.cal"
+  },
+  {
    "sha": "d296304e9d96a797f15bd59417176436fc7b91d17974adf8aa9397bde2971fb0",
    "path": "Calculators/Dashboard/Asia/Hyundai/Starex GRX 93S56.cal",
    "size": 1990,
@@ -8020,6 +8043,38 @@
    "display": "Dashboard/Asia/Infinity/FX35 93C66 Kansey miles v2 — ETSmart.cal"
   },
   {
+   "sha": "19e9a3510b9c5782dc4a93d1f1fd50f8e7fe463af00c57cc37e640daabe3f632",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity FX35 93C66 Kansey km.cal",
+   "size": 2526,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity FX35 93C66 Kansey km",
+   "display": "Dashboard/Asia/Infinity/Infinity FX35 93C66 Kansey km.cal"
+  },
+  {
+   "sha": "64e948bee0f9914f3ebe3ba39fa0f650ca46494aafe96df5e7ad786be5c672dd",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity FX35 93C66 Kansey miles.cal",
+   "size": 2511,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity FX35 93C66 Kansey miles",
+   "display": "Dashboard/Asia/Infinity/Infinity FX35 93C66 Kansey miles.cal"
+  },
+  {
+   "sha": "08d2fd3546254195e9879119ef0832df1bda691aed889fbd69efce693932319c",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity FX45 93C66 Kansey km.cal",
+   "size": 2528,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity FX45 93C66 Kansey km",
+   "display": "Dashboard/Asia/Infinity/Infinity FX45 93C66 Kansey km.cal"
+  },
+  {
+   "sha": "d06fe44b0aa550828331fab1bb87dda3b52d75ad22fa196afb777650c8b8792b",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity FX45 93C66 Kansey miles.cal",
+   "size": 2511,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity FX45 93C66 Kansey miles",
+   "display": "Dashboard/Asia/Infinity/Infinity FX45 93C66 Kansey miles.cal"
+  },
+  {
    "sha": "e5851aee109e9f9490326dca7b6f1c22f2dbd580d822f4d531157e8c5fcfd7eb",
    "path": "Calculators/Dashboard/Asia/Infinity/Infinity G35 93C66 Kansey km.cal",
    "size": 2513,
@@ -8028,12 +8083,44 @@
    "display": "Dashboard/Asia/Infinity/Infinity G35 93C66 Kansey km.cal"
   },
   {
+   "sha": "f466c64a730cfbf91e6f9691e65ac40fb026c97d076ef987c58364476770ec57",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity G35 93C66 Kansey miles.cal",
+   "size": 2504,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity G35 93C66 Kansey miles",
+   "display": "Dashboard/Asia/Infinity/Infinity G35 93C66 Kansey miles.cal"
+  },
+  {
    "sha": "5524fbb21a60ec13bfe64c32facc068d4fe9e9e9c855a82b64839a2e91492747",
    "path": "Calculators/Dashboard/Asia/Infinity/Infinity I30 93C56 Kansey miles.cal",
    "size": 2490,
    "folder": "Dashboard/Asia/Infinity",
    "name": "Infinity I30 93C56 Kansey miles",
    "display": "Dashboard/Asia/Infinity/Infinity I30 93C56 Kansey miles.cal"
+  },
+  {
+   "sha": "c9692f3209dc1f2aea1b71ea29cd53beaac714ae011ad15d88c115fe21e59cd3",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity M35 93C66 Kansey km.cal",
+   "size": 2514,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity M35 93C66 Kansey km",
+   "display": "Dashboard/Asia/Infinity/Infinity M35 93C66 Kansey km.cal"
+  },
+  {
+   "sha": "c81288c4ebd0201e157c349f32b345f28e69047ff17f1a107c9f77b4e11b135c",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity M35 93C66 Kansey miles.cal",
+   "size": 2499,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity M35 93C66 Kansey miles",
+   "display": "Dashboard/Asia/Infinity/Infinity M35 93C66 Kansey miles.cal"
+  },
+  {
+   "sha": "95dcb5f3095facc2fe4d840bc737d8f05b15792584cc981ea6bd9c53a04e9495",
+   "path": "Calculators/Dashboard/Asia/Infinity/Infinity M37 93c86.cal",
+   "size": 2465,
+   "folder": "Dashboard/Asia/Infinity",
+   "name": "Infinity M37 93c86",
+   "display": "Dashboard/Asia/Infinity/Infinity M37 93c86.cal"
   },
   {
    "sha": "282413afc12c6145d27449e2843e984c3ff96aed0e32028bf2d0fe3c19e9c28f",
@@ -9396,6 +9483,22 @@
    "display": "Dashboard/Asia/Nissan/GT-R 93C76 Kansey — ETSmart.cal"
   },
   {
+   "sha": "83fe834092dd47e35321672ce6e76faab7933224dd16c75941364101495a96c5",
+   "path": "Calculators/Dashboard/Asia/Nissan/Infinity - 93C56 93C66 Kansey ver 2.cal",
+   "size": 2530,
+   "folder": "Dashboard/Asia/Nissan",
+   "name": "Infinity - 93C56 93C66 Kansey ver 2",
+   "display": "Dashboard/Asia/Nissan/Infinity - 93C56 93C66 Kansey ver 2.cal"
+  },
+  {
+   "sha": "7743bb543487a8b84fbd809f2d3e96396eea9c7a9d2649352eef698bd402b2f3",
+   "path": "Calculators/Dashboard/Asia/Nissan/Infinity - 93C56 93C66 Kansey.cal",
+   "size": 2547,
+   "folder": "Dashboard/Asia/Nissan",
+   "name": "Infinity - 93C56 93C66 Kansey",
+   "display": "Dashboard/Asia/Nissan/Infinity - 93C56 93C66 Kansey.cal"
+  },
+  {
    "sha": "46323e22166e1849bb16c1296e74495e2df3648ccdc6341d8be305bd09d95ed3",
    "path": "Calculators/Dashboard/Asia/Nissan/Juke - 93C66 Kansey.cal",
    "size": 2487,
@@ -10244,6 +10347,14 @@
    "display": "Dashboard/Asia/Suzuki/Ignis 93C56.cal"
   },
   {
+   "sha": "5d3836f45b7773fe71a4005ea3cd51e09b4af80ee6ce07e0bcd9729112b589de",
+   "path": "Calculators/Dashboard/Asia/Suzuki/Jimny 68HC908AZ60A.cal",
+   "size": 4916,
+   "folder": "Dashboard/Asia/Suzuki",
+   "name": "Jimny 68HC908AZ60A",
+   "display": "Dashboard/Asia/Suzuki/Jimny 68HC908AZ60A.cal"
+  },
+  {
    "sha": "e424c1105dbcc2187663730c3acb6ff7ae6cd5dc2c9ecbc8d524eaf8f19c9bfc",
    "path": "Calculators/Dashboard/Asia/Suzuki/Soleo 93c66 Kansey.cal",
    "size": 2473,
@@ -10892,6 +11003,14 @@
    "display": "Dashboard/Asia/Toyota/Yazaki 48 C56.cal"
   },
   {
+   "sha": "a89665f36245a01e37a6ecbc75815c514823d3bfc83df239ab606590b565f31e",
+   "path": "Calculators/Dashboard/CRYPTO/Audi/A8 VDO 93C86 V1.cal",
+   "size": 2234,
+   "folder": "Dashboard/CRYPTO/Audi",
+   "name": "A8 VDO 93C86 V1",
+   "display": "Dashboard/CRYPTO/Audi/A8 VDO 93C86 V1.cal"
+  },
+  {
    "sha": "e701e417f7c3f6b96f7014b7bb264ec50b759bd74de235277c8136cfcff55441",
    "path": "Calculators/Dashboard/CRYPTO/Audi/Audi decryptor 1.cal",
    "size": 5690,
@@ -10956,6 +11075,86 @@
    "display": "Dashboard/CRYPTO/skoda/roomster 93C86 decryptor.cal"
   },
   {
+   "sha": "789de0fbd4ee35caba54e952a51c81c3a909a0b1c9a12957dcf0969624805371",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/146 68HC05B16.cal",
+   "size": 4286,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "146 68HC05B16",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/146 68HC05B16.cal"
+  },
+  {
+   "sha": "9d6c5ebee7ff18133016859cc35d7a7f942f3b59841cbadee0a3286b71850af8",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/156 68HC11KG4.cal",
+   "size": 5455,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "156 68HC11KG4",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/156 68HC11KG4.cal"
+  },
+  {
+   "sha": "b8751d9ee9f02fe2be52bd4ee19fc754ad2db4a5ddcacb5fe7e9bc46248d909b",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/164 68HC05B16.cal",
+   "size": 4428,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "164 68HC05B16",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/164 68HC05B16.cal"
+  },
+  {
+   "sha": "4dd2a7d62d974e2e917776aabdcae75cd96ab0108c84faf89c3d2d9baa2e29ce",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/166 68HC11KG4.cal",
+   "size": 5443,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "166 68HC11KG4",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/166 68HC11KG4.cal"
+  },
+  {
+   "sha": "379d36a7aefe6302737779f34b53b01625aedea47d0f9ecf8d6f4148bc87d4eb",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/166 93C56.cal",
+   "size": 2548,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "166 93C56",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/166 93C56.cal"
+  },
+  {
+   "sha": "2f3128573a19db130f6b90987b05eff9d8bab67973a7decabbf8039bc13a08ca",
+   "path": "Calculators/Dashboard/EU_US_RU/Alfa Romeo/GTV 68HC05B16.cal",
+   "size": 4412,
+   "folder": "Dashboard/EU_US_RU/Alfa Romeo",
+   "name": "GTV 68HC05B16 — ETSmart",
+   "display": "Dashboard/EU_US_RU/Alfa Romeo/GTV 68HC05B16 — ETSmart.cal"
+  },
+  {
+   "sha": "823b89aa873177b7e8b116ab9d74511307591c9e3c0e12c86b95c9bde215a6cc",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A3 UKNSI 93C56.cal",
+   "size": 2203,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A3 UKNSI 93C56",
+   "display": "Dashboard/EU_US_RU/Audi/A3 UKNSI 93C56.cal"
+  },
+  {
+   "sha": "7bb1d1fed4d97c37da280221c9653f025ac809c05ab3cdc7c6fecb39894a6be8",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A3 VDO 93C66.cal",
+   "size": 2148,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A3 VDO 93C66",
+   "display": "Dashboard/EU_US_RU/Audi/A3 VDO 93C66.cal"
+  },
+  {
+   "sha": "e34c79f4ee8c9f4547af9af94ed1d3b8a12df41e1cfd8e9b2cd9f76b7f78056a",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A4 BOSCH 24C08 no crypt.cal",
+   "size": 2141,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A4 BOSCH 24C08 no crypt",
+   "display": "Dashboard/EU_US_RU/Audi/A4 BOSCH 24C08 no crypt.cal"
+  },
+  {
+   "sha": "79c867ef9e4e5d738b2f688c1ed95a9fb3e17b5629ecb05a200ae5e2249ab9e8",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A4 MM73 912dg128.cal",
+   "size": 13226,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A4 MM73 912dg128",
+   "display": "Dashboard/EU_US_RU/Audi/A4 MM73 912dg128.cal"
+  },
+  {
    "sha": "a5f400a0fd3461e3da47d8d7caafde0d6f9cf298dd66882978aca1cc4564f504",
    "path": "Calculators/Dashboard/EU_US_RU/Audi/A4 UKNSI 93C56 v1.cal",
    "size": 2795,
@@ -10970,6 +11169,22 @@
    "folder": "Dashboard/EU_US_RU/Audi",
    "name": "A4 UKNSI 93C56 v2",
    "display": "Dashboard/EU_US_RU/Audi/A4 UKNSI 93C56 v2.cal"
+  },
+  {
+   "sha": "aa635efc46f6e62d06c59551f897913b8d011082a006c94edb2110a426eaadf5",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A4 VDO 93C66.cal",
+   "size": 2148,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A4 VDO 93C66",
+   "display": "Dashboard/EU_US_RU/Audi/A4 VDO 93C66.cal"
+  },
+  {
+   "sha": "66835f93d518a55f9311f6419bd13e8ccabf7ba0cbf6f8197206e30eaa902a64",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A6 MM73 912dg128.cal",
+   "size": 13226,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A6 MM73 912dg128",
+   "display": "Dashboard/EU_US_RU/Audi/A6 MM73 912dg128.cal"
   },
   {
    "sha": "be5ad1d4e237bb03e354347c1e5f418715c21bd569e1d007f4e6e49a5cf775e5",
@@ -10988,6 +11203,30 @@
    "display": "Dashboard/EU_US_RU/Audi/A6 UKNSI_OLD 93c56.cal"
   },
   {
+   "sha": "62afa2dd0c7acf41ca1f7ac13c8c930d4902d2fd0c234feb07efa8d1cea7f155",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type1.cal",
+   "size": 2881,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A6 VDO 93C66 type1",
+   "display": "Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type1.cal"
+  },
+  {
+   "sha": "7c6980956dd33b290363e685e2459837845457cb9193e4a0ae851f41f3261e36",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type2.cal",
+   "size": 3032,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A6 VDO 93C66 type2",
+   "display": "Dashboard/EU_US_RU/Audi/A6 VDO 93C66 type2.cal"
+  },
+  {
+   "sha": "9447bdb271185fe9fc8bc0ec39f2054b05c585404de6dbd2be440163601ceca3",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A6 VDO 93C86 no crypt.cal",
+   "size": 2148,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A6 VDO 93C86 no crypt",
+   "display": "Dashboard/EU_US_RU/Audi/A6 VDO 93C86 no crypt.cal"
+  },
+  {
    "sha": "4ecac592e644974169ab825da60756dcb08cfde0d8eec09b852ca49b44c7769a",
    "path": "Calculators/Dashboard/EU_US_RU/Audi/A8 VDO 24C17 V1.cal",
    "size": 2375,
@@ -11002,6 +11241,30 @@
    "folder": "Dashboard/EU_US_RU/Audi",
    "name": "A8 VDO 24C17 V2",
    "display": "Dashboard/EU_US_RU/Audi/A8 VDO 24C17 V2.cal"
+  },
+  {
+   "sha": "d654caa5de20c6b577370dcdcada9b21786c122285326d0ababdb0bff00f85a6",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/A8 VDO 93C66.cal",
+   "size": 2197,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "A8 VDO 93C66",
+   "display": "Dashboard/EU_US_RU/Audi/A8 VDO 93C66.cal"
+  },
+  {
+   "sha": "2d3587033f4e6d09bad07131013d94bec1bec4cd67d7b4110acb77f5d27f87e8",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/TT MM73 912D60.cal",
+   "size": 13142,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "TT MM73 912D60",
+   "display": "Dashboard/EU_US_RU/Audi/TT MM73 912D60.cal"
+  },
+  {
+   "sha": "13dcf9da9aafd4088d1d6aecbf223fbbe32ee561ea4394bbe37c227fea288f79",
+   "path": "Calculators/Dashboard/EU_US_RU/Audi/TT MM73 912dg128.cal",
+   "size": 13237,
+   "folder": "Dashboard/EU_US_RU/Audi",
+   "name": "TT MM73 912dg128",
+   "display": "Dashboard/EU_US_RU/Audi/TT MM73 912dg128.cal"
   },
   {
    "sha": "ee3824c3cd74ec95eb3712650fc3fc276f1cbf5dadce723577471b2e7fd57900",
@@ -11108,6 +11371,14 @@
    "display": "Dashboard/EU_US_RU/Buick/Rendezvous 25020 — ETSmart.cal"
   },
   {
+   "sha": "0eda2fb3a2ce2502116f8133765b9977f5376594227829d62e10146f696b1958",
+   "path": "Calculators/Dashboard/EU_US_RU/Cadillac/CTS 93C66 v2.cal",
+   "size": 2369,
+   "folder": "Dashboard/EU_US_RU/Cadillac",
+   "name": "CTS 93C66 v2",
+   "display": "Dashboard/EU_US_RU/Cadillac/CTS 93C66 v2.cal"
+  },
+  {
    "sha": "530e59c993f5b53d124366065805ce19439fb8139676461ddbfe595bfc795d66",
    "path": "Calculators/Dashboard/EU_US_RU/Cadillac/Deville 93C56.cal",
    "size": 1704,
@@ -11122,6 +11393,14 @@
    "folder": "Dashboard/EU_US_RU/Cadillac",
    "name": "Escalade 25020",
    "display": "Dashboard/EU_US_RU/Cadillac/Escalade 25020.cal"
+  },
+  {
+   "sha": "bcc9c2725033b12ddadc91367dfe2e9299d5efde7118b442b3d5a154b608dbdb",
+   "path": "Calculators/Dashboard/EU_US_RU/Cadillac/SRX 93C66.cal",
+   "size": 2656,
+   "folder": "Dashboard/EU_US_RU/Cadillac",
+   "name": "SRX 93C66",
+   "display": "Dashboard/EU_US_RU/Cadillac/SRX 93C66.cal"
   },
   {
    "sha": "bcccc58d2b45fa4ed4c2b71c47f385517a32673e90249e50a4335317ee1ef0a2",
@@ -11364,6 +11643,14 @@
    "display": "Dashboard/EU_US_RU/Chevrolet/Equinox body 908AZ60 V2.cal"
   },
   {
+   "sha": "af9ded9a54415e494b77e702750cd588e3e493efd0fd7141a590a0b86a990d33",
+   "path": "Calculators/Dashboard/EU_US_RU/Chevrolet/Evanda HC05H12.cal",
+   "size": 2515,
+   "folder": "Dashboard/EU_US_RU/Chevrolet",
+   "name": "Evanda HC05H12 — ETSmart",
+   "display": "Dashboard/EU_US_RU/Chevrolet/Evanda HC05H12 — ETSmart.cal"
+  },
+  {
    "sha": "f66f1ddb8e18f89c409580e69682ca9aaa1c8cae9cf7117fbdca2798ba5554cf",
    "path": "Calculators/Dashboard/EU_US_RU/Chevrolet/Express 24C04.cal",
    "size": 3101,
@@ -11548,6 +11835,14 @@
    "display": "Dashboard/EU_US_RU/Chevrolet/Suburban 25080.cal"
   },
   {
+   "sha": "b98550f0496a6ff11708074d342f364557c0e2efc29cadb98529e130759b705d",
+   "path": "Calculators/Dashboard/EU_US_RU/Chevrolet/Tacuma HC05H12.cal",
+   "size": 2515,
+   "folder": "Dashboard/EU_US_RU/Chevrolet",
+   "name": "Tacuma HC05H12 — ETSmart",
+   "display": "Dashboard/EU_US_RU/Chevrolet/Tacuma HC05H12 — ETSmart.cal"
+  },
+  {
    "sha": "49103f1522770b9a93a06f9715483464cbd5108368fee77a54b7cbf07024ee2e",
    "path": "Calculators/Dashboard/EU_US_RU/Chevrolet/Tahoe 25020.cal",
    "size": 2662,
@@ -11602,6 +11897,14 @@
    "folder": "Dashboard/EU_US_RU/Chevrolet",
    "name": "Venture HC912B32 — ETSmart",
    "display": "Dashboard/EU_US_RU/Chevrolet/Venture HC912B32 — ETSmart.cal"
+  },
+  {
+   "sha": "e230eecf599753d67af55372e84c100456cf9a9ba04ca4a5aeb6264c6a0bf0fb",
+   "path": "Calculators/Dashboard/EU_US_RU/Chevrolet/Vivant HC05H12.cal",
+   "size": 2515,
+   "folder": "Dashboard/EU_US_RU/Chevrolet",
+   "name": "Vivant HC05H12 — ETSmart",
+   "display": "Dashboard/EU_US_RU/Chevrolet/Vivant HC05H12 — ETSmart.cal"
   },
   {
    "sha": "1bd7e1206d1bd31aca3751fb6920e6e3229a92d40ce67bcb5c4fe088e498904a",
@@ -11708,6 +12011,14 @@
    "display": "Dashboard/EU_US_RU/Citroen/Berlingo 25020.cal"
   },
   {
+   "sha": "3efc17f64a2ef6eb58ee280df092fe9ef9eabef5efda5dccc9e5aacf14ca6f4f",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/Berlingo BSI NEC.cal",
+   "size": 1893,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "Berlingo BSI NEC",
+   "display": "Dashboard/EU_US_RU/Citroen/Berlingo BSI NEC.cal"
+  },
+  {
    "sha": "103deba810267803ec123c04fb277352e00f8f765be357d96ec158336c813ee6",
    "path": "Calculators/Dashboard/EU_US_RU/Citroen/BSI Berlingo 95160 V1.cal",
    "size": 4141,
@@ -11778,6 +12089,14 @@
    "folder": "Dashboard/EU_US_RU/Citroen",
    "name": "BSI Berlingo 95160 Var2",
    "display": "Dashboard/EU_US_RU/Citroen/BSI Berlingo 95160 Var2.cal"
+  },
+  {
+   "sha": "1c73f322bc2e3c7be46fbafbebb3ac7902849da44dd75d0e15aa8a9a355eedad",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/BSI Berlingo NEC.cal",
+   "size": 2058,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "BSI Berlingo NEC",
+   "display": "Dashboard/EU_US_RU/Citroen/BSI Berlingo NEC.cal"
   },
   {
    "sha": "04fe3445c11666efea9f144c8cab41ca6b1201e1798434004acad800b6e0a244",
@@ -11916,6 +12235,14 @@
    "display": "Dashboard/EU_US_RU/Citroen/BSI C4 95128 Var2.cal"
   },
   {
+   "sha": "7187ed7f07b0bd0f4dbfd7beff310aa80a7aae09603c5d5df232118faaae6f26",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/BSI C5 912DG128.cal",
+   "size": 4002,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "BSI C5 912DG128",
+   "display": "Dashboard/EU_US_RU/Citroen/BSI C5 912DG128.cal"
+  },
+  {
    "sha": "171dcb6901b9fec9b0deca8ea7e5a2c9cf16e7c7118dea6f21278f9f3ebfb7f8",
    "path": "Calculators/Dashboard/EU_US_RU/Citroen/BSI C5 95128 V1.cal",
    "size": 5527,
@@ -12028,6 +12355,22 @@
    "display": "Dashboard/EU_US_RU/Citroen/Dash C5 908AZ32.cal"
   },
   {
+   "sha": "b2f31a975e2f52ec9db9beb537a85885492e5da8a7abf5856733bb7fd5d29dc8",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/Dash C5 908AZ60.cal",
+   "size": 4660,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "Dash C5 908AZ60",
+   "display": "Dashboard/EU_US_RU/Citroen/Dash C5 908AZ60.cal"
+  },
+  {
+   "sha": "288c9b6ca19dd3af217fccb631f5cf9bfd0123ebe068e0a7d7ac159b3be5a027",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/Dash C5 908AZ60A.cal",
+   "size": 4669,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "Dash C5 908AZ60A",
+   "display": "Dashboard/EU_US_RU/Citroen/Dash C5 908AZ60A.cal"
+  },
+  {
    "sha": "f12ab510653afb56436efb1578754ae4218fee6568497617c8b67812dcf8f8de",
    "path": "Calculators/Dashboard/EU_US_RU/Citroen/Dash C8 25020.cal",
    "size": 2838,
@@ -12106,6 +12449,14 @@
    "folder": "Dashboard/EU_US_RU/Citroen",
    "name": "Jumpy 05H12",
    "display": "Dashboard/EU_US_RU/Citroen/Jumpy 05H12.cal"
+  },
+  {
+   "sha": "9b6c4cc3d2a41b35c2a6874920b2d5a1c8125405ab6c234e856e507245b3813a",
+   "path": "Calculators/Dashboard/EU_US_RU/Citroen/Jumpy 68HC908AZ32.cal",
+   "size": 4866,
+   "folder": "Dashboard/EU_US_RU/Citroen",
+   "name": "Jumpy 68HC908AZ32",
+   "display": "Dashboard/EU_US_RU/Citroen/Jumpy 68HC908AZ32.cal"
   },
   {
    "sha": "58a59c4951b6928460cfdd2f89494b5de8b17808f4a73c3b6c6fd4ee1a60f196",
@@ -12244,6 +12595,30 @@
    "display": "Dashboard/EU_US_RU/Fiat/Albea 25040.cal"
   },
   {
+   "sha": "8f44091bb97c3a5be12dca7de5bfc71bb0dda239e10afacfca5f4f5eb823add2",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC05B16.cal",
+   "size": 4476,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Brava 68HC05B16",
+   "display": "Dashboard/EU_US_RU/Fiat/Brava 68HC05B16.cal"
+  },
+  {
+   "sha": "9e2378f106831e97b27a5ba399d7c678012512179fe52c25f2902f48d2a133c1",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC711KG4.cal",
+   "size": 5447,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Brava 68HC711KG4",
+   "display": "Dashboard/EU_US_RU/Fiat/Brava 68HC711KG4.cal"
+  },
+  {
+   "sha": "cd5033a6c60a111edac7724e96661a5cfefbb9bf73d1dfe5cf8fbd00894c8871",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Brava 68HC908AZ32.cal",
+   "size": 4833,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Brava 68HC908AZ32",
+   "display": "Dashboard/EU_US_RU/Fiat/Brava 68HC908AZ32.cal"
+  },
+  {
    "sha": "6151fe2aadb13352caa876651a542ca379cf8383be6e0a90b60c9a2a3fa2b162",
    "path": "Calculators/Dashboard/EU_US_RU/Fiat/BSI Ulysse 912DG128A.cal",
    "size": 3861,
@@ -12268,6 +12643,22 @@
    "display": "Dashboard/EU_US_RU/Fiat/Disp Ulysse 25020.cal"
   },
   {
+   "sha": "d230734aaee4ea23663e1c82bd4d9430878bf77f43dff16a4bbd14dbe5e38993",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Doblo 25040 V1.cal",
+   "size": 5348,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Doblo 25040 V1",
+   "display": "Dashboard/EU_US_RU/Fiat/Doblo 25040 V1.cal"
+  },
+  {
+   "sha": "3681d9070b8628877c368aaaaaf92b4abd8d6232f340e1d417e01a492d6ae511",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Doblo 25040 V2.cal",
+   "size": 3469,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Doblo 25040 V2",
+   "display": "Dashboard/EU_US_RU/Fiat/Doblo 25040 V2.cal"
+  },
+  {
    "sha": "98abe587182e91ffad7e1121b35babe96b10e6fc1fcab74f5603cde53d1242ef",
    "path": "Calculators/Dashboard/EU_US_RU/Fiat/Doblo 25040.cal",
    "size": 4635,
@@ -12282,6 +12673,38 @@
    "folder": "Dashboard/EU_US_RU/Fiat",
    "name": "Doblo 68HC908AZ32",
    "display": "Dashboard/EU_US_RU/Fiat/Doblo 68HC908AZ32.cal"
+  },
+  {
+   "sha": "1950615bde45cb0e22be755cd6c1a9ba4a0af0b9aa21ed495154d8b3e9c0d9ad",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Ducato 25040.cal",
+   "size": 5341,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Ducato 25040",
+   "display": "Dashboard/EU_US_RU/Fiat/Ducato 25040.cal"
+  },
+  {
+   "sha": "11649ed12c8c043c7e4e9487aa7a0ac194043aba7e080852b610beb15a3fc0f5",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC05E6.cal",
+   "size": 4420,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Marea 68HC05E6",
+   "display": "Dashboard/EU_US_RU/Fiat/Marea 68HC05E6.cal"
+  },
+  {
+   "sha": "03e3d2092f2280a1889e6489974a812480580860c14f6eb211978bc7cc9b89e5",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC711KG4.cal",
+   "size": 5447,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Marea 68HC711KG4",
+   "display": "Dashboard/EU_US_RU/Fiat/Marea 68HC711KG4.cal"
+  },
+  {
+   "sha": "aa87d10a3acd8471b9ea0f9bea770113b5b752c7ae7433ee77402588c800aa8f",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Marea 68HC908AZ32.cal",
+   "size": 4833,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Marea 68HC908AZ32",
+   "display": "Dashboard/EU_US_RU/Fiat/Marea 68HC908AZ32.cal"
   },
   {
    "sha": "9fc81e6cdf76a10bc8babc91cb8cb2e7cc5b5bbf4b1d130fddc09e01e886358b",
@@ -12346,6 +12769,14 @@
    "folder": "Dashboard/EU_US_RU/Fiat",
    "name": "Scudo 05H12",
    "display": "Dashboard/EU_US_RU/Fiat/Scudo 05H12.cal"
+  },
+  {
+   "sha": "60b3106eaff9778e1cb0924cc123975dd731dac39ee5075f1cb3c3f7191360ee",
+   "path": "Calculators/Dashboard/EU_US_RU/Fiat/Scudo 68HC908AZ32.cal",
+   "size": 4872,
+   "folder": "Dashboard/EU_US_RU/Fiat",
+   "name": "Scudo 68HC908AZ32",
+   "display": "Dashboard/EU_US_RU/Fiat/Scudo 68HC908AZ32.cal"
   },
   {
    "sha": "374d5933f59b4836c4adf5afe2c7905e435ec2eea8efea47dfbafe55151a2a4a",
@@ -13164,6 +13595,14 @@
    "display": "Dashboard/EU_US_RU/GMC/Yukon Denali 25020.cal"
   },
   {
+   "sha": "d77aac392fbae6cc645aec2769e5c55c9e3636613e6e5ad9c6c8fe19b10b2f95",
+   "path": "Calculators/Dashboard/EU_US_RU/Hummer/BCM H3 25040.cal",
+   "size": 2238,
+   "folder": "Dashboard/EU_US_RU/Hummer",
+   "name": "BCM H3 25040",
+   "display": "Dashboard/EU_US_RU/Hummer/BCM H3 25040.cal"
+  },
+  {
    "sha": "76c6b085c210aa90e5d96116039c4050f0efcccc81a56c6086e66ec0198e018d",
    "path": "Calculators/Dashboard/EU_US_RU/Hummer/Dash H3 93C56.cal",
    "size": 2253,
@@ -13180,12 +13619,28 @@
    "display": "Dashboard/EU_US_RU/Hummer/Dash Hummer3 93C56.cal"
   },
   {
+   "sha": "0b2493cdfddfc0d209af08bc76cccd81c1d33faaab0e0f7a9816ab4daee89dc0",
+   "path": "Calculators/Dashboard/EU_US_RU/Hummer/H2 25020.cal",
+   "size": 3116,
+   "folder": "Dashboard/EU_US_RU/Hummer",
+   "name": "H2 25020",
+   "display": "Dashboard/EU_US_RU/Hummer/H2 25020.cal"
+  },
+  {
    "sha": "d80758d58d442643e70535cdfcbb658e70bb8ab1e5c200f148ff9bffdecedcc3",
    "path": "Calculators/Dashboard/EU_US_RU/Hummer/H2 25080.cal",
    "size": 2932,
    "folder": "Dashboard/EU_US_RU/Hummer",
    "name": "H2 25080",
    "display": "Dashboard/EU_US_RU/Hummer/H2 25080.cal"
+  },
+  {
+   "sha": "ee5659b7ac822f55b13f5ec44c2e8d09108d9013eb82caaf0d055f3b2992a220",
+   "path": "Calculators/Dashboard/EU_US_RU/Hummer/Hummer2 25020.cal",
+   "size": 2914,
+   "folder": "Dashboard/EU_US_RU/Hummer",
+   "name": "Hummer2 25020",
+   "display": "Dashboard/EU_US_RU/Hummer/Hummer2 25020.cal"
   },
   {
    "sha": "30878db35120cbcc8d0388ab4dd6a84665fb6edfea788dda7417c36e59433fb0",
@@ -13458,6 +13913,22 @@
    "folder": "Dashboard/EU_US_RU/MAN",
    "name": "Tachograf 24C04",
    "display": "Dashboard/EU_US_RU/MAN/Tachograf 24C04.cal"
+  },
+  {
+   "sha": "824304ce97be7198229bf356303f55c04afad50c13df858c5365851596db58d8",
+   "path": "Calculators/Dashboard/EU_US_RU/Mercedes/A W168 MM 68HC11KG4.cal",
+   "size": 10148,
+   "folder": "Dashboard/EU_US_RU/Mercedes",
+   "name": "A W168 MM 68HC11KG4",
+   "display": "Dashboard/EU_US_RU/Mercedes/A W168 MM 68HC11KG4.cal"
+  },
+  {
+   "sha": "30112d87f53be34c39f7c9968420e657e9d9375641a4ba38d2c72289ef337700",
+   "path": "Calculators/Dashboard/EU_US_RU/Mercedes/A W168 MM 912D60.cal",
+   "size": 5914,
+   "folder": "Dashboard/EU_US_RU/Mercedes",
+   "name": "A W168 MM 912D60",
+   "display": "Dashboard/EU_US_RU/Mercedes/A W168 MM 912D60.cal"
   },
   {
    "sha": "1b2304c2f7a5d7dd9ae6e662c3b6886504b0416f4bcd833ec78e8f07e4c096d5",
@@ -13964,6 +14435,14 @@
    "display": "Dashboard/EU_US_RU/Mercedes/V W639 JC 95640 v1.cal"
   },
   {
+   "sha": "9609edae4937a0ac05695a7dcc7675170ef53df1df6245abbcc4f7df8c745e1a",
+   "path": "Calculators/Dashboard/EU_US_RU/Mercedes/Vaneo MM 912D60.cal",
+   "size": 5893,
+   "folder": "Dashboard/EU_US_RU/Mercedes",
+   "name": "Vaneo MM 912D60",
+   "display": "Dashboard/EU_US_RU/Mercedes/Vaneo MM 912D60.cal"
+  },
+  {
    "sha": "26b7f074c51a0b67b8d1395ff1fc773e9d141a59f476f6936731b8b6e3069626",
    "path": "Calculators/Dashboard/EU_US_RU/Mercedes/Vito 908AZ60.cal",
    "size": 2427,
@@ -14076,6 +14555,14 @@
    "display": "Dashboard/EU_US_RU/Opel/Corsa VDO D780828.cal"
   },
   {
+   "sha": "e1a491f0345052b44e29ea7c739ea977618056df8dcbf8c4015de3f8f7380ec8",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Frontera DELCO 93C46.cal",
+   "size": 1501,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Frontera DELCO 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Frontera DELCO 93C46.cal"
+  },
+  {
    "sha": "4ec88c4714a6173a649a8f03a7399ad57d98bdc63d71b0cca86f0d39ae43be4b",
    "path": "Calculators/Dashboard/EU_US_RU/Opel/Insignia BCU 24C16.cal",
    "size": 2197,
@@ -14100,6 +14587,22 @@
    "display": "Dashboard/EU_US_RU/Opel/Mokka 2013BCU.cal"
   },
   {
+   "sha": "a6226d8ed54b753a93a9a362b71742269bfefa3ac017069debf6db671e9ec77c",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Monterey 93C46.cal",
+   "size": 1557,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Monterey 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Monterey 93C46.cal"
+  },
+  {
+   "sha": "78f3a5bec30e319be9e11f3efbcd6191564033aeae03aa598aac9110bee1d7ba",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Montery 93C46.cal",
+   "size": 1555,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Montery 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Montery 93C46.cal"
+  },
+  {
    "sha": "fbb5a6068d238f02629c7b038481373594a57606e970a6fe5c82ea940c57437d",
    "path": "Calculators/Dashboard/EU_US_RU/Opel/Movano 93C66.cal",
    "size": 2678,
@@ -14116,12 +14619,36 @@
    "display": "Dashboard/EU_US_RU/Opel/Movano tahograf 93C66.cal"
   },
   {
+   "sha": "2ef7c0f59dbaf6a5a117bb0672cc30c9b890831e0eaa5bc76a1f5edfbf28c60c",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Omega 93C46.cal",
+   "size": 1753,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Omega 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Omega 93C46.cal"
+  },
+  {
+   "sha": "a3e9e84d9d0292c8ac3cf8c84f15b41b16d20073b20b28820f7d83c754c90e91",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Senator 93C46.cal",
+   "size": 1757,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Senator 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Senator 93C46.cal"
+  },
+  {
    "sha": "cb82bfccf0b48fa59599cef8a4099fd21d4870e3d02461a48325d9080d3ada58",
    "path": "Calculators/Dashboard/EU_US_RU/Opel/Signum VDO 93C66.cal",
    "size": 2633,
    "folder": "Dashboard/EU_US_RU/Opel",
    "name": "Signum VDO 93C66",
    "display": "Dashboard/EU_US_RU/Opel/Signum VDO 93C66.cal"
+  },
+  {
+   "sha": "f97b2988830367ccaffe834a7d97085fb1d48c5e1c8aca8b75ba44bee46359d0",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Vectra B 93C46.cal",
+   "size": 2245,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Vectra B 93C46",
+   "display": "Dashboard/EU_US_RU/Opel/Vectra B 93C46.cal"
   },
   {
    "sha": "c32be0306653c1b9de56149cb66e851f70930ad76335e74701402e82117755a1",
@@ -14146,6 +14673,14 @@
    "folder": "Dashboard/EU_US_RU/Opel",
    "name": "Vectra C VDO 93C66",
    "display": "Dashboard/EU_US_RU/Opel/Vectra C VDO 93C66.cal"
+  },
+  {
+   "sha": "9e299377ac58520fcfac6ec274f8fa0ecc165475410479824a6af2eef6628ce4",
+   "path": "Calculators/Dashboard/EU_US_RU/Opel/Vivaro 25020.cal",
+   "size": 3449,
+   "folder": "Dashboard/EU_US_RU/Opel",
+   "name": "Vivaro 25020",
+   "display": "Dashboard/EU_US_RU/Opel/Vivaro 25020.cal"
   },
   {
    "sha": "2e0db5054004265f67b959ba40bbfd9ad249daf86dd52b5b6586992895eac30c",
@@ -14532,6 +15067,14 @@
    "display": "Dashboard/EU_US_RU/Peugeot/BSI Partner 95160 Var3.cal"
   },
   {
+   "sha": "245abcd9ac2607a8188066c77758b0d58000734cdc04086eee9bfbf47ddf9b11",
+   "path": "Calculators/Dashboard/EU_US_RU/Peugeot/BSI Partner NEC.cal",
+   "size": 1902,
+   "folder": "Dashboard/EU_US_RU/Peugeot",
+   "name": "BSI Partner NEC",
+   "display": "Dashboard/EU_US_RU/Peugeot/BSI Partner NEC.cal"
+  },
+  {
    "sha": "22f12ecfa3a8b847bcc28744e4b64c6e05e68fa2926f287164ffa62ffcc5f119",
    "path": "Calculators/Dashboard/EU_US_RU/Peugeot/Dash 106 D780826.cal",
    "size": 2232,
@@ -14660,6 +15203,14 @@
    "display": "Dashboard/EU_US_RU/Peugeot/Dash 406 93C66.cal"
   },
   {
+   "sha": "d536933a8818e3332dfe5c9de05c51e6b5765bbe191a60d099cb2b783d47ebcc",
+   "path": "Calculators/Dashboard/EU_US_RU/Peugeot/Dash 407 93C66.cal",
+   "size": 2135,
+   "folder": "Dashboard/EU_US_RU/Peugeot",
+   "name": "Dash 407 93C66",
+   "display": "Dashboard/EU_US_RU/Peugeot/Dash 407 93C66.cal"
+  },
+  {
    "sha": "ebde0c9b7a6a5fd294ad1c353721d58d4176f0c6af2b06425d34530ac13bde7d",
    "path": "Calculators/Dashboard/EU_US_RU/Peugeot/Dash 607 93C66 Var1.cal",
    "size": 2615,
@@ -14738,6 +15289,22 @@
    "folder": "Dashboard/EU_US_RU/Peugeot",
    "name": "Expert 05H12",
    "display": "Dashboard/EU_US_RU/Peugeot/Expert 05H12.cal"
+  },
+  {
+   "sha": "dc84942b6a37c1cd8ce059ca3f4783573018e037c9f19cde7ed5f8c10523a418",
+   "path": "Calculators/Dashboard/EU_US_RU/Peugeot/Expert 68HC908AZ32.cal",
+   "size": 4869,
+   "folder": "Dashboard/EU_US_RU/Peugeot",
+   "name": "Expert 68HC908AZ32",
+   "display": "Dashboard/EU_US_RU/Peugeot/Expert 68HC908AZ32.cal"
+  },
+  {
+   "sha": "933aa3fe3abe2d8e28f56338b186be35fee16672c7572a24076b72babc4c45e8",
+   "path": "Calculators/Dashboard/EU_US_RU/Peugeot/Partner BSI NEC.cal",
+   "size": 1893,
+   "folder": "Dashboard/EU_US_RU/Peugeot",
+   "name": "Partner BSI NEC",
+   "display": "Dashboard/EU_US_RU/Peugeot/Partner BSI NEC.cal"
   },
   {
    "sha": "c8e052afaf349854adc95833110f4371ba679ae506aacf149767090ec636e90d",
@@ -15388,6 +15955,30 @@
    "display": "Dashboard/EU_US_RU/Skoda/Oktavia 93C86.cal"
   },
   {
+   "sha": "ef5d731405061a366395eb0658731dd9def746811c19ff14b9b0fb625b1a0eaa",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Oktavia A5.cal",
+   "size": 1466,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Oktavia A5",
+   "display": "Dashboard/EU_US_RU/Skoda/Oktavia A5.cal"
+  },
+  {
+   "sha": "78f7b3fe0ca311836a286c97b9da0c36125eca9c2dd4c4bfbf36068ed0495261",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Oktavia VDO 93C66.cal",
+   "size": 1377,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Oktavia VDO 93C66",
+   "display": "Dashboard/EU_US_RU/Skoda/Oktavia VDO 93C66.cal"
+  },
+  {
+   "sha": "226250a2062891e49f883e14e676989d01a54524d60ccf0222afb34bdabd5e0b",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Oktavia VDO 93LC86.cal",
+   "size": 1379,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Oktavia VDO 93LC86",
+   "display": "Dashboard/EU_US_RU/Skoda/Oktavia VDO 93LC86.cal"
+  },
+  {
    "sha": "3114f9aae6a4a0f7a94b77a73965871b1f870eef23cc304c895ee8ea433dae9e",
    "path": "Calculators/Dashboard/EU_US_RU/Skoda/Roomster 93C86 2006 decryptor.cal",
    "size": 4478,
@@ -15410,6 +16001,30 @@
    "folder": "Dashboard/EU_US_RU/Skoda",
    "name": "Super B 93C86 crypto",
    "display": "Dashboard/EU_US_RU/Skoda/Super B 93C86 crypto.cal"
+  },
+  {
+   "sha": "0222f46927cd65ea31d312c2f816053c2801da47adf53831989713af24a9f0f7",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Super B 93C86 decryptor_x.cal",
+   "size": 5211,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Super B 93C86 decryptor_x",
+   "display": "Dashboard/EU_US_RU/Skoda/Super B 93C86 decryptor_x.cal"
+  },
+  {
+   "sha": "3608cf4d5a889fa9caf9016c5ea88aecb477615f4bb54d27ec57bbe16efb4058",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Super B 93C86 decryptor.cal",
+   "size": 5215,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Super B 93C86 decryptor",
+   "display": "Dashboard/EU_US_RU/Skoda/Super B 93C86 decryptor.cal"
+  },
+  {
+   "sha": "90d0eab7ba40614f9cf89eb2d74ee90603bb19c80bb8a4961b1fa37b5035a841",
+   "path": "Calculators/Dashboard/EU_US_RU/Skoda/Super B 93C86.cal",
+   "size": 1349,
+   "folder": "Dashboard/EU_US_RU/Skoda",
+   "name": "Super B 93C86",
+   "display": "Dashboard/EU_US_RU/Skoda/Super B 93C86.cal"
   },
   {
    "sha": "9fcf1a67a97d2df5b286d516bf53233047779954b53603f6f597a5c6ae1339d0",
@@ -15594,6 +16209,22 @@
    "folder": "Dashboard/EU_US_RU/Volkswagen",
    "name": "Caddy 24C16",
    "display": "Dashboard/EU_US_RU/Volkswagen/Caddy 24C16.cal"
+  },
+  {
+   "sha": "8200910e26cc5cad5f165ddac8ef29ce831704604a719e766f8b5098be225696",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Caddy 24c32 2 km.cal",
+   "size": 3238,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Caddy 24c32 2 km",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Caddy 24c32 2 km.cal"
+  },
+  {
+   "sha": "088d968a16757644ed2c6cdf2d769de503b3ae2b2eda4ea85aa3e1e1d72794b2",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Caddy 24C32.cal",
+   "size": 2252,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Caddy 24C32",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Caddy 24C32.cal"
   },
   {
    "sha": "aa7086468093368d00065e0b825aca45451dd29bdb327ccd813f5c8e0a577da6",
@@ -15802,6 +16433,46 @@
    "folder": "Dashboard/EU_US_RU/Volkswagen",
    "name": "Lupo 24C02",
    "display": "Dashboard/EU_US_RU/Volkswagen/Lupo 24C02.cal"
+  },
+  {
+   "sha": "2c0b024c0800390a155b970aecf308aa105cc1e41b7d15f6bc672993d9fb857f",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5 vdo 93c86.cal",
+   "size": 2890,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Passat b5 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Passat b5 vdo 93c86.cal"
+  },
+  {
+   "sha": "ca77fb66a63be7162c9cc48e13526ed8e075253ec88a603a071ee7881ebe84fb",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type1 93C66.cal",
+   "size": 3055,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Passat B5 VDO_Type1 93C66",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type1 93C66.cal"
+  },
+  {
+   "sha": "298484bc70d2545c0e233b9283b63b6a1e9f6febc31ffd02bc4a5c45a848f6d5",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type2 93C66.cal",
+   "size": 3051,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Passat B5 VDO_Type2 93C66",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Passat B5 VDO_Type2 93C66.cal"
+  },
+  {
+   "sha": "9ac77072d2b88fd860ab2a82c4ad99eaada49d82c742977dc93ae89bbc02f9a6",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2001 vdo 93c86.cal",
+   "size": 2182,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Passat b5+ from 2001 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2001 vdo 93c86.cal"
+  },
+  {
+   "sha": "56d84ca2c75cef0ac2cdcb3763f2fbdadd5e3f661597a0341507deaa4a559472",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2004 vdo 93c86.cal",
+   "size": 2187,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Passat b5+ from 2004 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Passat b5+ from 2004 vdo 93c86.cal"
   },
   {
    "sha": "e9aaa53080e6fd3febac7df7c6a1970678d4197d487564193de324c47ae7454c",
@@ -16036,6 +16707,38 @@
    "display": "Dashboard/EU_US_RU/Volkswagen/VentoTRW.cal"
   },
   {
+   "sha": "dfa760d9343cf5711a3e7fbf56b07b5b5ae10d89508c38fbffa93063197ac691",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5 vdo 93c86.cal",
+   "size": 2883,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Vw passat b5 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Vw passat b5 vdo 93c86.cal"
+  },
+  {
+   "sha": "a9d2c88bf6a9a9b6d970626792b3c39a50ae98ed485f97e36ddd96956f805e5c",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2001 vdo 93c86.cal",
+   "size": 2175,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Vw passat b5+ from 2001 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2001 vdo 93c86.cal"
+  },
+  {
+   "sha": "9dd12fabc9b8bf87e5caa8fe4d8ebcbbe97af9afcc29eed7b451abe9bb6886e8",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2004 vdo 93c86.cal",
+   "size": 2180,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "Vw passat b5+ from 2004 vdo 93c86",
+   "display": "Dashboard/EU_US_RU/Volkswagen/Vw passat b5+ from 2004 vdo 93c86.cal"
+  },
+  {
+   "sha": "13dee4e9443bf3683a624ebfa037c102a95f5a2534d3d176ee8bd5158f390746",
+   "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/VWTouareg2004.cal",
+   "size": 1471,
+   "folder": "Dashboard/EU_US_RU/Volkswagen",
+   "name": "VWTouareg2004",
+   "display": "Dashboard/EU_US_RU/Volkswagen/VWTouareg2004.cal"
+  },
+  {
    "sha": "d1d4acaeccd2eb7974cb1fb363f4ea6d2094effcc29d3c05cc1b3c32e407734c",
    "path": "Calculators/Dashboard/EU_US_RU/Volkswagen/VWVentoTRW.cal",
    "size": 1522,
@@ -16050,6 +16753,14 @@
    "folder": "Dashboard/EU_US_RU/ZAZ Slavuta",
    "name": "Slavuta 24C08 — ETSmart",
    "display": "Dashboard/EU_US_RU/ZAZ Slavuta/Slavuta 24C08 — ETSmart.cal"
+  },
+  {
+   "sha": "d1721c0a84af22c0e6695f3755a3fc78b29207c2c014aba0c91dd86d2b5a134b",
+   "path": "Calculators/Dashboard/Audi/A6VDO9366.cal",
+   "size": 1749,
+   "folder": "Dashboard/Audi",
+   "name": "A6VDO9366",
+   "display": "Dashboard/Germany/Audi/A6VDO9366.cal"
   },
   {
    "sha": "fbe7bcb8857f9a2f3337365f7d695db2b18a9a5040bad2775559a6d36494cc02",
@@ -16084,6 +16795,190 @@
    "display": "Engine/VW/EDC16 95320.cal"
   },
   {
+   "sha": "70b6f65c0d4f6e684d1853a68b36d8dfbbbe44d1f899bd91aeb5eed3ce7176c6",
+   "path": "Calculators/immo/Bikes/Aprilia/Aprilia v1.cal",
+   "size": 2886,
+   "folder": "Immo/Bikes/Aprilia",
+   "name": "Aprilia v1 — ETSmart",
+   "display": "Immo/Bikes/Aprilia/Aprilia v1 — ETSmart.cal"
+  },
+  {
+   "sha": "36e5e66a77a447dde6029d192a534bd7a5bf8d9fac983062e7743434d3b12bd3",
+   "path": "Calculators/immo/Bikes/Gilera/Runner 50 v1.cal",
+   "size": 4770,
+   "folder": "Immo/Bikes/Gilera",
+   "name": "Runner 50 v1 — ETSmart",
+   "display": "Immo/Bikes/Gilera/Runner 50 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "293d15e15218eff8d877638275bf9ebc70a211a708534273cbae8354c6772e66",
+   "path": "Calculators/immo/Bikes/Pegeot/Alise v1.cal",
+   "size": 4780,
+   "folder": "Immo/Bikes/Pegeot",
+   "name": "Alise v1 — ETSmart",
+   "display": "Immo/Bikes/Pegeot/Alise v1 — ETSmart.cal"
+  },
+  {
+   "sha": "d7574be92a714dc94707abdb4729f89a525bb7b9aad3622df09200433ffe7d31",
+   "path": "Calculators/immo/Bikes/Pegeot/Eliseo v1.cal",
+   "size": 4791,
+   "folder": "Immo/Bikes/Pegeot",
+   "name": "Eliseo v1 — ETSmart",
+   "display": "Immo/Bikes/Pegeot/Eliseo v1 — ETSmart.cal"
+  },
+  {
+   "sha": "4af4624c5071c395ec96a625c9dfbfddd57ccb7e86220b258f3c07d09bcf9919",
+   "path": "Calculators/immo/Bikes/Pegeot/Elystar v1.cal",
+   "size": 4493,
+   "folder": "Immo/Bikes/Pegeot",
+   "name": "Elystar v1 — ETSmart",
+   "display": "Immo/Bikes/Pegeot/Elystar v1 — ETSmart.cal"
+  },
+  {
+   "sha": "c3ddf9098f4b24577376ac247ac5cd476c4ed0d3de17db9b1c2a088e16c22979",
+   "path": "Calculators/immo/Bikes/Pegeot/Speedfight v1.cal",
+   "size": 4794,
+   "folder": "Immo/Bikes/Pegeot",
+   "name": "Speedfight v1 — ETSmart",
+   "display": "Immo/Bikes/Pegeot/Speedfight v1 — ETSmart.cal"
+  },
+  {
+   "sha": "f50befe410ec75ac8e40f58934d71dcc9248ebfef2094f59a25327d006f91ac1",
+   "path": "Calculators/immo/Bikes/Pegeot/Squab v1.cal",
+   "size": 5994,
+   "folder": "Immo/Bikes/Pegeot",
+   "name": "Squab v1 — ETSmart",
+   "display": "Immo/Bikes/Pegeot/Squab v1 — ETSmart.cal"
+  },
+  {
+   "sha": "6c82371fb666de61f98276a763cf7802634476bc0425d90896cf65deba82f982",
+   "path": "Calculators/immo/Bikes/Peugeot_/Alise v1.cal",
+   "size": 4782,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Alise v1",
+   "display": "Immo/Bikes/Peugeot_/Alise v1.cal"
+  },
+  {
+   "sha": "5f85e8badb7d21d376508220ab38af1439c6c5b503448afc284817b481aca91f",
+   "path": "Calculators/immo/Bikes/Peugeot_/Eliseo v1.cal",
+   "size": 4793,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Eliseo v1",
+   "display": "Immo/Bikes/Peugeot_/Eliseo v1.cal"
+  },
+  {
+   "sha": "b7a7c1458c2dc7ba7e09b2b0979e265267edb1fe81ccde4ebabc885cf2847f46",
+   "path": "Calculators/immo/Bikes/Peugeot_/Elystar v1.cal",
+   "size": 4495,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Elystar v1",
+   "display": "Immo/Bikes/Peugeot_/Elystar v1.cal"
+  },
+  {
+   "sha": "58ed5137d7fe7cf36464d70c46dd705f0bfb510477270f360fa3466cdcf8f150",
+   "path": "Calculators/immo/Bikes/Peugeot_/Jetforce v1.cal",
+   "size": 4501,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Jetforce v1",
+   "display": "Immo/Bikes/Peugeot_/Jetforce v1.cal"
+  },
+  {
+   "sha": "3860bfa7d7cdbc0faadc5996fc08a069c15d26d8df83162ad06b958b119a424e",
+   "path": "Calculators/immo/Bikes/Peugeot_/Speedfight v1.cal",
+   "size": 4796,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Speedfight v1",
+   "display": "Immo/Bikes/Peugeot_/Speedfight v1.cal"
+  },
+  {
+   "sha": "7899bffd64511eccf8fd24ce58960f59ebb8a70e8f22d694b93a4d7c94054e15",
+   "path": "Calculators/immo/Bikes/Peugeot_/Squab v1.cal",
+   "size": 5996,
+   "folder": "Immo/Bikes/Peugeot_",
+   "name": "Squab v1",
+   "display": "Immo/Bikes/Peugeot_/Squab v1.cal"
+  },
+  {
+   "sha": "7235933ef888ff1510c97e4667ae39d63185c20fbde229965130a3eb28ed82d1",
+   "path": "Calculators/immo/Bikes/Piaggio/Beverly 200 v1.cal",
+   "size": 4792,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Beverly 200 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Beverly 200 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "016cde92f451a496d6278fe5508c5f11f57f292a82e413305bc546a2394f2717",
+   "path": "Calculators/immo/Bikes/Piaggio/Beverly 250 v1.cal",
+   "size": 4812,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Beverly 250 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Beverly 250 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "9bd6ce23f481037e4537265e2d3328eeb4592c031e4662843ebff9a3c794b1df",
+   "path": "Calculators/immo/Bikes/Piaggio/Beverly 500 v1.cal",
+   "size": 4796,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Beverly 500 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Beverly 500 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "ce92917c9f1ed4da49fc6125d0f15a21d821fcf97eec4b9f8ca564acc01c7fb1",
+   "path": "Calculators/immo/Bikes/Piaggio/Liberty 125 v1.cal",
+   "size": 4779,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Liberty 125 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Liberty 125 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "f070397de40ff5053392e9a99a254a038cb9c810041d221d732b3c3898da872c",
+   "path": "Calculators/immo/Bikes/Piaggio/Vespa 125 v1.cal",
+   "size": 4806,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Vespa 125 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Vespa 125 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "bf3f0646c89f910b4de3061cdc797233befae5d33383d9780067d8d81ec5947f",
+   "path": "Calculators/immo/Bikes/Piaggio/Vespa 150 v1.cal",
+   "size": 4789,
+   "folder": "Immo/Bikes/Piaggio",
+   "name": "Vespa 150 v1 — ETSmart",
+   "display": "Immo/Bikes/Piaggio/Vespa 150 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "7555e2f5b4e26dac2674e517ac169491ce2dad815d415f02184a88c99a7de19d",
+   "path": "Calculators/immo/Car/Aprilia/Aprilia Temic.cal",
+   "size": 2877,
+   "folder": "Immo/Car/Aprilia",
+   "name": "Aprilia Temic — ETSmart",
+   "display": "Immo/Car/Aprilia/Aprilia Temic — ETSmart.cal"
+  },
+  {
+   "sha": "2f5630c51bcd84112f18db5ef65ec28b28bed5687afe9a7f9501d07738cef967",
+   "path": "Calculators/immo/Car/AUDI/A4 v1.cal",
+   "size": 28716,
+   "folder": "Immo/Car/AUDI",
+   "name": "A4 v1 — ETSmart",
+   "display": "Immo/Car/AUDI/A4 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "26c553492deef5a43c9416aad2cafa96a47b964754de11794c39224b9b18444d",
+   "path": "Calculators/immo/Car/AUDI/A6 v1.cal",
+   "size": 28744,
+   "folder": "Immo/Car/AUDI",
+   "name": "A6 v1 — ETSmart",
+   "display": "Immo/Car/AUDI/A6 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "9e219cfc841c2c0917df47079776eb0587371e4a327c3478ae34c0b6a3282314",
+   "path": "Calculators/immo/Car/Citroen/Evasion v1.cal",
+   "size": 8947,
+   "folder": "Immo/Car/Citroen",
+   "name": "Evasion v1 — ETSmart",
+   "display": "Immo/Car/Citroen/Evasion v1 — ETSmart.cal"
+  },
+  {
    "sha": "5c1da39233f2ab66b43a2c68b73df62c517af6efe6afe11fb1a7d51692b7e251",
    "path": "Calculators/immo/Car/Citroen/Evasion v2.cal",
    "size": 9008,
@@ -16092,12 +16987,76 @@
    "display": "Immo/Car/Citroen/Evasion v2 — ETSmart.cal"
   },
   {
+   "sha": "d1bfb175403c0de19cac7efd87c8f2d551aac49cb0f890d319c08888fc4fca0a",
+   "path": "Calculators/immo/Car/Citroen/Jampy v1.cal",
+   "size": 8769,
+   "folder": "Immo/Car/Citroen",
+   "name": "Jampy v1 — ETSmart",
+   "display": "Immo/Car/Citroen/Jampy v1 — ETSmart.cal"
+  },
+  {
    "sha": "9492f230efa7accab265ab4aaeb68e83cbe61deb4359f589453a2e19a30a1237",
    "path": "Calculators/immo/Car/Citroen/Jampy v2.cal",
    "size": 9023,
    "folder": "Immo/Car/Citroen",
    "name": "Jampy v2 — ETSmart",
    "display": "Immo/Car/Citroen/Jampy v2 — ETSmart.cal"
+  },
+  {
+   "sha": "57781e893d43e37e2aabe2aeb3803ba4f495b25110d6762c56c3d0a993410196",
+   "path": "Calculators/immo/Car/Citroen/Jampy v3.cal",
+   "size": 8943,
+   "folder": "Immo/Car/Citroen",
+   "name": "Jampy v3 — ETSmart",
+   "display": "Immo/Car/Citroen/Jampy v3 — ETSmart.cal"
+  },
+  {
+   "sha": "c7c9108426c71e1e300b316f9b499c36a80419b87fb1f2108119103be781617d",
+   "path": "Calculators/Immo/Car/Citroen/Jumper 25040 key1.cal",
+   "size": 6336,
+   "folder": "Immo/Car/Citroen",
+   "name": "Jumper 25040 key1",
+   "display": "Immo/Car/Citroen/Jumper 25040 key1.cal"
+  },
+  {
+   "sha": "7dea1b03574a07b119766597e8375d18b17797d6abb8b38dc621b0fdf259fc4b",
+   "path": "Calculators/Immo/Car/Citroen/Jumper 25040 key2.cal",
+   "size": 6319,
+   "folder": "Immo/Car/Citroen",
+   "name": "Jumper 25040 key2",
+   "display": "Immo/Car/Citroen/Jumper 25040 key2.cal"
+  },
+  {
+   "sha": "3599f7ba7fd362fcadd5aa663c77a530fcac54df11e403aa1006c24832b4143c",
+   "path": "Calculators/Immo/Car/Citroen/Texton 69239034.80.cal",
+   "size": 8780,
+   "folder": "Immo/Car/Citroen",
+   "name": "Texton 69239034.80",
+   "display": "Immo/Car/Citroen/Texton 69239034.80.cal"
+  },
+  {
+   "sha": "0b880f139f42ea0c393f936e12069bdbf499be9458444ab597a96b84dfe81b19",
+   "path": "Calculators/Immo/Car/Citroen/Texton 69398196.80.cal",
+   "size": 8809,
+   "folder": "Immo/Car/Citroen",
+   "name": "Texton 69398196.80",
+   "display": "Immo/Car/Citroen/Texton 69398196.80.cal"
+  },
+  {
+   "sha": "9736fd8a8a9f05770c3e728c7e3a905323ba1d3e1921975b1f37c8464f4e5c6c",
+   "path": "Calculators/immo/Car/Citroen/Xantia v1.cal",
+   "size": 8943,
+   "folder": "Immo/Car/Citroen",
+   "name": "Xantia v1 — ETSmart",
+   "display": "Immo/Car/Citroen/Xantia v1 — ETSmart.cal"
+  },
+  {
+   "sha": "640fd2fd2bb9fb1f9dea300d3338ae3cf043035c5d79ae528d898c8f3914e838",
+   "path": "Calculators/immo/Car/Citroen/Xsara v1.cal",
+   "size": 8941,
+   "folder": "Immo/Car/Citroen",
+   "name": "Xsara v1 — ETSmart",
+   "display": "Immo/Car/Citroen/Xsara v1 — ETSmart.cal"
   },
   {
    "sha": "1ced3f75ee6663c150d5b41485d2702b528d293f9188db466b8ca081f402b621",
@@ -16196,6 +17155,206 @@
    "display": "Immo/Car/Daihatsu/Terios v1 — ETSmart.cal"
   },
   {
+   "sha": "09be10f72df9c8ffed03da28bac7a3bb919711988830e83e4ede330dccbd4699",
+   "path": "Calculators/immo/Car/Fiat/Bravo v1.cal",
+   "size": 5763,
+   "folder": "Immo/Car/Fiat",
+   "name": "Bravo v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Bravo v1 — ETSmart.cal"
+  },
+  {
+   "sha": "55f5f165fe525666c4106abb0eea1c94f7eae1a13c35920cbfd092cab95af6ac",
+   "path": "Calculators/immo/Car/Fiat/Bravo v2.cal",
+   "size": 5762,
+   "folder": "Immo/Car/Fiat",
+   "name": "Bravo v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Bravo v2 — ETSmart.cal"
+  },
+  {
+   "sha": "cca9bc892215478373c2a022eb3b2b88df842bb323df48595d431aebf43cb654",
+   "path": "Calculators/immo/Car/Fiat/Bravo v5.cal",
+   "size": 4274,
+   "folder": "Immo/Car/Fiat",
+   "name": "Bravo v5 — ETSmart",
+   "display": "Immo/Car/Fiat/Bravo v5 — ETSmart.cal"
+  },
+  {
+   "sha": "93b886b4216d76f80d9d31b5b20ad890247f5fdbd2633ea1337963ae9e1d2388",
+   "path": "Calculators/Immo/Car/Fiat/Delphi 46417024.cal",
+   "size": 11778,
+   "folder": "Immo/Car/Fiat",
+   "name": "Delphi 46417024",
+   "display": "Immo/Car/Fiat/Delphi 46417024.cal"
+  },
+  {
+   "sha": "1ae19892c656cbcadecd46d06cce435c544caa6d3a332ab4d0e679095aa8f715",
+   "path": "Calculators/Immo/Car/Fiat/Delphi 46734570.cal",
+   "size": 11720,
+   "folder": "Immo/Car/Fiat",
+   "name": "Delphi 46734570",
+   "display": "Immo/Car/Fiat/Delphi 46734570.cal"
+  },
+  {
+   "sha": "05ead289b35b458e7b512e45045da7096d1198c6fd0fdae5d13b3031024b1e58",
+   "path": "Calculators/immo/Car/Fiat/Fiorino v1.cal",
+   "size": 4770,
+   "folder": "Immo/Car/Fiat",
+   "name": "Fiorino v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Fiorino v1 — ETSmart.cal"
+  },
+  {
+   "sha": "3b062ca4eff277df4563881d701cbcfc640940165f03026db39316d58b35676a",
+   "path": "Calculators/immo/Car/Fiat/Fiorino v2.cal",
+   "size": 4770,
+   "folder": "Immo/Car/Fiat",
+   "name": "Fiorino v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Fiorino v2 — ETSmart.cal"
+  },
+  {
+   "sha": "6ae0c17fef427827fc11614fc1feee74a196531b7e686ca24bd66d6969520321",
+   "path": "Calculators/immo/Car/Fiat/Fiorino v3.cal",
+   "size": 4278,
+   "folder": "Immo/Car/Fiat",
+   "name": "Fiorino v3 — ETSmart",
+   "display": "Immo/Car/Fiat/Fiorino v3 — ETSmart.cal"
+  },
+  {
+   "sha": "56827a75bd740652b9071b66921177096b32fb4f7ec5292ed16a647cf9752f2e",
+   "path": "Calculators/immo/Car/Fiat/Marea v1.cal",
+   "size": 5763,
+   "folder": "Immo/Car/Fiat",
+   "name": "Marea v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Marea v1 — ETSmart.cal"
+  },
+  {
+   "sha": "1a2d54c79d341f5132fb84edb9bdcc9d4d9dd892d5de030fa5ef9d91b321e6ed",
+   "path": "Calculators/immo/Car/Fiat/Marea v2.cal",
+   "size": 5771,
+   "folder": "Immo/Car/Fiat",
+   "name": "Marea v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Marea v2 — ETSmart.cal"
+  },
+  {
+   "sha": "b16a18970be2b4a1ec4214651c6d8137f1905cf3f58bb0cbce863902fd797575",
+   "path": "Calculators/immo/Car/Fiat/Marea v3.cal",
+   "size": 4274,
+   "folder": "Immo/Car/Fiat",
+   "name": "Marea v3 — ETSmart",
+   "display": "Immo/Car/Fiat/Marea v3 — ETSmart.cal"
+  },
+  {
+   "sha": "1ad664076967be50b17a4fd2f18d2c36b26c1ce788c342ff208789b305491ae8",
+   "path": "Calculators/immo/Car/Fiat/Palio Station Wagon v1.cal",
+   "size": 4302,
+   "folder": "Immo/Car/Fiat",
+   "name": "Palio Station Wagon v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Palio Station Wagon v1 — ETSmart.cal"
+  },
+  {
+   "sha": "61cea0f810a4d0f140a7bc7954f248ba552f5b75f1769509cac0a5ab0c1736d3",
+   "path": "Calculators/immo/Car/Fiat/Palio v1.cal",
+   "size": 5760,
+   "folder": "Immo/Car/Fiat",
+   "name": "Palio v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Palio v1 — ETSmart.cal"
+  },
+  {
+   "sha": "4af0a87f52118b73a4712a81dc59e4097167bfaf2a5c1ddc5ad2da8929a83133",
+   "path": "Calculators/immo/Car/Fiat/Palio v2.cal",
+   "size": 5760,
+   "folder": "Immo/Car/Fiat",
+   "name": "Palio v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Palio v2 — ETSmart.cal"
+  },
+  {
+   "sha": "7b956e53e73f2655583e1956760e897fc6086dc2dc0d199dacc27f455f6d3a23",
+   "path": "Calculators/immo/Car/Fiat/Palio v3.cal",
+   "size": 4274,
+   "folder": "Immo/Car/Fiat",
+   "name": "Palio v3 — ETSmart",
+   "display": "Immo/Car/Fiat/Palio v3 — ETSmart.cal"
+  },
+  {
+   "sha": "c03b6dbc05b698ddc18fbf2fb89f18d60826b41edf19e14884f3e0253637b7fb",
+   "path": "Calculators/immo/Car/Fiat/Scudo v1.cal",
+   "size": 8805,
+   "folder": "Immo/Car/Fiat",
+   "name": "Scudo v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Scudo v1 — ETSmart.cal"
+  },
+  {
+   "sha": "f1fcc771f5a2922b6d670f7717e8f976af94042d7850f27b06de3f14de7010b6",
+   "path": "Calculators/immo/Car/Fiat/Scudo v2.cal",
+   "size": 8760,
+   "folder": "Immo/Car/Fiat",
+   "name": "Scudo v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Scudo v2 — ETSmart.cal"
+  },
+  {
+   "sha": "0ca8b2641569434644ec19c6e4018dd9e9a444caf331f0badf893257887fbe11",
+   "path": "Calculators/immo/Car/Fiat/Scudo v3.cal",
+   "size": 8942,
+   "folder": "Immo/Car/Fiat",
+   "name": "Scudo v3 — ETSmart",
+   "display": "Immo/Car/Fiat/Scudo v3 — ETSmart.cal"
+  },
+  {
+   "sha": "95fe74c4e2137eb4ae5740beca349ec1dcd09de5444c6fd5f4a6fd74e17d3052",
+   "path": "Calculators/immo/Car/Fiat/Siena v1.cal",
+   "size": 5723,
+   "folder": "Immo/Car/Fiat",
+   "name": "Siena v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Siena v1 — ETSmart.cal"
+  },
+  {
+   "sha": "0a7f0cad9e2fdef7aba0716dba91d4779c101946916bb3372f49c981ca887aff",
+   "path": "Calculators/immo/Car/Fiat/Strada v1.cal",
+   "size": 4276,
+   "folder": "Immo/Car/Fiat",
+   "name": "Strada v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Strada v1 — ETSmart.cal"
+  },
+  {
+   "sha": "5bb2a7d02d5bc430d26e937b96b87812a3e34e978e01b20007b8594e5b5cb658",
+   "path": "Calculators/Immo/Car/Fiat/Texton 69239034.80 CPH.cal",
+   "size": 8743,
+   "folder": "Immo/Car/Fiat",
+   "name": "Texton 69239034.80 CPH",
+   "display": "Immo/Car/Fiat/Texton 69239034.80 CPH.cal"
+  },
+  {
+   "sha": "7acd80551610194a28d93236e90d0e1f2194f7891adcb42b0eb3c20c09a48412",
+   "path": "Calculators/Immo/Car/Fiat/Texton 69398196.80 CPH04.cal",
+   "size": 8795,
+   "folder": "Immo/Car/Fiat",
+   "name": "Texton 69398196.80 CPH04",
+   "display": "Immo/Car/Fiat/Texton 69398196.80 CPH04.cal"
+  },
+  {
+   "sha": "2a40aa83f224896c8c7860a6a5e54694f49630e66887dc6254897c47a105f9ec",
+   "path": "Calculators/immo/Car/Fiat/Ulysse v1.cal",
+   "size": 8808,
+   "folder": "Immo/Car/Fiat",
+   "name": "Ulysse v1 — ETSmart",
+   "display": "Immo/Car/Fiat/Ulysse v1 — ETSmart.cal"
+  },
+  {
+   "sha": "a024bdd65903aaa534bb7f74ff31c5924741a14d84bbeb65db4d8abdf6f3516e",
+   "path": "Calculators/immo/Car/Fiat/Ulysse v2.cal",
+   "size": 8763,
+   "folder": "Immo/Car/Fiat",
+   "name": "Ulysse v2 — ETSmart",
+   "display": "Immo/Car/Fiat/Ulysse v2 — ETSmart.cal"
+  },
+  {
+   "sha": "20c73c26124dc51658c4a5b32592b988b18c10bd48d8a7c74373dda44d78d4a6",
+   "path": "Calculators/immo/Car/Fiat/Ulysse v3.cal",
+   "size": 8945,
+   "folder": "Immo/Car/Fiat",
+   "name": "Ulysse v3 — ETSmart",
+   "display": "Immo/Car/Fiat/Ulysse v3 — ETSmart.cal"
+  },
+  {
    "sha": "3d66dcad715260e25c4c6c800a81f8b0314ee424f6fff8e9e80002e1f63ba58a",
    "path": "Calculators/immo/Car/Ford/Mondeo ECU TMS 370 4C.cal",
    "size": 8286,
@@ -16204,12 +17363,92 @@
    "display": "Immo/Car/Ford/Mondeo ECU TMS 370 4C — ETSmart.cal"
   },
   {
+   "sha": "c8231858470ec4e5e95800cff9fca1ffe63b6de00d165255e696cc2fcc242cb1",
+   "path": "Calculators/immo/Car/Ford/Probe v1.cal",
+   "size": 8347,
+   "folder": "Immo/Car/Ford",
+   "name": "Probe v1 — ETSmart",
+   "display": "Immo/Car/Ford/Probe v1 — ETSmart.cal"
+  },
+  {
+   "sha": "c02c3190208c714e1df81a9cd5fb0d0a5b04abd52f1bf858bfd94c57419d4a0e",
+   "path": "Calculators/immo/Car/Ford/Probe v2.cal",
+   "size": 8347,
+   "folder": "Immo/Car/Ford",
+   "name": "Probe v2 — ETSmart",
+   "display": "Immo/Car/Ford/Probe v2 — ETSmart.cal"
+  },
+  {
    "sha": "586b258fe11f20e4213788064f3dbb868b8d76e17fdc02a2bdeb41d3f97f330c",
    "path": "Calculators/immo/Car/Ford/Tranzit v1.cal",
    "size": 7330,
    "folder": "Immo/Car/Ford",
    "name": "Tranzit v1 — ETSmart",
    "display": "Immo/Car/Ford/Tranzit v1 — ETSmart.cal"
+  },
+  {
+   "sha": "316b12859fb3a03eca9e023fb8581eb47db0a269ab73361c8b1722cdcfb49338",
+   "path": "Calculators/immo/Car/Gilera/Runner 50 Temic.cal",
+   "size": 4732,
+   "folder": "Immo/Car/Gilera",
+   "name": "Runner 50 Temic — ETSmart",
+   "display": "Immo/Car/Gilera/Runner 50 Temic — ETSmart.cal"
+  },
+  {
+   "sha": "5d8f5bdd116251b739b5b886440ddcb0e521e6c7bfc9fdbf5fa127050def0686",
+   "path": "Calculators/immo/Car/Honda/Civic v1.cal",
+   "size": 15179,
+   "folder": "Immo/Car/Honda",
+   "name": "Civic v1 — ETSmart",
+   "display": "Immo/Car/Honda/Civic v1 — ETSmart.cal"
+  },
+  {
+   "sha": "f83758dfbf72e25672913141cb00bd7ede0ec854a82d59e1581482db42629174",
+   "path": "Calculators/immo/Car/Honda/Civic v2.cal",
+   "size": 15193,
+   "folder": "Immo/Car/Honda",
+   "name": "Civic v2 — ETSmart",
+   "display": "Immo/Car/Honda/Civic v2 — ETSmart.cal"
+  },
+  {
+   "sha": "5c7e0e2a6b5668399bda1aa2bb5b7e77ba9d36915939b791313faebb9d0b82d4",
+   "path": "Calculators/Immo/Car/Honda/CIVIC ver1.cal",
+   "size": 15140,
+   "folder": "Immo/Car/Honda",
+   "name": "CIVIC ver1",
+   "display": "Immo/Car/Honda/CIVIC ver1.cal"
+  },
+  {
+   "sha": "73f37ab7e25a5e8e19bdbb115c05a54e88141544f539f6108f19b36f0aa48779",
+   "path": "Calculators/immo/Car/Honda/CR-V v1.cal",
+   "size": 15178,
+   "folder": "Immo/Car/Honda",
+   "name": "CR-V v1 — ETSmart",
+   "display": "Immo/Car/Honda/CR-V v1 — ETSmart.cal"
+  },
+  {
+   "sha": "c84f61102a8cd1950846f352de8937707ef428484926bfc236fac6fd7c132b86",
+   "path": "Calculators/immo/Car/Honda/CR-V v2.cal",
+   "size": 15234,
+   "folder": "Immo/Car/Honda",
+   "name": "CR-V v2 — ETSmart",
+   "display": "Immo/Car/Honda/CR-V v2 — ETSmart.cal"
+  },
+  {
+   "sha": "94022ccd7fcee8194a8e7ebc2a741bbab8315b0c21cf568d18beb078c3acd045",
+   "path": "Calculators/Immo/Car/Honda/CRV ver1.cal",
+   "size": 15138,
+   "folder": "Immo/Car/Honda",
+   "name": "CRV ver1",
+   "display": "Immo/Car/Honda/CRV ver1.cal"
+  },
+  {
+   "sha": "c05b5a3492ce4b10ecdf084675ca11b4ccdb995b7bbb3db45eba8e00cd0595af",
+   "path": "Calculators/immo/Car/Honda/Shuttle v1.cal",
+   "size": 15207,
+   "folder": "Immo/Car/Honda",
+   "name": "Shuttle v1 — ETSmart",
+   "display": "Immo/Car/Honda/Shuttle v1 — ETSmart.cal"
   },
   {
    "sha": "9ac135524dc985585f5040ac3cfd71e283f3ad4bc23cba3a57be693de0d22797",
@@ -16252,6 +17491,38 @@
    "display": "Immo/Car/Kia/Sportage v1 — ETSmart.cal"
   },
   {
+   "sha": "4664f461a0aa7738cabe2bd6b31050cf37f1c3e77af7d0f88d197a9afd2abb1c",
+   "path": "Calculators/immo/Car/Lancia/Debra v2.cal",
+   "size": 5748,
+   "folder": "Immo/Car/Lancia",
+   "name": "Debra v2 — ETSmart",
+   "display": "Immo/Car/Lancia/Debra v2 — ETSmart.cal"
+  },
+  {
+   "sha": "35d8a6a83d93041de72cb9ac494a33a78c5e71881c2a6e22222616521f165645",
+   "path": "Calculators/immo/Car/Lancia/Debra v3.cal",
+   "size": 4282,
+   "folder": "Immo/Car/Lancia",
+   "name": "Debra v3 — ETSmart",
+   "display": "Immo/Car/Lancia/Debra v3 — ETSmart.cal"
+  },
+  {
+   "sha": "3e45505c4d7af3b8d2c767a64f10664749053df39900346c1e129112ab32ea92",
+   "path": "Calculators/immo/Car/Lancia/Y v1.cal",
+   "size": 5736,
+   "folder": "Immo/Car/Lancia",
+   "name": "Y v1 — ETSmart",
+   "display": "Immo/Car/Lancia/Y v1 — ETSmart.cal"
+  },
+  {
+   "sha": "db740a3e4d5e74e3ab743da5d68f3cfad43b6a62b1c7e9ff28b55372ae9f3dec",
+   "path": "Calculators/immo/Car/Lancia/Y v2.cal",
+   "size": 4274,
+   "folder": "Immo/Car/Lancia",
+   "name": "Y v2 — ETSmart",
+   "display": "Immo/Car/Lancia/Y v2 — ETSmart.cal"
+  },
+  {
    "sha": "4db24abec01d42f42687682b85f1d637fbf3e6e2ed38ca7f81759073d42bce44",
    "path": "Calculators/Immo/Car/Lexus/LX300 93C56 4C.cal",
    "size": 6036,
@@ -16292,6 +17563,62 @@
    "display": "Immo/Car/Lexus/LX470 v2 — ETSmart.cal"
   },
   {
+   "sha": "57af0159f8926fea5f6c1cc707f1f1e1c6b58b31041141101fd4b40889554e32",
+   "path": "Calculators/immo/Car/Mazda/323 v1.cal",
+   "size": 8354,
+   "folder": "Immo/Car/Mazda",
+   "name": "323 v1 — ETSmart",
+   "display": "Immo/Car/Mazda/323 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "1707e7763bff4b0c7f43e46a9cf0ad9d1efe7c932373ad4ef4cb0f2121c18f94",
+   "path": "Calculators/immo/Car/Mazda/323 v2.cal",
+   "size": 8335,
+   "folder": "Immo/Car/Mazda",
+   "name": "323 v2 — ETSmart",
+   "display": "Immo/Car/Mazda/323 v2 — ETSmart.cal"
+  },
+  {
+   "sha": "30b2416059a25895bfd0e13c45dc04203e0b84a519b0aa437a228904c5cdaa1f",
+   "path": "Calculators/immo/Car/Mazda/626 v1.cal",
+   "size": 8334,
+   "folder": "Immo/Car/Mazda",
+   "name": "626 v1 — ETSmart",
+   "display": "Immo/Car/Mazda/626 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "5ecf4e8242e90574d045acf30c041c5e7bb81c3ea4d2d6099c19416b9b5ec606",
+   "path": "Calculators/Immo/Car/Mazda/Temic 1710700063.cal",
+   "size": 4196,
+   "folder": "Immo/Car/Mazda",
+   "name": "Temic 1710700063",
+   "display": "Immo/Car/Mazda/Temic 1710700063.cal"
+  },
+  {
+   "sha": "6f9fdcd1475c872c82f8a49c23759c0c1d804af486badf05f336ae9187e31804",
+   "path": "Calculators/immo/Car/Mazda/Xedos 6 v1.cal",
+   "size": 8306,
+   "folder": "Immo/Car/Mazda",
+   "name": "Xedos 6 v1 — ETSmart",
+   "display": "Immo/Car/Mazda/Xedos 6 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "a948ec881a6b5f93fe8c32462197e9635ecf80911a136057bd46bc63f2f52289",
+   "path": "Calculators/immo/Car/Mazda/Xedos 6 v2.cal",
+   "size": 8342,
+   "folder": "Immo/Car/Mazda",
+   "name": "Xedos 6 v2 — ETSmart",
+   "display": "Immo/Car/Mazda/Xedos 6 v2 — ETSmart.cal"
+  },
+  {
+   "sha": "91a52e544a4c51c9c2d3e0da6b59dfa9b0724df11b65313e93f653b073aad926",
+   "path": "Calculators/immo/Car/Mazda/Xedos 9 v1.cal",
+   "size": 8314,
+   "folder": "Immo/Car/Mazda",
+   "name": "Xedos 9 v1 — ETSmart",
+   "display": "Immo/Car/Mazda/Xedos 9 v1 — ETSmart.cal"
+  },
+  {
    "sha": "29e66bccea38e2a05c15fbd04066f5eb55a33d4f6ca03d556d31e226791b72b3",
    "path": "Calculators/Immo/Car/Mercedes/Repair Start error 95P08 & 1J66D.cal",
    "size": 809,
@@ -16306,6 +17633,86 @@
    "folder": "Immo/Car/Mercedes",
    "name": "Sprinter 08AZ32",
    "display": "Immo/Car/Mercedes/Sprinter 08AZ32.cal"
+  },
+  {
+   "sha": "a49a9152c87e7e20b5f004c14746ad64eb28cec61f2262fab1a4ecaa3a8b0438",
+   "path": "Calculators/Immo/Car/Mercedes/Sprinter 705x32.cal",
+   "size": 4623,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Sprinter 705x32",
+   "display": "Immo/Car/Mercedes/Sprinter 705x32.cal"
+  },
+  {
+   "sha": "8528c81fea4e5cf1b681fc26082253952040f8fc6edfd4a0dad55f2dd97bbdd9",
+   "path": "Calculators/immo/Car/Mercedes/Temic 020 545 56 32.cal",
+   "size": 9951,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 020 545 56 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 020 545 56 32 — ETSmart.cal"
+  },
+  {
+   "sha": "e6c6cbaed7a46f014ede5712ee7ae8a0dc70574eff03ab5675dff0778a34c94b",
+   "path": "Calculators/immo/Car/Mercedes/Temic 020 545 58 32.cal",
+   "size": 9931,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 020 545 58 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 020 545 58 32 — ETSmart.cal"
+  },
+  {
+   "sha": "4500687a2d94dc73bb1b046346d1c64654830d8139433f743b7faa6e9c3a6276",
+   "path": "Calculators/immo/Car/Mercedes/Temic 026 545 17 32.cal",
+   "size": 10116,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 026 545 17 32 — ETSmart — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 026 545 17 32 — ETSmart — ETSmart.cal"
+  },
+  {
+   "sha": "b6d450bdf3a055ca713b0991692a2ec36a41ac42828aaff19348e43e9e51b1f9",
+   "path": "Calculators/immo/Car/Mercedes/Temic 026 545 17 32 .cal",
+   "size": 10109,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 026 545 17 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 026 545 17 32 — ETSmart.cal"
+  },
+  {
+   "sha": "0ae84db35353f29da23da9cab4929ab60fcdd7e3d446ff80cd7e48c34dfb4090",
+   "path": "Calculators/immo/Car/Mercedes/Temic 026 545 18 32.cal",
+   "size": 10120,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 026 545 18 32 — ETSmart — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 026 545 18 32 — ETSmart — ETSmart.cal"
+  },
+  {
+   "sha": "9ad784d0983fca9bd179690aad1eb2d8e93533b2eef41cd147613df165617397",
+   "path": "Calculators/immo/Car/Mercedes/Temic 026 545 18 32 .cal",
+   "size": 10108,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 026 545 18 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 026 545 18 32 — ETSmart.cal"
+  },
+  {
+   "sha": "92453eef01a334aef386cb235163fabcb4397f582389e6b298e998216f233094",
+   "path": "Calculators/immo/Car/Mercedes/Temic 031 545 58 32.cal",
+   "size": 10155,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 031 545 58 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 031 545 58 32 — ETSmart.cal"
+  },
+  {
+   "sha": "aa9bd9db4efce1e8a64dfbe91f8ad93c6f50d09837e344ce82ef4eeb25f02c51",
+   "path": "Calculators/immo/Car/Mercedes/Temic 031 545 59 32.cal",
+   "size": 10137,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 031 545 59 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 031 545 59 32 — ETSmart.cal"
+  },
+  {
+   "sha": "604542cb78fd4f6fc75862b692a6db7bbda074f0426454506f13c99f4a6771e2",
+   "path": "Calculators/immo/Car/Mercedes/Temic 033 545 59 32.cal",
+   "size": 10152,
+   "folder": "Immo/Car/Mercedes",
+   "name": "Temic 033 545 59 32 — ETSmart",
+   "display": "Immo/Car/Mercedes/Temic 033 545 59 32 — ETSmart.cal"
   },
   {
    "sha": "2eeba7c43e4edb4b57bbb6267921fbc8f81b1d6301416edc0f17e0e1d88a6235",
@@ -16404,12 +17811,60 @@
    "display": "Immo/Car/Mitsubishi/Space Wagon v1 — ETSmart.cal"
   },
   {
+   "sha": "c92b5b0f5f7788ba77d70e4f9ae4ea6b6a873a0fb31ac2cb6e5d84db855fc0de",
+   "path": "Calculators/immo/Car/Mitsubishi/Spase Runner Immo 24C01 4C.cal",
+   "size": 7996,
+   "folder": "Immo/Car/Mitsubishi",
+   "name": "Spase Runner Immo 24C01 4C — ETSmart",
+   "display": "Immo/Car/Mitsubishi/Spase Runner Immo 24C01 4C — ETSmart.cal"
+  },
+  {
+   "sha": "2b7f1d2dabadce197df07c6406bfbc44a712e9fbe18900ff4bdcfc0eb8304252",
+   "path": "Calculators/immo/Car/Nissan/Interstar v1.cal",
+   "size": 8745,
+   "folder": "Immo/Car/Nissan",
+   "name": "Interstar v1 — ETSmart",
+   "display": "Immo/Car/Nissan/Interstar v1 — ETSmart.cal"
+  },
+  {
    "sha": "80adc1a2d5779ac424db009e682e32582e6e5fb1192fbd766609c11e21d2bb5c",
    "path": "Calculators/immo/Car/Nissan/Maxima_3D33J.cal",
    "size": 11727,
    "folder": "Immo/Car/Nissan",
    "name": "Maxima_3D33J — ETSmart",
    "display": "Immo/Car/Nissan/Maxima_3D33J — ETSmart.cal"
+  },
+  {
+   "sha": "d6f26113298c46b809eb9ff0be1fd58ccd034c1ddf759fe88e621e72db75294b",
+   "path": "Calculators/immo/Car/Nissan/Nissan BCM.cal",
+   "size": 1654,
+   "folder": "Immo/Car/Nissan",
+   "name": "Nissan BCM — ETSmart",
+   "display": "Immo/Car/Nissan/Nissan BCM — ETSmart.cal"
+  },
+  {
+   "sha": "e316ed5ffb5da70f00dac0cba09f1cd267d2f6a9aa17e7846e455d22e2c290c0",
+   "path": "Calculators/immo/Car/Nissan/Patrol_TMS370_4D.cal",
+   "size": 7650,
+   "folder": "Immo/Car/Nissan",
+   "name": "Patrol_TMS370_4D — ETSmart",
+   "display": "Immo/Car/Nissan/Patrol_TMS370_4D — ETSmart.cal"
+  },
+  {
+   "sha": "6ecfbd464134a42b23fd59c300d171c9ef759d2ef25a253700d3639c176bba4e",
+   "path": "Calculators/immo/Car/Opel/Corsa v1.cal",
+   "size": 12516,
+   "folder": "Immo/Car/Opel",
+   "name": "Corsa v1 — ETSmart",
+   "display": "Immo/Car/Opel/Corsa v1 — ETSmart.cal"
+  },
+  {
+   "sha": "19816b753190ea72a7b2611043c53948434aa7708c66e8696e6928850bc16b09",
+   "path": "Calculators/immo/Car/Opel/Frontera v1.cal",
+   "size": 8863,
+   "folder": "Immo/Car/Opel",
+   "name": "Frontera v1 — ETSmart",
+   "display": "Immo/Car/Opel/Frontera v1 — ETSmart.cal"
   },
   {
    "sha": "31a188c6da7ac04579d2d95369dff5563acf6bf8b035282454839a22fa1d709e",
@@ -16420,12 +17875,44 @@
    "display": "Immo/Car/Opel/Frontera v2 — ETSmart.cal"
   },
   {
+   "sha": "2e653562c8bfedd4dd32313253b10a05de7e13cc88a23c65214357d66731457f",
+   "path": "Calculators/immo/Car/Opel/GM 90 532 624.cal",
+   "size": 12516,
+   "folder": "Immo/Car/Opel",
+   "name": "GM 90 532 624 — ETSmart",
+   "display": "Immo/Car/Opel/GM 90 532 624 — ETSmart.cal"
+  },
+  {
+   "sha": "69932f7a933738ac50eb084272278f8e9fef7fca8b1e0944251acb384283b7c2",
+   "path": "Calculators/immo/Car/Opel/GM 90 532 625.cal",
+   "size": 12531,
+   "folder": "Immo/Car/Opel",
+   "name": "GM 90 532 625 — ETSmart",
+   "display": "Immo/Car/Opel/GM 90 532 625 — ETSmart.cal"
+  },
+  {
+   "sha": "9d2a8e5d0f94a2b281a3aaeb8d45a14c2ac5ce1856186d0c2f2bf1a1f7592a0e",
+   "path": "Calculators/immo/Car/Opel/GM 91 151 147.cal",
+   "size": 8914,
+   "folder": "Immo/Car/Opel",
+   "name": "GM 91 151 147 — ETSmart",
+   "display": "Immo/Car/Opel/GM 91 151 147 — ETSmart.cal"
+  },
+  {
    "sha": "cb9caadd16867dfcec844c83930991d1f0e71abab28dfb5f39bee6109674ce1d",
    "path": "Calculators/immo/Car/Opel/Movano.cal",
    "size": 6283,
    "folder": "Immo/Car/Opel",
    "name": "Movano — ETSmart",
    "display": "Immo/Car/Opel/Movano — ETSmart.cal"
+  },
+  {
+   "sha": "043c623b7b5ee2be7d12904f6b83f5b2bc819d9e2862be586a866fce4ec47f7a",
+   "path": "Calculators/immo/Car/Opel/Omega v1.cal",
+   "size": 12533,
+   "folder": "Immo/Car/Opel",
+   "name": "Omega v1 — ETSmart",
+   "display": "Immo/Car/Opel/Omega v1 — ETSmart.cal"
   },
   {
    "sha": "4ad6a84b523c9cc4b21ea806d321ca4675dc535ed62fa79816f982d1e477854d",
@@ -16436,12 +17923,116 @@
    "display": "Immo/Car/Opel/Omega v2 — ETSmart.cal"
   },
   {
+   "sha": "18564d4bedc6e58bb221b11fcb78868af3a85ace43962bd631beee04e38105ff",
+   "path": "Calculators/immo/Car/Opel/Sintra v1.cal",
+   "size": 12514,
+   "folder": "Immo/Car/Opel",
+   "name": "Sintra v1 — ETSmart",
+   "display": "Immo/Car/Opel/Sintra v1 — ETSmart.cal"
+  },
+  {
+   "sha": "b18336b7344e350b21851cab833ab4511e9bbccf18527c9f5b8a4a49b6c15849",
+   "path": "Calculators/immo/Car/Opel/Vectra v1.cal",
+   "size": 12514,
+   "folder": "Immo/Car/Opel",
+   "name": "Vectra v1 — ETSmart",
+   "display": "Immo/Car/Opel/Vectra v1 — ETSmart.cal"
+  },
+  {
+   "sha": "1e6938c7428632c197d2ba01d86f3c0c5484734a0da33f5f5e9545cd22014ed1",
+   "path": "Calculators/immo/Car/Opel/Vectra v2.cal",
+   "size": 12528,
+   "folder": "Immo/Car/Opel",
+   "name": "Vectra v2 — ETSmart",
+   "display": "Immo/Car/Opel/Vectra v2 — ETSmart.cal"
+  },
+  {
+   "sha": "0998b45d3beceee8a79829c59eb8dffb0ab121d40c39983807a0eb20f08e28fc",
+   "path": "Calculators/immo/Car/Opel/Vectra v3.cal",
+   "size": 12518,
+   "folder": "Immo/Car/Opel",
+   "name": "Vectra v3 — ETSmart",
+   "display": "Immo/Car/Opel/Vectra v3 — ETSmart.cal"
+  },
+  {
+   "sha": "2bc7efc4e211e4dd9dc247b9be21467492edb378296e11ed9406d8848872a2ff",
+   "path": "Calculators/immo/Car/Peugeot/306 v1.cal",
+   "size": 12316,
+   "folder": "Immo/Car/Peugeot",
+   "name": "306 v1 — ETSmart",
+   "display": "Immo/Car/Peugeot/306 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "fc9f48cbd19f1bbf4d7e5567120e8b9c048d980f63de3e14caa105625bbbe9b6",
+   "path": "Calculators/immo/Car/Peugeot/306 v2.cal",
+   "size": 8939,
+   "folder": "Immo/Car/Peugeot",
+   "name": "306 v2 — ETSmart",
+   "display": "Immo/Car/Peugeot/306 v2 — ETSmart.cal"
+  },
+  {
+   "sha": "eb02c8f6a33b61964764d621711952bfa14aa3c945a1d83b52c03e964209e735",
+   "path": "Calculators/immo/Car/Peugeot/806 v1.cal",
+   "size": 12323,
+   "folder": "Immo/Car/Peugeot",
+   "name": "806 v1 — ETSmart",
+   "display": "Immo/Car/Peugeot/806 v1 — ETSmart.cal"
+  },
+  {
    "sha": "fd63bd9a6c8023e2b2612a3d3d491df212794f8b7001afa6f21f266e90378b32",
    "path": "Calculators/immo/Car/Peugeot/806 v2.cal",
    "size": 8999,
    "folder": "Immo/Car/Peugeot",
    "name": "806 v2 — ETSmart",
    "display": "Immo/Car/Peugeot/806 v2 — ETSmart.cal"
+  },
+  {
+   "sha": "062b6739af7efd0f84d5c548c920969465f4238cb5f39dcfcb3a83e14fbf76ec",
+   "path": "Calculators/Immo/Car/Peugeot/Delphi 46417024.cal",
+   "size": 11791,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Delphi 46417024",
+   "display": "Immo/Car/Peugeot/Delphi 46417024.cal"
+  },
+  {
+   "sha": "70ef61e4b37709c828c5f7d41c1dd9f9c2afceb8558bd81dcfd6d405b0f71128",
+   "path": "Calculators/immo/Car/Peugeot/Eliseo 125.cal",
+   "size": 4762,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Eliseo 125 — ETSmart",
+   "display": "Immo/Car/Peugeot/Eliseo 125 — ETSmart.cal"
+  },
+  {
+   "sha": "49777e4fdbecb49e9671351a86a3b7691b6f872094cdcf37f7e5fa40197b9878",
+   "path": "Calculators/immo/Car/Peugeot/Eliseo Temic.cal",
+   "size": 4768,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Eliseo Temic — ETSmart",
+   "display": "Immo/Car/Peugeot/Eliseo Temic — ETSmart.cal"
+  },
+  {
+   "sha": "c2bd8d0f678b2eff888b891e53166d802bed3c197ca9fb570eabc081b4d5932f",
+   "path": "Calculators/immo/Car/Peugeot/Elystar Temic.cal",
+   "size": 4485,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Elystar Temic — ETSmart",
+   "display": "Immo/Car/Peugeot/Elystar Temic — ETSmart.cal"
+  },
+  {
+   "sha": "e79b7941bae9fa864d3804c7480439e556087447a92e1ce127ef19bb9afab04f",
+   "path": "Calculators/immo/Car/Peugeot/Expert Texton.cal",
+   "size": 8810,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Expert Texton — ETSmart",
+   "display": "Immo/Car/Peugeot/Expert Texton — ETSmart.cal"
+  },
+  {
+   "sha": "691052ed7723ebcdc25288e27813a401008a1e467213fd756964f8119368719e",
+   "path": "Calculators/immo/Car/Peugeot/Expert v1.cal",
+   "size": 8814,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Expert v1 — ETSmart",
+   "display": "Immo/Car/Peugeot/Expert v1 — ETSmart.cal"
   },
   {
    "sha": "0e1439305051085acac49649a6f1bfb2f9ee6108f473542a27fa3272b94922d4",
@@ -16452,12 +18043,156 @@
    "display": "Immo/Car/Peugeot/Expert v2 — ETSmart.cal"
   },
   {
+   "sha": "26ecc47c325f48cde8c62c20bc18f0942528e7c532d6abc3ea8546ff2052799e",
+   "path": "Calculators/immo/Car/Peugeot/Expert v3.cal",
+   "size": 8945,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Expert v3 — ETSmart",
+   "display": "Immo/Car/Peugeot/Expert v3 — ETSmart.cal"
+  },
+  {
+   "sha": "8ea8ea66b6ced109c0d68fa15fcaa1886ed6eba021e8abb6803bc30eae357aa5",
+   "path": "Calculators/immo/Car/Peugeot/Squab 50.cal",
+   "size": 5980,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Squab 50 — ETSmart",
+   "display": "Immo/Car/Peugeot/Squab 50 — ETSmart.cal"
+  },
+  {
+   "sha": "7920bb81f3c1d55c35f903047b5f9c0557208737d871b1756ef83f501ff8093c",
+   "path": "Calculators/immo/Car/Peugeot/Squab Temic.cal",
+   "size": 5986,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Squab Temic — ETSmart",
+   "display": "Immo/Car/Peugeot/Squab Temic — ETSmart.cal"
+  },
+  {
+   "sha": "a5110f60b9089e6d3a68446b45763dc8f3a91b8d5cc8b22bcf3773c4b7928784",
+   "path": "Calculators/immo/Car/Peugeot/Texton  69239034.80.cal",
+   "size": 8778,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Texton 69239034.80 — ETSmart",
+   "display": "Immo/Car/Peugeot/Texton 69239034.80 — ETSmart.cal"
+  },
+  {
+   "sha": "6b212f5cc27612900e3deb17be886ad87c31acf1cb4af2ad287643506ae48b76",
+   "path": "Calculators/immo/Car/Peugeot/Texton  69398196.80.cal",
+   "size": 8811,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Texton 69398196.80 — ETSmart",
+   "display": "Immo/Car/Peugeot/Texton 69398196.80 — ETSmart.cal"
+  },
+  {
+   "sha": "6a606d4cd851d580fce1710625f14a1e45173189be05f1d895c1acc80135d048",
+   "path": "Calculators/immo/Car/Peugeot/Texton  69398197.80 CPH08.cal",
+   "size": 12316,
+   "folder": "Immo/Car/Peugeot",
+   "name": "Texton 69398197.80 CPH08 — ETSmart",
+   "display": "Immo/Car/Peugeot/Texton 69398197.80 CPH08 — ETSmart.cal"
+  },
+  {
+   "sha": "553f6a6f9bef8b5a7df184b84944f4e7aa5325b2cb44e6c9419ed3ba51e663ac",
+   "path": "Calculators/immo/Car/Piaggio/Beverly 200 Temic.cal",
+   "size": 4798,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Beverly 200 Temic — ETSmart",
+   "display": "Immo/Car/Piaggio/Beverly 200 Temic — ETSmart.cal"
+  },
+  {
+   "sha": "558d7186e8f2cb4130179c8c0f991c3cebc3e9533dcbd37d2bab4fed682d0921",
+   "path": "Calculators/immo/Car/Piaggio/Beverly 250.cal",
+   "size": 4804,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Beverly 250 — ETSmart",
+   "display": "Immo/Car/Piaggio/Beverly 250 — ETSmart.cal"
+  },
+  {
+   "sha": "fd1b643f53b319dbf60a1831c489a24a34ae57a2eae3250176471d7f5e7d898f",
+   "path": "Calculators/immo/Car/Piaggio/Beverly 250 Temic.cal",
+   "size": 4812,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Beverly 250 Temic — ETSmart",
+   "display": "Immo/Car/Piaggio/Beverly 250 Temic — ETSmart.cal"
+  },
+  {
+   "sha": "2aac81d78e964f3be9dec63af286a89c441e704a18a173cd62ed0b45380f2313",
+   "path": "Calculators/immo/Car/Piaggio/Liberty 125 Temic.cal",
+   "size": 4779,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Liberty 125 Temic — ETSmart",
+   "display": "Immo/Car/Piaggio/Liberty 125 Temic — ETSmart.cal"
+  },
+  {
+   "sha": "714adaaf30e87460013063362e2e6c52b6090e6f500e2090f0550ef0d744dd27",
+   "path": "Calculators/immo/Car/Piaggio/Vespa 125 Temic.cal",
+   "size": 4806,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Vespa 125 Temic — ETSmart",
+   "display": "Immo/Car/Piaggio/Vespa 125 Temic — ETSmart.cal"
+  },
+  {
+   "sha": "0665b573a8e397eacc5debc8b24b10d228366ec324f8edbef3832ebee63d6835",
+   "path": "Calculators/immo/Car/Piaggio/Vespa 150 Temic.cal",
+   "size": 4789,
+   "folder": "Immo/Car/Piaggio",
+   "name": "Vespa 150 Temic — ETSmart",
+   "display": "Immo/Car/Piaggio/Vespa 150 Temic — ETSmart.cal"
+  },
+  {
    "sha": "f46529df7d14e859abb5ce876b0ff246cca99d11a39ccb8e213c9abd9211b328",
    "path": "Calculators/Immo/Car/Renault/Kango.cal",
    "size": 6293,
    "folder": "Immo/Car/Renault",
    "name": "Kango",
    "display": "Immo/Car/Renault/Kango.cal"
+  },
+  {
+   "sha": "6c8a3f9148410a8289c5158b0c736eee35efe4a74a9bc51b8227ad427b719cfb",
+   "path": "Calculators/immo/Car/Seat/Arosa v1.cal",
+   "size": 14251,
+   "folder": "Immo/Car/Seat",
+   "name": "Arosa v1 — ETSmart",
+   "display": "Immo/Car/Seat/Arosa v1 — ETSmart.cal"
+  },
+  {
+   "sha": "1898d829997a24cd9ec3c52cbd97544c4815563d1fe74742f02bd5ae6f401985",
+   "path": "Calculators/immo/Car/Seat/Cordoba v1.cal",
+   "size": 14304,
+   "folder": "Immo/Car/Seat",
+   "name": "Cordoba v1 — ETSmart",
+   "display": "Immo/Car/Seat/Cordoba v1 — ETSmart.cal"
+  },
+  {
+   "sha": "ec07de57d2962a19726751cce645355224baa83b48a8b5445b940c9252db3931",
+   "path": "Calculators/immo/Car/Seat/Ibiza v1.cal",
+   "size": 14251,
+   "folder": "Immo/Car/Seat",
+   "name": "Ibiza v1 — ETSmart",
+   "display": "Immo/Car/Seat/Ibiza v1 — ETSmart.cal"
+  },
+  {
+   "sha": "cfccfd5c4e86f8dbc9d7cdd07b961afd22313780d4ad644f93d83955f0c97cac",
+   "path": "Calculators/immo/Car/Seat/Marbella v1.cal",
+   "size": 4768,
+   "folder": "Immo/Car/Seat",
+   "name": "Marbella v1 — ETSmart",
+   "display": "Immo/Car/Seat/Marbella v1 — ETSmart.cal"
+  },
+  {
+   "sha": "b73cd86642628746eb115d658b7786ad21dfbd786eed5535667de4048b4f621f",
+   "path": "Calculators/immo/Car/Seat/Toledo v1.cal",
+   "size": 14302,
+   "folder": "Immo/Car/Seat",
+   "name": "Toledo v1 — ETSmart",
+   "display": "Immo/Car/Seat/Toledo v1 — ETSmart.cal"
+  },
+  {
+   "sha": "5231b150eff50601eb3b8372a3cfee0b795aec257f58aabba847e69ee1d6d63b",
+   "path": "Calculators/immo/Car/Skoda/Felicia v1.cal",
+   "size": 14308,
+   "folder": "Immo/Car/Skoda",
+   "name": "Felicia v1 — ETSmart",
+   "display": "Immo/Car/Skoda/Felicia v1 — ETSmart.cal"
   },
   {
    "sha": "7a7c1f6bb85dff15fadc6338cbb510129c9518878806ca7286aee09841f0203b",
@@ -16474,6 +18209,14 @@
    "folder": "Immo/Car/Suzuki",
    "name": "Baleno v1 — ETSmart",
    "display": "Immo/Car/Suzuki/Baleno v1 — ETSmart.cal"
+  },
+  {
+   "sha": "cb76380760bac9ea8d3160e98ead8083e1bd866b402117bdce0d9063fdc8a7c4",
+   "path": "Calculators/immo/Car/Suzuki/Grand Vitara Immo 24C01 4C.cal",
+   "size": 7603,
+   "folder": "Immo/Car/Suzuki",
+   "name": "Grand Vitara Immo 24C01 4C — ETSmart",
+   "display": "Immo/Car/Suzuki/Grand Vitara Immo 24C01 4C — ETSmart.cal"
   },
   {
    "sha": "cfa3db6c8f858f6b0ae13f2e63b226160a04dfec513d455841df495625d8b23c",
@@ -16620,6 +18363,14 @@
    "display": "Immo/Car/Toyota/Duet v2 — ETSmart.cal"
   },
   {
+   "sha": "c2b4c000f4399686cf64e111c621da3b110299d22920c829e704fba6ffe4d183",
+   "path": "Calculators/immo/Car/Toyota/Immo 93C66 4C.cal",
+   "size": 11831,
+   "folder": "Immo/Car/Toyota",
+   "name": "Immo 93C66 4C — ETSmart",
+   "display": "Immo/Car/Toyota/Immo 93C66 4C — ETSmart.cal"
+  },
+  {
    "sha": "908b7f839de51a02ad974f885b2be1dd503c00a0268f3bf633271fb41c88737b",
    "path": "Calculators/immo/Car/Toyota/Land Cruiser v1.cal",
    "size": 10355,
@@ -16636,6 +18387,14 @@
    "display": "Immo/Car/Toyota/old 93c66 4c — ETSmart.cal"
   },
   {
+   "sha": "4c3f9b5f79af40e183933cd750fec1a7a03e372d818644f79e44a55e853078ec",
+   "path": "Calculators/immo/Car/Toyota/Paseo v1.cal",
+   "size": 5953,
+   "folder": "Immo/Car/Toyota",
+   "name": "Paseo v1 — ETSmart",
+   "display": "Immo/Car/Toyota/Paseo v1 — ETSmart.cal"
+  },
+  {
    "sha": "98c95138ba9a17d957dbe2eeefdec31b525e2981aa64d8c2e8baa507f01ece3c",
    "path": "Calculators/immo/Car/Toyota/Prado v1.cal",
    "size": 10341,
@@ -16650,6 +18409,94 @@
    "folder": "Immo/Car/Toyota",
    "name": "Rav4 v1 — ETSmart",
    "display": "Immo/Car/Toyota/Rav4 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "c4991277ef24e53e4b14929c2de63c9c2ece20f60ab86fdfe799ea6673e5c82c",
+   "path": "Calculators/immo/Car/VW/Caddy v1.cal",
+   "size": 14292,
+   "folder": "Immo/Car/VW",
+   "name": "Caddy v1 — ETSmart",
+   "display": "Immo/Car/VW/Caddy v1 — ETSmart.cal"
+  },
+  {
+   "sha": "068c7405835f0f2a0e58efa2943eca97f15aaf977ace2e067ac4c4b64e9b5345",
+   "path": "Calculators/immo/Car/VW/Caravella v1.cal",
+   "size": 14297,
+   "folder": "Immo/Car/VW",
+   "name": "Caravella v1 — ETSmart",
+   "display": "Immo/Car/VW/Caravella v1 — ETSmart.cal"
+  },
+  {
+   "sha": "f45a1e89ec502b3e652dfd20d5e10d3c0f254063138780f9e2e6e3017f030ae3",
+   "path": "Calculators/immo/Car/VW/Golf v1.cal",
+   "size": 14294,
+   "folder": "Immo/Car/VW",
+   "name": "Golf v1 — ETSmart",
+   "display": "Immo/Car/VW/Golf v1 — ETSmart.cal"
+  },
+  {
+   "sha": "4fe4bd6a6c948e5b2904ef6824aca7fe3e3ad9d2e9ebdb9395741b306eb6c05b",
+   "path": "Calculators/immo/Car/VW/LT28 v1.cal",
+   "size": 9880,
+   "folder": "Immo/Car/VW",
+   "name": "LT28 v1 — ETSmart",
+   "display": "Immo/Car/VW/LT28 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "4af8f005c4b107f6b348250018840b3310dd84123941224dd1cca8de9d75cbbb",
+   "path": "Calculators/immo/Car/VW/LT35 v1.cal",
+   "size": 9899,
+   "folder": "Immo/Car/VW",
+   "name": "LT35 v1 — ETSmart",
+   "display": "Immo/Car/VW/LT35 v1 — ETSmart.cal"
+  },
+  {
+   "sha": "e089b10c939ba4873f8e31461943f4dc684734de0df0e14566694553b12acd51",
+   "path": "Calculators/immo/Car/VW/Passat v1.cal",
+   "size": 14294,
+   "folder": "Immo/Car/VW",
+   "name": "Passat v1 — ETSmart",
+   "display": "Immo/Car/VW/Passat v1 — ETSmart.cal"
+  },
+  {
+   "sha": "498c4006a82957494529860b787591420ec03db3e80255fdc9858b1a1fb1ec6b",
+   "path": "Calculators/immo/Car/VW/Passat v2.cal",
+   "size": 14291,
+   "folder": "Immo/Car/VW",
+   "name": "Passat v2 — ETSmart",
+   "display": "Immo/Car/VW/Passat v2 — ETSmart.cal"
+  },
+  {
+   "sha": "89e5bf703a159aa32082b8c60917656724be97277ba1d9598183b9d162c6a713",
+   "path": "Calculators/immo/Car/VW/Polo v1.cal",
+   "size": 14290,
+   "folder": "Immo/Car/VW",
+   "name": "Polo v1 — ETSmart",
+   "display": "Immo/Car/VW/Polo v1 — ETSmart.cal"
+  },
+  {
+   "sha": "718e225b97dab6b91761795c0249ee7510f86aaf1c1567ee7f085b86cd9998b9",
+   "path": "Calculators/immo/Car/VW/Sharan v1.cal",
+   "size": 14320,
+   "folder": "Immo/Car/VW",
+   "name": "Sharan v1 — ETSmart",
+   "display": "Immo/Car/VW/Sharan v1 — ETSmart.cal"
+  },
+  {
+   "sha": "6eb74aa4b42b8c65c1bbaf9080ccdef692411d5628d647a89398b9c45fe8a254",
+   "path": "Calculators/immo/Car/VW/Transporter v1.cal",
+   "size": 14302,
+   "folder": "Immo/Car/VW",
+   "name": "Transporter v1 — ETSmart",
+   "display": "Immo/Car/VW/Transporter v1 — ETSmart.cal"
+  },
+  {
+   "sha": "7dd5d75b10cc61aba7db18c88b3b7f9d13e9c697eacbd15ff7be4a7f96618402",
+   "path": "Calculators/immo/Car/VW/Vento v1.cal",
+   "size": 14290,
+   "folder": "Immo/Car/VW",
+   "name": "Vento v1 — ETSmart",
+   "display": "Immo/Car/VW/Vento v1 — ETSmart.cal"
   },
   {
    "sha": "5f3353b72e9e1a9d4ce9d525b4951b3eac0a8206af0451e889fde90b1ac5e4a6",
