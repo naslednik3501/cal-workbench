@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 9655,
-      "sha256": "54b2b809a862331f4a1483a1e9c3fd7fd2d9b6b1d40cb76fe080b0179ef10010"
+      "bytes": 10056,
+      "sha256": "3e3e33563562835431e6623204ef13baa735ea825c11bd9a012192e385b193fe"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -48,13 +48,13 @@
     },
     {
       "path": "README.html",
-      "bytes": 15078,
-      "sha256": "2e85e315e3bd94c362313de77dbbc96f8e910d55e2752013a1e98b25ac244076"
+      "bytes": 15149,
+      "sha256": "24b04b3df84a5dd47c7317436730355891373983b50dad7bf4711845d99736d3"
     },
     {
       "path": "README.md",
-      "bytes": 7722,
-      "sha256": "fc66c69b55f4899f42b7b0b67c782c7102ffc4b8cc48679433a6854f46419060"
+      "bytes": 7841,
+      "sha256": "b7cc5a5f25bef5c88f6c6ccb9f55daad934345b28b908d0b2ff4befe425a1857"
     },
     {
       "path": "SOURCE_STORAGE.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "cal-source.js",
-      "bytes": 41205,
-      "sha256": "f2afd3b57315e1945845c91ec2a343491c29f07dd8b462a1976678f9c948c3b5"
+      "bytes": 100580,
+      "sha256": "735b2a9592a6f53e3213a96557b5f823b8069cde7176ca8e2e933796131ac8b2"
     },
     {
       "path": "catalog-data/part-000.js",
@@ -352,6 +352,21 @@
       "sha256": "2f217fc18534417447f083a1d82645011067244054ec60be7905f1fad51de44c"
     },
     {
+      "path": "catalog-import-data/blobs-010.js",
+      "bytes": 1140231,
+      "sha256": "1944880a1d4b19e41868255b1b3b8a8a09ecc669882384537c5c9a71d0e93442"
+    },
+    {
+      "path": "catalog-import-data/blobs-011.js",
+      "bytes": 1201079,
+      "sha256": "952c13afafae68e6fa1f756d9359d7026140d24c035e68283ad341cbc8e3c3f5"
+    },
+    {
+      "path": "catalog-import-data/blobs-012.js",
+      "bytes": 1097761,
+      "sha256": "15fb23146b3e1fd22b223e3eaaf428058bb57391af6a7182c33138fdc24490de"
+    },
+    {
       "path": "catalog-import-data/part-000.js",
       "bytes": 58997,
       "sha256": "bbee353f4d98bfbb1510a09792b33a2710714a3541f5f951a1ae7bf15de671be"
@@ -402,9 +417,24 @@
       "sha256": "7b3f5339e2b34247a5298db515a30eec00f1817cf678015e13555ee167f2b516"
     },
     {
+      "path": "catalog-import-data/part-010.js",
+      "bytes": 56638,
+      "sha256": "b8cff3317fef548a604bdb0dd38185329a2ed4874de411fb8c1bb3f004d0ee74"
+    },
+    {
+      "path": "catalog-import-data/part-011.js",
+      "bytes": 57799,
+      "sha256": "5d9acc74895cf35d8701d704d263ebdb470ce36e79b5e91804bcc3595b15a8ba"
+    },
+    {
+      "path": "catalog-import-data/part-012.js",
+      "bytes": 36308,
+      "sha256": "8db03963c66089d9d51f6bd9dfd826ec60c02b359409104cea7f61c8e4da8b9e"
+    },
+    {
       "path": "catalog-import-parts.json",
-      "bytes": 785,
-      "sha256": "dd633f99647f9da12437a8170e74bc491f76d1e8220a7200132db8ee0c759c43"
+      "bytes": 1010,
+      "sha256": "094fdfd51ff3eef2cf221083786eaf8cfc9d1e969ec7be7615dd2092e5065846"
     },
     {
       "path": "catalog-import.js",
@@ -498,8 +528,8 @@
     },
     {
       "path": "catalog-organization-import.js",
-      "bytes": 309837,
-      "sha256": "25997f8304476561792a75cbe66240244895bd940cc7a8db1d1c5bd90d4147e8"
+      "bytes": 412975,
+      "sha256": "a47f3f6f1692c79121b427ed6026007d7c8c36e067a2ba4740eb31152654f9ce"
     },
     {
       "path": "catalog-organization-mototechnics.js",
@@ -1543,8 +1573,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 14179,
-      "sha256": "14c3b88f4483b995728649e5bbbfc2b527ae1d08e8006ca14d5b48f8202c9e2f"
+      "bytes": 14518,
+      "sha256": "e34948841a8f5d14da1fcb2b395023933d32d46394323e48bd1840ca799eae20"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1867,14 +1897,29 @@
       "sha256": "e14dae13c684a6d098559c1f6f2d0c6c137584ec5d3247bda3d841dba0a7ffc3"
     },
     {
+      "path": "reports/ecu-software-scan-2026-11-06.md",
+      "bytes": 1504,
+      "sha256": "d0227c7b057f96c03e09b5dce506ebaf010b4b8ffe0159e18a4302b780a8b2d7"
+    },
+    {
       "path": "reports/etsmart-import-2026-11-06.json",
       "bytes": 730035,
       "sha256": "2acb5c7b643d7a4bfb162b9e084143b4f1cd09c4da2217218ed912f332e0fa70"
     },
     {
       "path": "reports/etsmart-import-2026-11-06.md",
-      "bytes": 3098,
-      "sha256": "6576aa9fb4dc977459f59c9420334f9ffc41f6d39d01ff482a3b4fa3a4b214ec"
+      "bytes": 3483,
+      "sha256": "d49a8de49010f3cd3ca117de71283bf6972876ad78ff2c6a4b8493296cc32cf4"
+    },
+    {
+      "path": "reports/etsmart-recovery-2026-11-06.json",
+      "bytes": 358926,
+      "sha256": "2343937752e838daaf65b80a89f223c6154b07de0a4ba366350b2b904183bdf0"
+    },
+    {
+      "path": "reports/etsmart-recovery-2026-11-06.md",
+      "bytes": 10518,
+      "sha256": "24370c1ccda2e4f5c99c59d88a3b3d7af9c8ff9884bd7780121cbbe7405a223d"
     },
     {
       "path": "reports/final-app-validation-2026-11-04.md",
@@ -2048,8 +2093,8 @@
     },
     {
       "path": "tests/test_etsmart_import.js",
-      "bytes": 2931,
-      "sha256": "c7d0b3abd1ff73e633508a598e3fed870f0437ff40b9bcdecf43d99316f15d72"
+      "bytes": 3795,
+      "sha256": "d4ba4d16b9ef50a001af57a734d88cdfb1ae5da782f2b675ec5bf1c27074997e"
     },
     {
       "path": "tests/test_polo.js",
@@ -2079,7 +2124,7 @@
     {
       "path": "tests/test_scope_browser.js",
       "bytes": 2852,
-      "sha256": "75b2089ecb2e3556613456692c11491fd17ffb40c57fc0a52942341e56f915ca"
+      "sha256": "648ac2c9a7c22d347b574fbd7c9b45b2546a59c89e8eb6a9f8c102444d5c8a43"
     },
     {
       "path": "tests/test_source.js",

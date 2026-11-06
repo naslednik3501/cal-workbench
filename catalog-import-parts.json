@@ -9,7 +9,10 @@
   "catalog-import-data/part-006.js",
   "catalog-import-data/part-007.js",
   "catalog-import-data/part-008.js",
-  "catalog-import-data/part-009.js"
+  "catalog-import-data/part-009.js",
+  "catalog-import-data/part-010.js",
+  "catalog-import-data/part-011.js",
+  "catalog-import-data/part-012.js"
  ],
  "blobs": [
   "catalog-import-data/blobs-000.js",
@@ -21,6 +24,9 @@
   "catalog-import-data/blobs-006.js",
   "catalog-import-data/blobs-007.js",
   "catalog-import-data/blobs-008.js",
-  "catalog-import-data/blobs-009.js"
+  "catalog-import-data/blobs-009.js",
+  "catalog-import-data/blobs-010.js",
+  "catalog-import-data/blobs-011.js",
+  "catalog-import-data/blobs-012.js"
  ]
 }

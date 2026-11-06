@@ -1,5 +1,10 @@
 # ETSmartUSB CAL import — 2026-11-06
 
+> **Обновление (пятая партия):** 791 из 822 отклонённых CAL восстановлены
+> консервативной правкой и проверены запуском формы —
+> см. [etsmart-recovery-2026-11-06.md](etsmart-recovery-2026-11-06.md).
+> Ниже сохранён исходный отчёт четвёртой партии.
+
 Source: `ETSmartUSB+iProg.rar` recovered from the public MEGA folder linked in
 the browser download history. Only calculator scripts were kept. CKDecode,
 native Windows programs, USB/device tooling, encrypted `.udx`, ECU `.drt`
