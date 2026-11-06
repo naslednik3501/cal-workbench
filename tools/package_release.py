@@ -36,7 +36,7 @@ html = (root / 'index.html').read_text()
 ids = re.findall(r'\bid="([^"]+)"', html)
 assert len(ids) == len(set(ids)), 'Duplicate HTML IDs'
 for ref in re.findall(r'(?:src|href)="([^"]+)"', html):
-    assert (root / ref).is_file(), f'Missing HTML resource: {ref}'
+    assert (root / ref.split('?', 1)[0]).is_file(), f'Missing HTML resource: {ref}'
 for ref in re.findall(r"\$\('([^']+)'\)", (root / 'app.js').read_text()):
     assert ref in ids, f'Missing app element: {ref}'
 manifest = dict(version=version, files=[dict(path=str(p.relative_to(root)), bytes=p.stat().st_size,
