@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2615,
-      "sha256": "f30ca6d1a18f00a4bcc48b3d1fc68c1e8370e6f25e76ace31448ef4f046afe5b"
+      "bytes": 2653,
+      "sha256": "cef5a6e6b73a73208fd8ad62d15420dc3f818bb87e91e4a2a23c5f3d20174f3b"
     },
     {
       "path": "cal-source.js",
@@ -307,6 +307,11 @@
       "sha256": "7affbea02026c079e68ae98f340d6da4f42dfa77b24faae2269aa92f8af93745"
     },
     {
+      "path": "catalog-organization-asia-acura.js",
+      "bytes": 2298,
+      "sha256": "7a20ff2cba362472aba6fb5192405801d11ddaa5b89095f5acf3568cdbb5e89f"
+    },
+    {
       "path": "catalog-organization-dashboard.js",
       "bytes": 974417,
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
@@ -343,8 +348,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 17781,
-      "sha256": "eba9a6a7b9b18f6b4cf3671236f62d83e3098408467f1e4b207ec96791319933"
+      "bytes": 18180,
+      "sha256": "b9465f0a2e49fa15df9135cbfe2cba5c23dc0da6db0a9b97394e686135737612"
     },
     {
       "path": "catalog-parts.json",
@@ -1353,8 +1358,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12061,
-      "sha256": "3008243af427425e38b73cb33cb582a45e54f9aac22f94cc604871868cf1d943"
+      "bytes": 12120,
+      "sha256": "4bc07e04d9d8564c3edc3445043eb31fa7b7d643291d0791eae8894b6593a7e7"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1928,8 +1933,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 34677,
-      "sha256": "6514e35ff099fc3b151a2465ea2ed4add334028a0be44b2c917e0fa151a23eb9"
+      "bytes": 35772,
+      "sha256": "27e86099b993f0267d35de9b102d6d0997c520b021a6d423e275bfec173fd5a3"
     },
     {
       "path": "tests/test_text_variants.js",

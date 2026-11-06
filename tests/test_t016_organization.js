@@ -41,6 +41,8 @@ const germanOtherSource=germanyAllSource.filter(e=>!e.path.startsWith('Calculato
 const franceAllSource=allCal.filter(e=>e.path.startsWith('Calculators/France/'));
 const franceShas=new Set(franceAllSource.map(e=>e.sha));
 const franceMovedSource=franceAllSource.filter(e=>org.folder(e)?.startsWith('Dashboard/France/'));
+const asiaAcuraSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/Acura/'));
+const asiaAcuraShas=new Set(asiaAcuraSource.map(e=>e.sha));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -93,7 +95,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France','unknown Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia','unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
@@ -101,7 +103,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -218,6 +220,18 @@ await test('France panels follow confirmed brands and preserve disputed entries'
  const renamed=latitudeVariants.find(e=>org.get(e.sha).old_name);
  assert(renamed);assert(org.matches(renamed,org.get(renamed.sha).old_name));
 });
+await test('Asia Acura panels preserve the reference model folders',()=>{
+ assert.equal(asiaAcuraSource.length,19,'all Asia/Acura source paths');
+ assert.equal(asiaAcuraShas.size,19,'distinct Asia/Acura CAL contents');
+ const expectedCounts={'Dashboard/Asia/Acura':4,'Dashboard/Asia/Acura/EL':2,'Dashboard/Asia/Acura/MDX':3,'Dashboard/Asia/Acura/RDX':1,'Dashboard/Asia/Acura/RSX':2,'Dashboard/Asia/Acura/TL':4,'Dashboard/Asia/Acura/TSX':3};
+ const actualCounts={};
+ for(const e of asiaAcuraSource){
+  const folder=org.folder(e);actualCounts[folder]=(actualCounts[folder]||0)+1;
+  assert(folder==='Dashboard/Asia/Acura'||folder.startsWith('Dashboard/Asia/Acura/'),e.path);
+  assert(org.matches(e,e.path),'original path search '+e.path);
+ }
+ assert.deepEqual(Object.fromEntries(Object.entries(actualCounts).sort()),Object.fromEntries(Object.entries(expectedCounts).sort()));
+});
 await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
  const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
  assert.equal(report.totals.unique_sha,5383,'Airbag/SRS unique SHA unchanged');
@@ -323,7 +337,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -339,7 +353,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Airbag','largest section first');
- assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4935);
+ assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4954);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
