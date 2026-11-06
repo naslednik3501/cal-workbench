@@ -21,6 +21,7 @@ if(node&&!root.CAL_ORGANIZATION_ASIA_SUBARU_SUZUKI)require('./catalog-organizati
 if(node&&!root.CAL_ORGANIZATION_ASIA_REMAINDER)require('./catalog-organization-asia-remainder.js');
 if(node&&!root.CAL_ORGANIZATION_EU_US_RU)require('./catalog-organization-eu-us-ru.js');
 if(node&&!root.CAL_ORGANIZATION_CRYPTO)require('./catalog-organization-crypto.js');
+if(node&&!root.CAL_ORGANIZATION_SERVICE_CALC)require('./catalog-organization-service-calc.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
@@ -38,6 +39,7 @@ const asiaSubaruSuzuki=root.CAL_ORGANIZATION_ASIA_SUBARU_SUZUKI||{entries:{}};
 const asiaRemainder=root.CAL_ORGANIZATION_ASIA_REMAINDER||{entries:{}};
 const euUsRu=root.CAL_ORGANIZATION_EU_US_RU||{entries:{}};
 const crypto=root.CAL_ORGANIZATION_CRYPTO||{entries:{}};
+const serviceCalc=root.CAL_ORGANIZATION_SERVICE_CALC||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -186,6 +188,11 @@ for(const [hash,folder] of Object.entries(euUsRu.entries||{})){
 for(const [hash,folder] of Object.entries(crypto.entries||{})){
  const item=data.entries[hash];
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid CRYPTO display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(serviceCalc.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Service calc display entry: '+hash);
  data.entries[hash]={...item,folder};
 }
 const legacyRoots={

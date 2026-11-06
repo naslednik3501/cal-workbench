@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3008,
-      "sha256": "bc72a1926c69792b13e47aa39cd8a95e82b85f05a11d19407a70404096be0f10"
+      "bytes": 3048,
+      "sha256": "4a2b37cb2c8c7d2f04853731e0c511f3bbf5dfcafe6dc2e626fbd9c51863458c"
     },
     {
       "path": "cal-source.js",
@@ -387,14 +387,19 @@
       "sha256": "0664f2ba6c077e4957064d74370e3f7481a54c8e985f02cf2ca7836f795174c2"
     },
     {
+      "path": "catalog-organization-service-calc.js",
+      "bytes": 5265,
+      "sha256": "2203cb65bbe1d809813a517901f4bb6fb7e625121f51e272c9739b6385f02775"
+    },
+    {
       "path": "catalog-organization-utilities.js",
       "bytes": 53246,
       "sha256": "5786c2b81f9e8c973930fbd9921578796a891caeb88a9b05a14879261bcaa747"
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 21847,
-      "sha256": "18813ccdcc37c41f96dcadc02c007243a2a894b4c8e2eb3574971d3f3d73a6a6"
+      "bytes": 22258,
+      "sha256": "acc2b9beaaa92980500e8f403bc64df1b528d58edbe9c66bc62c5e9bc5f8c875"
     },
     {
       "path": "catalog-parts.json",
@@ -1403,8 +1408,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12664,
-      "sha256": "234b0bac3fccb88a34d7299846d396eb9e75c86cb26f3035c76c00abb6a2d7b6"
+      "bytes": 12725,
+      "sha256": "abb3d02d78e620e5edf907b7e5fc39bd961d1e2b0f3f8f09ad41ddf20e7dadf3"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1680,6 +1685,11 @@
       "path": "reports/catalog-organization-root-airbag.md",
       "bytes": 28615,
       "sha256": "3e674bd479344675c6b6f7e96dc8e13d359a0f59139570011385c3ce78e3e02a"
+    },
+    {
+      "path": "reports/catalog-organization-service-calc-exceptions-2026-11-06.json",
+      "bytes": 8406,
+      "sha256": "16fa55ebf4a0001d79f51fd8e83467ccde2163891b1a37f745b5e4c25368b5f4"
     },
     {
       "path": "reports/catalog-organization-utilities-2026-11-04.json",
@@ -2003,13 +2013,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4664,
-      "sha256": "50b69b03557d37407c22926d56d78758be6e262fd2c673f81173d3006ca78d19"
+      "bytes": 4718,
+      "sha256": "5889bcbd924d619fe6fecc76905573dd58aef46533aac6afaa68c89276193cee"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 57428,
-      "sha256": "724a1ec20c334151b17404646cae32867935bd1b46f3a4868a74af2d846b9fe5"
+      "bytes": 59653,
+      "sha256": "791c6456a1281ee7b40e43de55d1c19ed41dbcf5fa6f3afb12564b1ae288f740"
     },
     {
       "path": "tests/test_text_variants.js",
