@@ -53,6 +53,8 @@ const asiaNissanShas=new Set(asiaNissanSource.map(e=>e.sha));
 const asiaNissanMovedSource=asiaNissanSource.filter(e=>org.folder(e)?.startsWith('Dashboard/Asia/Nissan'));
 const asiaMitsubishiSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/Mitsubishi/'));
 const asiaMitsubishiShas=new Set(asiaMitsubishiSource.map(e=>e.sha));
+const asiaToyotaSource=allCal.filter(e=>e.path.startsWith('Calculators/Asia/Toyota/'));
+const asiaToyotaShas=new Set(asiaToyotaSource.map(e=>e.sha));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -113,7 +115,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha)||asiaToyotaShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -173,6 +175,28 @@ await test('Asia Honda panels preserve reference models and direct Honda entries
   'Calculators/Asia/Honda/Ridgeline MC9S12H256.cal':'Dashboard/Asia/Honda/Ridgeline',
   'Calculators/Asia/Honda/Pilot 24c16.cal':'Dashboard/Asia/Honda/Pilot',
   'Calculators/Asia/Honda/Life 93C66.cal':'Dashboard/Asia/Honda/Life'
+ };
+ for(const [path,folder] of Object.entries(inferred)){const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);}
+});
+await test('Asia Toyota accounts for every unique source CAL',()=>{
+ assert.equal(asiaToyotaSource.length,236,'all Asia/Toyota source paths');
+ assert.equal(asiaToyotaShas.size,236,'distinct Asia/Toyota CAL contents');
+ const folders=new Set();let direct=0;
+ for(const e of asiaToyotaSource){
+  const folder=org.folder(e);
+  assert(folder==='Dashboard/Asia/Toyota'||folder.startsWith('Dashboard/Asia/Toyota/'),e.path);
+  assert(org.matches(e,e.path),'original path search '+e.path);
+  folders.add(folder);if(folder==='Dashboard/Asia/Toyota')direct++;
+ }
+ assert.equal(folders.size,66,'Toyota model folders');
+ assert.equal(direct,59,'direct Toyota records');
+ assert.equal(asiaToyotaSource.filter(e=>!org.folder(e)?.startsWith('Dashboard/Asia/Toyota')).length,0,'no disputed Toyota records');
+ const inferred={
+  'Calculators/Asia/Toyota/Hino 93C86 Yazaki31.cal':'Dashboard/Asia/Toyota/Hino',
+  'Calculators/Asia/Toyota/Prius C 93C86 Denso.cal':'Dashboard/Asia/Toyota/Prius C',
+  'Calculators/Asia/Toyota/Sienna 93C66 Denso.cal':'Dashboard/Asia/Toyota/Sienna',
+  'Calculators/Asia/Toyota/Aqua 93C86 Denso.cal':'Dashboard/Asia/Toyota/Aqua',
+  'Calculators/Asia/Toyota/Dina 93C56 Yazaki 17.cal':'Dashboard/Asia/Toyota/Dyna'
  };
  for(const [path,folder] of Object.entries(inferred)){const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);}
 });
@@ -446,7 +470,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAcuraShas.has(row.sha)||asiaHondaShas.has(row.sha)||asiaMazdaShas.has(row.sha)||asiaNissanShas.has(row.sha)||asiaMitsubishiShas.has(row.sha)||asiaToyotaShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -461,8 +485,8 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   assert(sections[i-1].count>=sections[i].count,'root count order '+sections[i-1].name+' vs '+sections[i].name);
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
- assert.equal(sections[0].name,'Airbag','largest section first');
- assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,5322);
+ assert.equal(sections[0].name,'Dashboard','largest section first');
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,5557);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
