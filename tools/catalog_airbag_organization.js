@@ -24,6 +24,19 @@ const APPROVED = {
   'a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf': 'Chevrolet 96 806 850'
 };
 
+// Confirmed display routing for Toyota entries stored at the section root.
+// iProgGuard Airbag.txt dated 2026-08-01 places these CAL under the model
+// folder. Only the display folder changes: names, original paths, bytes, SHA
+// and version identity stay unchanged.
+const ROUTE_OVERRIDES = {
+  '444ec54abaa8a029dbdbc3c819b12eee6a8f93648e34ceacff9697d7bc05cef6': 'Toyota/Camry',
+  '20812bc03af704349fd3b4f444977b726a0d6f896969239ecf205b1f97763ae0': 'Toyota/Camry',
+  '10fec76b17897d609c36d6a1ffd1a9e1b008af605e2dd32c2fdc42f2a88713ed': 'Toyota/RAV4',
+  '85ee2166866137707cafba480381f88e7bad1f462c6aa717d28236fc120c5e50': 'Toyota/RAV4',
+  '10d416a0bbadf2eadef2590d9897da4f150c21cf7175ffda55e5a2437e3f330b': 'Toyota/Corolla',
+  '67b14d4bec4ba7b1f722339781d1fc752e115767ef2d6387f68e636ed5b20465': 'Toyota/Corolla'
+};
+
 const BRANDS = [
   'Alfa Romeo', 'Land Rover', 'Great Wall', 'Mercedes', 'Volkswagen', 'Chevrolet',
   'Mitsubishi', 'SsangYong', 'Infiniti', 'Hyundai', 'Renault', 'Peugeot', 'Citroen',
@@ -334,11 +347,13 @@ for (const [sha, entries] of groups) {
   const oldName = clean(parts.at(-1).replace(/\.cal$/i, ''));
   if (reason) name = oldName;
 
+  const routeFolder = ROUTE_OVERRIDES[sha];
+  if (routeFolder && reason) throw new Error(`Route override on ambiguous entry: ${sha}`);
   rows.push({
     sha,
     paths,
     canonical,
-    folder: reason ? 'Неуточнённые' : [brand, ...(model ? [model] : [])].filter(Boolean).join('/'),
+    folder: reason ? 'Неуточнённые' : (routeFolder || [brand, ...(model ? [model] : [])].filter(Boolean).join('/')),
     name,
     ...(rowBrands.length > 1 ? { brands: rowBrands } : {}),
     ...(operationUnconfirmed && oldName !== name ? { old_name: oldName } : {}),
@@ -377,6 +392,10 @@ for (const list of byDisplay.values()) {
 }
 
 const airbagShas = new Set(groups.keys());
+for (const sha of Object.keys(ROUTE_OVERRIDES)) {
+  if (!airbagShas.has(sha)) throw new Error(`Route override outside Airbag/SRS: ${sha}`);
+  if (APPROVED[sha]) throw new Error(`Route override duplicates an approved entry: ${sha}`);
+}
 const covered = new Set([...rows.map(row => row.sha), ...Object.keys(APPROVED)]);
 if (covered.size !== airbagShas.size) throw new Error(`Coverage ${covered.size} != ${airbagShas.size}`);
 if ([...covered].some(sha => !airbagShas.has(sha))) throw new Error('Map contains a SHA outside Airbag/SRS');
@@ -451,6 +470,11 @@ const report = {
   by_model: byModel,
   by_operation: byAction,
   approved_unchanged: Object.entries(APPROVED).map(([sha, label]) => ({ sha, label })),
+  route_overrides: Object.entries(ROUTE_OVERRIDES).map(([sha, folder]) => ({
+    sha,
+    folder,
+    basis: 'iProgGuard Airbag.txt 2026-08-01'
+  })),
   normalization: {
     Huyndai: 'Hyundai',
     Infinity: 'Infiniti',

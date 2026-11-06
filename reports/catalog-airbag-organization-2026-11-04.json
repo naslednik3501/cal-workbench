@@ -79,6 +79,9 @@
   "by_model": {
     "Daewoo/Lanos": 6,
     "Land Rover/Discovery 3": 3,
+    "Toyota/RAV4": 39,
+    "Toyota/Corolla": 76,
+    "Toyota/Camry": 44,
     "Nissan/Almera": 35,
     "Nissan/Primera": 29,
     "Nissan/Micra": 31,
@@ -282,14 +285,11 @@
     "Toyota/Seqoia": 4,
     "Toyota/Picnik": 3,
     "Toyota/Matrix": 6,
-    "Toyota/Camry": 42,
-    "Toyota/RAV4": 37,
     "Toyota/Avalon": 3,
     "Toyota/Sequoya": 2,
     "Toyota/Spacio": 2,
     "Toyota/Prado": 8,
     "Toyota/Celica": 8,
-    "Toyota/Corolla": 74,
     "Toyota/Fortuner": 2,
     "Hyundai/I30": 4,
     "Hyundai/I40": 1,
@@ -473,6 +473,38 @@
     {
       "sha": "a20a16b57c2ec83a2ebd27a51d7eceec63035545f272a2afc815e6919cde9eaf",
       "label": "Chevrolet 96 806 850"
+    }
+  ],
+  "route_overrides": [
+    {
+      "sha": "444ec54abaa8a029dbdbc3c819b12eee6a8f93648e34ceacff9697d7bc05cef6",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "20812bc03af704349fd3b4f444977b726a0d6f896969239ecf205b1f97763ae0",
+      "folder": "Toyota/Camry",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "10fec76b17897d609c36d6a1ffd1a9e1b008af605e2dd32c2fdc42f2a88713ed",
+      "folder": "Toyota/RAV4",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "85ee2166866137707cafba480381f88e7bad1f462c6aa717d28236fc120c5e50",
+      "folder": "Toyota/RAV4",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "10d416a0bbadf2eadef2590d9897da4f150c21cf7175ffda55e5a2437e3f330b",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
+    },
+    {
+      "sha": "67b14d4bec4ba7b1f722339781d1fc752e115767ef2d6387f68e636ed5b20465",
+      "folder": "Toyota/Corolla",
+      "basis": "iProgGuard Airbag.txt 2026-08-01"
     }
   ],
   "normalization": {
