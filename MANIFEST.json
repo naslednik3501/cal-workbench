@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3048,
-      "sha256": "4a2b37cb2c8c7d2f04853731e0c511f3bbf5dfcafe6dc2e626fbd9c51863458c"
+      "bytes": 3132,
+      "sha256": "68d8bd6ee8738dcb6c22b761241d7922eecf3b5b452cacf1678bbf513fd7efb4"
     },
     {
       "path": "cal-source.js",
@@ -377,6 +377,11 @@
       "sha256": "f99d523f86d89bb3526ede8b87b94542b3f642dc684703f3b468a1398762951f"
     },
     {
+      "path": "catalog-organization-mototechnics.js",
+      "bytes": 27186,
+      "sha256": "e46d3636cb696831072dc602f4c467a16b5f424cf80c4cf7297f8ef7b16d57c9"
+    },
+    {
       "path": "catalog-organization-radio.js",
       "bytes": 284410,
       "sha256": "1fd2f7342b9a0bffeed687b9e8141d7cc767bccfcbf63ca13beddf0b506eacef"
@@ -392,14 +397,19 @@
       "sha256": "2203cb65bbe1d809813a517901f4bb6fb7e625121f51e272c9739b6385f02775"
     },
     {
+      "path": "catalog-organization-special-technics.js",
+      "bytes": 2565,
+      "sha256": "7cffa69aef8c7b5257f4967f26636ca58e215bff940dd66029458f3f31444618"
+    },
+    {
       "path": "catalog-organization-utilities.js",
       "bytes": 53246,
       "sha256": "5786c2b81f9e8c973930fbd9921578796a891caeb88a9b05a14879261bcaa747"
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 22258,
-      "sha256": "acc2b9beaaa92980500e8f403bc64df1b528d58edbe9c66bc62c5e9bc5f8c875"
+      "bytes": 23106,
+      "sha256": "69b6d69e0a774d67eb06c309c2a1d953040bcd3f5b4562a8be543a9aa8d2a476"
     },
     {
       "path": "catalog-parts.json",
@@ -1408,8 +1418,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12725,
-      "sha256": "abb3d02d78e620e5edf907b7e5fc39bd961d1e2b0f3f8f09ad41ddf20e7dadf3"
+      "bytes": 12851,
+      "sha256": "1d6f2fdc1d4eaa3e8467e85a9708d119547552263043927ca2ede71b3b1393d9"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1670,6 +1680,11 @@
       "path": "reports/catalog-organization-immo-2026-11-04.md",
       "bytes": 2501,
       "sha256": "e951476f3eb269f4186beba82bc198e5774b331f65bdef9a049852d7a04ec76a"
+    },
+    {
+      "path": "reports/catalog-organization-moto-special-exceptions-2026-11-06.json",
+      "bytes": 120534,
+      "sha256": "237c882c74291bb32f07ea683d68f775fbfa8ede01585ca7f200a728ac34e621"
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.json",
@@ -2023,13 +2038,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4718,
-      "sha256": "5889bcbd924d619fe6fecc76905573dd58aef46533aac6afaa68c89276193cee"
+      "bytes": 4916,
+      "sha256": "d0838b9890fbd63f23a89754ff8a92f901b2341ef0fee3f3110458f8dfd652c1"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 63060,
-      "sha256": "98d44d81538f2eaeabf879f86beb4c93ed912c72db5c9256d690e922c7cf83e1"
+      "bytes": 66572,
+      "sha256": "f108b79cdbb3b6cf6c8f0e4076c53ab4f3eff752d78b4be754a1a294e1d13062"
     },
     {
       "path": "tests/test_text_variants.js",

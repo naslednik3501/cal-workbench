@@ -22,6 +22,8 @@ if(node&&!root.CAL_ORGANIZATION_ASIA_REMAINDER)require('./catalog-organization-a
 if(node&&!root.CAL_ORGANIZATION_EU_US_RU)require('./catalog-organization-eu-us-ru.js');
 if(node&&!root.CAL_ORGANIZATION_CRYPTO)require('./catalog-organization-crypto.js');
 if(node&&!root.CAL_ORGANIZATION_SERVICE_CALC)require('./catalog-organization-service-calc.js');
+if(node&&!root.CAL_ORGANIZATION_MOTOTECHNICS)require('./catalog-organization-mototechnics.js');
+if(node&&!root.CAL_ORGANIZATION_SPECIAL_TECHNICS)require('./catalog-organization-special-technics.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
@@ -40,6 +42,8 @@ const asiaRemainder=root.CAL_ORGANIZATION_ASIA_REMAINDER||{entries:{}};
 const euUsRu=root.CAL_ORGANIZATION_EU_US_RU||{entries:{}};
 const crypto=root.CAL_ORGANIZATION_CRYPTO||{entries:{}};
 const serviceCalc=root.CAL_ORGANIZATION_SERVICE_CALC||{entries:{}};
+const mototechnics=root.CAL_ORGANIZATION_MOTOTECHNICS||{entries:{}};
+const specialTechnics=root.CAL_ORGANIZATION_SPECIAL_TECHNICS||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -193,6 +197,16 @@ for(const [hash,folder] of Object.entries(crypto.entries||{})){
 for(const [hash,folder] of Object.entries(serviceCalc.entries||{})){
  const item=data.entries[hash];
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Service calc display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(mototechnics.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Mototechnics display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(specialTechnics.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Special technics display entry: '+hash);
  data.entries[hash]={...item,folder};
 }
 const legacyRoots={
