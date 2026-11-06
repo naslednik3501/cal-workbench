@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 9655,
-      "sha256": "715dd410ef7416095296a79e4f5bb670606412f992ffe6288d2c85b90bdf94a3"
+      "bytes": 9653,
+      "sha256": "d2fa7eeb7dc5d41fcd08ca52f5c0629e22c8f757ee97fa18621eeeaa355dcac3"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -49,12 +49,12 @@
     {
       "path": "README.html",
       "bytes": 15078,
-      "sha256": "d52cdc99d0ed7b6016b14ff3ad4ef6f3c96acd7f084ab3435bb8a74804729710"
+      "sha256": "bcc128c4ab272ec5cf200edc4278935139bffaf704286cff1667ed946381e3f4"
     },
     {
       "path": "README.md",
       "bytes": 7722,
-      "sha256": "35b07b2b03ce20055450beac51b9aff98bcc0c3ff7160c2f7c95c2b60ec16241"
+      "sha256": "d85b6d16b13c872909438823d0f387f562398622bb3c823332ff9c7897d07793"
     },
     {
       "path": "SOURCE_STORAGE.md",
@@ -332,6 +332,16 @@
       "sha256": "3b540e52e1e02f9977112df230261df4d8c506d1e32e975b1b6aae8a6848b064"
     },
     {
+      "path": "catalog-import-data/blobs-006.js",
+      "bytes": 801287,
+      "sha256": "719b040773fd51af79fa9f36d37f1c0649d88af64696aafd9a005b6a9662720a"
+    },
+    {
+      "path": "catalog-import-data/blobs-007.js",
+      "bytes": 1412147,
+      "sha256": "14eaf53a5c35c8ccb627c40d974a7060bcf68c985bfb8909bc23d249ded017e6"
+    },
+    {
       "path": "catalog-import-data/part-000.js",
       "bytes": 58997,
       "sha256": "bbee353f4d98bfbb1510a09792b33a2710714a3541f5f951a1ae7bf15de671be"
@@ -362,9 +372,19 @@
       "sha256": "d24ef086ad7553c5b39e72ca16f40c16f163b0cfa2e31384d26d8adb520da0c5"
     },
     {
+      "path": "catalog-import-data/part-006.js",
+      "bytes": 54897,
+      "sha256": "6f020d9be10c4627913078256172e6865844d569a086fe3e867a1ead2ac80d8c"
+    },
+    {
+      "path": "catalog-import-data/part-007.js",
+      "bytes": 44106,
+      "sha256": "14d3d49ea2b95d6000335e9e2d9f3a31fe02167a08df5421a117661f165a76ce"
+    },
+    {
       "path": "catalog-import-parts.json",
-      "bytes": 485,
-      "sha256": "a256abcff3298e0b511aa49973d894b4fb9e6b5abf85d3f8bee1d74dd84947de"
+      "bytes": 635,
+      "sha256": "8237adb436b22aa7739a3f1746271f913e1bc5fb2bd0f525bfd8ec0e3cda6953"
     },
     {
       "path": "catalog-import.js",
@@ -458,8 +478,8 @@
     },
     {
       "path": "catalog-organization-import.js",
-      "bytes": 207017,
-      "sha256": "9f6a8b8491354083dc929db7a7fb6d6c8992572cfb468cb929c0cd0cd1f7bf4a"
+      "bytes": 279792,
+      "sha256": "78952bf2749a6e8dfafc138a38d851a225fffd52459668abccce9e44fcfd91f6"
     },
     {
       "path": "catalog-organization-mototechnics.js",
@@ -1503,8 +1523,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 13720,
-      "sha256": "40fc0475337b454ddc5111f806d68f48661e9e620b05148cf99e4ce2bddaa16f"
+      "bytes": 13946,
+      "sha256": "85c925209e15c220de641c69bc4d2f0e2d632ab73e1e5d04e1e1d0c8835f690c"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1828,13 +1848,13 @@
     },
     {
       "path": "reports/etsmart-import-2026-11-06.json",
-      "bytes": 493320,
-      "sha256": "6e33fad16d44df62552e64ad03f7697f97f28f991615f9f89ce52b165e5d0f68"
+      "bytes": 660572,
+      "sha256": "ab06f87d7dc783d661bb5b59cc6aec42c477eed6f91a5a69fb2666a33c454b4c"
     },
     {
       "path": "reports/etsmart-import-2026-11-06.md",
-      "bytes": 1959,
-      "sha256": "4a54be391108eac44076f01776cfd5d285ad677ecba7cf4f54f01d389037169f"
+      "bytes": 2446,
+      "sha256": "ff210be7a914b343215e1337e16d8d90afc710580602531c7dcea5b2e5644d3c"
     },
     {
       "path": "reports/final-app-validation-2026-11-04.md",
@@ -2009,7 +2029,7 @@
     {
       "path": "tests/test_etsmart_import.js",
       "bytes": 2930,
-      "sha256": "b814e1c0031b04ee4019f89acb25f7e0ec3b5d9cc310a1345d8657e4bc002fb3"
+      "sha256": "dbcb1eca65dfb2712a781e46d8696968a5f475e125dcb28ec6c94f25a6492d7b"
     },
     {
       "path": "tests/test_polo.js",
@@ -2039,7 +2059,7 @@
     {
       "path": "tests/test_scope_browser.js",
       "bytes": 2852,
-      "sha256": "d0fe140acd8b76976f17cfee9e02f6a09e054608fffc043d4eb57cce7654324b"
+      "sha256": "d213d0cb9aaf62104f5cc2eb850a53443375c0b6a91a1353f2ac4730a1051252"
     },
     {
       "path": "tests/test_source.js",

@@ -17,17 +17,17 @@ const sha=raw=>crypto.createHash('sha256').update(raw).digest('hex');
 const blob=hash=>Uint8Array.from(Buffer.from(db.blobs[hash],'base64'));
 
 test('the overlay appends only the reviewed CALs and updates the counters',()=>{
- assert.equal(imported.length,1562);
- assert.equal(db.meta.entries,25508);
- assert.equal(db.meta.calculators,24919);
- assert.equal(db.meta.uniqueCal,16619);
- assert.deepEqual(db.meta.imported,{source:'ETSmartUSB.rar',count:1562});
+ assert.equal(imported.length,2098);
+ assert.equal(db.meta.entries,26044);
+ assert.equal(db.meta.calculators,25455);
+ assert.equal(db.meta.uniqueCal,17155);
+ assert.deepEqual(db.meta.imported,{source:'ETSmartUSB.rar',count:2098});
  for(const e of imported)assert.equal(e.ext,'cal',e.path);
 });
 
 test('every imported identity, byte sequence and display entry is intact',()=>{
  const unique=new Set(imported.map(e=>e.sha));
- assert.equal(unique.size,1562);
+ assert.equal(unique.size,2098);
  for(const e of imported){
   const raw=blob(e.sha);
   assert.equal(raw.length,e.size,e.path);
@@ -36,15 +36,15 @@ test('every imported identity, byte sequence and display entry is intact',()=>{
   assert(item,'organization entry '+e.path);
   assert(org.displayPath(e).endsWith('.cal'),'display path '+e.path);
  }
- assert.equal(Object.keys(org.data.entries).length,16619);
+ assert.equal(Object.keys(org.data.entries).length,17155);
 });
 
 test('the merged tree keeps the six sections and unique display paths',()=>{
  const groups=require('../catalog-scope.js').calculatorGroups(db.entries.filter(e=>e.ext==='cal'));
- assert.equal(groups.length,16619);
+ assert.equal(groups.length,17155);
  const counts={};
  for(const g of groups){const top=org.displayFolder(g.e).split('/')[0];counts[top]=(counts[top]||0)+1;}
- assert.deepEqual(counts,{Dashboard:8443,Airbag:5390,CarRadio:2152,Immo:438,OTHER:175,Engine:21});
+ assert.deepEqual(counts,{Dashboard:8629,Airbag:5585,CarRadio:2226,Immo:501,OTHER:192,Engine:22});
  const seen=new Set();
  for(const g of groups){
   const shown=org.displayPath(g.e).toLowerCase();
@@ -62,4 +62,4 @@ test('every imported calculator parses and runs its onShow form',()=>{
  }
 });
 
-console.log(JSON.stringify({passed,scope:'ETSmartUSB overlay: 1,562 CALs, 16,619 unique calculators, 24,919 CAL entries'}));
+console.log(JSON.stringify({passed,scope:'ETSmartUSB overlay: 2,098 CALs, 17,155 unique calculators, 25,455 CAL entries'}));
