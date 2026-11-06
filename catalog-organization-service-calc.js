@@ -1,0 +1,53 @@
+/* Display-only Service calc dashboard folders from dashboard/Service calc.txt dated 2026-08-01. */
+/* Original paths, CAL bytes and SHA-256 identities remain unchanged. */
+(function(root){
+'use strict';
+const entries={
+  "05acf602ac4a0b6a095b81363e34b49a0859fa9051b02b53955e04f027297dec":"Dashboard/Service calc/Mercedes/C W203",
+  "0934abc9f784fe4473ef344ea21b338bec0966f783efaba2b4a10386cc8e030e":"Dashboard/Service calc/Mercedes/V W639",
+  "0d72e680037caf104bf3ba11e138be8af3dd29f35dfd22c4039b65486261e47d":"Dashboard/Service calc/Mercedes",
+  "1911391161a6cacc5b769129bd9dee915a58428e3988993106a54d32ae04778a":"Dashboard/Service calc/Mercedes/E W211",
+  "1d5aba9fb8dd780d2872eea6af42d1a4d85d9fa9fbddb56e4e314aaf5c528e5d":"Dashboard/Service calc/Mercedes",
+  "22f811c7a13aa0a7312908f2ee59d20d5e8ad1207f1bda6c388c86d9c1d76a72":"Dashboard/Service calc/Mercedes/C W203",
+  "23530534bc9c695ce979e7bd838e99441447aff8fcad3285105dbce366e81e77":"Dashboard/Service calc/Mercedes/V W639",
+  "237ac5c24de39cdd0f274adc1bc44404fbfcc059f084abafb131973ba538d338":"Dashboard/Service calc/Honda/Ridgeline",
+  "29a8ee2a30e217665349f89baeddfc9be7c8654f2ce7d5c1e5cbef97ad486666":"Dashboard/Service calc/Mercedes/E W211",
+  "35b24e92d0a6d3e2c013ca4754dcb00fdec95a315a1d5b7ee6b14ea4966d4c40":"Dashboard/Service calc/Honda/Accord",
+  "3b16a0893c8debef071fb40df0da4bc129adb0b74f2a6ed438ddb207a570bbb9":"Dashboard/Service calc/Mercedes/B W169",
+  "3c45e619d29bd5672f7a8849a1aca86bf018ad6b049d8813408bcf72601cee2d":"Dashboard/Service calc/Renault",
+  "3e148f42e7ba776189f706df342c4bfa390ed3babd27e71dbd80133e54d97fec":"Dashboard/Service calc/Mercedes/ML W164",
+  "4124e2057d85ed953c6d8163160b2ffd79e0e654149c4f8b162190dde3fced22":"Dashboard/Service calc/Mercedes/C W203",
+  "4d299384cfd5cec8bed185135b1bd1acd84dfa0460211212561171ea1b0a2159":"Dashboard/Service calc/Mercedes",
+  "5ae28d3d5752db21314d3a60b46677570bce33fcd7faef3edcc6c469b9e58144":"Dashboard/Service calc/Mercedes/C W203",
+  "608d77f5fdfab430e79fbc5f7be6ba169c52823532c690ffa3f2e60b3241a689":"Dashboard/Service calc/Honda/Ridgeline",
+  "6461e91804e9970f94bebc23680f7ed07083aac78fed0bc69f6fb6a6df9b2d05":"Dashboard/Service calc/Honda/Accord",
+  "6710c4eee521f81946e4fd382530929340e5442f994a9e8c8b6f7d2001827592":"Dashboard/Service calc/Smart",
+  "7b76cd1f8ddae600d0f80ee382a21176045052b7f118e065d1d5d4d9104826f9":"Dashboard/Service calc/Honda/Ridgeline",
+  "7c072e61987baee10c0d8afadef26e83395bac0107ae75f599b481c20b20fc42":"Dashboard/Service calc/Honda/Ridgeline",
+  "83485aa8d87fe8f0498adb052abfa1511bd805eefc8106366b6d2f568ea0333d":"Dashboard/Service calc/Mercedes/ML W164",
+  "856c80f73c338fa0f8fe67e068ba380bb481425af1b6c07d7adfc3c35727307e":"Dashboard/Service calc/Honda/Acura",
+  "85840045b0fb8fb0df99fb82cd419346e71ea7d34946fdebf7409192deda5fb4":"Dashboard/Service calc/Mercedes/V W639",
+  "860cff791152a7fb52538adcc5d4df8d5e79d3daed9f5684db506e9ffc88423d":"Dashboard/Service calc/Vw",
+  "88ba2ecb955ea6d59b0b23da833c13d33b85b91924230cb9f4b1ebbba7c281d3":"Dashboard/Service calc/Mercedes",
+  "93262d22bdb72e4184e45b9c56171e80a33033a9cf3d95598f6a1ba274c6dab6":"Dashboard/Service calc/Honda/Ridgeline",
+  "991e67fc3925c4a5df3e8898a64bd36166eb1e233196e814d1de6fb72e691507":"Dashboard/Service calc/Jaguar",
+  "9b0ceec5075db7073c7038bb82e041974654fd0fe2c5247be9ffc651e0b20561":"Dashboard/Service calc/Vw",
+  "9b37e528e04d0ea83b34f2702c45045d3ea1a851478598d49b9a4ee1f9689b44":"Dashboard/Service calc/Mercedes",
+  "a032f68abf25dc79c243f8e9617455100a84ac636cb68232ad221cfa263b69e3":"Dashboard/Service calc/Mercedes/S W220",
+  "a0fc7dc8de28677bbe39c1cf872784492cdb672fb6cf846f47053587bd28a4e6":"Dashboard/Service calc/Mercedes/C W203",
+  "a52c9390a3ea88612a2d6dc69ba1ef12d60b14518de6f639a870f6511950218c":"Dashboard/Service calc/Mercedes/B W169",
+  "a96ab40157ccaa4eb2d5876c3b8d0888de119259792190167ca9d4302fc25cda":"Dashboard/Service calc/Mercedes",
+  "ad1be682031fc02949f2c0dc6ebcd448fde13234cf80fbd37690e5ea3d2cc08a":"Dashboard/Service calc/Mercedes/ML W164",
+  "b43185bc9a589a286b3d1e744d199337bdac96691c33ebe76555429a7a2b1a43":"Dashboard/Service calc/Mercedes",
+  "b7b02a95b99f2ec0cc525311c29ea6596e73cad11980d7a70e25d49f13737115":"Dashboard/Service calc/Mercedes/Sprinter",
+  "bd86100172f6f72d26cad0b7800b2a1a56432ae50b22443aac40649af64e8f50":"Dashboard/Service calc/Honda",
+  "bfb52f8d65a09de7639447da148ecc4b9abcec5698288e65df8012d5942e8ff4":"Dashboard/Service calc/Mercedes/V W639",
+  "c807cc583a315e929000a6f18f14cb53519b5abe0ac516a586e8e1c109c416f8":"Dashboard/Service calc/Honda/Acura",
+  "d93a9787f3b5ceebccbbd54afefeecd4ff23db1aa7274932f5abb50884b1191d":"Dashboard/Service calc/Mercedes/E W211",
+  "e9e95d276b883512a6d19c2e1b062e9e41e47f1902efca27912a334340cd889b":"Dashboard/Service calc/Mercedes/E W211",
+  "ecbe231ccba77ffd6b0d22973a922cafc1cff83a297f12e91ab19d7bbe1c6b8a":"Dashboard/Service calc/Mercedes/S W220",
+  "f6014f22c0b85349ae5dc319a1f20a935f4c2bf9964cefef61c16534c20e267a":"Dashboard/Service calc/Mercedes/ML W164",
+};
+root.CAL_ORGANIZATION_SERVICE_CALC=Object.freeze({source_date:"2026-08-01",source_sha256:"cf18b4e8e8bac7498a03e7436d17334c7a07b234b4b5a77ac3c5ca7e8f7b4718",entries});
+if(typeof module==='object'&&module.exports)module.exports=root.CAL_ORGANIZATION_SERVICE_CALC;
+})(globalThis);

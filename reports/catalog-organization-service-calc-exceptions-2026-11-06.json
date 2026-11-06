@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "source_date": "2026-08-01",
+  "source_sha256": "cf18b4e8e8bac7498a03e7436d17334c7a07b234b4b5a77ac3c5ca7e8f7b4718",
+  "input": "Calculators/Service calc/ and dashboard/Service calc.txt",
+  "summary": {
+    "unique_sha": 52,
+    "already_on_place": 0,
+    "moved": 44,
+    "exceptions": 8,
+    "reconciled": 52,
+    "full_list_paths": 52,
+    "full_list_verified": true,
+    "full_list_exact_paths": 50,
+    "full_list_reconciled_paths": 2
+  },
+  "brands": {
+    "Honda": {
+      "already": 0,
+      "moved": 10,
+      "exceptions": 1
+    },
+    "Jaguar": {
+      "already": 0,
+      "moved": 1,
+      "exceptions": 1
+    },
+    "Mercedes": {
+      "already": 0,
+      "moved": 29,
+      "exceptions": 6
+    },
+    "Renault": {
+      "already": 0,
+      "moved": 1,
+      "exceptions": 0
+    },
+    "Smart": {
+      "already": 0,
+      "moved": 1,
+      "exceptions": 0
+    },
+    "Vw": {
+      "already": 0,
+      "moved": 2,
+      "exceptions": 0
+    }
+  },
+  "full_list_reconciled": [
+    {
+      "source_path": "Calculators/Service calc/Vw/Crafter 95640 Service.cal",
+      "full_list_path": "Calculators/Service calc/Crafter 95640 Service.cal"
+    },
+    {
+      "source_path": "Calculators/Service calc/Vw/T4 93C86 tacho off.cal",
+      "full_list_path": "Calculators/Service calc/T4 93C86 tacho off.cal"
+    }
+  ],
+  "already_sha": [],
+  "moved_sha": [
+    "05acf602ac4a0b6a095b81363e34b49a0859fa9051b02b53955e04f027297dec",
+    "0934abc9f784fe4473ef344ea21b338bec0966f783efaba2b4a10386cc8e030e",
+    "0d72e680037caf104bf3ba11e138be8af3dd29f35dfd22c4039b65486261e47d",
+    "1911391161a6cacc5b769129bd9dee915a58428e3988993106a54d32ae04778a",
+    "1d5aba9fb8dd780d2872eea6af42d1a4d85d9fa9fbddb56e4e314aaf5c528e5d",
+    "22f811c7a13aa0a7312908f2ee59d20d5e8ad1207f1bda6c388c86d9c1d76a72",
+    "23530534bc9c695ce979e7bd838e99441447aff8fcad3285105dbce366e81e77",
+    "237ac5c24de39cdd0f274adc1bc44404fbfcc059f084abafb131973ba538d338",
+    "29a8ee2a30e217665349f89baeddfc9be7c8654f2ce7d5c1e5cbef97ad486666",
+    "35b24e92d0a6d3e2c013ca4754dcb00fdec95a315a1d5b7ee6b14ea4966d4c40",
+    "3b16a0893c8debef071fb40df0da4bc129adb0b74f2a6ed438ddb207a570bbb9",
+    "3c45e619d29bd5672f7a8849a1aca86bf018ad6b049d8813408bcf72601cee2d",
+    "3e148f42e7ba776189f706df342c4bfa390ed3babd27e71dbd80133e54d97fec",
+    "4124e2057d85ed953c6d8163160b2ffd79e0e654149c4f8b162190dde3fced22",
+    "4d299384cfd5cec8bed185135b1bd1acd84dfa0460211212561171ea1b0a2159",
+    "5ae28d3d5752db21314d3a60b46677570bce33fcd7faef3edcc6c469b9e58144",
+    "608d77f5fdfab430e79fbc5f7be6ba169c52823532c690ffa3f2e60b3241a689",
+    "6461e91804e9970f94bebc23680f7ed07083aac78fed0bc69f6fb6a6df9b2d05",
+    "6710c4eee521f81946e4fd382530929340e5442f994a9e8c8b6f7d2001827592",
+    "7b76cd1f8ddae600d0f80ee382a21176045052b7f118e065d1d5d4d9104826f9",
+    "7c072e61987baee10c0d8afadef26e83395bac0107ae75f599b481c20b20fc42",
+    "83485aa8d87fe8f0498adb052abfa1511bd805eefc8106366b6d2f568ea0333d",
+    "856c80f73c338fa0f8fe67e068ba380bb481425af1b6c07d7adfc3c35727307e",
+    "85840045b0fb8fb0df99fb82cd419346e71ea7d34946fdebf7409192deda5fb4",
+    "860cff791152a7fb52538adcc5d4df8d5e79d3daed9f5684db506e9ffc88423d",
+    "88ba2ecb955ea6d59b0b23da833c13d33b85b91924230cb9f4b1ebbba7c281d3",
+    "93262d22bdb72e4184e45b9c56171e80a33033a9cf3d95598f6a1ba274c6dab6",
+    "991e67fc3925c4a5df3e8898a64bd36166eb1e233196e814d1de6fb72e691507",
+    "9b0ceec5075db7073c7038bb82e041974654fd0fe2c5247be9ffc651e0b20561",
+    "9b37e528e04d0ea83b34f2702c45045d3ea1a851478598d49b9a4ee1f9689b44",
+    "a032f68abf25dc79c243f8e9617455100a84ac636cb68232ad221cfa263b69e3",
+    "a0fc7dc8de28677bbe39c1cf872784492cdb672fb6cf846f47053587bd28a4e6",
+    "a52c9390a3ea88612a2d6dc69ba1ef12d60b14518de6f639a870f6511950218c",
+    "a96ab40157ccaa4eb2d5876c3b8d0888de119259792190167ca9d4302fc25cda",
+    "ad1be682031fc02949f2c0dc6ebcd448fde13234cf80fbd37690e5ea3d2cc08a",
+    "b43185bc9a589a286b3d1e744d199337bdac96691c33ebe76555429a7a2b1a43",
+    "b7b02a95b99f2ec0cc525311c29ea6596e73cad11980d7a70e25d49f13737115",
+    "bd86100172f6f72d26cad0b7800b2a1a56432ae50b22443aac40649af64e8f50",
+    "bfb52f8d65a09de7639447da148ecc4b9abcec5698288e65df8012d5942e8ff4",
+    "c807cc583a315e929000a6f18f14cb53519b5abe0ac516a586e8e1c109c416f8",
+    "d93a9787f3b5ceebccbbd54afefeecd4ff23db1aa7274932f5abb50884b1191d",
+    "e9e95d276b883512a6d19c2e1b062e9e41e47f1902efca27912a334340cd889b",
+    "ecbe231ccba77ffd6b0d22973a922cafc1cff83a297f12e91ab19d7bbe1c6b8a",
+    "f6014f22c0b85349ae5dc319a1f20a935f4c2bf9964cefef61c16534c20e267a"
+  ],
+  "exceptions": [
+    {
+      "sha": "8158fba73ee8214b11ebc960cfa034aa3e065f7e6b90e40642fa46cef9b09ae6",
+      "paths": [
+        "Calculators/Service calc/Honda/Accord 93C76+service.cal"
+      ],
+      "currentFolder": "OTHER/Service calc",
+      "currentName": "Honda Accord 93C76 — коррекция пробега и сброс сервисных интервалов",
+      "reason": "точного полного имени нет в совместимой ветке Service calc.txt"
+    },
+    {
+      "sha": "c3bfcb27893dc11eec71d5724ddd5fa05b5355f6ca24aa45da05bc9b60993527",
+      "paths": [
+        "Calculators/Service calc/Jaguar/Jaguar XF 24C64(service plus).cal"
+      ],
+      "currentFolder": "OTHER/Service calc",
+      "currentName": "Jaguar XF 24C64 service plus — коррекция пробега",
+      "reason": "точного полного имени нет в совместимой ветке Service calc.txt"
+    },
+    {
+      "sha": "31ce967ff091cb0c668a5ee842090f2bae06249eb8d0c7145ee40a4e6c3bf41a",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211  AB 68HC912DG128.cal"
+      ],
+      "currentFolder": "Airbag/Mercedes-Benz",
+      "currentName": "Mercedes-Benz E W211 AB 68HC912DG128 — сброс Crash (SRS)",
+      "reason": "сохранена подтверждённая категория Airbag/SRS вместо сервисной раскладки"
+    },
+    {
+      "sha": "41f4b57432a60aec26cc736de0cae27835acf4b9df9571c97586d014d0663a71",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 AB  MC9S12DG128.cal"
+      ],
+      "currentFolder": "Airbag/Mercedes-Benz",
+      "currentName": "Mercedes-Benz E W211 AB MC9S12DG128 — сброс Crash (SRS)",
+      "reason": "сохранена подтверждённая категория Airbag/SRS вместо сервисной раскладки"
+    },
+    {
+      "sha": "95dd70b2ee6bc95c7f7a3efda11c2c3eb58adbc14bd740114856d246ef2292b7",
+      "paths": [
+        "Calculators/Service calc/Mercedes/E W211 AB 68HC912DG128 var2.cal"
+      ],
+      "currentFolder": "Airbag/Mercedes-Benz",
+      "currentName": "Mercedes-Benz E W211 AB 68HC912DG128 var2 — сброс Crash (SRS)",
+      "reason": "сохранена подтверждённая категория Airbag/SRS вместо сервисной раскладки"
+    },
+    {
+      "sha": "953b31820fbc00376a098930823cafc8214fc199ea8dadd4a52bddd70c2c6aea",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Mercedes CGW(ASSYSTPLUS).cal"
+      ],
+      "currentFolder": "OTHER/Service calc",
+      "currentName": "Mercedes CGW ASSYSTPLUS — коррекция пробега и сброс ASSYST PLUS",
+      "reason": "точного полного имени нет в совместимой ветке Service calc.txt"
+    },
+    {
+      "sha": "211c9834d03042f59db1138bfbabde838157ee8d44d77f4335c65ed6070a24f6",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Sprinter W609 95640 Service.cal"
+      ],
+      "currentFolder": "OTHER/Service calc",
+      "currentName": "Mercedes-Benz Sprinter W609 95640 — коррекция пробега и сервисные интервалы",
+      "reason": "точного полного имени нет в совместимой ветке Service calc.txt"
+    },
+    {
+      "sha": "93fc9390a0d6d3c368d32d29182d2bacee87af62997c66dc8238bca2abdd285a",
+      "paths": [
+        "Calculators/Service calc/Mercedes/Sprinter W906 95640 Service.cal"
+      ],
+      "currentFolder": "OTHER/Service calc",
+      "currentName": "Mercedes-Benz Sprinter W906 95640 — коррекция пробега и сервисные интервалы",
+      "reason": "точного полного имени нет в совместимой ветке Service calc.txt"
+    }
+  ]
+}

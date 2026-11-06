@@ -70,6 +70,9 @@ const cryptoShas=new Set(cryptoSource.map(e=>e.sha));
 const ecuSource=allCal.filter(e=>e.path.startsWith('Calculators/ECU/'));
 const ecuShas=new Set(ecuSource.map(e=>e.sha));
 const cryptoAudit=require('../reports/catalog-organization-crypto-exceptions-2026-11-06.json');
+const serviceCalcSource=allCal.filter(e=>e.path.startsWith('Calculators/Service calc/'));
+const serviceCalcShas=new Set(serviceCalcSource.map(e=>e.sha));
+const serviceCalcAudit=require('../reports/catalog-organization-service-calc-exceptions-2026-11-06.json');
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -122,7 +125,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  assert.equal(rr.folders_after,existing.size+created.size,'folder count after routing');
  const dashboardEntries=Object.values(org.data.entries).filter(item=>item.folder==='Dashboard'||item.folder.startsWith('Dashboard/'));
  const usedBrands=new Set(dashboardEntries.filter(item=>item.folder.startsWith('Dashboard/')).map(item=>item.folder.split('/')[1]));
- for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia'||brand==='EU_US_RU'||brand==='CRYPTO','unknown Dashboard folder: '+brand);
+ for(const brand of usedBrands)assert(existing.has(brand)||created.has(brand)||brand==='Germany'||brand==='France'||brand==='Asia'||brand==='EU_US_RU'||brand==='CRYPTO'||brand==='Service calc','unknown Dashboard folder: '+brand);
  for(const brand of created)assert(usedBrands.has(brand),'created empty Dashboard folder: '+brand);
  const rootShas=new Set(Object.entries(org.data.entries).filter(([,item])=>item.folder==='Dashboard').map(([sha])=>sha));
  assert.equal(rootShas.size,0,'Dashboard root has no unresolved entries');
@@ -130,7 +133,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -275,6 +278,27 @@ await test('complete CRYPTO inventory accounts for every unique SHA exactly once
   const source=allCal.find(e=>e.sha===sha);assert(source,sha);
   assert(org.folder(source)?.startsWith('Dashboard/CRYPTO/'),'moved '+sha);
   assert(org.matches(source,source.path),'moved original path search '+source.path);
+ }
+});
+await test('complete Service calc inventory accounts for every unique SHA exactly once',()=>{
+ assert.equal(serviceCalcSource.length,52,'all Service calc source paths');
+ assert.equal(serviceCalcShas.size,52,'distinct Service calc CAL contents');
+ assert.deepEqual(serviceCalcAudit.summary,{unique_sha:52,already_on_place:0,moved:44,exceptions:8,reconciled:52,full_list_paths:52,full_list_verified:true,full_list_exact_paths:50,full_list_reconciled_paths:2});
+ assert.equal(serviceCalcAudit.already_sha.length,0);assert.equal(serviceCalcAudit.moved_sha.length,44);assert.equal(serviceCalcAudit.exceptions.length,8);
+ const all=[...serviceCalcAudit.already_sha,...serviceCalcAudit.moved_sha,...serviceCalcAudit.exceptions.map(row=>row.sha)];
+ assert.equal(new Set(all).size,52,'Service calc SHA union');assert.equal(all.length,52,'Service calc categories are mutually exclusive');assert.deepEqual(new Set(all),serviceCalcShas,'Service calc inventory equals source');
+ for(const sha of serviceCalcAudit.moved_sha){
+  const source=allCal.find(e=>e.sha===sha);assert(source,sha);
+  assert(org.folder(source)?.startsWith('Dashboard/Service calc/'),'moved '+sha);
+  assert(org.matches(source,source.path),'moved original path search '+source.path);
+ }
+ for(const row of serviceCalcAudit.exceptions){
+  assert(row.reason?.trim(),'exception reason '+row.sha);
+  const source=allCal.find(e=>e.sha===row.sha);assert(source,row.sha);
+  assert.equal(org.folder(source),row.currentFolder,'exception folder '+row.sha);
+  assert.equal(org.title(source),row.currentName,'exception name '+row.sha);
+  assert(!org.folder(source).startsWith('Dashboard/Service calc/'),'exception moved '+row.sha);
+  for(const sourcePath of row.paths){const pathEntry=allCal.find(e=>e.path===sourcePath);assert(pathEntry,sourcePath);assert(org.matches(pathEntry,sourcePath),'exception old path '+sourcePath);}
  }
 });
 await test('Asia Toyota accounts for every unique source CAL',()=>{
@@ -551,7 +575,7 @@ await test('Airbag, Dashboard, Immo and CarRadio cover their source paths once',
 });
 await test('utility names contain only evidenced operations and confirmed SRS is in Airbag',()=>{
  const utilitySource=[...Object.values(org.data.entries)].filter(x=>x.folder.startsWith('OTHER/'));
- assert.equal(utilitySource.length,216,'216 utility subfolder entries');
+ assert.equal(utilitySource.length,173,'173 utility subfolder entries');
  for(const item of utilitySource){
   assert(!/сервисные функции и коррекция пробега|сервисные функции/i.test(item.name),item.name);
   assert(!/Конвертеры US-EU|Сервисные функции|PIN и IMMO|Синхронизация|Тахографы/i.test(item.folder),item.folder);
@@ -569,7 +593,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha)||franceShas.has(row.sha)||asiaAllShas.has(row.sha)||euUsRuShas.has(row.sha)||cryptoShas.has(row.sha)||ecuShas.has(row.sha)||serviceCalcShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -585,7 +609,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Dashboard','largest section first');
- assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,6614);
+ assert.equal(sections.find(x=>x.name==='Airbag').count,5386);assert.equal(sections[0].count,6657);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');
