@@ -28,8 +28,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2938,
-      "sha256": "73a51cc633b7a69ea2f3043df1b3afd137786cb00522ae73ec2ad2648f49ed55"
+      "bytes": 2974,
+      "sha256": "83d3535ba57c2fcdd09461e3d114a6dfc35cdcabd58fa7cdd014ff46f41d7459"
     },
     {
       "path": "cal-source.js",
@@ -297,6 +297,11 @@
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
     },
     {
+      "path": "catalog-organization-eu-us-ru.js",
+      "bytes": 62924,
+      "sha256": "6d499513e6177b21bc74c976f8ceba024a1e3fabff7c361814be6a10305dc190"
+    },
+    {
       "path": "catalog-organization-france.js",
       "bytes": 40215,
       "sha256": "f1f8e6b4fdc696be61d43ff8498e017e05a23534e2a73127529eec00e336e97b"
@@ -328,8 +333,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 21085,
-      "sha256": "d05a576f058123e08e428b587dc9d5c6133180b4df032c6680549dd33b3d2b3c"
+      "bytes": 21470,
+      "sha256": "648823ed33b3bf50ab52737d22d44e33c64b708c1465b02439f776b0044c0f81"
     },
     {
       "path": "catalog-parts.json",
@@ -1368,8 +1373,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12552,
-      "sha256": "43a4eb420316efcc75654bca84fa2eeb2b0b602db5be19351332f60dfa1db0ac"
+      "bytes": 12609,
+      "sha256": "63eb673bea7dc4611186ba9ac6570916180dac45f14eaa349df9026dae634624"
     },
     {
       "path": "PROJECT_SCOPE.md",
@@ -1460,6 +1465,11 @@
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
       "bytes": 4434,
       "sha256": "e09d323a7a2a3169a594e61f66f246656d082dca3ef2488f5c4c07fae8ebc943"
+    },
+    {
+      "path": "reports/catalog-organization-eu-us-ru-exceptions-2026-11-06.json",
+      "bytes": 113968,
+      "sha256": "7df9b85eb6f5f1850321ce50d797fab48252efc35de1e40a87cc8d72eb5d37c5"
     },
     {
       "path": "reports/catalog-organization-immo-2026-11-04.json",
@@ -1983,13 +1993,13 @@
     },
     {
       "path": "tests/test_t016_group_review.js",
-      "bytes": 4566,
-      "sha256": "ce75c8abc060c8e6af7133a8cd44510d81e24712b0ad90b32fb3f74518060cda"
+      "bytes": 4616,
+      "sha256": "791c2f1dc475205d25998b403ad86d2b0a4d029db942461bb1260e5a5bec1df5"
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 53881,
-      "sha256": "e03c3863963499713aa45361016edb320974fb6e017aff09618c5262ac2de8a2"
+      "bytes": 55987,
+      "sha256": "870f831d76ab182fe9d4b2dfc72f6b7e9c592c26d6c60dfb6bc784b1d4f63e93"
     },
     {
       "path": "tests/test_text_variants.js",
