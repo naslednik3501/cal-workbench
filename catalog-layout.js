@@ -145,6 +145,7 @@ const BRAND_SECTIONS={
   "Русская Механика": "Mototechnics"
 };
 const BRAND_BY_LOWER=new Map(Object.entries(BRAND_SECTIONS).map(([name,section])=>[name.toLowerCase(),section]));
+const BRAND_NAMES=new Map(Object.keys(BRAND_SECTIONS).map(name=>[name.toLowerCase(),name]));
 const SUBSECTIONS=Object.freeze(['Asia','CRYPTO','EU_US_RU','France','Germany','Mototechnics','Service calc','Special technics','Прочие панели']);
 const SUBSECTION_SET=new Set(SUBSECTIONS);
 const MOTO_CATEGORIES=Object.freeze({motobikes:'Motobikes',moto:'Motobikes',atv:'ATV',atvs:'ATV',snowmobile:'Snowmobiles',snowmobiles:'Snowmobiles','jet ski':'Jet Ski',jetski:'Jet Ski'});
@@ -202,7 +203,7 @@ function folder(value){
  if(typeof value!=='string'||!value)return value;
  const parts=value.split('/'),rootName=parts[0];
  if(rootName==='Dashboard')return dashboardPath(value);
- if(rootName==='ECU')return ['Engine',...parts.slice(1)].join('/');
+ if(rootName==='ECU'){const rest=parts.slice(1);if(rest[0]==='Engine')rest.shift();if(rest[0])rest[0]=BRAND_NAMES.get(rest[0].toLowerCase())||rest[0];return ['Engine',...rest].join('/');}
  if(rootName==='Bikes')return ['Immo','Bikes',...parts.slice(1)].join('/');
  if(rootName==='Car')return ['Immo','Car',...parts.slice(1)].join('/');
  if(rootName==='CRYPTO+')return ['Dashboard','CRYPTO',...parts.slice(1)].join('/');

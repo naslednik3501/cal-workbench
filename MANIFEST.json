@@ -303,8 +303,8 @@
     },
     {
       "path": "catalog-layout.js",
-      "bytes": 8701,
-      "sha256": "c3e0c0dabb536310736e70bc505e481cb2b8aab947687f457304451fe3db91cd"
+      "bytes": 8914,
+      "sha256": "beabbe379e8e678a8400c236dfb515b0897db1a6908a0ef3df1f068571bad1c2"
     },
     {
       "path": "catalog-organization-airbag.js",
@@ -1908,8 +1908,8 @@
     },
     {
       "path": "tests/test_catalog_layout.js",
-      "bytes": 5393,
-      "sha256": "e751e012ab8f1d06fb35f97ff597e9846efb28433834bdd9f3bb3a1b31ec67bb"
+      "bytes": 5575,
+      "sha256": "185ea1add6c62a0e60f2d70ace571d7fd5e60a71501df35b2e21194be01deb5c"
     },
     {
       "path": "tests/test_catalog_store.js",
