@@ -12,6 +12,7 @@ if(node&&!root.CAL_ORGANIZATION_AIRBAG)require('./catalog-organization-airbag.js
 if(node&&!root.CAL_ORGANIZATION_GERMANY)require('./catalog-organization-germany.js');
 if(node&&!root.CAL_ORGANIZATION_FRANCE)require('./catalog-organization-france.js');
 if(node&&!root.CAL_ORGANIZATION_ASIA_ACURA)require('./catalog-organization-asia-acura.js');
+if(node&&!root.CAL_ORGANIZATION_ASIA_HONDA)require('./catalog-organization-asia-honda.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
@@ -20,6 +21,7 @@ const airbag=root.CAL_ORGANIZATION_AIRBAG||{entries:{}};
 const germany=root.CAL_ORGANIZATION_GERMANY||{entries:{}};
 const france=root.CAL_ORGANIZATION_FRANCE||{entries:{}};
 const asiaAcura=root.CAL_ORGANIZATION_ASIA_ACURA||{entries:{}};
+const asiaHonda=root.CAL_ORGANIZATION_ASIA_HONDA||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -123,6 +125,11 @@ for(const [hash,folder] of Object.entries(france.entries||{})){
 for(const [hash,folder] of Object.entries(asiaAcura.entries||{})){
  const item=data.entries[hash];
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Asia/Acura display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(asiaHonda.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Asia/Honda display entry: '+hash);
  data.entries[hash]={...item,folder};
 }
 const legacyRoots={

@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2653,
-      "sha256": "cef5a6e6b73a73208fd8ad62d15420dc3f818bb87e91e4a2a23c5f3d20174f3b"
+      "bytes": 2691,
+      "sha256": "618086229543b2132347df58b1ba85b76fd7a3a5218431615e5183e7b1f3648d"
     },
     {
       "path": "cal-source.js",
@@ -312,6 +312,11 @@
       "sha256": "7a20ff2cba362472aba6fb5192405801d11ddaa5b89095f5acf3568cdbb5e89f"
     },
     {
+      "path": "catalog-organization-asia-honda.js",
+      "bytes": 8896,
+      "sha256": "ef70bcf55997f21fd84f5fdde7448f1bc8a6c8dfbafff44b762f1d1759b5dde1"
+    },
+    {
       "path": "catalog-organization-dashboard.js",
       "bytes": 974417,
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
@@ -348,8 +353,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 18180,
-      "sha256": "b9465f0a2e49fa15df9135cbfe2cba5c23dc0da6db0a9b97394e686135737612"
+      "bytes": 18579,
+      "sha256": "2e5ad08955006741719ca9dbd14ecbb741270ac1041474c38fec981002cba8da"
     },
     {
       "path": "catalog-parts.json",
@@ -1358,8 +1363,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12120,
-      "sha256": "4bc07e04d9d8564c3edc3445043eb31fa7b7d643291d0791eae8894b6593a7e7"
+      "bytes": 12179,
+      "sha256": "1136911eac83cd2718de93b94c929caae3e1eef1c5d61874bb749f0d77015337"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1933,8 +1938,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 35772,
-      "sha256": "27e86099b993f0267d35de9b102d6d0997c520b021a6d423e275bfec173fd5a3"
+      "bytes": 38089,
+      "sha256": "c96d646048514d1455707af4252544537f7ddab9485b5ae06d3652bf863748d5"
     },
     {
       "path": "tests/test_text_variants.js",
