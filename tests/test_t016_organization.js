@@ -33,8 +33,11 @@ const entry=sha=>db.entries.find(e=>e.sha===sha);
 await run('catalogReady');
 const allCal=db.entries.filter(e=>e.ext==='cal');
 const uniqueCal=new Set(allCal.map(e=>e.sha));
+const germanyAllSource=allCal.filter(e=>e.path.startsWith('Calculators/Germany/'));
+const germanyShas=new Set(germanyAllSource.map(e=>e.sha));
 const germanBmwSource=allCal.filter(e=>e.path.startsWith('Calculators/Germany/BMW/'));
 const germanBmwShas=new Set(germanBmwSource.map(e=>e.sha));
+const germanOtherSource=germanyAllSource.filter(e=>!e.path.startsWith('Calculators/Germany/BMW/'));
 const groups=scope.calculatorGroups(db.entries);
 const groupBySha=new Map(groups.map(g=>[g.e.sha,g]));
 const walk=(item,cls)=>item.children.flatMap(c=>[...(c.className?.startsWith(cls)?[c]:[]),...walk(c,cls)]);
@@ -69,7 +72,7 @@ await test('all active CAL are mapped once, without translated root folders',()=
   if(!item.folder.includes('/'))rootCounts[item.folder]=(rootCounts[item.folder]||0)+1;
  }
  for(const root of ['Airbag','Dashboard','Immo','CarRadio','OTHER'])assert(roots.has(root),root);
- assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Germany','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
+ assert.deepEqual([...roots].sort(),['ATV','Asia','Bikes','CHINA','CRYPTO','CRYPTO+','Car','Dashboard','ECU','EU_US_RU','France','Immo','MOTO - TRUCK - ATV','OTHER','Peugeot','Airbag','CarRadio'].sort());
  assert.deepEqual(rootCounts,{Airbag:9,CHINA:1,ECU:1,CarRadio:1,OTHER:2},'exact direct-root remainder by section');
  for(const [sha,item] of Object.entries(org.data.entries)){
   if(!item.folder.includes('/'))assert(item.reason&&item.reason.trim(),'root reason '+sha);
@@ -95,6 +98,7 @@ await test('Dashboard roots are routed into brand or confirmed panel-manufacture
  for(const row of rr.moved_entries){
   assert(!movedShas.has(row.sha),'duplicate moved SHA '+row.sha);movedShas.add(row.sha);
   assert(!rootShas.has(row.sha),'moved entry still in Dashboard root '+row.sha);
+  if(germanyShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item,row.sha);assert.equal(item.folder,row.folder,row.sha);assert.equal(item.name,row.name,row.sha);
   assert(item.folder.startsWith('Dashboard/')&&item.folder.split('/').length<=3,row.sha);
   if(row.old_name){assert.equal(item.old_name,row.old_name,row.sha);assert(org.matches(entry(row.sha),row.old_name),'search old name '+row.sha);}
@@ -124,6 +128,58 @@ await test('Germany BMW panels follow the dated dashboard layout',()=>{
   actualCounts[folder]=(actualCounts[folder]||0)+1;
  }
  assert.deepEqual(Object.fromEntries(Object.entries(actualCounts).sort()),Object.fromEntries(Object.entries(expectedCounts).sort()));
+});
+await test('other Germany panels follow brand and model nesting from the dated layout',()=>{
+ assert.equal(germanOtherSource.length,309,'all non-BMW Germany source paths');
+ assert.equal(new Set(germanOtherSource.map(e=>e.sha)).size,309,'distinct non-BMW Germany CAL contents');
+ const brandCounts={};
+ const folders=new Set();
+ let direct=0;
+ for(const e of germanOtherSource){
+  const brand=e.path.split('/')[2],folder=org.folder(e);
+  assert.equal(folder.split('/').slice(0,3).join('/'),'Dashboard/Germany/'+brand,e.path);
+  assert(folder.split('/').length===3||folder.split('/').length===4,'brand or model/block depth '+folder);
+  assert(org.matches(e,e.path),'original path search '+e.path);
+  brandCounts[brand]=(brandCounts[brand]||0)+1;folders.add(folder);
+  if(folder.split('/').length===3)direct++;
+ }
+ assert.deepEqual(brandCounts,{Audi:32,Mercedes:87,Mini:5,Opel:41,Porsche:14,Seat:24,Skoda:16,Smart:10,Volkswagen:80});
+ assert.equal(folders.size,76,'brand/model display folders');
+ assert.equal(direct,42,'records kept directly under their brand');
+ const inferred=[
+  ['Calculators/Germany/Audi/A4 MM73 912dg128 v1.cal','Dashboard/Germany/Audi/A4'],
+  ['Calculators/Germany/Audi/A4 MM73 912dg128 v2.cal','Dashboard/Germany/Audi/A4'],
+  ['Calculators/Germany/Audi/A6 MM73 912dg128.cal','Dashboard/Germany/Audi/A6'],
+  ['Calculators/Germany/Audi/TT MM73 912dg128.cal','Dashboard/Germany/Audi/TT'],
+  ['Calculators/Germany/Audi/TT MM73 912D60.cal','Dashboard/Germany/Audi/TT'],
+  ['Calculators/Germany/Mercedes/V W447 95640.cal','Dashboard/Germany/Mercedes'],
+  ['Calculators/Germany/Mercedes/Sprinter EZS 9S12DT256.cal','Dashboard/Germany/Mercedes/Sprinter'],
+  ['Calculators/Germany/Mercedes/Sprinter 24C04.cal','Dashboard/Germany/Mercedes/Sprinter'],
+  ['Calculators/Germany/Mercedes/V W639 EZS 908AZ60 Auto.cal','Dashboard/Germany/Mercedes/V W639'],
+  ['Calculators/Germany/Mercedes/Sprinter 24C02.cal','Dashboard/Germany/Mercedes/Sprinter'],
+  ['Calculators/Germany/Mercedes/Ratrack Prinoth 93C86.cal','Dashboard/Germany/Mercedes'],
+  ['Calculators/Germany/Mercedes/G W463 EZS 908AZ60.cal','Dashboard/Germany/Mercedes/G W463'],
+  ['Calculators/Germany/Mercedes/Citan 95160.cal','Dashboard/Germany/Mercedes/Citan'],
+  ['Calculators/Germany/Opel/Meriva 95160 Body.cal','Dashboard/Germany/Opel/Meriva'],
+  ['Calculators/Germany/Opel/Antara 93c86.cal','Dashboard/Germany/Opel'],
+  ['Calculators/Germany/Opel/AstraH VDO 35080.cal','Dashboard/Germany/Opel/Astra'],
+  ['Calculators/Germany/Opel/Astra J 24c16 Body.cal','Dashboard/Germany/Opel/Astra'],
+  ['Calculators/Germany/Porsche/Cartronic 95P08 V1.cal','Dashboard/Germany/Porsche'],
+  ['Calculators/Germany/Porsche/Cartronic 95P08 V2.cal','Dashboard/Germany/Porsche'],
+  ['Calculators/Germany/Porsche/Cartronic 95P08 V3.cal','Dashboard/Germany/Porsche'],
+  ['Calculators/Germany/Porsche/Cartronic 95320.cal','Dashboard/Germany/Porsche'],
+  ['Calculators/Germany/Skoda/Octavia 24C32 new v1.cal','Dashboard/Germany/Skoda/Octavia'],
+  ['Calculators/Germany/Skoda/Octavia 24C32 new v2.cal','Dashboard/Germany/Skoda/Octavia'],
+  ['Calculators/Germany/Skoda/Octavia 24C32 new v3.cal','Dashboard/Germany/Skoda/Octavia'],
+  ['Calculators/Germany/Smart/Smart for two BCM hc05x32.cal','Dashboard/Germany/Smart/ForTwo'],
+  ['Calculators/Germany/Smart/Smart new 93s66.cal','Dashboard/Germany/Smart'],
+  ['Calculators/Germany/Smart/Smart for two dash VDO 93c66.cal','Dashboard/Germany/Smart/ForTwo'],
+  ['Calculators/Germany/Smart/Smart W451 25160.cal','Dashboard/Germany/Smart/ForTwo'],
+  ['Calculators/Germany/Smart/Smart SAM 9S12B128.cal','Dashboard/Germany/Smart/ForTwo'],
+  ['Calculators/Germany/Volkswagen/Golf4 24C02.cal','Dashboard/Germany/Volkswagen/Golf'],
+  ['Calculators/Germany/Volkswagen/Caddy 24c32.cal','Dashboard/Germany/Volkswagen/Caddy']
+ ];
+ for(const [path,folder] of inferred){const e=allCal.find(x=>x.path===path);assert(e,path);assert.equal(org.folder(e),folder,path);}
 });
 await test('Airbag roots keep only unresolved brands; CX-5 moves to Mazda with its operation status unchanged',()=>{
  const report=require('../reports/catalog-airbag-organization-2026-11-04.json');
@@ -230,7 +286,7 @@ await test('all 2,629 remainder SHA are distributed by original sections with re
  for(const row of report.decisions){
   assert(!seen.has(row.sha),row.sha);seen.add(row.sha);assert(row.paths.includes(row.canonical_path));
   const e=allCal.find(x=>x.path===row.canonical_path);assert(e,row.canonical_path);assert.equal(e.sha,row.sha);
-  if(germanBmwShas.has(row.sha))continue;
+  if(germanyShas.has(row.sha))continue;
   const item=org.get(row.sha);assert(item);assert.equal(item.name,row.name);assert.equal(item.folder,row.folder);
   assert(row.folder.split('/')[0]===row.canonical_path.split('/')[1],'original root '+row.folder);
   for(const path of row.paths)assert(org.matches(allCal.find(x=>x.path===path),path),path);
@@ -246,7 +302,7 @@ await test('main sections sort by unique CAL count; folders inside sections sort
   if(sections[i-1].count===sections[i].count)assert(sections[i-1].name.localeCompare(sections[i].name,'ru')<=0,'root tie name');
  }
  assert.equal(sections[0].name,'Airbag','largest section first');
- assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4867);
+ assert.equal(sections[0].count,5386);assert.equal(sections.find(x=>x.name==='Dashboard').count,4920);
  const expectedCount=folder=>groups.filter(g=>org.displayPath(g.e)?.startsWith(folder+'/')).length;
  const folderPaths=[...new Set(Object.values(org.data.entries).flatMap(item=>{const parts=item.folder.split('/');return parts.map((_,index)=>parts.slice(0,index+1).join('/'));}))];
  const expand=folderPaths.map(folder=>'expandedFolders.add('+JSON.stringify(folder)+')').join(';');

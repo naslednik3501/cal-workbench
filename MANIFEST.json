@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 2546,
-      "sha256": "a353bf49defc3f7af61890e497833e693e573400dbb66f73b1f4488bd7344287"
+      "bytes": 2581,
+      "sha256": "2afafadd54820560e55e64ecdf0d0139db5dc97120d7dd610ea7ec409100f948"
     },
     {
       "path": "cal-source.js",
@@ -312,6 +312,11 @@
       "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
     },
     {
+      "path": "catalog-organization-germany.js",
+      "bytes": 32464,
+      "sha256": "4b83b9058e95b78a72951b5f518bb78c5d78975ed16879acdad4299108bc708e"
+    },
+    {
       "path": "catalog-organization-immo.js",
       "bytes": 75017,
       "sha256": "5ee648092bea0910065d35d9f549a6eba332bafb86ce0d20e40663a5d612226c"
@@ -333,8 +338,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 16981,
-      "sha256": "0c611bf31887b4c45b8583dcb17b3977efc57588ed69a4d0475b9928a81f0f0b"
+      "bytes": 17364,
+      "sha256": "7f960559192ca8e5a3f181c6014cf0f6ed2ac6569b06ef483b332e1320e4e106"
     },
     {
       "path": "catalog-parts.json",
@@ -1343,8 +1348,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11950,
-      "sha256": "ed567d22edac1a6d08b0ff5652588e2b6c4174d3e7f7b9fd07d07f2ff2e23555"
+      "bytes": 12006,
+      "sha256": "06d9dca3781768fbd0d116492cefd5af2f5578e9fc83560cc57e6e2f9ee480e3"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1918,8 +1923,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 28057,
-      "sha256": "d829501ebe599f95cfb6d9af4103fbfbb9c01414903a05f4ea56ed68d3408f1e"
+      "bytes": 32277,
+      "sha256": "35df6d8ace863183b2442ce2eb996b7b19cba850555df37d746c79d95b9470fd"
     },
     {
       "path": "tests/test_text_variants.js",

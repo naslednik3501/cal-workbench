@@ -9,11 +9,13 @@ if(node&&!root.CAL_ORGANIZATION_RADIO)require('./catalog-organization-radio.js')
 if(node&&!root.CAL_ORGANIZATION_UTILITIES)require('./catalog-organization-utilities.js');
 if(node&&!root.CAL_ORGANIZATION_REMAINDER)require('./catalog-organization-remainder.js');
 if(node&&!root.CAL_ORGANIZATION_AIRBAG)require('./catalog-organization-airbag.js');
+if(node&&!root.CAL_ORGANIZATION_GERMANY)require('./catalog-organization-germany.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
 const utilities=root.CAL_ORGANIZATION_UTILITIES||{entries:{}};
 const airbag=root.CAL_ORGANIZATION_AIRBAG||{entries:{}};
+const germany=root.CAL_ORGANIZATION_GERMANY||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -104,6 +106,11 @@ const data={
  search_aliases:{'d0920cc81247ab7dd31d013dc130dd092747b666546e024382e67d8196ee9877':['Renault']}
 };
 const sha=s=>typeof s==='string'&&/^[0-9a-f]{64}$/.test(s);
+for(const [hash,folder] of Object.entries(germany.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Germany display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
 const legacyRoots={
  Airbag:['Подушки безопасности','SRS'],
  Dashboard:['Приборные панели','Dashboard'],
