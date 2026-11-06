@@ -333,8 +333,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 8757,
-      "sha256": "921da26be052b62bfa09ce348ba400db306e2b9d17c108dc95d2da24116f7828"
+      "bytes": 16981,
+      "sha256": "0c611bf31887b4c45b8583dcb17b3977efc57588ed69a4d0475b9928a81f0f0b"
     },
     {
       "path": "catalog-parts.json",
@@ -1918,8 +1918,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 26494,
-      "sha256": "1f73909676a5d7095239ca84d268427178b3afab974335b9fbd67df87c81a03f"
+      "bytes": 28057,
+      "sha256": "d829501ebe599f95cfb6d9af4103fbfbb9c01414903a05f4ea56ed68d3408f1e"
     },
     {
       "path": "tests/test_text_variants.js",
