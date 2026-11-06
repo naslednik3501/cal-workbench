@@ -17,6 +17,7 @@ if(node&&!root.CAL_ORGANIZATION_ASIA_MAZDA)require('./catalog-organization-asia-
 if(node&&!root.CAL_ORGANIZATION_ASIA_NISSAN)require('./catalog-organization-asia-nissan.js');
 if(node&&!root.CAL_ORGANIZATION_ASIA_MITSUBISHI)require('./catalog-organization-asia-mitsubishi.js');
 if(node&&!root.CAL_ORGANIZATION_ASIA_TOYOTA)require('./catalog-organization-asia-toyota.js');
+if(node&&!root.CAL_ORGANIZATION_ASIA_SUBARU_SUZUKI)require('./catalog-organization-asia-subaru-suzuki.js');
 const dashboard=root.CAL_ORGANIZATION_DASHBOARD||{entries:{}};
 const immo=root.CAL_ORGANIZATION_IMMO||{entries:{}};
 const radio=root.CAL_ORGANIZATION_RADIO||{entries:{}};
@@ -30,6 +31,7 @@ const asiaMazda=root.CAL_ORGANIZATION_ASIA_MAZDA||{entries:{}};
 const asiaNissan=root.CAL_ORGANIZATION_ASIA_NISSAN||{entries:{}};
 const asiaMitsubishi=root.CAL_ORGANIZATION_ASIA_MITSUBISHI||{entries:{}};
 const asiaToyota=root.CAL_ORGANIZATION_ASIA_TOYOTA||{entries:{}};
+const asiaSubaruSuzuki=root.CAL_ORGANIZATION_ASIA_SUBARU_SUZUKI||{entries:{}};
 const remainder=root.CAL_ORGANIZATION_REMAINDER||{entries:{}};
 const approved={
   'faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a':{name:'Skoda Fabia 2006 — декриптор EEPROM 93C86',folder:'Dashboard/Skoda'},
@@ -158,6 +160,11 @@ for(const [hash,folder] of Object.entries(asiaMitsubishi.entries||{})){
 for(const [hash,folder] of Object.entries(asiaToyota.entries||{})){
  const item=data.entries[hash];
  if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Asia/Toyota display entry: '+hash);
+ data.entries[hash]={...item,folder};
+}
+for(const [hash,folder] of Object.entries(asiaSubaruSuzuki.entries||{})){
+ const item=data.entries[hash];
+ if(!sha(hash)||!item||typeof folder!=='string')throw Error('Invalid Asia/Subaru/Suzuki display entry: '+hash);
  data.entries[hash]={...item,folder};
 }
 const legacyRoots={
