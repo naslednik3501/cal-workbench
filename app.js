@@ -181,7 +181,7 @@ $('closeBin').onclick=()=>{
  $('calcTitle').textContent='Выберите калькулятор справа';$('calcPath').textContent='Выберите файл из каталога или добавьте свой CAL.';$('compatBadge').textContent='Не выбран';$('compatBadge').className='pill';$('compat').textContent='Поддержка определяется при открытии файла.';$('calcDetails').open=false;$('fileDetails').open=false;
  $('calcDescription').replaceChildren();renderEmptyForm();logLines=[];$('log').textContent='';resultStatus('Результат ещё не рассчитан','После расчёта изменения появятся в HEX ниже.');sync();renderHex();renderCatalog();
 };
-$('search').oninput=()=>{searchPage=0;renderCatalog();};$('collapseAll').onclick=()=>{expandedFolders.clear();catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('catalogBack').onclick=()=>{catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('clearLog').onclick=()=>{logLines=[];$('log').textContent='';sync();};
+$('search').oninput=()=>{searchPage=0;renderCatalog();};$('collapseAll').onclick=()=>{expandedFolders.clear();$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('catalogBack').onclick=()=>{catalogScope='';$('search').value='';searchPage=0;renderCatalog();$('tree').scrollTop=0;};$('clearLog').onclick=()=>{logLines=[];$('log').textContent='';sync();};
 for(const el of document.querySelectorAll('[data-icon]'))el.replaceChildren(...icon(el.dataset.icon).childNodes);
 renderCatalog();logLines=[];log(`Каталог готов: ${calculatorCatalog().length.toLocaleString('ru-RU')} уникальных калькуляторов.`);sync();renderHex();updateImportTargets();syncStorage();const catalogReady=loadUserCatalog();
 

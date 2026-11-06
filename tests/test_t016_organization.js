@@ -666,6 +666,17 @@ await test('main sections sort by unique CAL count; folders inside sections sort
  }
  run("expandedFolders.clear();catalogScope='';renderCatalog()");
 });
+await test('collapse all closes open folders without leaving the current section',()=>{
+ run("catalogScope='Dashboard';expandedFolders.clear();expandedFolders.add('Dashboard/Asia');expandedFolders.add('Dashboard/Asia/Toyota');renderCatalog()");
+ assert.equal(run('catalogScope'),'Dashboard');
+ assert(el('tree').querySelectorAll('details').some(d=>d.open),'folder open before collapse');
+ el('collapseAll').click();
+ assert.equal(run('catalogScope'),'Dashboard','section kept');
+ assert.equal(el('catalogLocation').textContent,'Dashboard','section title kept');
+ assert.equal(run('expandedFolders.size'),0,'expanded state cleared');
+ assert(el('tree').querySelectorAll('details').every(d=>!d.open),'all folders closed');
+ run("catalogScope='';expandedFolders.clear();renderCatalog()");
+});
 await test('custom calculators stay visible and follow the same count order, not a pinned position',()=>{
  const fake={path:'Мои калькуляторы/Проверка.tmp.cal',sha:'f'.repeat(64),size:1,ext:'cal',source:'test',user:true};
  run('entries=entries.concat('+JSON.stringify(fake)+');userEntries.push('+JSON.stringify(fake)+');catalogScope=\'\';expandedFolders.clear();renderCatalog()');

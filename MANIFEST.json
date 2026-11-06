@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 43049,
-      "sha256": "1b7a0d838c49652a45440bdc2d6931bf3ccbbf01414fee1b44961854e3257636"
+      "bytes": 43033,
+      "sha256": "292be4f3369150c78b0f28687a54321f8c1f0dd72f1e9b239e75c4f35a323066"
     },
     {
       "path": "archive-verification.json",
@@ -2053,8 +2053,8 @@
     },
     {
       "path": "tests/test_t016_organization.js",
-      "bytes": 66674,
-      "sha256": "674ce27950964ad717614df521b59141b70b0298258b1e72e476fe64cd98bb15"
+      "bytes": 67464,
+      "sha256": "9455387da5e116ffba48d446f2bab7a7b5dbeb95243799dff49a360128669286"
     },
     {
       "path": "tests/test_text_variants.js",
