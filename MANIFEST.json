@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 9195,
-      "sha256": "6c2e7c9aebc6b73ec56154bd9f0b203fac3d58eb65452560e90c95b1712ad9d0"
+      "bytes": 9655,
+      "sha256": "715dd410ef7416095296a79e4f5bb670606412f992ffe6288d2c85b90bdf94a3"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -48,13 +48,13 @@
     },
     {
       "path": "README.html",
-      "bytes": 14610,
-      "sha256": "ce07ffc1198f9d89595cd84036cbeb0b8fd8c3f4dc8e7bcfa7f2b87fec3c7854"
+      "bytes": 15078,
+      "sha256": "d52cdc99d0ed7b6016b14ff3ad4ef6f3c96acd7f084ab3435bb8a74804729710"
     },
     {
       "path": "README.md",
-      "bytes": 7605,
-      "sha256": "d776d04cc2df01a9c9966628661411ad322deb9a94542cbfb3f886608877166b"
+      "bytes": 7722,
+      "sha256": "35b07b2b03ce20055450beac51b9aff98bcc0c3ff7160c2f7c95c2b60ec16241"
     },
     {
       "path": "SOURCE_STORAGE.md",
@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3184,
-      "sha256": "aff65f0368c2d304b7cbdfc2a533163098b3f482f11013f7908e6c76b11722a5"
+      "bytes": 3373,
+      "sha256": "a32baae5736402f8212c8ba5785024e41715ca6420d1834f25d9509ff1101bf0"
     },
     {
       "path": "cal-source.js",
@@ -302,6 +302,76 @@
       "sha256": "c144522d4665ce16430ea785370d5be4266ad15c0a195ded4116b16c7ad54490"
     },
     {
+      "path": "catalog-import-data/blobs-000.js",
+      "bytes": 922319,
+      "sha256": "3ce5dd237556569ee235120606c7fcaf591f475743dbb15dccfd0f1386f743ad"
+    },
+    {
+      "path": "catalog-import-data/blobs-001.js",
+      "bytes": 810763,
+      "sha256": "2f0d12b9f3b837ee81ed9f02dbf820cca8429fbc98b51cd67d6bfdc5c5d8bb0f"
+    },
+    {
+      "path": "catalog-import-data/blobs-002.js",
+      "bytes": 1032703,
+      "sha256": "c27cd610d8039663fae6671675c22eee1b993b2db34a6661e3c4792a33e93438"
+    },
+    {
+      "path": "catalog-import-data/blobs-003.js",
+      "bytes": 1305839,
+      "sha256": "8bc8ff880b208b2d71c4b37f2462d39708e6bd77ec905509961ffcc26063479d"
+    },
+    {
+      "path": "catalog-import-data/blobs-004.js",
+      "bytes": 1230403,
+      "sha256": "40a7e974fc0de4eb1e990300b3b48c3bb5081cd4462840a90e73832cb5ee8e89"
+    },
+    {
+      "path": "catalog-import-data/blobs-005.js",
+      "bytes": 451847,
+      "sha256": "3b540e52e1e02f9977112df230261df4d8c506d1e32e975b1b6aae8a6848b064"
+    },
+    {
+      "path": "catalog-import-data/part-000.js",
+      "bytes": 58997,
+      "sha256": "bbee353f4d98bfbb1510a09792b33a2710714a3541f5f951a1ae7bf15de671be"
+    },
+    {
+      "path": "catalog-import-data/part-001.js",
+      "bytes": 59320,
+      "sha256": "09caf77cebe2905344b58cdd016a2d062cc2373a285638315d250472ad7250b1"
+    },
+    {
+      "path": "catalog-import-data/part-002.js",
+      "bytes": 57306,
+      "sha256": "35bc1f08de5c8bfc3bedd5534cd660b6061337497e8639bd8a061548aff8bfc4"
+    },
+    {
+      "path": "catalog-import-data/part-003.js",
+      "bytes": 58535,
+      "sha256": "28c5bf9f1b44feb784af305bf72e07a1fedcd521d47721ed55568bf1a9098fc1"
+    },
+    {
+      "path": "catalog-import-data/part-004.js",
+      "bytes": 58447,
+      "sha256": "cda7d65e440fcf7183780522cc48662f1eaf0975b7a3f1cd0689b4a1aadbe0c9"
+    },
+    {
+      "path": "catalog-import-data/part-005.js",
+      "bytes": 11866,
+      "sha256": "d24ef086ad7553c5b39e72ca16f40c16f163b0cfa2e31384d26d8adb520da0c5"
+    },
+    {
+      "path": "catalog-import-parts.json",
+      "bytes": 485,
+      "sha256": "a256abcff3298e0b511aa49973d894b4fb9e6b5abf85d3f8bee1d74dd84947de"
+    },
+    {
+      "path": "catalog-import.js",
+      "bytes": 1044,
+      "sha256": "105c2beb1bfaa18d832041ea224c4f33026b5c7e4a7b6a6023e2e3c4803a26b1"
+    },
+    {
       "path": "catalog-layout.js",
       "bytes": 8914,
       "sha256": "beabbe379e8e678a8400c236dfb515b0897db1a6908a0ef3df1f068571bad1c2"
@@ -387,6 +457,11 @@
       "sha256": "f99d523f86d89bb3526ede8b87b94542b3f642dc684703f3b468a1398762951f"
     },
     {
+      "path": "catalog-organization-import.js",
+      "bytes": 207017,
+      "sha256": "9f6a8b8491354083dc929db7a7fb6d6c8992572cfb468cb929c0cd0cd1f7bf4a"
+    },
+    {
       "path": "catalog-organization-mototechnics.js",
       "bytes": 27186,
       "sha256": "e46d3636cb696831072dc602f4c467a16b5f424cf80c4cf7297f8ef7b16d57c9"
@@ -418,8 +493,8 @@
     },
     {
       "path": "catalog-organization.js",
-      "bytes": 25013,
-      "sha256": "bae61342ed2b167acc721bd53e50ef7d30eaa355b9d8494a1c79d352f00bdf57"
+      "bytes": 25594,
+      "sha256": "91a6e6c593123a3678437e69ab3cea7ee02f247415555664d7bd70d829fcbcf2"
     },
     {
       "path": "catalog-parts.json",
@@ -1428,8 +1503,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12945,
-      "sha256": "5b3f0bf1dc4d41da71bcdc045ae0f743a40fae8dfde8b64a76f25d063f834757"
+      "bytes": 13720,
+      "sha256": "40fc0475337b454ddc5111f806d68f48661e9e620b05148cf99e4ce2bddaa16f"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1752,6 +1827,16 @@
       "sha256": "e14dae13c684a6d098559c1f6f2d0c6c137584ec5d3247bda3d841dba0a7ffc3"
     },
     {
+      "path": "reports/etsmart-import-2026-11-06.json",
+      "bytes": 493320,
+      "sha256": "6e33fad16d44df62552e64ad03f7697f97f28f991615f9f89ce52b165e5d0f68"
+    },
+    {
+      "path": "reports/etsmart-import-2026-11-06.md",
+      "bytes": 1959,
+      "sha256": "4a54be391108eac44076f01776cfd5d285ad677ecba7cf4f54f01d389037169f"
+    },
+    {
       "path": "reports/final-app-validation-2026-11-04.md",
       "bytes": 6030,
       "sha256": "eb392a557241c97515415507b89747643e398edef9b80fa17a3b9c03dfb80c4f"
@@ -1922,6 +2007,11 @@
       "sha256": "cda73ecb28fc178aa05242daa4b4eacf3e8900b573cb38f748207d76c83f824e"
     },
     {
+      "path": "tests/test_etsmart_import.js",
+      "bytes": 2930,
+      "sha256": "b814e1c0031b04ee4019f89acb25f7e0ec3b5d9cc310a1345d8657e4bc002fb3"
+    },
+    {
       "path": "tests/test_polo.js",
       "bytes": 2567,
       "sha256": "e0536446a27d51535e7d1d011da678270bcc35100f94cc674519aad778aa2a66"
@@ -1949,7 +2039,7 @@
     {
       "path": "tests/test_scope_browser.js",
       "bytes": 2852,
-      "sha256": "2380fa0b451ebaf36c28cc3808d0270d62038333391702c557dbc9a7c7027c94"
+      "sha256": "d0fe140acd8b76976f17cfee9e02f6a09e054608fffc043d4eb57cce7654324b"
     },
     {
       "path": "tests/test_source.js",
@@ -2198,8 +2288,8 @@
     },
     {
       "path": "tools/package_release.py",
-      "bytes": 3423,
-      "sha256": "1a964f40aeb103863558cfec0246ba130de1245f438c6909aefddb5a90d2bd34"
+      "bytes": 3449,
+      "sha256": "5d6d05040fd975ef23963099e097c0114ff6bbb8c9e0d5c68a83831b05952302"
     },
     {
       "path": "tools/publish_source_store.py",
@@ -2246,9 +2336,10 @@
       "test_t016_organization.js",
       "test_t016_group_review.js",
       "test_catalog_layout.js",
+      "test_etsmart_import.js",
       "test_t001_hardware_elements.js"
     ],
-    "executed_node_test_count": 12,
+    "executed_node_test_count": 13,
     "executed_node_tests_status": "passed",
     "html_checks": "passed: unique IDs, referenced resources and app.js element IDs",
     "binary_resolution": {
