@@ -57,6 +57,16 @@ await test('Confirming repeated Apply recalculates from current CAL inputs',asyn
  assert.equal(confirmMessages.length,2);assert.deepEqual([...run('candidate').slice(0,3)],[17,2,1]);
  assert.equal(run('manualCandidate'),false);assert.equal(run('resultKind'),'CAL OnApply');assert(el('calcError').hidden);
 });
+await test('Calculation error clears manual edits and their confirmation state',async()=>{
+ el('editAddress').value='04';el('editByte').value='5A';await el('edit').click();assert.equal(run('manualCandidate'),true);
+ run("const applyCloneForError=session.clone;session.clone=()=>{throw Error('forced calculation error')}");
+ confirmAnswer=true;await el('apply').click();
+ assert(!el('calcError').hidden);assert.match(el('calcError').textContent,/forced calculation error/);
+ assert.equal(run('candidate'),null);assert.equal(run('manualCandidate'),false);assert.equal(run('resultKind'),'');assert(el('save').disabled);
+ run('session.clone=applyCloneForError');
+ const confirmations=confirmMessages.length;await el('apply').click();
+ assert.equal(confirmMessages.length,confirmations);assert.equal(run('manualCandidate'),false);assert.deepEqual([...run('candidate').slice(0,3)],[17,2,1]);
+});
 await test('New BIN read failure preserves the open session and manual result',async()=>{
  el('editAddress').value='03';el('editByte').value='A5';await el('edit').click();
  const before={original:Buffer.from(run('original')),candidate:Buffer.from(run('candidate')),name:run('name'),digest:run('digest'),selected:run('selected')};

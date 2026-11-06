@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 42978,
-      "sha256": "f6009411e17ff64c89d9662a09bd919f1abfe31f8782c512f93496ccd27a620b"
+      "bytes": 43000,
+      "sha256": "ee2ebc54ed22fec9d36711f76cbc989937cf04ebe5178f9ee57b4ad9fd979208"
     },
     {
       "path": "archive-verification.json",
@@ -1773,8 +1773,8 @@
     },
     {
       "path": "tests/test_preparation.js",
-      "bytes": 14394,
-      "sha256": "a11bacbe691dfca222bff9d90595d9dda73f5dadcb5cac010d7ce0b4245b856b"
+      "bytes": 15284,
+      "sha256": "a556ff42a6bf099fee92424c8166617f4766a4e18ef60eb4db7a3f5cc9a41376"
     },
     {
       "path": "tests/test_release_browser.js",
