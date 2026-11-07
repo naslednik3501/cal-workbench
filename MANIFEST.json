@@ -13,8 +13,8 @@
     },
     {
       "path": "COMPATIBILITY.md",
-      "bytes": 10056,
-      "sha256": "3e3e33563562835431e6623204ef13baa735ea825c11bd9a012192e385b193fe"
+      "bytes": 12091,
+      "sha256": "2fbe627ac933687c2de90a8708af8bc6821604fc37e9e00bb8d0a097d0febab7"
     },
     {
       "path": "DELIVERY-2026-11-03.md",
@@ -68,8 +68,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 43033,
-      "sha256": "292be4f3369150c78b0f28687a54321f8c1f0dd72f1e9b239e75c4f35a323066"
+      "bytes": 44011,
+      "sha256": "9bb4ecc7ecdffc3ad0d1def305477f64105cd26c99b52553dfad6d1765533cfb"
     },
     {
       "path": "archive-verification.json",
@@ -83,8 +83,8 @@
     },
     {
       "path": "build_static.py",
-      "bytes": 3416,
-      "sha256": "05f6e46e3b7804810b62f98d74c835bad5f7685a27a89eab2ac76ae21d6cc283"
+      "bytes": 3437,
+      "sha256": "d1bdece1094f52f863c84fba37d69d32f393296e284a8cf3d9d4fc2a87269add"
     },
     {
       "path": "cal-source.js",
@@ -438,8 +438,8 @@
     },
     {
       "path": "catalog-import.js",
-      "bytes": 1044,
-      "sha256": "105c2beb1bfaa18d832041ea224c4f33026b5c7e4a7b6a6023e2e3c4803a26b1"
+      "bytes": 1409,
+      "sha256": "00a4a102a26b05e7a5192bce6a8754585a4916fa417b18e17958308c5c0df9ef"
     },
     {
       "path": "catalog-layout.js",
@@ -575,6 +575,11 @@
       "path": "catalog-scope.js",
       "bytes": 5484,
       "sha256": "85f96c19f42f37bc5d0e66b5d67eeeae0188c9d7fc0142c498d855172f476249"
+    },
+    {
+      "path": "catalog-status.js",
+      "bytes": 35803,
+      "sha256": "a640506460c1800296eaa24c8b0d3567e97cda3009f020385821490e3be1380c"
     },
     {
       "path": "catalog-store.js",
@@ -1573,8 +1578,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 14518,
-      "sha256": "e34948841a8f5d14da1fcb2b395023933d32d46394323e48bd1840ca799eae20"
+      "bytes": 14985,
+      "sha256": "bcee22ffec92712670285720a164434a2458f2fece3c119c3d70354c945eb9a9"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -1968,8 +1973,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 23644,
-      "sha256": "9646c32a9408b5e4a9130eaa0b52b4fa679c09619d975136c00f99f3a849cdbc"
+      "bytes": 25033,
+      "sha256": "cedd59b8942cc23d898e0d1ee08a3df2a54778c928ed036305cd3b9a88317455"
     },
     {
       "path": "tests/README.md",

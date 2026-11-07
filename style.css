@@ -52,3 +52,18 @@ input[type=file]:focus-visible{outline:none}
 /* header "Инструкция" link: same corner radius and hover behaviour as the other buttons */
 .headerLinks a{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:7px;border:1px solid #ffffff26;background:transparent;color:#d9e8f0;font-size:12px;font-weight:500;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
 .headerLinks a:hover{text-decoration:none;background:#ffffff14;border-color:#ffffff40;color:#fff}
+
+.catalog .heading{position:relative;z-index:2}
+.countWrap{position:relative;display:inline-flex;align-items:center}
+.countTip{position:absolute;right:0;top:calc(100% + 9px);z-index:40;display:none;flex-direction:column;gap:6px;width:max-content;max-width:280px;padding:11px 13px;border:1px solid #ffffff1f;border-radius:9px;background:#183147;color:#eaf2f8;box-shadow:0 10px 30px #1832474d;font-size:11px;line-height:1.55;white-space:normal;text-align:left;pointer-events:none}
+.countTip:before{content:'';position:absolute;right:14px;top:-5px;width:8px;height:8px;background:#183147;border-left:1px solid #ffffff1f;border-top:1px solid #ffffff1f;transform:rotate(45deg)}
+.countWrap:hover .countTip,.countWrap:focus-within .countTip{display:flex;animation:countTipIn .12s ease-out}
+@keyframes countTipIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.tipLine{display:flex;align-items:flex-start;gap:7px}
+.tipLine .icon{width:13px;height:13px;margin-top:2px}
+.tipFull{padding-left:20px;color:#b9e7db}
+.tipRework{color:#ffd39a}
+.countTip #countFull,.countTip #countRework{font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.countWrap #count:focus-visible{outline:2px solid #68c8c9;outline-offset:2px}
+.fileItem .reworkBadge{width:12px;height:12px;color:#b47b28;margin-left:auto;margin-top:2px;flex-shrink:0}
+.fileItem.active .reworkBadge{color:#9a5f16}

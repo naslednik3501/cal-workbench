@@ -1,4 +1,12 @@
 /* ETSmartUSB overlay: appended after the verified base catalog. */
+/*
+ * Owner accounting (2026-11-07): 18,177 unique CALs = 17,749 full
+ * (read + write, accepted as working) + 428 not full.
+ * Imports contribute 2,982 full + 138 read-only; 5 test-only failures
+ * were rechecked and are not defects.
+ * See COMPATIBILITY.md, "Учётная градация владельца".
+ * Comment only; import behavior is unchanged.
+ */
 (function(root){
 'use strict';
 const db=root.CAL_CATALOG;if(!db||!Array.isArray(db.entries)||!db.blobs)throw Error('CAL_CATALOG is not loaded');
