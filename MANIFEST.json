@@ -1,5 +1,5 @@
 {
-  "version": "0.5.3",
+  "version": "0.6.0",
   "files": [
     {
       "path": "AGENTS.md",
@@ -49,12 +49,12 @@
     {
       "path": "README.html",
       "bytes": 15149,
-      "sha256": "24b04b3df84a5dd47c7317436730355891373983b50dad7bf4711845d99736d3"
+      "sha256": "4f1fa43594d51ab6c18d6f5426f7f6133b3cefc3b9a238f408e5594a539fc8cc"
     },
     {
       "path": "README.md",
       "bytes": 7841,
-      "sha256": "b7cc5a5f25bef5c88f6c6ccb9f55daad934345b28b908d0b2ff4befe425a1857"
+      "sha256": "4f3f3553f1cff21e6c7b68e80de5d2ce5dcf2a2031201b439df7f050d24e7ea4"
     },
     {
       "path": "SOURCE_STORAGE.md",
@@ -1579,7 +1579,7 @@
     {
       "path": "index.html",
       "bytes": 14985,
-      "sha256": "bcee22ffec92712670285720a164434a2458f2fece3c119c3d70354c945eb9a9"
+      "sha256": "b9a9da7e8647ae55a78fb6078373ac35d147a1c20cb40d50cd764d1c63025132"
     },
     {
       "path": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -2379,7 +2379,7 @@
     {
       "path": "tools/package_release.py",
       "bytes": 3466,
-      "sha256": "c0d213d5059b277ac6e602a042c070aa3b37e52499b925909eaa1d66556d175d"
+      "sha256": "4e090ea1acda653464ab2c51b28896ae01835dbdd012b690dbd997cdbe4fa2f9"
     },
     {
       "path": "tools/publish_source_store.py",

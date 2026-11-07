@@ -13,7 +13,7 @@ import zipfile
 
 root = Path(__file__).resolve().parents[1]
 destination = Path(sys.argv[1]).resolve()
-version = '0.5.3'
+version = '0.6.0'
 
 def included(path):
     rel = path.relative_to(root)
