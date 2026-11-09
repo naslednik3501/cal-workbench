@@ -472,8 +472,8 @@
       "date": "2026-11-04",
       "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
       "catalog_paths": [
-        "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal",
-        "Calculators/Car/S/Ssang Yong/Actyon/Actyon 93╤ü66.cal"
+        "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93с66.cal",
+        "Calculators/Car/S/Ssang Yong/Actyon/Actyon 93с66.cal"
       ],
       "evidence": {
         "report": "reports/T-001-hardware-wiring-2026-11-04.md",
@@ -2077,8 +2077,8 @@
       "date": "2026-11-04",
       "reason": "Группа содержит аппаратные указания по доступу/разбору; расчёт и изображения вне группы сохраняются.",
       "catalog_paths": [
-        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal"
+        "Calculators/MOTO/Snowmobile/BRP/24с04 Proba.cal",
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal"
       ],
       "evidence": {
         "report": "reports/T-001-hardware-wiring-2026-11-04.md",

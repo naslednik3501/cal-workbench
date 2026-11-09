@@ -1168,15 +1168,15 @@
     },
     {
       "sha": "0011ea700e5b8839e30bf41bffecd2861b0053adb3ca15839446a7fdee06ece5",
-      "name": "SsangYong Actyon 93╤ü66 — коррекция пробега (EEPROM 93C66)",
+      "name": "SsangYong Actyon 93с66 — коррекция пробега (EEPROM 93C66)",
       "folder": "Dashboard/SsangYong/Actyon",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal",
+      "canonical_path": "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93с66.cal",
       "paths": [
-        "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93╤ü66.cal"
+        "Calculators/Dashboard/Ssang Yong/Actyon/Actyon 93с66.cal"
       ]
     },
     {
@@ -1934,15 +1934,15 @@
     },
     {
       "sha": "02d9a18aa18aeee6fc6092a759f5eee4bea5b3ed5d32cb1c9fcf6d741926f791",
-      "name": "Kia Cerato 2011╨│ — коррекция пробега (EEPROM 93C66)",
+      "name": "Kia Cerato 2011г — коррекция пробега (EEPROM 93C66)",
       "folder": "Dashboard/Kia/Cerato",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/KIA/Cerato/Cerato 2011╨│ 93C66.cal",
+      "canonical_path": "Calculators/Dashboard/KIA/Cerato/Cerato 2011г 93C66.cal",
       "paths": [
-        "Calculators/Dashboard/KIA/Cerato/Cerato 2011╨│ 93C66.cal"
+        "Calculators/Dashboard/KIA/Cerato/Cerato 2011г 93C66.cal"
       ]
     },
     {
@@ -2131,15 +2131,15 @@
     },
     {
       "sha": "03abeb14f7155515ae393917e923b111e641b041707f5475e7026381349e23e7",
-      "name": "Nissan X-Trail ╤ü2011╨│ — коррекция пробега",
+      "name": "Nissan X-Trail с2011г — коррекция пробега",
       "folder": "Dashboard/Nissan/X-Trail",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/X-Trail/X-trail ╤ü2011╨│ 9S12XHZ256.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/X-Trail/X-trail с2011г 9S12XHZ256.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/X-Trail/X-trail ╤ü2011╨│ 9S12XHZ256.cal"
+        "Calculators/Dashboard/Nissan/X-Trail/X-trail с2011г 9S12XHZ256.cal"
       ]
     },
     {
@@ -9217,15 +9217,15 @@
     },
     {
       "sha": "1edf9159e46cb7735a7d6d4b68739684015e428c48965a7124f263ed157a0891",
-      "name": "Hyundai ╨│╤Ç╤â╨╖╨╛╨▓╨╕╨║ HD78 93╤ü56 — коррекция пробега (EEPROM 93C56)",
+      "name": "Hyundai грузовик HD78 93с56 — коррекция пробега (EEPROM 93C56)",
       "folder": "Dashboard/Hyundai",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Hyundai/╨│╤Ç╤â╨╖╨╛╨▓╨╕╨║ HD78  93╤ü56.cal",
+      "canonical_path": "Calculators/Dashboard/Hyundai/грузовик HD78  93с56.cal",
       "paths": [
-        "Calculators/Dashboard/Hyundai/╨│╤Ç╤â╨╖╨╛╨▓╨╕╨║ HD78  93╤ü56.cal"
+        "Calculators/Dashboard/Hyundai/грузовик HD78  93с56.cal"
       ]
     },
     {
@@ -10995,15 +10995,15 @@
     },
     {
       "sha": "267392279cc1ed8dd25168939c7f9660d9f8ee7f8aa60354000f85c66c85b2b3",
-      "name": "Nissan March 2000 93╤ü56 Yazaki — коррекция пробега (EEPROM 93C56)",
+      "name": "Nissan March 2000 93с56 Yazaki — коррекция пробега (EEPROM 93C56)",
       "folder": "Dashboard/Nissan",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/March 2000 93╤ü56 Yazaki.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/March 2000 93с56 Yazaki.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/March 2000 93╤ü56 Yazaki.cal"
+        "Calculators/Dashboard/Nissan/March 2000 93с56 Yazaki.cal"
       ]
     },
     {
@@ -18325,17 +18325,17 @@
     },
     {
       "sha": "42ebddf04fca1619e7eb00ed967a5dbf64f6fb3a613ba22889055278637d5dea",
-      "name": "Nissan March 2000 93╤ü56 Yazaki — коррекция пробега (EEPROM 93C56)",
+      "name": "Nissan March 2000 93с56 Yazaki — коррекция пробега (EEPROM 93C56)",
       "folder": "Dashboard/Nissan/March",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/March/March 2000 93╤ü56 Yazaki.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/March/March 2000 93с56 Yazaki.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/March/March 2000 93╤ü56 Yazaki.cal"
+        "Calculators/Dashboard/Nissan/March/March 2000 93с56 Yazaki.cal"
       ],
-      "old_name": "Nissan March 2000 93╤ü56 Yazaki — коррекция пробега (EEPROM 93C56) · вариант 2"
+      "old_name": "Nissan March 2000 93с56 Yazaki — коррекция пробега (EEPROM 93C56) · вариант 2"
     },
     {
       "sha": "43033d1a089392525788cb2e677b260d0e56c2f4b796c015cab2caa56483554e",
@@ -33219,15 +33219,15 @@
     },
     {
       "sha": "7daf9b06ed7840c25de7ecf900c989dcca0c2c5dcb75fdb3769bac682d1003a7",
-      "name": "Yamaha WaveRunner 93╨í46 — коррекция пробега (EEPROM 93C46)",
+      "name": "Yamaha WaveRunner 93С46 — коррекция пробега (EEPROM 93C46)",
       "folder": "Dashboard/Yamaha",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+      "canonical_path": "Calculators/Dashboard/Jet ski/Yamaha WaveRunner 93С46.cal",
       "paths": [
-        "Calculators/Dashboard/Jet ski/Yamaha WaveRunner 93╨í46.cal"
+        "Calculators/Dashboard/Jet ski/Yamaha WaveRunner 93С46.cal"
       ]
     },
     {
@@ -33600,15 +33600,15 @@
     },
     {
       "sha": "7f616dfb7b8fb1f6660049ee0df01bcf16caf543d6dc63b941faef489f81594d",
-      "name": "Nissan Cliper 93╤ü56 Yazaki — коррекция пробега (EEPROM 93C56)",
+      "name": "Nissan Cliper 93с56 Yazaki — коррекция пробега (EEPROM 93C56)",
       "folder": "Dashboard/Nissan",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/Cliper 93╤ü56 Yazaki.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/Cliper 93с56 Yazaki.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/Cliper 93╤ü56 Yazaki.cal"
+        "Calculators/Dashboard/Nissan/Cliper 93с56 Yazaki.cal"
       ]
     },
     {
@@ -38393,15 +38393,15 @@
     },
     {
       "sha": "932283536655090587f9dfb69502877e324bcf9c777f1c9d1849db08dbff61f2",
-      "name": "Shaanxi SX3255DR384 93╨í66 — коррекция пробега (EEPROM 93C66)",
+      "name": "Shaanxi SX3255DR384 93С66 — коррекция пробега (EEPROM 93C66)",
       "folder": "Dashboard/Shaanxi",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Shaanxi/SX3255DR384 93╨í66.cal",
+      "canonical_path": "Calculators/Dashboard/Shaanxi/SX3255DR384 93С66.cal",
       "paths": [
-        "Calculators/Dashboard/Shaanxi/SX3255DR384 93╨í66.cal"
+        "Calculators/Dashboard/Shaanxi/SX3255DR384 93С66.cal"
       ]
     },
     {
@@ -38447,15 +38447,15 @@
     },
     {
       "sha": "934bf67fbdb2f22f0ca2c638a34bca579fec3a74d57fb1f1d2bf748b38370270",
-      "name": "Toyota Ractis 2011╨│ 93╤ü66 — коррекция пробега (EEPROM 93C66)",
+      "name": "Toyota Ractis 2011г 93с66 — коррекция пробега (EEPROM 93C66)",
       "folder": "Dashboard/Toyota",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Toyota/Toyota Ractis 2011╨│  93╤ü66.cal",
+      "canonical_path": "Calculators/Dashboard/Toyota/Toyota Ractis 2011г  93с66.cal",
       "paths": [
-        "Calculators/Dashboard/Toyota/Toyota Ractis 2011╨│  93╤ü66.cal"
+        "Calculators/Dashboard/Toyota/Toyota Ractis 2011г  93с66.cal"
       ]
     },
     {
@@ -40165,15 +40165,15 @@
     },
     {
       "sha": "997b8710a6d161d432273f48c25cc7f47bb6b05c32fb6933a961f8fbd10bef6a",
-      "name": "Nissan X trail ╨Ñ╨¥Z256 — коррекция пробега",
+      "name": "Nissan X trail ХНZ256 — коррекция пробега",
       "folder": "Dashboard/Nissan",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/X-trail 9S12ХНZ256.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal"
+        "Calculators/Dashboard/Nissan/X-trail 9S12ХНZ256.cal"
       ]
     },
     {
@@ -44507,15 +44507,15 @@
     },
     {
       "sha": "aaff42c7c44910db8feb1044acf1ab9aea5a2a14573d9bf66a6b073f5454d597",
-      "name": "BRP SEA DOO GS 93╨í56 — коррекция пробега",
+      "name": "BRP SEA DOO GS 93С56 — коррекция пробега",
       "folder": "Dashboard/BRP",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Jet ski/SEA-DOO GS 93╨í56.cal",
+      "canonical_path": "Calculators/Dashboard/Jet ski/SEA-DOO GS 93С56.cal",
       "paths": [
-        "Calculators/Dashboard/Jet ski/SEA-DOO GS 93╨í56.cal"
+        "Calculators/Dashboard/Jet ski/SEA-DOO GS 93С56.cal"
       ]
     },
     {
@@ -45717,15 +45717,15 @@
     },
     {
       "sha": "af7c5a1514331f5c432521c7581a20ab8b86d82b9125d3105a7d523bb4f7669f",
-      "name": "Hyundai NF 93╨í56 — коррекция пробега (EEPROM 93C56)",
+      "name": "Hyundai NF 93С56 — коррекция пробега (EEPROM 93C56)",
       "folder": "Dashboard/Hyundai",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Hyundai/NF 93╨í56.cal",
+      "canonical_path": "Calculators/Dashboard/Hyundai/NF 93С56.cal",
       "paths": [
-        "Calculators/Dashboard/Hyundai/NF 93╨í56.cal"
+        "Calculators/Dashboard/Hyundai/NF 93С56.cal"
       ]
     },
     {
@@ -48240,17 +48240,17 @@
     },
     {
       "sha": "b94d24001a84f301e88d19ac4b9a9903e49a68a9a7f45a47dbd549e8f6a3221e",
-      "name": "KAMAZ ╨ƒA 8090 Pic 18F2520 — коррекция пробега",
+      "name": "KAMAZ ПA 8090 Pic 18F2520 — коррекция пробега",
       "folder": "Dashboard/KAMAZ",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/KAMAZ/╨ƒ╨É 8090 ╨æ╨╡╨╗╨░╤Ç╤â╤ü╤î/╨ƒA 8090 Pic 18F2520.cal",
+      "canonical_path": "Calculators/Dashboard/KAMAZ/ПА 8090 Беларусь/ПA 8090 Pic 18F2520.cal",
       "paths": [
-        "Calculators/Dashboard/KAMAZ/╨ƒ╨É 8090 ╨æ╨╡╨╗╨░╤Ç╤â╤ü╤î/╨ƒA 8090 Pic 18F2520.cal"
+        "Calculators/Dashboard/KAMAZ/ПА 8090 Беларусь/ПA 8090 Pic 18F2520.cal"
       ],
-      "old_name": "KAMAZ ╨ƒ╨É 8090 ╨æ╨╡╨╗╨░╤Ç╤â╤ü╤î ╨ƒA 8090 Pic 18F2520 — коррекция пробега"
+      "old_name": "KAMAZ ПА 8090 Беларусь ПA 8090 Pic 18F2520 — коррекция пробега"
     },
     {
       "sha": "b94d97daf5e4f9369d44874761fed50b56a40d8733ac28ae051592bffd11d5fd",
@@ -49060,15 +49060,15 @@
     },
     {
       "sha": "bd3aefd033309d978f36022e99c570fec92ff7e268902991429967f9427babf5",
-      "name": "UAZ ╨ÿ╨ó╨ò╨¢╨£╨É — коррекция пробега",
+      "name": "UAZ ИТЕЛМА — коррекция пробега",
       "folder": "Dashboard/UAZ",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/UAZ/UAZ  ╨ÿ╨ó╨ò╨¢╨£╨É  9S12HY48.cal",
+      "canonical_path": "Calculators/Dashboard/UAZ/UAZ  ИТЕЛМА  9S12HY48.cal",
       "paths": [
-        "Calculators/Dashboard/UAZ/UAZ  ╨ÿ╨ó╨ò╨¢╨£╨É  9S12HY48.cal"
+        "Calculators/Dashboard/UAZ/UAZ  ИТЕЛМА  9S12HY48.cal"
       ]
     },
     {
@@ -55350,15 +55350,15 @@
     },
     {
       "sha": "d7e6a02b21889252c790d3d212909bd68f7dabb6ab806036085af150fefff372",
-      "name": "Nissan X-Trail ╤ü2012╨│ — коррекция пробега",
+      "name": "Nissan X-Trail с2012г — коррекция пробега",
       "folder": "Dashboard/Nissan/X-Trail",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/X-Trail/X-trail ╤ü2012╨│ 9S12XHZ256 ver 1.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/X-Trail/X-trail с2012г 9S12XHZ256 ver 1.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/X-Trail/X-trail ╤ü2012╨│ 9S12XHZ256 ver 1.cal"
+        "Calculators/Dashboard/Nissan/X-Trail/X-trail с2012г 9S12XHZ256 ver 1.cal"
       ]
     },
     {
@@ -59865,15 +59865,15 @@
     },
     {
       "sha": "ec2cd3b1753d8213ecba58822a5e9dfc57fd3b89fc9f9399ad134756966353fe",
-      "name": "VAZ Schetmash 25040 3801010 ╨ó — коррекция пробега",
+      "name": "VAZ Schetmash 25040 3801010 Т — коррекция пробега",
       "folder": "Dashboard/VAZ",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/VAZ/Schetmash 25040 3801010-╨ó.cal",
+      "canonical_path": "Calculators/Dashboard/VAZ/Schetmash 25040 3801010-Т.cal",
       "paths": [
-        "Calculators/Dashboard/VAZ/Schetmash 25040 3801010-╨ó.cal"
+        "Calculators/Dashboard/VAZ/Schetmash 25040 3801010-Т.cal"
       ]
     },
     {
@@ -63429,15 +63429,15 @@
     },
     {
       "sha": "f92466dd8e788eb1d922986223289cccd38dcea64a2bc5d857a7bee0cc83f213",
-      "name": "Nissan Presia 93╤ü46 Yazaki — коррекция пробега (EEPROM 93C46)",
+      "name": "Nissan Presia 93с46 Yazaki — коррекция пробега (EEPROM 93C46)",
       "folder": "Dashboard/Nissan",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Nissan/Presia 93╤ü46 Yazaki.cal",
+      "canonical_path": "Calculators/Dashboard/Nissan/Presia 93с46 Yazaki.cal",
       "paths": [
-        "Calculators/Dashboard/Nissan/Presia 93╤ü46 Yazaki.cal"
+        "Calculators/Dashboard/Nissan/Presia 93с46 Yazaki.cal"
       ]
     },
     {
@@ -64994,15 +64994,15 @@
     },
     {
       "sha": "ff9ba8760d38dd93aac9e0b4648278d49114c7d72777d770ffc0a4d58f6727d1",
-      "name": "Toyota Camry 93╤ü66 — коррекция пробега (EEPROM 93C66)",
+      "name": "Toyota Camry 93с66 — коррекция пробега (EEPROM 93C66)",
       "folder": "Dashboard/Toyota/Camry",
       "operation": "коррекция пробега",
       "sources": [
         "Dashboard"
       ],
-      "canonical_path": "Calculators/Dashboard/Toyota/Camry/Camry 93╤ü66  New Denso v2.cal",
+      "canonical_path": "Calculators/Dashboard/Toyota/Camry/Camry 93с66  New Denso v2.cal",
       "paths": [
-        "Calculators/Dashboard/Toyota/Camry/Camry 93╤ü66  New Denso v2.cal"
+        "Calculators/Dashboard/Toyota/Camry/Camry 93с66  New Denso v2.cal"
       ]
     },
     {

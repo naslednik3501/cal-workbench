@@ -22892,7 +22892,7 @@
       "name": "Audi CONCERT CD WIDE AUZ2Z3 8P0 035 186 GX — код магнитолы (EEPROM 24C16)",
       "folder": "CarRadio/Audi",
       "paths": [
-        "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186 GX 24╤ü16.cal"
+        "Calculators/CarRadio/Audi/CONCERT CD WIDE AUZ2Z3  8P0 035 186 GX 24с16.cal"
       ],
       "reason": "в Carradio.txt нет файла с тем же именем (модель/версия не подтверждена)"
     },
@@ -23306,7 +23306,7 @@
       "name": "Renault AGC 0060RF DAEWOO — код магнитолы",
       "folder": "CarRadio/Renault/Duster",
       "paths": [
-        "Calculators/CarRadio/Renault/Duster/AGC-0060RF  DAEWOO  24╨í128.cal"
+        "Calculators/CarRadio/Renault/Duster/AGC-0060RF  DAEWOO  24С128.cal"
       ],
       "reason": "в Carradio.txt нет файла с тем же именем (модель/версия не подтверждена)"
     },
@@ -23531,7 +23531,7 @@
       "name": "Volkswagen GAMMA VWZ1Z3 1C0 035 186 — код магнитолы (EEPROM 25LC160)",
       "folder": "CarRadio/Volkswagen",
       "paths": [
-        "Calculators/CarRadio/VW/GAMMA  VWZ1Z3  1╨í0 035 186.cal"
+        "Calculators/CarRadio/VW/GAMMA  VWZ1Z3  1С0 035 186.cal"
       ],
       "reason": "в Carradio.txt нет файла с тем же именем (модель/версия не подтверждена)"
     },
