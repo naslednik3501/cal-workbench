@@ -1,6 +1,6 @@
 {
  "task": "T-008",
- "note": "All paths at which each SHA-256 occurs in the preserved source archive. Path spelling is copied from the private index; folder names such as '╨₧╨▒╨╜╨╛╨▓╤ï' are UTF-8 Cyrillic 'Обновы' ('updates') shown through a legacy code page, kept unchanged for exact matching.",
+ "note": "All paths at which each SHA-256 occurs in the preserved source archive. Path spelling is copied from the private index; folder names such as 'Обновы' are UTF-8 Cyrillic 'Обновы' ('updates') shown through a legacy code page, kept unchanged for exact matching.",
  "generatedFrom": "naslednik3501/iprocal-sources indexes/by-archive/8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea.jsonl (shallow clone at ee9a08fb)",
  "archive": "8e6b5f0b2418099859df5c724ddc6e2fa87a276947d37993fc54bc0fe3e717ea",
  "updatesFolderStatistics": {
@@ -52,8 +52,8 @@
    "Calculators/Dashboard/Skoda/Fabia 93C86 2006 decryptor.cal"
   ],
   "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba": [
-   "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
-   "Calculators/SRS/Huyndai/95910-3╨Ü400.cal"
+   "Calculators/Airbag/Huyndai/95910-3К400.cal",
+   "Calculators/SRS/Huyndai/95910-3К400.cal"
   ],
   "c1188383e16fc849ceb0f7533ca2735ead8e125026d9437930b7c8b33e3d623b": [
    "Calculators/Airbag/Ford/Mondeo/603 95 10 00.cal",
@@ -64,14 +64,14 @@
    "Calculators/SRS/Ford/Fusion/2S6T 14B056 BN.cal"
   ],
   "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f": [
-   "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal"
+   "Calculators/Airbag/Nissan/Обновы/0 285 001 420.cal"
   ],
   "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54": [
-   "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
-   "Calculators/SRS/Huyndai/Sonata/95910-3╨Ü400.cal"
+   "Calculators/Airbag/Huyndai/Sonata/95910-3К400.cal",
+   "Calculators/SRS/Huyndai/Sonata/95910-3К400.cal"
   ],
   "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff": [
-   "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal"
+   "Calculators/Airbag/Honda/Обновы/SEA-G820-M1.cal"
   ],
   "faa4784def192d83d899083b360c2cc805dd9f6653bf7042c571980bf31b2c1a": [
    "Calculators/Fabia 93C86 2006 decryptor.cal"

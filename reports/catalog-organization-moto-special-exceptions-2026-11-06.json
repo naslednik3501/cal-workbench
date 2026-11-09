@@ -41,15 +41,15 @@
       "exact": 179,
       "reconciled": [
         {
-          "source_path": "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal",
+          "source_path": "Calculators/MOTO/Snowmobile/BRP/24с04 Proba.cal",
           "full_list_path": "Calculators/MOTO/Snowmobile/BRP/24ё04 Proba.cal"
         },
         {
-          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal",
           "full_list_path": "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╤56.cal"
         },
         {
-          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+          "source_path": "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal",
           "full_list_path": "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╤46.cal"
         }
       ]
@@ -60,15 +60,15 @@
       "exact": 429,
       "reconciled": [
         {
-          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
           "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24ё04 Proba.cal"
         },
         {
-          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal",
           "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╤56.cal"
         },
         {
-          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+          "source_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal",
           "full_list_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╤46.cal"
         }
       ]
@@ -1807,8 +1807,8 @@
       "sha": "556bb48daa21e39e9d470bf6f7ae0a4c8f7a1cf9e962b1a4afa06734b2db5237",
       "group": "Mototechnics",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
-        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
+        "Calculators/MOTO/Snowmobile/BRP/24с04 Proba.cal"
       ],
       "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
       "currentName": "BRP 24C04 Proba — коррекция пробега и моточасов",
@@ -1895,8 +1895,8 @@
       "sha": "2287a466d1828a33de172955bdb8518047b313604f7d7a37e1410c5bf9685683",
       "group": "Mototechnics",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal"
       ],
       "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/BRP",
       "currentName": "Sea-Doo GS 93C56 — коррекция пробега",
@@ -1906,8 +1906,8 @@
       "sha": "f90cbd6a323f7cc90d5c2cd5653979d75d56d081f008ccc206f4daa88c257e0f",
       "group": "Mototechnics",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal"
       ],
       "currentFolder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha",
       "currentName": "Yamaha WaveRunner 93C46 — коррекция моточасов",

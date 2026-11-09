@@ -448,8 +448,8 @@
     },
     {
       "path": "catalog-organization-airbag.js",
-      "bytes": 942683,
-      "sha256": "d0ac60103d4af8c253b9d96306f01e73906b99aac2f738bb7dc8db5b9ebb39f1"
+      "bytes": 942617,
+      "sha256": "18325992f527fc6d35234b51c78d24759b73ba13f7bce8d0d652d8fa2fc01542"
     },
     {
       "path": "catalog-organization-asia-acura.js",
@@ -498,8 +498,8 @@
     },
     {
       "path": "catalog-organization-dashboard.js",
-      "bytes": 974417,
-      "sha256": "2592bb52e92d38af11721c77481fd359f7fe3a7f44e20363bd8e53fe017cef9d"
+      "bytes": 974260,
+      "sha256": "2431fd143ae90a70a60ac1d19f6db211e06e33ddb5328ba4b7d7e658cbb74518"
     },
     {
       "path": "catalog-organization-ecu.js",
@@ -593,8 +593,8 @@
     },
     {
       "path": "catalog.js",
-      "bytes": 4489025,
-      "sha256": "3dd2ab33972132d290ebde9686b2e4025d216849ef3d077434ac171a9d212c8f"
+      "bytes": 4485797,
+      "sha256": "a0a36e5ed96c97492d5ab15dedda4ebd5e4af04c2b06f0a91c92802662de40a8"
     },
     {
       "path": "engine.js",
@@ -1648,8 +1648,8 @@
     },
     {
       "path": "reports/T-008-pair-differences-2026-11-04.json",
-      "bytes": 41267,
-      "sha256": "bc09be3baa6082ad6465c86f9024c15895529eaac0a16549f0c3a4bef017651b"
+      "bytes": 41209,
+      "sha256": "81dbaef44b1fb4d2f11f18a3719a2a24fab8c9a1dec58bc03ffe2d668045ea44"
     },
     {
       "path": "reports/T-008-pair-differences-2026-11-04.md",
@@ -1658,8 +1658,8 @@
     },
     {
       "path": "reports/T-008-provenance-2026-11-04.json",
-      "bytes": 3818,
-      "sha256": "02fcdad3b14d68121a7ae90eac1f98575299df540b637a1d93888dd416741590"
+      "bytes": 3737,
+      "sha256": "915ef75940c723c728bebe9f0986e2184c17d9eb0cb3657013aadeef5a7baa1f"
     },
     {
       "path": "reports/T-010-image-restoration-2026-11-04.md",
@@ -1668,8 +1668,8 @@
     },
     {
       "path": "reports/T-010-remainder-2026-11-04.json",
-      "bytes": 715112,
-      "sha256": "aa9f4dda823533c6c67e9fef9c2cc91078b46b859404a9dc75b07c6f13232975"
+      "bytes": 714662,
+      "sha256": "2aed9d14e72bc1d3adb65204ccc506278705236fb0b138d3a3d7f962ee05f137"
     },
     {
       "path": "reports/T-012-provenance-2026-11-04.json",
@@ -1718,8 +1718,8 @@
     },
     {
       "path": "reports/T-016-group-review-2026-11-04.json",
-      "bytes": 237239,
-      "sha256": "7700d8a7d06da95e05c4ec9c9142787bbe5e44a592dd6e960801e459e5d56e88"
+      "bytes": 237104,
+      "sha256": "4f1c9fdfb13fcb5e13a78511c84bc4fcd968ba87bf946fd3d1a7e32c7b6bace1"
     },
     {
       "path": "reports/T-016-group-review-2026-11-04.md",
@@ -1738,13 +1738,13 @@
     },
     {
       "path": "reports/binary-readers-2026-11-03.json",
-      "bytes": 63723,
-      "sha256": "126696d8b2000ce3c10bb1739a4704f0e1bbbf543ba9cc05173b31c5e4897a6c"
+      "bytes": 63720,
+      "sha256": "8acf6e67c12925b522df32c5f19a2f7048ae9a5eb8837f5e9087dbf28e7a96f1"
     },
     {
       "path": "reports/binary-resolution-2026-11-03.json",
-      "bytes": 78825,
-      "sha256": "53d4f6a8bb85847554916d9a75c3fc6776bc917ca938e1d8b1dab1f8abdc8bb9"
+      "bytes": 78822,
+      "sha256": "87257444007f7bb898ea84eef82c04b7b670933a08fc758fe1c1a2e187026cc8"
     },
     {
       "path": "reports/calculator-coverage-2026-11-02.json",
@@ -1753,8 +1753,8 @@
     },
     {
       "path": "reports/calculator-coverage-2026-11-03.json",
-      "bytes": 151338,
-      "sha256": "846ccf9b02ed94fbbce0f7642d379102e4bab08a0cd45c84fad7a7c690db7620"
+      "bytes": 151335,
+      "sha256": "998c38a9b89ce6f9e96ca35a16c5586534731322777d1b8a19b619b12bcda594"
     },
     {
       "path": "reports/calculator-coverage-binary-resolution-2026-11-03.json",
@@ -1768,8 +1768,8 @@
     },
     {
       "path": "reports/catalog-airbag-reconciliation-2026-11-06.json",
-      "bytes": 1899789,
-      "sha256": "65f32e9c3cc137568056d63d8503a77593b540fd1905224b0f40b1382f8a63c7"
+      "bytes": 1898668,
+      "sha256": "7534d1090011482da1cd1f2a791730f593dc50607fa4bc80f21e23889b74969d"
     },
     {
       "path": "reports/catalog-carradio-exceptions-2026-11-06.md",
@@ -1778,8 +1778,8 @@
     },
     {
       "path": "reports/catalog-carradio-reconciliation-2026-11-06.json",
-      "bytes": 962116,
-      "sha256": "0c88d02b8239ef852bfb80017c360329e53320da220de355efd67048321d3215"
+      "bytes": 962107,
+      "sha256": "49c2e8443fefcd3d59fbd137134423492e9f7425b957dcf4f9bcf5cd2101f803"
     },
     {
       "path": "reports/catalog-ecu-exceptions-2026-11-06.md",
@@ -1818,8 +1818,8 @@
     },
     {
       "path": "reports/catalog-organization-asia-exceptions-2026-11-06.json",
-      "bytes": 241725,
-      "sha256": "ee4e49dabae62a61e1f7d2c345c61868c1a87d67aeece64bee4909d2690601d1"
+      "bytes": 241713,
+      "sha256": "f1fa471c19efde8b95e7a89b104cb357fc18be59fefcf9f39ba4ba1f60a64772"
     },
     {
       "path": "reports/catalog-organization-crypto-exceptions-2026-11-06.json",
@@ -1828,8 +1828,8 @@
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.json",
-      "bytes": 2556645,
-      "sha256": "0fa693ef7a32267c5c70331147432865339517e05f30510bfd113213559aa700"
+      "bytes": 2556186,
+      "sha256": "11b5c2954f093529656b0c0402a856f4d98d44f812af8b4c8eeb3de59f64781b"
     },
     {
       "path": "reports/catalog-organization-dashboard-2026-11-04.md",
@@ -1843,8 +1843,8 @@
     },
     {
       "path": "reports/catalog-organization-eu-us-ru-exceptions-2026-11-06.json",
-      "bytes": 113968,
-      "sha256": "7df9b85eb6f5f1850321ce50d797fab48252efc35de1e40a87cc8d72eb5d37c5"
+      "bytes": 113962,
+      "sha256": "5c0c716c14e61645410c3cf11084c682ea0d1386ee7ad8cc00f2001834f702f0"
     },
     {
       "path": "reports/catalog-organization-immo-2026-11-04.json",
@@ -1858,13 +1858,13 @@
     },
     {
       "path": "reports/catalog-organization-moto-special-exceptions-2026-11-06.json",
-      "bytes": 120534,
-      "sha256": "237c882c74291bb32f07ea683d68f775fbfa8ede01585ca7f200a728ac34e621"
+      "bytes": 120498,
+      "sha256": "245ad5d85b87dbac5a6c164a61314e5a5d65d9196831a72185a98591c0aeec72"
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.json",
-      "bytes": 1047846,
-      "sha256": "6f29f0647bae4b79b65f53cdf234bb32f0816f3084d7b120b99920fe6720f996"
+      "bytes": 1047828,
+      "sha256": "82a9e4b7ee76caedf4b32b2b510e2ea3a1e94cf9437922dd5c1a17e42e1992d5"
     },
     {
       "path": "reports/catalog-organization-radio-2026-11-04.md",
@@ -1873,8 +1873,8 @@
     },
     {
       "path": "reports/catalog-organization-remainder-2026-11-04.json",
-      "bytes": 1138988,
-      "sha256": "7337806b943e97ed18331565cf6d887dbab180623b0c5951bf24b794e9ac1e14"
+      "bytes": 1138841,
+      "sha256": "15826d9cc4d56f9790ef6c749f66a0077dadd6b8cd20ce000e5d4cbc38d7fc48"
     },
     {
       "path": "reports/catalog-organization-remainder-2026-11-04.md",
@@ -1893,8 +1893,8 @@
     },
     {
       "path": "reports/catalog-organization-utilities-2026-11-04.json",
-      "bytes": 193126,
-      "sha256": "829f344e14204d834e9b53ee1be0d7ccd1633f3913794d0123d876e8aa5129ef"
+      "bytes": 193117,
+      "sha256": "abbe3b08051a2f6de89166c33c9362726d595a8efa1280760d0fba7d1d739691"
     },
     {
       "path": "reports/catalog-organization-utilities-2026-11-04.md",
@@ -1953,8 +1953,8 @@
     },
     {
       "path": "reports/source-comparison-2026-11-02.json",
-      "bytes": 7949,
-      "sha256": "f1dcd3c85d287461528da11a63779216dc15a695f61ee5abf686a65b0f33a8c5"
+      "bytes": 7897,
+      "sha256": "6145a3a9d3432590d0de8a94122bc5c694961af2d218af02c1b8b360ab201975"
     },
     {
       "path": "reports/source-storage-status-2026-11-02.json",
@@ -1963,13 +1963,13 @@
     },
     {
       "path": "scope-data.js",
-      "bytes": 203462,
-      "sha256": "4da1d327299c48728df683493d4c1b739e1714ab301e8d02d8a4c055a860c274"
+      "bytes": 203438,
+      "sha256": "7759d65de2f723081eae007de9548f2cadce206c404c2b33374d91bcbfef5a39"
     },
     {
       "path": "scope-registry.json",
-      "bytes": 179135,
-      "sha256": "17d9b1c3436a1745b4cb53f9c8901a243f62dbe4d2764066492bdeb784be6136"
+      "bytes": 179123,
+      "sha256": "aca087f6d8890e8197c7f7423e507cd7db71400ab1eebeecb58b05456c348907"
     },
     {
       "path": "style.css",

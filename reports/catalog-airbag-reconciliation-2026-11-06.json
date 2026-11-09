@@ -1309,7 +1309,7 @@
       "sha": "13fb7f00afe9444a67a6da2a6d756478b136ec477bfac3cfe09f9c003c1f8370",
       "folder": "Airbag/Mercedes",
       "name": "Mercedes TRW6626 Q3 — сброс Crash (EEPROM 25C320)",
-      "path": "Calculators/Airbag/Mercedes/╨₧╨▒╨╜╨╛╨▓╤ï/TRW6626 Q3.cal"
+      "path": "Calculators/Airbag/Mercedes/Обновы/TRW6626 Q3.cal"
     },
     {
       "sha": "1405d2ea05a86056c89ff76fb3e481af7f60898a300c0129cbc9e9fc7fbc2c91",
@@ -3427,7 +3427,7 @@
       "sha": "39454798a6e72e6c3f96162a218f91de1ee75c8b21738a5ae1c38346307430ee",
       "folder": "Airbag/Lexus",
       "name": "Lexus 89170-0e020 — сброс Crash",
-      "path": "Calculators/Airbag/Lexus/╨₧╨▒╨╜╨╛╨▓╤ï/89170-0e020.cal"
+      "path": "Calculators/Airbag/Lexus/Обновы/89170-0e020.cal"
     },
     {
       "sha": "39474053481307d9bf5973012b20dec0d023b6dc9b45ec4f95275e615c47dc39",
@@ -6522,8 +6522,8 @@
     {
       "sha": "6881c563fd723924822a0738b04449bc745c961ea9a612e16ab4966520334c0f",
       "folder": "Airbag/Suzuki/Jimny",
-      "name": "Suzuki Jimny 38910-76JD0 93╤ü56 — сброс Crash (EEPROM 93C56) (Airbag)",
-      "path": "Calculators/Airbag/Suzuki/Jimny/38910-76JD0  (93╤ü56).cal"
+      "name": "Suzuki Jimny 38910-76JD0 93с56 — сброс Crash (EEPROM 93C56) (Airbag)",
+      "path": "Calculators/Airbag/Suzuki/Jimny/38910-76JD0  (93с56).cal"
     },
     {
       "sha": "68ca47753c7e693d7887adec97a8807341b7c569f91433ddec3a2c73009600c2",
@@ -7380,8 +7380,8 @@
     {
       "sha": "779f56c95287d4ad5c18337986f6e6b6ad55dbb8d8fa6e29dc9e3122f805100b",
       "folder": "Airbag/Suzuki/Jimny",
-      "name": "Suzuki Jimny 38910-76JD0 93╤ü56 — сброс Crash (EEPROM 93C56) (SRS)",
-      "path": "Calculators/SRS/Suzuki/Jimny/38910-76JD0  (93╤ü56).cal"
+      "name": "Suzuki Jimny 38910-76JD0 93с56 — сброс Crash (EEPROM 93C56) (SRS)",
+      "path": "Calculators/SRS/Suzuki/Jimny/38910-76JD0  (93с56).cal"
     },
     {
       "sha": "77acbf14e1a1dff28859b35933ab859383078cb511c3f4ff601701ad7a34ee41",
@@ -7602,8 +7602,8 @@
     {
       "sha": "7b411820f61749cf770449c6c60ef2bc873e00158e552cc3f607c5795f6c1752",
       "folder": "Airbag/Opel/Astra",
-      "name": "Opel Astra 09-229-304-╨ÆH — сброс Crash",
-      "path": "Calculators/Airbag/Opel/Astra/09-229-304-╨ÆH.cal"
+      "name": "Opel Astra 09-229-304-ВH — сброс Crash",
+      "path": "Calculators/Airbag/Opel/Astra/09-229-304-ВH.cal"
     },
     {
       "sha": "7b4c6228d340dd0552a60bee782ac8bcc0329bf83e0ef417787577fd599ea60e",
@@ -8029,7 +8029,7 @@
       "sha": "81ec7919269df9f12607088afd502f685fc2bc13873634fe8dfe15b67b999fd6",
       "folder": "Airbag/Mercedes",
       "name": "Mercedes TRW6626 Q3 — сброс Crash (EEPROM 25C320) · вариант 3",
-      "path": "Calculators/SRS/Mercedes/╨₧╨▒╨╜╨╛╨▓╤ï/TRW6626 Q3.cal"
+      "path": "Calculators/SRS/Mercedes/Обновы/TRW6626 Q3.cal"
     },
     {
       "sha": "82029af3e6fe09fbac5ad08a1dede84de621e37fbcc3749539dd46f0a512f066",
@@ -9691,7 +9691,7 @@
       "sha": "9d890ed57901604d98d33865c8bf806cd9794af810d94a5d5ec30aa345d3ccd7",
       "folder": "Airbag/Lexus",
       "name": "Lexus 89170-0W080 — сброс Crash",
-      "path": "Calculators/Airbag/Lexus/╨₧╨▒╨╜╨╛╨▓╤ï/89170-0W080.cal"
+      "path": "Calculators/Airbag/Lexus/Обновы/89170-0W080.cal"
     },
     {
       "sha": "9da47a154ca537508492f04012f349b9b08311515d3c8282f6fb12da86f2ea74",
@@ -10080,8 +10080,8 @@
     {
       "sha": "a406c1edd68d99bec33696b684b0912c82ada30fd5f14dc686ec0c4dbe3216e8",
       "folder": "Airbag/Opel/Astra",
-      "name": "Opel Astra 09 229 304 ╨ÆH — сброс Crash (SRS)",
-      "path": "Calculators/SRS/Opel/Astra/09 229 304 ╨ÆH  (HC08AZ32).cal"
+      "name": "Opel Astra 09 229 304 ВH — сброс Crash (SRS)",
+      "path": "Calculators/SRS/Opel/Astra/09 229 304 ВH  (HC08AZ32).cal"
     },
     {
       "sha": "a40b7251412ebdd465a5d53a66ff874822d0bf3a2f15c4710224082463bdbd27",
@@ -10674,8 +10674,8 @@
     {
       "sha": "ade484f2df6c2a846b984871a8bc83cec51ac77ffc7b1cc56c8ccc31c1109e44",
       "folder": "Airbag/Hyundai/Getz",
-      "name": "Hyundai Getz 95910-1╨í600 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/Getz/95910-1╨í600.cal"
+      "name": "Hyundai Getz 95910-1С600 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/Getz/95910-1С600.cal"
     },
     {
       "sha": "adf091d9b9ebf2a6ce8db9b3b6b776ac17622f42bf3a8b82263893f1403504eb",
@@ -11484,8 +11484,8 @@
     {
       "sha": "bc7b55bddb39759180758e4aabb85c2f16e1b189f36763cfe609c00044710310",
       "folder": "Airbag/Opel/Astra",
-      "name": "Opel Astra 09 229 304 ╨ÆH — сброс Crash (Airbag)",
-      "path": "Calculators/Airbag/Opel/Astra/09 229 304 ╨ÆH  (HC08AZ32).cal"
+      "name": "Opel Astra 09 229 304 ВH — сброс Crash (Airbag)",
+      "path": "Calculators/Airbag/Opel/Astra/09 229 304 ВH  (HC08AZ32).cal"
     },
     {
       "sha": "bc7e4da833cab6595e7ddb94a4bb75b00e50cf6342eaf9b71288cad62b853c07",
@@ -12540,8 +12540,8 @@
     {
       "sha": "cd21efcf94993c885e383135ab30b82c2c339d3955fa0a73c00d66026670e529",
       "folder": "Airbag/Hyundai/Getz",
-      "name": "Hyundai Getz 95910-1╨í000 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/Getz/95910-1╨í000.cal"
+      "name": "Hyundai Getz 95910-1С000 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/Getz/95910-1С000.cal"
     },
     {
       "sha": "cd2c07bd18f6a939255327fd8416afedf9f9fc19ad2958e9a4c007a0fbc0d25a",
@@ -13884,8 +13884,8 @@
     {
       "sha": "e4679fbd8c30cf73edfa5ada56a190b4763fff55ea3106e34d65e07cb31806f4",
       "folder": "Airbag/Hyundai/Sonata",
-      "name": "Hyundai Sonata 95910-3╨Ü410 — сброс Crash (EEPROM 25640)",
-      "path": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü410.cal"
+      "name": "Hyundai Sonata 95910-3К410 — сброс Crash (EEPROM 25640)",
+      "path": "Calculators/Airbag/Huyndai/Sonata/95910-3К410.cal"
     },
     {
       "sha": "e46fe110ef96999a3617f8786a076bfcade068822162d04cfcc12294e67b554e",
@@ -14274,8 +14274,8 @@
     {
       "sha": "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54",
       "folder": "Airbag/Hyundai/Sonata",
-      "name": "Hyundai Sonata 95910-3╨Ü400 — сброс Crash (EEPROM 25640)",
-      "path": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal"
+      "name": "Hyundai Sonata 95910-3К400 — сброс Crash (EEPROM 25640)",
+      "path": "Calculators/Airbag/Huyndai/Sonata/95910-3К400.cal"
     },
     {
       "sha": "eb0bb77a7484670396eb11fc1825efcf34859a1e4e914d589ec6120c5d4d82e1",
@@ -15054,8 +15054,8 @@
     {
       "sha": "f8f4ef8e008c28de1d48561bd7811e3de099cb7bebcda9f96eb1817b87ace668",
       "folder": "Airbag/Hyundai/Getz",
-      "name": "Hyundai Getz 95910-1╨í100 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/Getz/95910-1╨í100.cal"
+      "name": "Hyundai Getz 95910-1С100 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/Getz/95910-1С100.cal"
     },
     {
       "sha": "f8f7f9dc39785f9daa974725d3d3d0104e611a2400a3ccc5a57e2db6ddb55dd8",
@@ -18639,8 +18639,8 @@
       "sha": "fafcc6feed715da3f244eacc56fcb3850ca1c5f650e57712a400539d4105689f",
       "from": "Airbag/Opel",
       "to": "Airbag/Opel/Astra",
-      "name": "Opel 09-229-304-╨ÆH — сброс Crash",
-      "path": "Calculators/Airbag/Opel/09-229-304-╨ÆH.cal",
+      "name": "Opel 09-229-304-ВH — сброс Crash",
+      "path": "Calculators/Airbag/Opel/09-229-304-ВH.cal",
       "reference": {
         "brand": "Opel",
         "model": "Astra",
@@ -19587,8 +19587,8 @@
       "sha": "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba",
       "from": "Airbag/Hyundai",
       "to": "Airbag/Hyundai/Sonata",
-      "name": "Hyundai 95910-3╨Ü400 — сброс Crash (EEPROM 25640)",
-      "path": "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+      "name": "Hyundai 95910-3К400 — сброс Crash (EEPROM 25640)",
+      "path": "Calculators/Airbag/Huyndai/95910-3К400.cal",
       "reference": {
         "brand": "Hyundai",
         "model": "Sonata",
@@ -19647,8 +19647,8 @@
       "sha": "cdf2e8ac0be5715aa9a28ae36ea51c1176683baddd04bfe9e6e40cf4103d9247",
       "from": "Airbag/Hyundai",
       "to": "Airbag/Hyundai/Getz",
-      "name": "Hyundai 95910-1╨í600 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/95910-1╨í600.cal",
+      "name": "Hyundai 95910-1С600 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/95910-1С600.cal",
       "reference": {
         "brand": "Hyundai",
         "model": "Getz",
@@ -19671,8 +19671,8 @@
       "sha": "4cb098d099cb4f7987ee00c87a6f68f26bac8bab970ad35ca58764c25794ca21",
       "from": "Airbag/Hyundai",
       "to": "Airbag/Hyundai/Getz",
-      "name": "Hyundai 95910-1╨í000 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/95910-1╨í000.cal",
+      "name": "Hyundai 95910-1С000 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/95910-1С000.cal",
       "reference": {
         "brand": "Hyundai",
         "model": "Getz",
@@ -19803,8 +19803,8 @@
       "sha": "a7c87a97cb12463db233b1cd9adf6916cc3f18dcbbfefcca7357482c84d17a3a",
       "from": "Airbag/Hyundai",
       "to": "Airbag/Hyundai/Getz",
-      "name": "Hyundai 95910-1╨í100 — сброс Crash (EEPROM 2404)",
-      "path": "Calculators/Airbag/Huyndai/95910-1╨í100.cal",
+      "name": "Hyundai 95910-1С100 — сброс Crash (EEPROM 2404)",
+      "path": "Calculators/Airbag/Huyndai/95910-1С100.cal",
       "reference": {
         "brand": "Hyundai",
         "model": "Getz",
@@ -26260,7 +26260,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Grandis",
       "name": "Mitsubishi MN141 401 — сброс Crash (EEPROM 95160)",
-      "path": "Calculators/Airbag/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MN141 401.cal",
+      "path": "Calculators/Airbag/Mitsubishi/обновы/MN141 401.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Grandis",
@@ -26272,7 +26272,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Pajero",
       "name": "Mitsubishi MR551784 — сброс Crash (EEPROM 93C56)",
-      "path": "Calculators/Airbag/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MR551784.cal",
+      "path": "Calculators/Airbag/Mitsubishi/обновы/MR551784.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Pajero",
@@ -26284,7 +26284,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Lancer",
       "name": "Mitsubishi W2T63871 — сброс Crash (EEPROM 95160)",
-      "path": "Calculators/Airbag/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/W2T63871.cal",
+      "path": "Calculators/Airbag/Mitsubishi/обновы/W2T63871.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Lancer",
@@ -26296,7 +26296,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Lancer",
       "name": "Mitsubishi MN141038 — сброс Crash (EEPROM 93C56)",
-      "path": "Calculators/Airbag/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MN141038.cal",
+      "path": "Calculators/Airbag/Mitsubishi/обновы/MN141038.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Lancer",
@@ -26308,7 +26308,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Space Wagon",
       "name": "Mitsubishi 0 285 001 787 — сброс Crash",
-      "path": "Calculators/Airbag/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/0 285 001 787.cal",
+      "path": "Calculators/Airbag/Mitsubishi/обновы/0 285 001 787.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Space Wagon",
@@ -27076,7 +27076,7 @@
       "from": "Airbag/Ford",
       "to": "Airbag/Ford/Fiesta",
       "name": "Ford 6S6T 14B056 KC — сброс Crash (EEPROM 95160)",
-      "path": "Calculators/Airbag/Ford/╨₧╨▒╨╜╨╛╨▓╤ï/6S6T 14B056 KC.cal",
+      "path": "Calculators/Airbag/Ford/Обновы/6S6T 14B056 KC.cal",
       "reference": {
         "brand": "Ford",
         "model": "Fiesta",
@@ -27496,7 +27496,7 @@
       "from": "Airbag/Mazda",
       "to": "Airbag/Mazda/Mazda 6",
       "name": "Mazda G31A 57 K30B — сброс Crash",
-      "path": "Calculators/Airbag/Mazda/╨₧╨▒╨╜╨╛╨▓╤ï/G31A 57 K30B M95320 ver2.cal",
+      "path": "Calculators/Airbag/Mazda/Обновы/G31A 57 K30B M95320 ver2.cal",
       "reference": {
         "brand": "Mazda",
         "model": "Mazda 6",
@@ -27508,7 +27508,7 @@
       "from": "Airbag/Mazda",
       "to": "Airbag/Mazda/Mazda 6",
       "name": "Mazda 57 K30 A — сброс Crash (EEPROM 95080)",
-      "path": "Calculators/Airbag/Mazda/╨₧╨▒╨╜╨╛╨▓╤ï/57 K30 A.cal",
+      "path": "Calculators/Airbag/Mazda/Обновы/57 K30 A.cal",
       "reference": {
         "brand": "Mazda",
         "model": "Mazda 6",
@@ -28408,7 +28408,7 @@
       "from": "Airbag/Chevrolet",
       "to": "Airbag/Chevrolet/Lacetti",
       "name": "Chevrolet 96 830 363 — сброс Crash (EEPROM 95080)",
-      "path": "Calculators/Airbag/Chevrolet/╨₧╨▒╨╜╨╛╨▓╤ï/96 830 363.cal",
+      "path": "Calculators/Airbag/Chevrolet/Обновы/96 830 363.cal",
       "reference": {
         "brand": "Chevrolet",
         "model": "Lacetti",
@@ -28816,7 +28816,7 @@
       "from": "Airbag/Nissan",
       "to": "Airbag/Nissan/Almera",
       "name": "Nissan 605 14 78 00 — сброс Crash (EEPROM 95080)",
-      "path": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/605 14 78 00 Autoliv.cal",
+      "path": "Calculators/Airbag/Nissan/Обновы/605 14 78 00 Autoliv.cal",
       "reference": {
         "brand": "Nissan",
         "model": "Almera",
@@ -29368,7 +29368,7 @@
       "from": "Airbag/Infiniti",
       "to": "Airbag/Infiniti/QX56",
       "name": "Infiniti QX56 988207S705 — сброс Crash (EEPROM 93C66) · вариант 2",
-      "path": "Calculators/Airbag/Infinity/╨╛╨▒╨╜╨╛╨▓╤ï/QX56_988207S705.cal",
+      "path": "Calculators/Airbag/Infinity/обновы/QX56_988207S705.cal",
       "reference": {
         "brand": "Infiniti",
         "model": "QX56",
@@ -29404,7 +29404,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Grandis",
       "name": "Mitsubishi MN141 401 — сброс Crash (EEPROM 95160) · вариант 3",
-      "path": "Calculators/SRS/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MN141 401.cal",
+      "path": "Calculators/SRS/Mitsubishi/обновы/MN141 401.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Grandis",
@@ -29416,7 +29416,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Pajero",
       "name": "Mitsubishi MR551784 — сброс Crash (EEPROM 93C56) · вариант 3",
-      "path": "Calculators/SRS/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MR551784.cal",
+      "path": "Calculators/SRS/Mitsubishi/обновы/MR551784.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Pajero",
@@ -29428,7 +29428,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Lancer",
       "name": "Mitsubishi W2T63871 — сброс Crash (EEPROM 95160) · вариант 3",
-      "path": "Calculators/SRS/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/W2T63871.cal",
+      "path": "Calculators/SRS/Mitsubishi/обновы/W2T63871.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Lancer",
@@ -29440,7 +29440,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Lancer",
       "name": "Mitsubishi MN141038 — сброс Crash (EEPROM 93C56) · вариант 3",
-      "path": "Calculators/SRS/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/MN141038.cal",
+      "path": "Calculators/SRS/Mitsubishi/обновы/MN141038.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Lancer",
@@ -29452,7 +29452,7 @@
       "from": "Airbag/Mitsubishi",
       "to": "Airbag/Mitsubishi/Space Wagon",
       "name": "Mitsubishi 0 285 001 787 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Mitsubishi/╨╛╨▒╨╜╨╛╨▓╤ï/0 285 001 787.cal",
+      "path": "Calculators/SRS/Mitsubishi/обновы/0 285 001 787.cal",
       "reference": {
         "brand": "Mitsubishi",
         "model": "Space Wagon",
@@ -29740,7 +29740,7 @@
       "from": "Airbag/Ford",
       "to": "Airbag/Ford/Fiesta",
       "name": "Ford 6S6T 14B056 KC — сброс Crash (EEPROM 95160) · вариант 3",
-      "path": "Calculators/SRS/Ford/╨₧╨▒╨╜╨╛╨▓╤ï/6S6T 14B056 KC.cal",
+      "path": "Calculators/SRS/Ford/Обновы/6S6T 14B056 KC.cal",
       "reference": {
         "brand": "Ford",
         "model": "Fiesta",
@@ -29968,7 +29968,7 @@
       "from": "Airbag/Mazda",
       "to": "Airbag/Mazda/Mazda 6",
       "name": "Mazda G31A 57 K30B — сброс Crash · вариант 4",
-      "path": "Calculators/SRS/Mazda/╨₧╨▒╨╜╨╛╨▓╤ï/G31A 57 K30B M95320 ver2.cal",
+      "path": "Calculators/SRS/Mazda/Обновы/G31A 57 K30B M95320 ver2.cal",
       "reference": {
         "brand": "Mazda",
         "model": "Mazda 6",
@@ -29980,7 +29980,7 @@
       "from": "Airbag/Mazda",
       "to": "Airbag/Mazda/Mazda 6",
       "name": "Mazda 57 K30 A — сброс Crash (EEPROM 95080) · вариант 3",
-      "path": "Calculators/SRS/Mazda/╨₧╨▒╨╜╨╛╨▓╤ï/57 K30 A.cal",
+      "path": "Calculators/SRS/Mazda/Обновы/57 K30 A.cal",
       "reference": {
         "brand": "Mazda",
         "model": "Mazda 6",
@@ -30292,7 +30292,7 @@
       "from": "Airbag/Chevrolet",
       "to": "Airbag/Chevrolet/Lacetti",
       "name": "Chevrolet 96 830 363 — сброс Crash (EEPROM 95080) · вариант 3",
-      "path": "Calculators/SRS/Chevrolet/╨₧╨▒╨╜╨╛╨▓╤ï/96 830 363.cal",
+      "path": "Calculators/SRS/Chevrolet/Обновы/96 830 363.cal",
       "reference": {
         "brand": "Chevrolet",
         "model": "Lacetti",
@@ -30508,7 +30508,7 @@
       "from": "Airbag/Nissan",
       "to": "Airbag/Nissan/Almera",
       "name": "Nissan 605 14 78 00 — сброс Crash (EEPROM 95080) · вариант 3",
-      "path": "Calculators/SRS/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/605 14 78 00 Autoliv.cal",
+      "path": "Calculators/SRS/Nissan/Обновы/605 14 78 00 Autoliv.cal",
       "reference": {
         "brand": "Nissan",
         "model": "Almera",
@@ -30532,7 +30532,7 @@
       "from": "Airbag/Volvo",
       "to": "Airbag/Volvo/V40",
       "name": "Volvo F3T1A13ADK4 0900 — сброс Crash · вариант 2",
-      "path": "Calculators/SRS/Volvo/╨₧╨▒╨╜╨╛╨▓╤ï/F3T1A13ADK4 0900 Temic.cal",
+      "path": "Calculators/SRS/Volvo/Обновы/F3T1A13ADK4 0900 Temic.cal",
       "reference": {
         "brand": "Volvo",
         "model": "V40",
@@ -30544,7 +30544,7 @@
       "from": "Airbag/Alfa Romeo",
       "to": "Airbag/Alfa Romeo/147",
       "name": "Alfa Romeo 46813473 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Alfa Romeo/╨₧╨▒╨╜╨╛╨▓╤ï/46813473.cal",
+      "path": "Calculators/SRS/Alfa Romeo/Обновы/46813473.cal",
       "reference": {
         "brand": "Alfa Romeo",
         "model": "147",
@@ -30556,7 +30556,7 @@
       "from": "Airbag/Alfa Romeo",
       "to": "Airbag/Alfa Romeo/147",
       "name": "Alfa Romeo 46756117 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Alfa Romeo/╨₧╨▒╨╜╨╛╨▓╤ï/46756117.cal",
+      "path": "Calculators/SRS/Alfa Romeo/Обновы/46756117.cal",
       "reference": {
         "brand": "Alfa Romeo",
         "model": "147",
@@ -31213,7 +31213,7 @@
       "sha": "097820c21de3926991ff78127aae98ed21a4241c5c5930d986e79bd4e0b88b44",
       "folder": "Airbag/Honda",
       "name": "Honda SVA-A211-M1 — сброс Crash",
-      "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SVA-A211-M1.cal",
+      "path": "Calculators/Airbag/Honda/Обновы/SVA-A211-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -31364,8 +31364,8 @@
     {
       "sha": "0c3ff0ee6336b9dd51658d20bec8999459c20cd980c498d4aea0cb4520095019",
       "folder": "Airbag/Nissan/Almera",
-      "name": "Nissan Almera 285568M615 93╤ü56 — сброс Crash (EEPROM 93C56)",
-      "path": "Calculators/Airbag/Nissan/Almera/285568M615  (93╤ü56).cal",
+      "name": "Nissan Almera 285568M615 93с56 — сброс Crash (EEPROM 93C56)",
+      "path": "Calculators/Airbag/Nissan/Almera/285568M615  (93с56).cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -31561,7 +31561,7 @@
       "sha": "0ed9d7bfefe4a1cb0f41d10b447daa5e9496b54c73986cbc6aa5a52a9d3c9c88",
       "folder": "Airbag/Honda",
       "name": "Honda SVA-A211-M1 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SVA-A211-M1.cal",
+      "path": "Calculators/SRS/Honda/Обновы/SVA-A211-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -33616,8 +33616,8 @@
     {
       "sha": "36efa0a43bcab331b015f3d704cacc23c2155d7e168ea5b03ba92a0597768c8d",
       "folder": "Airbag/Honda",
-      "name": "Honda 77960-S84-A74-M2 24╨í01 — сброс Crash (EEPROM 24C01) (Airbag)",
-      "path": "Calculators/Airbag/Honda/77960-S84-A74-M2  24╨í01.cal",
+      "name": "Honda 77960-S84-A74-M2 24С01 — сброс Crash (EEPROM 24C01) (Airbag)",
+      "path": "Calculators/Airbag/Honda/77960-S84-A74-M2  24С01.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -33721,7 +33721,7 @@
       "sha": "393ac183b9d467609d301a5001f266bc99161e4238cc0c42bdf6ac3c0875b831",
       "folder": "Airbag/Volvo",
       "name": "Volvo 30613048A 0301 — сброс Crash · вариант 2",
-      "path": "Calculators/SRS/Volvo/╨₧╨▒╨╜╨╛╨▓╤ï/30613048A 0301 Temic.cal",
+      "path": "Calculators/SRS/Volvo/Обновы/30613048A 0301 Temic.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -33937,7 +33937,7 @@
       "sha": "3d60f490537ad5196694dd9bd0463e53a8410bbfba5e3d0490a67bf47d2d0b0f",
       "folder": "Airbag/Honda",
       "name": "Honda S9V-A012-M1 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/S9V-A012-M1.cal",
+      "path": "Calculators/SRS/Honda/Обновы/S9V-A012-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -34461,7 +34461,7 @@
       "sha": "49d080c269c9230c9ef2b1103e36b25acb640dc50b07e0f81326b22017cdb81d",
       "folder": "Airbag/Honda",
       "name": "Honda SEA-G820-M1 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+      "path": "Calculators/SRS/Honda/Обновы/SEA-G820-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -35088,8 +35088,8 @@
     {
       "sha": "55479535cb13cf8609858d02c51a36834c47c33d42b3d24675ff47fabd277845",
       "folder": "Airbag/Nissan/Cefira",
-      "name": "Nissan Cefira 285561L010 93╤ü46 — сброс Crash (EEPROM 93C46) (SRS)",
-      "path": "Calculators/SRS/Nissan/Cefira/285561L010  (93╤ü46).cal",
+      "name": "Nissan Cefira 285561L010 93с46 — сброс Crash (EEPROM 93C46) (SRS)",
+      "path": "Calculators/SRS/Nissan/Cefira/285561L010  (93с46).cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -35385,7 +35385,7 @@
       "sha": "5b75dff93f6f48d0a9f31766dd4acc2d6a907fec1240b0da77580e82d6e0b4d8",
       "folder": "Airbag/Infiniti",
       "name": "Infiniti 98820CG000 — сброс Crash (EEPROM 93C56) · вариант 2",
-      "path": "Calculators/Airbag/Infinity/╨╛╨▒╨╜╨╛╨▓╤ï/98820CG000.cal",
+      "path": "Calculators/Airbag/Infinity/обновы/98820CG000.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -36077,7 +36077,7 @@
       "sha": "65ef20aada292f7299bc4817de6a51870203c1f8c3a14ec7611dde7605f957b7",
       "folder": "Airbag/Honda",
       "name": "Honda S2H-G010-M1 — сброс Crash",
-      "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/S2H-G010-M1.cal",
+      "path": "Calculators/Airbag/Honda/Обновы/S2H-G010-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -36333,7 +36333,7 @@
       "sha": "6bdfabf8a89ad09dbe37b7a1df18b8ea543b53a8ed7bce1089b54d5f06be4133",
       "folder": "Airbag/Hyundai",
       "name": "Hyundai 95910-2D710 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Hyundai/Huyndai/╨₧╨▒╨╜╨╛╨▓╤ï/95910-2D710.cal",
+      "path": "Calculators/SRS/Hyundai/Huyndai/Обновы/95910-2D710.cal",
       "reason": "исходный путь (Huyndai) и Airbag.txt (Elantra) расходятся",
       "reference": {
         "brand": "Hyundai",
@@ -36368,8 +36368,8 @@
     {
       "sha": "6d05e1442ffb5f3a06c49861435edd113255587b92fc1d84d01261e95f776896",
       "folder": "Airbag/Nissan/Primera",
-      "name": "Nissan Primera 93╤ü56 — сброс Crash · вариант 2",
-      "path": "Calculators/Airbag/Nissan/Primera/Primera 93╤ü56.cal",
+      "name": "Nissan Primera 93с56 — сброс Crash · вариант 2",
+      "path": "Calculators/Airbag/Nissan/Primera/Primera 93с56.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -36569,7 +36569,7 @@
       "sha": "70039d9512717ed02a5b06a06de0e0bb7e95f73dac8b32da6649a5bde89ce3d4",
       "folder": "Airbag/Honda",
       "name": "Honda S9V-A012-M1 — сброс Crash",
-      "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/S9V-A012-M1.cal",
+      "path": "Calculators/Airbag/Honda/Обновы/S9V-A012-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -37921,7 +37921,7 @@
       "sha": "879469fe72065d19d8badb29878d6b02a225bc71ca5122a0b2739be33e1c10bb",
       "folder": "Airbag/Volvo",
       "name": "Volvo 30613048A 0201 — сброс Crash · вариант 2",
-      "path": "Calculators/SRS/Volvo/╨₧╨▒╨╜╨╛╨▓╤ï/30613048A 0201 Temic.cal",
+      "path": "Calculators/SRS/Volvo/Обновы/30613048A 0201 Temic.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -38025,7 +38025,7 @@
       "sha": "898821c80530aefde62e14989d6b6f60c0f984f1064bc10b69d03968446ecb2a",
       "folder": "Airbag/Nissan",
       "name": "Nissan 0 285 001 420 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+      "path": "Calculators/SRS/Nissan/Обновы/0 285 001 420.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -38212,8 +38212,8 @@
     {
       "sha": "8d0caa9e9ecf2120e91e62f1652183ff94ecfa139a9d4c2bb7918916215935cb",
       "folder": "Airbag/Nissan/Primera",
-      "name": "Nissan Primera 93╤ü56 — сброс Crash",
-      "path": "Calculators/Airbag/Nissan/Primera 93╤ü56.cal",
+      "name": "Nissan Primera 93с56 — сброс Crash",
+      "path": "Calculators/Airbag/Nissan/Primera 93с56.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -38324,8 +38324,8 @@
     {
       "sha": "8fb8c9c920c6a1f1e95c1707839b749c960333052e953fb3bab5ff86bfbb47e9",
       "folder": "Airbag/Nissan/Cefira",
-      "name": "Nissan Cefira 285561L010 93╤ü46 — сброс Crash (EEPROM 93C46) (Airbag)",
-      "path": "Calculators/Airbag/Nissan/Cefira/285561L010  (93╤ü46).cal",
+      "name": "Nissan Cefira 285561L010 93с46 — сброс Crash (EEPROM 93C46) (Airbag)",
+      "path": "Calculators/Airbag/Nissan/Cefira/285561L010  (93с46).cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -38972,8 +38972,8 @@
     {
       "sha": "9f01f8719503bf5db5dc6e7426078db3863ca46fc555fb6a043c055ddcfdb5f0",
       "folder": "Airbag/Honda",
-      "name": "Honda 77960-S84-A74-M2 24╨í01 — сброс Crash (EEPROM 24C01) (SRS)",
-      "path": "Calculators/SRS/Honda/77960-S84-A74-M2  24╨í01.cal",
+      "name": "Honda 77960-S84-A74-M2 24С01 — сброс Crash (EEPROM 24C01) (SRS)",
+      "path": "Calculators/SRS/Honda/77960-S84-A74-M2  24С01.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -39733,7 +39733,7 @@
       "sha": "ad85e98cc023f6594e1e6ffe26707dd7541deda631c8b39ef19319a87804bca3",
       "folder": "Airbag/Hyundai",
       "name": "Hyundai 95910-26200 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Hyundai/Huyndai/╨₧╨▒╨╜╨╛╨▓╤ï/95910-26200.cal",
+      "path": "Calculators/SRS/Hyundai/Huyndai/Обновы/95910-26200.cal",
       "reason": "исходный путь (Huyndai) и Airbag.txt (Santa Fe) расходятся",
       "reference": {
         "brand": "Hyundai",
@@ -42741,7 +42741,7 @@
       "sha": "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f",
       "folder": "Airbag/Nissan",
       "name": "Nissan 0 285 001 420 — сброс Crash",
-      "path": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+      "path": "Calculators/Airbag/Nissan/Обновы/0 285 001 420.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -43157,7 +43157,7 @@
       "sha": "f17cc0e466c35e771726195c1ba266ee7484361777cb615ebca22ee836fd73bf",
       "folder": "Airbag/Honda",
       "name": "Honda S2H-G010-M1 — сброс Crash · вариант 3",
-      "path": "Calculators/SRS/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/S2H-G010-M1.cal",
+      "path": "Calculators/SRS/Honda/Обновы/S2H-G010-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },
@@ -43645,7 +43645,7 @@
       "sha": "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff",
       "folder": "Airbag/Honda",
       "name": "Honda SEA-G820-M1 — сброс Crash",
-      "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+      "path": "Calculators/Airbag/Honda/Обновы/SEA-G820-M1.cal",
       "reason": "нет соответствия в Airbag.txt",
       "reference": null
     },

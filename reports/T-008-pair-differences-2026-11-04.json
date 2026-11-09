@@ -415,16 +415,16 @@
    "size": 8192,
    "text": {
     "sha": "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba",
-    "path": "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+    "path": "Calculators/Airbag/Huyndai/95910-3К400.cal",
     "otherPaths": [
-     "Calculators/SRS/Huyndai/95910-3╨Ü400.cal"
+     "Calculators/SRS/Huyndai/95910-3К400.cal"
     ]
    },
    "binary": {
     "sha": "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54",
-    "path": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
+    "path": "Calculators/Airbag/Huyndai/Sonata/95910-3К400.cal",
     "otherPaths": [
-     "Calculators/SRS/Huyndai/Sonata/95910-3╨Ü400.cal"
+     "Calculators/SRS/Huyndai/Sonata/95910-3К400.cal"
     ]
    },
    "labels": [
@@ -1546,7 +1546,7 @@
    "size": 8192,
    "text": {
     "sha": "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f",
-    "path": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+    "path": "Calculators/Airbag/Nissan/Обновы/0 285 001 420.cal",
     "otherPaths": []
    },
    "binary": {
@@ -1725,7 +1725,7 @@
    "size": 8192,
    "text": {
     "sha": "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff",
-    "path": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+    "path": "Calculators/Airbag/Honda/Обновы/SEA-G820-M1.cal",
     "otherPaths": []
    },
    "binary": {

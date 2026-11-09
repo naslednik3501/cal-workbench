@@ -6942,14 +6942,14 @@
       "sha": "7f10ec402df015207f3b5edad71c4be67f95e83e172004df9eddfe3c1b3e0946",
       "name": "Sea-Doo GS 93C56 — коррекция пробега",
       "folder": "Asia/Jet ski/BRP",
-      "canonical_path": "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal",
+      "canonical_path": "Calculators/Asia/Jet ski/SEA-DOO GS 93С56.cal",
       "paths": [
-        "Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal"
+        "Calculators/Asia/Jet ski/SEA-DOO GS 93С56.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Jet ski/SEA-DOO GS 93╨í56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Jet ski/SEA-DOO GS 93С56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -6984,14 +6984,14 @@
       "sha": "95a77c3376f87f67dd3c8b84a9d09e1d56fba3367ede6c90ddb209995e518fbc",
       "name": "Yamaha WaveRunner 93C46 — коррекция моточасов",
       "folder": "Asia/Jet ski/Yamaha",
-      "canonical_path": "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+      "canonical_path": "Calculators/Asia/Jet ski/Yamaha WaveRunner 93С46.cal",
       "paths": [
-        "Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal"
+        "Calculators/Asia/Jet ski/Yamaha WaveRunner 93С46.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Jet ski/Yamaha WaveRunner 93╨í46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Jet ski/Yamaha WaveRunner 93С46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -10820,14 +10820,14 @@
       "sha": "e3ba8bcc3188b62d474427e07eb590ce95d05c4103960825cc25824a137b5447",
       "name": "Suzuki Boulevard C90T 93C46 Denso — коррекция пробега",
       "folder": "Asia/Motobikes/Suzuki",
-      "canonical_path": "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal",
+      "canonical_path": "Calculators/Asia/Motobikes/Suzuki/Boulevard С90T 93C46 Denso.cal",
       "paths": [
-        "Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal"
+        "Calculators/Asia/Motobikes/Suzuki/Boulevard С90T 93C46 Denso.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Motobikes/Suzuki/Boulevard ╨í90T 93C46 Denso.cal; form: KM | Калькулятор пробега Suzuki Boulevard С90T. | EEPROM 93C46, панель Denso. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Motobikes/Suzuki/Boulevard С90T 93C46 Denso.cal; form: KM | Калькулятор пробега Suzuki Boulevard С90T. | EEPROM 93C46, панель Denso. | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -11640,28 +11640,28 @@
       "sha": "a95c78452d6c42f7fdb28d4044a27fcd02c56169e490ad9b16798560f8e61347",
       "name": "Nissan Cliper 93C56 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal",
+      "canonical_path": "Calculators/Asia/Nissan/Cliper 93с56 Yazaki.cal",
       "paths": [
-        "Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal"
+        "Calculators/Asia/Nissan/Cliper 93с56 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93╤ü56 Yazaki.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93с56 Yazaki.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
       "sha": "5958c9c29a72b80d87c54df85c3758cb00ece0e16e231e32ff2ec6ed4607fc58",
       "name": "Nissan Cliper 93C66 NS — коррекция пробега",
       "folder": "Asia/Nissan",
-      "canonical_path": "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal",
+      "canonical_path": "Calculators/Asia/Nissan/Cliper 93с66 NS.cal",
       "paths": [
-        "Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal"
+        "Calculators/Asia/Nissan/Cliper 93с66 NS.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93╤ü66 NS.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Nissan/Cliper 93с66 NS.cal; form: KM | Калькулятор пробега Nissan Cliper. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -11980,14 +11980,14 @@
       "sha": "420e3b48e83f9dd94627cd6d87a7f658e81b1d2fe495a15abad708871129480a",
       "name": "Nissan March 2000 93C56 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "canonical_path": "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal",
+      "canonical_path": "Calculators/Asia/Nissan/March 2000 93с56 Yazaki.cal",
       "paths": [
-        "Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal"
+        "Calculators/Asia/Nissan/March 2000 93с56 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Nissan/March 2000 93╤ü56 Yazaki.cal; form: KM | Калькулятор пробега Nissan March. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Nissan/March 2000 93с56 Yazaki.cal; form: KM | Калькулятор пробега Nissan March. | EEPROM 93c56 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -12514,14 +12514,14 @@
       "sha": "89b29f041a52ae53399fa52fa258fcd77c5da786eb740cf1e7483a2501cdbd27",
       "name": "Nissan Presia 93C46 Yazaki — коррекция пробега",
       "folder": "Asia/Nissan",
-      "canonical_path": "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal",
+      "canonical_path": "Calculators/Asia/Nissan/Presia 93с46 Yazaki.cal",
       "paths": [
-        "Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal"
+        "Calculators/Asia/Nissan/Presia 93с46 Yazaki.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Nissan/Presia 93╤ü46 Yazaki.cal; form: KM | Калькулятор пробега Nissan Presia. | EEPROM 93c46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Nissan/Presia 93с46 Yazaki.cal; form: KM | Калькулятор пробега Nissan Presia. | EEPROM 93c46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -13256,14 +13256,14 @@
       "sha": "bac461f208a09c3a385de5c1a32234bd50948848c190465b3eb0954e50348554",
       "name": "Nissan X-Trail 9S12XHZ256 — коррекция пробега",
       "folder": "Asia/Nissan",
-      "canonical_path": "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal",
+      "canonical_path": "Calculators/Asia/Nissan/X-trail 9S12ХНZ256.cal",
       "paths": [
-        "Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal"
+        "Calculators/Asia/Nissan/X-trail 9S12ХНZ256.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Nissan/X-trail 9S12╨Ñ╨¥Z256.cal; form: КМ | 128 | Constant - | Калькулятор пробега для Nissan X-trail. | Процессор MC9S12XHZ256. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Nissan/X-trail 9S12ХНZ256.cal; form: КМ | 128 | Constant - | Калькулятор пробега для Nissan X-trail. | Процессор MC9S12XHZ256. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -13543,14 +13543,14 @@
       "sha": "b6260a4b492dab5f01e06b2c853a016c25f113e6e93cb115a9b73024281bbd9e",
       "name": "Shaanxi SX3255DR384 93C66 — коррекция пробега",
       "folder": "Asia/Shaanxi",
-      "canonical_path": "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal",
+      "canonical_path": "Calculators/Asia/Shaanxi/SX3255DR384 93С66.cal",
       "paths": [
-        "Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal"
+        "Calculators/Asia/Shaanxi/SX3255DR384 93С66.cal"
       ],
       "source_sections": [
         "Asia"
       ],
-      "review_evidence": "path Calculators/Asia/Shaanxi/SX3255DR384 93╨í66.cal; form: КМ | Калькулятор пробега Shaanxi SX3255DR384. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
+      "review_evidence": "path Calculators/Asia/Shaanxi/SX3255DR384 93С66.cal; form: КМ | Калькулятор пробега Shaanxi SX3255DR384. | EEPROM 93C66 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: Asia",
       "review_confidence": "confirmed"
     },
     {
@@ -30009,14 +30009,14 @@
       "sha": "e449836b43f780a01a35ba4b0b13c0e66ac04f459f6fd897bf973f9dc21f82d3",
       "name": "Schetmash 25040 3801010-Т — коррекция пробега",
       "folder": "EU_US_RU/VAZ",
-      "canonical_path": "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal",
+      "canonical_path": "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-Т.cal",
       "paths": [
-        "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal"
+        "Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-Т.cal"
       ],
       "source_sections": [
         "EU_US_RU"
       ],
-      "review_evidence": "path Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-╨ó.cal; form: KM | Калькулятор пробега VAZ 2110-2115. | Производитель панели Schetmash. EEPROM 25040. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: EU_US_RU",
+      "review_evidence": "path Calculators/EU_US_RU/VAZ/Schetmash 25040 3801010-Т.cal; form: KM | Калькулятор пробега VAZ 2110-2115. | Производитель панели Schetmash. EEPROM 25040. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>.; source section: EU_US_RU",
       "review_confidence": "confirmed"
     },
     {
@@ -33815,16 +33815,16 @@
       "name": "BRP 24C04 Proba — коррекция пробега и моточасов",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
       "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
+      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
-        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
+        "Calculators/MOTO/Snowmobile/BRP/24с04 Proba.cal"
       ],
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
       ],
-      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
       "review_confidence": "partial"
     },
     {
@@ -34207,16 +34207,16 @@
       "sha": "2287a466d1828a33de172955bdb8518047b313604f7d7a37e1410c5bf9685683",
       "name": "Sea-Doo GS 93C56 — коррекция пробега",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/BRP",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
+      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal"
       ],
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
       ],
-      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93╨í56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/SEA-DOO GS 93С56.cal; form: HR | Калькулятор пробега Sea-Doo GS. | EEPROM 93C56x8 bit | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
       "review_confidence": "confirmed"
     },
     {
@@ -34239,16 +34239,16 @@
       "sha": "f90cbd6a323f7cc90d5c2cd5653979d75d56d081f008ccc206f4daa88c257e0f",
       "name": "Yamaha WaveRunner 93C46 — коррекция моточасов",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
+      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal",
-        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal",
+        "Calculators/MOTO/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal"
       ],
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
       ],
-      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93╨í46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/Jet ski/Yamaha WaveRunner 93С46.cal; form: HR | Калькулятор часов Yamaha WaveRunner | EEPROM 93C46 | Введите нужное значение в окне ПРОБЕГ | и нажмите кнопку <Применить>.; source section: MOTO,MOTO - TRUCK - ATV",
       "review_confidence": "confirmed"
     },
     {
@@ -35066,16 +35066,16 @@
       "name": "BRP 24C04 Proba — коррекция пробега и моточасов",
       "folder": "MOTO - TRUCK - ATV/Snowmobile/BRP",
       "reason": "марка подтверждена, конкретная модель в пути/форме не указана",
-      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
+      "canonical_path": "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
       "paths": [
-        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal",
-        "Calculators/MOTO/Snowmobile/BRP/24╤ü04 Proba.cal"
+        "Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal",
+        "Calculators/MOTO/Snowmobile/BRP/24с04 Proba.cal"
       ],
       "source_sections": [
         "MOTO",
         "MOTO - TRUCK - ATV"
       ],
-      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24╤ü04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
+      "review_evidence": "path Calculators/MOTO - TRUCK - ATV/Snowmobile/BRP/24с04 Proba.cal; form: КМ | Hr | Калькулятор пробега для BRP. | Введите нужное значение в окне <Пробег>. | Нажмите кнопку <Применить>. | < u-vovchika >. | ПОЛНЫЙ РАЗБОР | ЩИТКА !!! | ____________; source section: MOTO,MOTO - TRUCK - ATV",
       "review_confidence": "partial"
     }
   ],

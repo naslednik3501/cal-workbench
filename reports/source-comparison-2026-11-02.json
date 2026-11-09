@@ -63,9 +63,9 @@
       ]
     },
     {
-      "source": "Calculators/Airbag/Huyndai/95910-3╨Ü400.cal",
+      "source": "Calculators/Airbag/Huyndai/95910-3К400.cal",
       "sourceSha": "bed4ae17f4019209fb5ff5b00ec849ef670349d249e8be6a18cedd6978951aba",
-      "binary": "Calculators/Airbag/Huyndai/Sonata/95910-3╨Ü400.cal",
+      "binary": "Calculators/Airbag/Huyndai/Sonata/95910-3К400.cal",
       "binarySha": "eafc6307158e48c3a7a72360a1d58de1abf2d3c1e582666e7bffd2ba61482d54",
       "cases": [
         {
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "source": "Calculators/Airbag/Nissan/╨₧╨▒╨╜╨╛╨▓╤ï/0 285 001 420.cal",
+      "source": "Calculators/Airbag/Nissan/Обновы/0 285 001 420.cal",
       "sourceSha": "e9fd57c3d962bda6e76a93f3ddf96c7220ac05abdc9a603b53ac5067ffaef98f",
       "binary": "Calculators/Airbag/Nissan/Micra/0 285 001 420.cal",
       "binarySha": "5c6b0d755437edaf5ba8859356a465c7925f0fa40dbabd4a679381255a1f86aa",
@@ -237,7 +237,7 @@
       ]
     },
     {
-      "source": "Calculators/Airbag/Honda/╨₧╨▒╨╜╨╛╨▓╤ï/SEA-G820-M1.cal",
+      "source": "Calculators/Airbag/Honda/Обновы/SEA-G820-M1.cal",
       "sourceSha": "f9d75ea0a12bbd798cf4c2b1ce6a92bd6d7a6f1c35db4ef69415fd40555a50ff",
       "binary": "Calculators/Airbag/Honda/SEA-G820-M1.cal",
       "binarySha": "77038d1df5d3b5861316ab438863b3112bae122a1c37d31e08a74475ade25bc9",
