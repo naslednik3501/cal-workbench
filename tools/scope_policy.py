@@ -1,8 +1,30 @@
 """Shared build policy: unknown bytes remain active; resources need per-CAL rules."""
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Characters produced by decoding the bytes 0x80-0xFF as CP437. A repack that
+# stores UTF-8 names but decodes them as CP437 turns "К" (D0 9A) into "╨Ü".
+_CP437 = ''.join(bytes([b]).decode('cp437') for b in range(0x80, 0x100))
+CP437_RUN = re.compile('[' + re.escape(_CP437) + ']+')
+
+def repair_name(value):
+    """Undo a CP437/UTF-8 repack defect in one archive or catalog name.
+
+    Only runs that contain a box-drawing character and decode back to valid
+    UTF-8 are rewritten, so ordinary names are returned unchanged.
+    """
+    def fix(match):
+        run = match.group(0)
+        if not any('\u2500' <= char <= '\u259f' for char in run):
+            return run
+        try:
+            return run.encode('cp437').decode('utf-8')
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            return run
+    return CP437_RUN.sub(fix, value)
 
 def validate_registry(registry):
     def is_sha(value, length=64):

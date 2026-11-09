@@ -2068,8 +2068,8 @@
     },
     {
       "path": "tests/test_catalog.js",
-      "bytes": 1069,
-      "sha256": "24ba403c15acb651d016f4f0ddf0fb72f92b9f080b39633a613594e07aac4543"
+      "bytes": 2510,
+      "sha256": "81b962aa608b83ad0ab6b9fdf67a600b28b983384bea46ea09d991599564fab7"
     },
     {
       "path": "tests/test_catalog_dedup.js",
@@ -2333,8 +2333,8 @@
     },
     {
       "path": "tools/build_catalog.py",
-      "bytes": 2359,
-      "sha256": "cf21dace2e3e9dcb702b0f59bca7c5480c65e272bbe5405f7fadadce8812e2ed"
+      "bytes": 2455,
+      "sha256": "e42a3ca60be828adb41260de5cc278e24826951fc8b64b4158f5c31bf3f6e012"
     },
     {
       "path": "tools/catalog-airbag-routes.json",
@@ -2388,8 +2388,8 @@
     },
     {
       "path": "tools/scope_policy.py",
-      "bytes": 5736,
-      "sha256": "eb1a502fa88f16b942f7a5f48f81e2e50de4e25eba23afd0f7dec9d6b0f1aad8"
+      "bytes": 6605,
+      "sha256": "aff38be49dd9df4601dd904e4896af231587def78b2596ebf884ba14697bccfd"
     },
     {
       "path": "tools/source_store.py",
